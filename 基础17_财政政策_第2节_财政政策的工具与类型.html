@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十七章 财政政策 · 财政政策的工具与类型 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第二部分 财政</span><h1>第十七章 财政政策 · 财政政策的工具与类型</h1><div class="subtitle">第 2 节 / 共 3 节 · 预计学习时长 50 分钟</div><div class="progress-bar"><div class="fill" style="width:66%"></div></div><div class="progress-text">本章进度 2/3</div><div class="sec-badge none" id="sec-badge" data-sec="b17s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背出六大<strong>工具</strong>（预算、税收、公债、公共支出、政府投资、财政补贴），认出混进来的货币政策工具 <span class="hot">高频考点</span></li>
+<li>分清<strong>自动稳定</strong>与<strong>相机抉择</strong>，背死<strong>汲水政策四特点</strong>与补偿政策"反方向调节" <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>分清<strong>扩张、紧缩、中性</strong>三类，方向题永不反（供大于求→扩张，求大于供→紧缩） <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、财政政策的工具</h2>
+<h3>1. 六大政策工具 <span class="hot">高频考点</span></h3>
+<p><strong>财政政策工具</strong>：用以达到财政政策目标的各种<strong>财政手段</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>预算</strong></td>
+<td>全年收支总盘子：赤字还是盈余</td>
+</tr>
+<tr>
+<td><strong>税收</strong></td>
+<td>增税减税、税收优惠</td>
+</tr>
+<tr>
+<td><strong>公债</strong></td>
+<td>发债筹钱、吸收社会资金</td>
+</tr>
+<tr>
+<td><strong>公共支出</strong></td>
+<td>福利、转移支付等政府日常花钱</td>
+</tr>
+<tr>
+<td><strong>政府投资</strong></td>
+<td>基建等投资项目</td>
+</tr>
+<tr>
+<td><strong>财政补贴</strong></td>
+<td>补企业、补居民</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>财政手段 vs 央行手段：</strong><p>常备借贷便利、再贴现、存款准备金率、公开市场操作是<strong>中央银行</strong>的货币政策工具；"政府补助支出"听着像福利，其实归<strong>财政补贴</strong>类，是财政工具。做题先问一句：这招是<strong>财政部</strong>出的，还是<strong>央行</strong>出的？</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>真题选项里"发行公债、减少政府支出"是财政手段；"提高利率、常备借贷便利、再贴现"是央行手段。一句话分家：<strong>财政部管收支，央行管钱的价格（利率）和数量（流动性）</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 工具口诀</div><p><strong>"预税公债，支投补"</strong>——预算、税收、公债、公共支出、政府投资、财政补贴，六大工具一个不落。</p></div></div>
+<div class="section"><h2>二、按调节经济周期的作用划分（★★★）</h2>
+<h3>2. 自动稳定的财政政策——财政自动稳定器 <span class="s3">★★★</span></h3>
+<p><strong>定义</strong>：财政制度本身存在一种<strong>内在的</strong>、<strong>不需要政府采取其他干预行为</strong>就可以随着经济社会的发展，<strong>自动</strong>调节经济运行的机制，也被称为<strong>财政自动稳定器</strong>。主要表现在两个方面：</p>
+<table>
+<thead>
+<tr>
+<th>自动稳定的表现</th>
+<th>机制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>累进所得税</strong>（个人所得税＋企业所得税）</td>
+<td>经济萧条→个人收入和企业利润减少→税基相对缩小、适用的累进税率相对下降→税收<strong>自动减少</strong></td>
+</tr>
+<tr>
+<td><strong>政府福利支出</strong></td>
+<td>经济衰退→领取失业救济和各种福利的人数增加→福利支出<strong>自动增加</strong>→抑制消费支出的持续下降</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>&quot;自动&quot;二字是题眼：</strong><p>自动稳定器＝<strong>制度自己动，政府没出手</strong>。考点就两件事：萧条时税收"自动"少收、福利"自动"多支。题干出现"不需要政府采取其他干预行为""自动调节经济运行"，选它没错。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小李年终奖缩水、收入降档，适用的累进税率档次自动下降，个税少缴（税收自动减少）；他同事被裁员后开始领失业救济（福利支出自动增加）。政府没开会、没发文，财政已经"自动"开始托底——这就是自动稳定器。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 自动稳定器口诀</div><p><strong>"萧条少收税，衰退多发福利"</strong>——累进所得税自动减、福利支出自动增，两头一起托住需求。</p></div></div>
+<div class="section"><h3>3. 相机抉择的财政政策——汲水与补偿 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p><strong>定义</strong>：政府根据一定时期的经济社会状况，<strong>主动灵活</strong>地选择不同类型的<strong>反经济周期</strong>的财政政策工具，干预经济运行，实现财政政策目标。<strong>包括汲水政策和补偿政策</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>汲水政策</th>
+<th>补偿政策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义</td>
+<td>经济<strong>萧条时期</strong>进行<strong>公共投资</strong>，以增加社会有效需求，使经济<strong>恢复活力</strong></td>
+<td>政府<strong>有意识地</strong>从当时经济状态的<strong>反方向</strong>调节经济变动</td>
+</tr>
+<tr>
+<td>使用方向</td>
+<td>只在萧条时"汲"一下</td>
+<td>双向：萧条<strong>增支减收</strong>刺激增长；繁荣<strong>减支增收</strong>稳定波动</td>
+</tr>
+<tr>
+<td>手段</td>
+<td>以<strong>扩大公共投资规模</strong>为手段，启动和活跃社会投资</td>
+<td>财政收入、支出两个方向都动</td>
+</tr>
+<tr>
+<td>期限</td>
+<td><strong>短期</strong>财政政策、临时性政策</td>
+<td>视经济周期全程使用</td>
+</tr>
+</tbody>
+</table>
+<p><strong>汲水政策四个特点</strong>（多选必背）：
+1. 以市场经济所具有的<strong>自发机制为前提</strong>，是一种<strong>诱导经济复苏</strong>的政策；
+2. 以<strong>扩大公共投资规模为手段</strong>，启动和活跃社会投资；
+3. 财政投资规模具有<strong>有限性</strong>——只要社会投资恢复活动、经济实现自主增长，政府就<strong>不再投资或缩小投资规模</strong>；
+4. 如果经济萧条的状况不再存在，这种政策就<strong>不再实施</strong>——所以它是<strong>短期</strong>财政政策，是经济萧条时刺激的<strong>临时性</strong>政策。</p></div>
+<div class="section"><div class="keypoint"><strong>汲水与补偿的分界：</strong><p>汲水＝只在水少时"汲"一下：单一手段（公共投资）、只对萧条、规模有限、见效就收。补偿＝<strong>全程反向开车</strong>：萧条踩油门（增支减收）、繁荣踩刹车（减支增收），双向都补偿。题干见"反方向调节"→补偿；见"公共投资、诱导复苏"→汲水。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>汲水像给旱田<strong>引水</strong>：政府修渠把水引过来（公共投资），井里自己出水了（社会投资恢复、经济自主增长），政府就撤——短平快。补偿像<strong>空调</strong>：天冷吹暖风（萧条增支减收）、天热吹冷风（繁荣减支增收），一年四季反着来。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 汲水四特点口诀</div><p><strong>"自发前提、投资手段、规模有限、短期临时"</strong>——落点是"诱导经济复苏"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;顺周期&quot;三个字必错</div><p>自动稳定器和相机抉择（含汲水、补偿）本质都是<strong>逆风向行事</strong>：萧条托需求、繁荣压需求。选项说汲水政策"顺周期"，直接判错——它是在萧条时<strong>反着</strong>经济下行的方向出手的。</p></div></div>
+<div class="section"><h2>三、按调节国民经济总量和结构的不同功能划分（★★★）</h2>
+<h3>4. 扩张性、紧缩性与中性财政政策 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>手段</th>
+<th>适用情景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>扩张性</strong>财政政策</td>
+<td><strong>减税、增加财政支出</strong>——增加和刺激社会总需求</td>
+<td><strong>社会总需求不足</strong></td>
+</tr>
+<tr>
+<td><strong>紧缩性</strong>财政政策</td>
+<td><strong>增加税收、减少财政支出</strong>——减少和抑制社会总需求</td>
+<td>社会总需求＞社会总供给（过热）</td>
+</tr>
+<tr>
+<td><strong>中性</strong>财政政策（又称<strong>均衡性</strong>财政政策）</td>
+<td>财政收支<strong>基本平衡或者动态平衡</strong></td>
+<td><strong>经济稳定增长时期</strong>，保持经济持续稳定发展</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 方向口诀</div><p><strong>"供大于求踩油门，求大于供踩刹车，不快不慢挂空挡"</strong>——供给＞需求（东西多、买的人少）→扩张：减税＋增支；需求＞供给（钱多、货不够）→紧缩：增税＋减支；稳定增长期→中性：收支基本/动态平衡。</p></div></div>
+<div class="section"><div class="keypoint"><strong>财政手段里别混进央行：</strong><p>紧缩性财政政策＝<strong>增收节支</strong>（增税＋减支）。"降低存款准备金率、降低利率"是<strong>货币政策</strong>——哪怕方向也是放松，也不是财政政策，看到直接排除。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>经济下行压力大时：减税降费、扩大专项债投资——踩油门（扩张）；通胀高企时：削减支出、增加税收——踩刹车（紧缩）；经济平稳运行时：收支大体平衡、不搞大起大落——挂空挡（中性）。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>六大工具</strong>：预算、税收、公债、公共支出、政府投资、财政补贴（常备借贷便利/再贴现/准备金率是货币政策工具）</li>
+<li><strong>按调节经济周期的作用分</strong>：自动稳定（自动稳定器＝累进所得税＋福利支出两个"自动"）／相机抉择（主动灵活、反经济周期，含汲水＋补偿）</li>
+<li><strong>汲水四特点</strong>：自发前提、扩大公共投资为手段、投资规模有限、短期临时；定位＝诱导经济复苏</li>
+<li><strong>补偿政策</strong>：有意识从经济状态的<strong>反方向</strong>调节——萧条增支减收、繁荣减支增收</li>
+<li><strong>按功能分</strong>：扩张（减税增支，需求不足）／紧缩（增税减支，需求＞供给）／中性＝均衡性（收支基本或动态平衡，稳定增长期）</li>
+<li>两套标准口诀：周期分自相，功能分扩紧中；方向口诀：供大于求踩油门，求大于供踩刹车</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b17s2q1" data-answer="ADE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">财政政策工具是指用以达到财政政策目标的各种财政手段，主要有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 公债政策</button><button type="button" class="qopt" data-key="B">B. 常备借贷便利</button><button type="button" class="qopt" data-key="C">C. 再贴现政策</button><button type="button" class="qopt" data-key="D">D. 预算政策</button><button type="button" class="qopt" data-key="E">E. 政府补助支出</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ADE</div><div class="q-exp"><p>析：六大工具＝<strong>预算、税收、公债、公共支出、政府投资、财政补贴</strong>——公债（A）、预算（D）、政府补助支出（财政补贴类，E）都在其中。常备借贷便利（B）、再贴现（C）是<strong>中央银行的货币政策工具</strong>，管的是市场上的钱量和钱价，不是财政手段。带"央行味儿"的词直接踢。
+:::</p></div></details></div><div class="quiz-item" data-qid="b17s2q2" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">当社会总供给大于总需求时，政府预算一般采取（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 提高税率，减少税收优惠，抑制企业和个人投资需求和消费需求</button><button type="button" class="qopt" data-key="B">B. 缩小支出规模、保持预算盈余，抑制社会总需求</button><button type="button" class="qopt" data-key="C">C. 扩大支出规模，保持一定赤字规模，扩大社会总需求</button><button type="button" class="qopt" data-key="D">D. 降低投资支出水平，使经济降温，平稳回落</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：总供给＞总需求＝东西多、买的人少＝<strong>需求不足</strong>，预算要<strong>踩油门</strong>——扩大支出规模、保持一定赤字、扩大社会总需求（扩张性），C 正确。A、B、D 全是"抑制需求"的操作，方向反了——那是总需求＞总供给（过热）时的紧缩做法。方向题记住：<strong>供大于求踩油门</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="b17s2q3" data-answer="ADE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">根据财政政策在调节国民经济总量和结构中的不同功能来划分，财政政策分为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 中性财政政策</button><button type="button" class="qopt" data-key="B">B. 相机抉择的财政政策</button><button type="button" class="qopt" data-key="C">C. 自动稳定的财政政策</button><button type="button" class="qopt" data-key="D">D. 扩张性财政政策</button><button type="button" class="qopt" data-key="E">E. 紧缩性财政政策</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ADE</div><div class="q-exp"><p>析：按<strong>调节国民经济总量和结构的不同功能</strong>划分＝扩张性、紧缩性、中性三类，A、D、E 正确。B、C（相机抉择、自动稳定）是<strong>按调节经济周期的作用</strong>划分出来的，分类标准串门了，排除。口诀：<strong>"周期分自相，功能分扩紧中"</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="b17s2q4" data-answer="ABCE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">关于财政政策类型的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 长期使用松的财政政策和紧的货币政策组合会积累大量财政赤字</button><button type="button" class="qopt" data-key="B">B. 补偿政策是指政府有意识地从当时经济状态的反方向上调节经济变动的财政政策</button><button type="button" class="qopt" data-key="C">C. 美国实施的罗斯福-霍普金斯计划、日本实施的时局匡救政策是相机抉择财政政策选择的范例</button><button type="button" class="qopt" data-key="D">D. 根据财政政策在调节国民经济总量和结构中的不同功能，将财政政策分为自动稳定的财政政策和相机抉择的财政政策</button><button type="button" class="qopt" data-key="E">E. 政府福利支出的自动稳定作用使得经济出现衰退时，福利支出将趋于自动增加</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：A 对——"松的财政政策"就是持续扩张（扩支减收、保持赤字），长期用下去自然积累大量赤字。B 对——这正是补偿政策的定义（<strong>反方向调节</strong>）。C 对——两者是相机抉择（汲水政策）的经典范例。E 对——衰退时领失业救济和福利的人数增加，福利支出<strong>自动</strong>增加，正是自动稳定器的第二个表现。D 错——按功能划分分的是<strong>扩张、紧缩、中性</strong>；"自动稳定/相机抉择"是按<strong>调节经济周期的作用</strong>划分的，D 把两套标准张冠李戴。
+:::</p></div></details></div><div class="quiz-item" data-qid="b17s2q5" data-answer="BCDE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">关于汲水政策的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 汲水政策的实施前提是市场失灵</button><button type="button" class="qopt" data-key="B">B. 汲水政策是短期政策</button><button type="button" class="qopt" data-key="C">C. 汲水政策是萧条时期使用</button><button type="button" class="qopt" data-key="D">D. 汲水政策以扩大公共投资规模为手段</button><button type="button" class="qopt" data-key="E">E. 汲水政策是诱导复苏政策</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：汲水政策四特点对号入座：①以市场经济所具有的<strong>自发机制</strong>为前提——A 把前提偷换成"市场失灵"，错；②以<strong>扩大公共投资规模</strong>为手段，启动和活跃社会投资（D 对）；③财政投资规模具有<strong>有限性</strong>，社会投资恢复、经济自主增长后政府就不再投资或缩小规模；④萧条状况不再存在就<strong>不再实施</strong>——是<strong>短期</strong>财政政策、临时性政策（B 对），且定义就是"经济<strong>萧条时期</strong>进行公共投资"（C 对）。整体定位＝<strong>诱导经济复苏</strong>的政策（E 对）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b17s2q6" data-answer="C" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">在经济萧条时期进行公共投资，以增加社会有效需求，使经济恢复活力的财政政策是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 特殊政策</button><button type="button" class="qopt" data-key="B">B. 自动稳定政策</button><button type="button" class="qopt" data-key="C">C. 汲水政策</button><button type="button" class="qopt" data-key="D">D. 补偿政策</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：这是<strong>汲水政策</strong>的定义原文——萧条时进行公共投资、增加社会有效需求、使经济恢复活力，C 正确。D 补偿政策是"从当时经济状态的<strong>反方向</strong>调节"，萧条、繁荣两个方向都要动，不是单靠公共投资"汲"一下；B 自动稳定政策靠制度内在机制<strong>自动</strong>调节，不需要政府主动立项投资；A "特殊政策"不是教材规范概念，纯干扰项。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础17_财政政策_第1节_财政政策功能与目标.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 财政政策功能与目标</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础17_财政政策_第3节_财政政策乘数与时滞.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 财政政策乘数与时滞</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十九章 会计循环 · 财务会计报告 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第五部分 会计</span><h1>第二十九章 会计循环 · 财务会计报告</h1><div class="subtitle">第 4 节 / 共 4 节 · 预计学习时长 30 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 4/4</div><div class="sec-badge none" id="sec-badge" data-sec="b29s4">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记牢<strong>财务会计报告</strong>的定义：对外提供＋特定日期财务状况＋会计期间经营成果、现金流量 <span class="hot">高频考点</span></li>
+<li>记住会计报告是对账簿记录资料的<strong>再加工</strong>，编报告前<strong>必须进行财产清查</strong> <span class="must">必考</span></li>
+<li>分清报告内容三块：<strong>会计报表＋附注＋其他披露</strong>；报表至少包括三大表，小企业可以不包括现金流量表 <span class="hot">高频考点</span></li>
+<li>背熟报表的<strong>四个分类维度</strong>：经济内容、报送对象、编报主体（个别/合并，50%）、编制时间 <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、财务会计报告的概念与内容</h2>
+<h3>1. 概念、再加工与三大报表 <span class="hot">高频考点</span> <span class="must">必考</span></h3>
+<p><strong>财务会计报告</strong>（又称<strong>财务报告</strong>）：企业<strong>对外</strong>提供的、反映企业在<strong>某一特定日期</strong>的<strong>财务状况</strong>和<strong>某一会计期间</strong>的<strong>经营成果、现金流量</strong>等会计信息的<strong>文件</strong>。</p>
+<p><strong>会计报告</strong>是对<strong>账簿记录资料</strong>进行的<strong>再加工</strong>；在编制财务会计报告之前，为了保证报告的数字<strong>真实可靠</strong>，做到账证相符、账账相符、账实相符，<strong>必须进行财产清查</strong>。</p>
+<p>会计报告包括：<strong>会计报表、会计报表附注</strong>和<strong>其他应当在会计报告中披露的相关信息和资料</strong>。我国企业对外提供的会计报表<strong>至少</strong>应当包括<strong>资产负债表、利润表、现金流量表</strong>等报表；<strong>小企业</strong>编制的会计报表<strong>可以不包括现金流量表</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>报表</th>
+<th>反映什么</th>
+<th>时间口径</th>
+<th>按经济内容归类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>资产负债表</strong></td>
+<td><strong>财务状况</strong></td>
+<td>某一<strong>特定日期</strong>（时点）</td>
+<td>反映财务状况的报表</td>
+</tr>
+<tr>
+<td><strong>利润表</strong></td>
+<td><strong>经营成果</strong></td>
+<td>某一<strong>会计期间</strong>（时期）</td>
+<td>反映经营成果的报表</td>
+</tr>
+<tr>
+<td><strong>现金流量表</strong></td>
+<td><strong>现金流量</strong></td>
+<td>某一<strong>会计期间</strong>（时期）</td>
+<td>反映现金流量的报表</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>&quot;日期&quot;对状况，&quot;期间&quot;对成果：</strong><p>定义里的时间口径是考点：<strong>特定日期</strong>→财务状况（资产负债表，某天拍的"快照"）；<strong>会计期间</strong>→经营成果、现金流量（利润表、现金流量表，整段"录像"）。小企业的口子要记准：可以<strong>不包括现金流量表</strong>，但资产负债表、利润表不能少。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>给公司拍两张"照片"：12 月 31 日那天，公司有多少家当、欠多少债——资产负债表，<strong>快照</strong>；从 1 月 1 日干到 12 月 31 日，赚了多少、现金进出了多少——利润表和现金流量表，<strong>录像</strong>。编表之前还得先盘点家当、核实债权债务（<strong>财产清查</strong>），保证账上的东西真的在、数字真的准。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 报告内容与三表</div><p><strong>"报表＋附注＋其他披露，三表起步：资、利、现"</strong>——考"会计报告包括"→会计报表、会计报表附注、其他应披露的信息资料；考"对外报表至少包括"→资产负债表、利润表、现金流量表；见到"小企业"就想到现金流量表<strong>可以不包括</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易错点：再加工与&quot;先清查、后编表&quot;</div><p>①会计报告是对<strong>账簿记录资料</strong>的再加工——不是对凭证再加工，也不是重新核算一遍；②顺序是<strong>先清查、后编表</strong>：财产清查在编制报告<strong>之前</strong>进行，目的是保证数字真实可靠；③"小企业<strong>应当</strong>包括现金流量表"是常设错误项——教材原话是"<strong>可以不包括</strong>"，一个"应当"就错了。</p></div></div>
+<div class="section"><h2>二、财务会计报告的分类</h2>
+<h3>2. 四个分类维度 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>分类标准</th>
+<th>类别</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按<strong>所反映的经济内容</strong></td>
+<td>反映<strong>财务状况</strong>的报表（资产负债表）、反映<strong>经营成果</strong>的报表（利润表）、反映<strong>现金流量</strong>的报表（现金流量表）</td>
+<td>三类正好对应三张主表</td>
+</tr>
+<tr>
+<td>按<strong>报送对象</strong></td>
+<td><strong>对外</strong>会计报表／<strong>对内</strong>会计报表</td>
+<td>对外的种类、格式和编制方法由<strong>财政部统一规定</strong>；对内的根据企业内部需要<strong>自行规定、自行设计</strong></td>
+</tr>
+<tr>
+<td>按<strong>编报主体</strong></td>
+<td><strong>个别</strong>会计报表／<strong>合并</strong>会计报表</td>
+<td>个别＝只反映<strong>企业本身</strong>；合并＝对外投资总额占被投资企业<strong>资本总额 50% 以上</strong>，将被投资企业和本企业<strong>视为一个整体</strong>合并编制，反映<strong>共同</strong>的财务状况和经营成果，一般只编制<strong>对外</strong>会计报表</td>
+</tr>
+<tr>
+<td>按<strong>编制的时间范围</strong></td>
+<td><strong>年度、季度、月度</strong>会计报表</td>
+<td>三个时间档</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>对内对外一刀切：</strong><p>看<strong>给谁用</strong>：报给外部人（投资者、债权人、政府等）的→对外报表，<strong>财政部统一规定</strong>；企业内部管理用的→对内报表，<strong>自己定</strong>。合并报表的触发数字只有一个：<strong>50% 以上</strong>（对外投资总额占被投资企业资本总额的比例）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某母公司持有 A 公司 60% 的股份：A 公司自己编的报表是<strong>个别报表</strong>（只照 A 自己）；母公司把 A 并进来当"一家人"，把两家的有关经济指标合并着编一份报表——<strong>合并报表</strong>，反映母公司和 A 公司<strong>共同</strong>的财务状况和经营成果。而且合并报表一般只对外编报，不是编给内部随便看看的。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四维度口诀</div><p><strong>"内容分三表，对象分内外，主体分个合，时间分年季月"</strong>——四个维度各答一问：报什么内容？报给谁？谁来编（单个还是合并）？隔多久编？多选题见"能产生现金流量""对内报表由财政部统一规定"之类直接排除。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>财务会计报告</strong>＝对外提供、反映<strong>特定日期</strong>财务状况＋<strong>会计期间</strong>经营成果、现金流量的文件</li>
+<li>报告内容＝<strong>会计报表＋会计报表附注＋其他</strong>应披露的信息资料；对外报表<strong>至少</strong>包括资产负债表、利润表、现金流量表；<strong>小企业可以不包括现金流量表</strong></li>
+<li>会计报告是对<strong>账簿记录资料</strong>的<strong>再加工</strong>；编报告前<strong>必须进行财产清查</strong>（保证账证、账账、账实相符）</li>
+<li><strong>四分类</strong>：按经济内容（财务状况/经营成果/现金流量）、按报送对象（对外财政部统一规定/对内自行设计）、按编报主体（个别/合并——投资占被投资企业资本总额 <strong>50% 以上</strong>、视为一个整体、一般只编对外）、按编制时间（年度/季度/月度）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b29s4q1" data-answer="D" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">在编制财务会计报告前，为了保证报告的数字真实可靠，应（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 做到账表相符</button><button type="button" class="qopt" data-key="B">B. 做到账证相符</button><button type="button" class="qopt" data-key="C">C. 做到账账相符</button><button type="button" class="qopt" data-key="D">D. 进行财产清查</button><button type="button" class="qopt" data-key="E">E. 做到账实相符</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：编制财务会计报告之前，为了保证数字真实可靠、做到账证相符、账账相符、账实相符，<strong>必须进行财产清查</strong>（D 对）。"账…相符"是对账工作的要求，而<strong>财产清查</strong>正是编表前把账实对上的那个前提动作——题目问"编报告前应做什么"，落点是"清查"这个动作本身。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s4q2" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">关于财务会计报告的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 财务会计报告可以反映企业财务状况、经营成果和现金流量等会计信息</button><button type="button" class="qopt" data-key="B">B. 会计报告是对账簿记录资料进行的再加工</button><button type="button" class="qopt" data-key="C">C. 我国小企业对外提供的会计报表应当包括资产负债表、利润表、现金流量表、会计报表附注等内容</button><button type="button" class="qopt" data-key="D">D. 在编制财务会计报告之前，必须进行财产清查</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：小企业编制的会计报表<strong>可以不包括现金流量表</strong>，C 说"应当包括"，错误（当选）。A 是财务报告定义的标准表述；B 正确——会计报告是对账簿记录资料的<strong>再加工</strong>；D 正确——编报告前必须进行财产清查。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s4q3" data-answer="BCE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">按照所反映经济内容的不同，企业会计报表可分为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 个别会计报表</button><button type="button" class="qopt" data-key="B">B. 现金流量报表</button><button type="button" class="qopt" data-key="C">C. 财务状况报表</button><button type="button" class="qopt" data-key="D">D. 合并会计报表</button><button type="button" class="qopt" data-key="E">E. 经营成果报表</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCE</div><div class="q-exp"><p>析：按<strong>经济内容</strong>分：反映财务状况的报表（资产负债表）、反映经营成果的报表（利润表）、反映现金流量的报表（现金流量表）——B、C、E 对。个别报表与合并报表（A、D）是按<strong>编报主体</strong>分的——四个分类维度别串门。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s4q4" data-answer="ACDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">会计上将按照（　）为主要环节的会计基本程序及相关方法称为会计循环，会计工作就是依照这一程序不断重复、循环进行的。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 会计报告</button><button type="button" class="qopt" data-key="B">B. 会计监督</button><button type="button" class="qopt" data-key="C">C. 会计计量</button><button type="button" class="qopt" data-key="D">D. 会计记录</button><button type="button" class="qopt" data-key="E">E. 会计确认</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACDE</div><div class="q-exp"><p>析：会计循环四环节＝<strong>确认、计量、记录、报告</strong>（A、C、D、E）。会计监督（B）是会计的职能之一，不属于会计循环的环节——"先认、再量、后记、末报"，多出来的都要排除。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s4q5" data-answer="ACD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">和会计报表相比，会计凭证和会计账簿在反映企业会计信息方面的不足有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 比较分散</button><button type="button" class="qopt" data-key="B">B. 比较概括</button><button type="button" class="qopt" data-key="C">C. 不能概括</button><button type="button" class="qopt" data-key="D">D. 无法满足会计信息使用者便捷地获取会计信息的需要</button><button type="button" class="qopt" data-key="E">E. 比较复杂</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：凭证、账簿反映的信息<strong>比较分散</strong>（A 对）、<strong>不能对企业整体经营状况进行概括</strong>（C 对）、使用者<strong>无法便捷获取</strong>所需信息（D 对）。会计报表是对账簿资料的再加工，恰恰以<strong>概括、集中</strong>见长——"比较概括"（B）是报表的优点而不是凭证账簿的不足；E"比较复杂"不是规范表述。这也正是"账簿是编报表的基础、报表是账簿资料再加工"的另一面。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础29_会计循环_第3节_会计记录.html"><span class="nav-label">上一节</span><span class="nav-title">第3节 会计记录</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

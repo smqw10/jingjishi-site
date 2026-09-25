@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三十章 会计报表 · 资产负债表 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第五部分 会计</span><h1>第三十章 会计报表 · 资产负债表</h1><div class="subtitle">第 2 节 / 共 5 节 · 预计学习时长 50 分钟</div><div class="progress-bar"><div class="fill" style="width:40%"></div></div><div class="progress-text">本章进度 2/5</div><div class="sec-badge none" id="sec-badge" data-sec="b30s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟资产负债表定义四关键词：<strong>特定日期、财务状况、资产＝负债＋所有者权益、静态报表</strong> <span class="must">必考</span></li>
+<li>分清<strong>账户式</strong>（左右两方·我国采用）与<strong>报告式</strong>（上下排列），会默写三类项目的排列依据与顺序 <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+<li>掌握两种填列方法（直接填列／分析计算填列四类），会给<strong>货币资金、未分配利润</strong>做分步演算 <span class="s3">★★★</span></li>
+<li>会算<strong>留存收益＝盈余公积＋未分配利润</strong>，认得"所有者权益四项" <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、资产负债表的概念与作用</h2>
+<h3>1. 资产负债表的概念 <span class="must">必考</span></h3>
+<p><strong>资产负债表</strong>是反映企业在<strong>某一特定日期财务状况</strong>的会计报表，是按照一定的标准和顺序将<strong>资产、负债、所有者权益</strong>进行适当排列编制的，反映企业某一特定日期所拥有或控制的<strong>经济资源</strong>、所承担的<strong>现实义务</strong>和<strong>所有者对净资产的要求权</strong>。它以"<strong>资产＝负债＋所有者权益</strong>"这一基本等式为基础进行编制，是反映企业<strong>静态财务状况</strong>的一种报表。</p></div>
+<div class="section"><div class="keypoint"><strong>静态报表＝时点照片：</strong><p>"某一特定日期"→按快门那一天的定格照片：那天有多少家当（资产）、欠多少债（负债）、真正归股东的还剩多少（所有者权益）。判断"哪张表是静态报表"→<strong>资产负债表</strong>；利润表、现金流量表反映一定期间，都是动态报表。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>1 月 1 日给全家拍张合影：今天存款多少、房子车子值多少、房贷还欠多少——快门一按全部定格，这就是资产负债表：<strong>特定日期</strong>的财务状况快照。明年 1 月 1 日再拍一张，两张照片对比才知道家底变化。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 概念四关键词</div><p><strong>"特定日期拍快照，资产抵完归权益"</strong>——四个必背关键词：①某一特定日期（时点）；②财务状况；③资产＝负债＋所有者权益；④静态报表。真题单选"反映企业静态财务状况的报表"，就靠这四个词锁定。</p></div></div>
+<div class="section"><h3>2. 资产负债表的作用 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>提供企业所拥有和控制的<strong>经济资源及其分布和构成</strong>情况，为经营者分析资产分布是否合理提供依据</td>
+</tr>
+<tr>
+<td>②</td>
+<td>总括反映企业<strong>资金的来源渠道和构成</strong>情况</td>
+</tr>
+<tr>
+<td>③</td>
+<td>通过分析了解企业财务状况，判断企业的<strong>偿债能力和支付能力</strong></td>
+</tr>
+<tr>
+<td>④</td>
+<td>通过<strong>前后期对比</strong>分析，了解企业资金结构的变化情况及变化趋势</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>看资产负债表就是问四个问题：</strong><p><strong>有什么</strong>（经济资源及其分布构成）、<strong>钱哪来</strong>（资金来源渠道和构成）、<strong>能不能还</strong>（偿债能力和支付能力）、<strong>变了没</strong>（前后期对比看资金结构变化）。多选挑作用就按这四问框定，框外的"盈利能力、经营成果、现金流动"都不属于它。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>银行信贷员审贷款，第一件事就是看资产负债表：家当有多少、质量如何（①），钱是股东投的还是借来的（②），流动资产够不够覆盖马上要还的债（③），跟去年比负债率升没升（④）——四条作用正好是信贷员的工作清单。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 作用口诀</div><p><strong>"家底、来路、还债力、变化"</strong>——有什么家当（资源分布）、钱从哪来（来源渠道）、能不能还债（偿债支付能力）、跟以前比变了没（资金结构变化）。看到"经营成果／盈利能力"混进作用选项，必错——那是利润表的事。</p></div></div>
+<div class="section"><h2>二、资产负债表的格式与内容</h2>
+<h3>2. 格式与三类项目的排列 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>格式</strong>有两种：</p>
+<table>
+<thead>
+<tr>
+<th>格式</th>
+<th>排列方式</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>账户式</strong></td>
+<td><strong>左右两方</strong></td>
+<td>左方列示企业所拥有的全部资产的分布及存在形态（反映可用于偿还债务的资产）；右方列示负债和所有者权益各项目（反映需清偿的债务和不需清偿的权益）。<strong>我国采用账户式</strong></td>
+</tr>
+<tr>
+<td>报告式</td>
+<td><strong>上下顺序</strong></td>
+<td>依次将资产、负债和所有者权益项目上下排列</td>
+</tr>
+</tbody>
+</table>
+<p><strong>内容</strong>：资产和负债应当分别以流动资产和非流动资产、流动负债和非流动负债列示。</p>
+<table>
+<thead>
+<tr>
+<th>项目类别</th>
+<th>排列依据</th>
+<th>资产负债表上的顺序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>资产类</strong></td>
+<td>按<strong>流动性</strong>（变现速度）排列：流动性强在前，越靠前变现越快</td>
+<td>流动资产（一年或一个经营周期以内可变现，含一年内耗用和售出的全部资产）：<strong>货币资金、应收票据及应收账款、预付款项、其他应收款、存货和待摊费用</strong>等；非流动资产（变现能力在一年或一个经营周期以上）：<strong>长期投资、固定资产、在建工程、无形资产、递延资产和其他资产</strong>等</td>
+</tr>
+<tr>
+<td><strong>负债类</strong></td>
+<td>按<strong>到期日远近</strong>排列：先到期在前、后到期在后，流动负债在前</td>
+<td>流动负债（偿还期在 1 年以内）：<strong>短期借款、应付票据及应付款项、预收款项、应付职工薪酬、应交税费、应付股利、其他应付款、持有待售负债和一年内到期的非流动负债</strong>；非流动负债（偿债期在 1 年以上）：<strong>长期借款、应付债券、长期应付款和专项应付款</strong>等</td>
+</tr>
+<tr>
+<td><strong>所有者权益类</strong></td>
+<td>权益的形成来源</td>
+<td><strong>实收资本、资本公积、盈余公积、未分配利润</strong>（资本公积含所有者投入资本之外股本溢价和评估增值等引起的部分；盈余公积和未分配利润是生产经营过程中形成的）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>资产像"按花钱速度排队"：口袋里的现金（货币资金）随时能花排第一，别人开的欠条（应收票据及应收账款）过几天能收，仓库里的货（存货）得先卖掉才变成钱，厂房设备（固定资产）要用好多年——越靠前变现金越快。负债像"按还钱日子排队"：这个月要还的信用额度（短期借款）排最前，五年后到期的债券（应付债券）排最后——两边都是"急的在前"。</p></div></div>
+<div class="section"><div class="keypoint"><strong>两把不同的尺子：</strong><p>资产用<strong>变现速度</strong>这把尺子（流动性），负债用<strong>到期日远近</strong>这把尺子——别背串。还有个"搬家"规则：长期借款等非流动负债中<strong>一年内到期</strong>的部分，要挪进流动负债的"一年内到期的非流动负债"项目列示。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 排列口诀</div><p><strong>"资产看变现，负债看还款，两边急在前；权益实资盈未"</strong>——资产按流动性（变现快慢），负债按到期日远近（流动负债在前）；所有者权益四项顺序"实收资本→资本公积→盈余公积→未分配利润"。盈余公积＋未分配利润合称<strong>留存收益</strong>，是企业历年实现净利润留存下来的部分（2023 年真题考过它的计算）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易混辨析</div><ul>
+<li>问"我国采用什么格式"→ 资产负债表<strong>账户式</strong>、利润表<strong>多步式</strong>——两张表格式术语不同，别互相串门。</li>
+<li>问"资产列在哪一方"→ 账户式<strong>左方</strong>（右方是负债和所有者权益）。</li>
+<li>负债排"到期日远近"，<strong>不是</strong>"流动性"——方向对照类选项最爱把两把尺子调包。</li>
+<li>留存收益＝盈余公积＋未分配利润；实收资本、资本公积是投入资本，不算留存收益。</li>
+</ul></div></div>
+<div class="section"><h2>三、资产负债表的编制方法</h2>
+<h3>3. 两种填列方法 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p>资产负债表的项目与企业会计科目<strong>不完全一致</strong>，期末余额有两种填列方法：</p>
+<p><strong>① 直接填列法</strong>：根据<strong>总账科目的期末余额直接填列</strong>，如"短期借款""应付职工薪酬""应交税费""实收资本""资本公积""盈余公积"等项目。</p>
+<p><strong>② 分析计算填列法</strong>：将总账科目和明细科目的期末余额，按照报表项目的内容<strong>分析、计算后填列</strong>，分四种情形：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>教材原例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>根据若干<strong>总账科目期末余额分析计算</strong>填列</td>
+<td>"货币资金"＝库存现金＋银行存款＋其他货币资金期末余额的<strong>合计数</strong>；"未分配利润"＝"本年利润"与"利润分配"科目期末余额<strong>之和</strong>（同为贷方余额时）或<strong>之差</strong>（余额方向相反时）——贷方余额大于借方余额时直接填差额，<strong>借方大于贷方时差额用负数填列</strong></td>
+</tr>
+<tr>
+<td>根据总账科目期末余额<strong>与其备抵科目抵销</strong>后填列</td>
+<td>"固定资产""在建工程""无形资产""长期股权投资""其他应收款""持有待售资产"等（扣掉减值准备等备抵科目）</td>
+</tr>
+<tr>
+<td>根据<strong>有关明细账期末余额</strong>分析计算填列</td>
+<td>"预收款项"＝"应收账款"和"预收款项"账户所属明细账<strong>贷方余额之和</strong>；"其他应付款"＝"其他应收款"和"其他应付款"两个总账科目所属明细科目期末<strong>贷方余额之和</strong></td>
+</tr>
+<tr>
+<td>根据<strong>总账科目和明细科目余额</strong>分析计算填列</td>
+<td>"长期借款""其他非流动负债"中<strong>一年内到期</strong>的部分列入"一年内到期的非流动负债"项目；"存货"＝物资采购＋原材料＋包装物＋低值易耗品＋自制半成品＋生产成本＋库存商品＋材料成本差异等科目期末借方余额之和<strong>减去"存货跌价准备"</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某公司期末账上：库存现金 2 万、银行存款 380 万、其他货币资金（如银行承兑汇票保证金）18 万。编表时"货币资金"项目＝2＋380＋18＝<strong>400 万</strong>——三个总账科目加总，一步不漏，这正是"根据若干总账科目期末余额分析计算填列"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>情形一：本年利润贷方 90 万、利润分配贷方 10 万（同为贷方余额）→ 相加：90＋10＝<strong>100 万</strong>；情形二：本年利润贷方 90 万、利润分配借方 30 万（方向相反）→ 相减：90−30＝<strong>60 万</strong>；情形三：本年利润借方 20 万、利润分配借方 5 万（亏损年度，借方合计大）→ 差额用<strong>负数</strong>填列：−25 万。看清两个科目余额的<strong>方向</strong>再决定加还是减。</p></div></div>
+<div class="section"><div class="keypoint"><strong>直接抄 vs 算着填：</strong><p><strong>"科目和项目同名同义，直接抄总账余额"</strong>（短期借款、应付职工薪酬、应交税费、实收资本、资本公积、盈余公积）；<strong>"名字对不上或要加工的，分析计算填"</strong>——合并（货币资金）、轧差（未分配利润）、扣备抵（固定资产等长期资产）、翻明细账（预收款项、其他应付款）、跨期搬家（一年内到期的非流动负债）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 填列法口诀</div><p><strong>"短应实直填，货币合着算"</strong>——"短期借款、应付职工薪酬、应交税费、实收资本（'短应实'等）"这些直接抄总账；货币资金合并算、未分配利润轧差算、固定资产扣备抵算、预收款项翻明细算、一年内到期的长期借款要搬家。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 填列方法对号入座</div><p>多选问"根据有关<strong>明细科目</strong>期末余额分析计算填列"→ 只挑<strong>预收款项、其他应付款</strong>（应收/应付两家互相串门的两个项目）；问"<strong>备抵科目抵销</strong>后填列"→ 挑固定资产、在建工程、无形资产、长期股权投资、其他应收款、持有待售资产；问"<strong>直接填列</strong>"→ 挑短期借款、应付职工薪酬、应交税费、实收资本、资本公积、盈余公积。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li>定义四关键词：特定日期＋财务状况＋资产＝负债＋所有者权益＋<strong>静态报表</strong></li>
+<li>作用四条："家底（资源分布）、来路（来源渠道）、还债力（偿债支付能力）、变化（资金结构变化）"</li>
+<li>格式：<strong>账户式</strong>（左右两方，左资产右负债和所有者权益，<strong>我国采用</strong>）／报告式（上下排列）</li>
+<li>排列："资产看变现，负债看还款，两边急在前；权益实资盈未"——流动资产"货币资金→应收票据及应收账款→预付款项→其他应收款→存货和待摊费用"；非流动资产"长期投资→固定资产→在建工程→无形资产→递延资产和其他资产"；流动负债"短期借款→应付票据及应付款项→预收款项→应付职工薪酬→应交税费→应付股利→其他应付款→持有待售负债和一年内到期的非流动负债"；非流动负债"长期借款→应付债券→长期应付款和专项应付款"；留存收益＝盈余公积＋未分配利润</li>
+<li>填列：直接填列（短期借款/应付职工薪酬/应交税费/实收资本/资本公积/盈余公积）；分析计算四类——总账合计（货币资金）、之和或之差（未分配利润，借大于贷填负数）、扣备抵（固定资产等）、翻明细（预收款项、其他应付款）、跨期搬家（一年内到期的非流动负债）、存货＝八科目借方余额和−存货跌价准备</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b30s2q1" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">下列关于资产负债表的作用表述，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 提供企业所拥有和控制的经济资源</button><button type="button" class="qopt" data-key="B">B. 反映了企业资金的来源渠道和构成情况</button><button type="button" class="qopt" data-key="C">C. 可以了解企业的经营成果</button><button type="button" class="qopt" data-key="D">D. 可以了解企业资金结构的变化情况</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：经营成果是<strong>利润表</strong>反映的内容，C 错误。A、B、D 分别对应资产负债表作用的前三条（经济资源分布、资金来源渠道、资金结构变化）——注意资产负债表管"家底"不管"赚了多少"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b30s2q2" data-answer="A" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">下列资产项目中，流动性最强的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 应收票据</button><button type="button" class="qopt" data-key="B">B. 固定资产</button><button type="button" class="qopt" data-key="C">C. 存货</button><button type="button" class="qopt" data-key="D">D. 长期股权投资</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：流动性＝变现速度。应收票据（A）属流动资产、收了钱就变现；存货（C）要先卖掉才能变钱；固定资产（B）、长期股权投资（D）是非流动资产，变现能力在一年或一个经营周期以上。四项里应收票据变现最快。
+:::</p></div></details></div><div class="quiz-item" data-qid="b30s2q3" data-answer="CDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">关于资产负债表的说法，错误的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 资产负债表反映企业在某一特定日期的财务状况</button><button type="button" class="qopt" data-key="B">B. 资产负债表可以总括反映企业资金的来源渠道和构成情况</button><button type="button" class="qopt" data-key="C">C. 资产负债表主要用于反映企业的盈利能力</button><button type="button" class="qopt" data-key="D">D. 目前我国采用报告式资产负债表格式</button><button type="button" class="qopt" data-key="E">E. 资产负债表反映企业在一定会计期间的经营成果</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CDE</div><div class="q-exp"><p>析：C 错——盈利能力是利润表的主场；D 错——我国采用<strong>账户式</strong>，不是报告式；E 错——"一定会计期间的经营成果"是利润表，资产负债表反映<strong>特定日期</strong>的财务状况。A、B 是资产负债表的标准表述。
+:::</p></div></details></div><div class="quiz-item" data-qid="b30s2q4" data-answer="BC" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列项目中，在编制资产负债表时，根据有关明细科目期末余额分析计算填列的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 短期借款</button><button type="button" class="qopt" data-key="B">B. 其他应付款</button><button type="button" class="qopt" data-key="C">C. 预收账款</button><button type="button" class="qopt" data-key="D">D. 固定资产</button><button type="button" class="qopt" data-key="E">E. 实收资本</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BC</div><div class="q-exp"><p>析：预收账款（C）根据"应收账款"和"预收款项"账户所属明细账贷方余额之和填列；其他应付款（B）根据"其他应收款"和"其他应付款"所属明细科目期末贷方余额之和填列。短期借款（A）、实收资本（E）按总账余额<strong>直接填列</strong>；固定资产（D）按总账余额与其备抵科目<strong>抵销后</strong>填列——三种填列方法各归各位。
+:::</p></div></details></div><div class="quiz-item" data-qid="b30s2q5" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">资产负债表中，资产类项目的排列顺序是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 资产的金额大小</button><button type="button" class="qopt" data-key="B">B. 资产的到期日远近</button><button type="button" class="qopt" data-key="C">C. 资产的取得时间先后</button><button type="button" class="qopt" data-key="D">D. 资产的变现速度快慢</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：资产类项目按<strong>流动性</strong>排列，即按<strong>变现速度</strong>的快慢排序，流动性强的排在前面（D）。B"到期日远近"是<strong>负债类</strong>项目的排列依据——两把尺子别调包；金额大小、取得时间是凑数干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b30s2q6" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">某企业的实收资本 2000 万元，资本公积 1000 万元，盈余公积 500 万元，未分配利润 600 万元，其留存收益为（　）万元。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 1100</button><button type="button" class="qopt" data-key="B">B. 4100</button><button type="button" class="qopt" data-key="C">C. 2100</button><button type="button" class="qopt" data-key="D">D. 600</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：留存收益＝盈余公积＋未分配利润＝500＋600＝<strong>1100</strong>（A）。分步：先挑科目——只有盈余公积、未分配利润是"历年净利润留存"部分；再相加 500＋600＝1100。B（4100）是全部所有者权益合计，C（2100）是实收资本＋资本公积（投资者投入部分），D（600）漏了盈余公积——三类干扰正好对应三个算错的口径。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础30_会计报表_第1节_会计报表的概念.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 会计报表的概念</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础30_会计报表_第3节_利润表.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 利润表</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

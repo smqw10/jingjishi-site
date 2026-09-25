@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十七章 财政政策 · 财政政策功能与目标 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第二部分 财政</span><h1>第十七章 财政政策 · 财政政策功能与目标</h1><div class="subtitle">第 1 节 / 共 3 节 · 预计学习时长 30 分钟</div><div class="progress-bar"><div class="fill" style="width:33%"></div></div><div class="progress-text">本章进度 1/3</div><div class="sec-badge none" id="sec-badge" data-sec="b17s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背出财政政策的<strong>定义</strong>与四大组成（预算、税收、支出、国债），一眼踢出混进来的"利率、汇率" <span class="hot">高频考点</span></li>
+<li>记住四大<strong>功能</strong>（导向、协调、控制、稳定），会按情景关键词对号入座 <span class="must">必考</span></li>
+<li>记住四大<strong>目标</strong>（充分就业、物价基本稳定、国际收支平衡、经济稳定增长）及各自表述细节</li>
+</ul></div></div>
+<div class="section"><h2>一、财政政策的含义与功能</h2>
+<h3>1. 财政政策的定义与组成 <span class="hot">高频考点</span></h3>
+<p><strong>财政政策</strong>：一国政府为实现预期的经济社会发展目标，对<strong>财政收支关系</strong>进行调整的<strong>指导原则和措施</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>组成政策</th>
+<th>管的是什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>预算政策</strong></td>
+<td>全年收支总盘子：搞赤字还是留盈余</td>
+</tr>
+<tr>
+<td><strong>税收政策</strong></td>
+<td>增税还是减税、给不给税收优惠</td>
+</tr>
+<tr>
+<td><strong>支出政策</strong></td>
+<td>财政花钱的规模与结构</td>
+</tr>
+<tr>
+<td><strong>国债政策</strong></td>
+<td>发不发债、发多少</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>财政政策还是货币政策？看钱从哪条线走：</strong><p>判断是不是财政政策，只看手段是不是<strong>政府收钱、花钱</strong>：预算、税收、国债、支出、补贴＝财政政策；<strong>利率、存款准备金率、再贴现</strong>＝央行货币政策，<strong>汇率</strong>＝汇率调节手段——都不属于财政政策。考试最爱把"利率政策"塞进财政政策选项里当卧底。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>同样是刺激经济：财政部<strong>减税、增发国债、扩大基建支出</strong>——财政政策；央行<strong>降息、降准</strong>——货币政策。一个动"政府钱袋子"，一个动"市场上的钱"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 财政政策组成口诀</div><p><strong>"预税支债"</strong>——预算、税收、支出、国债四大政策。选项里见"利率、汇率、再贴现、准备金率"一律踢出去。</p></div></div>
+<div class="section"><h3>2. 财政政策的四大功能（★★）<span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>教材表述（抓关键词）</th>
+<th>一句话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>导向</strong>功能</td>
+<td>通过财政分配和管理活动，调整人们的<strong>物质利益</strong>，进而<strong>调节</strong>企业和个人的经济行为，<strong>引导</strong>国民经济运行</td>
+<td>指方向</td>
+</tr>
+<tr>
+<td><strong>协调</strong>功能</td>
+<td>对社会经济发展过程中<strong>地区之间、行业之间、部门之间</strong>等出现的某些<strong>失衡</strong>状况进行调节和制约</td>
+<td>调失衡</td>
+</tr>
+<tr>
+<td><strong>控制</strong>功能</td>
+<td>调节企业和居民等市场经济主体的经济行为，实现对经济社会的<strong>有效控制</strong></td>
+<td>控行为</td>
+</tr>
+<tr>
+<td><strong>稳定</strong>功能</td>
+<td>调整社会<strong>总需求和总供给</strong>，实现总供需的<strong>总量平衡和结构平衡</strong></td>
+<td>稳总量</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>四大功能的判定锚点：</strong><p>导向＝调整物质利益"引"行为；协调＝地区/行业/部门"失衡"；控制＝"有效控制"市场主体行为；稳定＝总需求总供给、"总量＋结构"双平衡。情景题抓词：见"抑制通货膨胀、压缩总需求"→<strong>稳定</strong>；见"地区、行业、部门差距"→<strong>协调</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>对高耗能行业课重税、对新兴产业减税——引导资金流向＝<strong>导向</strong>；转移支付缩小东西部差距＝<strong>协调</strong>；用税收杠杆约束企业投资行为＝<strong>控制</strong>；经济过热时减支增税给总需求降温＝<strong>稳定</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 功能口诀</div><p><strong>"导向引路、协调拆墙、控制拉缰、稳定压舱"</strong>——引行为、调失衡、控行为、稳供需。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 功能题三步走</div><p>第一步圈题干动词："引导"→导向；"失衡/差距"→协调；"控制"→控制；"总供需/通胀/过热"→稳定。第二步对不上就排除。第三步警惕"调节"二字——四个功能全带"调节"，它本身不是判据，要看调节<strong>什么对象</strong>。</p></div></div>
+<div class="section"><h2>二、财政政策的目标</h2>
+<h3>3. 四大政策目标</h3>
+<p>财政政策通过调节社会总需求与总供给，优化社会资源配置，实现四大目标：</p>
+<table>
+<thead>
+<tr>
+<th>目标</th>
+<th>教材要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>促进充分就业</strong></td>
+<td>衡量<strong>资源充分利用</strong>的一个指标，表明生产要素的投入情况，通常用<strong>失业率</strong>表示</td>
+</tr>
+<tr>
+<td><strong>物价基本稳定</strong></td>
+<td>各国政府努力追求的目标之一</td>
+</tr>
+<tr>
+<td><strong>国际收支平衡</strong></td>
+<td><strong>经常项目</strong>收支、<strong>资本项目</strong>流入流出的<strong>差额之和为零</strong>；国际贸易（含商品和劳务）和国际资本的<strong>综合平衡</strong></td>
+</tr>
+<tr>
+<td><strong>经济稳定增长</strong></td>
+<td>一定时期内经济发展速度和水平保持稳定；取决于两个源泉——<strong>生产要素投入的增长</strong>＋<strong>生产要素的技术进步程度</strong>；是财力、物力和人力等社会资源能够支持的<strong>可持续增长</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>国际收支长期不平衡的连锁后果：</strong><p>逆差＝国际贸易流动的净结果使<strong>其他国家对本国储备的索取权增加</strong>，削弱本国储备地位。长期不平衡→外汇储备不断减少、外债负担逐步增加、严重削弱在国际金融体系中的地位、<strong>国民收入增长率下降</strong>。多选题最爱按这条因果链挖空。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>经济稳定增长的两个源泉好比骑车：<strong>要素投入</strong>是"蹬车的劲"（财力、物力、人力砸进去多少），<strong>技术进步</strong>是"车的传动效率"。只猛蹬不换好车，骑不远——所以教材强调这是"<strong>可持续</strong>增长"，不是一时冲高的增长。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 目标口诀</div><p><strong>"就业、物价、收支、增长"</strong>——促进充分就业、物价基本稳定、国际收支平衡、经济稳定增长。配对记：就业看<strong>失业率</strong>、收支看<strong>经常＋资本</strong>双账户、增长看<strong>投入＋技术</strong>两源泉。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>财政政策</strong>＝为实现经济社会发展目标，对财政收支关系进行调整的指导原则和措施；组成＝预算＋税收＋支出＋国债；利率/汇率/再贴现/准备金率都不是财政政策</li>
+<li><strong>四大功能</strong>：导向（调物质利益、引导行为）／协调（地区、行业、部门失衡）／控制（有效控制主体行为）／稳定（总供需总量平衡＋结构平衡；过热减支增税＝稳定）</li>
+<li><strong>四大目标</strong>：促进充分就业（失业率衡量）／物价基本稳定／国际收支平衡（经常＋资本差额之和为零）／经济稳定增长（源泉＝要素投入增长＋技术进步程度）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b17s1q1" data-answer="CE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列经济政策中，不属于财政政策的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 税收政策</button><button type="button" class="qopt" data-key="B">B. 国债政策</button><button type="button" class="qopt" data-key="C">C. 利率政策</button><button type="button" class="qopt" data-key="D">D. 预算政策</button><button type="button" class="qopt" data-key="E">E. 汇率政策</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CE</div><div class="q-exp"><p>析：财政政策由<strong>预算、税收、支出、国债</strong>等政策组成，A、B、D 都属于。<strong>利率政策</strong>是央行货币政策工具、<strong>汇率政策</strong>是汇率调节手段，都不走"财政收支"这条线，C、E 当选。送分题：组成四件套背熟，卧底一眼踢出。
+:::</p></div></details></div><div class="quiz-item" data-qid="b17s1q2" data-answer="ABCD" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">财政政策是国家宏观经济的重要组成部分，财政政策包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 税收政策</button><button type="button" class="qopt" data-key="B">B. 支出政策</button><button type="button" class="qopt" data-key="C">C. 预算政策</button><button type="button" class="qopt" data-key="D">D. 国债政策</button><button type="button" class="qopt" data-key="E">E. 利率政策</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：与上一题一正一反——问"包括"就选四大组成：税收（A）、支出（B）、预算（C）、国债（D）。利率政策（E）是<strong>货币政策</strong>工具，排除。同一考点两年连着正反考，说明"组成四件套＋利率卧底"就是本知识点的标准考法。
+:::</p></div></details></div><div class="quiz-item" data-qid="b17s1q3" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">在经济过热、存在通货膨胀时，政府通过减少财政支出、增加税收等措施压缩需求，抑制通货膨胀，体现的财政政策功能是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 控制功能</button><button type="button" class="qopt" data-key="B">B. 稳定功能</button><button type="button" class="qopt" data-key="C">C. 协调功能</button><button type="button" class="qopt" data-key="D">D. 导向功能</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：<strong>稳定功能</strong>＝调整社会总需求和总供给、实现总供需的总量平衡和结构平衡——"过热时减支增税压总需求"正是教科书式情景，B 正确。A 控制功能落在"有效控制市场主体行为"；C 协调功能针对<strong>地区、行业、部门</strong>失衡；D 导向功能落在"调整物质利益、引导经济运行"——三个干扰项的关键词都与"总供需"对不上。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础17_财政政策_第2节_财政政策的工具与类型.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 财政政策的工具与类型</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

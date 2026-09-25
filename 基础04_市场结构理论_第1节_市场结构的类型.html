@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第四章 市场结构理论 · 市场结构的类型 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第四章 市场结构理论 · 市场结构的类型</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="b04s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>市场结构</strong>的定义，背熟划分市场结构的<strong>三个标准</strong>（企业数目、产品差别、进入障碍） <span class="hot">高频考点</span></li>
+<li>一张表分清<strong>四种市场结构</strong>的特征，会判断"某个行业属于哪种市场" <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>见到"完全竞争与垄断竞争的主要区别"秒选<strong>产品差别</strong> <span class="must">必考</span></li>
+<li>背熟<strong>形成完全垄断的四个条件</strong>（政府、资源、专利、自然），理解自然垄断与规模经济的关系 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、市场结构的含义与划分标准</h2>
+<h3>1. 什么是市场结构</h3>
+<p><strong>市场结构</strong>，是指一个行业内部<strong>买方和卖方的数量及其规模分布</strong>、<strong>产品差别的程度</strong>和<strong>新企业进入该行业的难易程度</strong>的综合状态，也是某种产品或服务的<strong>竞争状态和竞争程度</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>白话拆解：三个问题定格局：</strong><p>市场结构回答的是"这个行业的买卖格局"：<strong>几家在卖</strong>？卖的东西<strong>一样不一样</strong>？<strong>新人想进场容易吗</strong>？这三个问题的答案，决定了一个行业是"竞争味儿"重还是"垄断味儿"重——所以市场结构本质上就是在描述竞争与垄断的程度组合。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>菜市场卖青菜的有几十个摊位、青菜长得都一样、谁想摆摊随时能来——竞争程度高；小区自来水只有一家公司在供、别家企业进不来——垄断程度高。行业格局不同，企业的"身价"（定价权）就完全不同。</p></div></div>
+<div class="section"><h3>2. 划分市场结构的三个标准 <span class="hot">高频考点</span></h3>
+<p>划分市场类型的标准是市场的<strong>竞争程度和垄断程度</strong>，主要依据三个因素：</p>
+<table>
+<thead>
+<tr>
+<th>划分依据</th>
+<th>与竞争/垄断程度的关系</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 本行业内部的<strong>生产者数目（企业数目）</strong></td>
+<td>企业数目越多 → 竞争程度越高，垄断程度越低</td>
+<td>几家在卖</td>
+</tr>
+<tr>
+<td>② 本行业内各企业生产者的<strong>产品差别程度</strong></td>
+<td>产品差别程度是<strong>垄断竞争市场和完全竞争市场的主要区别</strong></td>
+<td>卖的一样不一样</td>
+</tr>
+<tr>
+<td>③ <strong>进入障碍</strong>的大小</td>
+<td>进入障碍越小 → 竞争程度越高，垄断程度越低</td>
+<td>新人好进不好进</td>
+</tr>
+</tbody>
+</table>
+<p>依据上述三因素的不同特点，将市场分为四种类型：<strong>完全竞争市场、垄断竞争市场、寡头垄断市场、完全垄断市场</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三标准口诀</div><p><strong>"数、差、障"</strong>——<strong>数</strong>几家（越多越竞争）、看<strong>差</strong>多大（有差别才有垄断味儿）、瞧<strong>障</strong>碍（越小越竞争）。竞争与垄断是反向跷跷板：竞争程度高＝垄断程度低，方向别记反。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 方向对照易错：竞争与垄断&quot;反着来&quot;</div><p>考试爱在方向上设坑："进入障碍越大，竞争程度越高"（错！障碍越大→越难进→垄断程度越高）；"企业数目越多，垄断程度越高"（错！越多→越竞争）。记住跷跷板：一头"竞争"翘起来，另一头"垄断"就落下去。</p></div></div>
+<div class="section"><h2>二、四种市场结构的特征</h2>
+<h3>3. 四种市场结构总览 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>市场类型</th>
+<th>生产者数目</th>
+<th>产品差别程度</th>
+<th>进入退出难易</th>
+<th>价格地位</th>
+<th>近似例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>完全竞争</strong></td>
+<td>很多（买卖双方都多、规模都小）</td>
+<td>同质，<strong>无差别</strong></td>
+<td>资源自由流动，<strong>自由进出、无障碍</strong></td>
+<td>市场价格的<strong>接受者</strong></td>
+<td>某些农产品，如<strong>小麦、玉米</strong></td>
+</tr>
+<tr>
+<td><strong>完全垄断</strong></td>
+<td><strong>只有一个生产者</strong></td>
+<td>无合适替代品的<strong>独特性产品</strong></td>
+<td>其他企业进入<strong>非常困难</strong></td>
+<td>价格的<strong>决定者</strong>（不是接受者）</td>
+<td>公用事业，如<strong>电力、固定电话</strong>；政府垄断的<strong>邮政</strong></td>
+</tr>
+<tr>
+<td><strong>寡头垄断</strong></td>
+<td><strong>少数几家</strong></td>
+<td>可能无差别，也可能有差别</td>
+<td>新企业进入相当困难</td>
+<td>对价格有<strong>较大程度</strong>的控制（少数几家企业控制行业供给，易勾结定价）</td>
+<td><strong>汽车、钢铁</strong>等行业</td>
+</tr>
+<tr>
+<td><strong>垄断竞争</strong></td>
+<td>很多（与完全竞争相同）</td>
+<td><strong>有差别</strong>（与完全竞争市场的主要区别）</td>
+<td>比较容易，障碍较小</td>
+<td>能在<strong>一定程度上控制价格</strong></td>
+<td>现实中大量存在</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>抓&quot;谁定价&quot;这条主线：</strong><p>判断市场类型最快的抓手是问"<strong>谁说了算价格</strong>"：完全竞争——谁也说了不算，全是<strong>接受者</strong>；完全垄断——一家说了算，是<strong>决定者</strong>；垄断竞争——产品有差别，<strong>有一定程度</strong>的控制权；寡头垄断——少数几家商量着定（协议价格制）或跟着龙头定（价格领袖制）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小麦农户：多你一家少你一家，行情价照单全收（完全竞争·接受者）；自来水公司：全小区就这一家，定价它说了算（完全垄断·决定者）；几家大钢厂、大车厂互相盯着对方定价，可乐市场也就可口、百事那么几家说了算（寡头垄断）；街角奶茶店：奶茶大同小异但各有风味，涨价一点不至于客人全跑（垄断竞争·有一定控制力）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四市场对号口诀</div><p><strong>"竞争像麦市（小麦玉米），垄断像水电（电力、固定电话、邮政），寡头几家分（汽车、钢铁），垄竞差一点（产品有差别）"</strong>。再配一条定价主线：<strong>"完全竞争接受价，其余三家有定价权"</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;不包括&quot;型多选题排雷法</div><p>遇到"完全垄断市场的特征<strong>不包括</strong>"这类选非题，用三特征清单（<strong>唯一生产者且是价格决定者／无合适替代品的独特性产品／其他企业进入非常困难</strong>）逐项对照：见到"生产者数量很多"（→完全竞争/垄断竞争）、"只有少数几家生产者"（→寡头垄断）、"可以自由进入或退出"（→完全竞争）、"价格的接受者"（→完全竞争），统统往"不包括"里放。</p></div></div>
+<div class="section"><h3>4. 形成完全垄断的四个条件 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>含义</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>政府垄断</strong></td>
+<td>政府对某一行业实行完全垄断</td>
+<td>我国政府对<strong>邮政</strong>等的完全垄断</td>
+</tr>
+<tr>
+<td><strong>资源垄断</strong></td>
+<td>对某些<strong>特殊原材料</strong>的单独控制而形成的对资源和产品的完全垄断</td>
+<td>独占某种矿藏原料</td>
+</tr>
+<tr>
+<td><strong>专利垄断</strong></td>
+<td>对某些产品的<strong>专利权</strong>而形成的完全垄断</td>
+<td>专利期内独家生产</td>
+</tr>
+<tr>
+<td><strong>自然垄断</strong></td>
+<td>行业中<strong>只有一家企业能够有效率地进行生产</strong>，或<strong>一个企业能以低于两个或更多企业的成本为整个市场供给一种产品</strong></td>
+<td>自来水、电网等</td>
+</tr>
+</tbody>
+</table>
+<p>自然垄断与<strong>规模经济</strong>有着密切的关系——规模经济就是企业或厂商的<strong>平均总成本会随着产量的扩大而不断下降</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>自然垄断为什么&quot;一家最省&quot;：</strong><p>平均总成本随产量扩大而不断下降 → 产量越大、单位成本越低 → 一家企业供整个市场时成本最低；若再进来一家，各干一半、谁都吃不饱量，两家的平均成本都比一家干时高。所以"自然而然"只容得下一家——这就是自然垄断。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>给小区供水要先铺管网：管网的钱是固定的，用水的人越多、摊到每吨水上的成本越低。一家公司供全小区，成本最低；再来一家竞争者，得再铺一套管网，两家都吃不饱量，每吨水的成本反而更高——这就是"一个企业能以低于两个或更多企业的成本为整个市场供给一种产品"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 完全垄断四条件</div><p><strong>"政府收、资源独、专利护、自然省"</strong>——政府垄断（邮政）、独占特殊原材料、握着专利权、一家干成本最低（自然垄断）。判断"属于自然垄断的是"，认准定义句"<strong>只有一家企业能够有效率地进行生产／以低于两个或更多企业的成本为整个市场供给一种产品</strong>"。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>市场结构</strong>＝行业内买方和卖方数量及规模分布＋产品差别程度＋新企业进入难易程度的综合状态（某种产品或服务的竞争状态和竞争程度）</li>
+<li><strong>三标准</strong>："数、差、障"——企业数目（越多越竞争）、产品差别程度（垄断竞争 vs 完全竞争的主要区别）、进入障碍（越小越竞争）；竞争程度与垄断程度反向</li>
+<li><strong>四种市场</strong>：完全竞争（很多、同质无差别、自由进出无障碍、价格接受者，近似小麦玉米）／完全垄断（唯一生产者、价格决定者、无合适替代品的独特性产品、进入非常困难，近似电力、固定电话、邮政）／寡头垄断（少数几家控制供给、对价格有较大程度控制，产品可能无差别也可能有差别，如汽车、钢铁）／垄断竞争（很多、产品有差别、进出容易、有一定价格控制力）</li>
+<li><strong>完全垄断四条件</strong>：政府垄断（邮政）、资源垄断（特殊原材料）、专利垄断、自然垄断（一家有效率生产／更低成本供给全市场；与规模经济——平均总成本随产量扩大而下降——密切相关）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b04s1q1" data-answer="C" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">（　）是完全竞争市场和垄断竞争市场的主要区别。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 买卖双方对市场信息是否有充分的了解</button><button type="button" class="qopt" data-key="B">B. 消费者数量的多少</button><button type="button" class="qopt" data-key="C">C. 产品是否具有差别性</button><button type="button" class="qopt" data-key="D">D. 进入障碍的大小</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：<strong>产品差别程度</strong>是垄断竞争市场与完全竞争市场的主要判断依据——完全竞争产品同质无差别，垄断竞争产品有差别（C 对）。A 的"信息充分了解"是完全竞争市场的特征之一，不是这两者的主要区别；B 消费者数量多少不是划分市场结构的依据；D 进入障碍是区分"能否自由进出"的因素，也不是这两者的主要区别。
+:::</p></div></details></div><div class="quiz-item" data-qid="b04s1q2" data-answer="BCE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">从理论上说，判断一个行业属于何种市场结构的主要标准有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 是否具有地方保护主义</button><button type="button" class="qopt" data-key="B">B. 同一个行业中各个生产者提供的产品的差异化程度</button><button type="button" class="qopt" data-key="C">C. 行业中生产者数目的多少</button><button type="button" class="qopt" data-key="D">D. 生产者的技术进步程度</button><button type="button" class="qopt" data-key="E">E. 进入或者退出行业是否存在障碍</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCE</div><div class="q-exp"><p>析：划分市场结构的三标准＝本行业内部的<strong>生产者（企业）数目</strong>（C）、本行业内各企业<strong>产品的差别程度</strong>（B）、<strong>进入障碍</strong>的大小（E）。A"地方保护主义"、D"技术进步程度"都不属于三标准，是命题人编造的干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b04s1q3" data-answer="ACE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">完全竞争市场的特征有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 同一行业有众多生产者和消费者</button><button type="button" class="qopt" data-key="B">B. 每个生产者或消费者都是价格的决定者</button><button type="button" class="qopt" data-key="C">C. 买卖双方对市场信息有充分的了解</button><button type="button" class="qopt" data-key="D">D. 进入或退出行业存在较大的障碍</button><button type="button" class="qopt" data-key="E">E. 同行业各个企业生产的同一产品不存在差别</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACE</div><div class="q-exp"><p>析：完全竞争市场四特征——众多生产者和消费者且规模都小（A 对）、产品同质不存在差别（E 对）、资源自由流动可自由进出市场（D 反了，无障碍）、买卖双方对市场信息有充分了解（C 对）。B 错误——每个生产者或消费者都只是市场价格的<strong>接受者</strong>，而不是决定者。
+:::</p></div></details></div><div class="quiz-item" data-qid="b04s1q4" data-answer="ABCE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">完全垄断市场具有的特征不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 同一行业中生产者数量很多</button><button type="button" class="qopt" data-key="B">B. 同一行业中只有少数几家生产者</button><button type="button" class="qopt" data-key="C">C. 生产者可以自由进入或退出市场</button><button type="button" class="qopt" data-key="D">D. 生产者是价格的决定者</button><button type="button" class="qopt" data-key="E">E. 生产者是价格的接受者</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：选非题。完全垄断市场的特征是：只有一个生产者，生产者是价格的<strong>决定者</strong>（D 属于特征，不选）；产品是没有合适替代品的独特性产品；其他企业进入非常困难。"生产者数量很多"（A→完全竞争/垄断竞争）、"只有少数几家生产者"（B→寡头垄断）、"自由进出"（C→完全竞争）、"价格的接受者"（E→完全竞争）均不属于完全垄断的特征。
+:::</p></div></details></div><div class="quiz-item" data-qid="b04s1q5" data-answer="BE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">实际生活中近似于完全垄断市场的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 汽车生产服务</button><button type="button" class="qopt" data-key="B">B. 固定电话服务</button><button type="button" class="qopt" data-key="C">C. 钢铁生产</button><button type="button" class="qopt" data-key="D">D. 航空运输</button><button type="button" class="qopt" data-key="E">E. 电力供应</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BE</div><div class="q-exp"><p>析：公用事业近似于完全垄断市场——<strong>固定电话服务</strong>（B）、<strong>电力供应</strong>（E）整个行业只有一个供给者。汽车生产（A）、钢铁生产（C）、航空运输（D）的供给由少数几家大企业控制，属于<strong>寡头垄断</strong>市场而非完全垄断。
+:::</p></div></details></div><div class="quiz-item" data-qid="b04s1q6" data-answer="A" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">当行业中只有一家企业能够有效率地进行生产，或者当一个企业能以低于两个或更多企业的成本为整个市场供给一种产品时，这个行业就是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 自然垄断</button><button type="button" class="qopt" data-key="B">B. 政府垄断</button><button type="button" class="qopt" data-key="C">C. 对专利权的完全垄断</button><button type="button" class="qopt" data-key="D">D. 对特殊原材料的完全垄断</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：题干是<strong>自然垄断</strong>的定义原文——一家干最有效率，或一家供给全市场的成本低于两家及以上（与规模经济密切相关）。B、C、D 是完全垄断的另外三个条件（政府垄断、专利垄断、资源垄断），都与"成本效率"无关。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础04_市场结构理论_第2节_完全竞争市场上生产者的行为.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 完全竞争市场上生产者的行为</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

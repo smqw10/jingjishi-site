@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十一章 公共物品与财政职能 · 财政的基本职能 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第二部分 财政</span><h1>第十一章 公共物品与财政职能 · 财政的基本职能</h1><div class="subtitle">第 3 节 / 共 3 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 3/3</div><div class="sec-badge none" id="sec-badge" data-sec="b11s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟财政三大职能：<strong>资源配置、收入分配、经济稳定和发展</strong>（重难点，多选常考全套） <span class="must">必考</span><span class="s3">★★★</span></li>
+<li>掌握资源配置职能的<strong>含义、范围三条、机制手段五条</strong>，会判断"哪笔支出属于资源配置" <span class="s3">★★★</span></li>
+<li>掌握收入分配职能的<strong>机制手段四条</strong>，死磕易错点：<strong>资源税调节级差收入属收入分配</strong> <span class="hot">高频考点</span></li>
+<li>记住经济稳定和发展职能的<strong>四大目标</strong>与机制手段四条 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、财政三大职能总览</h2>
+<h3>1. 三大职能 <span class="must">必考</span></h3>
+<p>在社会主义市场经济条件下，财政具有三大职能：</p>
+<table>
+<thead>
+<tr>
+<th>职能</th>
+<th>一句话</th>
+<th>关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>资源配置职能</strong></td>
+<td>把一部分社会资源集中起来，由政府提供公共物品和服务，弥补市场缺陷</td>
+<td>引导资金流向</td>
+</tr>
+<tr>
+<td><strong>收入分配职能</strong></td>
+<td>运用财政手段<strong>调整国民收入初次分配的结果</strong>，实现公平收入分配</td>
+<td>公平</td>
+</tr>
+<tr>
+<td><strong>经济稳定和发展职能</strong></td>
+<td>推动社会总供求基本平衡，实现充分就业、物价稳定等目标</td>
+<td>稳定</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三大职能口诀（讲义原装大白话）</div><p><strong>"稳定、分配、资源"</strong>——三词六字记全三大职能。多选问"财政具有哪些职能"，三个全选；单选问某项措施属于哪个职能，回这张表对号入座。</p></div></div>
+<div class="section"><h2>二、资源配置职能</h2>
+<h3>1. 含义与范围 <span class="hot">高频考点</span></h3>
+<p><strong>含义</strong>：公共财政的资源配置职能主要是将<strong>一部分社会资源集中起来形成财政收入</strong>，然后通过<strong>财政支出分配活动</strong>，由政府<strong>提供公共物品和服务</strong>，<strong>引导社会资金流向</strong>，<strong>弥补市场缺陷</strong>，最终实现<strong>全社会资源配置效率的最优状态</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>资源配置职能白话版：</strong><p>财政把全社会的钱"<strong>收上来一部分</strong>"，再"<strong>花到市场不愿花的地方</strong>"（国防、公共工程、公共卫生），同时用贴息、税收优惠把社会资金"<strong>引</strong>"向国家需要的方向——目标是<strong>全社会</strong>资源配置效率最优，不是政府包办一切。</p></div></div>
+<div class="section"><p><strong>范围</strong>（应当是市场失灵而又为社会公共需要的公共物品和服务领域）：</p>
+<table>
+<thead>
+<tr>
+<th>范围</th>
+<th>内容</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>满足政府执行职能的需要</td>
+<td>政府机关的正常运转和执行社会公共服务的领域</td>
+<td><strong>国家安全支出</strong>、一般公共服务支出</td>
+</tr>
+<tr>
+<td>准公共物品和服务的开支</td>
+<td>市场<strong>不能有效提供</strong>而又为社会公共需要</td>
+<td><strong>公共卫生、科技、公共工程</strong></td>
+</tr>
+<tr>
+<td>对社会资源配置的引导性支出</td>
+<td>引导社会资源流向</td>
+<td><strong>矫正外部效应、维护市场竞争</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>2. 资源配置的机制和手段 <span class="s3">★★★</span><span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>机制和手段</th>
+<th>锚点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(1)</td>
+<td>根据政府职能的动态变化确定社会公共需要的基本范围，确定<strong>公共财政收入占国内生产总值的合理比例</strong>，从<strong>总量</strong>上实现高效的社会资源配置原则</td>
+<td>总量</td>
+</tr>
+<tr>
+<td>(2)</td>
+<td><strong>优化财政支出结构</strong>——正确安排购买性支出与转移性支出、消费性支出与投资性支出的比例；合理安排财政投资支出的规模和结构，贯彻国家产业政策，保证重点建设资金需要（如加大对农业农村发展和教育、科技、卫生、社会保障等社会事业发展的投入）</td>
+<td>结构</td>
+</tr>
+<tr>
+<td>(3)</td>
+<td>为<strong>公共工程</strong>提供必要的<strong>资金保障</strong></td>
+<td>资金</td>
+</tr>
+<tr>
+<td>(4)</td>
+<td>通过<strong>政府直接投资、财政贴息、税收优惠</strong>等方式，<strong>引导和调节社会投资方向</strong>，提高社会整体投资效率</td>
+<td>引导</td>
+</tr>
+<tr>
+<td>(5)</td>
+<td>通过实行<strong>部门预算制度</strong>、建立<strong>国库集中收付制度</strong>和<strong>绩效评价制度</strong>等体制、机制改革，提高<strong>财政自身管理和运营效率</strong></td>
+<td>效率</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 资源配置五手段口诀</div><p><strong>"总量→结构→资金→引导→效率"</strong>，快记"<strong>总构资引效</strong>"——先定总量（占 GDP 比例），再优结构（支出结构），给公共工程保资金，用直接投资贴息优惠引投资，最后靠预算、国库、绩效等体制改革提自身效率。五条对应五个锚点字，综合多选逐项贴标签。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>"财政贴息引导社会资金投向新能源产业"→(4) 引导投资方向，属资源配置；"加大对农村教育的投入"→(2) 优化支出结构；"建立国库集中收付制度"→(5) 提高财政自身管理效率，同样属资源配置——别看到"收付"两个字就往收入分配上想。</p></div></div>
+<div class="section"><h2>三、收入分配职能</h2>
+<h3>1. 含义与机制手段 <span class="hot">高频考点</span><span class="must">必考</span></h3>
+<p><strong>含义</strong>：指政府运用财政手段<strong>调整国民收入初次分配结果</strong>的职能，旨在实现<strong>公平收入分配</strong>的目标。</p></div>
+<div class="section"><div class="keypoint"><strong>初次分配 vs 再分配：</strong><p>初次分配按<strong>要素禀赋和市场定价</strong>实现，"多劳多得"但差距可能拉大；收入分配职能是在初次分配的<strong>结果</strong>上动手——税收拿走一点、转移支付补回来一点、福利铺开一点——追求的是<strong>公平</strong>。题干见"调整初次分配"直接锁定收入分配职能。</p></div></div>
+<div class="section"><p><strong>机制和手段</strong>（4条）：</p>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>机制和手段</th>
+<th>要点与例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(1)</td>
+<td>明确分配的<strong>范围和界限</strong></td>
+<td>根据<strong>市场和政府的职责分工</strong>，明确市场和政府对社会收入分配的范围和界限</td>
+</tr>
+<tr>
+<td>(2)</td>
+<td><strong>加强税收调节</strong></td>
+<td>通过税收进行的收入再分配，是在<strong>全社会范围内</strong>进行的收入的<strong>直接调节</strong>，具有一定的<strong>强制性</strong>。如通过<strong>企业所得税、个人所得税</strong>将企业和个人的收益调节到合理水平；通过<strong>资源税</strong>调节<strong>自然资源形成的级差收入</strong></td>
+</tr>
+<tr>
+<td>(3)</td>
+<td>发挥<strong>财政转移支付</strong>作用</td>
+<td>通过转移性支付对收入进行再分配，将资金<strong>直接补贴给地区和个人</strong>，有<strong>明确的受益对象、受益范围和政策选择性</strong>。如增加对经济发展相对较慢地区的转移性支出，增加<strong>社会保障、收入保障、教育和健康</strong>等个人转移性支出</td>
+</tr>
+<tr>
+<td>(4)</td>
+<td>发挥<strong>公共支出</strong>的作用</td>
+<td>通过公共支出<strong>提供社会福利</strong>（如公共卫生防疫、福利设施与服务、住房）等进行的收入分配，在受益对象上具有<strong>广泛性和普遍性</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>先划清"哪些收入差距市场自己管、哪些政府必须管"（明确范围界限）；个税把高收入者的一部分收益调走（税收调节）；中央给欠发达地区拨补助、给困难群众发保障金（转移支付，直接补到地区和个人）；公共卫生防疫、保障性住房人人可享（公共支出福利，受益对象广泛普遍）——四手段各领一个生活场景。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 收入分配四手段口诀</div><p><strong>"分、税、转、福"</strong>——分工定界限、税收调收益、转移补地区个人、福利供社会。再配一句防错锚：<strong>"资源税归分配，不归配置"</strong>——资源税调节的是自然资源形成的<strong>级差收入</strong>，属<strong>收入分配</strong>职能，不是资源配置职能（高频易错点）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：三个&quot;税&quot;字分属两个职能</div><ul>
+<li><strong>个税／企业所得税</strong>调节收益、<strong>资源税</strong>调节级差收入 → <strong>收入分配</strong>职能（调的是"谁分多少"）；</li>
+<li><strong>税收优惠</strong>引导投资方向 → <strong>资源配置</strong>职能（调的是"钱往哪投"）。
+同样是"税"，看它冲着<strong>公平</strong>还是<strong>效率</strong>去，职能归属立刻清楚。</li>
+</ul></div></div>
+<div class="section"><h2>四、经济稳定和发展职能</h2>
+<h3>1. 含义：四大目标 <span class="hot">高频考点</span></h3>
+<ol>
+<li>财政经济稳定和发展职能的<strong>四大目标</strong>：<strong>充分就业、物价稳定、经济增长和国际收支平衡</strong>（★★★）；</li>
+<li>财政经济稳定职能<strong>重点</strong>是：维持<strong>社会资源在高水平利用状况下的稳定</strong>；财政经济发展职能的<strong>意义</strong>是：在促进经济增长的同时带来<strong>经济结构的改善、经济增长质量的提高和社会事业的进步</strong>。</li>
+</ol>
+<p>（四大目标的观测仪就是三大宏观经济指标——调查失业率、价格指数、经济增长率，回顾第七至九章。）</p></div>
+<div class="section"><div class="keypoint"><strong>&quot;稳定&quot;与&quot;发展&quot;各管一段：</strong><p>"稳定"管<strong>总量平衡</strong>：总供求平衡、物价稳、就业稳、国际收支平（四大目标是尺子）；"发展"管<strong>质量和结构</strong>：经济结构改善、增长质量提高、社会事业进步。两个词合在一个职能名里，考试问"重点"答"维持社会资源在高水平利用状况下的稳定"。</p></div></div>
+<div class="section"><h3>2. 经济稳定和发展的机制和手段 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>机制和手段</th>
+<th>锚点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(1)</td>
+<td>通过<strong>财政政策和货币政策的协调配合</strong>，推动<strong>社会总供求的基本平衡</strong>，保证物价和经济增长稳定，实现充分就业和国际收支平衡</td>
+<td>政策</td>
+</tr>
+<tr>
+<td>(2)</td>
+<td>通过<strong>税收、财政补贴、财政贴息、公债</strong>等，调节<strong>社会投资需求水平</strong>，影响就业水平，使经济保持一定的增长；通过<strong>财政直接投资</strong>，调节社会经济结构，调节社会有效供给能力</td>
+<td>经济</td>
+</tr>
+<tr>
+<td>(3)</td>
+<td>通过<strong>税收</strong>等<strong>调节个人消费水平和结构</strong></td>
+<td>税收</td>
+</tr>
+<tr>
+<td>(4)</td>
+<td>财政加大对<strong>节约资源、能源和环境保护</strong>的投入，加大对<strong>科技、文化、卫生、教育</strong>事业的投入，<strong>完善社会保障制度建设</strong>等，实现经济和社会的<strong>协调健康发展</strong></td>
+<td>投入</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>经济偏冷时：政府加大直接投资、用贴息和补贴撬动社会投资需求（手段②），配合央行放松货币（手段①），把总供求重新拉回平衡；经济偏热时反向操作"踩刹车"——这就是"财政政策和货币政策协调配合"的日常模样。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四大目标口诀</div><p><strong>"就、价、长、衡"</strong>——充分<strong>就</strong>业、物价稳定（<strong>价</strong>）、经济增<strong>长（长）</strong>、国际收支平<strong>衡（衡）</strong>。多选考"经济稳定和发展职能的目标"四个全选，最常被漏的是"国际收支平衡"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三职能归属速判（综合题救命表）</div><ul>
+<li>税收调节<strong>个人消费水平和结构</strong> → <strong>经济稳定和发展</strong>职能；</li>
+<li><strong>财政贴息引导社会投资方向</strong>、<strong>国库集中收付制度</strong>提高财政自身管理效率 → <strong>资源配置</strong>职能；</li>
+<li><strong>个人所得税</strong>调节个人收益、<strong>转移支付</strong>再分配、<strong>公共支出提供社会福利</strong> → <strong>收入分配</strong>职能。
+综合多选题逐项贴标签：先看动作"调的是什么"，再回口诀落职能。</li>
+</ul></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>三大职能</strong>：资源配置、收入分配、经济稳定和发展（口诀：稳定、分配、资源）</li>
+<li><strong>资源配置</strong>：集中资源形成财政收入→财政支出提供公共物品→引导资金流向→弥补市场缺陷→最优状态；范围三条（政府执行职能／准公共物品／引导性支出）；手段五条（总量、结构、资金、引导、效率——总构资引效）</li>
+<li><strong>收入分配</strong>：调整初次分配结果求公平；手段四条（分工界限、税收调节、转移支付、公共福利——分税转福）；<strong>资源税调级差收入＝收入分配</strong></li>
+<li><strong>经济稳定和发展</strong>：四目标＝充分就业、物价稳定、经济增长、国际收支平衡（就价长衡）；手段四条（政策配合、调节投资需求、调节个人消费、加大重点投入——政经税投）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b11s3q1" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">政府运用财政手段调整初次分配的政策属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 收入分配职能</button><button type="button" class="qopt" data-key="B">B. 经济发展职能</button><button type="button" class="qopt" data-key="C">C. 资源配置职能</button><button type="button" class="qopt" data-key="D">D. 经济稳定职能</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：收入分配职能＝政府运用<strong>财政手段调整国民收入初次分配结果</strong>的职能，旨在实现公平收入分配的目标（A 对）。市场经济条件下初次分配按要素禀赋和市场定价实现，财政出手调节的正是"初次分配的结果"。资源配置职能针对公共物品提供与资金引导（C 错），经济稳定和发展职能针对总供求平衡与四大目标（D 错），均与"调整初次分配"无关。
+:::</p></div></details></div><div class="quiz-item" data-qid="b11s3q2" data-answer="BC" data-type="multi"><span class="q-tag">教材·多选</span><div class="q-stem">下列措施中，属于财政配置社会资源的机制和手段的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 通过企业所得税和个人所得税，将企业和个人的收益调节到合理水平</button><button type="button" class="qopt" data-key="B">B. 通过政府直接投资、财政贴息、税收优惠等方式，引导和调节社会投资方向，提高社会整体投资效率</button><button type="button" class="qopt" data-key="C">C. 合理安排财政投资支出的规模和结构，贯彻国家产业政策，保证重点建设资金需要</button><button type="button" class="qopt" data-key="D">D. 通过公共支出提供社会福利，如公共卫生防疫、福利设施与服务、保障性住房等，进行收入再分配</button><button type="button" class="qopt" data-key="E">E. 通过政府转移支付对收入进行再分配</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BC</div><div class="q-exp"><p>析：B 是"引导和调节社会投资方向"（手段④），C 是"优化财政支出结构、合理安排投资支出规模和结构"（手段②），均属<strong>资源配置</strong>的机制和手段。A（税收调节收益，手段②）、D（公共支出提供社会福利，手段④）、E（转移支付再分配，手段③）都属于财政实现<strong>收入分配</strong>职能的机制和手段——"调收入、给福利、补转移"三个动作都冲着公平去，别与资源配置混淆。
+:::</p></div></details></div><div class="quiz-item" data-qid="b11s3q3" data-answer="C" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">财政实现收入分配职能的机制和手段不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 发挥公共支出的作用</button><button type="button" class="qopt" data-key="B">B. 加强税收调节</button><button type="button" class="qopt" data-key="C">C. 调整法定准备金率</button><button type="button" class="qopt" data-key="D">D. 发挥财政转移支付作用</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：收入分配职能四手段＝明确分配范围界限、加强税收调节（B）、发挥财政转移支付作用（D）、发挥公共支出的作用（A）。<strong>调整法定存款准备金率属于中央银行的货币政策工具</strong>，不是财政手段，C 当选。见"准备金率／再贴现／公开市场操作"先想货币政策，财政与货币两套工具别串门。
+:::</p></div></details></div><div class="quiz-item" data-qid="b11s3q4" data-answer="ABE" data-type="multi"><span class="q-tag">教材·多选</span><div class="q-stem">现代市场经济中，财政实现收入分配职能的手段主要有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 加强税收调节</button><button type="button" class="qopt" data-key="B">B. 增加社会保障支出</button><button type="button" class="qopt" data-key="C">C. 增加经济建设支出</button><button type="button" class="qopt" data-key="D">D. 没收财产并重新分配</button><button type="button" class="qopt" data-key="E">E. 提供社会福利</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABE</div><div class="q-exp"><p>析：收入分配职能的手段＝加强税收调节（A）、转移性支出／增加社会保障支出（B）、公共支出提供社会福利（E）。C"增加经济建设支出"指向投资与建设，属资源配置方向而非收入再分配；D"没收财产并重新分配"不是现代市场经济条件下财政的实现手段——财政调节收入靠的是税收、转移支付、社会福利这些规范性工具。
+:::</p></div></details></div><div class="quiz-item" data-qid="b11s3q5" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于公共物品和财政职能的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 财政资源配置范围应当是市场竞争激烈且社会需要的私人物品的购买领域</button><button type="button" class="qopt" data-key="B">B. 直接通过市场运营是财政行使经济稳定与发展职能的主要手段</button><button type="button" class="qopt" data-key="C">C. 当出现某些产品不能通过市场机制供应，亦不能通过社会成员自愿的非市场交易提供时，应由政府组织公共生产、直接提供</button><button type="button" class="qopt" data-key="D">D. 通过公共物品供给的制度结构，能够反映出一国政府在经济社会生活中所扮演的角色</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：通过公共物品供给的制度结构（决策、融资、生产、受益分配）能够反映出一国政府在经济社会生活中所扮演的角色（D 对）。A 错——财政资源配置范围应当是<strong>市场失灵而社会又需要的公共物品和服务领域</strong>，不是私人物品购买领域；B 错——经济稳定与发展职能靠财政政策与货币政策协调配合等财政工具，不是"直接通过市场运营"；C 错——<strong>提供（付费）不等于生产</strong>：政府负责提供不必然"组织公共生产、直接提供"，生产可以是政府生产、合同外包、特许经营等多种方式。
+:::</p></div></details></div><div class="quiz-item" data-qid="b11s3q6" data-answer="ABE" data-type="multi"><span class="q-tag">教材·多选</span><div class="q-stem">关于财政实现其职能的机制和手段的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 通过税收调节个人消费水平和结构，属于经济稳定和发展职能</button><button type="button" class="qopt" data-key="B">B. 通过财政贴息引导和调节社会投资方向，属于资源配置职能</button><button type="button" class="qopt" data-key="C">C. 通过建立国库集中收付制度提高财政自身管理效率，属于收入分配职能</button><button type="button" class="qopt" data-key="D">D. 通过个人所得税将个人收益调节到合理水平，属于资源配置职能</button><button type="button" class="qopt" data-key="E">E. 通过公共支出提供社会福利，属于收入分配职能</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABE</div><div class="q-exp"><p>析：A 对——税收调节个人消费水平和结构是<strong>经济稳定和发展</strong>职能的手段③；B 对——财政贴息引导调节社会投资方向是<strong>资源配置</strong>职能的手段④；E 对——公共支出提供社会福利是<strong>收入分配</strong>职能的手段④。C 错——建立国库集中收付制度提高财政自身管理效率，属<strong>资源配置</strong>职能（手段⑤）；D 错——个人所得税将个人收益调节到合理水平属<strong>收入分配</strong>职能（税收调节）。综合题逐项贴标签：先看动作（调收入／引投资／提效率），再落职能。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础11_公共物品与财政职能_第2节_市场与政府的经济活动范围.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 市场与政府的经济活动范围</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

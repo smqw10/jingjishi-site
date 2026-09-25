@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第13章 人力资本投资理论 · 人力资本投资与高等教育 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第三部分 人力资源经济分析</span><h1>第13章 人力资本投资理论 · 人力资本投资与高等教育</h1><div class="subtitle">第 2 节 / 共 4 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 2/4</div><div class="sec-badge none" id="sec-badge" data-sec="r13s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟上大学的<strong>成本</strong>（直接＋机会＋心理）与<strong>收益</strong>（经济＋心理），会判"哪笔算哪笔" <span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>掌握<strong>四条基本推论</strong>，会用"增流长，成本低，工资差大，贴现率低"秒选 <span class="s3">★★★</span></li>
+<li>理解<strong>合理年限决策</strong>：边际收益＝边际成本时效用最大 <span class="hot">高频考点</span></li>
+<li>背下教育投资的<strong>五条社会收益</strong> <span class="s3">★★★</span></li>
+<li>分清私人收益估计的<strong>三种偏差</strong>与<strong>信号模型</strong> <span class="s3">★★★</span> <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、高等教育投资决策的基本模型</h2>
+<h3>1. 上大学的成本与收益 <span class="hot">高频考点</span> <span class="must">必考</span></h3>
+<p><strong>上大学的总成本 ＝ 直接成本 ＋ 机会成本 ＋ 心理成本</strong>；<strong>总收益 ＝ 经济收益 ＋ 心理收益</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>成本</th>
+<th>内容</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>直接成本</strong></td>
+<td>学费、书本费、学习用品费等与高等教育<strong>直接相关</strong>的支出</td>
+<td>交学费、买教材</td>
+</tr>
+<tr>
+<td><strong>机会成本</strong></td>
+<td>因上大学<strong>无法工作而损失的工资性报酬</strong>；以及刚工作时收入<strong>低于已有几年工作经验的高中毕业生</strong>的那部分差额</td>
+<td>上学 4 年没上班少挣的钱</td>
+</tr>
+<tr>
+<td><strong>心理成本</strong></td>
+<td>上大学带来的心理负担</td>
+<td>学业压力、读不下去的煎熬</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>收益</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>经济收益</strong></td>
+<td>上大学后在<strong>终身职业生涯中获得的超过高中毕业生的工资性报酬</strong>（记作 B）</td>
+</tr>
+<tr>
+<td><strong>心理收益</strong></td>
+<td>心理上的满足等非货币收益</td>
+</tr>
+</tbody>
+</table>
+<p>决策规则：<strong>如果 B ＞ C₁＋C₂（总成本），上大学就是值得的。</strong></p></div>
+<div class="section"><div class="keypoint"><strong>总收益 B 是&quot;差额&quot;，不是&quot;全部工资&quot;：</strong><p>上大学的总收益 B ＝ 上大学后的终身工资性报酬 − 若高中毕业直接工作能获得的终身工资性报酬。它是两种选择的<strong>终身收入差额</strong>：①不能只算上大学挣的工资；②也不能只看<strong>刚毕业那几年</strong>的工资——刚工作时大学生的工资往往还低于有几年工作经验的高中毕业生，这笔账要算<strong>终身</strong>的。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小周高中毕业直接工作：终身工资性报酬 300 万；先上 4 年大学再工作：终身工资性报酬 420 万。B ＝ 420 − 300 ＝ 120 万。若上大学直接成本＋机会成本合计 60 万，120 ＞ 60 → 上大学值得。若只拿"刚毕业头两年工资比老同学低"来判断，就会得出"上大学不值"的错误结论。</p></div></div>
+<div class="section"><h3>2. 高等教育投资决策的四条基本推论（★★★）<span class="s3">★★★</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>条件变化</th>
+<th>对"上大学"的影响</th>
+<th>道理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投资后的<strong>收入增量流越长</strong>（越早上学）</td>
+<td>可能性<strong>越大</strong></td>
+<td>净现值越可能为正</td>
+</tr>
+<tr>
+<td><strong>上大学的成本越低</strong></td>
+<td>愿意上大学的人<strong>相对越多</strong></td>
+<td>直接成本、机会成本、心理成本齐降</td>
+</tr>
+<tr>
+<td>大学毕业生与高中毕业生<strong>工资性报酬差距越大</strong></td>
+<td>愿意投资的人<strong>越多</strong></td>
+<td>总收益 B 变大</td>
+</tr>
+<tr>
+<td>折算未来收益所用的<strong>贴现率（利息率）越高</strong></td>
+<td>可能性<strong>越小</strong></td>
+<td>未来收益现值缩水</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：推论四句</div><p><strong>"增流长，成本低，工资差大，贴现率低"</strong>——前三句"越……越愿意"，唯独贴现率<strong>反着来</strong>（越低才越愿意）。考试把任何一句反过来当选项，都是错的。</p></div></div>
+<div class="section"><p><strong>"成本越低"的细分（多选题眼）</strong>：
+1. 降低<strong>直接成本</strong>：政府提供<strong>无息或低息学生贷款</strong>（降低借款利息负担）；大学提供<strong>部分或全部奖学金</strong>；
+2. 降低<strong>机会成本</strong>：<strong>经济衰退</strong>时高中毕业生就业难且收入低 → 上大学的机会成本<strong>下降</strong>；劳动者<strong>年龄越大</strong>，市场工资越高 → 上大学的机会成本<strong>越高</strong>（这解释了为什么上大学的多为年轻人）；<strong>能力强</strong>者学习时间短、还可能勤工俭学 → 机会成本低；
+3. 降低<strong>心理成本</strong>：能力较强的人完成学业较容易，心理成本较低。家庭背景、父母期望及家庭支持等，也会影响上大学的心理成本与心理收益。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>工资随年龄增长不断上升 → 中老年人上大学要放弃的工资（机会成本）更高；上大学越晚，毕业后取得收入增量流的年头越短 → 净现值更难为正。两头一夹，中老年人上大学的"账"就难算平了。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 审题对号</div><p>见"法定退休时间延迟／早上学晚退休"→ 想收入增量流长短（越长越愿意）；见"无息贷款、奖学金"→ 直接成本下降（利好）；见"经济不景气"→ 机会成本下降（利好上学）；见"利率、贴现率上调"→ 利空上学；见"工资差距缩小、延期毕业比例上升"→ 利空上学。</p></div></div>
+<div class="section"><h3>3. 上大学的合理年限决策（★）</h3>
+<p>假设：<strong>边际收益（MR）递减</strong>——每追加一年的大学教育所带来的边际收益逐年下降；每追加一年大学教育投资所需付出的<strong>边际成本（MC）不变</strong>。</p>
+<ul>
+<li><strong>效用最大化在边际收益 MR ＝ 边际成本 MC 的那一点取得</strong>；</li>
+<li>边际收益一定时：边际成本<strong>高</strong>的人，愿意上大学的年限<strong>更少</strong>；</li>
+<li>边际成本一定时：能从每多上一年大学中获得<strong>更高边际收益</strong>的人，更有可能上<strong>更长</strong>年限的大学；</li>
+<li>结论：<strong>不同的人最好选择上不同年限的大学</strong>，不存在人人相同的"最佳年限"。</li>
+</ul></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊提示：合理年限</div><p><strong>上大学合理年限决策：边际收益＝边际成本时，效用最大。</strong></p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>每多上一年大学的边际成本 MC＝5 万元（不变）。预计第 1 年边际收益 8 万、第 2 年 6 万、第 3 年 4 万：</p>
+<ul>
+<li>第 1 年：8 ＞ 5，上；第 2 年：6 ＞ 5，上；第 3 年：4 ＜ 5，停。</li>
+</ul>
+<p>→ 最佳年限＝2 年：一直上到边际收益降到与边际成本相等之处为止，再读就是"倒贴"。</p></div></div>
+<div class="section"><h2>二、教育投资的收益估计</h2>
+<h3>4. 教育投资的社会收益（★★★）<span class="s3">★★★</span></h3>
+<p>教育投资不仅让个人受益，还给<strong>整个社会</strong>带来"外溢"的好处，共五条：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>社会收益</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>导致<strong>国民收入水平提高</strong>和社会财富增长，提高整个国家和社会的福利水平</td>
+</tr>
+<tr>
+<td>②</td>
+<td>有助于<strong>降低失业率</strong>、减少失业福利支出；<strong>预防犯罪</strong>，减少执行法律的支出</td>
+</tr>
+<tr>
+<td>③</td>
+<td>有助于提高<strong>政策决策过程的质量和决策效率</strong></td>
+</tr>
+<tr>
+<td>④</td>
+<td><strong>父母受教育水平</strong>会影响下一代的健康以及受教育状况</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>有助于提高<strong>社会道德水平和信用水平</strong>，降低交易费用，提高市场效率</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 社会收益五条</div><p><strong>"一富二稳三决策，四惠后代五道德"</strong>——富（国民收入/财富增长）、稳（降失业、防犯罪）、决策提质、造福后代、道德信用。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;不属于社会收益&quot;秒杀</div><p>"提高<strong>受教育者本人</strong>的终身工资性报酬／收入预期"是<strong>私人收益</strong>，混进"社会收益"题里就是答案。判断标准：好处<strong>落没落到全社会头上</strong>——本人没直接获益而社会获得的利益才是社会收益。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>多培养一个大学生，不只他本人多挣钱：企业招到高技能劳动者、产出更多（国民收入↑），他更不容易失业、更少犯罪（失业福利与执法支出↓），将来为人父母，下一代的健康和教育也受益（代际外溢），社会更讲诚信、交易更顺畅（市场效率↑）。</p></div></div>
+<div class="section"><h3>5. 教育投资私人收益的估计偏差（★★★）<span class="s3">★★★</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>偏差</th>
+<th>一句话</th>
+<th>关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>高估偏差</strong>（能力偏差）</td>
+<td><strong>过高估计</strong>教育投资的收益：把本不属于教育贡献的工资性报酬也归于教育——能力强的人<strong>即使不上大学，工资也会很高</strong></td>
+<td>能力混入</td>
+</tr>
+<tr>
+<td><strong>低估偏差</strong></td>
+<td>经济学家通常只用<strong>工资性报酬</strong>数据（货币报酬）衡量收益，忽略了<strong>非货币收益</strong>：更高的职业声望、社会地位、社会资本、更满意的婚姻，以及消费性收益（结交朋友、参与社团、提升文艺和音乐鉴赏能力）、中高层管理岗位的福利或特权</td>
+<td>漏算非货币</td>
+</tr>
+<tr>
+<td><strong>选择性偏差</strong></td>
+<td>是否上大学是当事人及其家庭根据自身能力做出的理性选择，遵循<strong>比较优势原理</strong>：上大学的人是"不得不"上——不上大学去工作，工资可能反而不如没上大学的高中毕业生；没上大学的人选择不上也很明智——即使上了大学，终身工资性报酬也未必像实际上大学的人那样多。结果：<strong>一方面高估了实际上没有上大学的人因没上大学而放弃的收益，同时低估了大学毕业生从上大学中实际获得的收益</strong></td>
+<td>比较优势、双向偏差</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三种偏差的分水岭：</strong><p>问自己"往哪个方向偏、为什么偏"：<strong>算多了</strong> → 高估（把能力的贡献记到教育头上）；<strong>算少了</strong> → 低估（只看工资单，漏了非货币收益）；<strong>比错了人、双向歪</strong> → 选择性（拿"实际上了大学的人"和"实际没上大学的人"直接对比，本身就选偏了样本）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>学霸老王就算不上大学也能月入 2 万，研究却把这 2 万的"底子"记在大学的功劳簿上 → <strong>高估</strong>；大学毕业生还能积累人脉、婚姻更满意、当上中层享受职务福利，这些没进工资单 → <strong>低估</strong>；真去打工的那批人多半是"打工更有优势"的人，拿他们当"不上大学的参照"本身就选错了样本 → <strong>选择性</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三偏差</div><p><strong>"高估怪能力，低估漏非钱，选择双向偏"</strong>。</p></div></div>
+<div class="section"><h2>三、高等教育的信号模型（★）</h2>
+<ol>
+<li><strong>高等教育本身并没有导致生产率的提高</strong>，却表明一个受过高等教育的人是<strong>一个具有较高生产率的人</strong>——即受过高等教育是一种<strong>高生产率的信号</strong>；</li>
+<li>企业利用<strong>大学毕业文凭</strong>作为筛选工具，是<strong>简单明确且预测准确率也较高</strong>的好方法，有一定的意义。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>信号模型的标志句：</strong><p>信号模型的招牌话是"<strong>本身并没有提高生产率</strong>"——文凭不是把人"练"强了，而是把本来就强的人"挑"了出来。题目问"符合信号模型的观点"，认准"文凭＝信号／筛选工具"；认为教育实实在在提高生产率的，则是人力资本投资的观点，两者别串。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>HR 没法在面试现场测出谁真有能力，就用"名校本科"当筛子——文凭本身没让候选人变强，但能以较高的准确率把高生产率的人筛出来，省时省力。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 信号模型</div><p><strong>"文凭不练功，只当筛子用"</strong>。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>成本</strong>＝直接（学费书本）＋机会（损失的工资＋初期低于有经验高中生的差额）＋心理；<strong>收益</strong>＝经济（超过高中毕业生的终身工资性报酬 B）＋心理；B＞总成本 → 值得</li>
+<li><strong>四推论</strong>（上岸熊：增流长，成本低，工资差大，贴现率低）——前三越…越愿意，贴现率越低越愿意</li>
+<li>成本降低细目：贷款/奖学金降直接成本；经济衰退降机会成本；年龄越大机会成本越高（年轻人多上大学）；能力强机会与心理成本低</li>
+<li><strong>合理年限</strong>：MR 递减、MC 不变，MR＝MC 效用最大；边际成本高年限少、边际收益高年限长；不同人最佳年限不同</li>
+<li><strong>社会收益五条</strong>：一富二稳三决策，四惠后代五道德；"提高本人工资/收入预期"是私人收益</li>
+<li><strong>三偏差</strong>：高估（能力偏差）/低估（漏非货币收益）/选择性（比较优势原理，双向偏差）</li>
+<li><strong>信号模型</strong>：高等教育本身没有提高生产率，文凭是高生产率的信号与筛选工具</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r13s2q1" data-answer="AC" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">中老年人参加高考之所以会成为新闻，主要是因为考大学几乎全是年轻人。考大学的中老年人之所以很少，导致这种情况出现的原因是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 中老年人上大学的机会成本通常更高</button><button type="button" class="qopt" data-key="B">B. 中老年人无法通过上大学获得收益</button><button type="button" class="qopt" data-key="C">C. 中老年人通过上大学获得收益的时间更短</button><button type="button" class="qopt" data-key="D">D. 中老年人上大学的直接成本很可能会更高</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AC</div><div class="q-exp"><p>析：劳动者收入随年龄增长不断上升，年龄越大、市场工资越高，上大学需放弃的收入（机会成本）就越高，A 正确；上大学越晚，毕业后取得收入增量流的年头越短，净现值越难为正，C 正确。B 错误——中老年人上大学同样有收益，只是净现值难转正，并非"无法获得收益"；D 错误——学费书费等直接成本与年龄没有必然关系，随年龄变化的主要是机会成本。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s2q2" data-answer="ACD" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">上大学的成本包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 大学缴纳的学费</button><button type="button" class="qopt" data-key="B">B. 大学期间恋爱费用</button><button type="button" class="qopt" data-key="C">C. 因上大学导致未参加工作的工资</button><button type="button" class="qopt" data-key="D">D. 大学购买课本的课本费</button><button type="button" class="qopt" data-key="E">E. 大学期间的住宿和伙食费用</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：直接成本＝学费以及其他与接受高等教育<strong>直接相关</strong>的支出——学费（A）、课本费（D）当选；机会成本＝因上大学无法工作而损失的工资性报酬（C）当选，还包括刚工作时低于有几年工作经验的高中毕业生的那部分差额。B 恋爱费用、E 住宿伙食费用属于日常生活开支——不上大学同样要吃住花销，不是因上大学而额外增加的成本。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s2q3" data-answer="AB" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">一位新闻评论员为了说服高中毕业生上大学所做的研究受到了一些学者的批评。学者认为：同期从同一所高中毕业的学生中，那些上大学的人即使不上大学就去打工，也未必能挣到与那些高中毕业就工作的同学一样多的钱；而那些高中毕业就工作的学生即使当初上了大学，也未必挣到真上大学的那些同学一样多的钱。学者的这种观点实际上指出了，这位新闻评论员对上大学的收益进行估计时产生了（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 能力偏差</button><button type="button" class="qopt" data-key="B">B. 高估偏差</button><button type="button" class="qopt" data-key="C">C. 选择性偏差</button><button type="button" class="qopt" data-key="D">D. 低估偏差</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AB</div><div class="q-exp"><p>析：<strong>高估偏差又称能力偏差</strong>（A、B 正确）——把工资性报酬中不属于教育贡献的部分也算作教育的贡献。学者指出"不上大学的人即使上了大学也未必挣得更多"，说明观察到的工资差距有一部分来自<strong>人的能力差别</strong>而非教育本身，据此估计会<strong>高估</strong>教育收益；同时"上大学的人不去打工反而挣得少"体现了<strong>选择性偏差</strong>的一面（上大学组与未上大学组本就是按比较优势自选的两组人，直接对比会双向估偏）。低估偏差指漏算非货币收益，题干未涉及，D 不选。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s2q4" data-answer="ABC" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">在估计上大学的私人收益的时候往往容易出现低估偏差，这是因为经济学家往往会忽略了上大学会得到的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 福利性收益</button><button type="button" class="qopt" data-key="B">B. 非货币性收益</button><button type="button" class="qopt" data-key="C">C. 特权收益</button><button type="button" class="qopt" data-key="D">D. 生产率的提高</button><button type="button" class="qopt" data-key="E">E. 工资性报酬收益</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：经济学家通常只使用<strong>工资性报酬</strong>数据（固定薪酬＋奖金等浮动薪酬）来估计收益，这些都是货币性报酬，忽略了<strong>非货币收益</strong>：职务福利或<strong>特权</strong>（C）、<strong>福利性收益</strong>（A），以及较高的职业声望和社会地位、更好的社会资本、相对更满意的婚姻，在大学里结交朋友、参与社团、提升文艺与音乐鉴赏水平等消费性收益（B）。E 工资性报酬恰是已经被计入的部分；D 生产率的提高不是被忽略的个人收益项。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s2q5" data-answer="ABCE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">教育投资能够带来的社会收益包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 提高整个社会的道德水平和信用水平</button><button type="button" class="qopt" data-key="B">B. 起到预防犯罪的作用，减少执行法律的支出</button><button type="button" class="qopt" data-key="C">C. 提高政策决策过程的质量和决策效率</button><button type="button" class="qopt" data-key="D">D. 提高受教育者的终身工资性报酬收入</button><button type="button" class="qopt" data-key="E">E. 降低失业率，减少失业福利支出</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：社会收益是<strong>本人未直接获益而整个社会获得</strong>的利益，共五条：①国民收入水平提高与社会财富增长；②降低失业率减少失业福利支出、预防犯罪减少执行法律支出（B、E）；③提高政策决策质量和决策效率（C）；④父母受教育水平影响下一代健康与受教育状况；⑤提高社会道德与信用水平（A）。D 提高的是<strong>受教育者本人</strong>的报酬，属<strong>私人收益</strong>，不属于社会收益。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s2q6" data-answer="C" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">关于高等教育的合理年限的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 没有一个最佳的高等教育合理年限</button><button type="button" class="qopt" data-key="B">B. 合理年限越长越好</button><button type="button" class="qopt" data-key="C">C. 边际成本等于边际收益时能够达到效用最大化</button><button type="button" class="qopt" data-key="D">D. 每个人接受高等教育的最佳年限是相同的</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：对任何人来说，能够达到效用最大化的高等教育投资数量，都是在<strong>边际收益＝边际成本</strong>的那个点上取得的，C 正确。A 错——存在最佳年限，只是因人而异；B 错——超过 MR＝MC 之后再读，边际收益小于边际成本，净收益反而下降；D 错——边际成本高的人年限更少、边际收益高的人年限更长，不同的人最好选择不同的年限。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力13_人力资本投资理论_第1节_人力资本投资的一般原理.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 人力资本投资的一般原理</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力13_人力资本投资理论_第3节_人力资本投资与在职培训.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 人力资本投资与在职培训</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

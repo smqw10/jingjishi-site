@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十三章 统计与数据科学 · 统计调查 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十三章 统计与数据科学 · 统计调查</h1><div class="subtitle">第 4 节 / 共 5 节 · 预计学习时长 50 分钟</div><div class="progress-bar"><div class="fill" style="width:80%"></div></div><div class="progress-text">本章进度 4/5</div><div class="sec-badge none" id="sec-badge" data-sec="b23s4">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>统计调查</strong>的定义与两个特征；两把分类尺子：按对象范围（全面 / 非全面）、按登记时间（连续 / 不连续） <span class="hot">高频考点</span></li>
+<li>五种调查方式逐一过关：统计报表"四统一"、普查年份口诀、抽样调查四特点、重点与典型对照 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>普查年份数字口诀张口就来：<strong>人口0 农6 经38</strong> <span class="must">必考</span></li>
+<li>九个统计数据质量评价标准＋"侧重评价"配对表 <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、统计调查的概念与分类</h2>
+<h3>1. 统计调查的概念 <span class="hot">高频考点</span></h3>
+<p><strong>统计调查</strong>是按照<strong>预定的目的和任务</strong>，运用<strong>科学的统计调查方法</strong>，<strong>有计划有组织地收集数据信息资料</strong>的过程。调查过程有两个重要特征：其一，调查是一种<strong>有计划、有方法、有程序</strong>的活动；其二，调查的<strong>结果表现为搜集到的数据</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>定义拆成三半句：</strong><p>"定目的任务＋用科学方法＋有计划有组织地收集"，产出是<strong>数据</strong>。两个特征常出判断题：一是活动本身有计划、有方法、有程序；二是结果表现为数据——不是报表好看，而是数据到手。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>"为掌握本市居民平均通勤时间，统计局统一设计问卷、统一培训调查员、按月入户访问"——目的任务预先定好、方法科学、组织有计划，最后交出一组通勤时间数据，这就是一次标准的统计调查。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 统计调查概念</div><p><strong>"定目的、用方法、有组织，最后交出数据"</strong>——两个特征：活动有计划有方法有程序；结果表现为数据。</p></div></div>
+<div class="section"><h3>2. 统计调查的分类 <span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>分类依据</th>
+<th>类别</th>
+<th>主要内容及举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按<strong>调查对象的范围</strong>不同</td>
+<td><strong>全面调查</strong></td>
+<td>对构成调查对象的<strong>所有单位</strong>进行<strong>逐一的、无一遗漏</strong>的调查，包括<strong>全面统计报表和普查</strong>，如人口普查、经济普查</td>
+</tr>
+<tr>
+<td>↑</td>
+<td><strong>非全面调查</strong></td>
+<td>只对调查对象中的<strong>一部分单位</strong>进行调查，包括<strong>非全面统计报表、抽样调查、重点调查和典型调查</strong>等</td>
+</tr>
+<tr>
+<td>按<strong>调查登记的时间是否连续</strong></td>
+<td><strong>连续调查</strong></td>
+<td>为了观察总体现象在<strong>一定时期内</strong>的数量变化，资料说明现象的发展过程，目的是了解社会现象在<strong>一段时间的总量</strong>，如产品产量、能源的消耗等</td>
+</tr>
+<tr>
+<td>↑</td>
+<td><strong>不连续调查</strong></td>
+<td><strong>间隔一个相当长的时间</strong>所做的调查，一般为了研究总体现象在<strong>一定时点上的状态</strong>，如生产设备拥有量、耕地面积等</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两把尺子互不干扰：</strong><p>"全不全"看<strong>查了多少家</strong>（对象范围），"连不连"看<strong>隔多久记一次</strong>（登记时间）。一套调查可以同时贴两个标签：人口普查＝全面调查＋不连续调查（时点状态）；产量统计＝连续调查。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>车间每天登记当日产量、电厂每月统计耗煤量→连续调查（要一段时间的<strong>总量</strong>）；年底盘一次全厂生产设备拥有量、十年查一次耕地面积→不连续调查（要某一时点的<strong>状态</strong>）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 调查分类口诀</div><p><strong>"范围分全非，时间分连不"</strong>——范围上全面 / 非全面，时间上连续 / 不连续。非全面四兄弟："<strong>非抽重典</strong>"（非全面统计报表、抽样、重点、典型）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;仅调查一部分单位&quot;怎么选</div><p>多选问"仅对调查对象中的一部分单位进行调查"，就按"<strong>非抽重典</strong>"挑：非全面统计报表、抽样调查、重点调查、典型调查。看到"普查""全面统计报表"直接排除——它们要对全部单位逐一调查。</p></div></div>
+<div class="section"><h2>二、五种统计调查方式 <span class="s3">★★★</span></h2>
+<h3>1. 统计报表</h3>
+<p><strong>统计报表</strong>是按照国家有关法规的规定，<strong>自上而下地统一布置，自下而上地逐级提供基本统计数据</strong>的一种调查方式。要求：以一定的<strong>原始数据</strong>为基础，按照<strong>统一的表式、统一的指标、统一的报送时间和报送程序</strong>进行填报。</p>
+<table>
+<thead>
+<tr>
+<th>分类依据</th>
+<th>类别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按调查对象范围不同</td>
+<td><strong>全面报表和非全面报表</strong>（目前的大多数统计报表都是全面报表）</td>
+</tr>
+<tr>
+<td>按报送周期长短不同</td>
+<td>日报、月报、季报、年报等</td>
+</tr>
+<tr>
+<td>按报表内容和实施范围不同</td>
+<td>国家的、部门的、地方的统计报表</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>报表三句话：</strong><p>①<strong>上布置、下上报</strong>：自上而下统一布置，自下而上逐级提供；②打底的是<strong>原始数据</strong>，不是二手数据；③"四统一"：表式、指标、报送时间、报送程序。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>企业每月 3 日前通过联网直报系统，按国家统一表式填齐统一指标、报出上月产值——时间、程序都是定死的，这就是统计报表的日常。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 统计报表口诀</div><p><strong>"上布置、下上报，四统一、原始打底"</strong>——见"以二手数据为基础填报"必错，见"统一表式 / 指标 / 报送时间 / 报送程序"必对。</p></div></div>
+<div class="section"><h3>2. 普查 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>普查</strong>是为某一<strong>特定目的</strong>而专门组织的<strong>一次性全面调查</strong>，主要用于了解处于<strong>某一时点状态</strong>上的社会经济现象的<strong>基本全貌</strong>。普查的特点：①通常是一次性的或者周期性的；②一般需要规定<strong>统一的标准调查时间</strong>，以避免调查数据的<strong>重复或遗漏</strong>，保证普查结果的准确性；③数据一般比较准确，规范化程度较高，可以为抽样调查或其他调查提供基本依据；④<strong>使用范围比较窄</strong>，只调查一些最基本及特定的现象。</p>
+<p>普查的频率与标准时间是年年可考的数字点：</p>
+<table>
+<thead>
+<tr>
+<th>普查</th>
+<th>频率</th>
+<th>实施年份</th>
+<th>标准时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>经济普查</strong></td>
+<td>每 10 年进行 <strong>2 次</strong></td>
+<td>逢末尾数字为"<strong>3</strong>"和"<strong>8</strong>"的年份</td>
+<td>普查年份的 1 月 1 日 0 时</td>
+</tr>
+<tr>
+<td><strong>人口普查</strong></td>
+<td>每 10 年 <strong>1 次</strong></td>
+<td>逢"<strong>0</strong>"的年份</td>
+<td>普查年份的 <strong>11 月 1 日 0 时</strong></td>
+</tr>
+<tr>
+<td><strong>农业普查</strong></td>
+<td>每 10 年 <strong>1 次</strong></td>
+<td>逢"<strong>6</strong>"的年份</td>
+<td>普查年份的 1 月 1 日 0 时</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>普查四特点抓两头：</strong><p>一头抓"准"：规定统一的标准调查时间，防止重复或遗漏；一头抓"窄"：使用范围比较窄，只查最基本、特定的现象。多选里出现"使用范围较广，适用于各个领域"必是错的。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>2020 年开展的第七次全国人口普查：逢"0"年份、每 10 年 1 次，标准时点 2020 年 11 月 1 日 0 时，对全国所有住户逐一登记——一次性、全面、定时点，普查的样板。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 普查年份口诀</div><p><strong>"人口0 农6 经38；人口 11 月 1 日，农经 1 月 1 日"</strong>——逢 0 查人口，逢 6 查农业，逢 3、逢 8 查经济（十年两次）；人口普查标准时点 11 月 1 日 0 时，农业、经济普查标准时点 1 月 1 日 0 时。</p></div></div>
+<div class="section"><h3>3. 抽样调查 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>抽样调查</strong>是从调查对象的<strong>总体</strong>中抽取<strong>一部分单位作为样本</strong>进行调查，并<strong>根据样本调查结果来推断总体特征</strong>的一种<strong>非全面调查</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>经济性</strong></td>
+<td>抽样调查的一个<strong>显著优点</strong>，省人力、物力、财力，工作量小</td>
+</tr>
+<tr>
+<td><strong>时效性强</strong></td>
+<td>可以迅速、及时地获得所需要的信息</td>
+</tr>
+<tr>
+<td><strong>适应面广</strong></td>
+<td>全面调查能调查的它能查，全面调查<strong>不能</strong>调查的现象它也能查，特别适合<strong>特殊现象</strong>的调查，如产品质量检验、农产品试验、医药的临床实验</td>
+</tr>
+<tr>
+<td><strong>准确性高</strong></td>
+<td>依据科学的抽样原理，推断结果可靠</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>非全面＋推断：</strong><p>抽样调查两个身份合一体：<strong>非全面调查</strong>（只查一部分）＋<strong>推断</strong>（用样本说总体）。它不是"省了就不准"——恰恰准确性高，还能干全面调查干不了的破坏性检验。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>质检部门从一批 10 万个零件里随机抽 200 个做破坏性寿命测试，用这 200 个的结果推断整批零件的质量——零件已经被测废了也无所谓，省钱省时还只有抽样做得到。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 抽样调查四特点</div><p><strong>"省、快、广、准"</strong>——经济性（省）、时效性强（快）、适应面广（广）、准确性高（准）。见"耗费大量人力物力财力"必错——那是普查的代价。</p></div></div>
+<div class="section"><h3>4. 重点调查与典型调查 <span class="hot">高频考点</span></h3>
+<p><strong>重点调查</strong>：从调查对象的<strong>全部单位中选择一部分重点单位</strong>进行调查。重点单位虽然只是全部单位中的一部分，但就调查的<strong>标志值</strong>来说在<strong>总体中占绝大比重</strong>。调查目的只要求了解<strong>基本状况和发展趋势</strong>、不要求掌握全面数据，而调查少数重点单位就能满足需要时，采用重点调查比较适宜。</p>
+<p><strong>典型调查</strong>：<strong>有意识地</strong>选择若干具有<strong>典型意义的或有代表性的单位</strong>进行的调查。主要作用：①通过对典型单位<strong>深入细致</strong>的调查，可以<strong>及时发现新情况、新问题</strong>；②在一定条件下可以<strong>验证全面调查数据的真实性</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>重点调查</th>
+<th>典型调查</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选单位的标准</td>
+<td>就<strong>标志值</strong>而言在总体中<strong>占绝大比重</strong>（块头大）</td>
+<td>有<strong>典型意义或有代表性</strong>（像大多数）</td>
+</tr>
+<tr>
+<td>怎么选</td>
+<td>客观按标志值排序圈定</td>
+<td><strong>有意识地</strong>（主观）挑选</td>
+</tr>
+<tr>
+<td>调查深度</td>
+<td>了解基本状况和发展趋势即可</td>
+<td><strong>深入细致</strong>，可发现新情况新问题、验证全面调查数据真实性</td>
+</tr>
+<tr>
+<td>经典例子</td>
+<td>对全国 35 个大中型城市的零售物价变化进行调查；对全国大中型工业企业做增加值、资产总额重点调查</td>
+<td>专家根据经验选 10 个有代表性的煤炭企业深入调查生产安全状况</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一刀切：</strong><p>重点单位是"<strong>块头大</strong>"——35 个城市撑起全国零售额的大半；典型单位是"<strong>有代表性</strong>"——10 家企业像全国煤炭企业的缩影。一个以一当十，一个以一像百。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>想知道全国物价走势，盯住零售额最大的 35 个大中型城市就够了——重点调查；想摸清煤炭企业安全生产的新隐患，专家凭经验挑 10 家有代表性的企业下去细查——典型调查。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 重点与典型</div><p><strong>"重点看块头，典型看代表"</strong>——题干出现"前 35 个 / 大中型 / 占绝大比重"选重点调查；出现"有代表性 / 深入细致 / 发现新问题"选典型调查。</p></div></div>
+<div class="section"><h2>三、统计数据质量评价标准 <span class="s3">★★★</span></h2>
+<p>国家统计局制定的《国家统计质量保证框架（2021）》针对统计数据<strong>生产全过程</strong>，从<strong>真实性、准确性、完整性、及时性、适用性、经济性、可比性、协调性和可获得性</strong>九个方面，确定了统计数据的质量评价标准。</p>
+<table>
+<thead>
+<tr>
+<th>标准</th>
+<th>要求</th>
+<th>侧重评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>真实性</strong></td>
+<td>源头数据必须符合统计调查对象的实际情况，确保统计数据<strong>有依据、可溯源</strong></td>
+<td><strong>基础数据质量</strong></td>
+</tr>
+<tr>
+<td><strong>准确性</strong></td>
+<td>统计数据的<strong>误差必须控制在允许范围内</strong>，能够为形势判断、政策制定、宏观调控等提供可靠依据</td>
+<td><strong>统计数据生产科学性</strong></td>
+</tr>
+<tr>
+<td><strong>完整性</strong></td>
+<td>统计数据应当全面完整，统计范围<strong>不重不漏</strong>，统计口径<strong>完备无缺</strong></td>
+<td><strong>全面系统反映客观实际程度</strong></td>
+</tr>
+<tr>
+<td><strong>及时性</strong></td>
+<td>在符合统计科学规律的前提下，尽可能<strong>缩短从调查到公布的时间间隔</strong></td>
+<td><strong>统计数据生产效率</strong></td>
+</tr>
+<tr>
+<td><strong>适用性</strong></td>
+<td>统计数据能够<strong>最大限度为用户所用</strong>，统计指标紧跟时代发展，切合统计需求</td>
+<td><strong>统计用户满意度</strong></td>
+</tr>
+<tr>
+<td><strong>经济性</strong></td>
+<td>统计数据生产应当<strong>尽可能降低成本</strong>，统计调查、行政记录、大数据等数据资源得到<strong>充分利用</strong></td>
+<td><strong>统计数据成本效益</strong></td>
+</tr>
+<tr>
+<td><strong>可比性</strong></td>
+<td>统计数据应当<strong>连续、可比</strong>，不同时间、空间数据生产使用<strong>规范统一的统计标准和统计原则</strong></td>
+<td><strong>统计工作标准化、规范化程度</strong></td>
+</tr>
+<tr>
+<td><strong>协调性</strong></td>
+<td>统计数据<strong>结构严谨、逻辑合理</strong>，各总量数据、数据结构相互之间<strong>高度匹配</strong></td>
+<td><strong>统计数据间逻辑关系</strong></td>
+</tr>
+<tr>
+<td><strong>可获得性</strong></td>
+<td><strong>多渠道、多方式公布</strong>统计数据，同时公布相应的<strong>统计制度方法</strong>，加强<strong>数据解读</strong>，满足社会需求</td>
+<td><strong>统计服务质量</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>九个&quot;侧重&quot;配对是考点本体：</strong><p>这张表右列就是命题点：真实→基础数据质量；准确→生产科学性；完整→全面系统反映客观实际；及时→生产效率；适用→用户满意度；经济→成本效益；可比→标准化规范化程度；协调→数据间逻辑关系；可获得→服务质量。左列"要求"与右列"侧重"配错位就是干扰项。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>今年悄悄改了"就业人员"的统计口径，明年和今年的数据对不上号——违反<strong>可比性</strong>；数据拖了三个月才公布——违反<strong>及时性</strong>；只有总数没有分项、口径缺胳膊少腿——违反<strong>完整性</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 九标准顺序口诀</div><p><strong>"真准完及适，经比协可得"</strong>——九个标准按序背熟，多选问"属于质量评价标准的有"时按这十个字逐一核对，缺谁谁非法。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;侧重&quot;配对易混三组</div><p>①<strong>准确性</strong>（生产科学性）≠<strong>及时性</strong>（生产效率）——都带"生产"二字，一个管科学、一个管效率；②<strong>完整性</strong>（全面系统反映客观实际）≠<strong>可比性</strong>（标准化规范化程度）——都讲"全、连"，一个管范围口径、一个管时间空间衔接；③<strong>适用性</strong>（用户满意度）≠<strong>可获得性</strong>（服务质量）——一个管"内容对路"，一个管"公布和解读到位"。2025 年一口气考了四个"侧重"单选，这张表就是分。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>统计调查</strong>：按预定目的和任务、运用科学方法、有计划有组织地收集数据信息资料；两特征＝活动有计划有方法有程序、结果表现为数据</li>
+<li><strong>分类</strong>：按对象范围分<strong>全面调查</strong>（全面统计报表＋普查，逐一无一遗漏）/ <strong>非全面调查</strong>（非全面统计报表、抽样、重点、典型——"非抽重典"）；按登记时间分<strong>连续调查</strong>（一段时期的总量，如产量、能耗）/ <strong>不连续调查</strong>（一定时点状态，如设备拥有量、耕地面积）</li>
+<li><strong>统计报表</strong>：自上而下统一布置、自下而上逐级提供；以原始数据为基础；统一表式、指标、报送时间、程序；大多数是全面报表</li>
+<li><strong>普查</strong>：特定目的、专门组织的一次性<strong>全面</strong>调查，了解某一时点状态的基本全貌；一次性或周期性、统一标准调查时间（防重复遗漏）、数据准确规范化高、<strong>使用范围较窄</strong>；频率"人口0 农6 经38"，人口标准时点 11 月 1 日 0 时、农经 1 月 1 日 0 时</li>
+<li><strong>抽样调查</strong>：非全面调查，抽样本推断总体；特点"省快广准"（经济性是显著优点、时效性强、适应面广——质检 / 农试 / 临床、准确性高）</li>
+<li><strong>重点调查</strong>：选标志值占绝大比重的重点单位（35 城零售物价）；<strong>典型调查</strong>：有意识选有代表性单位深入调查（发现新情况新问题、验证全面调查数据真实性）</li>
+<li><strong>质量评价九标准</strong>：真准完及适，经比协可得；侧重——真实→基础数据质量、准确→生产科学性、完整→全面反映客观实际、及时→生产效率、适用→用户满意度、经济→成本效益、可比→标准化规范化、协调→逻辑关系、可获得→服务质量</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b23s4q1" data-answer="ADE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列统计调查方式中，仅对调查对象中的一部分单位进行调查的方式有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 典型调查</button><button type="button" class="qopt" data-key="B">B. 全面统计报表</button><button type="button" class="qopt" data-key="C">C. 普查</button><button type="button" class="qopt" data-key="D">D. 抽样调查</button><button type="button" class="qopt" data-key="E">E. 重点调查</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ADE</div><div class="q-exp"><p>析：非全面调查只查<strong>一部分单位</strong>——典型调查（A）、抽样调查（D）、重点调查（E）都在此列（还有非全面统计报表）。全面统计报表（B）和普查（C）要对构成调查对象的<strong>所有单位</strong>逐一、无一遗漏地调查，属全面调查。
+:::</p></div></details></div><div class="quiz-item" data-qid="b23s4q2" data-answer="ABDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列关于抽样调查的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 抽样调查只抽取部分样本进行调查</button><button type="button" class="qopt" data-key="B">B. 抽样调查时效性强</button><button type="button" class="qopt" data-key="C">C. 抽样调查耗费大量人力、物力、财力</button><button type="button" class="qopt" data-key="D">D. 抽样调查根据样本调查结果推断总体数量特征</button><button type="button" class="qopt" data-key="E">E. 抽样调查工作量小</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：抽样调查从总体中抽取<strong>一部分</strong>单位作样本（A 对），据样本结果<strong>推断总体</strong>数量特征（D 对）；经济性是显著优点——省人力物力财力、工作量小（E 对），且能迅速及时获得信息、时效性强（B 对）。C"耗费大量人力、物力、财力"与<strong>经济性</strong>正好相反——那是普查的代价，不是抽样调查的特点。
+:::</p></div></details></div><div class="quiz-item" data-qid="b23s4q3" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">为及时了解全国城市商品零售价格的变动趋势，按照商品零售额排序，对前 35 个大中型城市的商品零售价格变化情况进行调查，这种调查方法属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 全面调查</button><button type="button" class="qopt" data-key="B">B. 典型调查</button><button type="button" class="qopt" data-key="C">C. 重点调查</button><button type="button" class="qopt" data-key="D">D. 随机调查</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：按零售额排序取<strong>前 35 个大中型城市</strong>——单位数量只占一部分，但就零售额这一<strong>标志值</strong>而言在总体中<strong>占绝大比重</strong>，是重点调查（C）。典型调查选的是"有代表性"的单位而非"块头大"的单位（B 不选）；只查 35 城不是全面调查（A 不选）；"随机调查"不是教材列举的调查方式（D 不选）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b23s4q4" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于农业普查的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 每逢 0 的年份进行</button><button type="button" class="qopt" data-key="B">B. 每 10 年进行 2 次</button><button type="button" class="qopt" data-key="C">C. 每逢 6 的年份进行</button><button type="button" class="qopt" data-key="D">D. 农业普查与经济普查同时进行</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：口诀"人口0 农6 经38"——农业普查逢"<strong>6</strong>"的年份进行，每 10 年 1 次（C 对）。逢"0"是<strong>人口</strong>普查（A 错）；每 10 年进行 2 次的是<strong>经济</strong>普查（B 错）；农业普查逢 6、经济普查逢 3 和 8，两者并不同时进行（D 错）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b23s4q5" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">在统计调查方式中，选择若干具有代表性的单位进行调查属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 普查</button><button type="button" class="qopt" data-key="B">B. 抽样调查</button><button type="button" class="qopt" data-key="C">C. 重点调查</button><button type="button" class="qopt" data-key="D">D. 典型调查</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析："有意识地选择若干具有<strong>典型意义的或有代表性的</strong>单位进行调查"是典型调查的定义（D 对）。重点调查选的是标志值占绝大比重的重点单位（C 错）；普查是全面调查（A 错）；抽样调查按随机原则抽样本（B 错）——"代表性"是典型调查的题眼。
+:::</p></div></details></div><div class="quiz-item" data-qid="b23s4q6" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">在国家统计局制定的统计质量评价标准中，准确性侧重于评价（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 统计数据的科学性</button><button type="button" class="qopt" data-key="B">B. 统计数据生产效率</button><button type="button" class="qopt" data-key="C">C. 统计用户满意度</button><button type="button" class="qopt" data-key="D">D. 统计服务质量</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：准确性要求误差必须控制在允许范围内、能为形势判断和政策制定提供可靠依据，侧重对<strong>统计数据生产科学性</strong>的评价（A 对）。B"生产效率"是<strong>及时性</strong>的侧重；C"用户满意度"是<strong>适用性</strong>的侧重；D"服务质量"是<strong>可获得性</strong>的侧重。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础23_统计与数据科学_第3节_数据的来源.html"><span class="nav-label">上一节</span><span class="nav-title">第3节 数据的来源</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础23_统计与数据科学_第5节_数据科学与大数据.html"><span class="nav-label">下一节</span><span class="nav-title">第5节 数据科学与大数据</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

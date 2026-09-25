@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十一章 金融风险和金融监管 · 国际金融监管协调 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第三部分 货币与金融</span><h1>第二十一章 金融风险和金融监管 · 国际金融监管协调</h1><div class="subtitle">第 5 节 / 共 5 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 5/5</div><div class="sec-badge none" id="sec-badge" data-sec="b21s5">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住巴塞尔委员会出身：<strong>1975 年 2 月</strong>、<strong>国际清算银行</strong>发起、西方十国集团及瑞士和卢森堡等 <strong>12 国</strong>央行 <span class="hot">高频考点</span></li>
+<li>背熟 1988 巴塞尔报告四大件：资本组成（核心 50%）、风险权重五档、资本标准 8%／4%、过渡期 1987–1992 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>背熟 2003 新巴塞尔资本协议"三大支柱"：最低资本要求、监管当局的监督检查、市场约束 <span class="s3">★★★</span></li>
+<li>算得清 2010 巴塞尔协议Ⅲ数字链：4.5／6／8 → 7／8.5／10.5，超额资本 2.5%，杠杆率 3%，过渡期 8 年 <span class="s3">★★★</span> <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、巴塞尔协议的产生与 1988 年巴塞尔报告</h2>
+<h3>1. 巴塞尔委员会的背景 <span class="hot">高频考点</span></h3>
+<p><strong>1975 年 2 月</strong>，由<strong>国际清算银行</strong>发起，西方十国集团以及瑞士和卢森堡等 <strong>12 国的中央银行</strong>成立了<strong>巴塞尔银行监管委员会</strong>。巴塞尔协议中影响最大的是：统一资本监管的 <strong>1988 年巴塞尔报告</strong>、<strong>2003 年新巴塞尔资本协议</strong>、<strong>2010 年巴塞尔协议Ⅲ</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>内容</th>
+<th>记忆点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>时间</td>
+<td>1975 年 2 月</td>
+<td>"75 年 2 月"</td>
+</tr>
+<tr>
+<td>发起方</td>
+<td><strong>国际清算银行</strong></td>
+<td>清算行牵头</td>
+</tr>
+<tr>
+<td>成员</td>
+<td>西方十国集团＋瑞士和卢森堡等 <strong>12 国</strong>中央银行</td>
+<td>十国集团凑满 12 国</td>
+</tr>
+<tr>
+<td>三份里程碑</td>
+<td>1988 巴塞尔报告、2003 新巴塞尔资本协议、2010 巴塞尔协议Ⅲ</td>
+<td>"88、03、10"</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 出身口诀：75 年 2 月，清算行牵线，12 国结缘</div><p>时间（1975 年 2 月）、发起（国际清算银行）、成员（12 国央行）三要素一句话背完。后续三份文件按年份排：<strong>1988 报告 → 2003 新协议 → 2010 协议Ⅲ</strong>，难度和精细度逐级加码。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>十几个国家的央行坐在一起，发现银行跨境经营后谁也管不到别国的银行，于是借国际清算银行的场地组了个"监管俱乐部"（巴塞尔银行监管委员会），商量出统一的资本监管规矩——先是 1988 年统一资本标准，再是 2003 年三大支柱，2010 年金融危机后又升级出协议Ⅲ。</p></div></div>
+<div class="section"><h3>2. 1988 年巴塞尔报告 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p>1988 年巴塞尔报告的主要内容是确认了<strong>监督银行资本的可行的统一标准</strong>，明确了以<strong>资本充足率</strong>为核心的监管思想。</p>
+<table>
+<thead>
+<tr>
+<th>构成</th>
+<th>具体内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>资本组成</strong></td>
+<td>(1) <strong>核心资本（一级资本）</strong>：包括<strong>实收股本（普通股）和公开储备</strong>，这部分<strong>至少占全部资本的 50%</strong>；(2) <strong>附属资本（二级资本）</strong>：包括<strong>未公开储备、资产重估储备、普通准备金和呆账准备金、混合资本工具和长期次级债券</strong></td>
+</tr>
+<tr>
+<td><strong>风险资产权重</strong></td>
+<td>根据不同类型的资产和表外业务的相对风险大小，赋予它们不同的权重，即 <strong>0%、10%、20%、50% 和 100%</strong>；<strong>权重越大，表明该资产的风险越大</strong>（表外业务计算风险加权资产要按照<strong>信用换算系数</strong>进行）</td>
+</tr>
+<tr>
+<td><strong>资本标准</strong></td>
+<td>资本与<strong>风险加权资产</strong>的比率<strong>不得低于 8%</strong>；其中<strong>核心资本比率不得低于 4%</strong></td>
+</tr>
+<tr>
+<td><strong>过渡期安排</strong></td>
+<td><strong>1987 年底—1992 年底</strong>为实施过渡期</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 1988 口诀：核心收公 50，84 消毒液</div><p><strong>"核心收公 50"</strong>——核心资本＝<strong>收</strong>（实收股本）＋<strong>公</strong>（公开储备），至少占全部资本 <strong>50%</strong>；附属资本五样（未公开储备、资产重估储备、普通准备金和呆账准备金、混合资本工具、长期次级债券）是核心之外的。<strong>"84 消毒液"</strong>——总资本充足率 <strong>8%</strong>、核心资本比率 <strong>4%</strong>。风险权重五档"<strong>0、10、20、50、100</strong>"，权重越大越危险。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某银行风险加权资产合计 100 亿元。第一步，资本充足率＝资本 ÷ 风险加权资产 ≥ 8%，所以资本至少 100×8%＝<strong>8 亿元</strong>；第二步，其中核心资本比率 ≥ 4%，所以核心资本至少 100×4%＝<strong>4 亿元</strong>（即 8 亿元资本里核心至少占一半）。把两个比率记成"84"，算题时先乘 8%、再乘 4%，两步不乱。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 1988 报告的三个经典陷阱（对应真题多选）</div><p>①"<strong>普通股</strong>至少占全部资本的 50%"——错，占 50% 的是<strong>核心资本</strong>（实收股本＋公开储备）；②"银行资本分为核心资本、附属资本和<strong>超额资本</strong>"——错，只分<strong>核心、附属</strong>两类，"超额资本"是 2010 年协议Ⅲ的东西；③"二级资本包括<strong>公开储备</strong>、普通准备金和呆账准备金"——错，<strong>公开储备属于核心资本</strong>，二级资本里是<strong>未公开储备</strong>。一字之差，年年设坑。</p></div></div>
+<div class="section"><h2>二、2003 年新巴塞尔资本协议与 2010 年巴塞尔协议Ⅲ</h2>
+<h3>3. 2003 年新巴塞尔资本协议：三大支柱 <span class="s3">★★★</span></h3>
+<p>新巴塞尔资本协议中最引人注目的是推出的<strong>最低资本要求、监管当局的监督检查以及市场约束</strong>，被称为巴塞尔协议的"<strong>三大支柱</strong>"。</p>
+<table>
+<thead>
+<tr>
+<th>三大支柱</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>最低资本要求</strong></td>
+<td>(1) 对<strong>风险范畴的进一步拓展</strong>：信用风险仍然是银行经营中面临的主要风险，但巴塞尔委员会也注意到<strong>市场风险和操作风险</strong>的影响和破坏力；(2) <strong>计量方法的改进</strong>：改进了一些计量风险和资本的方法；(3) <strong>鼓励使用内部模型</strong>：主张有条件的大银行提供自己的风险评估水平，建立更精细的风险评估系统，提出基于内部信用评级的资本计算方法；(4) <strong>资本约束范围的扩大</strong>：对诸如组织形式、交易工具等的变动提出了相应的资本约束对策</td>
+</tr>
+<tr>
+<td><strong>监管当局的监督检查</strong></td>
+<td>监管当局承担<strong>三大职责</strong>：(1) <strong>全面监管银行资本充足状况</strong>；(2) <strong>培育银行的内部信用评估系统</strong>；(3) <strong>加快制度化进程</strong></td>
+</tr>
+<tr>
+<td><strong>市场约束</strong></td>
+<td>强调以<strong>市场力量</strong>来约束银行；富有成效的市场奖惩机制可促使银行保持充足的资本水平；为确保市场约束的有效实施，必须要求银行建立<strong>信息披露制度</strong>——银行在 <strong>1 年内至少披露一次</strong>财务状况、重大业务活动以及风险管理状况</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三大支柱口诀：三大支柱最简约</div><p>支柱一<strong>最低资本要求</strong>、支柱二<strong>监管当局的监督检查</strong>、支柱三<strong>市场约束</strong>——记"<strong>低检市</strong>"（最低资本、监督检查、市场约束）。最低资本要求下再记四个动作：风险范畴拓展（信用＋市场＋操作）、计量改进、内部模型、约束范围扩大。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>银行向全社会披露财务状况、重大业务活动和风险管理情况（一年至少一次），市场里的储户、投资者看了披露就用脚投票：资本单薄的银行融资变贵、存款流失——市场这支"无形的手"逼着银行自觉补足资本。这就是第三支柱"市场约束"的运作逻辑。</p></div></div>
+<div class="section"><h3>4. 2010 年巴塞尔协议Ⅲ <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p>2010 年巴塞尔协议Ⅲ体现了<strong>微观审慎监管和宏观审慎监管有机结合</strong>的监管新思维，按照<strong>资本监管和流动性监管并重、资本数量和质量同步提高、资本充足率与杠杆率并行、长期影响与短期效应统筹兼顾</strong>的总体要求，确立了<strong>国际银行监管的新标杆</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主要内容</th>
+<th>具体标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>① 强化资本充足率监管标准</strong></td>
+<td>三个最低资本充足率监管标准：<strong>普通股充足率 4.5%、一级资本充足率 6%、总资本充足率 8%</strong>；待新标准实施后，正常情况下商业银行的普通股、一级资本和总资本充足率应分别达到 <strong>7%、8.5% 和 10.5%</strong>。两个超额资本要求：<strong>留存超额资本</strong>——用于弥补严重经济和金融衰退给银行体系带来的损失，由<strong>普通股</strong>构成，<strong>最低要求为 2.5%</strong>；<strong>反周期超额资本</strong>——要求银行在信贷高速扩张时期积累充足的经济资源，由普通股或一级资本或其他具有完全损失吸收能力的资本来满足，<strong>最低要求为 0～2.5%</strong></td>
+</tr>
+<tr>
+<td><strong>② 引入杠杆率监管标准</strong></td>
+<td>自 <strong>2011 年初</strong>按照 <strong>3%</strong> 的标准（<strong>一级资本/总资产</strong>）开始监控杠杆率的变化，<strong>2013 年初</strong>开始进入过渡期，<strong>2018 年</strong>正式纳入第一支柱框架</td>
+</tr>
+<tr>
+<td><strong>③ 建立流动性风险量化监管标准</strong></td>
+<td><strong>流动性覆盖率</strong>：用于度量<strong>短期压力情境</strong>下<strong>单个银行</strong>的流动性状况，目的是提高银行<strong>短期应对流动性中断的弹性</strong>；<strong>净稳定融资比率</strong>：用于度量<strong>中长期内</strong>银行解决<strong>资金错配</strong>的能力，它覆盖<strong>整个资产负债表</strong>，目的是激励银行尽量<strong>使用稳定的资金来源</strong></td>
+</tr>
+<tr>
+<td><strong>④ 确定新监管标准的实施过渡期</strong></td>
+<td>设立为期 <strong>8 年（2011—2018 年）</strong>的过渡期</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 巴塞尔Ⅲ口诀：普一总 4568，新标再加 2.5；杠杆 3%，过渡 8 年</div><p><strong>"普一总 4568"</strong>——普通股 4.5%、一级 6%、总资本 8%；<strong>"新标再加 2.5"</strong>——新标准实施后正常情况分别加 2.5% 达到 7%、8.5%、10.5%；<strong>留存超额资本 2.5%</strong>（普通股），<strong>反周期超额资本 0～2.5%</strong>（可浮动）。<strong>"杠杆 3%"</strong>——一级资本 ÷ 总资产 ≥3%，2011 监控、2013 过渡、2018 入第一支柱。<strong>"过渡 8 年"</strong>——2011—2018。流动性两指标分工：<strong>流动性覆盖率管短期，净稳定融资比率管中长期</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>第一步，先写最低标准：总资本充足率 8%；第二步，再加留存超额资本：8%＋2.5%＝<strong>10.5%</strong>——这就是"新标准实施后正常情况下"的总资本充足率要求。同法：普通股 4.5%＋2.5%＝<strong>7%</strong>，一级资本 6%＋2.5%＝<strong>8.5%</strong>。注意方向：10.5% 是"加了留存超额之后"的要求，<strong>最低总资本标准仍是 8%</strong>——考"最低资本充足率监管标准"选 8%，考"新标准实施后正常情况应达到"选 10.5%，两个问法两个答案。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三个&quot;过渡期&quot;对号入座</div><p>① 1988 年报告过渡期：<strong>1987 年底—1992 年底</strong>；② 杠杆率：<strong>2011 年初</strong>按 3% 监控、<strong>2013 年初</strong>进入过渡期、<strong>2018 年</strong>纳入第一支柱；③ 巴塞尔协议Ⅲ整体过渡期：<strong>8 年（2011—2018 年）</strong>。考试爱把三个年份互相串，记住"越新越长的过渡期"这条主线就不会乱。另记：流动性覆盖率＝短期、单个银行；净稳定融资比率＝中长期、整个资产负债表——"短流长净"。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>巴塞尔委员会</strong>：1975 年 2 月，国际清算银行发起，西方十国集团＋瑞士和卢森堡等 12 国央行；三份里程碑＝1988 报告、2003 新协议、2010 协议Ⅲ</li>
+<li><strong>1988 报告</strong>：核心资本（一级）＝实收股本（普通股）＋公开储备，至少占全部资本 50%；附属资本（二级）＝未公开储备、资产重估储备、普通准备金和呆账准备金、混合资本工具、长期次级债券；风险权重 0/10/20/50/100（表外按信用换算系数）；资本/风险加权资产 ≥8%、核心 ≥4%（"84 消毒液"）；过渡期 1987 年底—1992 年底</li>
+<li><strong>2003 新协议三大支柱</strong>（"最简约"）：最低资本要求（信用风险仍主要＋市场、操作风险；计量改进；内部模型；约束范围扩大）、监管当局的监督检查（全面监管资本充足、培育内部信用评估、加快制度化）、市场约束（1 年内至少披露一次）</li>
+<li><strong>2010 协议Ⅲ</strong>：微观＋宏观审慎有机结合；资本监管和流动性监管并重、数量和质量同步提高、充足率与杠杆率并行、长短期统筹；三个最低标准 4.5/6/8 → 新标准实施后 7/8.5/10.5（加 2.5 留存）；留存超额资本 2.5%（普通股）、反周期超额资本 0～2.5%；杠杆率 3%（一级资本/总资产，2011 监控、2013 过渡、2018 入支柱）；流动性覆盖率（短期、单个银行）＋净稳定融资比率（中长期、整个资产负债表）；过渡期 8 年（2011—2018）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b21s5q1" data-answer="ADE" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">关于 1988 年巴塞尔报告的说法，错误的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 普通股至少占全部资本的 50%</button><button type="button" class="qopt" data-key="B">B. 确认了监督银行资本的可行的统一标准</button><button type="button" class="qopt" data-key="C">C. 表外业务计算风险加权资产要按照信用换算系数进行</button><button type="button" class="qopt" data-key="D">D. 银行资本分为核心资本、附属资本和超额资本</button><button type="button" class="qopt" data-key="E">E. 二级资本包括公开储备、普通准备金和呆账准备金</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ADE</div><div class="q-exp"><p>析：A 错——至少占全部资本 50% 的是<strong>核心资本</strong>（实收股本＋公开储备），不是普通股；D 错——银行资本只分<strong>核心资本和附属资本</strong>两类，没有"超额资本"；E 错——<strong>公开储备属于核心资本</strong>，二级资本包括未公开储备、资产重估储备、普通准备金和呆账准备金、混合资本工具和长期次级债券。B、C 是 1988 年报告的正确表述。
+:::</p></div></details></div><div class="quiz-item" data-qid="b21s5q2" data-answer="C" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">下列各项中，不属于 2003 年《新巴塞尔资本协议》中&quot;三大支柱&quot;的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 最低资本要求</button><button type="button" class="qopt" data-key="B">B. 市场约束</button><button type="button" class="qopt" data-key="C">C. 综合监管</button><button type="button" class="qopt" data-key="D">D. 监管当局的监督检查</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：三大支柱＝<strong>最低资本要求、监管当局的监督检查、市场约束</strong>。"综合监管"是金融监管体制分类里的概念（与分业监管相对），跟巴塞尔三大支柱无关——这是典型的"跨章节拼盘"干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b21s5q3" data-answer="ACD" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">2010 年巴塞尔协议Ⅲ的主要内容有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 强化资本充足率监管标准</button><button type="button" class="qopt" data-key="B">B. 最低资本要求</button><button type="button" class="qopt" data-key="C">C. 建立流动性风险量化监管标准</button><button type="button" class="qopt" data-key="D">D. 确定新监管标准的实施过渡期</button><button type="button" class="qopt" data-key="E">E. 监管当局的监督检查</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：巴塞尔协议Ⅲ的主线是——强化资本充足率监管标准（A）、引入杠杆率监管标准、建立流动性风险量化监管标准（C）、确定新监管标准的实施过渡期（D）。B、E 是 2003 年新协议"三大支柱"的内容，放进 2010 年协议的选项里就是串场干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b21s5q4" data-answer="D" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">2010 年巴塞尔协议Ⅲ规定，新标准实施后，正常情况下商业银行总资本充足率应达到（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 7%</button><button type="button" class="qopt" data-key="B">B. 8%</button><button type="button" class="qopt" data-key="C">C. 4.5%</button><button type="button" class="qopt" data-key="D">D. 10.5%</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：三个最低标准是普通股 4.5%、一级 6%、总资本 8%；新标准实施后正常情况下应分别达到 <strong>7%、8.5%、10.5%</strong>——相当于在最低标准上再加 2.5% 的留存超额资本。A（7%）是普通股的新要求，B（8%）是最低总资本标准，C（4.5%）是普通股最低标准，问"总资本、新标准实施后"只能选 D。
+:::</p></div></details></div><div class="quiz-item" data-qid="b21s5q5" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">1988 年 7 月，巴塞尔委员会发布了巴塞尔报告，明确了以（　）为核心的监管思想。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 流动性比例</button><button type="button" class="qopt" data-key="B">B. 资本充足率</button><button type="button" class="qopt" data-key="C">C. 货币供应量</button><button type="button" class="qopt" data-key="D">D. 信贷规模</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：1988 年报告（《关于统一国际银行资本衡量和资本标准的报告》）确认了监督银行资本的可行的统一标准，核心是<strong>资本充足率</strong>监管——资本与风险加权资产的比率不得低于 8%，其中核心资本比率不得低于 4%。流动性、货币供应量、信贷规模都不是它的核心。
+:::</p></div></details></div><div class="quiz-item" data-qid="b21s5q6" data-answer="BCDE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">根据巴塞尔协议Ⅲ初步框架，最低资本充足率监管标准包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 留存超额资本最低要求为 1.5%</button><button type="button" class="qopt" data-key="B">B. 普通股充足率为 4.5%</button><button type="button" class="qopt" data-key="C">C. 总资本充足率为 8%</button><button type="button" class="qopt" data-key="D">D. 留存超额资本最低要求为 2.5%</button><button type="button" class="qopt" data-key="E">E. 一级资本充足率为 6%</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：三个最低资本充足率标准——普通股 4.5%（B）、一级资本 6%（E）、总资本 8%（C）；另要求留存超额资本最低 2.5%（D 对，A 错在把 2.5% 说成 1.5%）。注意反周期超额资本的最低要求是 <strong>0～2.5%</strong>、随信贷情况浮动，不是固定 2.5%。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础21_金融风险和金融监管_第4节_金融监管体制.html"><span class="nav-label">上一节</span><span class="nav-title">第4节 金融监管体制</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

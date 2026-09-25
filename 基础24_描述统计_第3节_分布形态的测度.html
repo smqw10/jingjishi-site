@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十四章 描述统计 · 分布形态的测度 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十四章 描述统计 · 分布形态的测度</h1><div class="subtitle">第 3 节 / 共 4 节 · 预计学习时长 50 分钟</div><div class="progress-bar"><div class="fill" style="width:75%"></div></div><div class="progress-text">本章进度 3/4</div><div class="sec-badge none" id="sec-badge" data-sec="b24s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住偏态系数方向规则：<strong>SK＞0 右偏、SK＜0 左偏、SK＝0 对称</strong>，方向永不反 <span class="must">必考</span> <span class="s3">★★★</span></li>
+<li>会用 0.5 和 1 两个分割点给偏斜程度分级：轻度、中度、严重 <span class="s3">★★★</span></li>
+<li>会算标准分数 z＝(数值−均值)÷标准差，记住标准化后<strong>均值 0、标准差 1</strong>，位置偏度都不变 <span class="hot">高频考点</span></li>
+<li>背熟经验法则 <strong>68–95–99</strong>，会套公式算区间（整小节都是高频考点）<span class="must">必考</span> <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、偏态系数</h2>
+<h3>1. 偏度与偏态系数 <span class="must">必考</span> <span class="s3">★★★</span></h3>
+<p><strong>偏度</strong>：指数据分布的<strong>偏斜方向和程度</strong>，描述的是数据分布的<strong>对称程度</strong>。<strong>偏态系数</strong>：测度数据分布偏度的指标，<strong>取决于离差三次方的平均数与标准差三次方的比值</strong>。</p>
+<p><strong>计算公式</strong>：SK ＝ n/[(n−1)(n−2)] × Σ[(Xᵢ−X̄)/s]³</p>
+<p><strong>偏态系数的应用</strong>（对应关系一条轴看清）：</p>
+<table>
+<thead>
+<tr>
+<th>取值</th>
+<th>方向</th>
+<th>程度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SK＝0</td>
+<td><strong>对称</strong></td>
+<td>——</td>
+</tr>
+<tr>
+<td>SK＞0</td>
+<td><strong>右偏</strong></td>
+<td>|SK|＜0.5 轻度；0.5≤|SK|≤1 中度；|SK|＞1 严重</td>
+</tr>
+<tr>
+<td>SK＜0</td>
+<td><strong>左偏</strong></td>
+<td>同上（按绝对值分级）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分步判断演算</strong>：SK＝−0.33 → 第一步看符号：负 → 左偏；第二步看绝对值：0.33＜0.5 → 轻度。合起来"轻度左偏"。SK＝3.0 → 正 → 右偏；3.0＞1 → 严重，合起来"严重倾斜（右偏）"。</p></div>
+<div class="section"><div class="keypoint"><strong>方向判定：正右负左，尾巴拖向哪边就往哪边偏：</strong><p>SK 的<strong>符号管方向</strong>（正右偏、负左偏、零对称），<strong>绝对值管程度</strong>（越大越偏）。直观判断法：看观察数据中的<strong>极端值在哪一侧</strong>——极端值在右侧（少数高收入者把右尾巴拖得很长）就是右偏。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一个公司大多数员工月薪五六千，少数高管月薪十几万——把月薪画成分布图，右边拖出一条长尾巴，这就是<strong>右偏</strong>（SK＞0）。反过来，若考试题极简单、大多数人接近满分、少数低分拖出左尾巴，就是<strong>左偏</strong>（SK＜0）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 偏态口诀</div><p><strong>"正右负左，零对称；半内轻、半到一中等、过一严重"</strong>——符号定方向，绝对值定程度：|SK|＜0.5 轻度，0.5～1 中度，＞1 严重。判断题先问符号（方向），再问绝对值（程度），两步出答案。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 方向反了是本题命门</div><p>本知识点最大的坑是<strong>左右偏方向记反</strong>（历史错题高发区）：锁定一句话——<strong>SK＞0 右偏，SK＜0 左偏</strong>。选项常拿"重度"冒充"严重"、拿"负数"冒充"右偏"：教材分级用语只有<strong>轻度/中度/严重</strong>三档，出现"重度"即是编造；负系数说成右偏，直接判错。</p></div></div>
+<div class="section"><h2>二、标准分数</h2>
+<h3>2. 标准分数（Z 分数）<span class="hot">高频考点</span></h3>
+<p><strong>为什么需要它</strong>：均值和标准差不同时，<strong>不同变量的数值是不能直接比较的</strong>，来自不同分布的变量值不可比；但每个数值在变量分布中<strong>相对于均值的相对位置是可比的</strong>——因此通过计算标准分数来<strong>比较不同变量的取值</strong>。</p>
+<p><strong>标准分数</strong>也称 <strong>Z 分数</strong>，是统计上常用的一种标准化方法：<strong>标准分数＝(数值−均值)÷标准差</strong>，即 z ＝ (Xᵢ−X̄)/s。</p>
+<p><strong>三条性质</strong>（多选题题眼）：
+1. 转变后的标准分数<strong>没有改变数值在原分布中的位置</strong>；
+2. 也<strong>没有改变数据原分布的偏度</strong>；
+3. 标准分数的<strong>平均数为 0，标准差为 1</strong>。</p>
+<p><strong>分步演算</strong>：一组数据均值 60、标准差 20，数值 40 的标准分数：z＝(40−60)÷20＝−20÷20＝<strong>−1</strong>，即 40 在均值下方 1 个标准差处。</p>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>答案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>换算步骤</td>
+<td>先减均值，再除以标准差</td>
+</tr>
+<tr>
+<td>变了什么</td>
+<td>刻度（变成"距均值多少个标准差"）</td>
+</tr>
+<tr>
+<td>不变什么</td>
+<td><strong>数值在原分布中的位置、原分布的偏度</strong></td>
+</tr>
+<tr>
+<td>新分布的均值/标准差</td>
+<td><strong>0 / 1</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某企业两次独立考核：考核 A 均值 70、标准差 5；考核 B 均值 80、标准差 10。小张 A 考了 80 分、B 考了 90 分， raw 分都高 10 分，没法直接比——标准化：A 中 z＝(80−70)÷5＝2；B 中 z＝(90−80)÷10＝1。2＞1，小张在考核 A 中的<strong>相对排名更高</strong>。这就是"用标准分数比较不同分布中的取值"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 标准分数口诀</div><p><strong>"减均值、除标准差；位置偏度都不变，均值归零标准差一"</strong>——见"相对位置""不同变量比较"选标准分数；见"改变了位置/改变了偏度"判错；问标准化后的均值、标准差，答 0 和 1。</p></div></div>
+<div class="section"><h2>三、经验法则</h2>
+<h3>3. 68–95–99 法则 <span class="must">必考</span> <span class="s3">★★★</span></h3>
+<p>当数据服从<strong>对称的钟形分布</strong>时，可以运用经验法则判断<strong>与均值的距离在特定倍数标准差之内</strong>的数据项所占比例：</p>
+<table>
+<thead>
+<tr>
+<th>与均值的距离</th>
+<th>数据比例</th>
+<th>标准分数范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 个标准差之内</td>
+<td>约有 <strong>68%</strong></td>
+<td>【−1，1】</td>
+</tr>
+<tr>
+<td>2 个标准差之内</td>
+<td>约有 <strong>95%</strong></td>
+<td>【−2，2】</td>
+</tr>
+<tr>
+<td>3 个标准差之内</td>
+<td>约有 <strong>99%</strong></td>
+<td>【−3，3】</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分步演算</strong>：客户满意度服从对称钟形分布，均值 75、标准差 5。求"约 95% 的范围"：75±2×5＝75±10＝<strong>[65，85]</strong>。求"约 99%"：75±3×5＝<strong>[60，90]</strong>。求"约 68%"：75±1×5＝<strong>[70，80]</strong>。区间永远以<strong>均值为中心</strong>、向两边各伸 k 个标准差。</p></div>
+<div class="section"><div class="keypoint"><strong>区间的中心永远是均值：</strong><p>套区间就一个公式：<strong>均值 ± 倍数×标准差</strong>。干扰项最爱把<strong>均值当成区间的一端</strong>（如"68% 在 [75，85]"）——区间必须左右对称地包住均值，一端是均值的都是错的。另注意前提：<strong>只有对称钟形分布才能用经验法则</strong>，偏态分布不适用。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某项体检指标服从对称钟形分布，均值 100、标准差 10，则约 95% 的人落在 100±2×10＝[80，120] 之间——医生口中的"参考范围"正是这么来的；约 99% 的人在 [70，130]，超出 [70，130] 的不到 1%，属于罕见的异常值。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 经验法则口诀</div><p><strong>"一68、二95、三99"</strong>——倍数 1、2、3 对应比例 68%、95%、99%。做题先写"均值±k×标准差"，两头各算一遍再对选项；见"钟形分布/对称分布"才敢用，偏态分布不适用。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三个高频陷阱</div><p>①把均值当区间端点（如均值 75、标准差 5，"95% 在 [75，95]"是错的，应为 [65，85]）；②倍数与比例错配（如"68% 在 ±2 个标准差之内"应为 95%）；③忘了前提是对称钟形分布——题干不写"对称/钟形"，经验法则不能用。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>偏度</strong>：偏斜方向和程度，描述对称程度；<strong>偏态系数</strong>取决于离差三次方的平均数与标准差三次方的比值</li>
+<li><strong>方向</strong>：SK＝0 对称；SK＞0 右偏；SK＜0 左偏（正右负左，极端值在哪侧就往哪偏）</li>
+<li><strong>程度</strong>：|SK|＜0.5 轻度；0.5≤|SK|≤1 中度；|SK|＞1 严重</li>
+<li><strong>标准分数</strong> z＝(数值−均值)÷标准差；不改变位置、不改变偏度；标准化后均值 0、标准差 1；用途＝比较不同变量的取值（相对位置）</li>
+<li><strong>经验法则</strong>（对称钟形分布）：±1σ 约 68%，±2σ 约 95%，±3σ 约 99%；区间＝均值±k×标准差</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b24s3q1" data-answer="AC" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">某企业员工年收入数据分布的偏态系数为 3.0，则该组数据的分布形态为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 右偏</button><button type="button" class="qopt" data-key="B">B. 左偏</button><button type="button" class="qopt" data-key="C">C. 严重倾斜</button><button type="button" class="qopt" data-key="D">D. 轻度倾斜</button><button type="button" class="qopt" data-key="E">E. 中度倾斜</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AC</div><div class="q-exp"><p>析：分两步：第一步看<strong>方向</strong>——SK＝3.0＞0，按"正右负左"为<strong>右偏</strong>；第二步看<strong>程度</strong>——|SK|＝3.0＞1，为<strong>严重</strong>偏斜。故 A、C 对。B 方向反；D、E 程度不够（轻度要 |SK|＜0.5，中度 0.5～1）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s3q2" data-answer="ADE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">某企业客户满意度数据服从对称的钟形分布，均值为 75，标准差为 5。根据经验法则，关于该企业客户满意度的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 约有 68% 的客户满意度在 [70，80] 范围内</button><button type="button" class="qopt" data-key="B">B. 约有 68% 的客户满意度在 [75，85] 范围内</button><button type="button" class="qopt" data-key="C">C. 约有 95% 的客户满意度在 [75，95] 范围内</button><button type="button" class="qopt" data-key="D">D. 约有 95% 的客户满意度在 [65，85] 范围内</button><button type="button" class="qopt" data-key="E">E. 约有 99% 的客户满意度在 [60，90] 范围内</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ADE</div><div class="q-exp"><p>析：区间＝均值±倍数×标准差。A：75±1×5＝[70，80]，68% 正确；D：75±2×5＝[65，85]，95% 正确；E：75±3×5＝[60，90]，99% 正确。B、C 都把<strong>均值 75 当成了区间的一端</strong>——区间必须以均值为中心对称伸展，一端从均值起的都是干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s3q3" data-answer="C" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">如果一组数据的偏态系数为 10，则可以判断该组数据的分布为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 重度右偏</button><button type="button" class="qopt" data-key="B">B. 严重左偏</button><button type="button" class="qopt" data-key="C">C. 严重右偏</button><button type="button" class="qopt" data-key="D">D. 重度左偏</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：SK＝10＞0 → <strong>右偏</strong>（符号管方向）；|SK|＝10＞1 → <strong>严重</strong>偏斜（绝对值管程度），故"严重右偏"。A、D 的"重度"不是教材分级用语（只有轻度/中度/严重）；B 方向反。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s3q4" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">如果一组数据的偏态系数为 -0.33，则可以判断该组数据的分布为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 轻度左偏</button><button type="button" class="qopt" data-key="B">B. 轻度右偏</button><button type="button" class="qopt" data-key="C">C. 中度右偏</button><button type="button" class="qopt" data-key="D">D. 中度左偏</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：SK＝−0.33＜0 → <strong>左偏</strong>（负号管方向）；|SK|＝0.33＜0.5 → <strong>轻度</strong>（绝对值管程度）。故"轻度左偏"。B 方向反；C、D 程度升格错误——0.5 以内一律轻度，别见负数就慌、见小数就升格。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s3q5" data-answer="CDE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于标准分数的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 标准分数改变了数据原分布的偏度</button><button type="button" class="qopt" data-key="B">B. 标准分数是用数值除以标准差</button><button type="button" class="qopt" data-key="C">C. 标准分数给出数值距离均值的相对位置</button><button type="button" class="qopt" data-key="D">D. 标准分数的标准差为 1</button><button type="button" class="qopt" data-key="E">E. 标准分数没有改变数值在原分布中的位置</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CDE</div><div class="q-exp"><p>析：标准分数＝(数值−均值)÷标准差，是<strong>先减均值再除以标准差</strong>，B 漏了"减均值"，错；标准化只换"刻度"，<strong>没有改变数值在原分布中的位置，也没有改变原分布的偏度</strong>，E 对、A 错；转变后标准分数的<strong>平均数为 0、标准差为 1</strong>，D 对；它的用途正是比较不同分布中数值的<strong>相对位置</strong>，C 对。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s3q6" data-answer="C" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">一组数据均值为 60，标准差为 20，&quot;40&quot;是其中一个数值，其标准分数是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. -2</button><button type="button" class="qopt" data-key="B">B. 2</button><button type="button" class="qopt" data-key="C">C. -1</button><button type="button" class="qopt" data-key="D">D. 1</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：z＝(数值−均值)÷标准差＝(40−60)÷20＝−20÷20＝−1。40 低于均值 20 分，20 分恰好是 1 个标准差，故它在均值下方 1 个标准差处，z＝−1，选 C。B、D 符号错——数值低于均值，z 必为负；A 是把 (40−60)÷20 算成 −2 的粗心错（20÷20＝1，不是 2）。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础24_描述统计_第2节_离散程度的测度.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 离散程度的测度</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础24_描述统计_第4节_变量间的相关分析.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 变量间的相关分析</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

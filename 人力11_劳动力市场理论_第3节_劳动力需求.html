@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第11章 劳动力市场理论 · 劳动力需求 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第三部分 人力资源经济分析</span><h1>第11章 劳动力市场理论 · 劳动力需求</h1><div class="subtitle">第 3 节 / 共 4 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:75%"></div></div><div class="progress-text">本章进度 3/4</div><div class="sec-badge none" id="sec-badge" data-sec="r11s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住劳动力需求是<strong>派生需求（引致需求）</strong>，需求曲线<strong>自左上向右下倾斜</strong>、短期长期形状不变 <span class="hot">高频考点</span></li>
+<li>背熟工资率/产品需求/资本价格变化对劳动力需求作用的<strong>三张方向表</strong> <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>会算<strong>自身工资弹性</strong>（值为负、比绝对值），背熟<strong>派生需求定理</strong>四条"越大弹性越大" <span class="s3">★★★</span></li>
+<li>一眼判<strong>交叉工资弹性</strong>：正值总替代、负值总互补 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、劳动力需求及其影响因素 <span class="s3">★★★</span> <span class="must">必考</span></h2>
+<h3>1. 劳动力需求的性质与需求曲线 <span class="hot">高频考点</span></h3>
+<p><strong>性质</strong>：劳动力需求是一种<strong>派生需求（引致需求）</strong>——企业雇人不是为了消费劳动力本身，而是因为<strong>消费者对企业的产品和服务有需求</strong>，才派生出对劳动力的需求。</p>
+<p><strong>劳动力需求曲线</strong>：
+1. 描述劳动力<strong>需求数量</strong>与<strong>市场工资率</strong>之间的关系；
+2. ★曲线形状：<strong>自左上向右下方倾斜，斜率为负</strong>——工资率越高，企业需要的劳动力越少；工资率越低，需要的越多；
+3. 无论是<strong>短期</strong>还是<strong>长期</strong>，曲线形状<strong>不变</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>派生需求的白话版：</strong><p>奶茶店多雇店员，不是因为老板喜欢发工资，而是因为喝奶茶的人多了——顾客的需求"派生"出店员的需求。所以顾客端一变（产品需求），用工端立刻跟着变，而且只能通过"规模效应"一条道传导（见下）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>楼市遇冷→新房卖不动（产品需求下降）→开发商缩规模，钢筋工、置业顾问、家装工人需求齐降——劳动力需求跟着产品需求走，这就是派生需求。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 需求曲线方向口诀</div><p><strong>"价高少雇人"</strong>——需求曲线自左上向右下倾斜、斜率为负；短期长期一个样，别被"长期曲线形状会变"的说法骗到。</p></div></div>
+<div class="section"><h3>2. 劳动力需求的影响因素（★★★）</h3>
+<p><strong>（1）工资率变化</strong>——规模效应与替代效应<strong>作用方向相同</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>效应</th>
+<th>传导链（以工资率上升为例）</th>
+<th>对劳动力需求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>规模效应</strong></td>
+<td>劳动力成本上升→<strong>缩减生产规模</strong></td>
+<td><strong>下降</strong></td>
+</tr>
+<tr>
+<td><strong>替代效应</strong></td>
+<td>劳动力成本上升→<strong>资本相对便宜</strong>→增加资本需求、减少劳动力</td>
+<td><strong>下降</strong></td>
+</tr>
+</tbody>
+</table>
+<p>即：<strong>工资率上升</strong>的规模效应和替代效应<strong>都使需求减少</strong>；<strong>工资率下降</strong>的规模效应和替代效应<strong>都使需求上升</strong>。</p>
+<p><strong>（2）产品需求变化</strong>——其他条件不变（<strong>包括工资率不变</strong>）时：产品需求上升→规模效应扩大→劳动力需求量<strong>增加</strong>；产品需求下降→规模效应缩减→劳动力需求量<strong>减少</strong>。</p>
+<p><strong>（3）资本价格变化</strong>——规模效应与替代效应<strong>作用方向相反</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>资本价格</th>
+<th>规模效应</th>
+<th>替代效应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>上升</strong></td>
+<td>需求<strong>减少</strong>（成本升、缩规模）</td>
+<td>需求<strong>增加</strong>（资本贵了，改用劳动力）</td>
+</tr>
+<tr>
+<td><strong>下降</strong></td>
+<td>需求<strong>增加</strong>（成本降、扩规模）</td>
+<td>需求<strong>减少</strong>（资本便宜了，机器换人）</td>
+</tr>
+</tbody>
+</table>
+<p>资本价格变化对劳动力需求数量的<strong>最终影响</strong>取决于<strong>哪种效应的力量更大</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三因素方向口诀</div><p><strong>"工资一动两刀砍，产品只走规模道，资本两效对着跑"</strong>——工资率变化的规模、替代两效应<strong>同方向</strong>（上升时都砍需求）；产品需求变化<strong>只有规模效应</strong>、没有替代效应；资本价格变化的两种效应<strong>方向相反</strong>，看谁力气大。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>工厂能引入机器人了：机器人降价→总成本下降、多接订单扩大生产，反而多雇工人（规模效应，需求<strong>增</strong>）；同时机器人便宜了，车间"机器换人"（替代效应，需求<strong>减</strong>）。最后用工是增是减，看哪股劲大——这就是"资本价格两效对着跑"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 方向对照速查（防反）</div><ul>
+<li>工资率<strong>上升</strong>：规模效应 −、替代效应 −（<strong>双双为负</strong>）；</li>
+<li>产品需求<strong>上升</strong>：规模效应 ＋（<strong>只有这一条道</strong>，无替代效应）；</li>
+<li>资本价格<strong>下降</strong>：规模效应 ＋、替代效应 −（<strong>一正一负</strong>，净效应看大小）。
+2020 年多选考"必然导致需求下降"：只有"工资率上升的规模效应/替代效应"两条稳赢；选项里的"工资率下降的<strong>收入效应</strong>"是把个人<strong>供给</strong>的概念走私进需求题，直接排除。</li>
+</ul></div></div>
+<div class="section"><h2>二、劳动力需求弹性与派生需求定理</h2>
+<h3>1. 劳动力需求的自身工资弹性（η）<span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>概念</strong>：某种劳动力的<strong>工资率（W）变化 1%</strong> 所引起的<strong>自身劳动力需求数量（L）</strong>发生变化的<strong>百分比</strong>。</p>
+<p><strong>η＝劳动力需求量变动百分比 ÷ 工资率变动百分比</strong></p>
+<p>工资率与劳动力需求数量的<strong>变动方向相反</strong> → 自身工资弹性值为<strong>负</strong>，比较大小看<strong>绝对值</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>绝对值</th>
+<th>含义（工资率上升 1% 时）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>富有弹性</strong></td>
+<td>＞1</td>
+<td>需求数量下降幅度<strong>大于</strong> 1%</td>
+</tr>
+<tr>
+<td><strong>缺乏弹性</strong></td>
+<td>＜1</td>
+<td>需求数量下降幅度<strong>小于</strong> 1%</td>
+</tr>
+<tr>
+<td><strong>单位弹性</strong></td>
+<td>＝1</td>
+<td>需求数量下降幅度<strong>等于</strong> 1%</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 自身工资弹性口诀</div><p><strong>"分子需求分母工资，值为负、比绝对"</strong>——工资涨、需求减，弹性必为负；判断富缺单位只看绝对值与 1 的大小。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>工资 10→15 元/小时（上涨 50%），单位弹性 → 需求量同幅度变动 50%，方向相反：10 万小时×50%＝5 万，10−5＝<strong>5 万小时</strong>。套路：先算工资变动率→按弹性幅度算需求变动率→<strong>从原量里减</strong>（工资涨、需求减，方向别忘）。</p></div></div>
+<div class="section"><h3>2. 派生需求定理（希克斯-马歇尔派生需求定理）（★★）</h3>
+<p>影响劳动力需求（自身工资）弹性的<strong>四个因素</strong>——<strong>四条"越大"，弹性越大</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>变化情况 → 劳动力需求弹性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①<strong>最终产品的需求价格弹性</strong></td>
+<td>越大 → 弹性<strong>越大</strong></td>
+</tr>
+<tr>
+<td>②<strong>要素替代的难易程度</strong></td>
+<td>越<strong>容易</strong> → 弹性<strong>越大</strong></td>
+</tr>
+<tr>
+<td>③<strong>其他生产要素的供给弹性</strong></td>
+<td>越大 → 弹性<strong>越大</strong></td>
+</tr>
+<tr>
+<td>④<strong>产品总成本中劳动力成本所占比重</strong></td>
+<td>越大 → 弹性<strong>越大</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 派生需求四法则</div><p><strong>"产品弹、换得易、别素弹、占比大——四大弹也大"</strong>：产品一涨价顾客就跑（最终产品需求价格弹性大）→ 工资不敢涨；机器好换（要素替代容易）→ 工资一涨就换机器；别的要素好买（其他要素供给弹性大）→ 说换就换；人工占比大 → 工资一动总成本伤筋动骨。反过来，四条都"越小"，弹性越小——对劳动者就业反而<strong>越有利</strong>（工资涨了企业也不太会大幅裁人）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>给国际品牌代工的服装厂：产品同质、消费者价格敏感（最终产品需求价格弹性大）；缝纫工序随时可上自动设备（要素替代容易）；面料、设备市面上管够（其他要素供给弹性大）；人工占总成本七成（占比大）——四条全中，所以订单一压价就大幅裁人，劳动力需求弹性很大。反例是工艺独特、设备专用的精密制造：想换人换不了、人工占比又低，用工量对工资就不那么敏感。</p></div></div>
+<div class="section"><h3>3. 劳动力需求的交叉工资弹性 <span class="hot">高频考点</span></h3>
+<p><strong>概念</strong>：<strong>一种</strong>劳动力工资率变化 1% 所引起的<strong>另一类</strong>劳动力需求量变化的百分比。</p>
+<table>
+<thead>
+<tr>
+<th>弹性符号</th>
+<th>含义</th>
+<th>两者关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>正值</strong></td>
+<td>一种劳动力工资率提高（其就业量减少）→ 另一类劳动力的需求量<strong>上升</strong></td>
+<td><strong>总替代</strong>关系</td>
+</tr>
+<tr>
+<td><strong>负值</strong></td>
+<td>一种劳动力工资率提高（其就业量减少）→ 另一类劳动力的需求量<strong>减少</strong></td>
+<td><strong>总互补</strong>关系</td>
+</tr>
+</tbody>
+</table>
+<p>两种劳动力之间是总替代关系还是总互补关系<strong>并不是绝对固定的</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 交叉弹性口诀</div><p><strong>"正替负补"</strong>——弹性为正＝总替代（你涨价，买方转头买你的"平替"）；弹性为负＝总互补（你涨价卖得少，配套的跟着遭殃）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别丢&quot;总&quot;字</div><p>青年劳动力工资率上涨 2%、老年劳动力就业量下降 0.8%（交叉弹性＝−0.8%÷2%＜0）→ 是<strong>总互补</strong>。概念名就叫"<strong>总</strong>替代/<strong>总</strong>互补"——规模效应与替代效应<strong>加总</strong>之后的净关系，选项给"互补""替代"不带"总"字的都是干扰项（2014 年真题的 B、D 之争就卡在这个字上）。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li>劳动力需求＝派生需求（引致需求）；需求曲线自左上向右下倾斜、斜率为负，短期长期形状不变</li>
+<li>工资率↑：规模效应、替代效应<strong>都</strong>使需求↓（同方向）；产品需求变化<strong>只有规模效应</strong>（无替代效应）；资本价格变化两效应<strong>方向相反</strong>（降价：规模＋、替代−，净效应看大小）</li>
+<li>自身工资弹性 η＝需求量变动%÷工资率变动%，<strong>值为负</strong>、比绝对值：富＞1、缺＜1、单位＝1</li>
+<li>派生需求定理四条"越大弹性越大"：最终产品需求价格弹性、要素替代越容易、其他要素供给弹性、劳动力成本占比</li>
+<li>交叉工资弹性："正替负补"——正值总替代、负值总互补；关系并非绝对固定</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r11s3q1" data-answer="CD" data-type="multi"><span class="q-tag">2020·多选</span><div class="q-stem">在其他条件一定的情况下，必然会导致劳动力需求量下降的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 工资率下降的替代效应</button><button type="button" class="qopt" data-key="B">B. 工资率下降的规模效应</button><button type="button" class="qopt" data-key="C">C. 工资率上升的规模效应</button><button type="button" class="qopt" data-key="D">D. 工资率上升的替代效应</button><button type="button" class="qopt" data-key="E">E. 工资率下降的收入效应</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CD</div><div class="q-exp"><p>析：工资率变动的规模效应与替代效应对劳动力需求的影响<strong>方向相同</strong>：工资率上升→劳动力成本上升→缩减生产规模（规模效应）＋资本相对便宜、增资本减用工（替代效应）→需求双双下降，C、D 正确；工资率下降则两者都使需求上升，A、B 错误。E 的"收入效应"是个人劳动力<strong>供给</strong>分析中的概念，不属于劳动力需求的影响机制，纯干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s3q2" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于其他条件一定的情况下，资本价格变化对劳动力需求的影响，说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 资本价格上升的替代效应会导致劳动力需求下降</button><button type="button" class="qopt" data-key="B">B. 资本价格下降的规模效应会导致劳动力需求上升</button><button type="button" class="qopt" data-key="C">C. 资本价格下降最终导致劳动力需求下降</button><button type="button" class="qopt" data-key="D">D. 资本价格下降最终导致劳动力需求上升</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：资本价格下降→企业总生产成本随之下降→刺激<strong>扩大生产规模</strong>→劳动力需求上升，B 正确。资本价格上升→资本变贵→企业倾向<strong>用劳动力替代资本</strong>，替代效应使需求<strong>上升</strong>而非下降，A 错误。资本价格变化的规模效应与替代效应<strong>方向相反</strong>，最终影响取决于哪种效应力量更大，不能笼统断言"最终上升/下降"，C、D 错误。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s3q3" data-answer="C" data-type="single"><span class="q-tag">2017·单选</span><div class="q-stem">某类劳动力的工资率为每小时 10 元时，某城市对这类劳动力的需求总量为 10 万小时。已知该市对这类劳动力的需求弹性为单位弹性，则当这种劳动力的工资率上涨到每小时 15 元时，该市对此类劳动力的需求总量会变成（　）万小时。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 2</button><button type="button" class="qopt" data-key="B">B. 4</button><button type="button" class="qopt" data-key="C">C. 5</button><button type="button" class="qopt" data-key="D">D. 15</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：工资变动率＝（15−10）÷10＝50%；单位弹性 → 需求量同幅度变动 50%。注意<strong>工资与需求方向相反</strong>（弹性为负）：10×50%＝5 万小时，10−5＝<strong>5 万小时</strong>，C 正确。易错点：忘掉方向相反算成 10＋5＝15（D 项陷阱）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s3q4" data-answer="D" data-type="single"><span class="q-tag">2014·单选</span><div class="q-stem">在其他条件不变的情况下，某国青年劳动力的工资率上涨 2% 导致老年劳动力的就业量下降 0.8%，这表明该国这两种劳动力之间存在（　）关系。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 替代</button><button type="button" class="qopt" data-key="B">B. 互补</button><button type="button" class="qopt" data-key="C">C. 总替代</button><button type="button" class="qopt" data-key="D">D. 总互补</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：交叉工资弹性＝−0.8%÷2%＝<strong>负值</strong> → 一种劳动力工资率提高使另一类劳动力需求量<strong>减少</strong> → <strong>总互补</strong>关系，D 正确。C 方向说反；A、B 是干扰——概念名是"<strong>总</strong>互补/<strong>总</strong>替代"（规模效应与替代效应加总后的净关系），不带"总"字的表述不准确。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s3q5" data-answer="D" data-type="single"><span class="q-tag">2018·单选</span><div class="q-stem">在其他条件一定的情况下，若（　），则劳动力需求的自身工资弹性就越小。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 劳动力所生产的最终产品的需求价格弹性越大</button><button type="button" class="qopt" data-key="B">B. 其他生产要素替代劳动力的难度越小</button><button type="button" class="qopt" data-key="C">C. 其他生产要素的供给弹性越大</button><button type="button" class="qopt" data-key="D">D. 劳动力成本在总成本中所占的比重越小</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：派生需求定理四条"越大弹性越大"——最终产品需求价格弹性越大（A）、要素替代越容易即难度越小（B）、其他要素供给弹性越大（C），都会使弹性<strong>越大</strong>，方向全反；劳动力成本占比越<strong>小</strong>，工资率变动对总成本的冲击越小，需求弹性越<strong>小</strong>，D 正确。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s3q6" data-answer="BCDE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">根据派生需求定理，会对劳动力需求弹性产生影响的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 企业使用的劳动力数量</button><button type="button" class="qopt" data-key="B">B. 其他要素替代劳动力的难易程度</button><button type="button" class="qopt" data-key="C">C. 其他生产要素的供给弹性</button><button type="button" class="qopt" data-key="D">D. 劳动力成本在总成本的比重</button><button type="button" class="qopt" data-key="E">E. 劳动力生产的最终产品的需求价格弹性</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：希克斯-马歇尔派生需求定理的四因素＝最终产品的需求价格弹性（E）、要素替代的难易程度（B）、其他生产要素的供给弹性（C）、产品总成本中劳动力成本所占比重（D）。"企业使用的劳动力数量"（A）是需求量本身，不是影响弹性的因素。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力11_劳动力市场理论_第2节_劳动力供给.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 劳动力供给</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力11_劳动力市场理论_第4节_劳动力市场均衡与非均衡.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 劳动力市场均衡与非均衡</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十二章 财政支出 · 财政支出规模及其增长趋势 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第二部分 财政</span><h1>第十二章 财政支出 · 财政支出规模及其增长趋势</h1><div class="subtitle">第 2 节 / 共 5 节 · 预计学习时长 50 分钟</div><div class="progress-bar"><div class="fill" style="width:40%"></div></div><div class="progress-text">本章进度 2/5</div><div class="sec-badge none" id="sec-badge" data-sec="b12s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>分清<strong>绝对规模</strong>与<strong>相对规模</strong>指标，记住趋势规律"<strong>中央稳定，其他都升</strong>" <span class="hot">高频考点</span></li>
+<li>背熟三个变化指标：<strong>增长率、弹性系数（率比率）、边际倾向（额对额）</strong>，会做计算题 <span class="must">必考</span> <span class="s3">★★★</span></li>
+<li>对号入座五大增长理论：<strong>瓦格纳、皮考克和魏斯曼、马斯格雷夫、鲍莫尔、公共选择学派</strong> <span class="must">必考</span> <span class="s3">★★★</span></li>
+<li>记住影响财政支出规模的四大因素：<strong>经济发展、政治、经济体制和经济制度、社会</strong> <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、衡量财政支出规模的指标 <span class="hot">高频考点</span></h2>
+<h3>1. 财政支出规模的含义</h3>
+<p><strong>财政支出规模</strong>是指一个<strong>财政年度内</strong>政府通过预算安排的<strong>财政支出总额</strong>。它是衡量一定时期内政府<strong>支配社会资源的多少</strong>、<strong>满足公共需要能力高低</strong>的重要指标，反映着政府对社会经济发展<strong>影响力的强弱</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>规模指标的双重身份：</strong><p>财政支出规模既是"政府今年总共花了多少钱"的总量概念，又是衡量<strong>政府支配社会资源多少</strong>的标尺——花得越多，政府对经济社会发展的影响力越强。</p></div></div>
+<div class="section"><h3>2. 绝对规模指标 <span class="hot">高频考点</span></h3>
+<p><strong>财政支出绝对规模</strong>是政府在预算年度的财政支出<strong>总和</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>要点</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算口径</td>
+<td>通常由<strong>按当年价格</strong>计算的财政支出加总来反映，<strong>也可以按不变价格</strong>反映</td>
+</tr>
+<tr>
+<td>趋势</td>
+<td>财政支出的绝对规模总量<strong>不断增长</strong>——这是由<strong>经济总量的不断增长</strong>所决定的</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>绝对规模不是&quot;只能按当年价格&quot;：</strong><p>绝对规模既能按<strong>当年价格</strong>算，也能按<strong>不变价格</strong>算。选择题里"绝对规模通常只能按当年价格计算"是<strong>错误</strong>说法——"只能"二字太绝对。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>同样是"今年财政支出 25 万亿"：按今年的市场价格算出来的是当年价格口径；把物价变动剔除掉、和过去某年可比的算法则是不变价格口径。两条路都通，趋势都指向"总量不断增长"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 绝对规模口诀</div><p><strong>"总和不断涨，根子在总量"</strong>——绝对规模＝预算年度支出总和；总量不断增长由经济总量的不断增长决定。</p></div></div>
+<div class="section"><h3>3. 相对规模指标 <span class="s3">★★★</span></h3>
+<p>财政支出的相对规模常用财政支出的规模<strong>与其他经济变量的关系</strong>来反映，我国常用的测量方法有两种：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>反映什么</th>
+<th>趋势规律</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>当年财政支出占当年<strong>国内生产总值</strong>的比重</td>
+<td><strong>政府干预经济的程度</strong></td>
+<td><strong>不断上升</strong></td>
+</tr>
+<tr>
+<td>当年<strong>中央</strong>财政支出占<strong>全国</strong>财政支出的比重</td>
+<td><strong>中央政府对地方政府的控制程度</strong></td>
+<td><strong>相对稳定</strong>（取决于国家制度的安排）</td>
+</tr>
+<tr>
+<td><strong>人均</strong>财政支出指标</td>
+<td>—</td>
+<td>一般也呈现<strong>不断增长</strong>的趋势</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两个比重的分工：</strong><p><strong>占 GDP 比重</strong>管"政府插手经济有多深"（干预程度）；<strong>中央占全国比重</strong>管"中央攥得住地方吗"（控制程度）。趋势别记反：GDP 比重、人均支出都往上涨，唯独中央占比稳住不动——它取决于国家制度的安排。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某年全国财政支出 25 万亿、GDP 100 万亿→占 GDP 比重 25%（衡量政府干预经济的程度）；其中中央本级支出 5 万亿、占全国的 20%（衡量中央对地方的控制程度）。几年后 GDP 占比升到 28%——在涨；中央占比仍在 20% 左右——相对稳定。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 相对规模口诀</div><p><strong>"占 GDP 管干预，中央占比管控制；中央稳定，其他都升"</strong>——"其他"包括财政支出占 GDP 比重和人均财政支出指标，都在不断增长。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：两个&quot;反映&quot;别串门</div><p>"反映政府干预经济的程度"只能配<strong>财政支出占 GDP 的比重</strong>；"反映中央对地方的控制程度"只能配<strong>中央财政支出占全国财政支出的比重</strong>。讲义例题的干扰项就是把后者说成"反映政府干预经济的程度"。另外"绝对规模只能按当年价格计算"也是错的——还可以按不变价格。</p></div></div>
+<div class="section"><h2>二、衡量财政支出规模变化的指标 <span class="s3">★★★</span> <span class="must">必考</span></h2>
+<h3>1. 财政支出增长率</h3>
+<p>当年财政支出<strong>比上年同期</strong>财政支出增长的<strong>百分比</strong>，可以说明财政支出的增长趋势：</p>
+<p><strong>财政支出增长率 ΔG(%) ＝ ΔG ÷ G(n−1) ＝ [G(n) − G(n−1)] ÷ G(n−1)</strong></p>
+<p>（G(n) 为当年财政支出，G(n−1) 为上年财政支出——增量除以<strong>上年</strong>的底数。）</p>
+<h3>2. 财政支出增长的弹性系数</h3>
+<p>财政支出<strong>增长率</strong>与国内生产总值<strong>增长率</strong>之比：</p>
+<p><strong>弹性系数 Eg ＝ ΔG(%) ÷ ΔGDP(%)</strong></p>
+<p>弹性系数<strong>大于 1</strong>，表明财政支出增长速度快于国内生产总值增长速度；小于 1 则相反。</p>
+<h3>3. 财政支出增长的边际倾向</h3>
+<p>表明财政支出<strong>增长额</strong>与国内生产总值<strong>增长额</strong>之间的关系，即国内生产总值每增加一个单位时财政支出增加多少，或财政支出增长额占国内生产总值增长额的比例：</p>
+<p><strong>边际倾向 MGP ＝ ΔG ÷ ΔGDP</strong></p></div>
+<div class="section"><div class="keypoint"><strong>三个指标一张脸：</strong><p>增长率看"支出自己涨多快"；弹性系数看"支出和 GDP <strong>谁涨得快</strong>"（率的比）；边际倾向看"GDP 多长一块钱，支出跟着长几毛"（额的比）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某国 2020 年 GDP 100 亿元、财政支出 10 亿元；2021 年 GDP 110 亿元、财政支出 11 亿元。
+第一步，财政支出增长率＝(11−10)÷10＝<strong>10%</strong>（增量除以<strong>上年</strong>支出）；
+第二步，GDP 增长率＝(110−100)÷100＝<strong>10%</strong>；
+第三步，弹性系数＝10%÷10%＝<strong>1</strong>（率比率）；
+第四步，边际倾向＝(11−10)÷(110−100)＝1÷10＝<strong>0.1，即 10%</strong>（额对额）。
+易错提醒：边际倾向是 10%（0.1），不是 1.1——把"绝对增加 1 亿元"当成"相对变化 1.1 倍"是常见错法；增长率也不是 9.09%（那是误拿 11 当分母算的）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三指标公式口诀</div><p><strong>"弹性率比率，边际额对额"</strong>——弹性系数＝增长率÷增长率（两个百分率相除）；边际倾向＝增长额÷增长额（两个绝对额相除）。增长率最基础：今年减去年，再除以<strong>去年</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 弹性系数的方向判断</div><p>弹性系数＞1 → 财政支出长得比 GDP 快；＝1 → 同速；＜1 → 长得比 GDP 慢。2025 年真题问"财政支出增长速度快于 GDP 增长速度"表明什么，答案就是<strong>弹性系数大于 1</strong>——负数区间（大于−1 且小于 0、小于−1）都是凑数的干扰项。</p></div></div>
+<div class="section"><h2>三、财政支出规模增长的理论解释 <span class="s3">★★★</span> <span class="must">必考</span></h2>
+<p>五大理论对号入座（本章重难点，人物—理论—关键词三对应）：</p>
+<table>
+<thead>
+<tr>
+<th>理论（人物）</th>
+<th>核心内容</th>
+<th>关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>瓦格纳法则——"政府活动扩张法则"</strong></td>
+<td>伴随着<strong>工业化</strong>进程，社会和经济的发展<strong>增加了对政府活动的需求</strong>；工业化引起市场扩张，市场当事人关系更复杂、冲突矛盾增加→产生对<strong>商业法律和契约</strong>的需要，需要政府维护社会经济正常秩序、<strong>纠正外部效应</strong>等市场失灵对资源配置效率的负面影响；文化、教育、福利等公共支出项目的增长都需要政府<strong>增加公共支出</strong></td>
+<td>工业化→政府活动扩张</td>
+</tr>
+<tr>
+<td><strong>皮考克和魏斯曼——"梯度渐进增长理论"</strong></td>
+<td>公共支出增长是<strong>"阶梯式的""非连续性的"</strong>：正常年份随税收收入增长<strong>逐渐上升</strong>；战争、危机、自然灾害等<strong>突变</strong>期公共支出<strong>急剧上升</strong>，突变期结束后有所下降，但<strong>不会低于原有水平</strong>。<strong>内在原因</strong>：<strong>公众可容忍税收水平的提高</strong>是公共支出增长的内在原因，公众可容忍的税收负担是财政支出的<strong>最高限度</strong>；<strong>外在原因</strong>：<strong>社会动荡</strong>使公众所能接受的税收水平提高，政府支出的预算约束随之提高，财政支出在渐进上升中出现<strong>较大幅度的增长</strong></td>
+<td>阶梯式、内外原因</td>
+</tr>
+<tr>
+<td><strong>马斯格雷夫——"经济发展阶段增长理论"</strong></td>
+<td>按经济发展<strong>三个阶段</strong>看政府投资比重：<strong>初期</strong>——基础设施等政府投资<strong>比重较大</strong>；<strong>中期</strong>——政府投资占总投资比重<strong>相对下降</strong>；<strong>成熟</strong>——人们要求更舒适的环境、更发达的交通、更快捷的通信、更良好的教育，政府投资比重<strong>又进一步提高</strong>；同时市场失灵越来越突出，要求政府通过立法、增加投资、提供服务来协调处理冲突矛盾，财政支出进一步增长</td>
+<td>初期大→中期降→成熟又升</td>
+</tr>
+<tr>
+<td><strong>鲍莫尔——"非均衡增长理论"</strong></td>
+<td>将国民经济部门分为<strong>进步部门</strong>（生产率不断提高，<strong>技术</strong>起决定作用）与<strong>非进步部门</strong>（生产率提高缓慢，<strong>劳动</strong>起决定作用）；<strong>政府部门属于人力密集型部门，又是生产率偏低的部门</strong>——技术进步贡献少；要维持两个部门均衡增长，政府部门的支出<strong>只能增加</strong>，于是政府部门规模必然越来越大、支出必然快速增长</td>
+<td>进步靠技术、非进步靠劳动</td>
+</tr>
+<tr>
+<td><strong>公共选择学派的解释</strong></td>
+<td>从<strong>选民、政治家、官僚</strong>行为及民主制度等方面理解政府支出规模：①选民有<strong>"财政幻觉"</strong>——只关心扩大公共支出带来的好处，忽视税负可能同时增长，主动投票支持更大的支出规模；②<strong>政治家</strong>为获得公众拥护和赢得选票，倾向以<strong>更大的财政支出</strong>作为争取选民的手段；③<strong>官僚机构</strong>掌握更精确的成本信息，出于自身利益提出<strong>规模较大的预算</strong>供代议机关表决，以最大化部门和个人权力与利益；④任何具体事务上，<strong>公共利益都很难界定</strong></td>
+<td>财政幻觉、拉选票、官僚扩预算</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>五个人名一眼认：</strong><p><strong>瓦格纳</strong>＝工业化需求（德国的社会政策学派）；<strong>皮考克和魏斯曼</strong>＝阶梯＋税收容忍（内在原因）；<strong>马斯格雷夫</strong>＝经济发展阶段（初、中、成熟三段）；<strong>鲍莫尔</strong>＝进步/非进步部门（技术 vs 劳动）；<strong>公共选择</strong>＝选民幻觉＋政客拉票＋官僚扩权。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>平时物业费随物价一年年小涨（渐进上升）；台风把楼吹坏了，全楼凑钱大修（突变期急剧上升）；修完后物业费停在比原来高的档位上不再回落（不会低于原有水平）——这就是皮考克和魏斯曼"梯度渐进增长"的画面，而"业主们能忍受物业费涨到多少"就是财政支出的最高限度。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 五大理论对号口诀</div><p><strong>"瓦格纳工业化，皮氏阶梯税容忍，马斯格雷夫三阶段，鲍莫尔技术分两部门，公共选择画饼拉选票"</strong>。
+防反三连：①"公众可容忍税收水平提高"是<strong>皮考克</strong>的<strong>内在</strong>原因——写成"外在原因"必错；②"财政幻觉"是<strong>公共选择</strong>学派的话，不是瓦格纳的；③"进步/非进步部门"是<strong>鲍莫尔</strong>的，马斯格雷夫分的是<strong>经济发展阶段</strong>。</p></div></div>
+<div class="section"><h2>四、影响财政支出规模的主要因素 <span class="hot">高频考点</span></h2>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>具体内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>经济发展因素</strong></td>
+<td>经济发展使<strong>社会财富不断增加</strong>→财政收入不断增长，为财政支出规模扩大提供可能：①税率不变时，<strong>间接税的税源、税基不断扩大</strong>；②经济效益和国民收入不断提高，具有<strong>累进税</strong>性质的所得税增长一般<strong>快于经济发展水平</strong>；③财政支出随财政收入自然增长，政府<strong>举借债务</strong>扩大支出规模也成为可能</td>
+</tr>
+<tr>
+<td><strong>政治因素</strong></td>
+<td>①社会政治局面的<strong>稳定状况</strong>；②<strong>政治体制结构和政府行政效率</strong>；③<strong>政府活动范围</strong></td>
+</tr>
+<tr>
+<td><strong>经济体制和经济制度因素</strong></td>
+<td><strong>计划经济体制</strong>下政府职能范围<strong>大而广</strong>→财政支出占 GDP 比重较高；社会保障实行<strong>高标准、高福利</strong>制度→占比也必然相对较高</td>
+</tr>
+<tr>
+<td><strong>社会因素</strong></td>
+<td><strong>人口、教育、卫生、社会救济、城乡发展差距</strong>等各种社会性因素</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>计划体制与高福利都推高占比：</strong><p>同一逻辑的两处落点：<strong>体制</strong>层面，计划经济下政府什么都管→支出占比高；<strong>制度</strong>层面，高福利、高标准社保→支出占比高。考单选常考"计划经济体制下财政支出占比"的方向判断——高，不会低。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>计划经济体制国家：政府管生产、管分配、管福利，财政支出占 GDP 的比重自然高；高福利国家：医疗、养老全兜底，占比同样居高。而政局动荡、政府频繁更替的国家，支出规模与结构也会大起大落——这就是体制制度因素与政治因素的现实中对照。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四因素口诀</div><p><strong>"经济政治社会，加一条体制制度"</strong>——四大因素：经济发展、政治、经济体制和经济制度、社会。多选题常拿"科学技术"当干扰项，四大因素里没有它。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>规模指标</strong>：绝对规模（预算年度支出总和；当年价/不变价皆可；总量不断增长，由经济总量增长决定）＋相对规模（占 GDP 比重→干预程度，不断上升；中央占全国比重→控制程度，相对稳定；人均支出也不断增长）</li>
+<li><strong>变化指标</strong>：增长率＝ΔG÷G(上年)；弹性系数＝增长率÷增长率（率比率，＞1 表示支出快于 GDP）；边际倾向＝增长额÷增长额（额对额）</li>
+<li><strong>五大理论</strong>：瓦格纳（工业化→政府活动扩张）；皮考克魏斯曼（阶梯渐进；内在＝税容忍、最高限度；外在＝社会动荡）；马斯格雷夫（三阶段：初期大→中期降→成熟又升）；鲍莫尔（进步部门靠技术、非进步靠劳动、政府部门支出只能增）；公共选择（财政幻觉、政治家拉票、官僚扩预算、公共利益难界定）</li>
+<li><strong>四因素</strong>：经济发展、政治、经济体制和经济制度、社会（"经济政治社会＋体制制度"）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b12s2q1" data-answer="BE" data-type="multi"><span class="q-tag">讲义例3·多选</span><div class="q-stem">以下对衡量财政支出规模的指标说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 分为绝对规模指标和相对规模指标</button><button type="button" class="qopt" data-key="B">B. 中央财政支出占全国财政支出的比重，反映政府干预经济的程度</button><button type="button" class="qopt" data-key="C">C. 人均财政支出指标一般也呈现不断增长的趋势</button><button type="button" class="qopt" data-key="D">D. 中央财政支出占全国财政支出的比重是相对稳定的</button><button type="button" class="qopt" data-key="E">E. 绝对规模通常只能按当年价格计算</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BE</div><div class="q-exp"><p>析：B 错——中央财政支出占全国财政支出的比重反映<strong>中央政府对地方政府的控制程度</strong>；反映政府干预经济程度的是<strong>财政支出占 GDP 的比重</strong>。E 错——绝对规模通常由按当年价格计算的财政支出加总反映，<strong>也可以按不变价格反映</strong>，"只能按当年价格"太绝对。A、C、D 均为正确表述。
+:::</p></div></details></div><div class="quiz-item" data-qid="b12s2q2" data-answer="ABC" data-type="multi"><span class="q-tag">讲义例4·多选</span><div class="q-stem">某国 2020 年 GDP 是 100 亿元，财政支出为 10 亿元；2021 年 GDP 是 110 亿元，财政支出 11 亿元，下列说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 财政支出弹性系数是 1</button><button type="button" class="qopt" data-key="B">B. 财政支出增长率是 10%</button><button type="button" class="qopt" data-key="C">C. 财政支出边际倾向是 10%</button><button type="button" class="qopt" data-key="D">D. 财政支出增长率是 9.09%</button><button type="button" class="qopt" data-key="E">E. 财政支出边际倾向是 1.1</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：财政支出增长率＝(11−10)÷10＝10%，B 对、D 错（9.09% 是误拿 11÷110−1 算出来的）；GDP 增长率＝(110−100)÷100＝10%，弹性系数＝10%÷10%＝1，A 对（率比率）；边际倾向＝增长额之比＝(11−10)÷(110−100)＝0.1＝10%，C 对、E 错（1.1 是把"额对额"算成倍数关系的错法）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b12s2q3" data-answer="B" data-type="single"><span class="q-tag">讲义例5·多选</span><div class="q-stem">在财政支出规模增长的理论解释中，瓦格纳提出的理论是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 公众可以忍受税收水平的提高，是公共支出增长的外在原因</button><button type="button" class="qopt" data-key="B">B. 伴随着工业化的进程，社会和经济发展增加了对政府活动的需求</button><button type="button" class="qopt" data-key="C">C. 选民在进行财政事务决策时，通常具有&quot;财政幻觉&quot;</button><button type="button" class="qopt" data-key="D">D. 进步部门和非进步部门的差异来自技术和劳动发挥的作用不同</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：瓦格纳法则（政府活动扩张法则）的关键词就是"<strong>工业化→对政府活动的需求增加</strong>"，B 对。A 错两处：税收容忍是<strong>皮考克</strong>的观点，且属<strong>内在原因</strong>而非外在原因；C 是公共选择学派的观点；D 是鲍莫尔非均衡增长理论的内容。
+:::</p></div></details></div><div class="quiz-item" data-qid="b12s2q4" data-answer="B" data-type="single"><span class="q-tag">讲义例6·单选</span><div class="q-stem">将国民经济部门区分为生产率不断提高的进步部门和生产率提高缓慢的非进步部门两大类别的财政支出规模增长理论是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 瓦格纳法则——政府活动扩张法则</button><button type="button" class="qopt" data-key="B">B. 鲍莫尔——非均衡增长理论</button><button type="button" class="qopt" data-key="C">C. 皮考克和魏斯曼——梯度渐进增长理论</button><button type="button" class="qopt" data-key="D">D. 马斯格雷夫——经济发展阶段增长理论</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析："进步部门/非进步部门"二分法是<strong>鲍莫尔非均衡增长理论</strong>的标志——进步部门技术起决定作用，非进步部门劳动起决定作用，政府部门人力密集且生产率偏低，支出只能增加。A 看"工业化→需求增加"，C 看"阶梯式增长＋税收容忍"，D 看"经济发展三阶段"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b12s2q5" data-answer="ACDE" data-type="multi"><span class="q-tag">讲义例7·多选</span><div class="q-stem">影响财政支出规模的主要因素，包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 经济发展因素</button><button type="button" class="qopt" data-key="B">B. 科学技术</button><button type="button" class="qopt" data-key="C">C. 政治因素</button><button type="button" class="qopt" data-key="D">D. 经济体制和经济制度因素</button><button type="button" class="qopt" data-key="E">E. 社会因素</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACDE</div><div class="q-exp"><p>析：四大因素＝<strong>经济发展、政治、经济体制和经济制度、社会</strong>（口诀"经济政治社会，加一条体制制度"）。"科学技术"（B）不在四大因素之列，是干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b12s2q6" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">财政支出增长速度快于国内生产总值增长速度，表明财政支出增长的弹性系数（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 大于−1 且小于 0</button><button type="button" class="qopt" data-key="B">B. 小于−1</button><button type="button" class="qopt" data-key="C">C. 大于 0 且小于 1</button><button type="button" class="qopt" data-key="D">D. 大于 1</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：弹性系数＝财政支出增长率÷GDP 增长率（"率比率"）。支出涨得比 GDP 快→分子大于分母→商<strong>大于 1</strong>。C（大于 0 且小于 1）表示支出增长慢于 GDP；A、B 的负数区间在正常增长情形下不成立，纯属凑数。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础12_财政支出_第1节_财政支出及其分类.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 财政支出及其分类</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础12_财政支出_第3节_财政支出效益分析.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 财政支出效益分析</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

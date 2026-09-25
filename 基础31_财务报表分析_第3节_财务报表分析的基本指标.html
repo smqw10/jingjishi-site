@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三十一章 财务报表分析 · 财务报表分析的基本指标 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第五部分 会计</span><h1>第三十一章 财务报表分析 · 财务报表分析的基本指标</h1><div class="subtitle">第 3 节 / 共 3 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 3/3</div><div class="sec-badge none" id="sec-badge" data-sec="b31s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>报出短期偿债三比率（<strong>流动、速动、现金</strong>）与长期偿债三指标（<strong>资产负债率、产权比率、已获利息倍数</strong>），判读方向不弄反 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>记住速动资产＝<strong>流动资产−存货</strong>、已获利息倍数＝<strong>（利润总额＋利息费用）÷利息费用</strong>，会分步演算 <span class="hot">高频考点</span></li>
+<li>四个周转率分子分母不配错：<strong>应收对收入、存货对成本</strong>；次多天少＝周转快 <span class="s3">★★★</span></li>
+<li>八个盈利能力指标"分子几乎都是净利润、区别在分母"，会算市盈率、资本保值增值率 <span class="must">必考</span></li>
+<li>市盈率判读一表清：<strong>5～20 正常、超过 20 险、5 以下凉</strong> <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、偿债能力分析 <span class="s3">★★★</span> <span class="hot">高频考点</span></h2>
+<h3>1. 短期偿债能力：三个比率</h3>
+<p><strong>偿债能力</strong>是指企业<strong>偿还到期债务的能力</strong>，能否及时偿还到期债务，是反映企业财务状况好坏的<strong>重要标志</strong>。企业偿债能力包括两个方面：<strong>短期偿债能力</strong>——企业以<strong>流动资产偿还流动负债</strong>的能力，反映企业偿付<strong>日常到期债务</strong>的实力；<strong>长期偿债能力</strong>——企业偿还<strong>长期负债的本金和利息</strong>的能力。</p>
+<p>短期偿债能力看三个比率，分母全是<strong>流动负债</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>财务比率</th>
+<th>定义</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>流动比率</strong></td>
+<td>流动资产÷流动负债</td>
+<td>衡量短期债务清偿能力<strong>最常用</strong>的比率，是衡量企业<strong>短期风险</strong>的指标；<strong>越高</strong>，资产流动性越大，短期偿债能力越强；公认标准 <strong>2:1</strong></td>
+</tr>
+<tr>
+<td><strong>速动比率</strong>（又称酸性实验比率）</td>
+<td>速动资产÷流动负债</td>
+<td>反映企业<strong>短期内可变现资产</strong>偿还<strong>短期内到期债务</strong>的能力；<strong>速动资产＝流动资产−存货</strong>，包括货币资金、短期投资和应收账款等；<strong>存货是流动资产中流动性最差的</strong>；一般认为维持在 <strong>1:1 左右</strong>较为理想</td>
+</tr>
+<tr>
+<td><strong>现金比率</strong></td>
+<td>现金÷流动负债（现金指<strong>现金及现金等价物</strong>）</td>
+<td>反映企业的<strong>即刻变现能力</strong>，显示企业<strong>立即</strong>偿还到期债务的能力</td>
+</tr>
+</tbody>
+</table>
+<p>三个比率的分子一层层"提纯"：流动资产（含存货）⊃ 速动资产（剔掉存货）⊃ 现金及现金等价物，分母不变，所以数值大小永远是：</p>
+<p><strong>流动比率 ＞ 速动比率 ＞ 现金比率</strong></p></div>
+<div class="section"><div class="keypoint"><strong>速动资产为什么减存货：</strong><p>速动资产是企业在<strong>短期内可变现</strong>的资产，而<strong>存货是企业流动资产中流动性最差的一种</strong>（先要卖掉、可能压价、还可能卖不出去），所以算"速"字辈的资产时第一个把它剔掉——速动资产＝流动资产−存货。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>同一企业同一时点：流动比率 2.0、速动比率 1.2、现金比率 0.4——分子从"流动资产"缩到"速动资产"再缩到"现金"，分母都是流动负债。若某选项说"现金比率大于流动比率"，直接判错——<strong>现金是流动资产的一部分，比率不可能反超</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三比率大小口诀</div><p><strong>"流动含存货，速动去存货，现金只剩钱"</strong>——分子越来越"纯"，数值越来越小：流动＞速动＞现金。方向对照题先想"谁剔掉了存货"，别背反。</p></div></div>
+<div class="section"><h3>2. 长期偿债能力：三个指标</h3>
+<table>
+<thead>
+<tr>
+<th>财务比率</th>
+<th>定义</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>资产负债率</strong>（也称负债比率、举债经营比率）</td>
+<td>负债总额÷<strong>全部资产总额</strong></td>
+<td>衡量企业利用<strong>债权人提供资金</strong>进行经营活动的能力，反映<strong>债权人发放贷款的安全程度</strong>；应<strong>小于 100%</strong>；较低（<strong>50% 以下</strong>）说明企业有较好的偿债能力和负债经营能力</td>
+</tr>
+<tr>
+<td><strong>产权比率</strong>（也称负债对所有者权益的比率）</td>
+<td>负债总额÷<strong>所有者权益总额</strong></td>
+<td>表明由<strong>债权人</strong>提供的和由<strong>投资者</strong>提供的资金来源的<strong>相对关系</strong>，反映企业<strong>基本财务结构</strong>是否稳定；<strong>越低</strong>，长期偿债能力越强，债权人权益的保障程度越高，承担的风险越小</td>
+</tr>
+<tr>
+<td><strong>已获利息倍数</strong>（又称利息保障倍数）</td>
+<td>息税前利润÷利息费用＝（<strong>利润总额＋利息费用</strong>）÷利息费用</td>
+<td>反映企业用<strong>经营所得支付债务利息</strong>的能力，衡量<strong>盈利能力对债务偿付的保证程度</strong>；<strong>至少应等于 1</strong>，越大说明支付债务利息的能力越强</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>已获利息倍数的公式变形：</strong><p>息税前利润＝<strong>利润总额＋利息费用</strong>（利息本身就是从利润里扣掉的费用，算"付息能力"时要把它加回去）。所以整个公式只用到两个指标：<strong>息税前利润</strong>和<strong>利息费用</strong>——考"用到哪些指标"就认这两个。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某企业当年利润总额 400 万元，利息费用 100 万元：
+- 第一步，还原息税前利润：400＋100＝<strong>500</strong>（万元）；
+- 第二步，相除：500÷100＝<strong>5</strong>；
+- 判读：5＞1，支付债务利息的能力较强。若直接用 400÷100＝4，就掉进了"忘记加回利息"的坑。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 偿债指标总口诀</div><p><strong>"短期流速现，长期负产权已利"</strong>——短期看流动比率、速动比率、现金比率；长期看资产负债率、产权比率、已获利息倍数。判读方向再配一句："<strong>流动向上、产权向下、已利保一</strong>"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：判读方向大乱斗</div><ul>
+<li><strong>流动比率</strong>：越高短期偿债能力越强——"高"好（公认 2:1）；</li>
+<li><strong>速动比率</strong>：1:1 左右理想；</li>
+<li><strong>资产负债率</strong>：应小于 100%，50% 以下较好——"低"好；</li>
+<li><strong>产权比率</strong>：越低长期偿债能力越强——也是"低"好；</li>
+<li><strong>已获利息倍数</strong>：至少等于 1，越大越强——"高"好；</li>
+<li>最容易反的是<strong>产权比率</strong>（低好）和<strong>流动比率</strong>（高好）撞在一起考；另外<strong>市盈率</strong>是盈利能力指标，别算进偿债能力。</li>
+</ul></div></div>
+<div class="section"><h2>二、营运能力分析 <span class="hot">高频考点</span></h2>
+<h3>3. 四个周转率指标</h3>
+<p><strong>营运能力</strong>是指通过企业<strong>生产经营资金周转速度</strong>等有关指标所反映出来的企业<strong>资金利用的效率</strong>，它表明企业管理人员<strong>经营管理、运用资金的能力</strong>。企业生产经营资金周转的速度<strong>越快</strong>，表明企业资金利用的效果越好、效率越高，企业管理人员的经营能力越强。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>公式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>应收账款周转率</strong></td>
+<td>周转次数＝<strong>营业收入净额</strong>÷应收账款平均余额；周转天数＝360÷周转次数</td>
+<td>营业收入净额＝营业收入−<strong>销售退回、折让和折扣</strong>；应收账款平均余额＝（期初＋期末）÷2，<strong>不扣除坏账准备</strong>；"360"也可用"365"</td>
+</tr>
+<tr>
+<td><strong>存货周转率</strong></td>
+<td>周转次数＝<strong>营业成本</strong>÷平均存货；周转天数＝360÷周转次数</td>
+<td>平均存货＝（期初存货＋期末存货）÷2；周转快，企业实现的利润会相应增加，周转缓慢往往造成利润下降</td>
+</tr>
+<tr>
+<td><strong>流动资产周转率</strong></td>
+<td><strong>营业收入净额</strong>÷流动资产平均余额</td>
+<td>反映企业<strong>流动资产</strong>的利用效率</td>
+</tr>
+<tr>
+<td><strong>总资产周转率</strong></td>
+<td><strong>营业收入净额</strong>÷总资产平均余额</td>
+<td>反映企业<strong>全部资产</strong>的使用效率</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>分子分母配对是全章最大的坑：</strong><p><strong>应收账款周转率的分子是营业收入净额，存货周转率的分子是营业成本</strong>——卖货收钱看"收入"，压着货看"成本"；流动资产、总资产周转率的分子也都是营业收入净额。周转天数与周转次数互为倒数（天数＝360÷次数）：<strong>次数多、天数少＝周转快</strong>——应收账款周转快说明企业<strong>信用销售严格</strong>，反之信用销售放宽。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某企业全年营业收入 800 万元，当年销售退回、折让和折扣共 80 万元，应收账款期初余额 70 万元、期末余额 50 万元：
+- 第一步，算营业收入净额：800−80＝<strong>720</strong>（万元）；
+- 第二步，算应收账款平均余额：（70＋50）÷2＝<strong>60</strong>（万元）；
+- 第三步，周转次数：720÷60＝<strong>12 次</strong>；
+- 第四步，周转天数：360÷12＝<strong>30 天</strong>（即应收账款账龄 30 天）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 营运能力口诀</div><p><strong>"应收对收入，存货对成本；次多天少转得快"</strong>——四个周转率里只有存货周转率的分子是营业成本，其余都用营业收入净额。见到"周转快慢"的判读，一律"次多、天少"为快。</p></div></div>
+<div class="section"><h2>三、盈利能力分析 <span class="s3">★★★</span> <span class="hot">高频考点</span></h2>
+<h3>4. 八个盈利能力指标</h3>
+<p><strong>盈利能力</strong>是指企业<strong>赚取利润的能力</strong>，盈利能力分析就是要分析企业<strong>当期或未来盈利能力的大小</strong>。八个指标一张表看全：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>公式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>营业利润率</strong></td>
+<td>营业利润÷营业收入</td>
+<td>营业收入中<strong>不包括</strong>和正常经营没有直接关系的其他利润（如<strong>投资收益</strong>）；越大，经营活动的盈利能力越强</td>
+</tr>
+<tr>
+<td><strong>营业净利润率</strong></td>
+<td>净利润÷<strong>营业收入净额</strong></td>
+<td>净利润＝利润总额−<strong>所得税额</strong>；影响因素主要有商品质量、成本、价格、销售数量、期间费用及税金等</td>
+</tr>
+<tr>
+<td><strong>资本收益率</strong></td>
+<td>净利润÷<strong>实收资本（或股本）</strong></td>
+<td>实收资本有变动时用<strong>平均数</strong>；影响因素还包括企业<strong>负债经营的规模</strong>；越高，对股份有限公司来说意味着<strong>股票升值</strong></td>
+</tr>
+<tr>
+<td><strong>净资产收益率</strong>（也称所有者权益报酬率、净资产利润率）</td>
+<td>净利润÷<strong>所有者权益平均余额</strong></td>
+<td>反映<strong>所有者对企业投资部分</strong>的盈利能力；是我国上市公司<strong>对外必须披露</strong>的信息内容，也是决定能否<strong>配股再融资</strong>的重要依据</td>
+</tr>
+<tr>
+<td><strong>资产净利润率</strong>（也称资产收益率）</td>
+<td>净利润÷<strong>平均资产总额</strong>＝净利润÷[（期初＋期末资产总额）÷2]</td>
+<td>与净利润成<strong>正比</strong>，与资产平均总额成<strong>反比</strong></td>
+</tr>
+<tr>
+<td><strong>普通股每股收益</strong></td>
+<td>（净利润−<strong>优先股股利</strong>）÷发行在外的普通股股数</td>
+<td>影响因素有两个：企业的<strong>获利水平</strong>＋企业的<strong>股利发放政策</strong></td>
+</tr>
+<tr>
+<td><strong>市盈率</strong></td>
+<td>普通股每股<strong>市场价格</strong>÷普通股<strong>每股收益</strong></td>
+<td>见下个知识点</td>
+</tr>
+<tr>
+<td><strong>资本保值增值率</strong></td>
+<td><strong>期末</strong>所有者权益÷<strong>期初</strong>所有者权益</td>
+<td>根据<strong>资本保全原则</strong>设计，评价企业经济效益状况的<strong>辅助指标</strong>；越高，资本保全状况越好、所有者权益增长越快、债权人权益越有保障、发展后劲越强</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>净资产收益率的特殊地位：</strong><p>八个指标里要特别记住<strong>净资产收益率</strong>的双重身份：既是上市公司<strong>对外必须披露</strong>的信息内容，又是决定上市公司能否<strong>配股进行再融资</strong>的重要依据——这两句是它的"专属考点"，别安到别的指标头上。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某企业 2023 年末资产总额 2000 万元、负债总额 1200 万元；2024 年末资产总额 2600 万元、负债总额 1600 万元，求 2024 年资本保值增值率：
+- 第一步，还原所有者权益（资产＝负债＋所有者权益）：期初＝2000−1200＝<strong>800</strong>（万元），期末＝2600−1600＝<strong>1000</strong>（万元）；
+- 第二步，相除：1000÷800＝<strong>125%</strong>；
+- 大于 100%，资本增值了。审题关键：先从资产负债数据里<strong>抠出所有者权益</strong>，别拿资产总额直接除。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 盈利指标分母口诀</div><p><strong>"营业对收入，资本对实收，净资产对权益，资产对总额"</strong>——四个"××率"的分子几乎都是净利润，区别全在分母：营业收入净额、实收资本、所有者权益平均余额、平均资产总额。每股收益的分子要<strong>减优先股股利</strong>；资本保值增值率是<strong>期末÷期初</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易混三兄弟：资本收益率、净资产收益率、资产净利润率</div><p>三个都是"净利润÷分母"，只差分母：÷<strong>实收资本</strong>→资本收益率；÷<strong>所有者权益平均余额</strong>→净资产收益率；÷<strong>平均资产总额</strong>→资产净利润率。另记两个坑：每股收益的分子要<strong>减优先股股利</strong>（无优先股才不减）；<strong>营业利润率</strong>的口径里不含投资收益这类与正常经营无直接关系的利润——这几个点最常出计算题。</p></div></div>
+<div class="section"><h3>5. 市盈率的判读 <span class="hot">高频考点</span> <span class="must">必考</span></h3>
+<p><strong>市盈率</strong>＝普通股<strong>每股市价</strong>÷普通股<strong>每股收益</strong>。市盈率高，表明投资者对公司的<strong>未来充满信心</strong>，愿意为每 1 元盈余多付货币购买；市盈率低，表明投资者对公司的<strong>前景缺乏信心</strong>，不愿为每 1 元盈余多付货币。</p>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>判读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市盈率在 <strong>5～20</strong> 之间</td>
+<td><strong>正常</strong></td>
+</tr>
+<tr>
+<td>市盈率<strong>超过 20</strong></td>
+<td>不正常，很可能是<strong>股价下跌的前兆</strong>，风险很大（市价被不正常因素哄抬到不应有的高度时出现）</td>
+</tr>
+<tr>
+<td>市盈率在 <strong>5 以下</strong></td>
+<td>股票<strong>前景黯淡</strong>，持有这种股票的风险比较大</td>
+</tr>
+<tr>
+<td>预期将发生<strong>通货膨胀或提高利率</strong></td>
+<td>市盈率会<strong>普遍下降</strong></td>
+</tr>
+<tr>
+<td>预期公司<strong>利润将增长</strong></td>
+<td>市盈率通常会<strong>上升</strong></td>
+</tr>
+<tr>
+<td><strong>债务比重大的</strong>公司</td>
+<td>股票市盈率通常<strong>较低</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>&quot;高&quot;不是一味好：</strong><p>5～20 之内偏高说明投资者信心足；但<strong>超过 20</strong> 就过了头——很可能是股价下跌的前兆，风险很大。同理"低"也不是一味坏：5 以下才是真"凉"。区间判断题先背 <strong>5～20</strong> 这个正常带。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>正向：某公司普通股每股市价 30 元，每股收益 2 元，则市盈率＝30÷2＝<strong>15</strong>，落在 5～20 的正常区间。
+反向：已知市盈率 25、每股市价 24 元，则每股收益＝24÷25＝<strong>0.96 元</strong>——公式是"市价÷收益"，求哪个量就把哪个量挪到等号另一边。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 市盈率口诀</div><p><strong>"五到二十算正常，过高是险过低凉；通胀加息往下掉，利润看涨往上飘；债多的公司普遍低"</strong>——区间、方向、影响因素三件事一句话背完。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>短期偿债</strong>：流动比率（流动资产÷流动负债，最常用，公认 2:1）、速动比率（速动资产＝流动资产−存货，1:1 左右理想）、现金比率（现金及现金等价物÷流动负债，即刻变现）；大小：<strong>流动＞速动＞现金</strong></li>
+<li><strong>长期偿债</strong>：资产负债率（应小于 100%，50% 以下较好）、产权比率（越低越强）、已获利息倍数＝息税前利润÷利息费用＝（利润总额＋利息费用）÷利息费用（<strong>至少等于 1</strong>）</li>
+<li><strong>营运能力</strong>：应收账款周转率（分子＝营业收入净额＝营业收入−销售退回折让折扣，平均余额不扣坏账准备）、存货周转率（分子＝营业成本）、流动资产周转率、总资产周转率；<strong>次多天少＝周转快</strong></li>
+<li><strong>盈利能力</strong>：营业利润率、营业净利润率（净利润÷营业收入净额）、资本收益率（÷实收资本）、净资产收益率（÷所有者权益平均余额，披露＋配股再融资依据）、资产净利润率（÷平均资产总额）、每股收益（（净利润−优先股股利）÷发行在外普通股股数）、市盈率（市价÷每股收益）、资本保值增值率（期末÷期初所有者权益）</li>
+<li><strong>市盈率</strong>：5～20 正常；超过 20 是股价下跌前兆、风险很大；5 以下前景黯淡；通胀/加息→降，利润看涨→升，债务比重大→低</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b31s3q1" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">通常情况下，一个大型工业企业的流动比率、速动比率和现金比率的关系是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 流动比率＜速动比率＜现金比率</button><button type="button" class="qopt" data-key="B">B. 现金比率＞流动比率＞速动比率</button><button type="button" class="qopt" data-key="C">C. 流动比率＞速动比率＞现金比率</button><button type="button" class="qopt" data-key="D">D. 速动比率＞流动比率＞现金比率</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：三个比率的分母都是流动负债，分子一层层"提纯"：流动资产（含存货）→ 速动资产（流动资产减去存货）→ 现金及现金等价物，分子越小比率数值越低，故<strong>流动比率＞速动比率＞现金比率</strong>。口诀"流动含存货，速动去存货，现金只剩钱"，A、B、D 都把方向弄反了。
+:::</p></div></details></div><div class="quiz-item" data-qid="b31s3q2" data-answer="CE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">计算已获利息倍数时，使用到的指标有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 息税后利润</button><button type="button" class="qopt" data-key="B">B. 管理费用</button><button type="button" class="qopt" data-key="C">C. 利息费用</button><button type="button" class="qopt" data-key="D">D. 负债总额</button><button type="button" class="qopt" data-key="E">E. 息税前利润</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CE</div><div class="q-exp"><p>析：已获利息倍数＝息税前利润÷利息费用＝（利润总额＋利息费用）÷利息费用，只用到<strong>息税前利润</strong>（E）和<strong>利息费用</strong>（C）两个指标。A 错在"后"字——是"息税<strong>前</strong>"利润；管理费用（B）、负债总额（D）与本公式无关。
+:::</p></div></details></div><div class="quiz-item" data-qid="b31s3q3" data-answer="ADE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">企业短期偿债能力指标包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 流动比率</button><button type="button" class="qopt" data-key="B">B. 资产负债率</button><button type="button" class="qopt" data-key="C">C. 产权比率</button><button type="button" class="qopt" data-key="D">D. 现金比率</button><button type="button" class="qopt" data-key="E">E. 速动比率</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ADE</div><div class="q-exp"><p>析：短期偿债能力三指标＝<strong>流动比率、速动比率、现金比率</strong>（口诀"短期流速现"）。资产负债率（B）、产权比率（C）都是<strong>长期</strong>偿债能力指标，衡量的是全部负债或长期负债的偿还保障，不属短期。
+:::</p></div></details></div><div class="quiz-item" data-qid="b31s3q4" data-answer="AB" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列各项指标中，反映企业营运能力的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 存货周转天数</button><button type="button" class="qopt" data-key="B">B. 应收账款周转次数</button><button type="button" class="qopt" data-key="C">C. 已获利息倍数</button><button type="button" class="qopt" data-key="D">D. 市盈率</button><button type="button" class="qopt" data-key="E">E. 现金比率</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AB</div><div class="q-exp"><p>析：营运能力指标带"<strong>周转</strong>"二字——存货周转天数（A）、应收账款周转次数（B）都是。已获利息倍数（C）属长期偿债能力，市盈率（D）属盈利能力，现金比率（E）属短期偿债能力，三者都是来串门的。
+:::</p></div></details></div><div class="quiz-item" data-qid="b31s3q5" data-answer="CE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列财务指标中，反映企业盈利能力的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 资产负债率</button><button type="button" class="qopt" data-key="B">B. 现金比率</button><button type="button" class="qopt" data-key="C">C. 资本收益率</button><button type="button" class="qopt" data-key="D">D. 应收账款周转率</button><button type="button" class="qopt" data-key="E">E. 普通股每股收益</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CE</div><div class="q-exp"><p>析：盈利能力指标八件套＝营业利润率、营业净利润率、<strong>资本收益率</strong>（C）、净资产收益率、资产净利润率、<strong>普通股每股收益</strong>（E）、市盈率、资本保值增值率。资产负债率（A）、现金比率（B）属偿债能力，应收账款周转率（D）属营运能力。
+:::</p></div></details></div><div class="quiz-item" data-qid="b31s3q6" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">2021 年 3 月 12 日，某公司股票开盘价为 20 元，收盘价为 24 元，其当日的市盈率为 25，则该公司年报披露的每股收益为（　）元。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 0.80</button><button type="button" class="qopt" data-key="B">B. 0.88</button><button type="button" class="qopt" data-key="C">C. 0.96</button><button type="button" class="qopt" data-key="D">D. 1.04</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：市盈率＝普通股每股市价÷普通股每股收益，当日市价按<strong>收盘价</strong> 24 元计，则每股收益＝24÷25＝<strong>0.96</strong>（元），选 C。A（0.80）是错用<strong>开盘价</strong> 20÷25 算出来的——掉进"开盘价"陷阱；记住公式分子是市价、分母是每股收益，求每股收益时用市价÷市盈率即可。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础31_财务报表分析_第2节_财务报表分析的基本方法.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 财务报表分析的基本方法</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

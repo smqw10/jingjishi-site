@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十八章 货币供求与货币均衡 · 货币均衡 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第三部分 货币与金融</span><h1>第十八章 货币供求与货币均衡 · 货币均衡</h1><div class="subtitle">第 3 节 / 共 4 节 · 预计学习时长 30 分钟</div><div class="progress-bar"><div class="fill" style="width:75%"></div></div><div class="progress-text">本章进度 3/4</div><div class="sec-badge none" id="sec-badge" data-sec="b18s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>货币均衡</strong>的含义与三大特征：大体一致、动态过程、反映经济总体均衡 <span class="hot">高频考点</span></li>
+<li>分清<strong>总量性</strong>与<strong>结构性</strong>货币失衡，记住"央行宏观调控更注意总量性失衡" <span class="must">必考</span></li>
+<li>背熟 <strong>货币供应量增长率＝GDP 增长率＋物价自然上涨率</strong>，分清"同步"与"略高"两个口径 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、货币均衡与货币失衡</h2>
+<h3>1. 货币均衡的含义与特征 <span class="hot">高频考点</span></h3>
+<p><strong>货币均衡</strong>是指在一定时期经济运行中的<strong>货币需求与货币供给在动态上保持一致</strong>的状态。</p>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>内容</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>大体一致</strong></td>
+<td>货币均衡是货币供给与货币需求的<strong>大体一致</strong>，而非数量上的<strong>完全相等</strong></td>
+<td>差不多就行，不必分毫不差</td>
+</tr>
+<tr>
+<td><strong>动态过程</strong></td>
+<td>货币均衡是一个<strong>动态</strong>过程；<strong>短期</strong>内货币供求可能不一致，<strong>长期</strong>内是大体一致的</td>
+<td>允许短期错位，长期回归一致</td>
+</tr>
+<tr>
+<td><strong>反映总体</strong></td>
+<td>现代经济中的货币均衡<strong>在一定程度上反映经济总体均衡状况</strong></td>
+<td>钱的供需是经济的一面镜子</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三特征挑字眼：</strong><p>判断题就挖三个字眼：把"大体一致"换成"<strong>完全相等</strong>"——错；把"动态过程"换成"<strong>静态</strong>"——错；"货币均衡在一定程度上反映经济总体均衡状况"——<strong>对</strong>，这句原话本身就出过考点。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>健康不要求体温恰好 36.8 度，36.5—37 度之间都算正常——货币均衡也一样，供求"大体一致"即可；一天之内体温有波动（短期不一致），但长期看稳定在正常区间（长期大体一致）；而且体温常反映整体健康状况（货币均衡反映经济总体均衡）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 货币均衡口诀</div><p><strong>"大体、动态、映总体"</strong>——三个特征六字诀：大体一致非相等，短期错位长期合，货币均衡照经济。</p></div></div>
+<div class="section"><h3>2. 货币失衡的两种状况 <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>表现</th>
+<th>原因与对策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>总量性货币失衡</strong></td>
+<td>货币供给在<strong>总量</strong>上偏离货币需求达到一定程度，包括两种情况：①货币供应量<strong>＜</strong>货币需求量；②货币供应量<strong>＞</strong>货币需求量</td>
+<td><strong>中央银行在宏观调控时更多的注意总量性失衡</strong></td>
+</tr>
+<tr>
+<td><strong>结构性货币失衡</strong></td>
+<td>货币供需<strong>总量大体一致</strong>，但<strong>货币供需结构不相适应</strong>（往往短缺与滞存并存：一部分供过于求，另一部分求过于供）</td>
+<td>原因是<strong>社会经济结构不合理</strong>，必须通过<strong>经济结构调整</strong>加以解决（结构的刚性使其成为长期问题）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>总量看央行，结构调经济：</strong><p>判断口诀：题干见"总量偏离（多了或少了）"→ <strong>总量性</strong>；题干见"总量大体一致、结构不相适应"→ <strong>结构性</strong>。对策各记一句：总量性——央行宏观调控<strong>更注意</strong>它；结构性——病根在社会经济结构不合理，<strong>必须调整经济结构</strong>解决。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>水池水位失常有两种：一是整池水太多或太少（总量性——开闸放水或补水，管总闸的央行最上心）；二是水位总体正常，但这片池满溢、那片池见底（结构性——得重新改造管道，也就是调整经济结构）。水管工天天盯的是整池水位。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 货币失衡口诀</div><p><strong>"总量两种多与少，央行调控盯得牢；结构错配因结构，调结构来才见效"</strong>。</p></div></div>
+<div class="section"><h2>二、货币均衡水平的决定</h2>
+<h3>1. 货币数量与经济增长、物价上涨 <span class="must">必考</span></h3>
+<p>经济总体均衡，总的要求是达到或保持<strong>社会总供给与总需求</strong>之间的平衡关系。</p>
+<table>
+<thead>
+<tr>
+<th>视角</th>
+<th>形态表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>社会总供给</td>
+<td>以<strong>商品价格总额</strong>形态表现，表现为一定时期的<strong>国内生产总值（GDP）</strong></td>
+</tr>
+<tr>
+<td>社会总需求</td>
+<td>以<strong>货币形态</strong>出现，表现为通过货币的多次周转而实现的<strong>社会购买力（MV）</strong></td>
+</tr>
+</tbody>
+</table>
+<p>因此，保持总供给与总需求的均衡关系，要求处理好<strong>货币数量与经济增长</strong>之间的关系：<strong>假定货币流通速度相对稳定，货币供应量应当与 GDP 同步增长</strong>。</p>
+<p>若考虑<strong>物价自然上涨</strong>的因素，流通领域中货币数量的增长应<strong>略高于</strong>国内生产总值的增长，即：</p>
+<p><strong>货币供应量增长率＝国内生产总值增长率＋物价自然上涨率</strong></p></div>
+<div class="section"><div class="keypoint"><strong>一个公式、两个口径：</strong><p>公式背死：<strong>货币供应量增长率＝GDP 增长率＋物价自然上涨率</strong>（加法，不是乘除）。两个口径分开答：不考虑物价因素 → 货币供应量与 GDP <strong>同步</strong>增长（前提是货币流通速度相对稳定）；考虑物价自然上涨 → 货币供应量增长应<strong>略高于</strong> GDP 增长。判断题把"略高于"写成"大幅高于"或"低于"都错。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某年 GDP 增长 5%、物价自然上涨率 2%：第一步写公式——货币供应量增长率＝GDP 增长率＋物价自然上涨率；第二步代入——5%＋2%＝<strong>7%</strong>，流通中货币数量应增长约 7%。多出来的 2 个百分点，就是给"物价自然上涨"留出的空间——这正是"略高于经济增长"的白话版本。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 增长率口诀</div><p><strong>"货币增速＝经济增速＋物价自然涨"</strong>——纯加法；"同步"是不含物价项的口径，"略高"是含物价项的口径，别混。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 本节三道高频判断</div><p>①"货币均衡是货币供给与货币需求在数量上的完全相等"——<strong>错</strong>，是大体一致；②货币失衡只有<strong>总量性</strong>和<strong>结构性</strong>两类，"外部/内部/派生性货币失衡"是编造的干扰项；③"货币供应量应当与 GDP 同步增长"有个前提——<strong>货币流通速度相对稳定</strong>；若题干把前提抽掉还说"必须同步"，要打问号。计算题套路固定：增长率相加，防把绝对额当增长率（用户易错点：别拿货币增量的亿元数去加 GDP 增速的百分数）。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>货币均衡</strong>：货币需求与货币供给<strong>在动态上保持一致</strong>的状态；三特征＝大体一致（非完全相等）＋动态过程（短期可能不一致、长期大体一致）＋在一定程度上反映经济总体均衡状况</li>
+<li><strong>货币失衡两类</strong>：总量性（供给＞需求或供给＜需求；央行宏观调控更注意它）＋结构性（总量大体一致、结构不相适应；原因是社会经济结构不合理，须通过经济结构调整解决）</li>
+<li><strong>总供求与货币</strong>：总供给＝GDP（商品价格总额形态）；总需求＝MV（货币形态的社会购买力）；货币流通速度相对稳定 → 货币供应量与 GDP 同步增长</li>
+<li><strong>公式</strong>：货币供应量增长率＝国内生产总值增长率＋物价自然上涨率（考虑物价自然上涨，货币增长略高于 GDP 增长）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b18s3q1" data-answer="C" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">货币均衡是货币供求作用的一种状态，是货币供给与货币需求的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 局部均衡</button><button type="button" class="qopt" data-key="B">B. 静态均衡</button><button type="button" class="qopt" data-key="C">C. 大体一致</button><button type="button" class="qopt" data-key="D">D. 完全一致</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：货币均衡是货币需求与货币供给<strong>在动态上保持一致</strong>的状态——是<strong>大体一致</strong>（C），不是数量上的<strong>完全相等</strong>（D）；它也不是"静态"的（B 错，短期可能不一致、长期大体一致，是动态过程）；"局部均衡"（A）是编造的说法。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s3q2" data-answer="AC" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">货币供给偏离货币需求导致的货币失衡类型主要有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 结构性货币失衡</button><button type="button" class="qopt" data-key="B">B. 外部货币失衡</button><button type="button" class="qopt" data-key="C">C. 总量性货币失衡</button><button type="button" class="qopt" data-key="D">D. 派生性货币失衡</button><button type="button" class="qopt" data-key="E">E. 内部货币失衡</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AC</div><div class="q-exp"><p>析：货币失衡只有两类——<strong>总量性货币失衡</strong>（货币供给在总量上偏离货币需求，C）＋<strong>结构性货币失衡</strong>（总量大体一致但结构不相适应，A）。B"外部"、D"派生性"、E"内部"货币失衡都不是教材分类，纯编造干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s3q3" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">货币供给与需求大体一致的总量均衡条件下，货币供给结构与对应的货币需求结构的不相适应的现象称为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 动态货币失衡</button><button type="button" class="qopt" data-key="B">B. 静态货币失衡</button><button type="button" class="qopt" data-key="C">C. 总量性货币失衡</button><button type="button" class="qopt" data-key="D">D. 结构性货币失衡</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：题干关键词"<strong>总量均衡条件下＋结构不相适应</strong>"——这正是<strong>结构性货币失衡</strong>（D）的定义；其原因在于社会经济结构的不合理，必须通过经济结构调整加以解决。总量性货币失衡（C）是总量上偏离货币需求，与题干"总量均衡"矛盾；A、B"动态/静态货币失衡"不是教材的分类。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s3q4" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">保持总供给和总需求的均衡关系，要求处理好货币数量和（　）的关系。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 通货膨胀</button><button type="button" class="qopt" data-key="B">B. 经济增长</button><button type="button" class="qopt" data-key="C">C. 国际收支平衡</button><button type="button" class="qopt" data-key="D">D. 金融稳定</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：社会总供给以商品价格总额形态表现为 GDP，社会总需求以货币形态表现为社会购买力 MV——保持总供求均衡，要求处理好<strong>货币数量与经济增长</strong>（B）之间的关系；假定货币流通速度相对稳定，货币供应量应当与 GDP 同步增长。A、C、D 都不是这组关系里的配对对象。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础18_货币供求与货币均衡_第2节_货币供给.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 货币供给</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础18_货币供求与货币均衡_第4节_通货膨胀.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 通货膨胀</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十九章 会计循环 · 会计计量 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第五部分 会计</span><h1>第二十九章 会计循环 · 会计计量</h1><div class="subtitle">第 2 节 / 共 4 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 2/4</div><div class="sec-badge none" id="sec-badge" data-sec="b29s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>会计计量</strong>的定义：确定会计要素<strong>货币金额</strong>的过程；<strong>计量是会计的核心问题</strong>、贯穿全过程 <span class="hot">高频考点</span></li>
+<li>记牢计量的两方面构成：<strong>计量单位</strong>（货币为主、实物为辅）与<strong>计量属性</strong> <span class="hot">高频考点</span></li>
+<li>精确分清<strong>五种计量属性</strong>的定义与适用情景，见情景秒选属性 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>会做<strong>可变现净值</strong>式小计算：估计售价−销售必需费用及税费，分步演算不失分 <span class="s3">★★★</span></li>
+<li>记住计量一般采用<strong>历史成本</strong>；用其他属性须保证金额"能够取得并可靠计量" <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、会计计量的概念</h2>
+<h3>1. 什么是会计计量 <span class="hot">高频考点</span></h3>
+<p><strong>会计计量</strong>是指为了在会计报表中确认和计量有关会计要素的<strong>实际状况</strong>而<strong>确定其货币金额</strong>的过程。<strong>计量问题是会计的核心问题</strong>，<strong>贯穿</strong>于会计从确认、记录到报告的全过程。会计计量的<strong>目的</strong>：进一步明确一项经济业务所带来的某一会计要素变化的<strong>数量多少</strong>，体现会计信息的<strong>定量化</strong>特点。</p>
+<p>会计计量包括<strong>计量单位（计量尺度）</strong>和<strong>计量属性（计量基础）</strong>两个方面：</p>
+<table>
+<thead>
+<tr>
+<th>方面</th>
+<th>内容</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>计量单位</strong>（计量尺度）</td>
+<td>以<strong>货币</strong>为主导计量单位，<strong>辅以各种实物量度</strong></td>
+<td>用什么"尺子"量——钱为主，台、吨、件为辅</td>
+</tr>
+<tr>
+<td><strong>计量属性</strong>（计量基础）</td>
+<td><strong>历史成本、重置成本、可变现净值、现值、公允价值</strong>等</td>
+<td>按"哪个价钱"量——过去买价？现在重买价？卖掉净落？</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>计量＝算钱：</strong><p>确认回答"算不算、算什么"，计量回答"<strong>算多少钱</strong>"。两个"贯穿级"考点要背死：①计量是会计的<strong>核心问题</strong>；②计量<strong>贯穿</strong>确认、记录到报告全过程。考"会计的核心问题"→选计量。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>同一台设备，问法不同、答案就不同：3 年前 30 万买的（历史成本）；现在重新买一台同样的要 26 万（重置成本）；把它卖掉估计净落 22 万（可变现净值）；它未来还能带来的现金流折成今天值 18 万（现值）；市场上知情双方自愿成交 25 万（公允价值）。<strong>同一资产、五种"价钱"</strong>——这就是五个计量属性，本章的重头戏。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 计量两构成</div><p><strong>"单位选尺子，属性定价钱"</strong>——计量单位管"用什么量"（货币为主、实物为辅），计量属性管"按什么价量"（五属性）。多选"会计计量包括的内容"→计量单位＋计量属性，别选成"确认和记录"。</p></div></div>
+<div class="section"><h2>二、五种计量属性</h2>
+<h3>2. 历史成本与重置成本 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th><strong>历史成本</strong></th>
+<th><strong>重置成本</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>又称</td>
+<td><strong>原始成本、实际成本</strong></td>
+<td><strong>现行成本</strong></td>
+</tr>
+<tr>
+<td>定义</td>
+<td>以<strong>取得资产时实际发生的成本</strong>作为资产的<strong>入账价值</strong></td>
+<td>按照<strong>当前市场条件</strong>重新取得与其所拥有的某项资产<strong>相同或与其功能相当</strong>的资产需要支付的<strong>现金或现金等价物</strong></td>
+</tr>
+<tr>
+<td>看哪个时点</td>
+<td><strong>过去</strong>买进时花的钱</td>
+<td><strong>现在</strong>重新置办要花的钱</td>
+</tr>
+<tr>
+<td>适用前提</td>
+<td>最常用，一般计量都采用它</td>
+<td>资产<strong>处于使用状态</strong>、且<strong>能够继续使用</strong>、对<strong>所有者具有使用价值</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>重置成本的三个前提词：</strong><p>"<strong>使用状态、继续使用、有使用价值</strong>"——重置成本衡量的是"再置办一个能接着用的"要花多少钱。选项里丢掉这三个前提（比如拿全新未使用、不能继续使用的资产说事）就是干扰。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>5 年前 80 万买的门店房，今天同样地段重新买一间要 200 万：80 万是<strong>历史成本</strong>（当年实际花的钱，入账就记它），200 万是<strong>重置成本</strong>（现在重新取得一间"相同或功能相当"的要花多少）。房子还在正常经营使用，重置成本才有衡量意义；若房子已报废不能再用，"重新置办一个能用的"这个前提就没了。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 历史成本 vs 重置成本</div><p><strong>"历史往后看，重置看现在"</strong>——见"取得（购买）时实际发生"→历史成本；见"当前市场条件、重新取得、相同或功能相当"→重置成本。</p></div></div>
+<div class="section"><h3>3. 可变现净值、现值与公允价值 <span class="s3">★★★</span> <span class="hot">高频考点</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>定义（划关键词）</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>可变现净值</strong></td>
+<td>企业在<strong>日常活动</strong>中，以<strong>估计售价</strong>减去<strong>完工时估计将要发生的成本</strong>、<strong>估计销售所必需的费用</strong>以及<strong>相关税费</strong>后的金额</td>
+<td>预计卖出去<strong>净能落袋</strong>多少</td>
+</tr>
+<tr>
+<td><strong>现值</strong></td>
+<td>以估计的<strong>未来现金流入扣除未来现金流出后的余额</strong>，用<strong>恰当的折现率予以折现</strong>而得到的价值</td>
+<td>未来能挣的钱<strong>折算成今天</strong>值多少</td>
+</tr>
+<tr>
+<td><strong>公允价值</strong></td>
+<td>在<strong>公平交易</strong>中，<strong>熟悉情况的交易双方自愿</strong>进行资产交换或者债务清偿的金额</td>
+<td>知情双方<strong>自愿成交</strong>的价格</td>
+</tr>
+</tbody>
+</table>
+<p><strong>存货的孰低规则</strong>（配套考点）：资产负债表日，<strong>存货</strong>应当按照<strong>成本和可变现净值孰低</strong>计量；对可变现净值<strong>低于</strong>存货成本的差额，应当<strong>计提存货跌价准备</strong>，计入<strong>当期损益</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>孰低：只许往低了记：</strong><p>存货期末计量取<strong>成本与可变现净值中较低者</strong>——可变现净值跌到成本之下，差额（跌价损失）当期就确认，<strong>计提存货跌价准备</strong>进当期损益。方向只有一个：<strong>从低</strong>，不许往高调回多提的准备。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某企业一年前花 10000 元买了一批材料，现在打算卖掉：估计售价 9000 元，销售费用、税金合计 200 元。
+第一步：找估计售价 → 9000 元；
+第二步：减去销售必需的费用和相关税费 → 9000 − 200 ＝ <strong>8800 元</strong>；
+第三步：8800 元就是这批材料的<strong>可变现净值</strong>。
+再提醒一句：材料当初的买价 10000 元是<strong>历史成本</strong>，与"卖掉净落多少"是两套口径；若拿 8800 与账面成本 10000 比，孰低按 8800 计量，差额 1200 元计提存货跌价准备、计入当期损益。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 五属性一句话口诀</div><p><strong>"历史看过去，重置买新的；可变扣了卖，现值折现来，公允自愿成交"</strong>——"扣了卖"＝估计售价扣掉完工成本、销售必需费用和税费；"折现来"＝未来净现金流按恰当折现率折现；"自愿成交"＝公平交易中熟悉情况的双方自愿交换或清偿。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 考试技巧：属性题的&quot;身份排除法&quot;＋计算防错</div><p>①<strong>持续经营、会计分期</strong>是会计基本<strong>前提</strong>，永远不是计量属性——混进选项直接排除；②见"一般应当采用"→选<strong>历史成本</strong>，用其他属性必须保证金额<strong>能够取得并可靠计量</strong>；③计算题分步写：先认"售价口径"（可变现净值＝估计售价−销售必需支出），再核对有没有"折现率"（现值）、"自愿交易"（公允价值），一步一步算、别心算跳步，也别拿当年的买价冒充"卖掉净落的钱"。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>计量</strong>＝确定会计要素货币金额的过程；<strong>核心问题</strong>、贯穿全过程；目的＝明确数量多少、体现定量化</li>
+<li>两构成：<strong>计量单位</strong>（货币为主＋实物为辅）＋<strong>计量属性</strong>（历史成本、重置成本、可变现净值、现值、公允价值）</li>
+<li><strong>历史成本</strong>＝取得时实际成本（又称原始成本、实际成本），一般计量都采用；<strong>重置成本</strong>（现行成本）＝当前市场条件重新取得相同或功能相当资产要付的现金，前提：处于使用状态、能继续使用、对所有者有使用价值</li>
+<li><strong>可变现净值</strong>＝估计售价−完工估计成本−销售必需费用−相关税费；存货按<strong>成本与可变现净值孰低</strong>计量，差额<strong>计提存货跌价准备</strong>计入当期损益</li>
+<li><strong>现值</strong>＝未来现金流入扣除流出后的余额按恰当折现率折现；<strong>公允价值</strong>＝公平交易中熟悉情况的双方自愿交换/清偿的金额</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b29s2q1" data-answer="BDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">关于会计计量的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 会计计量是会计监督的主要手段</button><button type="button" class="qopt" data-key="B">B. 会计计量是指为了确认会计要素的货币金额的过程</button><button type="button" class="qopt" data-key="C">C. 会计计量也称为会计确认</button><button type="button" class="qopt" data-key="D">D. 会计计量贯穿于会计从确认、记录到报告的全过程</button><button type="button" class="qopt" data-key="E">E. 会计计量由计量单位和计量属性两方面内容组成</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BDE</div><div class="q-exp"><p>析：计量是为了确定会计要素<strong>货币金额</strong>的过程（B 对），由<strong>计量单位＋计量属性</strong>构成（E 对），且<strong>贯穿</strong>确认、记录到报告全过程——计量问题是会计的<strong>核心问题</strong>（D 对）。计量不是"会计监督的主要手段"（A 错）；计量也绝不等同于确认（C 错）——确认管"定性入账"，计量管"定量算钱"，两个环节。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s2q2" data-answer="ACD" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列属于会计计量属性的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 历史成本</button><button type="button" class="qopt" data-key="B">B. 持续经营</button><button type="button" class="qopt" data-key="C">C. 可变现净值</button><button type="button" class="qopt" data-key="D">D. 公允价值</button><button type="button" class="qopt" data-key="E">E. 会计分期</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：五种计量属性＝历史成本、重置成本、可变现净值、现值、公允价值（A、C、D 对）。持续经营（B）和会计分期（E）是<strong>会计基本前提</strong>，不是计量属性——把"前提"混进"属性"是本章最经典的干扰手法。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s2q3" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">某企业一年前购买了一批材料，当时花费 10000 元，如果现在打算把材料卖掉，估计售价 9000 元，销售费用、税金 200 元，则实际可收入 8800 元。如果以 8800 元计量，称为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 重置成本</button><button type="button" class="qopt" data-key="B">B. 现值</button><button type="button" class="qopt" data-key="C">C. 可变现净值</button><button type="button" class="qopt" data-key="D">D. 公允价值</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：分步算：估计售价 9000 − 销售费用及税金 200 ＝ 8800（元）。"估计售价扣掉卖出去要花的钱"＝<strong>可变现净值</strong>（C 对）。当初买价 10000 元是历史成本；A 重置成本是"现在重新买要花多少"；B 现值要"未来现金流折现"；D 公允价值是"知情双方自愿成交价"——都不符合"卖掉净落多少"的口径。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s2q4" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">按照重置成本进行计量时，资产的计量方式是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 按照公平市场参与者在计量日发生的有序交易中出售资产所能收到的价格</button><button type="button" class="qopt" data-key="B">B. 按照现在偿付债务所需支付的现金或者现金等价物的金额计量</button><button type="button" class="qopt" data-key="C">C. 按照现在购买相同或者相似资产所需支付的现金或者现金等价物的金额计量</button><button type="button" class="qopt" data-key="D">D. 按照预计从其持续使用和最终处置中所产生的未来净现金流入量的折现金额计算</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：重置成本下，资产按<strong>现在购买相同或相似资产</strong>所需支付的现金或现金等价物计量（C 对）。A 描述的是<strong>公允价值</strong>（计量日有序交易中的出售价格）；B 是重置成本下<strong>负债</strong>的计量口径（"现在偿付债务"），不是资产；D 是<strong>现值</strong>（未来净现金流入折现）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s2q5" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">贯穿于会计确认、记录、报告全流程的会计核心问题是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 会计报告</button><button type="button" class="qopt" data-key="B">B. 会计核算</button><button type="button" class="qopt" data-key="C">C. 会计评价</button><button type="button" class="qopt" data-key="D">D. 会计计量</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：<strong>计量问题是会计的核心问题</strong>，贯穿于从确认、记录到报告的全过程（D 对）。会计核算（B）是包含四环节的大概念，"核心问题"特指计量；会计评价（C）、会计报告（A）都不是贯穿全流程的核心问题。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s2q6" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">企业进行会计要素计量时，一般应当采用（　）进行计量。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 历史成本</button><button type="button" class="qopt" data-key="B">B. 现值</button><button type="button" class="qopt" data-key="C">C. 公允价值</button><button type="button" class="qopt" data-key="D">D. 重置成本</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：企业对会计要素计量<strong>一般应当采用历史成本</strong>（A）；采用重置成本、可变现净值、现值、公允价值计量的，应当保证所确定的会计要素金额<strong>能够取得并可靠计量</strong>。历史成本按取得时实际发生的成本入账、有据可查，最可靠也最常用，所以是"默认属性"。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础29_会计循环_第1节_会计确认.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 会计确认</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础29_会计循环_第3节_会计记录.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 会计记录</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

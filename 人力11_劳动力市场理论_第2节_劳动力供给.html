@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第11章 劳动力市场理论 · 劳动力供给 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第三部分 人力资源经济分析</span><h1>第11章 劳动力市场理论 · 劳动力供给</h1><div class="subtitle">第 2 节 / 共 4 节 · 预计学习时长 55 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 2/4</div><div class="sec-badge none" id="sec-badge" data-sec="r11s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟劳动力供给<strong>数量三因素</strong>与<strong>人口构成</strong>框图，会算<strong>劳动力参与率</strong> <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+<li>分清<strong>收入效应/替代效应</strong>的方向，锚死<strong>个人劳动力供给曲线向后弯曲</strong> <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>记住市场劳动力供给曲线三种形状与<strong>供给弹性</strong>五档，会算弹性 <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+<li>掌握<strong>家庭生产理论</strong>三问、<strong>附加/灰心</strong>两效应的方向类比、女性与老年人劳参率的影响因素 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、劳动力供给总量</h2>
+<h3>1. 数量与质量两条腿</h3>
+<p>劳动力供给总量从<strong>数量</strong>和<strong>质量</strong>两个维度看：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>质量</strong></td>
+<td>劳动力的<strong>身体健康状况</strong>以及<strong>受教育和训练程度</strong>（表现为知识、技能、经验等水平）</td>
+</tr>
+<tr>
+<td><strong>数量</strong></td>
+<td>受<strong>人口总量、劳动力参与率、劳动者的周平均工作时间</strong>三个因素影响</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 数量三因素</div><p><strong>"人、参、时"</strong>——人口总量、劳动力参与率（参）、周平均工作时间（时）。多选题问"劳动力供给数量的决定因素"，就按这三个对号；"平均工资水平""劳动力流动率"都是常见干扰项。</p></div></div>
+<div class="section"><h3>2. 人口总量与人口构成</h3>
+<p><strong>人口总量</strong>主要取决于<strong>人口出生率、死亡率以及净人口流入率</strong>三个因素。人口的构成是影响劳动力供给的重要因素：</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>构成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>劳动年龄内</strong>人口</td>
+<td>①适龄就业人口；②失业人口；③就学人口或在校人口；④家务劳动人口；⑤现役军人；⑥劳动年龄内其他人口</td>
+</tr>
+<tr>
+<td><strong>劳动年龄外</strong>人口</td>
+<td>①未成年就业人口；②老年就业人口；③劳动年龄外其他人口（主要指老人和孩子）</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>口径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>就业人口</strong></td>
+<td>劳动适龄就业人口＋未成年就业人口＋老年就业人口</td>
+</tr>
+<tr>
+<td><strong>劳动力人口</strong>（＝实际劳动力供给人口＝<strong>经济活动人口</strong>）</td>
+<td><strong>就业人口＋失业人口</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 就业人口&quot;跨界&quot;藏在劳动年龄外</div><p>就业人口分散在<strong>两个框</strong>里：劳动适龄就业人口在"劳动年龄内"框，<strong>未成年就业人口、老年就业人口在"劳动年龄外"框</strong>——所以"劳动年龄内人口"<strong>装不下</strong>全部就业人口（2022 年真题考的就是这条）；而"实际劳动力供给人口 / 劳动力人口 / 经济活动人口"是<strong>同一种人的三个名字</strong>，都＝就业＋失业，必含全部就业人口。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 人口构成口诀</div><p><strong>"内六外三，就业跨两界；劳力＝就＋失"</strong>——劳动年龄内 6 类人、劳动年龄外 3 类人；就业人口跨着两个框分布；劳动力人口（经济活动人口）＝就业＋失业。</p></div></div>
+<div class="section"><h3>3. 劳动力参与率与保留工资 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>劳动力参与率</strong>反映一个国家或地区的人们<strong>希望走出家庭、到劳动力市场上去寻找并实际从事工作的意愿高低</strong>，通常指<strong>就业人口与失业人口之和（实际劳动力人口）</strong>在 <strong>16 周岁以上人口（潜在劳动力人口）</strong>中所占的百分比：</p>
+<p><strong>劳动力参与率＝（就业人口＋失业人口）÷ 16 周岁以上总人口 × 100%＝经济活动人口（劳动力人口）÷ 16 周岁以上总人口 × 100%</strong></p>
+<p><strong>保留工资</strong>：为了使一位劳动者<strong>愿意到市场上来工作</strong>、而不是待在家里所必须达到的<strong>最低工资水平</strong>，是一种工资的<strong>心理价位</strong>，每个人的具体情况不同、水平存在差异。其他条件一定，<strong>市场工资率越高，劳动者工作的可能性越大，社会的劳参率也会越高</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 劳参率公式口诀</div><p><strong>"分子干活的人（就业＋失业＝经济活动人口），分母够岁数的人（16 周岁以上）"</strong>。做题先盯分母：题目给的是<strong>总人口</strong>，要<strong>先减去 16 岁以下</strong>人口；给的已是 16 岁以上人口，直接用。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某市总人口 1000 万，其中 16 岁以下 200 万，就业 550 万，失业 50 万：劳参率＝（550＋50）÷（1000−200）＝75%。若分母误用总人口 1000 万，就得出 60%——出题人最爱在"分母忘了扣 16 岁以下"上埋雷。</p></div></div>
+<div class="section"><h3>4. 周平均工作时间</h3>
+<p><strong>周平均工作时间</strong>：劳动者<strong>平均每周在劳动力市场上愿意提供的工作小时数的总和</strong>，是影响劳动力供给数量的第三个因素。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 第三员别漏掉</div><p><strong>"人、参、时"里的"时"</strong>——劳参率管"多少人出来干"，周平均工时管"出来的人每周干多久"，两者共同决定供给数量。</p></div></div>
+<div class="section"><h2>二、个人及市场劳动力供给 <span class="s3">★★★</span></h2>
+<h3>1. 个人劳动力供给的决定原理 <span class="must">必考</span> <span class="hot">高频考点</span></h3>
+<p><strong>个人劳动力供给</strong>：在<strong>特定工资水平或工资率</strong>下，一位劳动者<strong>愿意提供的工作小时数</strong>。劳动者可利用的时间分为<strong>工作时间</strong>与<strong>闲暇时间</strong>。</p>
+<p><strong>影响因素</strong>（★★★）：</p>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>工资率/工资水平</strong></td>
+<td>产生方向<strong>相反</strong>的收入效应与替代效应，最终供给取决于两者的<strong>力量对比</strong></td>
+</tr>
+<tr>
+<td><strong>非劳动收入</strong></td>
+<td>个人<strong>不参加工作</strong>也能获得的收入（遗产及其他馈赠、资本利息等）；非劳动收入或财富总量<strong>越大，劳动力供给动机越弱</strong>（一些国家征收<strong>高额遗产税</strong>，目的之一就是遏制这种不利影响）</td>
+</tr>
+<tr>
+<td><strong>个人偏好</strong></td>
+<td>偏好闲暇的人比偏好工作的人更不愿意增加劳动力供给</td>
+</tr>
+</tbody>
+</table>
+<p><strong>工资率上升的两种效应</strong>（★★★，方向对照必背）：</p>
+<table>
+<thead>
+<tr>
+<th>效应</th>
+<th>逻辑链</th>
+<th>对供给时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>收入效应</strong></td>
+<td>挣得快了→用<strong>较少的工作时间</strong>就能获得同样收入→<strong>增加闲暇时间的消费</strong></td>
+<td><strong>减少</strong></td>
+</tr>
+<tr>
+<td><strong>替代效应</strong></td>
+<td>闲暇的机会成本变大（歇一小时亏一小时工资）→<strong>牺牲闲暇、增加劳动量</strong>多获得收入</td>
+<td><strong>增加</strong></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>力量对比</th>
+<th>工资率上升</th>
+<th>工资率下降</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>收入效应＞替代效应</strong></td>
+<td>供给<strong>减少</strong></td>
+<td>供给<strong>增加</strong></td>
+</tr>
+<tr>
+<td><strong>替代效应＞收入效应</strong></td>
+<td>供给<strong>增加</strong></td>
+<td>供给<strong>减少</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 收入效应 vs 替代效应</div><p><strong>"收入的躺平，替代的加班"</strong>——涨工资后"老本够了少干点"＝收入效应（与供给<strong>反</strong>方向）；涨工资后"歇一小时太亏、多干点"＝替代效应（与供给<strong>同</strong>方向）。方向锚点四个字：<strong>收反替同</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小周时薪从 30 元涨到 50 元：头两年干劲十足，多接了不少活（替代效应占上风）；几年后收入上来了，反而开始准点下班、多休年假（收入效应占上风）。同一个人的供给时间先增后减——两种效应一直在拔河，谁劲大听谁的。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 曲线方向锚点：个人劳动力供给曲线向后弯曲（★★）</div><ul>
+<li><strong>低收入阶段</strong>：替代效应＞收入效应 → 工资涨、供给<strong>增</strong>（曲线<strong>向右上方倾斜</strong>）——"穷的时候拼命挣钱"；</li>
+<li><strong>高收入阶段</strong>：收入效应＞替代效应 → 工资涨、供给<strong>减</strong>（曲线<strong>向后弯曲</strong>）——"富了买闲暇、有钱任性"。
+口诀：<strong>"低段替同拼命干，高段收反买清闲；先右上、后左弯"</strong>。高工资段曲线向左上回勾——横轴（工时）随工资继续上升反而<strong>缩短</strong>。</li>
+</ul></div></div>
+<div class="section"><h3>2. 市场劳动力供给曲线的三种形状（★★）</h3>
+<table>
+<thead>
+<tr>
+<th>形状</th>
+<th>含义</th>
+<th>典型情形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>向右上方倾斜</strong></td>
+<td>工资率越高、市场供给量越大</td>
+<td><strong>常见</strong>的市场劳动力供给状况</td>
+</tr>
+<tr>
+<td><strong>垂直</strong></td>
+<td><strong>无弹性</strong>：市场工资率变动对劳动力供给数量<strong>完全没有影响</strong></td>
+<td>——</td>
+</tr>
+<tr>
+<td><strong>水平</strong></td>
+<td><strong>无限弹性</strong>：某工资率下市场上可获得<strong>任意数量</strong>的劳动力供给</td>
+<td><strong>欠发达国家</strong>的无限劳动力供给情形</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三形状对号</div><p><strong>"常见右上，竖直无弹，水平无限（欠发达国家）"</strong>——横轴是供给量、纵轴是工资率：竖着画=工资怎么变供给都不动（无弹性）；横着画=一个价钱要多少人有多少（无限弹性）。</p></div></div>
+<div class="section"><h3>3. 劳动力供给弹性 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>劳动力供给弹性</strong>：劳动力供给<strong>数量随工资率变动而发生变动的灵敏程度</strong>。</p>
+<p><strong>劳动力供给弹性＝工时变动百分比 ÷ 工资率变动百分比</strong>（符号可能为正或负，<strong>通常为正</strong>）</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>绝对值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>富有弹性</strong></td>
+<td>＞1</td>
+<td>工时变动百分比<strong>大于</strong>工资率变动百分比</td>
+</tr>
+<tr>
+<td><strong>缺乏弹性</strong></td>
+<td>＜1</td>
+<td>工时变动百分比<strong>小于</strong>工资率变动百分比</td>
+</tr>
+<tr>
+<td><strong>单位弹性</strong></td>
+<td>＝1</td>
+<td>两个变动百分比<strong>相等</strong></td>
+</tr>
+<tr>
+<td><strong>无弹性（垂直）</strong></td>
+<td>＝0</td>
+<td>工资率变动<strong>不带来</strong>劳动工时的任何变动</td>
+</tr>
+<tr>
+<td><strong>无限弹性（水平）</strong></td>
+<td>＝∞</td>
+<td>某工资率下可获得<strong>任意数量</strong>的劳动力供给</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 弹性五档口诀</div><p><strong>"富缺单无∞"</strong>——大于 1 富有、小于 1 缺乏、等于 1 单位、等于 0 无弹性（垂直线）、无穷大无限弹性（水平线）。形状联动记：<strong>垂直↔无弹性，水平↔无限弹性</strong>——"竖着卡死、横着管够"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>家政服务工资 40→50 元/小时（上涨 25%），日均总工时 10 万→12 万小时（增加 20%）：弹性＝20%÷25%＝<strong>0.8＜1</strong> → <strong>缺乏弹性</strong>。三步：算工时变动%、算工资率变动%、相除后与 1 比大小。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 计算题防坑</div><p>公式<strong>分子永远是工时（供给量）变动百分比</strong>、分母是工资率变动百分比——倒置必错；比较弹性类型用<strong>绝对值</strong>；"0.8＜1 → 缺乏弹性"的含义是"供给量变化的幅度<strong>小于</strong>工资变化的幅度"。</p></div></div>
+<div class="section"><h2>三、家庭劳动力供给与周期性劳动力供给</h2>
+<h3>1. 家庭生产理论（★★）</h3>
+<p><strong>家庭生产理论</strong>：以<strong>家庭为单位</strong>分析劳动力供给——<strong>家庭物品是效用的直接来源</strong>；家庭需用<strong>收入购买的商品或服务</strong>，再结合<strong>家庭时间</strong>，才能生产出产生效用的<strong>家庭物品</strong>。</p>
+<p>家庭可支配的时间分为<strong>市场工作时间</strong>与<strong>家庭生产时间</strong>两大类。时间分配要回答三个问题：</p>
+<table>
+<thead>
+<tr>
+<th>三问</th>
+<th>答案取决于</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①家庭需要<strong>消费什么样</strong>的家庭物品？</td>
+<td>哪种物品带来的<strong>效用最大</strong></td>
+</tr>
+<tr>
+<td>②家庭希望<strong>如何生产</strong>这些物品？</td>
+<td>生产方式分<strong>时间密集型</strong>与<strong>商品密集型</strong>；生产方式决定了市场工作与家庭生产的时间比例</td>
+</tr>
+<tr>
+<td>③家庭成员间<strong>如何分配</strong>市场工作与家庭生产的时间？</td>
+<td><strong>比较优势原理</strong>——每个成员从事自己生产率相对较高（或较擅长）的事</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 家庭生产三问</div><p><strong>"买啥、咋造、谁去干"</strong>——消费什么（哪种家庭物品效用最大）、怎么生产（时间密集型 vs 商品密集型）、谁来干（比较优势原理）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>晚饭这件"家庭物品"：全在家做＝时间密集型（多花时间、少花钱）；天天点外卖＝商品密集型（多花钱、省时间）。妻子时薪 200、丈夫时薪 80，做饭这类"市场工资低"的家务就按比较优势交给时间便宜的一方，另一方去市场工作挣更多钱——家庭总效用最大化。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 效用直接来源是谁</div><p>家庭生产理论认为效用的直接来源是<strong>家庭物品</strong>，而<strong>不是</strong>"家庭获得的总劳动收入"；家庭的劳动力供给行为也<strong>不是</strong>家庭成员个体供给行为的<strong>简单加总</strong>（家庭内部还要按比较优势分工）——2018 年多选的两个错误项就埋在这。</p></div></div>
+<div class="section"><h3>2. 经济周期中的劳动力供给 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>效应</th>
+<th>情形</th>
+<th>方向类比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>附加的劳动者效应</strong></td>
+<td>家庭中<strong>主要收入获得者</strong>失去工作或工资被削减后，其他成员<strong>临时性地进入劳动力队伍</strong>，缓解家庭收入的下降；<strong>经济衰退时期</strong>表现尤为明显</td>
+<td>潜在作用类似于<strong>收入效应</strong>（工资率下降，劳动力供给时间增加）</td>
+</tr>
+<tr>
+<td><strong>灰心丧气的劳动者效应</strong></td>
+<td>本来可以寻找工作的劳动者，觉得在现行工资率下找到工作<strong>比较悲观</strong>，<strong>停止寻找工作</strong>，临时成为<strong>非劳动力参与者</strong></td>
+<td>潜在作用类似于<strong>替代效应</strong></td>
+</tr>
+</tbody>
+</table>
+<p>两个效应的作用方向<strong>相反</strong>，衰退期社会劳动力供给的净变化取决于两者的力量对比。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 附加/灰心方向锚点</div><p><strong>"附加学收入（越穷越要上岗），灰心学替代（越丧越退出）"</strong>——衰退期：顶梁柱没了收入→全家总动员找工作＝附加的劳动者效应，方向同"工资下降的收入效应"（供给增）；屡屡碰壁→懒得找了＝灰心丧气的劳动者效应，方向同"工资下降的替代效应"（供给减）。一进一退，谁大力谁赢。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老张被裁员，妻子从全职主妇变成超市收银员贴补家用（附加的劳动者效应）；小刘毕业赶上行业寒冬，投了 30 份简历石沉大海，索性回老家备考、暂时不找工作了（灰心丧气的劳动者效应，退出劳动力队伍）——同一轮衰退，一个把人"推进"市场，一个把人"劝退"出市场。</p></div></div>
+<div class="section"><h3>3. 生命周期中的劳动力供给 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>女性劳参率</strong>呈<strong>稳定上升</strong>的总体趋势，六条原因：①<strong>相对工资率上升</strong>；②市场工作的<strong>偏好和态度</strong>发生变化；③<strong>家庭生产活动的生产率提高</strong>；④<strong>出生率下降</strong>；⑤<strong>离婚率上升</strong>；⑥<strong>工作机会增加</strong>。</p>
+<p><strong>老年人劳参率</strong>明显下降，四条原因：①工资率；②养老金；③<strong>社会保障福利水平的实际上升速度超过了工资水平</strong>的实际上升速度；④私人养老金计划的普及和水平不断提高。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 女性劳参率上升六因</div><p><strong>"钱升心变家务快，少生多离机会来"</strong>——相对工资率升（钱升）、偏好态度变（心变）、家庭生产率提高（家务快）、出生率降（少生）、离婚率升（多离）、工作机会增（机会来）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 方向易混：&quot;离婚率上升&quot;是上升的原因</div><p>注意"离婚率<strong>上升</strong>"是女性劳参率<strong>上升</strong>的原因（经济独立需求增强）——考试常把"离婚率<strong>下降</strong>"混进选项当干扰（2023 年多选 E 项）。老年人方向相反：养老钱越厚、涨得越快，越提前退出劳动力队伍。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li>供给数量三因素"人、参、时"：人口总量、劳动力参与率、周平均工作时间；质量＝身体健康＋受教育和训练程度</li>
+<li>人口构成：劳动年龄内 6 类 / 劳动年龄外 3 类；就业人口＝适龄＋未成年＋老年（未成年、老年就业在"年龄外"框）；劳动力人口＝经济活动人口＝实际劳动力供给人口＝就业＋失业</li>
+<li>劳参率＝（就业＋失业）÷16 周岁以上总人口×100%；保留工资＝出来工作的最低心理价位；市场工资率越高劳参率越高</li>
+<li>收入效应与供给<strong>反</strong>方向（工资↑供给↓），替代效应<strong>同</strong>方向（工资↑供给↑），"收反替同"；低收入段替代胜、高收入段收入胜→个人劳动力供给曲线<strong>向后弯曲</strong></li>
+<li>市场供给曲线：右上（常见）/ 垂直（无弹性）/ 水平（无限弹性、欠发达国家）；供给弹性＝工时变动%÷工资率变动%，富＞1、缺＜1、单位＝1、无＝0、无限＝∞</li>
+<li>家庭生产理论：家庭物品是效用的直接来源；时间＝市场工作＋家庭生产；三问"买啥（效用最大）、咋造（时间/商品密集）、谁干（比较优势）"</li>
+<li>附加的劳动者效应~收入效应（衰退期全家上岗）；灰心丧气的劳动者效应~替代效应（悲观退出）；两者方向相反</li>
+<li>女性劳参率↑六因"钱升心变家务快，少生多离机会来"；老年人劳参率↓（养老金、社保福利涨得比工资快、私人养老金普及）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r11s2q1" data-answer="D" data-type="single"><span class="q-tag">2020·单选</span><div class="q-stem">某地区劳动力参与率为 80%，就业人口为 600 万，16 岁以上总人口为 1000 万。通过以上信息可以计算出（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 总人口 1250 万</button><button type="button" class="qopt" data-key="B">B. 劳动总人口 725 万</button><button type="button" class="qopt" data-key="C">C. 非就业人口 200 万</button><button type="button" class="qopt" data-key="D">D. 失业人口 200 万</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：劳参率＝（就业人口＋失业人口）÷16 岁以上总人口，就业＋失业即劳动力人口，可算出劳动力人口＝1000×80%＝800 万，失业人口＝800−600＝<strong>200 万</strong>，D 正确。16 岁以下人口未知，总人口无法推算，A 错误；劳动力人口是 800 万而非 725 万，B 错误；16 岁以上人口中的非就业人口＝1000−800＝200 万，但"非就业人口"若按全部总人口口径还包含 16 岁以下者，数值无法确定，C 不当选。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s2q2" data-answer="D" data-type="single"><span class="q-tag">2022·单选</span><div class="q-stem">下列人口统计指标，无法包含全部就业人口的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 实际劳动力供给人口</button><button type="button" class="qopt" data-key="B">B. 劳动力人口</button><button type="button" class="qopt" data-key="C">C. 经济活动人口</button><button type="button" class="qopt" data-key="D">D. 劳动年龄内人口</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：就业人口与失业人口之和统称"实际劳动力供给人口"或"经济活动人口"，有时简称"劳动力人口"——三个名字是同一批人，必含全部就业人口，A、B、C 排除。而<strong>未成年就业人口、老年就业人口属于劳动年龄外人口</strong>，"劳动年龄内人口"只含劳动适龄就业人口，装不下全部就业人口，D 当选。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s2q3" data-answer="D" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">关于劳动力供给中的收入效应和替代效应，说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 其他条件一定，工资率上升的替代效应会导致劳动力供给减少</button><button type="button" class="qopt" data-key="B">B. 工资上升的收入效应和替代效应会导致劳动力供给减少</button><button type="button" class="qopt" data-key="C">C. 工资下降的收入效应和替代效应会导致劳动力供给增加</button><button type="button" class="qopt" data-key="D">D. 其他条件一定，工资率下降的收入效应会导致劳动力供给增加</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：工资率上升时，收入效应使供给<strong>减少</strong>、替代效应使供给<strong>增加</strong>，两者作用方向相反——A 把替代效应方向说反了，B、C 把两种效应当成同方向，均错误。工资率下降的收入效应：收入变少→削减闲暇→供给时间<strong>增加</strong>，D 正确。锚点"收反替同"：收入效应与供给反方向，替代效应与供给同方向。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s2q4" data-answer="B" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">某地家政服务人员当前的市场工资为每小时 40 元，平均每天的劳动力总工时为 10 万小时。当工资水平提高到每小时 50 元时，平均每天的劳动力总工时为 12 万小时。该地家政服务人员的劳动力供给弹性是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 富有弹性的</button><button type="button" class="qopt" data-key="B">B. 缺乏弹性的</button><button type="button" class="qopt" data-key="C">C. 单位弹性的</button><button type="button" class="qopt" data-key="D">D. 无弹性的</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：供给弹性＝工时变动百分比÷工资率变动百分比＝[（12−10）÷10]÷[（50−40）÷40]＝20%÷25%＝<strong>0.8</strong>。0.8＜1，工时变动幅度小于工资变动幅度，属<strong>缺乏弹性</strong>。防坑：分子是工时（供给量）、分母是工资率，别倒置；与 1 比大小判断类型。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s2q5" data-answer="ABD" data-type="multi"><span class="q-tag">2018·多选</span><div class="q-stem">家庭生产理论认为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 家庭可以用时间密集型和商品密集型两种方式生产家庭物品</button><button type="button" class="qopt" data-key="B">B. 家庭的可支配时间可以划分为市场工作时间和家庭生产时间两大类</button><button type="button" class="qopt" data-key="C">C. 家庭的直接效用的来源是整个家庭获得的总劳动收入</button><button type="button" class="qopt" data-key="D">D. 家庭需要决定消费哪些家庭物品</button><button type="button" class="qopt" data-key="E">E. 家庭的劳动力供给行为是家庭成员劳动力供给行为的简单加总</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABD</div><div class="q-exp"><p>析：<strong>家庭物品是效用的直接来源</strong>，不是总劳动收入，C 错误；家庭内部分工遵循<strong>比较优势原理</strong>，家庭劳动力供给决策是家庭层面的最优安排，<strong>不是</strong>成员个体供给的简单加总，E 错误。A（两种生产方式）、B（时间两分法）、D（消费哪种家庭物品由效用最大决定）均为家庭生产理论的标准内容。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s2q6" data-answer="ABE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">一个国家或地区的劳动力供给质量主要取决于其劳动力队伍的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 受教育情况</button><button type="button" class="qopt" data-key="B">B. 身体健康状况</button><button type="button" class="qopt" data-key="C">C. 平均工资水平</button><button type="button" class="qopt" data-key="D">D. 劳动力流动率</button><button type="button" class="qopt" data-key="E">E. 接受在职培训或职业训练情况</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABE</div><div class="q-exp"><p>析：劳动力供给<strong>质量</strong>指劳动力队伍的<strong>身体健康状况</strong>以及<strong>受教育和训练的程度</strong>，表现为知识、技能、经验等水平——受教育（A）、健康（B）、在职培训/职业训练（E）当选。平均工资水平、劳动力流动率与"质量"维度无关（工资涉及价格、流动涉及数量与配置），C、D 排除。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力11_劳动力市场理论_第1节_劳动力市场概论.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 劳动力市场概论</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力11_劳动力市场理论_第3节_劳动力需求.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 劳动力需求</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

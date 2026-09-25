@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第七章 国民收入核算和简单的宏观经济模型 · 总需求和总供给 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第七章 国民收入核算和简单的宏观经济模型 · 总需求和总供给</h1><div class="subtitle">第 4 节 / 共 4 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 4/4</div><div class="sec-badge none" id="sec-badge" data-sec="b07s4">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟总需求六大影响因素的方向：<strong>价格总水平、利率、税收反方向</strong>；<strong>货币供给量、政府购买、预期同方向</strong> <span class="s3">★★★</span><span class="must">必考</span></li>
+<li>记住<strong>总需求曲线 AD 向右下方倾斜</strong>：只分析价格总水平与总需求的关系，横轴 Y、纵轴 P <span class="hot">高频考点</span><span class="must">必考</span></li>
+<li>记住三大效应——<strong>财富效应、利率效应、出口效应</strong>，条条与总需求<strong>反方向</strong>，差别只在中介渠道 <span class="hot">高频考点</span></li>
+<li>记住决定<strong>总供给</strong>的基本因素是<strong>价格和成本</strong>，预期也是重要影响因素 <span class="hot">高频考点</span></li>
+<li>一刀切分清<strong>长期总供给曲线（垂直于横轴）</strong>与<strong>短期总供给曲线（向右上方倾斜）</strong>；长期总供给只取决于劳动、资本、技术与经济体制 <span class="s3">★★★</span><span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、总需求</h2>
+<h3>1. 总需求的含义 <span class="hot">高频考点</span></h3>
+<p><strong>定义</strong>：在<strong>其他条件不变</strong>的情况下，在<strong>某一给定的价格水平</strong>上，一个国家或地区<strong>各种经济主体愿意购买的产品总量</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>&quot;愿意购买&quot;是关键词：</strong><p>总需求不是"实际买了多少"，而是"<strong>在这个价格水平上愿意买</strong>"的总量——它天生是和价格水平<strong>配对</strong>的概念：价格一变，愿意买的量就跟着变。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>西红柿 3 元一斤时你愿意买 2 斤，涨到 8 元只愿买半斤——"每个价格对应的愿意购买量"连成一条线，放到整个经济体的所有产品上，就是总需求。</p></div></div>
+<div class="section"><h3>2. 总需求的影响因素 <span class="hot">高频考点</span><span class="must">必考</span><span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>方向</th>
+<th>因素</th>
+<th>传导</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>反方向</strong></td>
+<td><strong>价格总水平</strong></td>
+<td>价格总水平下降 → 总需求上升（反之亦然）</td>
+</tr>
+<tr>
+<td>↑</td>
+<td><strong>利率</strong></td>
+<td>利率下降 → 企业投资和居民购买住宅及耐用消费品的数量增加 → 总需求增加</td>
+</tr>
+<tr>
+<td>↑</td>
+<td><strong>税收</strong></td>
+<td>税收减少 → 企业和居民的收入增加 → 总需求增加</td>
+</tr>
+<tr>
+<td><strong>同方向</strong></td>
+<td><strong>货币供给量</strong></td>
+<td>货币供给量增加 → 总需求增加</td>
+</tr>
+<tr>
+<td>↑</td>
+<td><strong>政府购买</strong></td>
+<td>政府购买增加 → 总需求增加</td>
+</tr>
+<tr>
+<td>↑</td>
+<td><strong>预期</strong></td>
+<td>企业预期利润增长 → 扩大投资；居民预期未来收入增长 → 增加消费</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>方向对照一句话：</strong><p><strong>"价利税，反着走；币购期，顺着流"</strong>——价格总水平、利率、税收与总需求<strong>反方向</strong>；货币供给量、政府购买、预期与总需求<strong>同方向</strong>。六个因素三反三同，各占一半，先归类再选。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>房贷利率从 5% 降到 3.5%：月供变少，原本观望的家庭下单买房，企业也敢贷款扩产 → 总需求增加——"利率下降、总需求上升"，这就是反方向的日常版。反过来看政府购买：政府多修一条路，总需求就多一块，同方向。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 总需求方向口诀</div><p><strong>"价利税反，币购期同"</strong>——见到因素先归类：价格总水平、利率、税收 → 反向；货币供给量、政府购买、预期 → 同向。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 清单之外皆干扰</div><p>教材列的影响总需求的因素就是这六个。<strong>财政转移支付</strong>不在清单里——见"不属于影响总需求的因素"要会挑它；而"消费税"属于<strong>税收</strong>范畴，在清单内。做题先默写"价利税、币购期"六个字，再对选项，不凭感觉。</p></div></div>
+<div class="section"><h3>3. 总需求曲线 <span class="hot">高频考点</span></h3>
+<p>在宏观经济学中，为了说明价格总水平的变化，<strong>假定其他因素不变</strong>，<strong>只分析价格总水平与总需求的关系</strong>，就形成了<strong>总需求曲线 AD</strong>。<strong>总需求曲线向右下方倾斜</strong>；横坐标 Y 为<strong>总产出</strong>，纵坐标 P 为<strong>价格总水平</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>点动还是线动：</strong><p>价格总水平变动 → 沿着 AD 曲线<strong>上下滑动</strong>（点移动）；其他因素（利率、税收、货币供给量等）变动 → <strong>整条 AD 曲线平移</strong>（线移动）。AD 曲线只画"价格总水平—总需求"这一对关系，别把"利率与总需求"之类的也当成 AD 曲线。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>油价等整体物价上涨（价格总水平上升）→ 全社会愿意购买的总量减少，沿着 AD 曲线向左上方滑动；央行降息（其他因素变了）→ 同样的价格水平下大家更愿意买，整条 AD 曲线向右平移。</p></div></div>
+<div class="section"><h3>4. 价格总水平变动的三大效应 <span class="hot">高频考点</span><span class="must">必考</span><span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>效应</th>
+<th>传导渠道</th>
+<th>与总需求的关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>财富效应</strong></td>
+<td>价格总水平变动 → 居民<strong>收入及财富的实际购买力</strong>反方向变动 → 总需求变动</td>
+<td>反方向</td>
+</tr>
+<tr>
+<td><strong>利率效应</strong></td>
+<td>价格总水平变动 → <strong>利率变化</strong> → 进而与投资、消费及总需求反方向变化</td>
+<td>反方向</td>
+</tr>
+<tr>
+<td><strong>出口效应</strong></td>
+<td>价格总水平变动 → <strong>汇率变动</strong> → 影响<strong>出口需求</strong>变化 → 与总需求反方向变化</td>
+<td>反方向</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三条路一个方向：</strong><p>价格涨 → 手里的钱购买力缩水（财富）、借钱成本抬升（利率）、本国货变贵出口受阻（出口）→ 三条路都通向"总需求减少"。方向<strong>全部反</strong>，差别只在<strong>中介渠道</strong>：购买力、利率、汇率。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>物价普遍上涨：存款的实际购买力缩水，老百姓捂紧钱包（财富效应）；资金紧张、利率走高，企业削减投资（利率效应）；本国商品卖到国外变贵，出口订单下滑（出口效应）——三条渠道同时给总需求"降温"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三效应口诀</div><p><strong>"财看购买力，利看借钱贵，出看汇率贵，三路全反向"</strong>——见"汇率→出口需求"选<strong>出口效应</strong>；见"实际购买力"选<strong>财富效应</strong>；见"引起利率变化"选<strong>利率效应</strong>。</p></div></div>
+<div class="section"><h2>二、总供给</h2>
+<h3>1. 总供给的含义与影响因素 <span class="hot">高频考点</span><span class="must">必考</span><span class="s3">★★★</span></h3>
+<p><strong>定义</strong>：在<strong>其他条件不变</strong>的情况下，<strong>一定时期内</strong>在<strong>一定价格水平</strong>上，一个国家或地区的<strong>生产者愿意向市场提供的产品总量</strong>。</p>
+<p><strong>总供给的变动主要取决于企业利润水平，而利润水平又取决于市场价格和生产成本</strong>——因此，<strong>决定总供给的基本因素是价格和成本</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>因素</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>基本因素</strong></td>
+<td><strong>价格、成本</strong></td>
+<td>直接决定利润水平 → 决定总供给</td>
+</tr>
+<tr>
+<td>其他因素</td>
+<td>技术进步、工资水平变动、能源及原材料价格变动等</td>
+<td>都是<strong>通过对成本的影响</strong>影响企业利润水平，从而影响总供给</td>
+</tr>
+<tr>
+<td>重要影响因素</td>
+<td><strong>预期</strong></td>
+<td>企业对未来利润的预期下降 → 减少生产 → 总供给减少</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一切为了利润：</strong><p>总供给的逻辑链只有一条：<strong>利润＝价格−成本</strong>。技术、工资、能源原材料这些"其他因素"都是<strong>借成本的道</strong>来影响利润的；预期则是提前按下生产暂停键的"心理因素"。题目问"基本因素"，只认价格和成本两个。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>铜价大涨，电缆厂成本飙升、利润变薄 → 减产（成本影响总供给）；电缆售价同步上调、利润恢复 → 又愿意多产（价格影响总供给）；若老板预期明年行情更差 → 现在就压缩生产（预期影响总供给）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 总供给因素口诀</div><p><strong>"价本定供给，其余借道成本"</strong>——基本因素只有价格和成本；技术、工资、能源原材料都通过成本起作用；预期是重要影响因素。</p></div></div>
+<div class="section"><h3>2. 总供给曲线：长短期两副面孔 <span class="hot">高频考点</span><span class="must">必考</span><span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>曲线</th>
+<th>形状</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>长期总供给曲线</strong></td>
+<td><strong>垂直于横轴的直线</strong></td>
+<td>从长期看，总供给变动<strong>与价格总水平无关</strong>；长期总供给只取决于<strong>劳动、资本与技术，以及经济体制</strong>等因素</td>
+</tr>
+<tr>
+<td><strong>短期总供给曲线</strong></td>
+<td><strong>向右上方倾斜</strong></td>
+<td>短期内价格变动会影响生产者愿意提供的数量</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>长期&quot;不看价格&quot;：</strong><p>长期总供给是经济的"产能天花板"，由劳动、资本、技术、经济体制这些<strong>硬实力</strong>决定——价格再怎么涨，天花板不跟着涨。短期则不同，价格信号能左右企业愿意生产的量，所以短期曲线随价格向上走。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>长期总供给像"楼层天花板"：不管今天物价高低，楼就盖这么高（劳动、资本、技术决定）；短期总供给像"上楼的楼梯"：价格越往上走，企业越愿意多生产（向右上方倾斜）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 总供给曲线口诀</div><p><strong>"长期一根筋（垂直横轴），短期向上爬（右上倾斜）"</strong>——长期只认劳动、资本、技术与经济体制；短期才搭价格的车。</p></div></div>
+<div class="section"><h3>3. 总供求模型：需求拉动型通货膨胀的基本模型 <span class="hot">高频考点</span></h3>
+<ul>
+<li><strong>长期</strong>：总供给曲线是一条<strong>垂直于横轴</strong>的直线 → <strong>影响价格总水平的是总需求</strong>；</li>
+<li><strong>短期</strong>：假定<strong>总供给曲线不变</strong>，<strong>总需求的增长</strong>使总需求曲线<strong>向右平行移动</strong> → <strong>价格总水平上涨</strong>——这就是<strong>需求拉动型通货膨胀的基本模型</strong>。</li>
+</ul></div>
+<div class="section"><div class="keypoint"><strong>两个&quot;谁说了算&quot;：</strong><p>长期：总供给定产量、<strong>总需求定价格</strong>；短期：总需求一膨胀，价格就上涨（需求拉动通胀）。模型里 <strong>AD 右移是"元凶"</strong>，短期总供给曲线是背景板。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>经济过热、信贷宽松，总需求猛增 → AD 曲线向右平移，短期供给跟不上 → 物价普遍上涨。"钱追货、货涨价"，就是需求拉动型通货膨胀的基本模型。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 总供求模型口诀</div><p><strong>"长期价格看需求，短期需求拉通胀"</strong>——长期垂直供给下价格由总需求决定；短期 AD 右移推高价格总水平＝需求拉动型通胀的基本模型。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 曲线方向总复习（方向对照类必看）</div><ul>
+<li>总需求曲线：<strong>向右下方倾斜</strong>（价格↑ → 总需求↓）；</li>
+<li>短期总供给曲线：<strong>向右上方倾斜</strong>；</li>
+<li>长期总供给曲线：<strong>垂直于横轴</strong>（与价格总水平无关）——"长期总供给曲线向右上方倾斜""总供给曲线向右下方倾斜"都是错的；</li>
+<li>总需求增长<strong>慢于</strong>总供给增长不会推高价格——"总需求增长使 AD 右移、价格上涨"的前提是短期供给曲线不变。
+做题先把三条曲线的形状默出来再对选项，方向题"觉得对"不算数。</li>
+</ul></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>总需求</strong>：其他条件不变、给定价格水平上各种经济主体<strong>愿意购买</strong>的产品总量</li>
+<li><strong>六因素方向</strong>："价利税反，币购期同"（价格总水平/利率/税收反向；货币供给量/政府购买/预期同向）</li>
+<li><strong>AD 曲线</strong>：只分析价格总水平与总需求，<strong>向右下方倾斜</strong>；横轴 Y 总产出、纵轴 P 价格总水平</li>
+<li><strong>三效应</strong>：财富（购买力）、利率（利率）、出口（汇率）——与总需求全<strong>反方向</strong></li>
+<li><strong>总供给</strong>：一定时期、一定价格水平上生产者<strong>愿意提供</strong>的产品总量；基本因素=<strong>价格和成本</strong>；技术/工资/能源借道成本；预期重要</li>
+<li><strong>总供给曲线</strong>：长期<strong>垂直横轴</strong>（只取决于劳动、资本、技术、经济体制）；短期<strong>向右上方倾斜</strong></li>
+<li><strong>总供求模型</strong>：长期影响价格总水平的是总需求；短期 AD 右移→价格上涨＝<strong>需求拉动型通胀</strong>的基本模型</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b07s4q1" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">价格总水平通过影响汇率从而影响出口需求变化，导致净出口与总需求反方向变化的现象，称为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 财富效应</button><button type="button" class="qopt" data-key="B">B. 出口效应</button><button type="button" class="qopt" data-key="C">C. 收入—物价效应</button><button type="button" class="qopt" data-key="D">D. 汇率—利率效应</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：<strong>出口效应</strong>＝价格总水平通过<strong>汇率</strong>变动影响<strong>出口需求</strong>的变化，并与总需求成反方向变化（B 对）。财富效应走"实际购买力"渠道（A），利率效应走"利率→投资消费"渠道；C、D 均为拼凑的名目——三个效应的差别就在中介渠道：购买力、利率、汇率。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s4q2" data-answer="C" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">下列因素中，不属于影响总需求的因素的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 利率</button><button type="button" class="qopt" data-key="B">B. 货币供给量</button><button type="button" class="qopt" data-key="C">C. 财政转移支付</button><button type="button" class="qopt" data-key="D">D. 消费税</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：教材列的影响总需求的因素＝价格总水平、利率、税收、货币供给量、政府购买、预期。A 利率、B 货币供给量都在列；D 消费税属于<strong>税收</strong>范畴，也在列；<strong>财政转移支付</strong>未被列为影响总需求的因素——别把"财政手段"与"总需求因素"画等号。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s4q3" data-answer="ABE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列影响总需求的因素中，与总需求成反方向变动的因素有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 利率</button><button type="button" class="qopt" data-key="B">B. 税收</button><button type="button" class="qopt" data-key="C">C. 政府购买</button><button type="button" class="qopt" data-key="D">D. 货币供给量</button><button type="button" class="qopt" data-key="E">E. 价格总水平</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABE</div><div class="q-exp"><p>析：反方向的是<strong>价格总水平、利率、税收</strong>（A、B、E）——价升需求降、利升投资消费降、税增收入降。同方向的是货币供给量（D）、政府购买（C）和预期。口诀"价利税反，币购期同"直接对号。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s4q4" data-answer="D" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">在宏观经济学中，假定其他因素不变的情况下，总需求曲线 AD 指的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 货币供给量与总需求的关系</button><button type="button" class="qopt" data-key="B">B. 利率与总需求的关系</button><button type="button" class="qopt" data-key="C">C. 税收水平与总需求的关系</button><button type="button" class="qopt" data-key="D">D. 价格总水平与总需求的关系</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：总需求曲线只分析<strong>价格总水平</strong>与总需求的对应关系（其他因素假定不变），纵轴 P、横轴 Y（D 对）。A、B、C 都是"其他因素"——它们变动引起的是<strong>整条曲线平移</strong>，而不是 AD 曲线本身。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s4q5" data-answer="AB" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">决定总供给的基本因素是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 成本</button><button type="button" class="qopt" data-key="B">B. 价格</button><button type="button" class="qopt" data-key="C">C. 技术进步</button><button type="button" class="qopt" data-key="D">D. 企业的预期</button><button type="button" class="qopt" data-key="E">E. 工资水平变动</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AB</div><div class="q-exp"><p>析：总供给取决于企业利润水平，利润取决于市场价格和生产成本，所以<strong>基本因素就是价格和成本</strong>（A、B）。技术进步（C）、工资水平变动（E）是<strong>通过影响成本</strong>间接起作用的"其他因素"；企业预期（D）是重要影响因素——但题目问"基本因素"，就只认价格与成本两个。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s4q6" data-answer="CDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列经济因素中，对长期总供给有决定性影响的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 政府购买</button><button type="button" class="qopt" data-key="B">B. 价格总水平</button><button type="button" class="qopt" data-key="C">C. 劳动</button><button type="button" class="qopt" data-key="D">D. 资本</button><button type="button" class="qopt" data-key="E">E. 技术</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CDE</div><div class="q-exp"><p>析：长期总供给曲线<strong>垂直于横轴</strong>，总供给变动与价格总水平无关（B 不选），长期总供给只取决于<strong>劳动、资本与技术，以及经济体制等因素</strong>（C、D、E）。政府购买（A）是总需求侧的因素，与长期总供给无关。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础07_国民收入核算和简单的宏观经济模型_第3节_消费、储蓄和投资.html"><span class="nav-label">上一节</span><span class="nav-title">第3节 消费、储蓄和投资</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

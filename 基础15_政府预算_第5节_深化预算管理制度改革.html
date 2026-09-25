@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十五章 政府预算 · 深化预算管理制度改革 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第二部分 财政</span><h1>第十五章 政府预算 · 深化预算管理制度改革</h1><div class="subtitle">第 5 节 / 共 5 节 · 预计学习时长 35 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 5/5</div><div class="sec-badge none" id="sec-badge" data-sec="b15s5">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背出深化预算管理制度改革的<strong>六大方面</strong>及各自目标（收入统筹→保障能力、支出管理→标准化、编制管理→完整性、执行绩效→约束力、风险防控→可持续性、透明度→信息化） <span class="s3">★★★</span></li>
+<li>记住"三保"（保基本民生、保工资、保运转）优先顺序与"严禁将非税收入与征收单位支出挂钩"一正一反两个考点 <span class="hot">高频考点</span></li>
+<li>记住地方政府债务分类纳入预算：一般债务→一般公共预算、专项债务→政府性基金预算、规模实行限额管理 <span class="hot">高频考点</span></li>
+<li>知道政府财务报告的两大构成（综合＋部门）与政府综合财务报告的编制主体 <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、深化改革的六大方面</h2>
+<h3>1. 六大任务框架 <span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>方面</th>
+<th>主要内容</th>
+<th>目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①加大预算<strong>收入统筹</strong>力度</td>
+<td>规范政府收入预算管理；加强政府性资源统筹管理；强化部门和单位收入统筹管理；盘活各类存量资源</td>
+<td>增强财政<strong>保障能力</strong></td>
+</tr>
+<tr>
+<td>②规范预算<strong>支出</strong>管理</td>
+<td>加强重大决策部署财力保障；合理安排支出预算规模；大力优化财政支出结构；完善财政资金直达机制；推进支出标准体系建设</td>
+<td>推进财政支出<strong>标准化</strong></td>
+</tr>
+<tr>
+<td>③严格预算<strong>编制</strong>管理</td>
+<td>改进政府预算编制；加强跨年度预算平衡；加强部门和单位预算管理；完善政府财务报告体系</td>
+<td>增强财政预算<strong>完整性</strong></td>
+</tr>
+<tr>
+<td>④强化预算<strong>执行和绩效</strong>管理</td>
+<td>强化预算对执行的控制；推动预算绩效管理提质增效；优化国库集中收付管理；拓展政府采购政策功能</td>
+<td>增强预算<strong>约束力</strong></td>
+</tr>
+<tr>
+<td>⑤加强<strong>风险</strong>防控</td>
+<td>健全地方政府依法适度举债机制；防范化解地方政府隐性债务风险；防范化解财政运行风险隐患</td>
+<td>增强财政<strong>可持续性</strong></td>
+</tr>
+<tr>
+<td>⑥增强财政<strong>透明度</strong></td>
+<td>改进预决算公开；发挥多种监督方式的协同效应；实现中央和地方财政系统信息贯通；推进部门间预算信息互联共享</td>
+<td>提高预算管理<strong>信息化水平</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>六个&quot;方面→目标&quot;的配对：</strong><p>收入统筹→<strong>保障能力</strong>；支出管理→<strong>标准化</strong>；编制管理→<strong>完整性</strong>；执行绩效→<strong>约束力</strong>；风险防控→<strong>可持续性</strong>；透明度→<strong>信息化水平</strong>。多选题"深化改革的内容包括"从六个方框里挑细项，不属于六框的都是干扰项。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>把改革想象成六个抽屉：收钱、花钱、编账、执行、防险、晒账——每个抽屉上贴着目标标签。做题先判断选项说的是哪个抽屉的事，再核对标签有没有被偷换。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 六大方面口诀</div><p><strong>"收保、支标、编全、执束、险续、透信"</strong>——六个字组连背：收入统筹保能力、支出管理推标准、编制管理保完整、执行绩效强约束、防控风险可持续、公开透明促信息。</p></div></div>
+<div class="section"><h2>二、重点细目与关联考点</h2>
+<h3>2. 支出管理与"三保" <span class="hot">高频考点</span></h3>
+<p>合理安排支出预算规模、优化支出结构中的几条硬要求：<strong>清理压缩各种福利性、普惠性、基数化奖励</strong>；不折不扣落实<strong>过紧日子</strong>要求，厉行节约办一切事业，建立<strong>节约型财政保障机制</strong>，精打细算、严控一般性支出；严格控制竞争性领域财政投入，强化对具有正外部性创新发展的支持；各级预算安排要突出重点，坚持"<strong>三保</strong>"（<strong>保基本民生、保工资、保运转</strong>）支出在财政支出中的<strong>优先顺序</strong>，坚决兜住"三保"底线，不留硬缺口；<strong>严禁将政府非税收入与征收单位支出挂钩</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>正面要求</th>
+<th>反面禁区</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清理压缩各种福利性、普惠性、基数化奖励</td>
+<td><strong>严禁</strong>将政府非税收入与征收单位支出挂钩</td>
+</tr>
+<tr>
+<td>建立节约型财政保障机制、严控一般性支出</td>
+<td><strong>严格控制</strong>竞争性领域财政投入</td>
+</tr>
+<tr>
+<td>坚持"三保"支出优先顺序，不留硬缺口</td>
+<td>——</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>&quot;三保&quot;三个词固定：</strong><p>三保＝<strong>保基本民生、保工资、保运转</strong>——用词和顺序都固定，多选常拆掉一个词或换个说法当干扰项。另一侧"严禁挂钩"（政府非税收入与征收单位支出）是错误选项的固定产地——题干问"正确的有"，凡把"严禁"改成"实行挂钩"的必错。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>如果允许收费站把过路费留下来发奖金，大家就会拼命设卡收费——"严禁将非税收入与征收单位支出挂钩"就是堵这个口子：收归收、支归支，两条线彻底分开。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三保口诀</div><p><strong>"民生工资和运转，三保优先兜底线"</strong>。</p></div></div>
+<div class="section"><h3>3. 地方政府债务与风险防控 <span class="hot">高频考点</span></h3>
+<p>加强风险防控、增强财政可持续性包括：<strong>健全地方政府依法适度举债机制</strong>；<strong>防范化解地方政府隐性债务风险</strong>；<strong>防范化解财政运行风险隐患</strong>。与债务预算管理配套的要点：地方政府债务规模实行<strong>限额管理</strong>，举债不得突破批准的限额；债务<strong>分类纳入预算管理</strong>——<strong>一般债务</strong>通过发行<strong>一般债券</strong>融资，纳入<strong>一般公共预算</strong>管理；<strong>专项债务</strong>通过发行<strong>专项债券</strong>融资，纳入<strong>政府性基金预算</strong>管理。</p>
+<table>
+<thead>
+<tr>
+<th>债务类型</th>
+<th>融资方式</th>
+<th>纳入哪本预算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>一般债务</strong></td>
+<td>发行一般债券</td>
+<td><strong>一般公共预算</strong></td>
+</tr>
+<tr>
+<td><strong>专项债务</strong></td>
+<td>发行专项债券</td>
+<td><strong>政府性基金预算</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一般对一般，专项对基金：</strong><p>"一般债务→一般公共预算、专项债务→政府性基金预算"是对应关系题的答案库；"限额管理"是单选考点——举债<strong>不得突破批准的限额</strong>。隐性债务不在法定限额管理之内，对待它的方向是"<strong>防范化解</strong>"，不是"纳入限额"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>修市政道路（没有直接收益）用一般债券、进一般公共预算还账；建收费的高速公路（有项目收益）用专项债券、进政府性基金预算用项目收益偿还——哪种钱走哪本账，不能混。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 债务口诀</div><p><strong>"一般进一般，专项进基金，限额不能破，隐性要化解"</strong>。</p></div></div>
+<div class="section"><h3>4. 完善政府财务报告体系</h3>
+<p>严格预算编制管理、增强财政预算完整性的措施之一是"<strong>完善政府财务报告体系</strong>"。政府财务报告包括<strong>政府综合财务报告</strong>和<strong>政府部门财务报告</strong>两类。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>编制主体</th>
+<th>反映内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>政府综合财务报告</strong></td>
+<td><strong>政府财政部门</strong></td>
+<td><strong>各级政府整体</strong>财务状况、运行情况和<strong>财政中长期可持续性</strong></td>
+</tr>
+<tr>
+<td><strong>政府部门财务报告</strong></td>
+<td>各政府部门</td>
+<td>本部门的财务收支情况</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>综合报告三要素：</strong><p>编制主体（政府<strong>财政部门</strong>）＋反映对象（<strong>各级政府整体</strong>）＋内容（财务状况、运行情况、<strong>财政中长期可持续性</strong>）。政府财务报告只分"综合＋部门"两类——预算报告、决算报告属于预算决算体系，会计报表只是编制财务报告的基础资料，都<strong>不是</strong>政府财务报告的构成。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>财政部门站在全政府角度写"大报告"（综合财务报告），各部门各自写"小报告"（部门财务报告）——大报告汇总小报告，回答"政府家底厚不厚、能撑多久"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 财务报告口诀</div><p><strong>"综合加部门，财政编综合；状况运行可持续"</strong>。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>六大方面</strong>：收入统筹→保障能力／支出管理→标准化／编制管理→完整性／执行绩效→约束力／风险防控→可持续性／透明度→信息化（"收保、支标、编全、执束、险续、透信"）</li>
+<li><strong>硬要求</strong>：清理压缩福利性、普惠性、基数化奖励；节约型财政保障机制；"三保"＝保基本民生、保工资、保运转优先；<strong>严禁</strong>非税收入与征收单位支出挂钩</li>
+<li><strong>地方债</strong>：限额管理；一般债务→一般公共预算，专项债务→政府性基金预算；防范化解隐性债务风险</li>
+<li><strong>财务报告</strong>：政府综合财务报告（财政部门编，反映各级政府整体财务状况、运行情况、财政中长期可持续性）＋政府部门财务报告</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b15s5q1" data-answer="ABCE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">当前，深化预算管理制度改革的主要内容包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 清理压缩各种福利性、普惠性、基数化奖励</button><button type="button" class="qopt" data-key="B">B. 建立节约型财政保障机制</button><button type="button" class="qopt" data-key="C">C. 对政府全部收入和支出实行国库集中收付管理</button><button type="button" class="qopt" data-key="D">D. 将政府非税收入与征收单位支出挂钩</button><button type="button" class="qopt" data-key="E">E. 坚持&quot;三保&quot;（保基本民生、保工资、保运转）支出在财政支出中的优先顺序</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：A 对——合理安排支出预算规模要求清理压缩各种福利性、普惠性、基数化奖励；B 对——落实过紧日子要求、建立节约型财政保障机制；C 对——优化国库集中收付管理，对政府<strong>全部</strong>收入和支出实行国库集中收付管理；E 对——坚持"三保"支出优先顺序，兜住底线、不留硬缺口。D 错——是"<strong>严禁</strong>将政府非税收入与征收单位支出挂钩"，选项把禁令改成了"实行"，方向正好相反。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s5q2" data-answer="CD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">纳入地方预算管理的地方政府债务包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 隐性债务</button><button type="button" class="qopt" data-key="B">B. 或有债务</button><button type="button" class="qopt" data-key="C">C. 专项债务</button><button type="button" class="qopt" data-key="D">D. 一般债务</button><button type="button" class="qopt" data-key="E">E. 显性债务</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CD</div><div class="q-exp"><p>析：纳入地方预算管理的地方政府债务分两类——<strong>一般债务</strong>（纳入一般公共预算管理）和<strong>专项债务</strong>（纳入政府性基金预算管理）（C、D）。A 隐性债务不在法定限额和预算管理之内，对待它的方向是"防范化解"；B"或有债务"、E"显性债务"都不是规范的分类名称。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s5q3" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">地方政府专项债务通过发行专项债券融资，纳入预算管理的类型是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 一般公共预算</button><button type="button" class="qopt" data-key="B">B. 地方政府债务预算</button><button type="button" class="qopt" data-key="C">C. 政府性基金预算</button><button type="button" class="qopt" data-key="D">D. 国有资本经营预算</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：<strong>专项债务</strong>通过发行专项债券融资，纳入<strong>政府性基金预算</strong>管理。A 错——一般公共预算对应的是<strong>一般债务</strong>；B 错——不存在"地方政府债务预算"这本预算；D 错——国有资本经营预算是国家以所有者身份取得国有资本收益并进行分配的收支预算，与地方专项债务无关。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s5q4" data-answer="AB" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">政府财务报告包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 政府综合财务报告</button><button type="button" class="qopt" data-key="B">B. 政府部门财务报告</button><button type="button" class="qopt" data-key="C">C. 政府预算报告</button><button type="button" class="qopt" data-key="D">D. 政府决算报告</button><button type="button" class="qopt" data-key="E">E. 政府会计报表</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AB</div><div class="q-exp"><p>析：政府财务报告包括<strong>政府综合财务报告</strong>和<strong>政府部门财务报告</strong>两类（A、B）。C 预算报告、D 决算报告属于预算决算体系，不是财务报告；E 会计报表是编制财务报告的<strong>基础资料</strong>，本身不是一类政府财务报告。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础15_政府预算_第4节_我国政府预算编制和执行制度.html"><span class="nav-label">上一节</span><span class="nav-title">第4节 我国政府预算编制和执行制度</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

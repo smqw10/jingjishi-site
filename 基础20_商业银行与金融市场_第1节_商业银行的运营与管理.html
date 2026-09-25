@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十章 商业银行与金融市场 · 商业银行的运营与管理 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第三部分 货币与金融</span><h1>第二十章 商业银行与金融市场 · 商业银行的运营与管理</h1><div class="subtitle">第 1 节 / 共 2 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 1/2</div><div class="sec-badge none" id="sec-badge" data-sec="b20s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住商业银行的定义，会用"三组比较"一刀切分商业银行的性质 <span class="hot">高频考点</span></li>
+<li>背熟三大职能：信用中介（最基本）、支付中介、信用创造，见"化货币为资本"秒选信用中介 <span class="must">必考</span></li>
+<li>分清组织形式的两套分类标准：按机构设置（单一/总分行）、按业务经营范围（专业化/综合化） <span class="hot">高频考点</span></li>
+<li>能把一笔业务准确扔进负债、资产、中间业务三个筐，借款业务五种不漏 <span class="must">必考</span></li>
+<li>记牢存款保险制度：保什么、不保什么、50 万限额怎么赔、基金从哪来到哪去 <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、商业银行的内涵与性质</h2>
+<h3>1. 什么是商业银行</h3>
+<p><strong>商业银行</strong>也称为<strong>存款货币银行</strong>，是最典型的银行，是<strong>以营利为目的</strong>，主要以<strong>吸收存款和发放贷款</strong>的形式为工商企业和个人提供融资服务并办理结算业务的<strong>金融企业</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>拆定义抓三个词：</strong><p>①<strong>以营利为目的</strong>——它是企业；②<strong>吸收存款＋发放贷款</strong>——它的主营业务；③<strong>金融企业</strong>——它的行业属性。这三个词正好对应下面三组性质比较，考试就爱拿它们跟别的机构比。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>商业银行就是个"资金二道贩子"：低价把大家手里的闲钱聚起来（付存款利息），高价借给缺钱的企业和个人（收贷款利息），赚的是利差，顺路还帮忙跑腿办结算——所以它既要营利，又是金融企业。</p></div></div>
+<div class="section"><h3>2. 商业银行的性质：三组比较 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>比较对象</th>
+<th>结论（商业银行是什么）</th>
+<th>关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与一般工商企业比较</td>
+<td>是<strong>金融企业</strong>，承担着<strong>资金融通</strong>职能的企业</td>
+<td>经营的对象是资金，不是普通商品</td>
+</tr>
+<tr>
+<td>与中央银行、政策性银行比较</td>
+<td>是<strong>以营利为目的</strong>的企业，经营目标是<strong>利润最大化</strong></td>
+<td>央行、政策性银行不以营利为目的</td>
+</tr>
+<tr>
+<td>与非银行金融机构比较</td>
+<td><strong>经营范围广泛</strong>，是<strong>唯一能够吸收活期存款</strong>的金融机构</td>
+<td>活期存款＝商业银行独一份</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 性质三比口诀</div><p><strong>"一比是金融，二比要营利，三比独活期"</strong>——对工商企业比出"金融"属性，对央行/政策性银行比出"营利"目标，对非银行金融机构比出"唯一吸收活期存款"。见"资金融通"选第一组，见"利润最大化"选第二组，见"活期存款"选第三组。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：谁是&quot;以营利为目的的银行&quot;</div><p>选择题给一串银行名单让你挑"以营利为目的的银行"：选<strong>商业银行</strong>（如中国农业银行）。<strong>中国人民银行</strong>是中央银行，<strong>中国农业发展银行、中国进出口银行</strong>是政策性银行——都不是。这个对比同时覆盖"性质"和"机构常识"两个考点，一题两用。</p></div></div>
+<div class="section"><h2>二、商业银行的职能与组织形式</h2>
+<h3>1. 三大职能：信用中介、支付中介、信用创造 <span class="must">必考</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>职能</th>
+<th>地位</th>
+<th>内容</th>
+<th>标志性说法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>信用中介</strong></td>
+<td><strong>最基本</strong></td>
+<td><strong>吸收存款、发放贷款</strong>，将集中起来的资金贷放给资金短缺部门</td>
+<td>发挥着<strong>化货币为资本</strong>的作用</td>
+</tr>
+<tr>
+<td><strong>支付中介</strong></td>
+<td>—</td>
+<td>接受客户委托，为工商企业办理与货币运动有关的<strong>技术性业务</strong>，如<strong>汇兑、非现金结算</strong>等</td>
+<td>企业的<strong>总会计、总出纳</strong>，社会的<strong>总账房</strong></td>
+</tr>
+<tr>
+<td><strong>信用创造</strong></td>
+<td>—</td>
+<td><strong>发行信用工具</strong>，满足流通界对流通手段和支付手段的需要</td>
+<td>使银行可以<strong>超出自有资本与吸收资本的总额而扩张信用</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>&quot;最基本&quot;只贴在信用中介脸上：</strong><p>考试问"商业银行最基本的职能"，答案只有<strong>信用中介</strong>。支付中介再热闹（总账房）也只干"技术性业务"；信用创造是在信用中介的基础上派生出来的——先有存贷款，才谈得上创造信用。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 职能口诀</div><p><strong>"中介最基本，支付总账房，创造能扩张"</strong>——信用中介管存贷转化，支付中介管汇兑结算，信用创造管超资本扩张。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易混辨析：见&quot;化货币为资本&quot;选信用中介，别选信用创造</div><ul>
+<li>题干说"通过<strong>吸收存款和发放贷款</strong>，<strong>化货币为资本</strong>"→ <strong>信用中介</strong>（把闲置货币转化成能生息的资本）。</li>
+<li><strong>信用创造</strong>的关键词是"<strong>发行信用工具</strong>""<strong>超出自有资本与吸收资本的总额扩张信用</strong>"。</li>
+<li>"货币创造"这个词不在教材三大职能里，纯属干扰项。</li>
+</ul></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小区 100 户人家各存 1 万元（吸收存款），银行把这 100 万打包贷给开奶茶店的老板（发放贷款）——住户手里不生钱的"货币"变成了店里能赚利润的"资本"。这就是"化货币为资本"的画面感。</p></div></div>
+<div class="section"><h3>2. 商业银行的组织形式：两套分类标准 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>分类标准</th>
+<th>形式</th>
+<th>内容</th>
+<th>典型代表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按<strong>机构设置</strong>分类</td>
+<td><strong>单一银行制</strong></td>
+<td>商业银行只有一个<strong>单独的银行机构</strong>，<strong>不设分支机构</strong></td>
+<td>美国许多州立银行</td>
+</tr>
+<tr>
+<td>↑</td>
+<td><strong>总分行制</strong></td>
+<td>在总行之下设<strong>多层次的分支机构</strong>（总行→一级分行→二级分行→支行）</td>
+<td><strong>英国</strong>银行模式是典型代表，目前世界各国商业银行一般都采用</td>
+</tr>
+<tr>
+<td>按<strong>业务经营范围</strong>分类</td>
+<td><strong>专业化银行制</strong></td>
+<td>只能经营<strong>传统银行业务</strong>，即吸收存款和发放<strong>短期工商贷款</strong>（包括贴现商业票据）等业务；长期信用业务、证券投资业务、信托业务、保险业务等由专业性银行和非银行金融机构经营</td>
+<td>—</td>
+</tr>
+<tr>
+<td>↑</td>
+<td><strong>综合化银行制</strong></td>
+<td>金融管理当局对商业银行的经营范围和业务种类<strong>不作限制</strong>，可经营<strong>所有的商业性融资业务</strong>，为客户提供全方位金融服务</td>
+<td>又称"<strong>全能银行制</strong>"</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 组织形式口诀</div><p><strong>"机构分单总，业务分专综"</strong>——先看题目问的是哪套标准：问"机构设置/分支"→ 单一、总分行；问"业务范围"→ 专业化、综合化。见"全能银行制"→ 综合化；见"不设分支机构"→ 单一银行制；见"只能吸收存款、发放短期工商贷款"→ 专业化。</p></div></div>
+<div class="section"><h2>三、商业银行的三大业务 <span class="must">必考</span></h2>
+<h3>1. 负债业务：钱从哪来</h3>
+<p><strong>负债业务</strong>是形成商业银行<strong>资金来源</strong>的业务。其全部资金来源包括<strong>自有资金</strong>和<strong>吸收的外来资金</strong>两部分。</p>
+<table>
+<thead>
+<tr>
+<th>资金来源</th>
+<th>内容</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>自有资金</strong></td>
+<td>成立时发行股票所筹集的<strong>股本</strong>以及<strong>公积金、未分配利润</strong></td>
+<td>这部分也称为<strong>权益资本</strong></td>
+</tr>
+<tr>
+<td><strong>外来资金</strong></td>
+<td>①<strong>吸收存款</strong>：银行组织资金来源的<strong>主要业务</strong>；②<strong>借款业务</strong></td>
+<td>存款是主业，借款是补充</td>
+</tr>
+</tbody>
+</table>
+<p><strong>借款业务五种</strong>（多选必背）：<strong>再贴现或向中央银行借款、同业拆借、发行金融债券、国际货币市场借款、结算过程中的短期资金占用</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 负债口诀</div><p><strong>"自有权益外借入，借款五路要记全：贴现找央行、同业拆一拆、金融债券发一发、国际市场借一借、结算占用短一下"</strong>。注意分辨：吸收存款是负债业务的"主要业务"；"发行大额可转让存单"也属于吸收存款（负债），既不是借款业务更不是资产业务。</p></div></div>
+<div class="section"><h3>2. 资产业务：钱往哪去</h3>
+<p><strong>资产业务</strong>是商业银行将所聚集的货币资金<strong>加以运用</strong>的业务，是商业银行<strong>获得收益的主要业务</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>资产业务</th>
+<th>内容</th>
+<th>考点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>票据贴现</strong></td>
+<td>银行应客户要求，<strong>买进未到付款日期的票据</strong></td>
+<td>形式上是票据的买卖，<strong>实际上是信用业务</strong>——银行通过贴现<strong>间接贷款</strong>给票据持有人</td>
+</tr>
+<tr>
+<td><strong>贷款</strong></td>
+<td>在银行资产中的比重一般<strong>排在首位</strong></td>
+<td>三种分类见下表</td>
+</tr>
+<tr>
+<td><strong>投资业务</strong></td>
+<td>银行以其资金作为投资而<strong>持有各种有价证券</strong>的业务活动</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>贷款的三种分类</strong>（★★）：</p>
+<table>
+<thead>
+<tr>
+<th>分类标准</th>
+<th>类型</th>
+<th>界定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按<strong>归还期限</strong></td>
+<td>短期贷款</td>
+<td>期限在 <strong>1 年以内</strong></td>
+</tr>
+<tr>
+<td>↑</td>
+<td>中期贷款</td>
+<td>期限在 <strong>1～5 年</strong></td>
+</tr>
+<tr>
+<td>↑</td>
+<td>长期贷款</td>
+<td>期限在 <strong>5 年以上</strong></td>
+</tr>
+<tr>
+<td>按<strong>贷款条件</strong></td>
+<td>信用贷款</td>
+<td>以<strong>借款人信誉</strong>发放的贷款</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>担保贷款</td>
+<td>以<strong>特定抵押品作为担保</strong>的贷款，包括<strong>保证贷款、抵押贷款和质押贷款</strong></td>
+</tr>
+<tr>
+<td>按<strong>用途</strong></td>
+<td>资本贷款</td>
+<td>以设备更新改造或增添固定资产等为目的，<strong>投资性质</strong></td>
+</tr>
+<tr>
+<td>↑</td>
+<td>商业贷款</td>
+<td>以企业原材料购进、商品交易等为目的，<strong>生产或经营周转性质</strong></td>
+</tr>
+<tr>
+<td>↑</td>
+<td>消费贷款</td>
+<td>以消费为目的向<strong>个人</strong>发放的贷款</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 贷款分类口诀</div><p><strong>"期限短中长（1、5 两刀切），条件信加担（担保三兄弟：保证、抵押、质押），用途资商消"</strong>。见"信誉发放"→ 信用贷款；见"特定抵押品担保"→ 担保贷款；见"固定资产/更新改造"→ 资本贷款；见"原材料/商品交易"→ 商业贷款。</p></div></div>
+<div class="section"><h3>3. 中间业务：不用自己的钱，赚手续费</h3>
+<p><strong>中间业务</strong>：商业银行<strong>不使用自己的资金</strong>而为客户办理支付和其他委托事项，并从中<strong>收取手续费</strong>的业务，是商业银行作为"<strong>支付中介</strong>"而提供的金融服务，也称为<strong>无风险业务</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>中间业务</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>结算业务</strong></td>
+<td>结算有两种形式：<strong>现金结算</strong>和<strong>转账结算</strong>。银行提供的主要是<strong>转账结算</strong>（又称<strong>非现金结算</strong>）——将款项从付款单位账户划转到收款单位账户完成货币收付，并收取结算手续费</td>
+</tr>
+<tr>
+<td><strong>信托业务</strong></td>
+<td>信托部门接受客户委托，代为<strong>经营、管理或处理资金或其他财产</strong>，收取手续费；包括<strong>资金信托</strong>和<strong>财产信托</strong></td>
+</tr>
+<tr>
+<td><strong>租赁业务</strong></td>
+<td>银行作为<strong>出租人</strong>向客户提供租赁形式的业务；包括<strong>融资性租赁</strong>和<strong>经营性租赁</strong></td>
+</tr>
+<tr>
+<td><strong>代理业务</strong></td>
+<td>以<strong>代理人</strong>身份代客户办理双方议定的经济事务并收手续费，如受<strong>财政部门</strong>委托，<strong>代理发行和兑付国债</strong></td>
+</tr>
+<tr>
+<td><strong>咨询业务</strong></td>
+<td>为客户进行经济预测、投资项目可行性论证、企业财务状况分析等</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 中间业务口诀</div><p><strong>"结信租代咨，空手收手续费"</strong>——五个字对应结算、信托、租赁、代理、咨询。判断窍门：只要"银行没掏自己的钱、靠服务费挣钱"，就是中间业务。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三大业务一秒归筐（方向对照易反，务必盯方向）</div><ul>
+<li><strong>钱进来</strong>（存款、借款）→ <strong>负债</strong>；<strong>钱出去</strong>（贴现、贷款、证券投资）→ <strong>资产</strong>；<strong>光服务不掏钱</strong>（结算、信托、租赁、代理、咨询）→ <strong>中间</strong>。</li>
+<li>最爱考的一对方向：<strong>票据贴现是资产业务</strong>（银行垫钱买进未到期票据），<strong>再贴现是借款业务</strong>（银行拿票据向中央银行要钱）——同一个"贴现"，看谁找谁要钱，方向别反。</li>
+<li>受财政部委托<strong>代理发行和兑付国债</strong>是<strong>代理业务</strong>（中间业务），不是负债也不是资产。</li>
+</ul></div></div>
+<div class="section"><h2>四、商业银行的经营管理三原则 <span class="hot">高频考点</span></h2>
+<table>
+<thead>
+<tr>
+<th>原则</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>盈利性原则</strong></td>
+<td>在经营资产业务中，必须获得<strong>尽可能高的收益</strong></td>
+</tr>
+<tr>
+<td><strong>流动性原则</strong></td>
+<td>两层含义：①必须保有一定比例的<strong>现金或其他容易变现的资产</strong>；②<strong>取得现款</strong>的能力</td>
+</tr>
+<tr>
+<td><strong>安全性原则</strong></td>
+<td>在放款和投资等业务经营过程中，要能够<strong>按期收回本息</strong>，特别是要<strong>避免本金受损</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>三原则的关系（★★，方向易反）</strong>：商业银行资产的<strong>盈利性与流动性呈负相关</strong>；<strong>盈利性与安全性也呈负相关</strong>。</p></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三性的&quot;地位句&quot;：前提、条件、目标</div><p>三原则还有一个高频地位表述（银行从业与经济师考试通用）：<strong>安全性是经营的前提，流动性是实现盈利的条件，盈利性是经营的目标</strong>——三性本质上<strong>对立统一</strong>，共同保证商业银行正常有效经营。单选问"安全性/流动性/盈利性分别是前提、条件还是目标"，按这三句对号；问"三原则的关系"，答<strong>对立统一</strong>＋两条负相关。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 负相关口诀</div><p><strong>"盈高流安低"</strong>——盈利性越高，流动性和安全性往往越低（长期贷款利率高但变现难、坏账风险大；现金最流动最安全却几乎不生钱）。考试直接考"负相关/正相关"，把"负"字焊死，别反。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>银行手里 1 亿元：全放长期贷款——收益高（盈利性好），但想提前拿回来难（流动性差）、收不回本息的风险大（安全性差）；全囤现金——最流动最安全，收益却约等于零。三原则不可兼得，日常经营就是在中间找平衡。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 审题技巧</div><p>问"流动性原则要求"→ 选"保有一定比例的<strong>容易变现的资产</strong>"或"取得现款的能力"（两层含义）；问"三原则包括"→ 只认<strong>盈利性、流动性、安全性</strong>，"审慎性""计划性"之类都是编的。</p></div></div>
+<div class="section"><h2>五、存款保险制度 <span class="s3">★★★</span> <span class="must">必考</span></h2>
+<h3>1. 定义与投保范围</h3>
+<p><strong>存款保险制度</strong>：存款类金融机构根据其吸收存款的数额，按规定的保费率向存款保险机构投保，当存款机构发生经营危机<strong>无法满足存款人提款要求</strong>时，由存款保险机构向存款人<strong>偿付被保险存款</strong>，从而<strong>保护存款人利益、维护银行信用、稳定金融秩序</strong>的一种制度安排。</p>
+<table>
+<thead>
+<tr>
+<th>范围</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>投保机构包括</strong></td>
+<td>商业银行（含<strong>外商独资银行和中外合资银行</strong>）、<strong>农村合作银行</strong>、<strong>农村信用合作社</strong></td>
+</tr>
+<tr>
+<td><strong>被保险的存款</strong></td>
+<td>既包括<strong>人民币存款</strong>，也包括<strong>外币存款</strong></td>
+</tr>
+<tr>
+<td><strong>不包括</strong></td>
+<td>①金融机构<strong>同业存款</strong>；②投保机构<strong>高级管理人员在本投保机构的存款</strong>；③存款保险基金管理机构规定不予保险的其他存款；④<strong>外国银行在中国的分支机构</strong>以及<strong>中资银行海外分支机构</strong>的存款</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>存款人不交保费：</strong><p>存款保险制度的资金来源主要是<strong>金融机构按规定缴纳的保费</strong>——<strong>存款人并不需要交保费</strong>，保障是"白送"的。赔付主体也一并锁死：向存款人偿付被保险存款的是<strong>存款保险基金管理机构</strong>这个专门机构，<strong>不是中央银行直接赔付</strong>——单选题拿"中央银行"来冒充赔付主体，直接排除。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 保与不保口诀</div><p><strong>"本币外币都保，同业高管不保，外进中出不管"</strong>——"外进"＝外国银行在华分支机构的存款，"中出"＝中资银行海外分支机构的存款；再加上同业存款、高管在本机构的存款。农信社、农商行等吸收的居民存款（人民币＋外币）都在保障内。</p></div></div>
+<div class="section"><h3>2. 偿付限额：50 万元（会分步算赔款）</h3>
+<p>存款保险实行<strong>限额偿付</strong>，<strong>最高偿付限额为人民币 50 万元</strong>。</p>
+<ol>
+<li>同一存款人在<strong>同一家投保机构</strong>所有存款账户的<strong>本金和利息</strong>加起来在 50 万元以内的，<strong>全额赔付</strong>；<strong>超过 50 万元的部分</strong>，从该投保机构的<strong>清算财产中受偿</strong>——不是"不赔"，是换一条渠道受偿；</li>
+<li>50 万元的限额<strong>并不是固定不变</strong>的：中国人民银行会同国务院有关部门可以根据<strong>经济发展、存款结构变化、金融风险状况</strong>等因素调整，<strong>报国务院批准后公布执行</strong>。</li>
+</ol></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>第一步：本息合计 80 万元，先画出保障线 50 万元；
+第二步：50 万元以内 → 存款保险基金管理机构<strong>全额赔付</strong>；
+第三步：超出部分 80 − 50 ＝ 30（万元）→ <strong>不在保险赔付范围</strong>，只能从该投保机构的<strong>清算财产中受偿</strong>（能拿回多少看清算结果，可能打折）。
+易错提醒：限额按"<strong>同一人在同一家机构</strong>的<strong>本金＋利息合计</strong>"算——不是按单张存单算，也不是把人在多家银行的存款加总。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 数字考点三连（每条都出过坑）</div><p>①限额 <strong>50 万元</strong>，且是<strong>本金和利息</strong>合并计算；②超出部分 → <strong>从清算财产中受偿</strong>（千万别选"一律不予偿付"）；③限额<strong>可调整</strong>——央行会同国务院有关部门定，<strong>报国务院批准</strong>后公布，见"固定不变"必错。</p></div></div>
+<div class="section"><h3>3. 存款保险基金：来源与运用</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>来源</strong>（4 项）</td>
+<td>①投保机构交纳的<strong>保费</strong>；②在投保机构<strong>清算中分配的财产</strong>；③存款保险基金管理机构<strong>运用基金获得的收益</strong>；④其他合法收入</td>
+</tr>
+<tr>
+<td><strong>运用原则</strong></td>
+<td>遵循<strong>安全、流动、保值增值</strong>的原则</td>
+</tr>
+<tr>
+<td><strong>运用形式</strong>（限 3 类）</td>
+<td>①<strong>存放中国人民银行</strong>；②投资<strong>政府债券、中央银行票据、信用等级较高的金融债券及其他高等级债券</strong>；③<strong>国务院批准</strong>的其他资金运用形式</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 基金运用口诀</div><p><strong>"一存央行，二买高等级，三国务院批"</strong>——投资债券必须"信用等级<strong>较高</strong>"，选项里见"信用等级<strong>较低</strong>的金融债券"直接划掉。</p></div></div>
+<div class="section"><h3>4. 偿付情形</h3>
+<p>当存款类金融机构<strong>被接管、撤销或者破产</strong>时，存款人有权要求存款保险基金管理机构在规定的限额内，使用存款保险基金偿付被保险款项。具体情形包括：</p>
+<ol>
+<li>存款保险基金管理机构<strong>担任投保机构的接管组织</strong>；</li>
+<li>存款保险基金管理机构<strong>实施被撤销投保机构的清算</strong>；</li>
+<li><strong>人民法院裁定受理</strong>对投保机构的<strong>破产申请</strong>。</li>
+</ol></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 偿付三情形口诀</div><p><strong>"接管我来当，撤销我来清，破产法院认"</strong>——三个情形的主语都是"存款保险基金管理机构"（第三个由法院裁定触发）。</p></div></div>
+<div class="section"><h2>六、金融强国与强大的金融机构</h2>
+<p><strong>强大的金融机构</strong>是建设<strong>金融强国</strong>的<strong>六大核心要素</strong>之一。金融机构是金融体系的<strong>微观基础</strong>，推动金融高质量发展，必须要有一批强大的金融机构作为支撑。强大的金融机构内涵包括：</p>
+<ol>
+<li><strong>运营效率高</strong>；</li>
+<li><strong>抗风险能力强</strong>；</li>
+<li><strong>门类齐全</strong>；</li>
+<li><strong>具有全球布局能力和国际竞争力</strong>。</li>
+</ol></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 强机构四内涵口诀</div><p><strong>"效率高、抗风险、门类齐、全球打"</strong>——"可以发行货币"不属于内涵（发行货币是中央银行的特权，商业银行无权发行）。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>定义</strong>：存款货币银行；以营利为目的；吸收存款＋发放贷款＋办理结算的金融企业</li>
+<li><strong>性质三比</strong>：对工商企业＝金融企业（资金融通）；对央行/政策性银行＝营利、利润最大化；对非银行金融机构＝经营范围广、唯一吸收活期存款</li>
+<li><strong>三职能</strong>：信用中介（最基本，化货币为资本）；支付中介（汇兑、非现金结算；总会计总出纳总账房）；信用创造（发行信用工具，超出自有资本与吸收资本总额扩张信用）</li>
+<li><strong>组织形式</strong>：机构设置分单一银行制（不设分支，美国州立）/总分行制（英国典型，世界各国都用）；业务经营范围分专业化银行制（只干传统业务）/综合化银行制（全能银行制，不限经营范围）</li>
+<li><strong>负债</strong>＝自有资金（股本＋公积金＋未分配利润＝权益资本）＋外来资金（吸收存款为主业；借款五路：再贴现或向央行借款、同业拆借、发行金融债券、国际货币市场借款、结算过程中的短期资金占用）</li>
+<li><strong>资产</strong>＝票据贴现（买进未到期票据，实为信用业务）＋贷款（比重首位：期限短1/中1～5/长5＋；条件信用＋担保保证抵押质押；用途资本/商业/消费）＋投资（持有有价证券）</li>
+<li><strong>中间业务</strong>：不用自己的钱收手续费＝无风险业务＝支付中介服务；结信租代咨；代理发行兑付国债＝代理业务</li>
+<li><strong>三原则</strong>：盈利性、流动性（保有易变现资产＋取得现款能力）、安全性（按期收回本息、避免本金受损）；盈利性与流动性、安全性均<strong>负相关</strong>（盈高流安低）</li>
+<li><strong>存款保险</strong>：投保＝商行（含外商独资、中外合资）＋农村合作银行＋农信社；保人民币＋外币存款；不保同业存款、高管在本机构存款、外国银行在华分支、中资银行海外分支；限额 50 万（本息合计、同一人在同一家机构），超出从清算财产中受偿；限额可调（央行会同有关部门、报国务院批准）；基金来源 4 项；运用原则安全流动保值增值，形式＝存央行/投政府债券央票高等级金融债/国务院批准；偿付情形＝被接管、被撤销清算、法院受理破产申请</li>
+<li><strong>金融强国</strong>：强大金融机构是六大核心要素之一、金融体系的微观基础；四内涵＝效率高、抗风险强、门类齐、全球布局与国际竞争力</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b20s1q1" data-answer="D" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">商业银行通过吸收存款和发放贷款，发挥着化货币为资本的作用，这是它的（　）职能的体现。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 支付中介</button><button type="button" class="qopt" data-key="B">B. 信用创造</button><button type="button" class="qopt" data-key="C">C. 货币创造</button><button type="button" class="qopt" data-key="D">D. 信用中介</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：<strong>信用中介</strong>＝吸收存款、发放贷款，将集中起来的资金贷放给资金短缺部门，发挥"<strong>化货币为资本</strong>"的作用——题干正是信用中介的定义原话。A 支付中介是办理汇兑、非现金结算等技术性业务；B 信用创造的关键词是"发行信用工具、超出自有资本与吸收资本总额扩张信用"；C"货币创造"根本不在教材三大职能里，纯属干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q2" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">商业银行的经营目标是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 利润最大化</button><button type="button" class="qopt" data-key="B">B. 资产</button><button type="button" class="qopt" data-key="C">C. 存款</button><button type="button" class="qopt" data-key="D">D. 利益</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：与中央银行、政策性银行比较，商业银行是<strong>以营利为目的</strong>的企业，它的经营目标是<strong>利润最大化</strong>（A 对）。B 资产是银行运用资金的形态、C 存款是资金来源业务，都不是"经营目标"；D"利益"不是教材标准表述。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q3" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">只能吸收存款和发放短期工商贷款等传统业务的商业银行，从组织形式来看属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 单一银行制</button><button type="button" class="qopt" data-key="B">B. 总分行银行制</button><button type="button" class="qopt" data-key="C">C. 综合化银行制</button><button type="button" class="qopt" data-key="D">D. 专业化银行制</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：按<strong>业务经营范围</strong>分类：<strong>专业化银行制</strong>下商业银行只能经营吸收存款、发放短期工商贷款等<strong>传统银行业务</strong>，长期信用、证券投资、信托、保险等交由专业性银行和非银行金融机构经营（D 对）。C 综合化银行制（全能银行制）对经营范围和业务种类<strong>不作限制</strong>，与题干"只能传统业务"相反；A、B 单一银行制和总分行制是按<strong>机构设置</strong>划分的，跟业务范围是两套标准，直接排除。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q4" data-answer="D" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">下列商业银行业务中，不属于借款业务的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 再贴现</button><button type="button" class="qopt" data-key="B">B. 同业拆借</button><button type="button" class="qopt" data-key="C">C. 发行金融债券</button><button type="button" class="qopt" data-key="D">D. 票据贴现</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：借款业务五种＝<strong>再贴现或向中央银行借款、同业拆借、发行金融债券、国际货币市场借款、结算过程中的短期资金占用</strong>，A、B、C 都在名单里。D 票据贴现是银行<strong>买进未到付款日期的票据</strong>、垫钱给持票人，属于运用资金的<strong>资产业务</strong>——再贴现（银行找央行要钱）与票据贴现（银行垫钱给企业）方向正好相反。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q5" data-answer="BCD" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">按照贷款条件划分，商业银行贷款包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 商业贷款</button><button type="button" class="qopt" data-key="B">B. 质押贷款</button><button type="button" class="qopt" data-key="C">C. 信用贷款</button><button type="button" class="qopt" data-key="D">D. 保证贷款</button><button type="button" class="qopt" data-key="E">E. 消费贷款</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：按<strong>贷款条件</strong>划分只有两大家：<strong>信用贷款</strong>（以借款人信誉发放，C 对）和<strong>担保贷款</strong>（以特定抵押品作为担保，包括<strong>保证贷款、抵押贷款和质押贷款</strong>，B、D 对）。A 商业贷款和 E 消费贷款是按<strong>用途</strong>划分的类型，与"贷款条件"是两套分类标准。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q6" data-answer="ACD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">下列商业银行业务中，属于中间业务的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 资金信托</button><button type="button" class="qopt" data-key="B">B. 发行大额可转让存单</button><button type="button" class="qopt" data-key="C">C. 融资性租赁</button><button type="button" class="qopt" data-key="D">D. 代理发行国债</button><button type="button" class="qopt" data-key="E">E. 有价证券投资</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：中间业务＝<strong>不使用自己的资金</strong>为客户办理支付和其他委托事项、收取手续费。A 信托业务包括<strong>资金信托</strong>和财产信托（对）；C 租赁业务包括<strong>融资性租赁</strong>和经营性租赁（对）；D 受财政部门委托<strong>代理发行和兑付国债</strong>是典型代理业务（对）。B 发行大额可转让存单是<strong>吸收存款</strong>性质，形成资金来源，属负债业务；E 有价证券投资是银行运用资金，属<strong>资产业务</strong>（投资业务）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q7" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">在商业银行基本的经营管理原则中，流动性原则要求商业银行必须保有一定比例的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 中长期贷款</button><button type="button" class="qopt" data-key="B">B. 低利率短期负债</button><button type="button" class="qopt" data-key="C">C. 容易变现的资产</button><button type="button" class="qopt" data-key="D">D. 自用房地产</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：流动性原则有两层含义：①保有一定比例的<strong>现金或其他容易变现的资产</strong>（C 对）；②<strong>取得现款</strong>的能力。A 中长期贷款期限长、变现难，恰是流动性的反面；B 说的是负债不是资产；D 自用房地产变现最差，与流动性背道而驰。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q8" data-answer="BCE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">商业银行的基本经营管理原则有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 审慎性原则</button><button type="button" class="qopt" data-key="B">B. 流动性原则</button><button type="button" class="qopt" data-key="C">C. 安全性原则</button><button type="button" class="qopt" data-key="D">D. 计划性原则</button><button type="button" class="qopt" data-key="E">E. 盈利性原则</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCE</div><div class="q-exp"><p>析：商业银行三条基本经营管理原则＝<strong>盈利性、流动性、安全性</strong>（B、C、E）。A"审慎性原则"和 D"计划性原则"都是编造的干扰项，不在教材三原则之列。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q9" data-answer="ABDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">根据我国《存款保险条例》，存款保险基金的运用形式有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 存放于中国人民银行</button><button type="button" class="qopt" data-key="B">B. 投资政府债券</button><button type="button" class="qopt" data-key="C">C. 投资信用等级较低的金融债券</button><button type="button" class="qopt" data-key="D">D. 投资中央银行票据</button><button type="button" class="qopt" data-key="E">E. 国务院批准的其他资金运用形式</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：基金运用限于三类：①<strong>存放中国人民银行</strong>（A 对）；②投资<strong>政府债券</strong>（B 对）、<strong>中央银行票据</strong>（D 对）、<strong>信用等级较高的金融债券及其他高等级债券</strong>；③<strong>国务院批准</strong>的其他资金运用形式（E 对）。C 错在"信用等级<strong>较低</strong>"——原文必须是"信用等级<strong>较高</strong>"，一字之差整项作废。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q10" data-answer="BDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">关于我国存款保险制度的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 存款保险最高赔付限额为人民币 50 万元，超出存款部分一律不予偿付</button><button type="button" class="qopt" data-key="B">B. 当存款类金融机构被接管、撤销或者破产时，存款人有权要求存款保险基金管理机构在规定的限额内，使用存款保险基金偿付存款人的被保险存款</button><button type="button" class="qopt" data-key="C">C. 存款保险实施限额偿付，偿付额度固定不变</button><button type="button" class="qopt" data-key="D">D. 存款保险基金的运用，应当遵循安全、流动、保值增值的原则</button><button type="button" class="qopt" data-key="E">E. 凡吸收存款的银行业金融机构，包括商业银行（含外商独资银行和中外合资银行）、农村信用合作社等，都应当投保存款保险</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BDE</div><div class="q-exp"><p>析：A 错——超过 50 万元的部分<strong>不是"一律不予偿付"</strong>，而是从该投保机构的<strong>清算财产中受偿</strong>；C 错——50 万元限额<strong>并不是固定不变</strong>的，可由央行会同国务院有关部门调整、报国务院批准后公布。B 对——被接管、撤销或者破产时在规定限额内偿付被保险存款；D 对——基金运用遵循<strong>安全、流动、保值增值</strong>原则；E 对——投保范围就是吸收存款的银行业金融机构（商业银行含外商独资与中外合资、农村合作银行、农村信用合作社）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q11" data-answer="ABDE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">按照《存款保险条例》规定，以下不被纳入存款保险的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 外国银行在中国的分支机构的存款</button><button type="button" class="qopt" data-key="B">B. 金融机构同业存款</button><button type="button" class="qopt" data-key="C">C. 农村商业银行中的居民存款</button><button type="button" class="qopt" data-key="D">D. 中资银行在海外分支机构的存款</button><button type="button" class="qopt" data-key="E">E. 投保机构高管人员在本机构的存款</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：不保的四类：<strong>金融机构同业存款</strong>（B 对）、<strong>投保机构高级管理人员在本投保机构的存款</strong>（E 对）、<strong>外国银行在中国分支机构的存款</strong>（A 对，"外进"不保）、<strong>中资银行海外分支机构的存款</strong>（D 对，"中出"不保）。C 农村商业银行中的居民存款<strong>在保障范围内</strong>——农村合作银行、农村信用合作社等吸收的本外币存款都保，别把"农村"二字误当成排除项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q12" data-answer="ABCE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">强大的金融机构是建设金融强国的六大核心要素之一，其内涵包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 抗风险能力强</button><button type="button" class="qopt" data-key="B">B. 运行效率高</button><button type="button" class="qopt" data-key="C">C. 具有国际竞争力</button><button type="button" class="qopt" data-key="D">D. 可以发行货币</button><button type="button" class="qopt" data-key="E">E. 门类齐全</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：强大金融机构四内涵＝<strong>运营（运行）效率高、抗风险能力强、门类齐全、具有全球布局能力和国际竞争力</strong>（A、B、C、E 对）。D 错——<strong>发行货币是中央银行的特权</strong>，商业银行不能发行货币，这个选项和"金融机构内涵"完全不搭。
+:::</p></div></details></div><div class="quiz-item" data-qid="b20s1q13" data-answer="D" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">商业银行受财政部委托，发行或兑现国债属于商业银行的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 信托业务</button><button type="button" class="qopt" data-key="B">B. 负债业务</button><button type="button" class="qopt" data-key="C">C. 资产业务</button><button type="button" class="qopt" data-key="D">D. 代理业务</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：<strong>代理业务</strong>＝银行接受客户委托，以<strong>代理人</strong>身份代为办理双方议定的经济事务并收取手续费——受财政部门委托<strong>代理发行和兑付国债</strong>正是教材举的原例（D 对）。A 信托业务是代为经营、管理或处理资金财产；B、C 归筐错误：这笔业务银行没有吸收资金也没有运用资金，只赚手续费，属于中间业务，与负债、资产无关。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础20_商业银行与金融市场_第2节_金融市场.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 金融市场</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

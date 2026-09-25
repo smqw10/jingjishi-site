@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十八章 货币供求与货币均衡 · 货币供给 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第三部分 货币与金融</span><h1>第十八章 货币供求与货币均衡 · 货币供给</h1><div class="subtitle">第 2 节 / 共 4 节 · 预计学习时长 55 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 2/4</div><div class="sec-badge none" id="sec-badge" data-sec="b18s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟我国货币层次 <strong>M0/M1/M2</strong> 口径（2025 年 1 月起新修订 M1＝M0＋单位活期＋个人活期＋备付金），分清准货币 <span class="must">必考</span> <span class="s3">★★★</span></li>
+<li>记住<strong>社会融资规模</strong>的含义与五大构成，会按"表内/表外/直接/其他/政府"归类 <span class="hot">高频考点</span></li>
+<li>掌握货币供给两大机制：央行<strong>信用创造货币</strong>、商业银行<strong>扩张信用创造派生存款</strong>及其三制约 <span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>会用 <strong>M＝B×K</strong> 与 K＝1/(存款准备金率＋货币结构比率) 判断方向、做计算 <span class="must">必考</span> <span class="s3">★★★</span></li>
+<li>记住<strong>数字货币</strong>四大特点与数字人民币的关键特征（定位于 M0、不计息、双层运营、小额匿名大额可溯） <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、货币供给与货币供应量</h2>
+<h3>1. 什么是货币供给与货币供应量 <span class="hot">高频考点</span></h3>
+<p><strong>货币供给</strong>是指货币供给主体即一国或货币区的<strong>银行系统</strong>向经济主体供给货币以满足其货币需求的行为。<strong>货币供应量</strong>即<strong>流通中的货币数量</strong>，在数量上与流通中的货币量呈<strong>一一对应</strong>关系。</p>
+<table>
+<thead>
+<tr>
+<th>研究维度</th>
+<th>侧重</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>货币供给的<strong>机制</strong></td>
+<td>货币的<strong>创造过程</strong></td>
+</tr>
+<tr>
+<td>货币供给的<strong>决定</strong></td>
+<td>分析决定<strong>货币供应量</strong>的因素</td>
+</tr>
+</tbody>
+</table>
+<p>层次划分的基本原则：货币既包括<strong>流动中的现金</strong>，也包括<strong>银行体系的各种存款</strong>，甚至各种票据及其他信用工具也在一定程度上作为货币替代物参与流动——不同形态的货币<strong>流动性不同</strong>。目前一般依据资产的<strong>流动性</strong>（各种货币资产<strong>转化为通货或现实购买力的能力</strong>）来划分货币层次。</p></div>
+<div class="section"><div class="keypoint"><strong>划层次只认一把尺子：</strong><p>这把尺子就是<strong>流动性</strong>：变成现金越快、越不打折的，层次越高。后面 M0→M1→M2 的排序、准货币的归属，全部用"变现快慢"一把尺子量出来，不用死记。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>口袋里的现金随取随用（变现最快）；活期存款手机一点就转出去（很快）；三年定期提前取要损失利息（慢半拍）。排座次的结果：现金＞活期＞定期——货币层次就是按这场"变现比赛"的成绩排名的。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 货币供给口诀</div><p><strong>"机制讲创造，决定讲因素；划层一把尺，变现快与慢"</strong>——机制/决定两个研究维度、流动性一根划分标尺，先立框架再填细节。</p></div></div>
+<div class="section"><h3>2. 我国货币层次的划分（2025 年起新口径）<span class="must">必考</span> <span class="s3">★★★</span></h3>
+<p>我国从 <strong>1994 年第三季度</strong>起由中国人民银行<strong>按季</strong>向社会公布货币供应量统计监测指标。<strong>2024 年 12 月</strong>，《中国人民银行公告〔2024〕第 17 号》决定<strong>自统计 2025 年 1 月份数据起</strong>，启用<strong>新修订的狭义货币（M1）统计口径</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>口径</th>
+<th>流动性与地位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M0</strong></td>
+<td><strong>流通中货币</strong>：企业事业单位、个人、机关团体、非存款类金融机构所持有的<strong>硬币和现钞</strong>总和（即通常所指的现金）</td>
+<td>现金，变现能力最强</td>
+</tr>
+<tr>
+<td><strong>M1</strong>（狭义货币供应量）</td>
+<td>M0＋<strong>单位活期存款＋个人活期存款＋非银行支付机构客户备付金</strong></td>
+<td>流动性较强，<strong>中央银行重点调控对象</strong></td>
+</tr>
+<tr>
+<td><strong>M2</strong>（广义货币供应量）</td>
+<td>M1＋<strong>单位定期存款＋个人定期存款＋其他存款（财政存款除外）</strong></td>
+<td>单位定期存款、个人定期存款、其他存款（财政存款除外）流动性较弱，属于<strong>准货币</strong>；与 M1 一起构成广义货币供应量 M2，是<strong>研究宏观经济调控的主要变量</strong></td>
+</tr>
+</tbody>
+</table>
+<p>新口径的增量：M1 新纳入<strong>个人活期存款</strong>和<strong>非银行支付机构客户备付金</strong>两项。</p></div>
+<div class="section"><div class="keypoint"><strong>准货币＝M2 里&quot;定期那部分&quot;：</strong><p>单位定期存款、个人定期存款、其他存款（<strong>财政存款除外</strong>）流动性较弱，属于<strong>准货币</strong>。判断某项资金在哪一层，用变现快慢量：现金→M0；能直接支付的活期性质存款＋备付金→M1；要"定期解锁"的→M2；<strong>财政存款不进 M2</strong>（明确除外）。M1 因流动性较强，是央行<strong>重点调控对象</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>爸爸钱包里的 800 元现金（M0）；公司发薪的活期账户 2 万元、手机支付账户里的客户备付金（M1）；妈妈的三万元两年期定期存单（M2 里的准货币）。同样是一家人的钱，按"多久能变成随手能花的钱"分层站队——这就是货币层次划分的全部逻辑；而财政存款放在国库，不掺和这场站队。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 货币层次口诀</div><p><strong>"M0 现金打底，M1 加活期（单位个人都算）再备付，M2 再加定期和其他（财政除外）；活期算狭义，准货币在 M2"</strong>。再记新口径增量：<strong>"个人活期＋备付金，2025 年起进 M1"</strong>。</p></div></div>
+<div class="section"><h3>3. 社会融资规模 <span class="hot">高频考点</span></h3>
+<p><strong>含义</strong>：一定时期内（每月、每季或每年）<strong>实体经济（即非金融企业和住户）从金融体系获得的全部资金总额</strong>。<strong>2011 年起</strong>由中国人民银行发布社会融资规模数据。与传统贷款指标不同，它既包括实体经济从<strong>银行业</strong>获得的融资，也包括从<strong>证券业和保险业</strong>获得的融资，是全面反映金融与经济关系、以及金融对实体经济资金支持的<strong>总量指标</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>构成</th>
+<th>具体内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 金融机构<strong>表内业务</strong>提供的资金</td>
+<td><strong>人民币贷款、外币贷款</strong></td>
+</tr>
+<tr>
+<td>② 金融机构<strong>表外业务</strong>提供的资金</td>
+<td><strong>委托贷款、信托贷款、未贴现的银行承兑汇票</strong></td>
+</tr>
+<tr>
+<td>③ <strong>直接融资</strong>（利用规范的金融工具、在正规金融市场获得）</td>
+<td><strong>非金融企业境内股票筹资、企业债券筹资</strong></td>
+</tr>
+<tr>
+<td>④ <strong>其他方式</strong>提供的资金支持</td>
+<td><strong>保险公司赔偿、投资性房地产、小额贷款公司和贷款公司贷款</strong></td>
+</tr>
+<tr>
+<td>⑤ <strong>政府部门</strong>在债券市场的融资</td>
+<td><strong>国债、地方政府专项债券、地方政府一般债券</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>归类先问&quot;钱从哪条管道来&quot;：</strong><p>银行<strong>资产负债表内</strong>放出去的贷款→表内；<strong>委托、信托、未贴现票据</strong>绕道走→表外；<strong>股票、企业债券</strong>直接向市场要钱→直接融资；<strong>保险赔付、投资性房地产、小贷公司</strong>→其他；<strong>国债＋地方政府专项债＋一般债</strong>→政府部门。易混点：<strong>企业债券算直接融资，不算政府融资</strong>（政府只认国债和地方政府债券）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某制造企业：从银行借 5000 万元贷款（表内）；通过信托计划融资 2000 万元（表外—信托贷款）；发行企业债券 1 亿元、IPO 募资 3 亿元（直接融资）。这几笔钱全都被社会融资规模统计进来——它数的就是"实体经济这个月从金融体系总共拿了多少钱"，不管钱走的哪条管道。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 社融口诀</div><p><strong>"表内贷、表外委信票、直接股企债、其他保险房产小贷、政府国债地方债"</strong>——五路管道汇成社会融资规模。</p></div></div>
+<div class="section"><h2>二、货币供给机制</h2>
+<h3>1. 两大机制：央行造基础，商行生派生 <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>机制</th>
+<th>主体</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>信用创造货币机制</strong></td>
+<td><strong>中央银行</strong></td>
+<td>利用自身掌握的<strong>货币发行权</strong>和<strong>信贷管理权</strong>来创造信贷资金来源；是当代<strong>不兑现的信用货币制度</strong>下货币供给机制的重要内容；信用创造货币的功能<strong>为中央银行所掌握</strong></td>
+</tr>
+<tr>
+<td><strong>扩张信用、创造派生存款机制</strong></td>
+<td><strong>商业银行</strong></td>
+<td>具备在央行发行货币的基础上<strong>扩张信用、创造派生存款</strong>的能力，但<strong>不能无限制</strong>创造</td>
+</tr>
+</tbody>
+</table>
+<p>商业银行扩张信用、创造派生存款的能力受<strong>三类因素</strong>制约：</p>
+<table>
+<thead>
+<tr>
+<th>制约因素</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 受到<strong>缴存中央银行存款准备金</strong>的限制</td>
+<td>每吸收一笔存款都要按比例交央行"押金"，能放贷的钱变少</td>
+</tr>
+<tr>
+<td>② 受到<strong>提取现金数量</strong>的限制</td>
+<td>现金流出银行体系，派生链条断一截</td>
+</tr>
+<tr>
+<td>③ 受到<strong>企事业单位及社会公众缴付税款</strong>等的限制</td>
+<td>缴税把钱从银行存款中划走，资金脱离派生循环</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>分工一句话：</strong><p><strong>中央银行</strong>管"源头"——信用创造货币（不兑现信用货币制度下，发钞权和信贷管理权在央行手里）；<strong>商业银行</strong>管"放大"——在央行发的货币基础上扩张信用、派生存款，但被"<strong>准备金、提现金、缴税款</strong>"三道闸限住。问"制约派生存款的因素"，三选齐带；"银行间同业拆借数量"是惯用干扰项。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>央行投的 100 万元被 A 银行吸收，假设准备金率 20%：A 留 20 万元、放贷 80 万元；借款人付货款，收款人存入 B 银行，B 又留 20% 放贷 64 万元……如此滚动，100 万元"滚"出好几倍的存款。每一环被准备金、提现、缴税漏走的钱，都是给雪球踩的刹车——这就是"不能无限制创造"的原因。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 供给机制口诀</div><p><strong>"央行造基础，商行生派生；准备金、提现金、缴税款，三道闸门踩刹车"</strong>。</p></div></div>
+<div class="section"><h3>2. 基础货币、货币乘数与货币供应量公式 <span class="must">必考</span> <span class="s3">★★★</span></h3>
+<p><strong>基础货币（B）</strong>：中央银行放出的信用是银行体系扩张信用并创造派生存款的基础，故被称为基础货币，包括<strong>中央银行发行的货币</strong>和<strong>商业银行在中央银行的存款</strong>。</p>
+<p><strong>货币乘数（K）</strong>：基础货币的扩张倍数，取决于商业银行在其所吸收的全部存款中需存入中央银行部分所占比重即<strong>存款准备金率</strong>，以及需转化为现金及财政存款等所占比重的<strong>货币结构比率</strong>——</p>
+<p><strong>K＝1/(存款准备金率＋货币结构比率)</strong>，即货币乘数等于存款准备金率与货币结构比率<strong>之和的倒数</strong>。</p>
+<p><strong>货币供应量公式：M＝B×K</strong></p>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>内容</th>
+<th>变动方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基础货币 B</td>
+<td>央行发行的货币＋商业银行在央行的存款</td>
+<td>B 变大 → M 变大</td>
+</tr>
+<tr>
+<td>货币乘数 K</td>
+<td>存款准备金率与货币结构比率之和的<strong>倒数</strong></td>
+<td>分母（两个比率）变大 → K 变小 → M 变小</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>方向对照（防反专用）：</strong><p>K 是"<strong>和的倒数</strong>"：分母越大、乘数越小。两条方向链背死：①<strong>提高存款准备金率 → 货币乘数变小</strong> → 货币供应量收缩；②<strong>存款转化为现金流出银行体系 → 货币结构比率上升 → 货币乘数下降</strong>。乘数是"放大倍数"，别和货币量本身混；准备金率变动影响的也是乘数，不直接动基础货币。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>①设存款准备金率 10%、货币结构比率 10%：K＝1/(10%＋10%)＝1/0.2＝<strong>5</strong>；若基础货币 B＝4000 亿元，则货币供应量 M＝B×K＝4000×5＝<strong>20000 亿元</strong>。②央行把准备金率提到 15%：K＝1/(15%＋10%)＝<strong>4</strong>，货币供应量缩至 4000×4＝16000 亿元——分母变大、倍数缩水，M＝B×K 全程用公式走一遍，方向就不会反。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 乘数口诀</div><p><strong>"和的倒数是乘数，分母变大倍数缩；M 等于 B 乘 K，央行造币商行扩"</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三个&quot;影响乘数&quot;的题眼</div><p>①提高存款准备金率 → 乘数<strong>变小</strong>；②存款被提现流出银行 → 货币结构比率<strong>上升</strong> → 乘数<strong>下降</strong>；③法定存款准备金率政策调节商业银行信用扩张能力，正是通过影响<strong>货币乘数</strong>来实现的。凡问"导致货币乘数变大"的，往"准备金率降低、结构比率下降"的方向找答案。</p></div></div>
+<div class="section"><h2>三、数字货币</h2>
+<h3>1. 数字货币的分类与特点 <span class="hot">高频考点</span></h3>
+<p><strong>背景</strong>：货币起源于人类商品交换过程，先后经历了<strong>实物货币、金属货币、纸币和电子货币</strong>等形态。按<strong>发行人</strong>不同，数字货币可分为：</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>发行人</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>法定数字货币</strong></td>
+<td><strong>中央银行</strong></td>
+<td>中央银行发行的数字货币（如数字人民币）</td>
+</tr>
+<tr>
+<td><strong>私人数字货币</strong></td>
+<td><strong>私人部门</strong></td>
+<td>以<strong>数字加密技术</strong>和<strong>分布式账本技术</strong>为基础的加密数字货币</td>
+</tr>
+</tbody>
+</table>
+<p>不论是法定数字货币还是私人数字货币，均突出表现为四个特点：</p>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>匿名性</strong></td>
+<td>使用者的个人信息和隐私能得到较好保护</td>
+</tr>
+<tr>
+<td><strong>安全性</strong></td>
+<td>使用数字签名、安全加密存储等技术：<strong>不可重复花费、不可非法复制伪造、交易不可篡改</strong></td>
+</tr>
+<tr>
+<td><strong>可编程性</strong></td>
+<td>采用的<strong>区块链技术支持可编程合约</strong></td>
+</tr>
+<tr>
+<td><strong>高效率性</strong></td>
+<td>以区块链形式运行记账，通过公私钥匙进行交易签名验证，<strong>减少对中介的需求、降低交易成本</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>四特点一对分类：</strong><p>分类按<strong>发行人</strong>：央行的＝法定数字货币，私人部门的＝私人数字货币。特点背四个字：<strong>"匿安编高"</strong>（匿名性、安全性、可编程性、高效率性）。多选爱塞一个"法偿性"当干扰——法偿性是法定货币的属性，<strong>私人数字货币不具备</strong>，所以不是"均具备"的特点。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>用数字钱包给朋友转一笔款：不用实名暴露全部信息（匿名性）；转出的钱不能复制、不能花两次（安全性）；钱包还能设"工资到账自动理财"的合约（可编程性）；全程点对点、不排队不跑网点（高效率性）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 数字货币口诀</div><p><strong>"法定央行发，私人加密币；匿安编高四特点，法偿不算在其中"</strong>。</p></div></div>
+<div class="section"><h3>2. 数字人民币的发展历程与设计特征 <span class="hot">高频考点</span></h3>
+<p><strong>发展历程</strong>：<strong>2014 年</strong>开始对数字人民币发行框架、关键技术、发行流通环境进行专项研究 → <strong>2016 年</strong>成立数字货币研究所，完成法定数字货币<strong>第一代原型系统</strong>搭建 → <strong>2017 年年末</strong>开始组织商业机构开展法定数字货币研发试验 → 目前数字人民币已在 <strong>17 个省（区、市）</strong>开展试点，<strong>截至 2024 年 6 月末累计交易金额达 7 万亿元</strong>。</p>
+<p>数字人民币采用"<strong>中央银行—商业机构</strong>"的<strong>双层运营体系</strong>，设计特征如下：</p>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>账户与价值</td>
+<td><strong>兼具账户和价值特征</strong></td>
+</tr>
+<tr>
+<td>定位</td>
+<td><strong>定位于 M0，不计付利息</strong></td>
+</tr>
+<tr>
+<td>低成本</td>
+<td>人民银行不向指定运营机构收取兑换流通服务费；指定运营机构<strong>不向个人客户</strong>收取数字人民币的兑出、兑回服务费</td>
+</tr>
+<tr>
+<td>支付即结算</td>
+<td>与银行账户<strong>松耦合</strong>，基于数字人民币钱包进行资金转移，可实现<strong>支付即结算</strong></td>
+</tr>
+<tr>
+<td>匿名性</td>
+<td>遵循"<strong>小额匿名、大额依法可溯</strong>"的原则</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>综合使用数字证书体系、数字签名、安全加密存储等技术，初步建成多层次安全防护体系</td>
+</tr>
+<tr>
+<td>可编程性</td>
+<td>通过加载<strong>不影响货币功能</strong>的智能合约实现</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>数字人民币两道身份题：</strong><p>①问"数字人民币属于哪个货币层次"→ <strong>定位于 M0</strong>（流通中货币），不是 M2；②问"计不计息"→ <strong>不计付利息</strong>。体系记"<strong>双层运营</strong>"（央行—商业机构）；匿名记"<strong>小额匿名、大额依法可溯</strong>"——说"完全匿名"就错。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>试点城市某单位用数字人民币给员工发部分工资：钱以数字形式躺在手机钱包里，本质是<strong>流通中货币（M0）</strong>，不给利息；付款即到账即结算，不用等银行清算；日常小额花销不留痕，大额转账依法可追溯——"有利息""属于 M2""完全匿名"三个说法全错。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 数字人民币口诀</div><p><strong>"M0 不计息，双层运营央行—商行；支付即结算，小匿大溯账"</strong>——定位、体系、结算、匿名四个词各占一个考点。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 数字人民币 vs 私人加密货币</div><p>考试爱考"错误的是"：说"数字货币按 M0/M1/M2 划分属于 M2"——错（数字人民币定位于 <strong>M0</strong>，私人数字货币根本不进我国货币层次统计）；说"数字人民币计付利息"——错；说"完全匿名、不可追溯"——错（小额匿名、<strong>大额依法可溯</strong>）。说"交易成本低、匿名性较强、不受时空限制"——对。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>货币供给</strong>：银行系统向经济主体供给货币以满足货币需求的行为；机制侧重创造过程、决定侧重供应量因素；货币供应量＝流通中的货币数量</li>
+<li><strong>层次划分</strong>：依据<strong>流动性</strong>（转化为通货或现实购买力的能力）；1994 年三季度起央行按季公布</li>
+<li><strong>M0</strong>＝流通中货币（企事业单位、个人、机关团体、非存款类金融机构持有的硬币和现钞总和）；<strong>M1</strong>＝M0＋单位活期＋个人活期＋非银行支付机构客户备付金（2025 年 1 月起新口径，狭义货币、央行重点调控对象）；<strong>M2</strong>＝M1＋单位定期＋个人定期＋其他存款（财政存款除外），后三者为准货币，M2 是研究宏观调控的主要变量</li>
+<li><strong>社会融资规模</strong>：实体经济（非金融企业和住户）从金融体系获得的全部资金总额，2011 年起央行发布；五构成＝表内（人民币/外币贷款）＋表外（委托贷款、信托贷款、未贴现银行承兑汇票）＋直接融资（非金融企业境内股票筹资、企业债券筹资）＋其他（保险公司赔偿、投资性房地产、小额贷款公司和贷款公司贷款）＋政府（国债、地方专项债、地方一般债）</li>
+<li><strong>两大机制</strong>：央行信用创造货币（货币发行权＋信贷管理权，不兑现信用货币制度）；商业银行扩张信用创造派生存款，三制约＝缴存准备金、提取现金、缴付税款</li>
+<li><strong>基础货币 B</strong>＝央行发行的货币＋商业银行在央行的存款；<strong>货币乘数 K</strong>＝1/(存款准备金率＋货币结构比率)；<strong>M＝B×K</strong></li>
+<li><strong>数字货币</strong>：法定（央行发行）vs 私人（私人部门）；特点＝匿名、安全、可编程、高效率</li>
+<li><strong>数字人民币</strong>：2014 专项研究、2016 数字货币研究所＋第一代原型、2017 年末商业机构研发试验、17 省试点、截至 2024 年 6 月末累计交易 7 万亿元；双层运营（央行—商业机构）；定位于 M0、不计付利息；支付即结算（与银行账户松耦合）；小额匿名、大额依法可溯</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b18s2q1" data-answer="D" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">2024 年 12 月，《中国人民银行公告〔2024〕第 17 号》决定自统计 2025 年 1 月份数据起，启用新修订的狭义货币（M1）口径。修订后的 M1 不包含（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 流通中的货币</button><button type="button" class="qopt" data-key="B">B. 单位活期存款</button><button type="button" class="qopt" data-key="C">C. 个人活期存款</button><button type="button" class="qopt" data-key="D">D. 单位定期存款</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：新口径 M1＝M0＋<strong>单位活期存款＋个人活期存款＋非银行支付机构客户备付金</strong>——流通中的货币（A）、单位活期存款（B）、个人活期存款（C）都在 M1 里。<strong>单位定期存款（D）</strong>流动性较弱、属于准货币，只进 M2 不进 M1，故选 D。新口径的增量恰是"个人活期存款＋备付金"，考试常拿旧口径设坑。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s2q2" data-answer="ACE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">制约商业银行创造派生存款能力的主要因素包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 储户提取现金的数量</button><button type="button" class="qopt" data-key="B">B. 商业银行创造货币的能力</button><button type="button" class="qopt" data-key="C">C. 企事业单位及社会大众缴付税款的数量</button><button type="button" class="qopt" data-key="D">D. 银行间同业拆借的数量</button><button type="button" class="qopt" data-key="E">E. 缴存中央银行存款准备金的数量</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACE</div><div class="q-exp"><p>析：三道闸——①缴存中央银行<strong>存款准备金</strong>（E）；②<strong>提取现金</strong>的数量（A）；③企事业单位及社会公众<strong>缴付税款</strong>的数量（C）。B"商业银行创造货币的能力"是题目问的对象本身，不是制约它的因素；D"银行间同业拆借"只是银行之间调剂头寸，不在三制约之列。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s2q3" data-answer="B" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">提高存款准备金率，会导致（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 货币乘数变大</button><button type="button" class="qopt" data-key="B">B. 货币乘数变小</button><button type="button" class="qopt" data-key="C">C. 基础货币增加</button><button type="button" class="qopt" data-key="D">D. 基础货币减少</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：货币乘数 K＝1/(存款准备金率＋货币结构比率)，是"和的<strong>倒数</strong>"——存款准备金率提高 → 分母变大 → <strong>货币乘数变小</strong>（B），A 方向反了。存款准备金率是缴存央行存款所占比重，它的变动不直接增加或减少基础货币（C、D 错），影响的是"放大倍数"这一环。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s2q4" data-answer="A" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">下面对数字货币的描述，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 数字货币按照我国货币 M0、M1、M2 的划分标准，属于 M2</button><button type="button" class="qopt" data-key="B">B. 数字货币交易不需要向第三方支付费用，其交易成本更低</button><button type="button" class="qopt" data-key="C">C. 数字货币具有较强的匿名性特征</button><button type="button" class="qopt" data-key="D">D. 数字货币不受时间和空间的限制</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：A 错误——数字人民币<strong>定位于 M0</strong>（流通中货币），说"属于 M2"与口径定位不符，私人数字货币更是不进我国货币层次统计。B 对——区块链记账、公私钥签名验证减少中介需求、降低交易成本（高效率性、低成本）；C 对——匿名性是四大特点之一；D 对——数字货币基于网络运行，不受时间和空间限制。本题选"错误"项，A 入选。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s2q5" data-answer="AE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">在社会融资规模统计中，直接融资主要包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 非金融企业境内股票筹资</button><button type="button" class="qopt" data-key="B">B. 外币贷款</button><button type="button" class="qopt" data-key="C">C. 未贴现的银行承兑汇票</button><button type="button" class="qopt" data-key="D">D. 人民币贷款</button><button type="button" class="qopt" data-key="E">E. 企业债券融资</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AE</div><div class="q-exp"><p>析：直接融资＝实体经济利用规范的金融工具、在正规金融市场获得的资金——<strong>非金融企业境内股票筹资（A）＋企业债券筹资（E）</strong>。人民币贷款、外币贷款（B、D）是金融机构通过<strong>表内业务</strong>提供的资金；未贴现的银行承兑汇票（C）属<strong>表外业务</strong>。五构成各归各的管道，归类时先问"钱走的哪条路"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s2q6" data-answer="ABDE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">不论是法定数字货币还是私人数字货币均具备的特点有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 可编程性</button><button type="button" class="qopt" data-key="B">B. 安全性</button><button type="button" class="qopt" data-key="C">C. 法偿性</button><button type="button" class="qopt" data-key="D">D. 匿名性</button><button type="button" class="qopt" data-key="E">E. 高效率性</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：不论法定还是私人数字货币，均具备四大特点——<strong>匿名性（D）、安全性（B）、可编程性（A）、高效率性（E）</strong>。C"法偿性"是法定货币特有的强制流通资格，<strong>私人数字货币不具备</strong>，谈不上"均具备"，是本题干扰项。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础18_货币供求与货币均衡_第1节_货币需求.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 货币需求</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础18_货币供求与货币均衡_第3节_货币均衡.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 货币均衡</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

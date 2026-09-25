@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第6章 甄选 · 甄选的主要方法 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第6章 甄选 · 甄选的主要方法</h1><div class="subtitle">第 2 节 / 共 2 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 2/2</div><div class="sec-badge none" id="sec-badge" data-sec="r06s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>搭好心理测试的框架：<strong>能力</strong>（一般/特殊认知＋心理运动/身体）、<strong>人格</strong>（自陈/评价/投射＋MBTI＋大五）、<strong>职业兴趣</strong>（霍兰德六型六角） <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+<li>记死成就测试两兄弟：知识测试（笔试≠知识测试）与工作样本测试（<strong>效度最高、一岗一版</strong>） <span class="hot">高频考点</span></li>
+<li>掌握评价中心三件套：公文筐、无领导小组讨论、角色扮演的优缺点与"能考什么、不能考什么" <span class="s3">★★★</span></li>
+<li>分清面试的<strong>三种结构化程度</strong>与<strong>四种组织形式</strong>（独系组集），背熟 STAR 原则与两类情境化题目 <span class="s3">★★★</span></li>
+<li>记住履历分析的假设（行为一致性）、要求（真、全、相关）与目标履历分析法</li>
+</ul></div></div>
+<div class="section"><h2>一、心理测试</h2>
+<p>心理测试分三大块：<strong>能力测试</strong>（看你行不行）、<strong>人格测试</strong>（看你像什么样的人）、<strong>职业兴趣测试</strong>（看你爱什么）。三块的内部结构如下。</p>
+<h3>1. 能力测试（★）</h3>
+<p><strong>（1）认知能力测试</strong>：考查一个人的<strong>思维能力</strong>（推理能力、记忆能力、语言能力、数学能力等）。</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>内容</th>
+<th>关键点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>一般认知能力测试</strong>（一般心理能力测试、智力测试或智商测试）</td>
+<td>对一个人的<strong>多种认知能力</strong>做的较为全面的测试</td>
+<td>是从事<strong>任何一种工作</strong>的人都必须具备的<strong>基本心理能力</strong></td>
+</tr>
+<tr>
+<td><strong>特殊认知能力测试</strong>（特定心理能力测试、能力倾向测试或职业能力倾向测试）</td>
+<td>针对一些<strong>特定认知能力</strong>设计的更为具体和深入的测试</td>
+<td>测量人在特定领域（如音乐、美术、体育等）职业方面的<strong>特殊才能或熟练水平</strong>；分<strong>单项</strong>特殊认知能力测试（具备其中一两项）与<strong>总体性</strong>特殊认知能力测试（具备大部分认知能力）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>（2）运动和身体能力测试</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>概念</th>
+<th>适用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>心理运动能力测试</strong></td>
+<td>对一个人的<strong>精神运动能力</strong>或<strong>受个体意识支配的精细动作能力</strong>进行的测试</td>
+<td>体力要求比较高的职位，如<strong>手表装配工</strong>等</td>
+</tr>
+<tr>
+<td><strong>身体能力测试</strong></td>
+<td>对一个人的<strong>动态强度、爆发力、广度灵活性、动态灵活性、身体协调性与平衡性</strong>等进行的测试</td>
+<td>体力类岗位</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一般认知 vs 特殊认知：</strong><p><strong>一般＝通用智力</strong>，干什么工作都需要；<strong>特殊＝能力倾向</strong>，只对特定领域有用。判断词：见"智力/智商/多种认知能力全面测"→一般；见"能力倾向/职业倾向/音乐美术体育等特定领域"→特殊。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>手表装配工要在指甲盖大的机芯里捏着镊子拧螺丝，招人时就测<strong>精细动作</strong>（心理运动能力测试）；消防员招录要测负重跑、引体向上，看动态强度和爆发力，这是<strong>身体能力测试</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 能力测试分类</div><p><strong>"一般测智力人人要，特殊测倾向看行当；心理运动捏精细，身体能力跑跳投"</strong>。</p></div></div>
+<div class="section"><h3>2. 人格测试 <span class="hot">高频考点</span></h3>
+<p><strong>（1）人格测量的主要方法（★★）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>怎么做</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>自陈量表法</strong></td>
+<td>编制好一套人格测试问卷，由<strong>被测试者本人</strong>根据自己的实际情况或感受回答问卷中的全部问题</td>
+<td>自己说自己</td>
+</tr>
+<tr>
+<td><strong>评价量表法</strong></td>
+<td>先提供一组描述人的个性或特质的词或句子，让<strong>其他人</strong>通过对被测试者的<strong>观察</strong>作出评价</td>
+<td>别人看你</td>
+</tr>
+<tr>
+<td><strong>投射法</strong></td>
+<td>先向被测试者提供<strong>未经组织的刺激情境</strong>，让被测试者在<strong>不受限制</strong>的情境下自由表现自己的反应</td>
+<td>给个模糊情境让你自由发挥，从反应里看人格</td>
+</tr>
+</tbody>
+</table>
+<p><strong>（2）MBTI 人格类型测试（★★★）</strong>：从 <strong>4 个两极性维度</strong>对人的行为风格进行测试，组合出 <strong>8 种风格</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>反映什么</th>
+<th>两极对比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>外倾—内倾</strong></td>
+<td><strong>注意力集中的方向</strong>（外部世界 or 内部世界）</td>
+<td>热衷外部交往 vs 沉浸内心世界</td>
+</tr>
+<tr>
+<td><strong>感觉—直觉</strong></td>
+<td><strong>获取信息的方式</strong>（通过感觉和经验 or 通过想象和抽象性）</td>
+<td>看见什么是什么 vs 靠想象抓本质</td>
+</tr>
+<tr>
+<td><strong>思考—情感</strong></td>
+<td><strong>处理信息和做出决策的方式</strong>（依赖逻辑关系 or 依据事物对自己和他人的价值和重要性）</td>
+<td>讲逻辑 vs 讲情义</td>
+</tr>
+<tr>
+<td><strong>判断—知觉</strong></td>
+<td>通常表现出的<strong>对待外界的方式</strong>（判断性的、有计划的、有目的的 or 灵活的、好奇的、容易冲动的、适应性强的）</td>
+<td>列计划 vs 随机应变</td>
+</tr>
+</tbody>
+</table>
+<p><strong>（3）"大五"人格测试（★★）</strong>：人格维度包括<strong>外向性、愉悦性、尽责性、神经质、开放性</strong>五项。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>网上常说的"E 人 / I 人"就是 MBTI 里外倾—内倾维度的通俗版：聚会上如鱼得水越聊越兴奋的是 E（外倾），坐一会儿就想回家充电的是 I（内倾）——测的就是<strong>注意力集中的方向</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 人格测量三法</div><p><strong>"自陈自己说，评价他人评，投射自由演"</strong>——答题人是谁（本人/他人/模糊情境下自由反应）一抓一个准。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 大五速记</div><p><strong>"外愉尽神开"</strong>——外向性、愉悦性、尽责性、神经质、开放性。多选里冒出来的"判断性、理性"等都是冒牌货（那是 MBTI 的词）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 MBTI 四维度对应易混</div><p>考试给一个维度问"反映什么"：<strong>外倾-内倾→注意力方向；感觉-直觉→获取信息；思考-情感→处理信息和决策；判断-知觉→对待外界的方式</strong>。最大的坑是"判断-知觉"——看到"判断"别条件反射选"决策"（那是思考-情感的），它测的是<strong>对待外界的方式</strong>（计划性 vs 灵活性）。</p></div></div>
+<div class="section"><h3>3. 霍兰德职业兴趣测试（★★★）<span class="hot">高频考点</span></h3>
+<p><strong>六角模型</strong>：霍兰德认为人有<strong>六种基本的职业兴趣类型</strong>——<strong>现实型、研究型、艺术型、社会型、企业型、常规型</strong>。六种类型排成六边形，<strong>位置相邻</strong>的两种职业兴趣类型是<strong>相似</strong>的；<strong>位置不相邻</strong>的两种人格类型则是<strong>不相似</strong>的。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>特点关键词</th>
+<th>适合职业</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>现实型</strong></td>
+<td>偏好与<strong>具体的物体</strong>（工具、机械、电子设备等）打交道，喜欢<strong>有规则的具体劳动</strong>及需要基本操作技能的工作；<strong>不喜欢跟人打交道</strong></td>
+<td>技能性和技术性工作</td>
+</tr>
+<tr>
+<td><strong>研究型</strong></td>
+<td>聪明、理性、细致、喜欢批评；喜欢<strong>抽象的、分析性的、独立性</strong>的工作，愿意进行系统的创造性探究；<strong>缺乏组织和领导才能</strong>，不喜欢说服性或重复性的工作</td>
+<td>科学研究类、工程设计类工作</td>
+</tr>
+<tr>
+<td><strong>艺术型</strong></td>
+<td>具有想象力、冲动、直觉、理想化、有创意；<strong>偏好模糊、自由和非系统化的活动</strong>；厌恶明确、有秩序和系统化的活动；喜欢表现自己、喜欢单独活动</td>
+<td>文学艺术</td>
+</tr>
+<tr>
+<td><strong>社会型</strong></td>
+<td>合作、友善、善于言谈和社交，观察能力强；有<strong>教导、指点和培训别人</strong>的能力和愿望；不喜欢与材料、工具、机械等实物打交道</td>
+<td>教育、咨询等</td>
+</tr>
+<tr>
+<td><strong>企业型</strong></td>
+<td>冒险、乐观、自信、精力充沛、有进取心；喜欢担任<strong>有领导责任</strong>的工作；看重政治和经济方面的成就，追求财富、权力和地位；喜欢与人争辩、<strong>说服别人接受自己的观点</strong>；不喜欢研究性活动</td>
+<td>企业领导或行政管理人员等</td>
+</tr>
+<tr>
+<td><strong>常规型</strong></td>
+<td>顺从、谨慎、保守、实际、稳重；喜欢<strong>条理性强</strong>，偏好对文字和数据等资料进行明确、有序的整理；厌恶模糊、不正规、非程序化或探究性的活动；不喜欢自己对事情作判断和决策</td>
+<td>办公室事务性、图书管理、会计、统计类工作</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：现实动手，研究动脑，社会教导，企业管人，艺术自由，常规办公</div><p>一句话锁死六型关键词：动手找<strong>现实</strong>，动脑找<strong>研究</strong>，带人教书找<strong>社会</strong>，掌权说服找<strong>企业</strong>，天马行空找<strong>艺术</strong>，整理档案找<strong>常规</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 六角相邻</div><p><strong>"现研艺社企常，首尾相接"</strong>——六边形按此顺序排一圈，<strong>相邻相似、不相邻不相似</strong>。问"与 X 型相邻的是谁"，就在环上找它的左右邻居：如<strong>企业型的邻居是社会型和常规型</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>爱拆装家电、见到机械就走不动道的邻居小孩——现实型；总爱问"为什么"、写论文较真到半夜的同学——研究型；小区里组织团购、调解邻里矛盾的热心大姐——社会型；敢拉队伍创业、三句话把人说服的老王——企业型。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 六角题解法</div><p>考"相邻"时按环上位置数：<strong>现实—研究—艺术—社会—企业—常规—（回到现实）</strong>。企业型两侧是社会型、常规型（2024 真题）；现实型两侧是常规型、研究型。考"特征"时先抓<strong>否定词</strong>：研究型"缺乏组织和领导才能"、社会型"不喜欢与实物打交道"、艺术型"厌恶明确有序"、常规型"不喜欢自己作判断决策"——否定句最爱当选项考。</p></div></div>
+<div class="section"><h2>二、成就测试</h2>
+<p><strong>概念</strong>：成就测试通常是对一个人在<strong>接受了一定的教育或训练之后获得的成果</strong>进行测试，测试目的是考查一个人<strong>在多大程度上掌握了</strong>对于从事某种具体工作而言非常重要的那些<strong>知识或技能</strong>。成就测试包括<strong>知识测试</strong>与<strong>工作样本测试</strong>两种。</p>
+<h3>1. 知识测试（★★★）</h3>
+<ol>
+<li>考查一个人在<strong>特定领域中掌握的知识的广度和深度</strong>——从事任何类型的工作都需要具备一定的知识。例：<strong>注册会计师考试、国家司法考试</strong>；</li>
+<li>测试方式：<strong>通常笔试</strong>，但<strong>并非所有的笔试都属于知识测试</strong>——例如公务员考试笔试环节中的<strong>行政能力测试</strong>就不属于知识测试。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>笔试 ≠ 知识测试：</strong><p>知识测试一般用笔试，但反推不成立：<strong>行测考的是认知能力</strong>（思维、推理），不是知识储备。判断标准看"考的是什么"——考"记住/掌握了多少知识"是知识测试，考"会不会想问题"是认知能力测试。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>考注册会计师——考会计准则条文和实务处理，测的是知识的广度和深度，<strong>知识测试</strong>；公务员行测里的图形推理——测的是思维能力，<strong>认知能力测试</strong>，虽然它也用笔试。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 知识测试</div><p><strong>"考记性看广深，笔试未必是知识"</strong>——见"注册会计师/司法考试"直接归知识测试；见"行测"要拐弯归认知能力测试。</p></div></div>
+<div class="section"><h3>2. 工作样本测试（★★★）</h3>
+<p><strong>概念</strong>：在一个对<strong>实际工作的一部分或全部进行模拟的环境</strong>中，让求职者<strong>实地完成某些具体工作任务</strong>的测试方法。典型例子：①对熟练工人（电焊工、机械师、木工等）的测试；②对计算机编程人员实施的<strong>编程测试</strong>；③对物流货运人员实施的<strong>标准驾驶测试</strong>；④对秘书和职员实施的电子文字和电子表格标准化测试；⑤对管理者实施的<strong>公文处理测试</strong>；⑥在交响乐团和芭蕾舞团中实施的视听测试；⑦公司举办或赞助与职位密切关联的竞赛，给优胜者工作机会。</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>效标效度和内容效度都很高</strong>——在大量的甄选环境中，工作样本测试的<strong>效度是最高的</strong></td>
+<td>①<strong>专门针对特定职位设计</strong>，普遍适用性很低；②<strong>开发成本相对较高</strong>（针对每一个职位设计新的测试，且测试模式非标准化）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>招电焊工，别听他背焊接理论，直接搭个工位让他焊一条焊缝，验一验就知道深浅——这就是工作样本测试：拿"活儿"本身当考题。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：工作样本 vs 评价中心</div><p><strong>工作样本测试是用实际的工作进行测试，评价中心技术是用模拟工作进行测试</strong>——工作样本直接"真刀真枪干本岗位的活"；评价中心则搭一个模拟情境（公文筐、无领导小组讨论）来看你的管理素质。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 工作样本优缺点</div><p><strong>"效度它最高，一岗一版贵"</strong>——效标效度、内容效度都高（甄选环境里效度最高）；但专门为特定职位定制、模式非标准化，所以普遍适用性低、开发成本高。"通用性好""开发成本低"的说法一律是错的。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 工作样本识别词</div><p>题干出现"<strong>实地完成</strong>""<strong>现场</strong>编写代码/标准驾驶/试焊""<strong>模拟实际工作环境</strong>"→工作样本测试（2023 货运司机标准驾驶、2025 程序员现场写代码都考过）。它属于<strong>成就测试</strong>，别与"能力测试/人格测试"混档。</p></div></div>
+<div class="section"><h2>三、评价中心技术——情景模拟考管理</h2>
+<p><strong>概念三句话</strong>：①通过<strong>情景模拟</strong>的方法评价求职者；②考查求职者是否具备从事<strong>管理类工作</strong>所需要的<strong>人格特征、管理技能及人际关系技能</strong>；③它<strong>并不是</strong>与其他甄选手段完全并列的测试工具——它<strong>综合运用了若干种不同的测试手段</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>评价中心是一个&quot;组合拳&quot;：</strong><p>评价中心不是某一种具体的测验，而是一套<strong>以情景模拟为核心、综合多种手段</strong>的评价程序。它的靶子很明确：<strong>管理类岗位</strong>需要的人格特征、管理技能、人际技能——所以它常用于甄选和培养管理人员。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>连锁企业提拔储备店长：上午发一摞"待批文件"限时处理（公文筐），下午把 6 个候选人关进会议室讨论"旺季人手不够怎么排班"（无领导小组讨论），最后让每人扮演店长处理一次顾客投诉（角色扮演）——三场情景模拟打包进行，这就是一次评价中心测评。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 评价中心定位</div><p><strong>"情景模拟、冲着管理岗、综合多种手段"</strong>——三句话各是一个考点：方法＝情景模拟；对象＝管理类工作素质；性质＝不是并列的单一工具。</p></div></div>
+<div class="section"><h3>1. 公文筐测试（公文处理测验）（★★★）</h3>
+<p>让被测试者在模拟情境中处理一堆待办"公文"，主要优缺点如下：</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①<strong>非常适合对应聘管理职位的人员进行评价</strong>，具有较高的<strong>内容效度和效标效度</strong>；②<strong>操作简单</strong>，对场地没有过多要求；③<strong>表面效度较高</strong>，容易得到被测试者的理解和接受</td>
+<td>①<strong>编制成本高</strong>；②<strong>评分困难</strong>（不同评价者背景、经验、管理理念不同，对公文处理方式的看法不同）；③由被测试者<strong>单独完成</strong>，<strong>无法考查人际交往能力和团队工作能力</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>把一封客户投诉邮件、一份待批预算、两条紧急电话记录、一个下属的请假单同时摆在你面前，限定两小时处理完并说明理由——你排的优先级、写的批复，就是考官评价你管理能力的"公文筐"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 公文筐三优三缺</div><p><strong>"管理岗的菜，效度高、场地省、好接受；编制贵、评分难、考不了人际"</strong>——"单独完成"是它考不了人际的根本原因，这句直接对应"无法考查团队合作能力"的选项。</p></div></div>
+<div class="section"><h3>2. 无领导小组讨论（★★★）</h3>
+<p><strong>（1）概念</strong>：采用<strong>情景模拟</strong>的方式让<strong>一组求职者进行集体讨论</strong>，然后观察他们在讨论过程中的言行。</p>
+<p><strong>（2）操作过程</strong>：
+1. 通常将一些求职者（<strong>通常是 5～7 人</strong>）组成一个小组；
+2. 评价者在讨论之前向该小组介绍需要讨论的问题、所要达到的目标及总体的时间限制；
+3. 小组就某个问题进行 <strong>1 小时左右</strong>的讨论；讨论过程中<strong>不指定谁是领导</strong>，也<strong>不指定座位</strong>，大家<strong>地位平等</strong>、自由发言；
+4. 评价者<strong>不参与讨论</strong>过程，甚至<strong>不在现场</strong>，而是<strong>透过玻璃墙或视频</strong>进行观察，然后对参与者的表现进行评价。</p>
+<p><strong>（3）试题的五种形式</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>概念</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>开放式问题</strong></td>
+<td>没有固定答案，答案范围可以很广</td>
+</tr>
+<tr>
+<td><strong>两难性问题</strong></td>
+<td>在两种<strong>互有利弊</strong>的答案中选择一种（选择概率大体相等，其中一个答案不能比另一个有明显优势），<strong>引发充分辩论</strong></td>
+</tr>
+<tr>
+<td><strong>多项选择问题</strong></td>
+<td>让被测试者从多种备选答案中<strong>选择几种</strong>，或对备选答案<strong>按重要性排序</strong></td>
+</tr>
+<tr>
+<td><strong>操作性问题</strong></td>
+<td>让被测试者<strong>利用材料设计出一个或一些指定的物体</strong>，一般出现在技术性较强的行业领域</td>
+</tr>
+<tr>
+<td><strong>资源争夺性问题</strong></td>
+<td>让处于<strong>同等地位</strong>的被测试者就<strong>有限的资源进行分配</strong>；适用于<strong>指定角色</strong>的无领导小组讨论，可引发充分辩论</td>
+</tr>
+</tbody>
+</table>
+<p><strong>（4）优缺点</strong>：优点——可以考查被测试者的<strong>组织协调能力、口头表达能力、说服能力、领导能力、人际交往能力</strong>及<strong>自信程度、进取心、情绪稳定性、反应的灵活性</strong>等；缺点——①对<strong>测试题目</strong>的要求较高（题目必须精心准备）；②对<strong>评价者的评分技术</strong>要求较高；③被测试者有可能<strong>有意识地表现自己或掩饰自己</strong>。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>讨论题"公司只有一笔培训预算，该给销售部还是研发部？"——两方都有道理、互有利弊，6 个人必须谈出一个结果：谁在组织、谁在说服、谁被带节奏、谁情绪先崩，玻璃墙外的考官看得一清二楚。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 无领导小组</div><p><strong>"5-7 人一小时，无领导墙后看；题型开两多操资"</strong>——人数 5～7、时长 1 小时左右、不指定领导、评价者不参与（玻璃墙/视频）；题型口诀"<strong>开</strong>放式、<strong>两</strong>难、<strong>多</strong>项选择、<strong>操</strong>作性、<strong>资</strong>源争夺"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 无领导小组 ≠ 面试里的&quot;小组面试&quot;</div><p>"无领导小组讨论"属于<strong>评价中心技术</strong>（甄选方法），而"小组面试/集体面试"是<strong>面试的组织形式</strong>——名字像"小组"，章节不同、考点不同。另外记住它的一个"洗不掉的缺点"：被测试者<strong>仍可能有意表现或掩饰自己</strong>，说它能"彻底避免掩饰"就是错的。</p></div></div>
+<div class="section"><h3>3. 角色扮演与技能对照（★★★）</h3>
+<p><strong>角色扮演</strong>：要求被测试者<strong>扮演一位管理者或者某岗位员工</strong>，然后让他们根据自己对角色的认识或担任相关角色的经验来进行相应的<strong>语言表达和行为展示</strong>。</p>
+<p><strong>评价中心各种练习想要衡量的技能对照</strong>（★★★）：</p>
+<table>
+<thead>
+<tr>
+<th>想衡量的技能</th>
+<th>公文筐测试</th>
+<th>无领导小组讨论</th>
+<th>角色扮演</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>领导能力（控制、辅导、影响、足智多谋）</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>问题解决能力（判断力）</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>人际交往能力（敏感性、解决冲突、合作、口头沟通）</td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>行政管理能力（组织、规划、书面沟通）</td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+</tr>
+<tr>
+<td>压力承受能力（自信心）</td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一张表的记法：</strong><p><strong>公文筐</strong>考领导、解题、行政三项，<strong>唯独考不了人际</strong>（因为单独完成）；<strong>无领导小组讨论五项全能</strong>；<strong>角色扮演</strong>除行政管理外都能考（它是演出来的互动，书面规划不是它的菜）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>测"处理难缠客户"的能力：角色扮演让候选人当场演客服、考官演发火的老顾客——临场的安抚话术、情绪控制一览无余；这活儿让公文筐来干就不行，公文是死的，人吵不起来。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 技能对照口诀</div><p><strong>"公文筐缺人际，无领导五项全，角色扮演缺行政"</strong>——多选问"无领导小组讨论可以衡量的技能"，五项全选；问"公文筐不能考查的"，答人际交往与团队合作。</p></div></div>
+<div class="section"><h2>四、面试</h2>
+<h3>1. 根据结构化程度划分（★★★）<span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>特点</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>非结构化面试</strong></td>
+<td><strong>不存在结构化的面试指南或必须遵循的既定格式</strong>，考官可以相对自由地提问；同一位考官对申请同一职位的<strong>不同被面试者可能提出不同问题</strong></td>
+<td>谈话<strong>自然顺畅、逻辑清晰</strong>；可就<strong>个性化问题深入探讨</strong></td>
+<td>难以确保对<strong>所有求职者提供公平机会</strong>，难确保<strong>所有关键问题都被问到</strong>；面试问题易受考官<strong>个人兴趣或工作背景</strong>影响；<strong>信度和效度比结构化面试低得多</strong></td>
+</tr>
+<tr>
+<td><strong>结构化面试</strong>（标准化面试）</td>
+<td>依据<strong>预先确定的面试内容、程序、评分结构</strong>等进行；考官按<strong>标准化问题提纲</strong>提问，使用<strong>标准评价标准</strong>，填写<strong>统一的评价表格</strong></td>
+<td><strong>标准化程度高</strong>：所有人被问相同的问题，确保关键信息不遗漏；<strong>降低考官个人偏见</strong>；<strong>公平性及信度和效度都比较高</strong></td>
+<td>考官个人<strong>没有发挥余地</strong>，不便过多提问；容易让被面试者感到<strong>僵硬</strong>，谈话不自然</td>
+</tr>
+<tr>
+<td><strong>半结构化面试</strong></td>
+<td>介于两者之间，考官<strong>具有一定的自主权</strong></td>
+<td>做到面试的<strong>结构性与灵活性相结合</strong></td>
+<td>——</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一句话分三种：</strong><p><strong>非结构＝没有剧本随便问</strong>（灵活但不公平、信效度低得多）；<strong>结构化＝照剧本问</strong>（公平、信效度高但死板）；<strong>半结构＝半剧本</strong>（结构性＋灵活性）。考"信度效度高低"就盯死：结构化 &gt; 非结构化，且是"<strong>低得多</strong>"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小公司面试全凭老板心情："你随便聊聊你自己"——想问啥问啥，每人问的都不一样（非结构化）；大厂校招每人同一套题、同一张评分表（结构化）；HR 面先按提纲走，总监面再自由追问（半结构化）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 面试三结构</div><p><strong>"非结构自由但低效，结构化公平但死板，半结构折中"</strong>——注意"低效"指<strong>信度效度低</strong>，不是效率。</p></div></div>
+<div class="section"><h3>2. 根据组织形式划分（★）</h3>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>特点</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>单独面试</strong></td>
+<td><strong>一对一</strong>：面试考官和被面试者两个人单独见面，考官口头引导询问，被面试者作答</td>
+<td>一个考官面对一个候选人</td>
+</tr>
+<tr>
+<td><strong>系列面试</strong>（顺序面试）</td>
+<td>组织根据某种特定的<strong>先后顺序</strong>，安排组织中的<strong>若干人员对同一位被面试者进行多轮面试</strong>，最后将所有考官<strong>独立得出的结果加以汇总</strong>，得出最终结论</td>
+<td>一关一关过，各考官先独立打分再汇总</td>
+</tr>
+<tr>
+<td><strong>小组面试</strong></td>
+<td>由<strong>一组面试考官</strong>在<strong>同一时间和同一场所</strong>，共同对<strong>一位被面试者</strong>进行提问、观察并作出评价</td>
+<td><strong>多个考官考一个人</strong>（多对一）</td>
+</tr>
+<tr>
+<td><strong>集体面试</strong></td>
+<td><strong>多位被面试者</strong>在<strong>同一时间和同一场合</strong>，共同接受面试考官面对面询问（考官可以是多人，也可以是一个人）</td>
+<td><strong>一群候选人一起面</strong>（一对多）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>特殊的面试形式</strong>：压力面试、电话面试、网络视频面试。其中<strong>压力面试（★）</strong>：面试考官在面试过程中<strong>故意制造出一种紧张气氛</strong>，对被面试者<strong>施加一定的心理压力</strong>，然后观察被面试者在压力状况下的<strong>情绪变化及所做出的反应</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：独系组集</div><p>面试四种组织形式——<strong>独</strong>（单独：一对一）、<strong>系</strong>（系列：多轮顺序、独立打分再汇总）、<strong>组</strong>（小组：多考官考一人）、<strong>集</strong>（集体：多候选人同场）。再配一句："<strong>谁多看主语</strong>"——考官多是小组，候选人多是集体。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>考官突然放下简历冷冷地说："你这段经历我看根本说明不了你的能力。"——别慌，这不是质疑你，而是<strong>压力面试</strong>：他故意制造紧张，看的正是你在压力下的情绪稳定性和反应。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三个&quot;多&quot;字辈辨析</div><p><strong>小组面试</strong>（多考官×1 候选人，面试形式）、<strong>集体面试</strong>（1 组考官×多候选人，面试形式）、<strong>无领导小组讨论</strong>（多候选人集体讨论，属于<strong>评价中心技术</strong>）。前两个按"谁多"区分，第三个压根不在面试分类里——2023、2024 年连续考了这个辨析。</p></div></div>
+<div class="section"><h3>3. 改善面试效果的主要方法（★★★）<span class="hot">高频考点</span></h3>
+<p><strong>（1）采用情境化结构面试（行为事件面试技术）</strong>——遵循 <strong>"STAR"原则</strong>：
+- ①向被面试者描述他们可能会面对的典型<strong>环境</strong>（<strong>S</strong>ituation）；
+- ②向被面试者描述需要完成的主要工作<strong>任务</strong>（<strong>T</strong>ask）；
+- ③询问他们实际上采取了何种<strong>行动</strong>（<strong>A</strong>ction）；
+- ④让他们说明这种行动产生了怎样的<strong>结果</strong>（<strong>R</strong>esult）。</p>
+<p>情境化结构面试的<strong>题目类型（2 类）</strong>：①<strong>过去导向型</strong>——以<strong>过去的经验</strong>为依据，问候选人过去遇到的情形及当时如何处理；②<strong>未来导向型</strong>——问<strong>将来</strong>遇到某种情形会怎么办。</p>
+<p><strong>（2）面试前做好充分准备</strong>：①安排好面试所需的<strong>时间、场地和资料</strong>；②<strong>认真阅读简历材料和职位说明书</strong>，准备好相关问题。</p>
+<p><strong>（3）系统培训面试考官</strong>：
+考官可能会犯的错误（6 条）：①<strong>说话过多</strong>，影响收集有效工作信息；②对不同的被面试者<strong>提出的问题不一致</strong>，导致收集的信息类型不同；③<strong>提问与工作职责无关或相关性不大</strong>的问题；④对自己的评价能力<strong>过于自信</strong>，<strong>匆忙下结论</strong>；⑤被求职者的<strong>非语言行为</strong>干扰；⑥<strong>因前面一位求职者的表现影响后一位</strong>的评价。</p>
+<p>对面试考官的培训重点（4 条）：①明确考官的<strong>职责、角色</strong>及着装、言行、准备、尊重被面试者等要求；②传授<strong>引导和控制面试过程</strong>的技巧；③学会<strong>与不同类型的被面试者打交道</strong>；④<strong>理解面试评价中可能出现的各种偏差</strong>，并在实际操作中注意避免。</p></div>
+<div class="section"><div class="keypoint"><strong>STAR 面试的精髓：</strong><p>不问"你觉得自己抗压吗"，而是把人按进具体情境里：给你摆<strong>情境（S）</strong>、派<strong>任务（T）</strong>，追问你当时<strong>干了什么（A）</strong>、结果<strong>怎么样（R）</strong>——用事实细节代替自我评价，所以又叫<strong>行为事件面试技术</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>过去导向型："你是否曾经带领团队完成一个有挑战性的目标？是如何做的？"——要求讲<strong>真实发生过</strong>的事；未来导向型："假设你有一个想法，但其他同事有所犹豫，你将如何推动大家行动？"——"假设""你将"是它的标志性开头。而"你有哪些兴趣爱好""你具备哪些优势"压根不是情境化结构面试题目。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 STAR 口诀</div><p><strong>"境务行果"</strong>——<strong>境</strong>（Situation 情境）、<strong>务</strong>（Task 任务）、<strong>行</strong>（Action 行动）、<strong>果</strong>（Result 结果）。考"X 字母指什么"按顺序对号：S 情境、T 任务、A 行动、R 结果。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 考官六错</div><p><strong>"话多、问杂、跑题、自信、看脸、对比"</strong>——说话过多；对不同人问得不一致；提问跑题；过于自信匆忙下结论；被非语言行为干扰；拿前一位的表现影响对后一位的评价。培训重点就冲着这六个错去。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 两类题目一眼断</div><p>见"<strong>你是否曾经</strong>……<strong>是如何做的</strong>"→<strong>过去导向</strong>；见"<strong>假设</strong>……你<strong>将</strong>如何"→<strong>未来导向</strong>；见"谈优势/兴趣爱好"→根本不属于情境化结构面试题（2024 真题的四个选项就是这么埋的）。</p></div></div>
+<div class="section"><h2>五、履历分析</h2>
+<table>
+<thead>
+<tr>
+<th>要点</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>基本假设（★★）</strong></td>
+<td>一个人的<strong>行为具有一致性</strong>——过去的行为是对其未来行为进行预测的最佳依据</td>
+</tr>
+<tr>
+<td><strong>分析对象</strong></td>
+<td>基本信息、学习、工作、培训经历及奖惩情况，还包括人格特质、态度、工作经验、兴趣、技能以及能力的各种相关<strong>历史事件和行为</strong></td>
+</tr>
+<tr>
+<td><strong>履历要求（★★）</strong></td>
+<td>信息<strong>真实</strong>、<strong>全面</strong>、<strong>相关</strong></td>
+</tr>
+<tr>
+<td><strong>最新发展</strong></td>
+<td><strong>目标履历分析法</strong>——预测不同的人在某些与工作相关的具体行为或兴趣方面存在的差异</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>履历分析的底层逻辑：</strong><p>"江山易改，本性难移"——履历分析把一个人的<strong>过去</strong>当作<strong>未来</strong>的样本：过去的经历、行为模式记录得越全、越真、越与目标岗位相关，对"他将来会怎么干"的预测就越靠谱。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一位频繁跳槽的候选人，简历里两段经历都写着"与上级分歧离职"，背景调查又发现他在上家公司有过虚报差旅的记录——根据"行为具有一致性"的假设，这段履历就是录用决策里分量很重的警示信号。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：真、全、相关</div><p>履历三要求——<strong>真</strong>实、<strong>全</strong>面、<strong>相关</strong>。多选里"忽略看似不重要的细节"（违背全面）、"主要适用于企业不适用于政府"（企业界和政府都很重视）都是陷阱。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>心理测试三块</strong>：能力（一般认知=智力人人要；特殊认知=倾向看行当；心理运动=精细动作如手表装配工；身体能力=强度爆发力协调平衡）＋人格＋职业兴趣</li>
+<li><strong>人格测量三法</strong>：自陈（自己说）/评价量表（他人评）/投射（模糊情境自由反应）；<strong>MBTI 四维</strong>：外倾-内倾=注意方向、感觉-直觉=获取信息、思考-情感=决策方式、判断-知觉=对待外界（4 维 8 风格）；<strong>大五="外愉尽神开"</strong>（外向、愉悦、尽责、神经质、开放）</li>
+<li><strong>霍兰德六型</strong>：现实动手、研究动脑、社会教导、企业管人、艺术自由、常规办公；六角"<strong>现研艺社企常</strong>"首尾相接，相邻相似、不相邻不相似（企业型邻居=社会+常规）</li>
+<li><strong>成就测试</strong>：知识测试（考知识广度深度，注会/司法；<strong>笔试≠知识测试</strong>，行测是认知能力）＋工作样本测试（模拟环境实地完成任务；<strong>效标效度内容效度都高、效度最高</strong>；一岗一版、开发贵、通用性低）</li>
+<li><strong>评价中心</strong>：情景模拟考管理素质，综合多种手段非并列工具；<strong>公文筐</strong>（管理岗、三优三缺、单独完成考不了人际）/ <strong>无领导小组讨论</strong>（5-7 人、1 小时、不指定领导、墙后观察；题型"开两多操资"；缺点=题目难出、评分难、可能掩饰）/ <strong>角色扮演</strong>；技能表"<strong>公文筐缺人际，无领导五项全，角色扮演缺行政</strong>"</li>
+<li><strong>面试结构</strong>：非结构化（自由、信效度低得多）/结构化（标准化、公平、信效度高、死板）/半结构化（折中）；组织形式"<strong>独系组集</strong>"（单独/系列/小组=多考官考一人/集体=多候选人）；<strong>压力面试</strong>=故意制造紧张看反应</li>
+<li><strong>改善面试</strong>：情境化结构面试（行为事件面试）<strong>STAR=境务行果</strong>；题目分过去导向（曾经…如何做）/未来导向（假设…将如何）；面试前准备＋系统培训考官（六错：话多、问杂、跑题、自信、看脸、对比）</li>
+<li><strong>履历分析</strong>：假设=<strong>行为一致性</strong>；要求=<strong>真、全、相关</strong>；最新发展=<strong>目标履历分析法</strong></li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r06s2q1" data-answer="B" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">MBTI 人格测试中，&quot;判断-知觉&quot;维度反映的是人的行为风格中的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 注意力集中的方向</button><button type="button" class="qopt" data-key="B">B. 对待外界的方式</button><button type="button" class="qopt" data-key="C">C. 处理信息和决策的方式</button><button type="button" class="qopt" data-key="D">D. 获取信息的方式</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：MBTI 四个两极维度各管一摊：<strong>外倾-内倾</strong>＝注意力集中的方向（A）；<strong>感觉-直觉</strong>＝获取信息的方式（D）；<strong>思考-情感</strong>＝处理信息和做出决策的方式（C）；<strong>判断-知觉</strong>＝通常表现出来的<strong>对待外界的方式</strong>（判断性、有计划、有目的 vs 灵活、好奇、易冲动、适应性强）。看到"判断"两个字别条件反射选"决策"（C），那是思考-情感的领地。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s2q2" data-answer="ABDE" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">根据&quot;大五&quot;人格理论，人格特质的基本维度包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 愉悦性</button><button type="button" class="qopt" data-key="B">B. 神经质</button><button type="button" class="qopt" data-key="C">C. 判断性</button><button type="button" class="qopt" data-key="D">D. 开放性</button><button type="button" class="qopt" data-key="E">E. 外向性</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：大五人格五个基本维度＝<strong>外向性、愉悦性、尽责性、神经质、开放性</strong>（口诀"外愉尽神开"），A、B、D、E 对。C"判断性"是冒牌货——"判断-知觉"是 <strong>MBTI</strong> 的维度，大五里没有它。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s2q3" data-answer="ACD" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">根据霍兰德职业兴趣理论，关于各种职业兴趣类型的核心特征的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 研究型注重抽象分析，但缺乏组织和领导才能</button><button type="button" class="qopt" data-key="B">B. 常规型偏好灵活处理问题，不喜欢明确的常规性管理工作</button><button type="button" class="qopt" data-key="C">C. 社会型偏好合作、善于言谈，喜欢教导和培训别人</button><button type="button" class="qopt" data-key="D">D. 企业型追求政治经济成就，擅长说服他人接受观点</button><button type="button" class="qopt" data-key="E">E. 艺术型重视秩序和系统性，厌恶模糊和非结构化活动</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：A 对——研究型喜欢抽象的、分析性的、独立性的工作，但<strong>缺乏组织和领导才能</strong>，不喜欢说服性或重复性工作；C 对——社会型合作友善、善于言谈社交，有教导、指点和培训别人的能力和愿望；D 对——企业型看重政治和经济成就，喜欢与人争辩、说服别人接受自己的观点。B 说反了——常规型恰恰<strong>顺从谨慎、喜欢条理性强</strong>的工作，偏好对文字和数据明确有序地整理，厌恶模糊、非程序化活动；E 也说反了——艺术型<strong>偏好模糊、自由和非系统化</strong>的活动，厌恶明确、有秩序和系统化的活动。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s2q4" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">某互联网公司在招募程序员时，要求求职者在现场编写一段代码，这种测试方法属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 工作样本测试</button><button type="button" class="qopt" data-key="B">B. 评价中心技术</button><button type="button" class="qopt" data-key="C">C. 知识测试</button><button type="button" class="qopt" data-key="D">D. 外语测试</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：<strong>工作样本测试</strong>＝在对实际工作的一部分或全部进行<strong>模拟的环境</strong>中，让求职者<strong>实地完成某些具体工作任务</strong>——程序员现场写代码、货运司机标准驾驶测试、秘书的电子文字表格测试都是典型。B 评价中心技术用<strong>模拟情境</strong>综合考查管理类素质（人格特征、管理技能、人际技能），不是让人直接干本职活；C 知识测试考知识的广度和深度（通常笔试），不考核实际动手产出。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s2q5" data-answer="BCDE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">关于工作样本测试的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 工作样本测试具有通用性，不需针对不同职位专门开发</button><button type="button" class="qopt" data-key="B">B. 工作样本测试的开发成本相对较高</button><button type="button" class="qopt" data-key="C">C. 工作样本测试是在模拟实际工作的环境中进行的</button><button type="button" class="qopt" data-key="D">D. 工作样本测试是一种成就测试</button><button type="button" class="qopt" data-key="E">E. 工作样本测试的效标效度和内容效度通常较高</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：C、E 对——工作样本测试在<strong>模拟实际工作</strong>的环境中让求职者实地完成任务，<strong>效标效度和内容效度都很高</strong>，在大量甄选环境中它的<strong>效度是最高的</strong>；B 对——它专门针对特定职位设计、测试模式非标准化，所以<strong>开发成本相对较高</strong>。A 错——正因为一岗一版，它<strong>普遍适用性很低</strong>，必须针对不同职位专门开发。D 对——它与知识测试同属<strong>成就测试</strong>（测教育和训练之后获得的成果）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s2q6" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">关于公文筐测试，说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 适合于对管理人员进行测试</button><button type="button" class="qopt" data-key="B">B. 开发成本低</button><button type="button" class="qopt" data-key="C">C. 评分简单</button><button type="button" class="qopt" data-key="D">D. 能体现测试人员的团队合作能力</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：公文筐测试<strong>非常适合对应聘管理职位的人员进行评价</strong>，具有较高的内容效度和效标效度，A 正确。B、C 错——它的缺点恰恰是<strong>编制成本较高、评分比较困难</strong>（不同评价者对公文处理方式的看法不同）；D 错——公文筐由被测试者<strong>单独完成</strong>，<strong>无法考查人际交往能力和团队工作能力</strong>，要考人际得靠无领导小组讨论或角色扮演。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s2q7" data-answer="BCD" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">关于无领导小组讨论的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 它不适合应届大学毕业生</button><button type="button" class="qopt" data-key="B">B. 它可以考察被测试者的领导能力和人际交往能力</button><button type="button" class="qopt" data-key="C">C. 它对测试题目的要求比较高</button><button type="button" class="qopt" data-key="D">D. 它对评价者的评分技术要求比较高</button><button type="button" class="qopt" data-key="E">E. 它可以彻底避免被测试者掩饰自己的行为</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：B 对——优点是能考查组织协调、口头表达、说服、<strong>领导能力、人际交往能力</strong>以及自信程度、进取心、情绪稳定性、反应灵活性等；C、D 对——缺点是①对<strong>测试题目</strong>的要求较高（必须精心准备）、②对<strong>评价者的评分技术</strong>要求较高。A 错——它近年在招聘<strong>大学生</strong>和公务员录用考试中广泛应用；E 错——被测试者仍可能<strong>有意识地表现或掩饰自己</strong>，"彻底避免"太绝对。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s2q8" data-answer="B" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">关于非结构化面试的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 面试过程中，面试考官和求职者之间的交谈比较个性化和自然</button><button type="button" class="qopt" data-key="B">B. 其信度和效度比结构化面试更高</button><button type="button" class="qopt" data-key="C">C. 面试过程不需要遵循标准化的流程</button><button type="button" class="qopt" data-key="D">D. 面试过程中，面试考官可以根据自己的兴趣和关注点自主提问</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：非结构化面试<strong>不存在结构化的面试指南或既定格式</strong>（C 对），考官可以<strong>相对自由地提问</strong>（D 对），谈话<strong>自然顺畅</strong>并能就个性化问题深入探讨（A 对）。它的硬伤恰恰是<strong>信度和效度比结构化面试低得多</strong>——难以确保对所有求职者公平、关键问题可能被遗漏、易受考官个人兴趣影响，B 说反了。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s2q9" data-answer="C" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">几位面试考官在同一时间和同一地点共同对一位应聘者进行面试的形式是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 集体面试</button><button type="button" class="qopt" data-key="B">B. 系列面试</button><button type="button" class="qopt" data-key="C">C. 小组面试</button><button type="button" class="qopt" data-key="D">D. 单独面试</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：<strong>小组面试</strong>＝由<strong>一组面试考官</strong>在同一时间和同一场所，共同对<strong>一位</strong>被面试者进行提问、观察并作出评价——<strong>多对一</strong>。A 集体面试是<strong>多位被面试者</strong>同场接受询问（一对多，考官可多人可一人）；B 系列面试是按先后顺序多轮面试、各考官<strong>独立打分再汇总</strong>；D 单独面试是一对一。口诀"独系组集"＋"谁多看主语"。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s2q10" data-answer="C" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">情境化结构面试通常遵循所谓的&quot;STAR&quot;原则，其中 A 指的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 时间</button><button type="button" class="qopt" data-key="B">B. 情境</button><button type="button" class="qopt" data-key="C">C. 行动</button><button type="button" class="qopt" data-key="D">D. 任务</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：STAR 四件套：<strong>S</strong>ituation——向被面试者描述可能面对的典型<strong>情境</strong>（B）；<strong>T</strong>ask——描述需要完成的主要工作<strong>任务</strong>（D）；<strong>A</strong>ction——询问他们实际上采取了何种<strong>行动</strong>；<strong>R</strong>esult——让他们说明这种行动产生了怎样的<strong>结果</strong>。A"时间"是干扰项，STAR 里没有它。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s2q11" data-answer="B" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">下列面试问题中，属于&quot;过去导向型&quot;的情境化结构面试问题的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. &quot;你具备哪些优势能满足本岗位的需要&quot;</button><button type="button" class="qopt" data-key="B">B. &quot;你是否曾经带领团队完成一个有挑战性的目标，是如何做的&quot;</button><button type="button" class="qopt" data-key="C">C. &quot;你有哪些兴趣爱好&quot;</button><button type="button" class="qopt" data-key="D">D. &quot;假设你有一个想法，但是其他同事有所犹豫，你将如何推动大家按你的想法行动&quot;</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：情境化结构面试题目分两类：<strong>过去导向型</strong>以<strong>过去的经验</strong>为依据，要求被面试者回答过去工作中遇到的情形及当时的处理方式——B 的"<strong>你是否曾经</strong>……<strong>是如何做的</strong>"是标志句式；D 用"<strong>假设</strong>……你<strong>将</strong>如何"开头，属于<strong>未来导向型</strong>。A（谈自身优势）、C（谈兴趣爱好）是普通问题，<strong>不属于</strong>情境化结构面试题目。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s2q12" data-answer="BCD" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">关于甄选中的履历分析技术的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 履历分析主要适用于企业，不适用于政府</button><button type="button" class="qopt" data-key="B">B. 履历分析技术的最新发展是目标履历分析法</button><button type="button" class="qopt" data-key="C">C. 履历分析通过分析求职者的历史工作经历预测其未来工作表现</button><button type="button" class="qopt" data-key="D">D. 履历分析的核心假设是&quot;人的行为具有一致性&quot;</button><button type="button" class="qopt" data-key="E">E. 为提高履历分析效率，可忽略那些看上去不重要的履历细节</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：履历分析的<strong>基本假设</strong>是一个人的<strong>行为具有一致性</strong>——过去的行为是预测未来行为的最佳依据，据此通过历史经历预测未来表现，C、D 对；其<strong>最新发展</strong>是<strong>目标履历分析法</strong>（预测不同的人在与工作相关的具体行为或兴趣方面的差异），B 对。A 错——近年来履历分析在企业界<strong>和政府中</strong>都受到越来越多的重视、被广泛使用；E 错——履历信息<strong>越全面越有助于判断</strong>，忽略看似不重要的细节会导致信息不完整、影响分析结果的准确性。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力06_甄选_第1节_甄选及其有效性.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 甄选及其有效性</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第14章 劳动合同管理与特殊用工 · 特殊用工 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第四部分 人力资源与社会保险政策</span><h1>第14章 劳动合同管理与特殊用工 · 特殊用工</h1><div class="subtitle">第 4 节 / 共 4 节 · 预计学习时长 50 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 4/4</div><div class="sec-badge none" id="sec-badge" data-sec="r14s4">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>理解劳务派遣"<strong>有关系没劳动、有劳动没关系</strong>"的三角结构，会判断责任归属 <span class="must">必考</span></li>
+<li>背下经营劳务派遣的<strong>许可</strong>（证 3 年、60 日前申请延续）与四条件（注册资本 200 万等） <span class="s3">★★★</span></li>
+<li>分清<strong>劳务派遣单位义务</strong>与<strong>用工单位义务</strong>的分工（多选经典陷阱） <span class="hot">高频考点</span></li>
+<li>背下派遣劳动合同要点（<strong>2 年以上固定期限、按月付酬、无工作期间最低工资、一次试用期</strong>）、退回情形与"<strong>三性</strong>＋10% 比例" <span class="s3">★★★</span></li>
+<li>背下非全日制用工"<strong>日 4 小时/周 24 小时、口头可、试用期不可、随时终止无补偿、15 日结算、工伤唯一强制</strong>" <span class="must">必考</span> <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、劳务派遣</h2>
+<h3>1. 劳务派遣的概念与三角结构 <span class="must">必考</span></h3>
+<p><strong>劳务派遣</strong>是指劳务派遣单位与被派遣劳动者<strong>建立劳动关系</strong>后，将该劳动者<strong>派遣到用工单位</strong>从事劳动的一种特殊用工形式。结构上"两个分离"：</p>
+<table>
+<thead>
+<tr>
+<th>主体</th>
+<th>与劳动者的关系</th>
+<th>角色比喻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>劳务派遣单位</strong></td>
+<td><strong>建立劳动关系</strong>，但<strong>不直接管理和指挥</strong>劳动者从事劳动</td>
+<td>"签合同的东家"</td>
+</tr>
+<tr>
+<td><strong>用工单位</strong></td>
+<td><strong>直接管理和指挥</strong>劳动者劳动，但<strong>不建立劳动关系</strong></td>
+<td>"干活的东家"</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一句话理解：</strong><p><strong>"有关系没劳动，有劳动没关系。"</strong>——派遣单位跟劳动者"有关系（劳动关系）"但不用人；用工单位"用劳动"但跟劳动者"没关系（无劳动关系）"。劳动关系、工资社保责任跟着<strong>派遣单位</strong>走，工作现场的指挥管理在<strong>用工单位</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小李与 A 派遣公司签劳动合同，被派到 B 银行做柜员。发工资、缴社保、办离职手续找 A；排班、考核、日常工作听 B 的。B 银行不能说"你表现不好我直接辞退你"——只能依法把小李<strong>退回</strong> A 公司，解除合同的"剪刀"握在 A 手里。</p></div></div>
+<div class="section"><h3>2. 经营劳务派遣业务的条件（★★★）</h3>
+<p>经营劳务派遣业务，应向<strong>劳动行政部门</strong>依法申请<strong>行政许可</strong>；未经许可，任何单位和个人不得经营劳务派遣业务。</p>
+<table>
+<thead>
+<tr>
+<th>事项</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>许可证有效期</td>
+<td><strong>3 年</strong>；需延续的，应在有效期届满 <strong>60 日前</strong>向许可机关提出<strong>书面</strong>申请，并提交 <strong>3 年以来的基本经营情况</strong>；<strong>逾期</strong>提出延续申请的，按照<strong>新申请</strong>行政许可办理</td>
+</tr>
+<tr>
+<td>条件①</td>
+<td><strong>注册资本不得少于人民币 200 万元</strong></td>
+</tr>
+<tr>
+<td>条件②</td>
+<td>有与开展业务相适应的<strong>固定的经营场所和设施</strong></td>
+</tr>
+<tr>
+<td>条件③</td>
+<td>有符合法律、行政法规规定的<strong>劳务派遣管理制度</strong></td>
+</tr>
+<tr>
+<td>条件④</td>
+<td>法律、行政法规规定的其他条件</td>
+</tr>
+<tr>
+<td>禁止自设派遣</td>
+<td>用人单位<strong>不得设立</strong>劳务派遣单位向<strong>本单位或所属单位</strong>派遣劳动者；单位<strong>或其所属单位出资或合伙设立</strong>的劳务派遣单位向本单位或所属单位派遣的，也属禁止范围</td>
+</tr>
+<tr>
+<td>分立合并</td>
+<td>劳务派遣单位分立、合并后设立新公司的，应当依法<strong>重新申请</strong>劳务派遣行政许可</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 劳务派遣许可口诀</div><p><strong>"行政许可三年证，六十日里申请延；两百万、场所设施、管理制度，一样不能少。"</strong>——再记两个禁止：单位<strong>自己设派遣单位派给自己（及所属单位）</strong>＝禁止；分立合并设新公司＝<strong>重新申请许可</strong>（不是自动延续）。</p></div></div>
+<div class="section"><h3>3. 劳务派遣的劳动合同与劳务派遣协议（★）</h3>
+<p><strong>劳动合同</strong>（劳务派遣单位与劳动者订立）：</p>
+<table>
+<thead>
+<tr>
+<th>要点</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>必载事项</td>
+<td>劳动合同<strong>必备事项</strong>＋<strong>被派遣劳动者的用工单位及派遣期限、工作岗位</strong>等情况</td>
+</tr>
+<tr>
+<td>合同形式</td>
+<td>订立 <strong>2 年以上的固定期限</strong>劳动合同，<strong>按月支付</strong>劳动报酬</td>
+</tr>
+<tr>
+<td>无工作期间</td>
+<td>按照所在地人民政府规定的<strong>最低工资标准</strong>按月支付报酬</td>
+</tr>
+<tr>
+<td>试用期</td>
+<td>可以依法约定试用期；与<strong>同一劳动者只能约定一次</strong>试用期</td>
+</tr>
+</tbody>
+</table>
+<p><strong>劳务派遣协议</strong>（劳务派遣单位与用工单位订立）：核心红线——<strong>不得将连续用工期限分割订立数个短期劳务派遣协议</strong>。内容包括：派遣岗位名称和岗位性质、工作地点、派遣人员数量和派遣期限、按<strong>同工同酬</strong>原则确定的劳动报酬数额和支付方式、社会保险费的数额和支付方式、工作时间和休息休假、工伤生育患病期间待遇、劳动安全卫生及培训、经济补偿等费用、协议期限、派遣服务费的支付方式和标准、违约责任等。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 派遣合同口诀</div><p><strong>"两年固定按月付，没活最低工资养；试用期只能一次，连续用工不许切短段。"</strong>——"2 年以上固定期限＋按月付酬"是派遣劳动合同的硬性标配，无工作期间兜底按当地最低工资；分割短期协议是"化整为零"规避责任，明令禁止。</p></div></div>
+<div class="section"><h3>4. 两张义务清单：派遣单位 vs 用工单位（★★★）<span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>劳务派遣单位的义务</th>
+<th>用工单位的义务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>如实告知《劳动合同法》第 8 条事项、规章制度及派遣协议内容</td>
+<td><strong>执行国家劳动标准</strong>，提供相应的<strong>劳动条件和劳动保护</strong></td>
+</tr>
+<tr>
+<td>建立<strong>培训制度</strong>，进行上岗知识、安全教育培训</td>
+<td><strong>告知</strong>工作要求和劳动报酬</td>
+</tr>
+<tr>
+<td>依法<strong>支付劳动报酬和相关待遇</strong></td>
+<td><strong>支付加班费、绩效奖金</strong>，提供与工作岗位相关的<strong>福利待遇</strong></td>
+</tr>
+<tr>
+<td>依法<strong>缴纳社会保险费</strong>并办理社保手续</td>
+<td>对在岗被派遣劳动者进行<strong>岗位所必需的培训</strong></td>
+</tr>
+<tr>
+<td><strong>督促</strong>用工单位依法提供劳动保护和劳动安全卫生条件</td>
+<td>连续用工的，实行<strong>正常的工资调整机制</strong></td>
+</tr>
+<tr>
+<td>依法出具<strong>解除或终止劳动合同的证明</strong>；<strong>协助处理</strong>劳动者与用工单位的纠纷</td>
+<td><strong>不得将被派遣劳动者再派遣</strong>到其他用人单位</td>
+</tr>
+<tr>
+<td><strong>不得克扣</strong>用工单位按协议支付给劳动者的报酬；<strong>不得向劳动者收取费用</strong></td>
+<td>（对照：加班费、绩效奖金、岗位福利在用工单位这边）</td>
+</tr>
+<tr>
+<td><strong>跨地区派遣</strong>：保证劳动报酬和劳动条件符合<strong>用工单位所在地</strong>标准</td>
+<td>（对照：劳动条件、劳动保护标准也在用工单位所在地落地）</td>
+</tr>
+<tr>
+<td>违法给劳动者造成损害的，与用工单位承担<strong>连带赔偿责任</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>不得以非全日制用工形式</strong>招用被派遣劳动者</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 义务分工口诀</div><p><strong>"钱、社保、证明派遣出；条件、加班、福利用工付；再派遣、收费两禁止。"</strong>——签合同收钱管社保的是派遣单位，管现场待遇福利的是用工单位。2017 年多选就把"提供劳动条件""支付加班费"塞进派遣单位义务里当干扰项，记住"现场的事归用工单位"。</p></div></div>
+<div class="section"><h3>5. 被派遣劳动者的权利（★）</h3>
+<ol>
+<li>享有与用工单位的劳动者<strong>同工同酬</strong>的权利；</li>
+<li>有权在<strong>劳务派遣单位或者用工单位</strong>依法参加或组织<strong>工会</strong>，维护自身合法权益；</li>
+<li>可以与劳务派遣单位<strong>协商一致解除</strong>劳动合同；劳务派遣单位存在 38 条情形（未足额付酬、未缴社保等）时，也可以与其解除劳动合同；</li>
+<li>被派遣劳动者<strong>提前 30 日以书面形式</strong>（试用期内<strong>提前 3 日</strong>）通知劳务派遣单位，可以解除劳动合同；劳务派遣单位应当将解除情况<strong>及时告知用工单位</strong>。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>派遣员工的辞职通道：</strong><p>被派遣劳动者的辞职规则与普通员工一致（30 日书面/试用期 3 日），但"接受辞职信"的是<strong>劳务派遣单位</strong>，且派遣单位要<strong>转告用工单位</strong>——又一个"劳动关系在派遣单位"的体现。别忘了还有<strong>同工同酬</strong>权和"两边单位都能入工会"的选择权。</p></div></div>
+<div class="section"><h3>6. 用工单位退回被派遣劳动者（★）</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>情形</th>
+<th>后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>退回＋派遣单位可解除劳动合同</strong>（8 项）</td>
+<td>①试用期不符合录用条件；②严重违反规章制度；③严重失职、营私舞弊造成重大损害；④双重劳动关系严重影响或拒不改正；⑤欺诈胁迫致合同无效；⑥被追究刑事责任；⑦医疗期满不能从事原工作也不能从事另行安排的工作；⑧不能胜任工作，经培训或调岗仍不能胜任</td>
+<td>用工单位可<strong>退回</strong>，劳务派遣单位<strong>可以依法解除</strong>劳动合同</td>
+</tr>
+<tr>
+<td><strong>仅退回</strong>（7 项）</td>
+<td>①客观情况重大变化致合同无法履行、协商变更未成；②企业破产重整；③生产经营严重困难；④转产、重大技术革新或经营方式调整、经变更劳动合同后仍需裁减；⑤其他客观经济情况重大变化；⑥用工单位破产、吊销营业执照、责令关闭、撤销、提前解散或经营期限届满不再继续经营；⑦劳务派遣协议期满终止</td>
+<td>用工单位可以将被派遣劳动者<strong>退回</strong>劳务派遣单位</td>
+</tr>
+<tr>
+<td>退回后重新派遣</td>
+<td>维持或提高原合同条件，劳动者<strong>不同意</strong>的 → 派遣单位<strong>可以解除</strong>；<strong>降低</strong>条件，劳动者不同意的 → <strong>不得解除</strong>（但劳动者自己提出解除的除外）</td>
+<td>退回后在<strong>无工作期间</strong>，派遣单位按<strong>不低于</strong>所在地人民政府规定的<strong>最低工资标准</strong>按月支付报酬</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 退回情形口诀</div><p><strong>"八退可解约，七退只退人。"</strong>——8 项＝39 条六项＋40 条前两项（医疗期满、不胜任），都是"劳动者状态"问题，退回后派遣单位可以直接解约；7 项＝40 条第三项＋41 条四项＋用工单位"死掉"＋协议到期，都是"单位/客观"问题，只能退回、不能直接解约，重新派遣时<strong>看条件升降</strong>：升你不走→可解，降你不走→不能解。无工作期间按<strong>不低于当地最低工资</strong>养着。</p></div></div>
+<div class="section"><h3>7. 劳务派遣岗位的范围和比例（★）<span class="hot">高频考点</span></h3>
+<p><strong>劳动合同用工</strong>是我国企业的<strong>基本用工形式</strong>；<strong>劳务派遣用工</strong>是<strong>补充形式</strong>，只能在"三性"岗位实施：</p>
+<table>
+<thead>
+<tr>
+<th>三性</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>临时性</strong></td>
+<td>存续时间<strong>不超过 6 个月</strong>的岗位</td>
+</tr>
+<tr>
+<td><strong>辅助性</strong></td>
+<td>为主营业务岗位提供服务的<strong>非主营业务岗位</strong></td>
+</tr>
+<tr>
+<td><strong>替代性</strong></td>
+<td>劳动者因<strong>脱产学习、休假</strong>等原因无法工作的一定期间内，可由其他劳动者<strong>替代工作</strong>的岗位</td>
+</tr>
+</tbody>
+</table>
+<p>用工单位应严格控制劳务派遣用工数量：被派遣劳动者数量<strong>不得超过其用工总量的 10%</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三性与比例口诀</div><p><strong>"临时六个月，辅助非主营，替代顶岗用；总量一成封。"</strong>——三性认准关键词：6 个月（临时）、非主营业务（辅助）、脱产学习休假顶班（替代）；比例 10% 是"用工总量"的分母，不是注册资本、不是职工人数口径。</p></div></div>
+<div class="section"><h2>二、非全日制用工</h2>
+<h3>8. 非全日制用工的规则全景 <span class="must">必考</span> <span class="s3">★★★</span></h3>
+<p><strong>非全日制用工</strong>是指以<strong>小时计酬为主</strong>，劳动者在<strong>同一用人单位</strong>一般<strong>平均每日工作时间不超过 4 小时</strong>、<strong>每周工作时间累计不超过 24 小时</strong>的用工形式。规则六条：</p>
+<table>
+<thead>
+<tr>
+<th>要点</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多重劳动关系</td>
+<td>可以与<strong>一个或者一个以上</strong>用人单位订立劳动合同；但<strong>后订立的不得影响先订立</strong>的履行</td>
+</tr>
+<tr>
+<td>合同形式</td>
+<td>双方当事人<strong>可以订立口头协议</strong>（书面当然也可以）</td>
+</tr>
+<tr>
+<td>试用期</td>
+<td><strong>不得约定试用期</strong></td>
+</tr>
+<tr>
+<td>终止</td>
+<td>任何一方可以<strong>随时通知</strong>对方终止用工；终止时用人单位<strong>不支付经济补偿</strong></td>
+</tr>
+<tr>
+<td>计酬底线</td>
+<td>小时计酬标准<strong>不得低于</strong>用人单位所在地人民政府规定的<strong>最低小时工资标准</strong></td>
+</tr>
+<tr>
+<td>结算周期</td>
+<td>劳动报酬结算支付周期<strong>最长不得超过 15 日</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 非全日制口诀</div><p><strong>"日 4 周 24，口头即可用；试用期没有，随时走无补偿；小时工资不破底，15 日一结算。"</strong>——四个"没有/随时"是判断题金矿：没有试用期、随时终止、无经济补偿、口头协议也行。数字就两个：日不超 4、周不超 24，外加结算周期 15 日。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>大学生小赵在奶茶店打零工，每天下午干 3 小时，一周干 5 天（周累计 15 小时）——典型的非全日制用工：店方和小赵口头说好就行，不用签书面合同；不能约定试用期；小赵不想干了当天说一声就能走，店方也不用给补偿；工资按周结算完全合法（未超 15 日）。要是小赵每天干 5 小时、每周干 6 天（周 30 小时），就超出"日 4 周 24"的范围，不再是非全日制用工了。</p></div></div>
+<div class="section"><h3>9. 非全日制用工的工伤保险（★）</h3>
+<p>职工（<strong>包括非全日制从业人员</strong>）在<strong>两个或者两个以上</strong>用人单位<strong>同时就业</strong>的，<strong>各用人单位应当分别为职工缴纳工伤保险费</strong>；职工发生工伤，由<strong>职工受到伤害时工作的单位</strong>依法承担工伤保险责任。目前，<strong>工伤保险是国家唯一强制用人单位为非全日制从业人员缴纳的社会保险</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>&quot;分别缴、干活地赔、唯一强制&quot;：</strong><p>三家店同时打零工 → 三家店<strong>各自</strong>为他缴工伤保险（不冲突、不免除）；在哪家店受的伤，<strong>哪家店</strong>担工伤保险责任；五险里只有<strong>工伤保险</strong>是国家强制给非全日制人员缴的——养老、医疗等可由个人以灵活就业身份自行参加，单位不强制。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 非全日制 vs 劳务派遣，两条红线互斥</div><p>①劳务派遣单位<strong>不得以非全日制用工形式</strong>招用被派遣劳动者；②非全日制劳动者可以"一家以上"多重打工，但后订合同不得影响先订合同履行。对比记忆：全日制用工要书面合同、试用期可约定、解除受严格限制、终止多为法定情形；非全日制全反过来——口头可、试用期无、随时终止、无补偿。考试最爱把全日制规则"平移"到非全日制题里当错误选项（如"每周不超过 20 小时""提前 30 日通知终止"）。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>派遣三角</strong>：派遣单位有劳动关系不指挥，用工单位指挥无劳动关系——"有关系没劳动，有劳动没关系"</li>
+<li><strong>经营条件</strong>：行政许可（证 <strong>3 年</strong>，届满 <strong>60 日前</strong>书面申请延续＋交 3 年经营情况，逾期按新申请）；注册资本 <strong>≥200 万</strong>＋固定场所设施＋派遣管理制度；<strong>禁止自设派遣</strong>（本单位/所属单位）；分立合并设新公司<strong>重新申请</strong></li>
+<li><strong>派遣劳动合同</strong>：<strong>2 年以上固定期限</strong>＋按月付酬；必载用工单位、派遣期限、工作岗位；无工作期间按<strong>当地最低工资</strong>按月付；<strong>同一劳动者只能约定一次</strong>试用期；<strong>不得分割连续用工期限</strong>订数个短期协议</li>
+<li><strong>义务分工</strong>：报酬、社保、证明、培训、跨地区按<strong>用工单位所在地</strong>标准、连带赔偿、不得克扣收费＝<strong>派遣单位</strong>；劳动条件保护、告知要求报酬、<strong>加班费绩效奖金岗位福利</strong>、岗位培训、工资调整机制、<strong>不得再派遣</strong>＝<strong>用工单位</strong></li>
+<li><strong>派遣劳动者权利</strong>：同工同酬；两边单位均可入工会；30 日书面（试用期 3 日）通知<strong>派遣单位</strong>解除，派遣单位及时告知用工单位</li>
+<li><strong>退回</strong>："八退可解约"（39 条六项＋医疗期满＋不胜任）；"七退只退人"（客观重大变化＋41 条四项＋用工单位破产吊销解散到期＋协议期满终止）；重新派遣：升条件不走→可解，降条件不走→不得解；无工作期间<strong>不低于最低工资</strong>按月付</li>
+<li><strong>三性＋比例</strong>：临时性 <strong>≤6 个月</strong>、辅助性＝非主营、替代性＝脱产学习休假顶岗；被派遣劳动者<strong>≤用工总量 10%</strong>；劳动合同用工是<strong>基本</strong>用工形式</li>
+<li><strong>非全日制</strong>：小时计酬；<strong>日均 ≤4 小时、周累计 ≤24 小时</strong>；可多个单位、口头协议可；<strong>不得约定试用期</strong>；<strong>随时终止、无经济补偿</strong>；小时工资≥当地最低小时工资；结算周期 <strong>≤15 日</strong></li>
+<li><strong>非全日制工伤</strong>：多单位同时就业<strong>各自分别</strong>缴工伤保险；由<strong>受伤害时工作</strong>的单位担责；工伤保险＝<strong>唯一强制</strong>社保</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r14s4q1" data-answer="CE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于劳务派遣的说法正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 注册资金不得低于 300 万元</button><button type="button" class="qopt" data-key="B">B. 经营许可证有效期 2 年</button><button type="button" class="qopt" data-key="C">C. 经营劳务派遣业务的应当依法申请行政许可</button><button type="button" class="qopt" data-key="D">D. 企业可以设立劳务派遣单位向其下级子公司派遣劳动者</button><button type="button" class="qopt" data-key="E">E. 公司不得设立劳务派遣单位向本公司派遣劳动者</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CE</div><div class="q-exp"><p>析：经营劳务派遣业务应向<strong>劳动行政部门依法申请行政许可</strong>（C 对）；注册资本不得少于人民币 <strong>200 万元</strong>（A 的 300 万错误）；经营许可证有效期 <strong>3 年</strong>（B 的 2 年错误）；用人单位<strong>不得设立</strong>劳务派遣单位向<strong>本单位或所属单位</strong>派遣劳动者——向本公司（本单位）派遣被明令禁止（E 对），向所属单位（含下级子公司）派遣同样禁止（D 错）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s4q2" data-answer="BCE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于劳务派遣劳动合同的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 可以签订固定期限和以完成一定工作任务为期限的劳动合同</button><button type="button" class="qopt" data-key="B">B. 劳动合同中应当载明用工单位以及派遣期限等信息</button><button type="button" class="qopt" data-key="C">C. 劳务派遣单位与被派遣劳动者订立劳动合同</button><button type="button" class="qopt" data-key="D">D. 劳动合同中不得约定试用期</button><button type="button" class="qopt" data-key="E">E. 被派遣劳动者无工作期间，劳务派遣单位按照最低工资标准支付报酬</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCE</div><div class="q-exp"><p>析：劳务派遣单位应当与被派遣劳动者订立 <strong>2 年以上的固定期限</strong>劳动合同，<strong>不能</strong>签订"以完成一定工作任务为期限"的合同（A 错），按月支付劳动报酬；合同应载明必备事项＋<strong>用工单位、派遣期限、工作岗位</strong>等情况（B 对）；订立主体就是<strong>劳务派遣单位</strong>（C 对）；可以依法约定试用期，同一劳动者<strong>只能约定一次</strong>（D 错）；无工作期间按所在地政府规定的<strong>最低工资标准</strong>按月支付报酬（E 对）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s4q3" data-answer="ACD" data-type="multi"><span class="q-tag">2017·多选</span><div class="q-stem">劳务派遣单位的法定义务包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 依法支付被派遣劳动者的劳动报酬</button><button type="button" class="qopt" data-key="B">B. 依法向被派遣劳动者提供相应的劳动条件</button><button type="button" class="qopt" data-key="C">C. 依法为被派遣劳动者缴纳社会保险费</button><button type="button" class="qopt" data-key="D">D. 不得向被派遣劳动者收取费用</button><button type="button" class="qopt" data-key="E">E. 依法向被派遣劳动者支付加班费</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：支付<strong>劳动报酬</strong>（A）、<strong>缴纳社会保险费</strong>（C）、<strong>不得向劳动者收取费用</strong>（D）是劳务派遣单位的法定义务；提供相应<strong>劳动条件</strong>（B）和支付<strong>加班费</strong>（E）是<strong>用工单位</strong>的义务——三角结构下"签合同的管钱和社保，干活的现场管条件和加班"。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s4q4" data-answer="BCE" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">关于非全日制用工的说法，符合法律规定的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 一方当事人提前 1 日可以通知对方终止协议</button><button type="button" class="qopt" data-key="B">B. 以小时计酬为主</button><button type="button" class="qopt" data-key="C">C. 周工作时间累计不能超过 24 个小时</button><button type="button" class="qopt" data-key="D">D. 双方订立口头协议的，劳动报酬支付周期不超过 15 日，订立书面协议的，支付周期不超过 20 日</button><button type="button" class="qopt" data-key="E">E. 双方当事人不得约定试用期</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCE</div><div class="q-exp"><p>析：非全日制用工任何一方都可以<strong>随时</strong>通知对方终止用工，不需要提前 1 日，终止时用人单位不支付经济补偿（A 错）；以小时计酬为主（B 对），同一用人单位一般平均每日不超过 4 小时、<strong>每周累计不超过 24 小时</strong>（C 对）；劳动报酬结算支付周期<strong>最长不超过 15 日</strong>，与口头还是书面协议无关（D 错）；双方当事人<strong>不得约定试用期</strong>（E 对）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s4q5" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">劳务派遣用工数量不得超过用工单位用工总量的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 5%</button><button type="button" class="qopt" data-key="B">B. 10%</button><button type="button" class="qopt" data-key="C">C. 15%</button><button type="button" class="qopt" data-key="D">D. 20%</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：用工单位应严格控制劳务派遣用工数量，被派遣劳动者数量不得超过其<strong>用工总量的 10%</strong>（B 对）；且劳务派遣是补充形式，只能在<strong>临时性（存续不超过 6 个月）、辅助性、替代性</strong>岗位上实施，劳动合同用工才是基本用工形式。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s4q6" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于非全日制用工的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 双方当事人不得约定试用期</button><button type="button" class="qopt" data-key="B">B. 每周工作时间累计不能超过 20 小时</button><button type="button" class="qopt" data-key="C">C. 用人单位可以随时终止用工</button><button type="button" class="qopt" data-key="D">D. 劳动者可以在 3 个企业上班</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：非全日制用工<strong>每周工作时间累计不能超过 24 小时</strong>，不是 20 小时（B 错误，当选）；不得约定试用期（A 对）；任何一方可以<strong>随时通知</strong>对方终止用工且终止时单位不支付经济补偿（C 对）；劳动者可以与一个或者一个以上用人单位订立劳动合同，在 3 个企业上班并不违法，但<strong>后订立的不得影响先订立</strong>合同的履行（D 对）。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力14_劳动合同管理与特殊用工_第3节_用人单位劳动规章制度.html"><span class="nav-label">上一节</span><span class="nav-title">第3节 用人单位劳动规章制度</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

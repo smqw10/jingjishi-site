@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十四章 税收制度 · 所得税类 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第二部分 财政</span><h1>第十四章 税收制度 · 所得税类</h1><div class="subtitle">第 3 节 / 共 4 节 · 预计学习时长 55 分钟</div><div class="progress-bar"><div class="fill" style="width:75%"></div></div><div class="progress-text">本章进度 3/4</div><div class="sec-badge none" id="sec-badge" data-sec="b14s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住所得税三大特点：公平（量能负担）、单环节（不重复不易转嫁）、弹性（"内在稳定器"） <span class="hot">高频考点</span></li>
+<li>记住企业所得税纳税人范围（个独、合伙不适用）与 <strong>25%/20%</strong> 两档税率 <span class="s3">★★★</span></li>
+<li>一刀切分清个税<strong>居民个人/非居民个人</strong>：住所＋183 天，居民就境内外全部所得纳税 <span class="hot">高频考点</span><span class="must">必考</span></li>
+<li>背熟个税税率口诀（功劳特稿 345、经营 535、其他百 20）与各类所得应纳税所得额的算法 <span class="s3">★★★</span></li>
+<li>分清个税<strong>免征</strong>（国家、国际、人身）与<strong>减征</strong>（残疾孤老烈属、天灾） <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、所得税的主要特点 <span class="hot">高频考点</span></h2>
+<p><strong>所得税</strong>是对所有以<strong>所得</strong>为课税对象的税种的总称，有三大特点：</p>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>税负相对比较公平</strong></td>
+<td>所得税税额的多少直接决定于<strong>有无所得和所得多少</strong>，比较符合"<strong>量能负担</strong>"原则；所得税类一般规定有<strong>起征点、免征额和扣除项目</strong>，可以减轻或消除低收入者的负担</td>
+</tr>
+<tr>
+<td><strong>征税不重复且不易转嫁</strong></td>
+<td>以纳税人的<strong>应税所得额</strong>为计税依据，属于<strong>单环节征收</strong>，不存在重复征税问题</td>
+</tr>
+<tr>
+<td><strong>税源可靠，收入具有弹性</strong></td>
+<td>多数情况下采用<strong>累进税率</strong>，与流转税比较收入更富有弹性；所得税能够自动适应经济发展周期变化，发挥"<strong>内在稳定器</strong>"的作用</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三个特点各挂一个关键词：</strong><p>公平挂"<strong>量能负担</strong>"；不重复挂"<strong>单环节</strong>"；弹性挂"<strong>内在稳定器</strong>"（这个钩子后面财政政策章还会再见——累进税率让税收随经济周期自动增减，自动熨平波动）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>经济过热→企业和个人赚得多→跳进更高的累进税率档→税收增长快于收入增长→给经济"自动踩刹车"；经济下行→所得减少→适用税档自动下降→给经济"自动松油门"。不用临时出台政策，税率表自己就在逆周期调节。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 所得税特点口诀</div><p><strong>"公平、单环节、弹性"</strong>——三词三考点：量能负担原则、单环节不重复不转嫁、累进税率＋内在稳定器。</p></div></div>
+<div class="section"><h2>二、企业所得税 <span class="s3">★★★</span></h2>
+<h3>1. 纳税人与税率 <span class="hot">高频考点</span></h3>
+<p><strong>企业所得税</strong>是对在我国境内的企业和其他取得收入的组织，就其<strong>生产、经营所得和其他所得</strong>征收的一种税。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>纳税人</strong></td>
+<td>在中华人民共和国境内的一切企业和其他取得收入的组织；<strong>个人独资企业、合伙企业不适用企业所得税</strong>（为避免重复征税）；分为<strong>居民企业和非居民企业</strong></td>
+</tr>
+<tr>
+<td><strong>税率</strong></td>
+<td>企业所得税税率为 <strong>25%</strong>（居民企业）；<strong>非居民企业</strong>在中国境内未设立机构、场所的，或者虽设立机构、场所，但取得的所得与其所设机构、场所<strong>没有实际联系</strong>的，应当就其来源于<strong>中国境内</strong>的所得缴纳企业所得税，适用税率为 <strong>20%</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两类企业记住&quot;不适用&quot;：</strong><p>个人独资企业、合伙企业<strong>不缴企业所得税</strong>（投资人的经营所得缴个人所得税）——"为避免重复征税"是官方理由，多选题直接考原句。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小张开奶茶店，注册为个人独资性质——不适用企业所得税法，经营所得缴<strong>个人所得税</strong>；若注册成有限责任公司，则就利润缴 <strong>25%</strong> 的企业所得税。组织形式不同，税种就不同。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 企税口诀</div><p><strong>"居民 25、非居 20，个独合伙不缴企税"</strong>——非居民 20% 有两个限定：境内<strong>未设立机构、场所</strong>，或所得与所设机构、场所<strong>没有实际联系</strong>；且只就<strong>来源于中国境内</strong>的所得缴纳。</p></div></div>
+<div class="section"><h3>2. 计算公式与征收管理</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>计算公式</strong></td>
+<td>(1) 应纳税所得额＝<strong>年度收入−不征税收入−免税收入−各项扣除−允许弥补的以前年度亏损</strong>；(2) 应纳税额＝企业应纳税所得额×所得税税率−减免、抵免税额</td>
+</tr>
+<tr>
+<td><strong>征收管理</strong></td>
+<td>(1) 居民企业以<strong>企业登记注册地</strong>为纳税地点，但登记注册地在境外的，以<strong>实际管理机构所在地</strong>为纳税地点；(2) 居民企业在中国境内设立<strong>不具有法人资格</strong>的营业机构的，应当<strong>汇总</strong>计算缴纳企业所得税；(3) 企业所得税<strong>按年度计算</strong>，纳税年度自<strong>公历 1 月 1 日起至 12 月 31 日</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>公式减项有顺序：</strong><p>应纳税所得额的减项依次是：不征税收入→免税收入→各项扣除→允许弥补的以前年度亏损，<strong>四个减项一个不能少</strong>；算出所得额乘税率之后，还要<strong>减减免、抵免税额</strong>——不是乘完税率就完事。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某公司年度收入 1000 万，不征税收入 50 万，免税收入 30 万，各项扣除 620 万，允许弥补的上年亏损 100 万：应纳税所得额＝1000−50−30−620−100＝200（万）；应纳税额＝200×25%−0＝50（万）。减项按公式顺序代入，一步不错。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 企税计算口诀</div><p><strong>"收入减不征、减免税、减扣除、补亏损，乘税率再减减免"</strong>——纳税年度记"<strong>公历 1 月 1 日至 12 月 31 日</strong>"；境内不具法人资格的分支机构<strong>汇总缴纳</strong>；注册地在境外看<strong>实际管理机构所在地</strong>。</p></div></div>
+<div class="section"><h2>三、个人所得税 <span class="hot">高频考点</span><span class="must">必考</span><span class="s3">★★★</span></h2>
+<h3>1. 纳税人：居民个人 vs 非居民个人 <span class="hot">高频考点</span></h3>
+<p>我国现行个人所得税采取<strong>综合与分类相结合</strong>的征收制度。个人所得税以<strong>所得人</strong>为纳税人，以<strong>支付所得的单位或者个人</strong>为扣缴义务人；纳税人有中国公民身份号码的，以其中国公民身份号码为纳税人识别号。个人所得税的纳税人分为<strong>居民个人</strong>和<strong>非居民个人</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>纳税人</th>
+<th>情形</th>
+<th>就什么所得缴税</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>居民个人</strong></td>
+<td>(1) 在中国境内<strong>有住所</strong>；(2) <strong>无住所</strong>而一个纳税年度内在中国境内居住<strong>累计满 183 天</strong></td>
+<td>从<strong>中国境内和境外</strong>取得的所得</td>
+</tr>
+<tr>
+<td><strong>非居民个人</strong></td>
+<td>(1) 在中国境内<strong>无住所又不居住</strong>；(2) <strong>无住所</strong>而一个纳税年度内在中国境内居住<strong>累计不满 183 天</strong></td>
+<td>从<strong>中国境内</strong>取得的所得</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>183 天的方向最容易反：</strong><p>无住所的人：<strong>住满 183 天→居民，不满 183 天→非居民</strong>——"满"与"不满"方向一反全题皆错；有住所的直接是居民，<strong>不用看居住天数</strong>。另外缴税范围也别搞反：居民管<strong>境内外</strong>全部所得，非居民只管<strong>境内</strong>所得。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>美国人杰克无住所，一个纳税年度内在北京住了 200 天——累计满 183 天，属<strong>居民个人</strong>，境内<strong>和境外</strong>所得都要在中国缴税；若他只住了 100 天，就是非居民个人，只就境内所得缴税。同一个人，就差 100 天，税基天差地别。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 居民划分口诀</div><p><strong>"有住所直接居民；无住所看 183：住满居民，不满非居民"</strong>——判断只走两步：先问"有没有住所"，再问"无住所的住没住满 183 天"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;或&quot;与&quot;且&quot;的陷阱</div><p>选项说"无住所<strong>或</strong>不居住""无住所<strong>或</strong>居住不满 183 天"都是错的——两种情形都必须<strong>同时</strong>满足"无住所＋（不居住／居住不满 183 天）"，是"且"不是"或"。真题就爱用"或"字埋雷。</p></div></div>
+<div class="section"><h3>2. 课税对象与税率 <span class="s3">★★★</span></h3>
+<p>个人所得税的课税对象共 <strong>9 项</strong>：①工资、薪金所得；②劳务报酬所得；③稿酬所得；④特许权使用费所得；⑤经营所得；⑥利息、股息、红利所得；⑦财产租赁所得；⑧财产转让所得；⑨偶然所得。</p>
+<table>
+<thead>
+<tr>
+<th>所得类型</th>
+<th>包括项目</th>
+<th>税率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>综合所得</strong>（按纳税年度合并计算）</td>
+<td>工资薪金、劳务报酬、稿酬、特许权使用费</td>
+<td><strong>3%～45%</strong> 的超额累进税率</td>
+</tr>
+<tr>
+<td><strong>经营所得</strong></td>
+<td>—</td>
+<td><strong>5%～35%</strong> 的超额累进税率</td>
+</tr>
+<tr>
+<td><strong>分项所得</strong></td>
+<td>利息、股息、红利所得；财产租赁所得；财产转让所得；偶然所得</td>
+<td><strong>20%</strong> 的比例税率</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>综合所得要合并：</strong><p>四项综合所得（工资薪金、劳务报酬、稿酬、特许权使用费）<strong>按纳税年度合并计算</strong>——记住大白话：<strong>"综合所得要合并，功劳特稿 345；经营所得 535；其他都是百 20"</strong>。"功劳特稿"＝工资薪金、劳务报酬、特许权使用费、稿酬。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小李一年收入：单位发工资（工资薪金）、周末讲课（劳务报酬）、出书拿稿费（稿酬）、转让专利使用权（特许权使用费）——四项<strong>年底合并</strong>，按 3%～45% 超额累进算；出租商铺收租金（财产租赁）、炒股分红（利息股息红利）走分项，各按 20%。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 个税税率口诀</div><p><strong>"功劳特稿 345，经营 535，其他都是百 20"</strong>——345＝3%~45%（综合所得），535＝5%~35%（经营所得），百 20＝20% 比例税率（利股红、财产租赁、财产转让、偶然所得）。</p></div></div>
+<div class="section"><h3>3. 应纳税所得额的计算 <span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>所得</th>
+<th>应纳税所得额</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>居民个人<strong>综合所得</strong></td>
+<td>以每一纳税年度的收入额<strong>减除费用 60000 元</strong>以及<strong>专项扣除、专项附加扣除</strong>和依法确定的其他扣除后的余额；其中<strong>劳务报酬所得、稿酬所得、特许权使用费所得</strong>以收入<strong>减除 20% 的费用</strong>后的余额为收入额，<strong>稿酬所得的收入额减按 70% 计算</strong></td>
+</tr>
+<tr>
+<td>非居民个人</td>
+<td><strong>工资薪金所得</strong>：以<strong>每月收入额减除费用 5000 元</strong>后的余额；<strong>劳务报酬、稿酬、特许权使用费所得</strong>：以<strong>每次收入额</strong>为应纳税所得额</td>
+</tr>
+<tr>
+<td><strong>财产租赁所得</strong></td>
+<td>每次收入<strong>不超过 4000 元</strong>的，减除费用 <strong>800 元</strong>；<strong>4000 元以上</strong>的，减除 <strong>20%</strong> 的费用，其余额为应纳税所得额</td>
+</tr>
+<tr>
+<td><strong>财产转让所得</strong></td>
+<td>以转让财产的<strong>收入额减除财产原值和合理费用</strong>后的余额为应纳税所得额</td>
+</tr>
+<tr>
+<td><strong>利息股息红利所得、偶然所得</strong></td>
+<td>以<strong>每次收入额</strong>为应纳税所得额</td>
+</tr>
+</tbody>
+</table>
+<p><strong>专项扣除</strong>（"三险一金"）：基本养老保险、基本医疗保险、失业保险和住房公积金。
+<strong>专项附加扣除</strong>：3 岁以下婴幼儿照护、子女教育、继续教育、大病医疗、住房贷款利息或住房租金、赡养老人等支出。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老王取得稿酬 10 万元，收入额两步折：①减除 20% 费用：10×(1−20%)＝8（万）；②再减按 70%：8×70%＝5.6（万）。<strong>10 万元的稿酬，只有 5.6 万元计入收入额</strong>——这就是"<strong>稿 56 折</strong>"；劳务报酬、特许权使用费只打"8 折"（×(1−20%)）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 收入额折算口诀</div><p><strong>"劳特 8 折，财产 8 折分两档，稿 56 折"</strong>——劳务报酬、特许权使用费：每次收入×(1−20%)；财产租赁：每次收入≤4000 减 800、＞4000×(1−20%)；稿酬：再乘 70%（合计 56 折）。财产租赁两档的分界是 <strong>4000 元</strong>，别记成 800。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 两个&quot;专项&quot;别混</div><p><strong>专项扣除</strong>＝三险一金（基本养老、基本医疗、失业保险＋住房公积金）；<strong>专项附加扣除</strong>＝婴幼儿照护、子女教育、继续教育、大病医疗、住房贷款利息或住房租金、赡养老人。2025 年真题拿"大病医疗"混进专项扣除当卧底，一看"医疗"就选就上当了。</p></div></div>
+<div class="section"><h3>4. 税收优惠 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>层面</th>
+<th>免征项目</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>国家层面</strong></td>
+<td>(1) 按国家统一规定（荣誉象征）发给的<strong>补贴、津贴</strong>；(2) 按照国家统一规定发给干部、职工的<strong>安家费、退职费、退休费、离休费、离休生活补助费</strong>；(3) <strong>国债和国家发行的金融债券利息</strong>；(4) <strong>省级</strong>人民政府、国务院部委和中国人民解放军军以上单位，以及外国组织颁发的科学、教育、技术、文化、卫生、体育、环境保护等方面的<strong>奖金</strong></td>
+</tr>
+<tr>
+<td><strong>国际层面</strong></td>
+<td>(1) 依照我国有关法律规定应予免税的各国驻华使馆、领事馆的<strong>外交代表、领事官员和其他人员的所得</strong>；(2) 中国政府参加的<strong>国际公约以及签订的协议</strong>中规定免税的所得</td>
+</tr>
+<tr>
+<td><strong>人身有关</strong></td>
+<td>(1) <strong>福利费、抚恤金、救济金</strong>；(2) <strong>保险赔款</strong>；(3) <strong>军人的转业费、复员费、退役金</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>减征</strong>（不是免征）：①<strong>残疾、孤老人员和烈属的所得</strong>；②因<strong>自然灾害</strong>遭受重大损失的。具体幅度和期限由省、自治区、直辖市人民政府规定，并报同级人民代表大会常务委员会备案。</p></div>
+<div class="section"><div class="keypoint"><strong>免征与减征两本账：</strong><p>免征三层面："<strong>国家、国际、人身</strong>"；减征两情形："<strong>残疾孤老烈属、天灾</strong>"，减征幅度和期限由<strong>省级政府</strong>规定。问"不能免征/不免征"的题，就从减征清单里挑——"减"与"免"一字之差是历年单选题眼。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老李 2025 年的收支：国债利息（免征）；父亲去世获抚恤金（免征）；车祸获保险赔款（免征）；军人儿子领退役金（免征）；他本人属残疾人员，其部分所得由省级政府<strong>减征</strong>（不是全免）；买彩票中奖 100 万（偶然所得，<strong>照章纳税 20%</strong>）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 优惠口诀</div><p><strong>"国家国际人身免，残疾烈属天灾减"</strong>——见"补贴津贴、安家费退休费、国债利息、省级以上奖金"想<strong>免征</strong>；见"残疾孤老烈属、自然灾害"想<strong>减征</strong>；"不免征"的题就到减征清单里找答案。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>所得税特点</strong>：税负公平（量能负担，有起征点、免征额和扣除项目）、不重复不易转嫁（单环节）、税源可靠有弹性（累进税率、内在稳定器）</li>
+<li><strong>企业所得税</strong>：个独、合伙不适用；居民企业 25%；非居民企业（境内未设机构场所或所得无实际联系）就境内所得 20%；应纳税所得额＝年度收入−不征税收入−免税收入−各项扣除−允许弥补的以前年度亏损；纳税地点＝登记注册地（境外看实际管理机构所在地）；不具法人资格分支机构汇总缴；按年计算（公历 1 月 1 日至 12 月 31 日）</li>
+<li><strong>个税纳税人</strong>：居民（有住所，或无住所且住满 183 天）就境内外所得纳税；非居民（无住所又不居住，或无住所且住不满 183 天）就境内所得纳税；以所得人为纳税人、支付所得方为扣缴义务人</li>
+<li><strong>个税税率</strong>：综合所得（工资薪金＋劳务报酬＋稿酬＋特许权使用费）按年合并 3%~45%；经营所得 5%~35%；利股红、财租、财转、偶然 20% 比例</li>
+<li><strong>应纳税所得额</strong>：居民综合所得年收入−60000−专项扣除−专项附加扣除−其他扣除；劳、特每次收入减 20%、稿酬收入额减按 70%（56 折）；非居民工资每月减 5000、劳特按次收入额；财产租赁≤4000 减 800、＞4000 减 20%；财产转让减原值和合理费用；利股红偶然按次收入额</li>
+<li><strong>专项扣除</strong>＝三险一金；<strong>专项附加扣除</strong>＝婴幼儿照护、子女教育、继续教育、大病医疗、住房贷款利息或住房租金、赡养老人</li>
+<li><strong>优惠</strong>：免征＝国家（补贴津贴、安家费退职费退休费、国债和金融债券利息、省级以上单位奖金）、国际（外交代表领事官员、公约协议）、人身（福利费抚恤金救济金、保险赔款、军人转业费复员费退役金）；减征＝残疾孤老烈属所得、自然灾害重大损失（省级政府定幅度期限）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b14s3q1" data-answer="B" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">我国居民企业所得税的基本税率为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 15%</button><button type="button" class="qopt" data-key="B">B. 25%</button><button type="button" class="qopt" data-key="C">C. 35%</button><button type="button" class="qopt" data-key="D">D. 20%</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：居民企业所得税基本税率为 <strong>25%</strong>（B 对）。20% 是<strong>非居民企业</strong>在境内未设立机构、场所，或虽设立但所得与其机构、场所没有实际联系时，就来源于中国境内所得适用的税率（D 是干扰项）；A、C 均为干扰比例。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s3q2" data-answer="AE" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">根据《中华人民共和国个人所得税法》，属于非居民个人的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 在中国境内无住所且不居住的个人</button><button type="button" class="qopt" data-key="B">B. 在中国境内无住所或不居住的个人</button><button type="button" class="qopt" data-key="C">C. 在中国境内无住所或居住不满 183 天的个人</button><button type="button" class="qopt" data-key="D">D. 在中国境内无住所而在中国境内居住满一年的个人</button><button type="button" class="qopt" data-key="E">E. 在中国境内无住所且居住不满 183 天的个人</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AE</div><div class="q-exp"><p>析：非居民个人两种情形：①在中国境内<strong>无住所又不居住</strong>（A 对）；②无住所而一个纳税年度内在中国境内居住<strong>累计不满 183 天</strong>（E 对，注意是"且"）。B、C 用"或"字扩大了范围——有住所的<strong>直接是居民</strong>，与是否居住无关；在中国境内居住满一年的属<strong>居民个人</strong>（D 错）。锚点：<strong>有住所直接居民；无住所看 183，住满居民、不满非居民</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s3q3" data-answer="A" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">个人所得中的综合所得适用的税率为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 3%～45% 的超额累进税率</button><button type="button" class="qopt" data-key="B">B. 5%～35% 的超额累进税率</button><button type="button" class="qopt" data-key="C">C. 20% 的比例税率</button><button type="button" class="qopt" data-key="D">D. 25% 的比例税率</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：<strong>综合所得</strong>（工资薪金、劳务报酬、稿酬、特许权使用费）按纳税年度合并计算，适用 <strong>3%～45% 超额累进税率</strong>（A 对）。5%～35% 是<strong>经营所得</strong>的税率（B 错）；利息股息红利、财产租赁、财产转让、偶然所得适用 <strong>20% 比例税率</strong>（C 错）；25% 是<strong>企业所得税</strong>基本税率（D 错）——口诀"功劳特稿 345，经营 535，其他都是百 20"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s3q4" data-answer="ABE" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">按照纳税年度合并计算个人所得税的居民个人所得包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 劳务报酬所得</button><button type="button" class="qopt" data-key="B">B. 稿酬所得</button><button type="button" class="qopt" data-key="C">C. 财产租赁所得</button><button type="button" class="qopt" data-key="D">D. 特许经营所得</button><button type="button" class="qopt" data-key="E">E. 工资薪金所得</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABE</div><div class="q-exp"><p>析：居民个人<strong>综合所得</strong>按纳税年度合并计算，包括<strong>工资薪金（E）、劳务报酬（A）、稿酬（B）、特许权使用费</strong>四项。财产租赁（C）属分项所得，按次适用 20% 比例税率；"特许<strong>经营</strong>所得"（D）是偷换概念——正确名称是"特许权<strong>使用费</strong>所得"，属综合所得，课税对象 9 项里没有"特许经营所得"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s3q5" data-answer="ABCD" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">下列属于专项扣除的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 基本养老保险</button><button type="button" class="qopt" data-key="B">B. 基本医疗保险</button><button type="button" class="qopt" data-key="C">C. 住房公积金</button><button type="button" class="qopt" data-key="D">D. 失业保险</button><button type="button" class="qopt" data-key="E">E. 大病医疗</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：<strong>专项扣除</strong>＝"三险一金"：居民个人按照国家规定的范围和标准缴纳的<strong>基本养老保险（A）、基本医疗保险（B）、失业保险（D）</strong>等社会保险费和<strong>住房公积金（C）</strong>。大病医疗（E）属<strong>专项附加扣除</strong>（同类的还有 3 岁以下婴幼儿照护、子女教育、继续教育、住房贷款利息或住房租金、赡养老人），两个"专项"别混。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s3q6" data-answer="ACDE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">个人所得税的课税对象有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 财产转让所得</button><button type="button" class="qopt" data-key="B">B. 遗产所得</button><button type="button" class="qopt" data-key="C">C. 稿酬所得</button><button type="button" class="qopt" data-key="D">D. 劳动报酬所得</button><button type="button" class="qopt" data-key="E">E. 特许权使用费所得</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACDE</div><div class="q-exp"><p>析：个税课税对象共 <strong>9 项</strong>：工资薪金、<strong>劳务</strong>报酬、<strong>稿酬（C）</strong>、<strong>特许权使用费（E）</strong>、经营所得、利息股息红利、财产租赁、<strong>财产转让（A）</strong>、偶然所得。没有"<strong>遗产所得</strong>"（B）这一项目；D 偷换概念——是"<strong>劳务</strong>报酬所得"，不是"劳动报酬所得"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s3q7" data-answer="C" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">下列选项中，不能依法免征个人所得税的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 国债利息收入</button><button type="button" class="qopt" data-key="B">B. 福利费、抚恤金、救济金</button><button type="button" class="qopt" data-key="C">C. 残废、孤老人员、烈属所得</button><button type="button" class="qopt" data-key="D">D. 军人退役金</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：国债和国家发行的金融债券利息（A）、福利费抚恤金救济金（B）、军人的转业费复员费退役金（D）均属<strong>免征</strong>项目。<strong>残疾、孤老人员和烈属的所得</strong>以及因自然灾害遭受重大损失的，属于<strong>减征</strong>（幅度和期限由省级人民政府规定）而非免征，C 当选——"减"与"免"一字之差就是题眼。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s3q8" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">纳税人将其对教育公益事业进行捐赠，捐赠额未超过纳税人申报的应纳税所得额的（　），可以从应纳税所得额中扣除。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 30%</button><button type="button" class="qopt" data-key="B">B. 15%</button><button type="button" class="qopt" data-key="C">C. 12%</button><button type="button" class="qopt" data-key="D">D. 20%</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：个人将其所得对教育、扶贫、济困等公益慈善事业进行捐赠，捐赠额未超过纳税人申报的应纳税所得额 <strong>30%</strong> 的部分，可以从其应纳税所得额中扣除；国务院规定对公益慈善事业捐赠实行<strong>全额税前扣除</strong>的，从其规定。B、C、D 均为干扰比例。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础14_税收制度_第2节_货物和劳务税类.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 货物和劳务税类</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础14_税收制度_第4节_财产税类.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 财产税类</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

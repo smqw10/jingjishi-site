@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第19章 宏观人力资源开发 · 激励保障 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第四部分 人力资源与社会保险政策</span><h1>第19章 宏观人力资源开发 · 激励保障</h1><div class="subtitle">第 2 节 / 共 5 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:40%"></div></div><div class="progress-text">本章进度 2/5</div><div class="sec-badge none" id="sec-badge" data-sec="r19s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟科技成果转化四大数字：处置免审批备案、收入全部留归单位、奖励提取不低于50%、离岗3年保留人事关系 <span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>分清<strong>科技项目资金管理</strong>（管钱）与<strong>科技管理权限下放</strong>（管权）各管三件事 <span class="s3">★★★</span></li>
+<li>记住国家科学技术奖五大奖项、技能人才奖励"晋级链"与世赛奖牌换证书规则 <span class="s3">★★★</span></li>
+<li>掌握机关职级工资制（27 个级别）、事业单位岗位绩效工资四构成、国企工资效益联动机制 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、创新创业激励</h2>
+<h3>1. 科技成果转化激励（★★）</h3>
+<p><strong>下放科技成果处置权</strong>：研究开发机构、高等院校对其持有的科技成果，可以<strong>自主决定</strong>转让、许可或者作价投资，<strong>除涉及国家秘密、国家安全外，不需审批或者备案</strong>；转化科技成果所获得的收入<strong>全部留归单位</strong>，纳入单位预算，<strong>不上缴国库</strong>。</p>
+<p><strong>激励科技人员创新创业</strong>：以技术转让或者许可方式转化职务科技成果的，应当从净收入中提取<strong>不低于 50%</strong> 的比例，用于奖励职务科技成果完成人和为成果转化做出重要贡献的其他人员；科研人员获得的职务科技成果转化<strong>现金奖励</strong>计入当年本单位绩效工资总量，但<strong>不受总量限制，不纳入总量基数</strong>。</p>
+<p><strong>科技人员兼职和离岗创业</strong>：原则上<strong>离岗 3 年内保留人事关系</strong>；离岗创业期间，科技人员所承担的国家科技计划和基金项目<strong>原则上不得中止</strong>。</p>
+<p><strong>担任领导职务的科技人员的科技成果转化奖励</strong>：实行分类管理和公开公示制度——</p>
+<table>
+<thead>
+<tr>
+<th>人员</th>
+<th>奖励规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>正职领导</strong></td>
+<td>获得<strong>现金奖励</strong>，原则上<strong>不得获取股权激励</strong></td>
+</tr>
+<tr>
+<td>其他担任领导职务的科技人员</td>
+<td>可获得<strong>现金、股份或者出资比例</strong>等奖励和报酬</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>现金奖励&quot;计入但不占坑&quot;：</strong><p>现金奖励<strong>计入</strong>当年本单位绩效工资总量，但<strong>不受总量限制、不纳入总量基数</strong>——"进了门但不算人头"。注意奖励从<strong>净收入</strong>里提取，且比例是"<strong>不低于</strong> 50%"（下限），不是"提取 50%"（封顶）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 成果转化四数字</div><p><strong>"处置免报批（涉密除外）、收入全留单位、奖励不低于 50%、离岗保 3 年"</strong>——四个数字各管一段，谁跟谁配对别乱。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某国家设立的研究开发机构把一项专利许可给企业：不涉密，所以不用报批；许可收入全部留归本单位、纳入单位预算；团队拿到的现金奖励不占单位绩效工资总量的盘子。若是<strong>正职领导</strong>，只能拿现金、不能拿股权。</p></div></div>
+<div class="section"><h3>2. 科技项目资金管理（★★）</h3>
+<table>
+<thead>
+<tr>
+<th>措施</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>下放预算调剂权限</strong></td>
+<td>实行部门预算批复前项目资金<strong>预拨</strong>制度；将直接费用中的<strong>材料费、测试化验加工费、燃料动力费、出版/文献/信息传播/知识产权事务费</strong>及其他支出预算调剂权限下放给项目承担单位；简化预算编制科目，<strong>合并会议费、差旅费、国际合作与交流费</strong>科目，其中<strong>不超过直接费用 10%</strong> 的，不需要提供预算测算依据</td>
+</tr>
+<tr>
+<td><strong>提高间接费用比重</strong></td>
+<td>公开竞争的研发类项目均要设立间接费用，核定比例可以提高到不超过直接费用扣除设备购置费的一定比例</td>
+</tr>
+<tr>
+<td><strong>劳务费开支不设比例限制</strong></td>
+<td>由项目承担单位和科研人员<strong>据实编制</strong></td>
+</tr>
+<tr>
+<td><strong>结转结余资金留用处理</strong></td>
+<td>项目实施期间，年度剩余资金可结转下一年度继续使用；项目完成任务目标并通过验收后，结余资金按规定留归项目承担单位使用，在 <strong>2 年内</strong>统筹安排用于科研活动的直接支出，<strong>2 年后</strong>未使用完的按规定收回</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 资金管理四招</div><p><strong>"调剂下放、间接提高、劳务不限、结余留用两年"</strong>——前三招管"怎么花"，第四招收尾管"花不完怎么办"。</p></div></div>
+<div class="section"><h3>3. 科技管理权限下放（★★）</h3>
+<table>
+<thead>
+<tr>
+<th>权限</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>科研项目经费管理使用自主权</strong></td>
+<td>直接费用中<strong>除设备费外</strong>，其他科目费用调剂权全部下放给项目承担单位；接受企业或其他社会组织委托取得的项目经费纳入单位财务统一管理；简化科研仪器设备采购流程——急需设备和耗材<strong>特事特办、随到随办</strong>，可不进行招投标程序，独家代理或生产的按程序采取<strong>单一来源采购</strong></td>
+</tr>
+<tr>
+<td><strong>科研人员的技术路线决策权</strong></td>
+<td>项目实施期间，在<strong>研究方向不变、申报指标不降低</strong>的前提下，自主调整研究方案和技术路线，报项目管理专业机构<strong>备案</strong>；项目负责人可按规定<strong>自主组建科研团队</strong></td>
+</tr>
+<tr>
+<td><strong>项目过程管理权</strong></td>
+<td>项目管理专业机构严格依据任务书，在项目实施期末进行<strong>一次性综合绩效评价</strong>；凡是国家科技管理信息系统已有的材料不得要求重复提供；简化报表及流程，建立健全<strong>学术助理和财务助理</strong>制度，允许购买财会等专业服务</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;资金管理&quot;与&quot;权限下放&quot;分家</div><p>两块内容长得像，考试最爱串场：<strong>资金管理管钱</strong>（预算调剂、间接费用、劳务费、结余留用），<strong>权限下放管权</strong>（经费使用自主权、技术路线决策权、过程管理权）。"技术路线决策权"属于<strong>权限下放</strong>——2025 年真题就把它塞进"科技项目资金管理"里当干扰项。还有一处细节差：资金管理里下放的是"材料费、测试化验加工费……"等科目调剂权，权限下放里是"<strong>除设备费外</strong>全部下放"。</p></div></div>
+<div class="section"><h2>二、突出业绩奖励</h2>
+<h3>4. 国家科学技术奖（★）</h3>
+<p>国家科学技术奖包括<strong>五项</strong>：<strong>国家最高科学技术奖、国家自然科学奖、国家技术发明奖、国家科学技术进步奖、中华人民共和国国际科学技术合作奖</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 五大奖</div><p><strong>"最高、自然、发明、进步、国际合作"</strong>——"最高科学技术奖"挂头，"国际科学技术合作奖"收尾。多选里混进"中华技能大奖"（属技能人才奖励体系）就是错项。</p></div></div>
+<div class="section"><h3>5. 技能人才奖励</h3>
+<p>奖励范围：<strong>国家职业技能标准中设有高级（国家职业资格三级）以上等级</strong>的职业（工种）。</p>
+<table>
+<thead>
+<tr>
+<th>奖项</th>
+<th>授予对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>全国技术能手</strong></td>
+<td>已获得<strong>省（行业）级技术能手</strong>称号，且具有<strong>高级以上职业资格或同等资格</strong>，技术技能水平在<strong>国内</strong>本职业（工种）中有较大影响的<strong>中国公民</strong></td>
+</tr>
+<tr>
+<td><strong>中华技能大奖</strong></td>
+<td>已获得"<strong>全国技术能手</strong>"称号，在本职业（工种）中的技术技能水平在<strong>国际国内</strong>有重要影响的中国公民</td>
+</tr>
+</tbody>
+</table>
+<p><strong>世界技能大赛获奖选手奖励</strong>：由人力资源社会保障部授予"<strong>全国技术能手</strong>"称号；获得<strong>金牌</strong>的选手，由相关职业资格认定机构颁发<strong>高级技师</strong>职业资格证书；获得<strong>银、铜、优胜奖牌</strong>的选手，颁发<strong>技师</strong>职业资格证书；获得金、银、铜、优胜奖牌的选手，按有关规定发放不同档次的奖金。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 技能奖励晋级链</div><p><strong>"省（行业）级技术能手 → 全国技术能手 → 中华技能大奖"</strong>，一级一级往上够；世赛换证口诀——<strong>"金牌高技，银铜优胜技师"</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>想评"全国技术能手"，先看看自己手里有没有"省（行业）级技术能手"称号——它是硬门槛；劳动模范称号再高，也顶不了这个前置条件（2023 年真题考点）。</p></div></div>
+<div class="section"><h3>6. 公务员和事业单位工作人员奖励</h3>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>奖励种类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公务员</td>
+<td>嘉奖、记<strong>三等功</strong>、记<strong>二等功</strong>、记<strong>一等功</strong>、授予荣誉称号</td>
+</tr>
+<tr>
+<td>事业单位工作人员</td>
+<td>嘉奖、<strong>记功</strong>、<strong>记大功</strong>、授予荣誉称号</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 两套奖励种类</div><p><strong>"公务员功分三档，事业单位功分两档"</strong>——公务员有三等功、二等功、一等功；事业单位只有"记功、记大功"。两头都是"嘉奖"开头、"授予荣誉称号"封顶。</p></div></div>
+<div class="section"><h2>三、收入分配制度</h2>
+<h3>7. 机关人员工资制度</h3>
+<p><strong>公务员职级工资制</strong>（基本工资＝职务工资＋级别工资）：</p>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>主要体现</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>职务工资</strong></td>
+<td>工作职责大小</td>
+<td>一个职务对应一个工资标准；领导职务和相当职务层次的非领导职务对应<strong>不同</strong>的工资标准</td>
+</tr>
+<tr>
+<td><strong>级别工资</strong></td>
+<td>工作实绩和资历</td>
+<td>公务员的级别为 <strong>27 个</strong>；每一职务层次对应若干级别，每一级别设若干工资档次</td>
+</tr>
+</tbody>
+</table>
+<p>晋级规则：年度考核<strong>称职及以上</strong>的，一般<strong>每五年</strong>可在所任职务对应的级别内<strong>晋升一个级别</strong>，<strong>每两年</strong>可在所任级别对应的工资标准内<strong>晋升一个工资档次</strong>；级别达到所任职务对应<strong>最高级别</strong>后，<strong>不再晋升级别</strong>，在最高级别工资标准内晋升级别工资档次。</p>
+<p><strong>机关工人</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>制度</th>
+<th>构成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>技术工人</td>
+<td>岗位技术等级工资制</td>
+<td><strong>岗位工资</strong>（按初级工、中级工、高级工三个技术等级和技师、高级技师二个技术职务设置，分别设若干工资档次）＋<strong>技术等级（职务）工资</strong>（一个技术等级对应一个工资标准）</td>
+</tr>
+<tr>
+<td>普通工人</td>
+<td>岗位工资制</td>
+<td>只有<strong>岗位工资</strong></td>
+</tr>
+</tbody>
+</table>
+<p>机关工人年度考核<strong>合格及以上</strong>的，一般<strong>每两年</strong>可在对应的岗位工资标准内晋升一个工资档次。</p>
+<p><strong>津贴补贴</strong>三制度：<strong>地区附加津贴、艰苦边远地区津贴、岗位津贴</strong>。</p>
+<p><strong>年终一次性奖金</strong>：对年度考核<strong>称职（合格）及以上</strong>的工作人员，奖金标准为<strong>本人当年 12 月份的基本工资</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>晋级与晋档两条线：</strong><p>"<strong>五年晋一级</strong>"动的是级别（27 个级别里往上走）；"<strong>两年晋一档</strong>"动的是级别内的工资档次。到顶后"级别不动、档次照涨"——不是什么都不涨。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 机关工资数字</div><p><strong>"五年晋一级、两年晋一档；27 个级别封顶"</strong>；年终奖＝当年 <strong>12 月的基本工资</strong>（<strong>不含</strong>津贴补贴）；技术工人基本工资两项（岗位＋技术等级），普通工人一项（岗位）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老周是公务员，年度考核年年称职：第 5 年级别升一格，第 2、4 年工资档次各升一档；等他升到所在职务对应的最高级别，就只在最高级别的工资标准里升档次了。年底他还能拿到"当年 12 月份基本工资"数额的年终一次性奖金。</p></div></div>
+<div class="section"><h3>8. 事业单位收入分配制度</h3>
+<p>事业单位实行<strong>岗位绩效工资制度</strong>，由<strong>岗位工资、薪级工资、绩效工资、津贴补贴</strong>四部分组成：</p>
+<table>
+<thead>
+<tr>
+<th>构成</th>
+<th>主要体现</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>岗位工资</strong></td>
+<td>所聘岗位的职责和要求</td>
+<td>事业单位岗位分<strong>专业技术岗位、管理岗位、工勤技能岗位</strong>（工勤技能岗位分技术工岗位、普通工岗位）</td>
+</tr>
+<tr>
+<td><strong>薪级工资</strong></td>
+<td>工作表现和资历</td>
+<td>——</td>
+</tr>
+<tr>
+<td><strong>绩效工资</strong></td>
+<td>实绩和贡献</td>
+<td>国家<strong>总量调控和政策指导</strong>；单位在核定的绩效工资总量内<strong>自主分配</strong>；分为<strong>基础性绩效工资</strong>（体现地区经济发展水平、物价水平、岗位职责等，一般<strong>按月发放</strong>）和<strong>奖励性绩效工资</strong>（体现工作量和实际贡献，<strong>根据绩效考核发放</strong>）</td>
+</tr>
+<tr>
+<td><strong>津贴补贴</strong></td>
+<td>——</td>
+<td><strong>艰苦边远地区津贴、特殊岗位津贴补贴</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>绩效工资的&quot;两分法&quot;：</strong><p>绩效工资＝基础性＋奖励性：<strong>基础性按月发</strong>（看地区、物价、岗位），<strong>奖励性看考核</strong>（看工作量、实际贡献）。问"哪部分根据绩效考核发放"，答奖励性。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 岗绩四块</div><p><strong>"岗、薪、绩、补"</strong>四件套——岗位看职责、薪级看资历、绩效看贡献、补贴看环境；绩效再分"基础按月发、奖励看考核"。</p></div></div>
+<div class="section"><h3>9. 国有企业工资决定机制（★）</h3>
+<p><strong>工资与效益联动机制</strong>：</p>
+<ul>
+<li>原则上<strong>增人不增工资总额、减人不减工资总额</strong>；但发生<strong>兼并重组、新设企业或机构</strong>等情况的，可以合理增加或者减少工资总额；</li>
+<li>企业经济效益<strong>增长</strong>的，当年工资总额增长幅度可在<strong>不超过</strong>经济效益增长幅度的范围内确定；</li>
+<li>企业经济效益<strong>下降</strong>的，<strong>除受政策调整等非经营性因素影响外</strong>，当年工资总额原则上相应下降；</li>
+<li>企业<strong>未实现国有资产保值增值</strong>的，工资总额<strong>不得增长，或者适度下降</strong>。</li>
+</ul></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 国企工资联动</div><p><strong>"增人不增、减人不减；涨可以但不能超；跌要跟着跌（政策性因素除外）；没保值增值就别想涨"</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某国企今年效益涨了 10%，工资总额最多也涨 10%（不能超）；明年效益跌了，工资总额原则上跟着降；要是年底一算国有资产没保值增值，那工资总额一分不能涨、还得适度往下走。中间招了几名新员工？工资总额不变——"增人不增"。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>成果转化</strong>：处置自主（涉密除外免报批）、收入全部留归单位不上缴国库、奖励提取<strong>不低于 50%</strong>（净收入口径）、现金奖励计入绩效总量但不受限不占基数、离岗 <strong>3 年</strong>保留人事关系；正职只拿现金不拿股权</li>
+<li><strong>资金管理</strong>：调剂权限下放（直接费用 10% 内免测算依据）、间接费用比重提高、劳务费不设比例限制、结余 2 年内留用；<strong>权限下放</strong>：除设备费外调剂权全下放、技术路线决策权（方向不变指标不降＋备案）、期末一次性综合绩效评价</li>
+<li><strong>奖励</strong>：国家科学技术奖五项（最高/自然/发明/进步/国际合作）；技能奖励链＝省（行业）级技术能手→全国技术能手→中华技能大奖；世赛金牌→高级技师证、银铜优胜→技师证；公务员奖励功分三档、事业单位两档</li>
+<li><strong>机关工资</strong>：职务工资（职责）＋级别工资（实绩资历，27 个级别）；五年晋一级、两年晋一档；技术工人两项基本工资、普通工人一项；年终奖＝当年 12 月基本工资</li>
+<li><strong>事业单位工资</strong>：岗位绩效工资＝岗位＋薪级＋绩效＋津补贴；绩效分基础性（按月发）与奖励性（考核发）</li>
+<li><strong>国企工资</strong>：增人不增、减人不减；增幅不超效益增幅；未保值增值不得增长或适度下降</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r19s2q1" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">某单位是国家设立的研究机构，关于该单位科技成果转化的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 该单位科技成果转化的收入可以全部留归单位，纳入单位预算</button><button type="button" class="qopt" data-key="B">B. 该单位持有的所有科技成果，都可以自主决定转让，无需审批备案</button><button type="button" class="qopt" data-key="C">C. 该单位科研人员获得的科技成果转化现金奖励，要受绩效工资总量的限制</button><button type="button" class="qopt" data-key="D">D. 该单位可以提取科技成果转化净收入中的 50%，用于奖励科技成果主要完成人</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：A 正确——转化科技成果所获得的收入<strong>全部留归单位</strong>，纳入单位预算，不上缴国库。B 错在"所有"——自主决定转让、许可或作价投资的前提是"<strong>除涉及国家秘密、国家安全外</strong>"；C 错——现金奖励计入当年绩效工资总量，但<strong>不受总量限制、不纳入总量基数</strong>；D 错——提取比例是"<strong>不低于</strong> 50%"的下限规定，选项说成"提取 50%"成了封顶，且奖励对象还包括为成果转化做出重要贡献的其他人员。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s2q2" data-answer="C" data-type="single"><span class="q-tag">2020·单选</span><div class="q-stem">下列措施中，不利于科技人员开展创新活动的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 简化科研项目资金的预算编制科目</button><button type="button" class="qopt" data-key="B">B. 建立学术助理制度</button><button type="button" class="qopt" data-key="C">C. 进一步提高财政项目中直接费用的比例</button><button type="button" class="qopt" data-key="D">D. 将项目聘用人员的社会保险补助纳入劳务费科目列支</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：应当提高的是<strong>间接费用</strong>的比重，不是直接费用，C 错误。A 对应"简化预算编制科目，合并会议费、差旅费、国际合作与交流费"；B 对应"建立健全学术助理和财务助理制度"；D 属于劳务费开支范围的放宽举措，三者都是"松绑"利好。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s2q3" data-answer="AB" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">为了鼓励科技人员创新创业，进行科技管理权限下放包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 科研项目经费管理使用自主权</button><button type="button" class="qopt" data-key="B">B. 科研人员的技术路线决策权</button><button type="button" class="qopt" data-key="C">C. 减少科研管理流程</button><button type="button" class="qopt" data-key="D">D. 下放职称评审权</button><button type="button" class="qopt" data-key="E">E. 下放外事权</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AB</div><div class="q-exp"><p>析：科技管理权限下放的三项内容是①科研项目经费管理使用自主权、②科研人员的技术路线决策权、③项目过程管理权。"减少科研管理流程"只是简化流程的笼统说法，不是"权限下放"的法定三项之一；职称评审权、外事权与科技管理权限下放无关，D、E 是凑数干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s2q4" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><span class="q-tag">2023</span><div class="q-stem">要想参加全国技术能手的评选，必须首先获得的荣誉是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 地市级技术能手称号</button><button type="button" class="qopt" data-key="B">B. 地市级劳动模范称号</button><button type="button" class="qopt" data-key="C">C. 省（行业）级劳动模范称号</button><button type="button" class="qopt" data-key="D">D. 省（行业）级技术能手称号</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：全国技术能手授予"<strong>已获得省（行业）级技术能手称号</strong>，且具有高级以上职业资格或同等资格，技术技能水平在国内本职业（工种）中有较大影响的中国公民"。前置门槛是省（行业）级<strong>技术能手</strong>称号——同为省（行业）级的劳动模范（C）也顶替不了。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s2q5" data-answer="ABCD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">国家设立的国家科学技术奖，包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 国家最高科学技术奖</button><button type="button" class="qopt" data-key="B">B. 国家自然科学奖</button><button type="button" class="qopt" data-key="C">C. 国家技术发明奖</button><button type="button" class="qopt" data-key="D">D. 国家科学技术进步奖</button><button type="button" class="qopt" data-key="E">E. 国家中华技能大奖</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：五项＝国家最高科学技术奖、国家自然科学奖、国家技术发明奖、国家科学技术进步奖、中华人民共和国国际科学技术合作奖。"国家中华技能大奖"是拼凑的干扰项——<strong>中华技能大奖</strong>属于技能人才奖励体系，不在国家科学技术奖之列。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s2q6" data-answer="C" data-type="single"><span class="q-tag">2020·单选</span><div class="q-stem">以下关于国有企业的工资决定机制正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 企业经济效益增长，工资总额相应比例增加</button><button type="button" class="qopt" data-key="B">B. 企业经济效益下降，工资总额相应比例下降</button><button type="button" class="qopt" data-key="C">C. 企业未实现增值保值，工资总额不得增长或适度下降</button><button type="button" class="qopt" data-key="D">D. 如果员工数量增加，原则上工资总额应增加</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：效益增长的，当年工资总额增长幅度可在<strong>不超过</strong>经济效益增长幅度的范围内确定，不是"相应比例增加"，A 错；效益下降的，<strong>除受政策调整等非经营性因素影响外</strong>才原则上相应下降，B 漏掉了除外情形；原则上<strong>增人不增工资总额、减人不减工资总额</strong>，D 错。C 正是"未实现国有资产保值增值"的标准处理。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力19_宏观人力资源开发_第1节_人才评价.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 人才评价</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力19_宏观人力资源开发_第3节_管理使用.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 管理使用</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

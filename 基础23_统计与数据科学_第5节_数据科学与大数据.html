@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十三章 统计与数据科学 · 数据科学与大数据 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十三章 统计与数据科学 · 数据科学与大数据</h1><div class="subtitle">第 5 节 / 共 5 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 5/5</div><div class="sec-badge none" id="sec-badge" data-sec="b23s5">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>数据科学</strong>三件事：彼得·诺尔最早提出、"数据→信息→知识"全过程、研究对象是数据 <span class="hot">高频考点</span></li>
+<li>大数据 <strong>5V</strong> 特性张口就来："<strong>真的大多快低</strong>"（2026 教材已由 4V 升级为 5V，新增真实性） <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>会判<strong>结构化 / 半结构化 / 非结构化</strong>数据 <span class="hot">高频考点</span></li>
+<li>数据挖掘三类学习方法的方法名全部对号入座：监督（分类＋回归）、无监督（聚类＋降维）、半监督 <span class="s3">★★★</span> <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、数据科学</h2>
+<h3>1. 数据科学：从数据到知识 <span class="hot">高频考点</span></h3>
+<p><strong>数据科学</strong>最早由丹麦的计算机科学领域先驱<strong>彼得·诺尔</strong>提出。</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>定义</strong></td>
+<td>一门通过<strong>系统性研究获取与数据相关的知识体系</strong>的学科</td>
+</tr>
+<tr>
+<td><strong>方法</strong></td>
+<td>研究从"<strong>数据</strong>"整合成"<strong>信息</strong>"进而组织成"<strong>知识</strong>"的整个过程，包含对数据进行<strong>采集、存储、处理、分析、表现</strong>等一系列活动</td>
+</tr>
+<tr>
+<td><strong>研究对象</strong></td>
+<td><strong>数据</strong></td>
+</tr>
+<tr>
+<td><strong>研究目标</strong></td>
+<td>获得<strong>洞察力和理解力</strong>，通过对数据的分析来<strong>解释、预测、洞见和决策</strong>，为现实世界服务</td>
+</tr>
+<tr>
+<td><strong>涉及范围</strong></td>
+<td>非常广泛，如统计学、机器学习、计算机科学、可视化、人工智能、领域知识等</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一条河记住数据科学：</strong><p><strong>"数据→信息→知识"</strong>是一条河：采集、存储、处理、分析、表现是河上的工序；研究对象是<strong>数据</strong>，终点是<strong>洞察力和理解力</strong>（解释、预测、洞见、决策）。提出人彼得·诺尔是丹麦计算机科学先驱——单选送分点。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>电商平台把用户的点击、下单记录（数据）整理成消费偏好报告（信息），再沉淀出"什么人群爱买什么"的规律（知识），据此预测下季爆款、决定带货方向——正是"数据→信息→知识"为现实世界服务。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 数据科学口诀</div><p><strong>"诺尔开河，数据到知识"</strong>——彼得·诺尔提出，"数据→信息→知识"整个过程，目标是洞察与决策。</p></div></div>
+<div class="section"><h2>二、大数据与 5V 特性 <span class="s3">★★★</span></h2>
+<h3>1. 大数据的含义与 5V 特性 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p><strong>大数据</strong>是指<strong>无法在一定时间范围内用常规软件工具进行捕捉、管理和处理</strong>的数据集合，是需要<strong>新处理模式</strong>才能具有更强的决策力、洞察发现力和流程优化能力的<strong>海量、高增长率和多样化的信息资产</strong>。</p>
+<p>大数据具有 <strong>"5V" 特性</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>内容</th>
+<th>关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>数据量大</strong>（Volume）</td>
+<td>大数据的<strong>起始计量单位是 PB</strong>（1024TB）</td>
+<td>量大</td>
+</tr>
+<tr>
+<td><strong>数据多样性</strong>（Variety）</td>
+<td>类型繁多：网络日志、音频、视频、图片、地理位置等各种<strong>结构化、半结构化和非结构化</strong>的数据</td>
+<td>类杂</td>
+</tr>
+<tr>
+<td><strong>价值密度低</strong>（Value）</td>
+<td>价值密度的高低与数据总量的大小成<strong>反比</strong>；原始零散、复杂多样甚至有噪声污染的数据需经价值"<strong>提纯</strong>"，才能得出信息、获取知识</td>
+<td>密度低</td>
+</tr>
+<tr>
+<td><strong>产生和处理速度快</strong>（Velocity）</td>
+<td>一般要在<strong>秒级</strong>时间范围内给出分析结果，超出这个时间数据就可能失去价值，即符合"<strong>1 秒定律</strong>"</td>
+<td>速度快</td>
+</tr>
+<tr>
+<td><strong>真实性</strong>（Veracity）</td>
+<td>来源广泛、采集方式多样，数据中往往存在<strong>噪声、偏差、内容不一致、数据缺失或人为错误</strong>等问题；需通过<strong>数据清洗、数据治理、质量控制</strong>等规范手段确保数据可靠</td>
+<td>要提纯保真</td>
+</tr>
+</tbody>
+</table>
+<p>其中三类数据形态是常考的判别点：</p>
+<table>
+<thead>
+<tr>
+<th>数据形态</th>
+<th>特征</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>结构化数据</strong></td>
+<td>存储在<strong>数据库</strong>里，可以用<strong>二维表结构</strong>来表达</td>
+<td>关系型数据库中的数据表</td>
+</tr>
+<tr>
+<td><strong>非结构化数据</strong></td>
+<td>数据结构<strong>不规则或不完整，没有预定义</strong>的数据</td>
+<td>所有格式的办公文档、文本、图片、报表、图像、音频、视频等</td>
+</tr>
+<tr>
+<td><strong>半结构化数据</strong></td>
+<td>介于完全结构化与完全非结构化之间，<strong>具有一定的结构性</strong></td>
+<td>员工简历——有的只有教育情况，有的包括教育、婚姻、户籍、出入境等很多信息</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三类形态一刀切：</strong><p>看数据有没有<strong>规整的二维表结构</strong>：规整存在数据库里→结构化；完全没规矩（文档、文本、图片、音视频）→非结构化；<strong>有点规矩但不齐</strong>（同一类东西字段多少不一）→半结构化，典型例子就是<strong>员工简历</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一个城市的监控摄像头每天产出海量视频：总量大到 PB 级（量大），画面、打卡记录、表格什么形态都有（多样），真正有用的可能只有几秒（价值密度低），看实时路况必须秒级处理（速度快），视频里常有花屏、缺失帧（真实性要清洗治理）——5V 齐了。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 5V 口诀</div><p><strong>"真的大多快低"</strong>——真实性、数据量大、多样性、速度快、价值密度低，五个字头对应 5V。2026 教材已由 4V 升级为 <strong>5V</strong>，新加的"真"字最容易被老题坑。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三个高频陷阱</div><p>①老题库里"大数据具有 4V 特性"的说法已过时——2026 教材是 <strong>5V</strong>，多选中把它当正确项选上就丢分；②"价值密度低"≠"使用价值低"——大数据整体是高价值信息资产，只是价值要"提纯"，且价值密度与总量成<strong>反比</strong>不是正比；③起始计量单位是 <strong>PB（1024TB）</strong>，选项把它写成"GB / TB 起步"都是错的。</p></div></div>
+<div class="section"><h2>三、数据挖掘</h2>
+<h3>1. 数据挖掘的含义 <span class="hot">高频考点</span></h3>
+<p><strong>数据挖掘</strong>就是从<strong>大量的、不完全的、有噪声的、模糊的、随机的</strong>实际应用数据中，提取<strong>隐藏在其中但又有潜在价值</strong>的信息和知识的过程。其定义包含几层含义：①数据源必须是<strong>真实的、大量的、有噪声的</strong>；②发现的是<strong>用户感兴趣</strong>的知识；③发现的知识是<strong>可接受、可理解、可运用</strong>的；④<strong>并不要求</strong>发现放之四海而皆准的知识，仅支持<strong>特定的发现问题</strong>。数据挖掘以<strong>解决实际问题</strong>为出发点，核心任务是对<strong>数据关系和特征</strong>进行探索。</p></div>
+<div class="section"><div class="keypoint"><strong>四层含义对选项：</strong><p>每层含义就是一个选项：真、大、噪（数据源）→感兴趣（方向）→可接受可理解可运用（质量）→不求放之四海、只支持特定问题（定位）。核心任务"对数据<strong>关系和特征</strong>进行探索"和出发点"解决<strong>实际问题</strong>"两个短语单独可考。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>银行从海量真实交易记录里"淘"出盗刷信用卡的行为规律（信用卡欺诈检测）——数据真实、量大、充满噪声，挖出的知识只服务于"反欺诈"这一个特定问题，不求放之四海而皆准。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 数据挖掘含义口诀</div><p><strong>"真大噪起头，感兴趣去挖，可运用才算，不求四海皆准"</strong>——四层含义按序过一遍，多选缺一不可。</p></div></div>
+<div class="section"><h3>2. 三类学习方法：监督、无监督、半监督 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>构成</th>
+<th>典型任务及常用方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>监督学习</strong></td>
+<td>每个观测单位<strong>既有自变量（特征 x），又有因变量（标签 y）</strong></td>
+<td>两大任务：<strong>分类和回归</strong>。常用分类方法：<strong>逻辑斯特回归、决策树、随机森林、支持向量机</strong>等；常用回归方法：<strong>线性回归、非线性回归、分位数回归</strong>等</td>
+</tr>
+<tr>
+<td><strong>无监督学习</strong></td>
+<td>每个观测单位<strong>只有自变量（特征 x），没有因变量（标签 y）</strong></td>
+<td>两大任务：<strong>聚类和降维</strong>。常用聚类方法：基于划分的方法（如 <strong>k 均值聚类算法</strong>）、基于分层的方法、基于密度的方法、基于网格的方法、基于模型的方法；常用降维方法：<strong>主成分分析法、因子分析法</strong>等</td>
+</tr>
+<tr>
+<td><strong>半监督学习</strong></td>
+<td><strong>监督学习与无监督学习相结合</strong>的一种学习方法</td>
+<td>常见有半监督分类、半监督回归、半监督聚类</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>认标签 y 定方法：</strong><p>只看观测单位有没有<strong>因变量（标签 y）</strong>：有 y→<strong>监督学习</strong>（干"分类、回归"两件事）；没 y→<strong>无监督学习</strong>（干"聚类、降维"两件事）；两者结合→<strong>半监督学习</strong>。最大陷阱：<strong>逻辑斯特回归</strong>名字带"回归"，实为<strong>分类</strong>方法。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>邮箱先拿一批已标注"垃圾 / 正常"的历史邮件学会判断新邮件（有标签，监督学习—分类）；商场把没有标签的顾客消费记录自动分成几类人群（无标签，无监督学习—聚类，如 k 均值）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 方法名对号口诀</div><p><strong>"监督分类＋回归，无监聚类＋降维；逻辑斯特回归是分类，主成分因子是降维"</strong>——分类队：树（决策树）、森林（随机森林）、机（支持向量机）、逻辑斯特回归；回归队：线性、非线性、分位数；聚类队：基于划分（k 均值）、分层、密度、网格、模型；降维队：主成分分析、因子分析。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 方法归属题眼</div><p>题干问"常用的分类方法 / 回归方法 / 聚类方法 / 降维方法"就按队伍挑人：见"树、森林、机、逻辑斯特回归"→分类；见"线性、非线性、分位数回归"→回归；见"基于××的方法（k 均值）"→聚类；见"××分析（主成分分析、因子分析）"→降维。支持向量机、决策树、随机森林永远不进回归队，主成分分析、因子分析永远不进监督队。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>数据科学</strong>：彼得·诺尔（丹麦计算机科学先驱）最早提出；通过系统性研究获取与数据相关的知识体系；"数据→信息→知识"，含采集、存储、处理、分析、表现；研究对象是数据，目标是洞察力和理解力（解释、预测、洞见和决策）</li>
+<li><strong>大数据</strong>：无法在一定时间范围内用常规软件工具捕捉、管理和处理，需新处理模式的海量、高增长率、多样化的信息资产</li>
+<li><strong>5V</strong>："真的大多快低"——量大（起始单位 PB＝1024TB）、多样（结构化＋半结构化＋非结构化）、价值密度低（与总量成反比，需提纯）、速度快（1 秒定律）、真实性（2026 新增，靠数据清洗治理保真）</li>
+<li><strong>三类数据形态</strong>：数据库二维表＝结构化；不规则不完整无预定义（文档、文本、图片、音视频）＝非结构化；有一定结构性（员工简历）＝半结构化</li>
+<li><strong>数据挖掘</strong>：从大量、不完全、有噪声、模糊、随机的数据中提取潜在价值的信息和知识；真大噪、感兴趣、可运用、不求放之四海；出发点＝解决实际问题，核心任务＝探索数据关系和特征</li>
+<li><strong>三类学习方法</strong>：监督（有 x 有 y：分类＋回归——逻辑斯特回归、决策树、随机森林、支持向量机／线性、非线性、分位数回归）；无监督（只有 x：聚类＋降维——k 均值等基于划分 / 分层 / 密度 / 网格 / 模型／主成分分析、因子分析）；半监督（两者结合：半监督分类、回归、聚类）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b23s5q1" data-answer="ABCE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">大数据的特点包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 数据量大</button><button type="button" class="qopt" data-key="B">B. 价值密度低</button><button type="button" class="qopt" data-key="C">C. 数据的产生和处理速度快</button><button type="button" class="qopt" data-key="D">D. 数据是结构化数据</button><button type="button" class="qopt" data-key="E">E. 数据多样性</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：5V 特性——数据量大（A）、价值密度低（B）、产生和处理速度快（C）、数据多样性（E）都对。D 错——大数据类型繁多，大量的是<strong>半结构化和非结构化</strong>数据（音视频、日志、图片等），并非"都是结构化数据"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b23s5q2" data-answer="CE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">关于大数据特性的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 大数据的起始计量是 GB（1024TB）、TB（1024PB）、PB（1024EB）级别</button><button type="button" class="qopt" data-key="B">B. 大数据具有零散、复杂多样、使用价值低的特征</button><button type="button" class="qopt" data-key="C">C. 大数据包括各种结构化、半结构化和非结构化的数据</button><button type="button" class="qopt" data-key="D">D. 大数据价值密度的高低与数据总量的大小成正比</button><button type="button" class="qopt" data-key="E">E. 大数据的处理符合&quot;1 秒定律&quot;</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CE</div><div class="q-exp"><p>析：C 对——类型繁多，结构化、半结构化、非结构化都有；E 对——处理要符合"<strong>1 秒定律</strong>"，秒级出结果。A 错——起始计量单位是 <strong>PB（1024TB）</strong>，选项的换算链条全错位了；B 错——"价值密度低"不等于"使用价值低"，大数据整体是高价值信息资产，只是价值需要提纯；D 错——价值密度高低与数据总量成<strong>反比</strong>，不是正比。
+:::</p></div></details></div><div class="quiz-item" data-qid="b23s5q3" data-answer="ABCD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">下列数据类型中，属于非结构化数据的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 音频</button><button type="button" class="qopt" data-key="B">B. 图像</button><button type="button" class="qopt" data-key="C">C. PDF 文档</button><button type="button" class="qopt" data-key="D">D. 视频</button><button type="button" class="qopt" data-key="E">E. 关系型数据中的数据表</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：非结构化数据＝数据结构不规则或不完整、<strong>没有预定义</strong>的数据——音频（A）、图像（B）、PDF 文档（C，属办公文档）、视频（D）都在其列。E 关系型数据中的数据表存储在数据库里、可用二维表结构表达，是<strong>结构化数据</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="b23s5q4" data-answer="ABDE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">属于学习方式中的监督学习的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 逻辑斯特回归</button><button type="button" class="qopt" data-key="B">B. 线性回归</button><button type="button" class="qopt" data-key="C">C. 聚类</button><button type="button" class="qopt" data-key="D">D. 随机森林</button><button type="button" class="qopt" data-key="E">E. 决策树</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：监督学习（有特征 x 有标签 y）两大任务：分类和回归。分类方法有<strong>逻辑斯特回归</strong>（A）、决策树（E）、随机森林（D）、支持向量机等；回归方法有<strong>线性回归</strong>（B）等。C 聚类是<strong>无监督学习</strong>的任务——没有标签才能聚类。
+:::</p></div></details></div><div class="quiz-item" data-qid="b23s5q5" data-answer="CE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">下列属于无监督学习的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 线性回归</button><button type="button" class="qopt" data-key="B">B. 非线性回归</button><button type="button" class="qopt" data-key="C">C. 主成分分析法</button><button type="button" class="qopt" data-key="D">D. 决策树</button><button type="button" class="qopt" data-key="E">E. K 均值聚类算法</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CE</div><div class="q-exp"><p>析：无监督学习（只有特征 x、没有标签）两大任务：聚类和降维——主成分分析法（C）是常用降维方法，K 均值聚类算法（E）是常用的基于划分的聚类方法。线性回归（A）、非线性回归（B）是监督学习的回归方法，决策树（D）是监督学习的分类方法。
+:::</p></div></details></div><div class="quiz-item" data-qid="b23s5q6" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">下列属于无监督学习的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 决策树</button><button type="button" class="qopt" data-key="B">B. 线性回归</button><button type="button" class="qopt" data-key="C">C. 因子分析法</button><button type="button" class="qopt" data-key="D">D. 随机森林</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：无监督学习的两大任务是<strong>聚类和降维</strong>，因子分析法（C）是常用的降维方法，属无监督学习。决策树（A）、随机森林（D）是监督学习的分类方法，线性回归（B）是监督学习的回归方法——带着标签学，都是监督队。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础23_统计与数据科学_第4节_统计调查.html"><span class="nav-label">上一节</span><span class="nav-title">第4节 统计调查</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

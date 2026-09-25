@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第1章 组织激励 · 激励理论 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第一部分 组织行为学</span><h1>第1章 组织激励 · 激励理论</h1><div class="subtitle">第 2 节 / 共 3 节 · 预计学习时长 70 分钟</div><div class="progress-bar"><div class="fill" style="width:66%"></div></div><div class="progress-text">本章进度 2/3</div><div class="sec-badge none" id="sec-badge" data-sec="r01s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>掌握四大内容型理论：<strong>马斯洛五层次、双因素、ERG、三重需要</strong>，能区分各自的关键词与"管理的应用" <span class="s3">★★★</span></li>
+<li>掌握两大过程型理论：<strong>公平理论</strong>（四个比较角度+恢复公平五法）、<strong>期望理论</strong>（三变量公式） <span class="s3">★★★</span></li>
+<li>记住<strong>强化理论</strong>的定位：不考虑内在心态、不是地道的动机激励理论 <span class="hot">高频考点</span></li>
+<li>能识破"理论串场"陷阱：同一表述换一个理论就不成立（如"已满足仍有激励作用"属 ERG 不属马斯洛） <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、内容型激励理论——"用什么激励人"</h2>
+<h3>1. 需要层次理论（马斯洛）<span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>理论内容</strong>：人有五种需要，从低到高依次为——</p>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>内容</th>
+<th>类别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⑤ 自我实现需要</td>
+<td>个人成长、发挥个人潜能、实现个人理想</td>
+<td><strong>高级需要</strong>：主要靠<strong>内在因素</strong>满足</td>
+</tr>
+<tr>
+<td>④ 尊重的需要</td>
+<td>内在尊重（自尊心、自主权、成就感）；外在尊重（地位、认同、受重视）</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>③ 归属和爱的需要</td>
+<td>情感、归属、被接纳、友谊（如友好和睦的同事关系）</td>
+<td><strong>基本需要</strong>：主要靠<strong>外部条件</strong>满足</td>
+</tr>
+<tr>
+<td>② 安全需要</td>
+<td>身体安全（脱离危险的工作环境）、经济安全（不解雇的承诺、舒适的退休计划）</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>① 生理需要</td>
+<td>食物、水、居住场所、睡眠、性等身体需要</td>
+<td>↑</td>
+</tr>
+</tbody>
+</table>
+<p><strong>四个要点</strong>（多选题的题眼）：
+1. 人都有这五种需要，<strong>不同时期</strong>表现出来的各种需要的<strong>强烈程度不同</strong>；
+2. 当<strong>下一层次</strong>的需要被合理满足后，个体才会追求<strong>上一层次</strong>的需要（逐级上升）；
+3. <strong>未被满足</strong>的需要是行为的<strong>主要激励源</strong>；已获得基本满足的需要<strong>不再具有激励作用</strong>；
+4. 管理应用：考虑每个员工的特殊需要，知道哪个层次需要占<strong>主导地位</strong>；组织用于满足<strong>低层次</strong>需要的投入效益是<strong>递减</strong>的。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 马斯洛速记</div><p><strong>"生理安全归属尊自我，下三基本靠外部，上二高级靠内在"</strong>。判断"高级/基本"只认两个：尊重 + 自我实现 = 高级；其余三个 = 基本。注意"归属和爱"在<strong>基本</strong>里，别被"情感"二字骗到高级去。</p></div></div>
+<div class="section"><p><strong>评价</strong>：优点——合乎直觉经验、易于理解；缺点——不十分可靠和准确、较为呆板、不完全适用于复杂多变的实际环境。</p>
+<h3>2. 双因素理论（赫茨伯格）<span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>核心命题</strong>：满意与不满意<strong>并不是或此或彼、二择一的关系</strong>——</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>内容</th>
+<th>具备时</th>
+<th>缺失时</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>激励因素</strong></td>
+<td>成就感、别人的认可、<strong>工作性质</strong>、责任、<strong>晋升</strong></td>
+<td>满意</td>
+<td>没有满意</td>
+</tr>
+<tr>
+<td><strong>保健因素</strong></td>
+<td>组织政策、监督方式、<strong>人际关系</strong>、工作环境、<strong>工资</strong></td>
+<td>没有不满</td>
+<td>不满</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>满意 ←→ 没有满意 ←→ 没有不满 ←→ 不满：</strong><p>双因素理论把"满意—不满意"一条轴拆成了两条轴：<strong>激励因素</strong>管"满意轴"（具备→满意，缺失→只是没有满意）；<strong>保健因素</strong>管"不满轴"（缺失→不满，具备→只是没有不满）。所以：<strong>消除不满 ≠ 让人满意；让人满意 ≠ 消除不满</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 双因素口诀</div><p><strong>"保健消不满，激励出满意"</strong>。分不清就记典型词：工资、环境、政策、监督、人际——<strong>保</strong>健（都是"后勤保障"味儿的）；成就、认可、工作性质、责任、晋升——<strong>激</strong>励（都是"往上走"味儿的）。</p></div></div>
+<div class="section"><p><strong>管理应用</strong>：
+1. 提供保健因素只能<strong>防止牢骚、消除不满</strong>，不一定能激励员工；要激励员工必须重视成就感、认同感、责任感以及个人成长（可创造一流业绩）；
+2. 实践措施：<strong>工作丰富化</strong>——员工参与更多的工作规划、自我监督工作进度。</p>
+<h3>3. ERG 理论（奥尔德弗）<span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p>奥尔德弗对马斯洛理论进行修订，提出三种<strong>核心需要</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>需要</th>
+<th>概念</th>
+<th>对应马斯洛层次</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>生存</strong>需要（Existence）</td>
+<td>生理需要和物质需要，维持生存的物质条件</td>
+<td>全部生理需要 + 部分安全需要</td>
+</tr>
+<tr>
+<td><strong>关系</strong>需要（Relation）</td>
+<td>维持重要人际关系的需要</td>
+<td>部分安全需要 + 全部归属和爱的需要 + 部分尊重的需要</td>
+</tr>
+<tr>
+<td><strong>成长</strong>需要（Growth）</td>
+<td>追求自我发展的内在欲望</td>
+<td>部分尊重的需要 + 全部自我实现需要</td>
+</tr>
+</tbody>
+</table>
+<p><strong>与马斯洛的三点不同</strong>（多选最爱）：
+1. 各种需要<strong>可以同时具有</strong>激励作用（马斯洛：逐级上升）；
+2. 人们可以<strong>同时追求</strong>各层次需要，或在某些限制下在各需要间<strong>进行转化</strong>；
+3. 提出"<strong>挫折–退化</strong>"观点：较高层次需要得不到满足，对满足<strong>低层次</strong>需要的欲望就会<strong>加强</strong>（马斯洛没有"倒退"）。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 ERG vs 马斯洛</div><p><strong>"马斯洛爬楼梯，ERG 能跳级还能倒退"</strong>。判断"哪句是马斯洛、哪句是 ERG"：见"同时具有激励作用/可以转化/挫折退化"→ ERG；见"逐级上升/满足后追求上一层/已满足不再激励"→ 马斯洛。2025 年多选就把马斯洛的话（B、D）混进 ERG 题里当干扰项。</p></div></div>
+<div class="section"><p><strong>评价</strong>：更加灵活变通，更全面反映社会现实；变通性有助于说明文化、环境背景差异下个体需要的差异。</p>
+<h3>4. 三重需要理论（麦克利兰）<span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>需要</th>
+<th>概念</th>
+<th>行为特点</th>
+<th>工作角色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>成就</strong>需要</td>
+<td>追求优越感的驱动力，参照某种标准追求成就感、寻求成功的欲望</td>
+<td>①选择<strong>适度风险</strong>；②<strong>责任感</strong>较强；③希望得到<strong>及时反馈</strong></td>
+<td>绩效明显、有公开影响力的工作；易在创造性活动中成功、善于创业；<strong>可以是好职员、好业务员，但不一定是好经理</strong></td>
+</tr>
+<tr>
+<td><strong>权力</strong>需要</td>
+<td>促使别人<strong>顺从自己意志</strong>的欲望</td>
+<td>喜欢<strong>支配、影响</strong>别人、"发号施令"，重视地位和影响力；喜欢竞争、追求出色成绩</td>
+<td><strong>杰出管理者有很高的权力欲望</strong>（地位越高，权力需要越高）</td>
+</tr>
+<tr>
+<td><strong>亲和</strong>需要</td>
+<td>寻求与别人建立<strong>友善且亲近</strong>的人际关系的欲望</td>
+<td>重视被别人接受和喜欢，追求友谊与合作；<strong>易被别人影响</strong>（过分强调关系会干扰正常工作秩序）</td>
+<td>充当<strong>被管理</strong>角色；<strong>许多出色的经理亲和需要相对较低</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三重需要口诀</div><p><strong>"成就选险要反馈，权力发令当领导，亲和恋友易被带"</strong>。再配一句考点：成就需要高＝好员工≠好经理；想当高管看权力需要；亲和需要高适合当被管理者。</p></div></div>
+<div class="section"><h2>二、过程型激励理论——"激励怎么产生"</h2>
+<h3>5. 公平理论（亚当斯）<span class="hot">高频考点</span></h3>
+<p><strong>主要内容</strong>：人们不仅关心自己的<strong>绝对报酬</strong>，更关心自己和他人在工作和报酬上的<strong>相对关系</strong>——员工倾向于用自己的<strong>产出/投入比率</strong>与<strong>他人（对照者）的产出/投入比率</strong>比较，来判断是否公平。</p>
+<ul>
+<li><strong>投入</strong>：教育、资历、工作经验、忠诚和承诺、时间和努力、创造力、工作绩效等</li>
+<li><strong>产出</strong>：工资和奖金、额外福利、工作安全保障等</li>
+<li>员工比较的是对投入、产出的<strong>自我知觉</strong>，<strong>不是客观测量结果</strong>（★判断题点）</li>
+</ul>
+<p><strong>四个比较角度</strong>（★★★）：</p>
+<table>
+<thead>
+<tr>
+<th>方向</th>
+<th>角度</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>纵向</strong>比较（自我比较）</td>
+<td>组织内自我比较</td>
+<td>在同一组织中把<strong>现在</strong>的工作和待遇与<strong>过去</strong>比较</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>组织外自我比较</td>
+<td>把自己在<strong>不同组织</strong>中的工作和待遇比较</td>
+</tr>
+<tr>
+<td><strong>横向</strong>比较（与他人比较）</td>
+<td>组织内他比</td>
+<td>与<strong>本组织</strong>中其他员工比较</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>组织外他比</td>
+<td>与<strong>其他组织</strong>中的员工比较</td>
+</tr>
+</tbody>
+</table>
+<p><strong>恢复公平的五种方法</strong>（★★★）：①改变<strong>自己的</strong>投入或产出；②改变<strong>对照者的</strong>投入或产出；③改变<strong>对投入或产出的知觉</strong>（对自己的、对对照者的）；④<strong>改变参照对象</strong>；⑤<strong>辞职</strong>。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老员工发现新招的应届生工资和自己一样（产出/投入比率低了）→ 可能要求加薪（改产出）、减少投入"摸鱼"（改投入）、把对方学历经验想得更厉害（改知觉）、换个比较对象"比上不足比下有余"（改参照对象），极端时跳槽（辞职）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 公平理论口诀</div><p><strong>"比的是比率，凭的是知觉"</strong>——比较的是产出/投入的比率，依据是自我知觉而非客观测量；恢复公平五招：改己、改他、改感觉、换对象、辞职。</p></div></div>
+<div class="section"><h3>6. 期望理论（弗罗姆）<span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p>人们采取某种行动，是因为这种行为可以在一定概率上达到某种结果，并且这种结果可以带来重要的报酬。公式：</p>
+<p><strong>动机 ＝ 效价 × 期望 × 工具性</strong></p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>含义</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>效价</strong></td>
+<td>个体对<strong>报酬的偏好程度</strong>（一个人需要多少报酬）</td>
+<td>想不想要</td>
+</tr>
+<tr>
+<td><strong>期望</strong></td>
+<td>员工对<strong>努力工作能够完成任务</strong>的信念强度（努力 → 绩效的概率估计，用概率表示）</td>
+<td>拼了能不能成</td>
+</tr>
+<tr>
+<td><strong>工具性</strong></td>
+<td>员工对<strong>完成任务后能否获得报酬</strong>的信念（绩效 → 报酬之间关系的估计）</td>
+<td>成了给不给</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小张想不想拿项目奖金（效价）；小张觉得自己拼命干能不能拿下项目（期望，如"努力后晋升可能性 60%"→ 期望值 0.6）；公司说话算不算数、项目成了真给钱吗（工具性）。三个任何一个为 0，动机就是 0——乘法关系。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 期望理论口诀</div><p><strong>"想不想要 × 能不能成 × 成了给不给"</strong>——效价管"想要"，期望管"努力→绩效"，工具性管"绩效→报酬"。见"概率/可能性/0.6"选<strong>期望</strong>；见"偏好程度/需要多少报酬"选<strong>效价</strong>；见"完成任务的信念"也要小心：期望是"努力<strong>完成任务</strong>"的信念，工具性是"任务完成<strong>拿到报酬</strong>"的信念——隔着"报酬"二字分两边。</p></div></div>
+<div class="section"><h2>三、强化理论（斯金纳路线）<span class="hot">高频考点</span></h2>
+<ol>
+<li><strong>行为的结果</strong>对行为本身具有<strong>强化作用</strong>，是行为的主要驱动因素；但结果<strong>不是行为的唯一控制因素</strong>，有些情况下结果会丧失其强化力；</li>
+<li><strong>不考虑人的内在心态</strong>，仅关注行为及其结果——因此它是一种<strong>行为主义</strong>观点，<strong>不是地道的动机激励理论</strong>（★判断题点）。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>和其他理论的分界：</strong><p>内容型问"要什么"，过程型问"怎么算账"，强化理论根本不看内心，只盯着"行为→结果→行为被塑造"。题目问"不考虑内在心态的是哪个理论"，选强化理论。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>马斯洛</strong>：生理→安全→归属→尊重→自我实现；下三基本（外部满足）上二高级（内在满足）；未满足的是激励源，已满足的不再激励；低层次投入效益递减</li>
+<li><strong>双因素</strong>：保健（工资/政策/监督/人际/环境）消不满；激励（成就/认可/工作性质/责任/晋升）出满意；措施＝工作丰富化</li>
+<li><strong>ERG</strong>：生存 E / 关系 R / 成长 G；可同时激励、可转化、挫折–退化</li>
+<li><strong>三重需要</strong>：成就（适度风险、责任感、及时反馈，好员工≠好经理）／权力（发号施令，高管）／亲和（重关系、易被影响，被管理者）</li>
+<li><strong>公平</strong>：产出/投入比率比较；凭自我知觉非客观测量；纵向（组织内外自我）+横向（组织内外他比）；恢复五法：改己改他改知觉、换对象、辞职</li>
+<li><strong>期望</strong>：动机＝效价×期望×工具性（想不想要×能不能成×成了给不给）</li>
+<li><strong>强化</strong>：结果强化行为；不看内心；非地道动机理论</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r01s2q1" data-answer="D" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">根据马斯洛需要层次理论，属于高级需要的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 食物和水</button><button type="button" class="qopt" data-key="B">B. 人际关系</button><button type="button" class="qopt" data-key="C">C. 归属感</button><button type="button" class="qopt" data-key="D">D. 成就感</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：高级需要（靠内在因素满足）只有<strong>尊重</strong>和<strong>自我实现</strong>两层，成就感属于尊重的需要。食物和水（生理）、人际关系与归属感（归属和爱）都属于基本需要。
+:::</p></div></details></div><div class="quiz-item" data-qid="r01s2q2" data-answer="C" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">关于马斯洛需要层次理论的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 下一层次的需要在相当程度上得到满足后，个体才会追求上一层次的需要</button><button type="button" class="qopt" data-key="B">B. 人都有这五个层次的需要，只是在不同时期表现出需要的强烈程度不同</button><button type="button" class="qopt" data-key="C">C. 未被满足的需要是行为的主要激励源，已基本满足的需要同样具有激励作用</button><button type="button" class="qopt" data-key="D">D. 下面三个层次为基本需要，上面两个层次为高级需要</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：马斯洛认为已获得基本满足的需要<strong>不再具有</strong>激励作用，C 说"同样具有"，错误。注意 C 的表述是 ERG 理论的反面——ERG 才认为各层次需要可以同时具有激励作用。
+:::</p></div></details></div><div class="quiz-item" data-qid="r01s2q3" data-answer="C" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">根据双因素理论，属于激励因素的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 监督方式</button><button type="button" class="qopt" data-key="B">B. 人际关系</button><button type="button" class="qopt" data-key="C">C. 工作性质</button><button type="button" class="qopt" data-key="D">D. 组织政策</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：激励因素＝成就感、别人的认可、<strong>工作性质</strong>、责任、晋升；保健因素＝组织政策、监督方式、人际关系、工作环境和工资。A、B、D 全是保健因素。
+:::</p></div></details></div><div class="quiz-item" data-qid="r01s2q4" data-answer="AD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">根据双因素理论，能让小李感到不满的因素是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 工作目标设定的政策</button><button type="button" class="qopt" data-key="B">B. 晋升</button><button type="button" class="qopt" data-key="C">C. 别人的认可</button><button type="button" class="qopt" data-key="D">D. 人际关系</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AD</div><div class="q-exp"><p>析：产生<strong>不满</strong>的是<strong>保健因素</strong>缺失——政策（A）、人际关系（D）属保健因素。晋升（B）、别人的认可（C）是激励因素，缺失的后果只是"没有满意"，不会"不满"。
+:::</p></div></details></div><div class="quiz-item" data-qid="r01s2q5" data-answer="BDE" data-type="multi"><span class="q-tag">2020·多选</span><div class="q-stem">ERG 理论认为，人的核心需要有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 成就需要</button><button type="button" class="qopt" data-key="B">B. 生存需要</button><button type="button" class="qopt" data-key="C">C. 权力需要</button><button type="button" class="qopt" data-key="D">D. 关系需要</button><button type="button" class="qopt" data-key="E">E. 成长需要</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BDE</div><div class="q-exp"><p>析：ERG 三核心需要＝<strong>生存</strong>（Existence）、<strong>关系</strong>（Relation）、<strong>成长</strong>（Growth）。成就需要属麦克利兰三重需要理论，权力需要也是。
+:::</p></div></details></div><div class="quiz-item" data-qid="r01s2q6" data-answer="ACE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">下列观点中，符合 ERG 理论的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 各种需要可以同时具有激励作用</button><button type="button" class="qopt" data-key="B">B. 低层次需要实现是高层次需要满足的先决条件</button><button type="button" class="qopt" data-key="C">C. 在某些限制条件下，各种需要层次之间可以进行转化</button><button type="button" class="qopt" data-key="D">D. 某个层次的需要得到满足后就不再有激励作用</button><button type="button" class="qopt" data-key="E">E. 人们可以同时追求各种层次的需要</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACE</div><div class="q-exp"><p>析：A、C、E 是 ERG 的观点（同时激励、可转化、可同时追求）。B、D 是<strong>马斯洛</strong>需要层次理论的观点（逐级上升、已满足不再激励），是本题干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="r01s2q7" data-answer="C" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">关于三重需要理论的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 亲和需要高的不易受别人影响</button><button type="button" class="qopt" data-key="B">B. 成就需要高的人不喜欢及时反馈</button><button type="button" class="qopt" data-key="C">C. 权力需要高的人喜欢竞争</button><button type="button" class="qopt" data-key="D">D. 成就需要高的人喜欢高度冒险的工作</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：权力需要高的人喜欢支配影响别人、喜欢竞争（C 对）。亲和需要强者<strong>易被</strong>别人影响（A 反了）；成就需要者希望<strong>得到</strong>及时反馈（B 反了），且选择<strong>适度</strong>风险而非高度冒险（D 反了）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r01s2q8" data-answer="C" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">公平理论观点包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 人们不关心自己的绝对报酬</button><button type="button" class="qopt" data-key="B">B. 人们用自己的支出与投入比例判断是否公平</button><button type="button" class="qopt" data-key="C">C. 员工可能纵向比较，也可能横向比较</button><button type="button" class="qopt" data-key="D">D. 人们依据客观的投入与产出进行比较</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：A 反了——人们<strong>也</strong>关心绝对报酬，只是<strong>更</strong>关心相对关系；B 反了——比较的是<strong>产出/投入</strong>的比率，不是支出/投入；D 反了——依据的是<strong>自我知觉</strong>而非客观测量结果。纵向、横向比较正是公平理论的比较框架（C 对）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r01s2q9" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">按照弗罗姆的期望理论，一名员工认为自己努力工作从而获得晋升的可能性为 60%，则 0.6 是他的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 期望值</button><button type="button" class="qopt" data-key="B">B. 效价值</button><button type="button" class="qopt" data-key="C">C. 工具性</button><button type="button" class="qopt" data-key="D">D. 强化值</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：期望＝对<strong>努力工作能够完成任务</strong>的信念强度，用概率表示——"努力后获得晋升的可能性 60%"正是努力→绩效的概率，故 0.6 是期望值。工具性是"绩效之后<strong>拿到报酬</strong>"的估计，强化值不属于期望理论的变量。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力01_组织激励_第1节_需要、动机与激励.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 需要、动机与激励</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力01_组织激励_第3节_激励理论的应用.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 激励理论的应用</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

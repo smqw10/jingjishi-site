@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十五章 抽样调查 · 抽样调查的基本概念 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十五章 抽样调查 · 抽样调查的基本概念</h1><div class="subtitle">第 1 节 / 共 3 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:33%"></div></div><div class="progress-text">本章进度 1/3</div><div class="sec-badge none" id="sec-badge" data-sec="b25s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>分清<strong>总体、总体参数、样本、样本量、样本统计量、抽样框</strong>六件套，见题能"指认" <span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>一刀切分清<strong>概率抽样</strong>与<strong>非概率抽样</strong>，背下五种概率抽样与四种非概率抽样 <span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>记住<strong>抽样调查五个步骤</strong>的顺序，知道"调查方案设计"环节里装的是什么 <span class="hot">高频考点</span></li>
+<li>分清<strong>抽样误差</strong>与<strong>非抽样误差</strong>，掌握非抽样误差的三种类型及来源 <span class="s3">★★★</span> <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、基本概念六件套：两套指标与一张名单</h2>
+<h3>1. 总体与总体参数 <span class="hot">高频考点</span></h3>
+<p><strong>总体</strong>：调查对象的<strong>全体</strong>，组成总体的各个个体称作<strong>总体单元</strong>（或单位）。</p>
+<p><strong>总体参数</strong>：就是<strong>总体指标值</strong>——根据总体中<strong>所有单位</strong>的数值计算、通过调查想要了解的指标。它是<strong>未知的常数</strong>，<strong>不受样本抽选结果的影响</strong>。常用的总体参数有<strong>总体总量、总体均值、总体比例、总体方差</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>定义要点</th>
+<th>白话版</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总体</td>
+<td>调查对象的全体</td>
+<td>要研究的"一整个圈子"</td>
+<td>14 亿中国人</td>
+</tr>
+<tr>
+<td>总体单元（单位）</td>
+<td>组成总体的各个个体</td>
+<td>圈子里的每一个人</td>
+<td>每一个中国人</td>
+</tr>
+<tr>
+<td>总体参数</td>
+<td>根据总体<strong>所有单位</strong>的数值计算的指标；<strong>未知的常数</strong>，<strong>不受样本抽选结果影响</strong></td>
+<td>全圈子算出来、想知道的那个数</td>
+<td>14 亿中国人的平均收入</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>参数&quot;未知但不变&quot;，统计量&quot;已知但会变&quot;：</strong><p>总体参数是<strong>未知的常数</strong>——正因为未知才要调查，而且不管抽到哪个样本，它都不变；样本统计量是<strong>随机变量</strong>——抽到不同的样本，它就跟着变。全章的推理都建立在这一对反差上。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 参数四兄弟</div><p>常用总体参数就四个：<strong>总量、均值、比例、方差</strong>（对样本就是对应的样本统计量）。考"下列属于总体参数的是"时，先看是不是这四类，再看数字是不是来自<strong>全体</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>想知道 14 亿中国人的平均收入（总体参数，未知的常数）→ 抽 1 万人（样本）→ 算出这 1 万人的平均收入（样本统计量，随机变量）→ 用它去<strong>估计</strong>总体参数。"总体→样本"这一步叫<strong>抽样</strong>，"样本统计量→总体参数"这一步叫<strong>估计</strong>。</p></div></div>
+<div class="section"><h3>2. 样本、样本量与样本统计量 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>定义要点</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>样本</td>
+<td>总体的<strong>一部分</strong>，由从总体中按一定原则或程序抽出的部分个体组成；样本也是一个<strong>集合</strong></td>
+<td>1 万中国人</td>
+</tr>
+<tr>
+<td>入样单位</td>
+<td>每个被抽中进入样本的单位</td>
+<td>被抽中的某个人</td>
+</tr>
+<tr>
+<td>样本量</td>
+<td>样本中包含的<strong>入样单位的个数</strong></td>
+<td>一万</td>
+</tr>
+<tr>
+<td>样本统计量</td>
+<td>根据样本中各单位的数值计算，是对总体参数的<strong>估计</strong>，也称<strong>估计量</strong>；是一个<strong>随机变量</strong>，取决于样本设计和正好被选入样本的单元特定组合；常用的有<strong>样本均值、样本比例、样本方差</strong></td>
+<td>1 万人的平均收入</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>数&quot;人&quot;还是数&quot;数&quot;：</strong><p>单元（人）构成总体和样本；数值才构成参数和统计量。题问"样本是/总体是"答<strong>人（单元集合）</strong>，题问"参数是/统计量是"答<strong>数（指标值）</strong>——"人"与"数"错位就是命题人埋的坑。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>从全校 3000 名学生中随机抽 300 人做调查：3000 名学生＝总体，300 名学生＝样本，300＝样本量，这 300 人的月均生活费＝样本统计量，全校 3000 人的月均生活费（真值）＝总体参数。四个位置一一对应，考题只是把这四个位置打乱重排。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 人集合，数指标</div><p><strong>"人集合是总体/样本，数指标是参数/统计量"</strong>——凡"所有××"（全体）配"参数"，凡"被调查的、抽中的"（样本）配"统计量"；说"人"的是单元，说"数"的才是指标。</p></div></div>
+<div class="section"><h3>3. 抽样框 <span class="hot">高频考点</span></h3>
+<p><strong>抽样框</strong>：供抽样所用的<strong>所有抽样单元的名单</strong>，是抽样总体的具体表现。常用的抽样框有<strong>名单框</strong>，如企业名录、电话簿、人员名单，也可以是<strong>一张地图</strong>；抽样框中的单位必须是<strong>有序的，便于编号</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>抽样框</th>
+<th>总体</th>
+<th>样本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>是什么</td>
+<td>所有抽样单元的<strong>名单</strong>（名录、电话簿、地图）</td>
+<td>调查对象的<strong>全体</strong>（人本身）</td>
+<td>被抽中的<strong>部分个体</strong></td>
+</tr>
+<tr>
+<td>例子</td>
+<td>户籍登记系统中的完整名单</td>
+<td>全市所有住户</td>
+<td>被抽中的 500 户</td>
+</tr>
+<tr>
+<td>一句话</td>
+<td>抽样前的"花名册"</td>
+<td>研究对象本身</td>
+<td>实际调查的对象</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>框是&quot;名单&quot;，不是&quot;人群本身&quot;：</strong><p>抽样框是<strong>供抽样使用的名单</strong>，不是被研究的人群，也不是被抽中的那部分人。见"供抽样使用的所有客户名单""完整名单""地图"，答案就是抽样框。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 有名单、能编号，才叫框</div><p><strong>"有名单、能编号，才叫框"</strong>——抽样框里的单位必须<strong>有序、便于编号</strong>，否则随机抽号无从做起。地图也能当抽样框（按地块编号），记住"名单框＋地图"两种形态。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>连锁店顾客满意度调查，手头没有顾客名单，只有一张全市门店分布地图——把地图划成编号的街区，按编号随机抽街区，抽中街区内的门店接受调查。地图就是这份调查的抽样框。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 一眼识别&quot;指认题&quot;</div><p>题干出现"<strong>名单、名录、电话簿、地图</strong>"→抽样框；"<strong>所有××</strong>的某指标数值"→总体参数；"<strong>被调查的（抽中的）</strong>部分人"→样本；"<strong>用被抽中的人算出来的数</strong>"→样本统计量。真题最爱拿"客户名单"考抽样框、拿"所有居民的消费总额"考总体参数，拿"被调查者的均值"考统计量。</p></div></div>
+<div class="section"><h2>二、概率抽样与非概率抽样 <span class="must">必考</span></h2>
+<h3>1. 概率抽样 <span class="hot">高频考点</span></h3>
+<p><strong>定义</strong>：也称<strong>随机抽样</strong>，依据<strong>随机原则</strong>，按照某种<strong>事先设计的程序</strong>，从总体中抽取部分单元的方法。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>特点</td>
+<td>(1) 按一定的概率以<strong>随机原则</strong>抽取样本；(2) 总体中<strong>每个单元被抽中的概率是已知的或者可以计算出来</strong>；(3) 用样本对总体参数进行估计时，要<strong>考虑每个样本单元被抽中的概率</strong></td>
+</tr>
+<tr>
+<td>等概率与不等概率</td>
+<td>每个单位被抽中的概率<strong>相等</strong>→等概率抽样；<strong>不相等</strong>→不等概率抽样</td>
+</tr>
+<tr>
+<td>类型（5 种）</td>
+<td>简单随机抽样、分层抽样、系统抽样、整群抽样、多阶段抽样</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>概率已知 ≠ 概率相等：</strong><p>概率抽样的要害是入样概率<strong>已知或可计算</strong>，而不是必须<strong>相等</strong>——相等只是"等概率抽样"这一特例。判断题写"概率抽样要求每个单元被抽中的概率相等"就是错的。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 戏（系）多减（简）整分</div><p>五种概率抽样：<strong>"戏（系）多减（简）整分"</strong>——系统抽样、多阶段抽样、简单随机抽样、整群抽样、分层抽样。多选题用这句口诀逐个对号，不在五者之列又顶着"抽样"名号的，多半是非概率抽样。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>摇号抽学号，人人被抽中的概率都是 1/100——等概率抽样；按城市规模给不同抽中概率（大城市入样概率高些），概率不相等但<strong>都知道、都能算</strong>——不等概率抽样，依然是概率抽样。"已知"是身份证明，"相等"不是。</p></div></div>
+<div class="section"><h3>2. 非概率抽样 <span class="hot">高频考点</span></h3>
+<p><strong>定义</strong>：调查者根据自己的<strong>方便或主观判断</strong>抽取样本的方法，抽取样本时<strong>并不是依据随机原则</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>要点</th>
+<th>典型场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>判断抽样</td>
+<td>调查者依据调查目的和对调查对象的了解，<strong>人为确定</strong>样本单元</td>
+<td>"我觉得这几家厂最有代表性"</td>
+</tr>
+<tr>
+<td>方便抽样</td>
+<td>依据<strong>方便原则</strong>，以最大限度<strong>降低调查成本</strong>为目的</td>
+<td>街头"拦截式"调查</td>
+</tr>
+<tr>
+<td>自愿样本</td>
+<td><strong>不经过抽选</strong>，由自愿接受调查的单元组成</td>
+<td>网上调查</td>
+</tr>
+<tr>
+<td>配额抽样</td>
+<td>将总体划分若干类型，把<strong>样本数额</strong>分配到各类型；从各类型中抽取样本<strong>没有严格限制</strong>，一般采用方便抽样</td>
+<td>按男女各半发问卷，来谁算谁</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>四类共同点：都不是随机：</strong><p>判断、方便、自愿、配额四类，共同点是<strong>不按随机原则抽</strong>：或凭主观（判断），或图省事（方便），或来者不拒（自愿），或只控数额不控随机（配额）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 判方便、自配额</div><p>四种非概率抽样：<strong>"判方便、自配额"</strong>——判断、方便、自愿、配额。与概率五法"戏（系）多减（简）整分"凑成一张对照表，多选题最爱两边混着出。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>在自家网页挂一份有奖问卷，填不填全凭访客心意——自愿样本；记者在地铁站拦住路人就问——方便抽样；专家点名找十家"典型企业"访谈——判断抽样；规定"男女各 50 份、老中青各若干份"再把名额摊下去——配额抽样。四种都与随机无关。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 概率／非概率速判法</div><p>见到<strong>随机原则、入样概率已知（可计算）</strong>→概率抽样；见到<strong>人为确定、方便、自愿、配额</strong>→非概率抽样。警惕"配额抽样"长着一张概率脸（分层给名额很像分层抽样），但它层内怎么抽<strong>没有严格限制</strong>、一般就是方便抽样，整体不随机——归非概率。</p></div></div>
+<div class="section"><h2>三、抽样调查的一般步骤</h2>
+<p>调查按五步走，顺序固定：</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>具体内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 确定调查问题</td>
+<td><strong>明确定义问题</strong>，包括对整个问题的叙述以及确定研究问题的具体组成部分</td>
+</tr>
+<tr>
+<td>② 调查方案设计</td>
+<td>明确<strong>如何实施调查</strong>，主要包括：<strong>抽样方案的设计和问卷设计</strong></td>
+</tr>
+<tr>
+<td>③ 实施调查过程</td>
+<td>获得样本单元的调查数据；关键是<strong>保证原始数据的质量</strong>，需要对调查过程进行有效的<strong>管理和监控</strong></td>
+</tr>
+<tr>
+<td>④ 数据处理分析</td>
+<td>对原始数据检查、核对，对验收合格的数据进行<strong>编码和录入</strong>，对录入的数据预处理，进行统计分析，对总体参数进行估计等</td>
+</tr>
+<tr>
+<td>⑤ 撰写调查报告</td>
+<td>调查活动的<strong>最终成果</strong>，是前面劳动成果的展现</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>&quot;方案设计&quot;里只有两样：</strong><p>调查方案设计环节＝<strong>抽样方案的设计＋问卷设计</strong>，多选题只认这两样——编码录入（属数据处理分析）、撰写报告、统计分析都不在其中，这是本知识点最常考的"圈范围"题。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 题设实处报</div><p>五步口诀：<strong>"定题→设案→实施→处理→报告"</strong>（题、设、实、处、报）。顺口溜记顺序，多选"属于××环节的"按口诀定位环节再圈内容。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>先定"学生食堂满意度"这个问题（①定题）；接着设计抽哪几个食堂、问卷问什么（②设案）；然后发问卷、盯填写质量（③实施）；回收后核对、编码、录入、统计（④处理）；最后写成调查报告（⑤报告）。中间哪一步掉链子，数据质量就出问题。</p></div></div>
+<div class="section"><h2>四、抽样调查中的误差 <span class="must">必考</span></h2>
+<h3>1. 误差与抽样误差 <span class="hot">高频考点</span></h3>
+<p><strong>误差的定义</strong>：<strong>样本估计值和总体参数真值之间的差异</strong>。凡调查就一定有误差，误差或大或小总会存在，<strong>不可能完全避免</strong>。</p>
+<p><strong>抽样误差</strong>：由于<strong>抽样的随机性</strong>造成的，用样本统计量估计总体参数时出现的误差。误差产生的原因：抽到哪一个样本完全是随机的，而抽到不同的样本，对总体的估计就会不同。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>抽样误差</th>
+<th>非抽样误差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成因</td>
+<td><strong>抽样的随机性</strong>（抽到哪个样本全凭随机）</td>
+<td>除抽样误差之外的<strong>其他原因</strong></td>
+</tr>
+<tr>
+<td>能否避免</td>
+<td>不可避免，但<strong>可计算、可控制</strong>（如增大样本量）</td>
+<td>通过改进调查工作可减少</td>
+</tr>
+<tr>
+<td>记忆锚</td>
+<td>完全随机</td>
+<td>框、答、量（找错人、没得到、算错了）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>误差必然存在，抽样误差源于&quot;随机&quot;：</strong><p>样本估计值会变、总体参数不变，两者之间必有差异。抽样误差不是"调查失误"，而是<strong>随机性本身的产物</strong>——所以它不算"错误"，能<strong>计算</strong>、能<strong>控制</strong>，但不能靠"认真"消除。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 抽样误差＝完全随机</div><p><strong>"随机造成的算抽样误差，其余全算非抽样误差"</strong>。判断某误差归属，先问一句："这是随机抽样本身带来的，还是人、名单、问卷搞出来的？"前者进抽样误差，后者进非抽样误差。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>同一城市抽两个样本估平均通勤时间，一个样本抽到白领多、一个抽到退休居民多，算出的均值一高一低——这不是谁做错了，而是<strong>随机抽到不同样本</strong>的必然结果，差异就是抽样误差。</p></div></div>
+<div class="section"><h3>2. 非抽样误差的三种类型 <span class="hot">高频考点</span></h3>
+<p><strong>定义</strong>：除抽样误差之外，由<strong>其他原因</strong>引起的样本统计量与总体真值之间的差异。三类：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>成因</th>
+<th>教材例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抽样框误差</td>
+<td><strong>抽样框不完善</strong>造成的</td>
+<td>用营业执照作个体商业的抽样框掌握零售额：有的商贩<strong>无照经营</strong>、有的<strong>有照但转行不再经商</strong>、有的<strong>一个摊点办理多个营业执照</strong>，估计结果失真</td>
+</tr>
+<tr>
+<td>无回答误差</td>
+<td>调查人员没能从被调查者那里<strong>得到所需数据</strong></td>
+<td>①<strong>随机因素</strong>：被调查者<strong>恰好不在家</strong>；②<strong>非随机因素</strong>：被调查者<strong>不愿告诉实情而拒绝回答</strong></td>
+</tr>
+<tr>
+<td>计量误差</td>
+<td>调查所获得的数据与其<strong>真值之间不一致</strong>；可能由<strong>调查人员、问卷设计、受访者</strong>等原因造成</td>
+<td>调查员有意无意<strong>诱导</strong>受访者、提问错误或记录答案错误、调查人员有意作弊；因问卷原因受访者对问题理解有偏差、<strong>记忆不清</strong>、提供<strong>虚假数字</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>框、答、量三分类：</strong><p>非抽样误差就三类：<strong>抽样框误差</strong>（名单不完善）、<strong>无回答误差</strong>（该答的没答）、<strong>计量误差</strong>（答了但不真）。无回答还要分<strong>随机因素</strong>（恰好不在家）与<strong>非随机因素</strong>（拒绝回答）两种成因。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 找错人、没得到、算错了</div><p><strong>"找错人（抽样框误差）、没得到（无回答误差）、算错了（计量误差）"</strong>。名单有毛病＝找错人；人在但没答上来＝没得到；答了但答得不真＝算错了。三选一的题目按这三句过一遍就能锁定。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>被调查者出差别在家——纯属碰巧，属<strong>随机因素</strong>；高收入者怕露富而拒绝回答——有主观原因，属<strong>非随机因素</strong>。两者都是无回答误差，但成因归类不同，多选题专拿这一对做文章。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>总体</strong>＝全体；<strong>总体单元</strong>＝个体；<strong>总体参数</strong>＝全体算出的指标，未知的常数、不受样本影响（总量、均值、比例、方差）</li>
+<li><strong>样本</strong>＝抽出的部分个体集合；<strong>样本量</strong>＝入样单位个数；<strong>样本统计量（估计量）</strong>＝样本算出的数，随机变量（均值、比例、方差）</li>
+<li><strong>抽样框</strong>＝所有抽样单元的名单（名录、电话簿、地图），单位有序便于编号</li>
+<li><strong>概率抽样</strong>＝随机原则＋入样概率已知（可计算）；五种：戏（系）多减（简）整分；概率相等叫等概率抽样</li>
+<li><strong>非概率抽样</strong>＝方便或主观判断、不随机；四种：判断、方便、自愿、配额（判方便、自配额）</li>
+<li><strong>五步骤</strong>：定题→方案设计（抽样方案＋问卷设计）→实施（保质量）→数据处理分析（检查核对、编码录入）→撰写报告</li>
+<li><strong>误差</strong>＝样本估计值与总体真值之差，不可避免；<strong>抽样误差</strong>源于随机性；<strong>非抽样误差</strong>三类：抽样框误差、无回答误差（随机／非随机因素）、计量误差——找错人、没得到、算错了</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b25s1q1" data-answer="D" data-type="single"><span class="q-tag">例1·单选</span><div class="q-stem">北京市旅游管理部门要通过抽样调查了解 2015 年北京市常住居民出境旅游总消费金额，该抽样调查的总体参数是 2015 年北京市（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 所有常住居民旅游总消费金额</button><button type="button" class="qopt" data-key="B">B. 被调查的常住居民出境旅游总消费金额</button><button type="button" class="qopt" data-key="C">C. 被调查的每一位常住居民出境旅游消费金额</button><button type="button" class="qopt" data-key="D">D. 所有常住居民出境旅游总消费金额</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：总体参数是根据<strong>总体中所有单位</strong>的数值计算的指标——本题总体是 2015 年北京市<strong>所有常住居民</strong>，研究指标是"出境旅游总消费金额"，故总体参数＝所有常住居民出境旅游总消费金额（D 对）。A 缺了"出境"二字，口径变成了"旅游总消费"；B、C 都建立在"被调查的"居民上，是被抽中者（样本）的数值，属于样本统计量或样本单元的观察值，不是总体参数。锁定"<strong>全体＋研究指标</strong>"两个要件即可秒选。
+:::</p></div></details></div><div class="quiz-item" data-qid="b25s1q2" data-answer="D" data-type="single"><span class="q-tag">例2·单选</span><div class="q-stem">某保险公司客户满意度抽样调查中，供抽样使用的所有客户名单是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 总体</button><button type="button" class="qopt" data-key="B">B. 样本</button><button type="button" class="qopt" data-key="C">C. 抽样单元</button><button type="button" class="qopt" data-key="D">D. 抽样框</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：<strong>抽样框</strong>＝供抽样所用的<strong>所有抽样单元的名单</strong>，是抽样总体的具体表现——"供抽样使用的所有客户名单"正是一份名单，故选 D。总体是所有客户的集合本身（A 错）；样本是被抽中的那部分客户（B 错）；抽样单元是组成总体的每一个个体（C 错）。识别口诀：见"名单、名录、地图"就是抽样框。
+:::</p></div></details></div><div class="quiz-item" data-qid="b25s1q3" data-answer="BC" data-type="multi"><span class="q-tag">例3·多选</span><div class="q-stem">下列抽样调查方法中，属于非概率抽样的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 系统抽样</button><button type="button" class="qopt" data-key="B">B. 判断抽样</button><button type="button" class="qopt" data-key="C">C. 方便抽样</button><button type="button" class="qopt" data-key="D">D. 分层抽样</button><button type="button" class="qopt" data-key="E">E. 多阶段抽样</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BC</div><div class="q-exp"><p>析：非概率抽样四类＝<strong>判断、方便、自愿、配额</strong>（口诀"判方便、自配额"），故判断抽样（B）、方便抽样（C）对。系统抽样（A）、分层抽样（D）、多阶段抽样（E）都在五种概率抽样（简单随机、分层、系统、整群、多阶段，口诀"戏多减整分"）之列，依据随机原则、入样概率已知或可计算，均不属于非概率抽样。
+:::</p></div></details></div><div class="quiz-item" data-qid="b25s1q4" data-answer="ABCD" data-type="multi"><span class="q-tag">例5·多选</span><div class="q-stem">在城乡住户收支调查中，非抽样误差的可能来源有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 抽样框遗漏掉部分城乡住户</button><button type="button" class="qopt" data-key="B">B. 部分高收入住户拒绝接受调查</button><button type="button" class="qopt" data-key="C">C. 调查人员有意作弊</button><button type="button" class="qopt" data-key="D">D. 被调查住户提供虚假数据</button><button type="button" class="qopt" data-key="E">E. 抽样的随机性</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：非抽样误差＝除抽样的随机性<strong>之外</strong>的原因造成的误差，按"找错人、没得到、算错了"过一遍：A 抽样框遗漏住户→<strong>抽样框误差</strong>；B 拒绝接受调查→<strong>无回答误差</strong>；C 调查人员有意作弊→<strong>计量误差</strong>；D 提供虚假数据→<strong>计量误差</strong>（受访者原因造成数据与真值不一致）。E"抽样的随机性"造成的恰恰是<strong>抽样误差</strong>本身，不属于非抽样误差，是本题唯一干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b25s1q5" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">抽样误差产生的根本原因是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 受访者拒绝回答</button><button type="button" class="qopt" data-key="B">B. 问卷设计缺陷</button><button type="button" class="qopt" data-key="C">C. 抽样的随机性</button><button type="button" class="qopt" data-key="D">D. 调查员诱导受访者</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：抽样误差由<strong>抽样的随机性</strong>造成——抽到哪个样本完全随机，抽到不同的样本对总体的估计就不同（C 对）。A"拒绝回答"属无回答误差，B"问卷设计缺陷"、D"调查员诱导"属计量误差，三者都是<strong>非抽样误差</strong>的来源，与随机性无关。见"根本原因"直接锁"随机性"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b25s1q6" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">某公司从所有在职员工中随机抽取 200 人，通过对这 200 人的调查估计所有员工的平均薪酬满意度。该抽样调查的样本是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 该公司所有在职员工</button><button type="button" class="qopt" data-key="B">B. 该公司所有在职员工的平均薪酬满意度</button><button type="button" class="qopt" data-key="C">C. 随机抽取的这 200 名员工的平均薪酬满意度</button><button type="button" class="qopt" data-key="D">D. 随机抽取的这 200 名员工</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：样本是<strong>从总体中按一定原则或程序抽出的部分个体所组成的集合</strong>——被抽中的"这 200 名员工"就是样本（D 对）。A 是总体；B 是总体参数（想了解的真值）；C 是根据样本算出的数，是<strong>样本统计量</strong>（对总体参数的估计）。注意"人"与"数"的错位：员工（单元）构成总体和样本，员工的数值才构成参数和统计量。
+:::</p></div></details></div></div>
+<div class="section"><p>:::</p></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础25_抽样调查_第2节_几种基本的概率抽样方法.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 几种基本的概率抽样方法</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

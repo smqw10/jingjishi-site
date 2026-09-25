@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第7章 绩效管理 · 特殊群体的绩效管理 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第7章 绩效管理 · 特殊群体的绩效管理</h1><div class="subtitle">第 5 节 / 共 5 节 · 预计学习时长 35 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 5/5</div><div class="sec-badge none" id="sec-badge" data-sec="r07s5">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住团队绩效考核的<strong>五步流程</strong>，尤其咬死"<strong>直接上级</strong>与员工沟通绩效结果" <span class="hot">高频考点</span></li>
+<li>背下团队层面绩效考核指标确定的<strong>四种方法</strong>（客户关系图、组织绩效指标、绩效金字塔、工作流程图）<span class="s3">★★★</span></li>
+<li>掌握知识型团队绩效考核：<strong>以结果为导向</strong>＋效益/效率/递延/风险四类指标 <span class="must">必考</span></li>
+<li>记住跨部门团队考核的两个关键词——<strong>矩阵结构、标准化</strong>，以及国际人力资源绩效考核的<strong>四个特点</strong> <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、团队绩效考核</h2>
+<h3>1. 团队绩效考核的流程（★）</h3>
+<ol>
+<li><strong>人力资源部</strong>发布考核通知，启动考核程序，公布考核要求；</li>
+<li>对各个<strong>团队负责人</strong>进行考核；</li>
+<li>根据<strong>团队负责人的评价结果</strong>确定<strong>团队成员的评价结果分布</strong>；</li>
+<li>进行团队成员评价：<strong>间接上级、直接上级和员工本人</strong>都应当参与其中并进行有效沟通；</li>
+<li>员工的<strong>直接上级</strong>与员工就绩效结果进行沟通，<strong>制定下一年工作目标</strong>。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>谁来跟员工沟通？：</strong><p>考核结果沟通的主体是员工的<strong>直接上级</strong>（不是人力资源部）——2023 年真题就拿"由人力资源部门负责与员工沟通"当错误选项。成员评价时<strong>员工本人也要参与</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>年底 HR 发考核通知（第一步），先考核各团队负责人（第二步），据此划出团队成员的评分分布（第三步），组长、分管副总和小李本人一起评（第四步），最后组长找小李面谈定下年目标（第五步）。</p></div></div>
+<div class="section"><h3>2. 建立团队绩效考核指标体系</h3>
+<p><strong>三个步骤</strong>：①确定<strong>团队和成员两个层面</strong>的绩效考核指标；②划分<strong>团队和个体绩效所占的权重和比例</strong>；③分解绩效考核的关键要素，确定具体评价指标。</p>
+<p><strong>建立团队层面绩效考核指标的四种方法</strong>（★）：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>适用思路</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>客户关系图</strong></td>
+<td>围绕"团队要满足的客户需求"确定指标</td>
+</tr>
+<tr>
+<td><strong>组织绩效指标</strong></td>
+<td>围绕"团队为组织绩效作的贡献"确定指标</td>
+</tr>
+<tr>
+<td><strong>绩效金字塔</strong></td>
+<td>层层分解组织目标，团队从金字塔中找到自己的位置</td>
+</tr>
+<tr>
+<td><strong>工作流程图</strong></td>
+<td>沿着工作流程的上下游环节确定指标</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊总结：团队指标四法</div><p><strong>"客、组、塔、流"</strong>——客户关系图、组织绩效指标、绩效金字塔、工作流程图。注意：<strong>关键事件法</strong>不在此列，"不包括"题型最爱拿它当答案。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>售后团队直接对客户负责，从客户关系图里挑指标（响应时长、一次修复率）；支撑全公司运转的行政团队，用组织绩效指标反推贡献；生产班组沿着工艺流程图，把上下游交接节点变成考核指标。</p></div></div>
+<div class="section"><h3>3. 知识型团队的绩效考核方法（★★★）</h3>
+<p>知识型团队的任务一般是<strong>创造性</strong>的，绩效考核<strong>以结果为导向</strong>（不是以行为为导向），综合考核<strong>四个角度</strong>的指标：</p>
+<table>
+<thead>
+<tr>
+<th>指标类型</th>
+<th>考核内容</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>效益型指标</strong></td>
+<td>可直接用来判断知识型团队的<strong>工作产出成果</strong>（团队的产出<strong>满足客户需求的程度</strong>）</td>
+<td>干出的活成不成功</td>
+</tr>
+<tr>
+<td><strong>效率型指标</strong></td>
+<td>团队为获得效益所<strong>付出的成本</strong>和<strong>投入产出的比例</strong></td>
+<td>花多大代价干成的</td>
+</tr>
+<tr>
+<td><strong>递延型指标</strong></td>
+<td>团队的<strong>工作过程和工作结果</strong>对<strong>客户、投资者、团队成员</strong>的<strong>长远影响</strong></td>
+<td>对明天的影响</td>
+</tr>
+<tr>
+<td><strong>风险型指标</strong></td>
+<td>判断<strong>不确定性风险的数量</strong>和对<strong>团队及其成员的危害程度</strong></td>
+<td>埋了多少雷</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 知识型团队四指标</div><p><strong>"效益判产出，效率比投入，递延看长远，风险测危害"</strong>——四个"判/比/看/测"对应四类指标，情景题抓关键词即可。总纲一句：<strong>以结果为导向</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>研发团队交出一个新系统（效益型：客户用得顺不顺），研发花了多少钱、投入产出合算吗（效率型），这套架构三年后还撑不撑得住、成员能力涨没涨（递延型），项目里有多少没踩平的技术坑（风险型）。</p></div></div>
+<div class="section"><h3>4. 跨部门团队的绩效考核方法</h3>
+<ol>
+<li><strong>矩阵形式</strong>的组织结构比较适宜于跨部门的团队绩效考核；</li>
+<li>关键做好<strong>标准化</strong>工作——使考核结果具有<strong>可比性</strong>：考核<strong>目标</strong>、考核<strong>程序</strong>、<strong>组织</strong>、<strong>方法手段</strong>的标准化；对性质相同的部门要采用<strong>同一评价方法</strong>。</li>
+</ol></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 跨部门考核口诀</div><p><strong>"跨部矩阵标准化"</strong>——结构选矩阵，考核靠标准化；标准不统一，跨部门的分就没法比。</p></div></div>
+<div class="section"><h2>二、国际人力资源的绩效考核</h2>
+<p>国际人力资源的绩效考核具有以下<strong>特点</strong>：</p>
+<ol>
+<li>不仅关注业绩，而且<strong>突出战略方向</strong>，强调企业的<strong>长远发展</strong>；</li>
+<li>除为<strong>薪酬调整和晋升</strong>提供依据外，还加入了重视<strong>个人、团队和公司目标的密切结合</strong>等新因素；</li>
+<li>更倾向于<strong>基于结果</strong>的绩效考核；</li>
+<li>与传统考核相比，更加<strong>注重管理者和员工的沟通</strong>。</li>
+</ol></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 国际考核四特点</div><p><strong>"战略长远、三方结合、结果导向、注重沟通"</strong>——从目标、依据、侧重点、过程四个角度各记一条。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>公司外派老周去海外分部，考核他不只看当地销售额，还看他干的活是否符合集团国际化战略（战略长远）、个人目标与团队和总部目标是否拧成一股绳（三方结合），且主要看经营结果（结果导向）；派驻期间总部主管和他保持高频沟通（注重沟通）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 案例题落点</div><p>团队绩效考核案例题最爱考两处：一是"<strong>谁来与员工沟通考核结果</strong>"（直接上级）；二是知识型团队指标分类（抓"产出成果→效益、成本比例→效率、长远影响→递延、不确定性→风险"）。跨部门团队则咬死"矩阵＋标准化"两个词。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>团队考核流程</strong>：HR 发通知→考核团队负责人→定成员评价结果分布→成员评价（间接上级＋直接上级＋本人）→<strong>直接上级</strong>与员工沟通、制定下年目标</li>
+<li><strong>指标体系三步</strong>：定两层面指标→划分团队/个体权重→分解关键要素定具体指标</li>
+<li><strong>团队层面指标四法</strong>："客组塔流"——客户关系图、组织绩效指标、绩效金字塔、工作流程图</li>
+<li><strong>知识型团队</strong>：以<strong>结果为导向</strong>；效益型判产出、效率型比投入、递延型看长远（客户/投资者/成员）、风险型测危害</li>
+<li><strong>跨部门团队</strong>：矩阵形式组织结构适宜；关键是标准化（目标、程序、组织、方法手段），同性质部门同一评价方法</li>
+<li><strong>国际人力资源绩效考核</strong>：突出战略方向强调长远发展；薪酬晋升依据＋个人团队公司目标密切结合；倾向基于结果的考核；更注重管理者与员工沟通</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r07s5q1" data-answer="C" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">关于团队绩效考核实施方式的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 团队层面绩效考核指标的确定是团队绩效考核指标设计的关键</button><button type="button" class="qopt" data-key="B">B. 应根据团队负责人的评价结果确定团队成员的评价结果分布</button><button type="button" class="qopt" data-key="C">C. 由人力资源部门负责与员工就绩效考核结果进行沟通</button><button type="button" class="qopt" data-key="D">D. 员工本人也应当参与团队成员评价</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：与员工就绩效考核结果进行沟通并制定下一年工作目标的是员工的<strong>直接上级</strong>，不是人力资源部门，C 错误当选。A 正确——团队层面指标确定是指标体系设计的关键（第一步）；B 正确——先考核团队负责人，再据此确定成员评价结果分布；D 正确——成员评价时间接上级、直接上级和员工本人都应参与。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s5q2" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">确定团队层面绩效考核指标的基本方法不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 关键事件法</button><button type="button" class="qopt" data-key="B">B. 客户关系图</button><button type="button" class="qopt" data-key="C">C. 工作流程图</button><button type="button" class="qopt" data-key="D">D. 绩效金字塔</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：团队层面绩效考核指标的四种方法是客户关系图、组织绩效指标、绩效金字塔、工作流程图（口诀"客组塔流"）。关键事件法属于<strong>绩效评价技术</strong>（描述法），不是确定团队考核指标的方法——跨章节工具混搭是本题陷阱。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s5q3" data-answer="ABC" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于知识型团队绩效考核的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 对团队的考核应以结果为导向</button><button type="button" class="qopt" data-key="B">B. 评估不确定性风险对团队及其成员的危害程度时，应采用风险型指标</button><button type="button" class="qopt" data-key="C">C. 评估团队工作过程和工作结果对客户的长远影响时，应采用递延型指标</button><button type="button" class="qopt" data-key="D">D. 对团队的考核应以行为为导向</button><button type="button" class="qopt" data-key="E">E. 评估团队的产出满足客户需求的程度时，应采用效率型指标</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：知识型团队的绩效考核<strong>以结果为导向</strong>，而不是以行为为导向（A 对、D 错）；风险型指标判断不确定性风险的数量和危害程度（B 对）；递延型指标反映工作过程和工作结果对客户、投资者、团队成员的长远影响（C 对）；E 错误——"产出满足客户需求的程度"是<strong>效益型</strong>指标的考核内容，效率型指标考核的是付出的成本和投入产出的比例。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s5q4" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">下列知识型团队的绩效考核指标中，用来判断工作产出成果的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 效益型指标</button><button type="button" class="qopt" data-key="B">B. 风险型指标</button><button type="button" class="qopt" data-key="C">C. 效率型指标</button><button type="button" class="qopt" data-key="D">D. 递延型指标</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：效益型指标可直接用来判断知识型团队的<strong>工作产出成果</strong>，即团队产出满足客户需求的程度。效率型指标看付出的成本和投入产出比例；递延型指标看对客户、投资者、团队成员的长远影响；风险型指标判断不确定性风险的数量和危害程度。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s5q5" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于跨部门团队绩效考核的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 跨部门团队绩效考核的关键是做好考核的标准化</button><button type="button" class="qopt" data-key="B">B. 跨部门团队的绩效考核要以部门为单位开展</button><button type="button" class="qopt" data-key="C">C. 跨部门的绩效考核中，各部门要建立不同的考核标准</button><button type="button" class="qopt" data-key="D">D. 职能制的组织结构适宜采用跨部门团队的绩效考核</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：跨部门团队绩效考核的关键是做好<strong>标准化</strong>工作，使考核结果具有可比性，A 正确。B 错误——跨部门考核涉及多部门人群，人力资源部门有必要做好沟通协调，不能简单以部门为单位各自开展；C 错误——对<strong>性质相同</strong>的部门要采用<strong>同一评价方法</strong>，标准要统一而非各异；D 错误——适宜的是<strong>矩阵形式</strong>的组织结构。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s5q6" data-answer="AB" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">关于国际人力资源绩效考核策略的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 绩效考核不仅要关注业绩，而且要突出战略方向，强调长远发展</button><button type="button" class="qopt" data-key="B">B. 采取以工作结果为导向的绩效考核方法</button><button type="button" class="qopt" data-key="C">C. 采取基于员工特征的绩效考核方法</button><button type="button" class="qopt" data-key="D">D. 以同事作为考核的主体</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AB</div><div class="q-exp"><p>析：国际人力资源的绩效考核不仅关注业绩，而且突出战略方向、强调企业长远发展（A 对）；从侧重点看，更倾向于<strong>基于结果</strong>而非员工特征的绩效考核（B 对、C 错）。D 错误——教材强调的是更加<strong>注重管理者和员工的沟通</strong>，并未以同事作为考核主体。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力07_绩效管理_第4节_绩效反馈面谈、绩效改进和绩效考核结果的分析与应用.html"><span class="nav-label">上一节</span><span class="nav-title">第4节 绩效反馈面谈、绩效改进和绩效考核结果的分析与应用</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

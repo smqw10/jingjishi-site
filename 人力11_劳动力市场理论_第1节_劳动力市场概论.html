@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第11章 劳动力市场理论 · 劳动力市场概论 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第三部分 人力资源经济分析</span><h1>第11章 劳动力市场理论 · 劳动力市场概论</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 50 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="r11s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住劳动力市场的宏观/微观两层含义与三大环节，背熟<strong>七大特征</strong> <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>会区分三组市场结构：全国性/地区性、外部/<strong>内部</strong>、<strong>优等/次等</strong>（含隔离原因）<span class="hot">高频考点</span></li>
+<li>背熟<strong>效率工资</strong>的定义、"引人、降率、公平感"三理由与适用企业 <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+<li>掌握<strong>晋升竞赛</strong>三大特点与两个设计要点 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、劳动力市场的概念与特征 <span class="s3">★★★</span></h2>
+<h3>1. 什么是劳动力市场 <span class="hot">高频考点</span></h3>
+<p><strong>劳动力市场</strong>是一种<strong>要素市场</strong>。它为劳动力<strong>供求双方</strong>提供<strong>接触、谈判和交易</strong>的机制，以一定<strong>工资率</strong>将劳动力有效分配到不同的<strong>职业、行业、地区和企业</strong>中，从而满足个人与社会需要。</p>
+<table>
+<thead>
+<tr>
+<th>层面</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>宏观</strong></td>
+<td>各局部或单一劳动力市场构成的<strong>总劳动力市场体系</strong></td>
+</tr>
+<tr>
+<td><strong>微观</strong></td>
+<td>特定供求双方通过自由谈判，达成<strong>劳动力使用权转让合约</strong>时所处的<strong>市场环境</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>劳动力市场上的三个环节</strong>：①多种机构为供求双方<strong>接触和联系</strong>提供便利；②接触后双方交换劳动力的<strong>质量与价格信息</strong>；③达成协议后签订某种形式的<strong>雇用合同</strong>（大多书面，有些只是双方默契）。</p></div>
+<div class="section"><div class="keypoint"><strong>劳动力市场 ≠ 职业介绍所：</strong><p>劳动力市场是"机制＋环境"，职业介绍所只是"机构牵线"环节之一。所以"劳动力市场就是职业介绍场所/场地"这类说法每年当错误选项出——它把宏观总体系、微观市场环境砍成了一个小场所。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小赵在招聘 App 上投简历（机构提供接触便利）→ 和 HR 视频聊薪资、聊团队情况（交换质量与价格信息）→ 谈拢后签劳动合同（雇用合同）——一次完整的劳动力市场交易。</p></div></div>
+<div class="section"><h3>2. 劳动力市场的七大特征 <span class="must">必考</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>核心内容</th>
+<th>一句话抓关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①<strong>特殊性</strong></td>
+<td>劳动力<strong>不能脱离劳动者</strong>独立存在；交易转移的只是劳动力的<strong>使用权</strong></td>
+<td>人货不分离、只租不卖</td>
+</tr>
+<tr>
+<td>②<strong>多样性</strong></td>
+<td>知识、技能、经验有差异 → 劳动力之间<strong>无法（或无法完全）相互替代</strong> → 不同劳动力市场上的<strong>价格不同</strong>；市场划分可以是<strong>多角度</strong>的</td>
+<td>千人千价</td>
+</tr>
+<tr>
+<td>③<strong>不确定性</strong></td>
+<td>大量雇用合同是在<strong>无形市场</strong>中达成的；分散性和难以辨认性 → 供求双方<strong>匹配困难</strong>，且匹配<strong>并非终身</strong>，可能出现<strong>重新匹配</strong>（<strong>动态属性</strong>）</td>
+<td>无形＋动态</td>
+</tr>
+<tr>
+<td>④<strong>交易对象的难以衡量性</strong></td>
+<td>实际工作前准确判断劳动能力<strong>非常困难</strong> → 除受教育程度、工作经历、在职训练等<strong>客观指标</strong>外，还要借助<strong>面试、笔试、心理测验</strong>等甄选手段，并用<strong>试用期</strong>最终决定是否雇用</td>
+<td>面试笔试加试用</td>
+</tr>
+<tr>
+<td>⑤<strong>交易的延续性</strong></td>
+<td>交易使双方关系在一定时期内被<strong>固化</strong>；劳动力的<strong>出售者</strong>在交易完成后<strong>仍继续参与购买者的生产过程</strong></td>
+<td>卖完还得接着干活</td>
+</tr>
+<tr>
+<td>⑥<strong>交易条件的复杂性</strong></td>
+<td>交易受<strong>一整套条件</strong>约束（工资、工作环境、工作条件等）；<strong>工资与非工资就业条件之间存在相互替代关系</strong></td>
+<td>不只谈钱</td>
+</tr>
+<tr>
+<td>⑦<strong>劳动力出售者地位的不利性</strong></td>
+<td>改善办法：劳动者<strong>组建工会</strong>、通过<strong>集体谈判</strong>强化议价能力；<strong>政府</strong>通过管理总需求、救助失业者来平衡劳资力量</td>
+<td>卖方天然弱势</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 七特征口诀</div><p><strong>"特、多、不、难、延、复、弱"</strong>——特殊性、多样性、不确定性、难以衡量性、延续性、复杂性、出售者地位弱（不利性）。多选题按七字对号入座；问"不包括"的，常混进"交易的一次性""出售者地位的有利性"这类反义编造项。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>劳动力市场像租房市场：房东（劳动者）把房子（劳动力）<strong>租</strong>给租客（企业）用，<strong>产权还是房东的</strong>（只转使用权）；签约不只谈租金（工资），还要谈水电物业（工作环境、条件）；租约到期可以换租客（重新匹配、动态属性）；带看时买家总要验房（面试、笔试、试用期）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三个必错的&quot;反着说&quot;</div><ul>
+<li>"实现劳动力<strong>所有权</strong>的转移"——错，转的只是<strong>使用权</strong>；</li>
+<li>"交易的<strong>唯一</strong>条件是工资"——错，工作条件、工作环境也是交易能否完成的重要决定因素；</li>
+<li>"供求匹配是<strong>永久性</strong>的"——错，匹配非终身，可能出现重新匹配。
+2025 年单选就是把这三条各编成一个选项。</li>
+</ul></div></div>
+<div class="section"><h3>3. 劳动者的议价能力 <span class="hot">高频考点</span></h3>
+<p>劳动力<strong>出售者地位不利</strong>，其<strong>议价能力</strong>取决于两个因素：①<strong>同种劳动力的市场供求状况</strong>（供不应求 → 议价力强）；②劳动者个人的<strong>技术、能力、经验等劳动力质量水平</strong>（越稀缺越有优势）。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 议价能力两因素</div><p><strong>"行情＋成色"</strong>——市场行情（同种劳动力的供求状况）定大盘，个人成色（技术、能力、经验）定个股。</p></div></div>
+<div class="section"><h2>二、劳动力市场的结构</h2>
+<h3>1. 全国性劳动力市场与地区性劳动力市场</h3>
+<p>★划分的关键：<strong>劳动力供求双方相互进行搜寻的地理范围大小</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>全国性</strong>劳动力市场</td>
+<td>劳动力供给者<strong>稀缺</strong>，<strong>知识水平和技能要求高</strong></td>
+</tr>
+<tr>
+<td><strong>地区性</strong>劳动力市场</td>
+<td>供给者<strong>技能水平不高、竞争力不强</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 全国性市场怎么判</div><p><strong>"搜遍全国才算全国"</strong>——企业和劳动者在全国范围内彼此搜寻，才是全国性劳动力市场；招的往往是稀缺的高技能人才。地区范围内搜寻的就是地区性市场，装的多是普通技能劳动者。</p></div></div>
+<div class="section"><h3>2. 外部劳动力市场与内部劳动力市场 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>外部劳动力市场</th>
+<th>内部劳动力市场</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>又称</td>
+<td><strong>一般性</strong>劳动力市场</td>
+<td>——</td>
+</tr>
+<tr>
+<td>位置</td>
+<td>组织<strong>外部</strong></td>
+<td><strong>大型组织内部</strong>存在</td>
+</tr>
+<tr>
+<td>是否受单个企业 HR 政策影响</td>
+<td><strong>不受</strong>影响</td>
+<td>由<strong>规则和程序</strong>指导雇佣关系调整，形成<strong>有序管理体系</strong></td>
+</tr>
+<tr>
+<td>参与者</td>
+<td><strong>大量</strong>企业和劳动者共同参与</td>
+<td>企业与其在职员工</td>
+</tr>
+</tbody>
+</table>
+<p><strong>内部劳动力市场三个考点</strong>（★★）：
+1. <strong>重要特征</strong>：企业通常<strong>只从外部雇用较低级别岗位</strong>的劳动者，<strong>中高层职位主要通过内部晋升</strong>实现；
+2. <strong>形成</strong>：企业和劳动者双方<strong>相互选择</strong>的结果；
+3. <strong>存在问题</strong>：①<strong>成本较高</strong>——内部员工未必是更高岗位的最佳人选；②员工<strong>竞争不足</strong>可能导致<strong>激励水平下降</strong>，甚至出现<strong>串谋</strong>行为；③<strong>不能脱离外部劳动力市场独立存在</strong>——薪酬、福利等需与外部市场保持<strong>适度一致</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 内部劳动力市场口诀</div><p><strong>"低进内升，离不开外"</strong>——大门只进小兵（外部只雇低级别岗位），当官靠内部提拔（中高层内部晋升）；但工资福利还得跟外面行情对表（适度一致），关起门来自嗨必出问题（竞争不足→激励下降→串谋）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>银行这类大型组织的内部劳动力市场特征明显：校招只招柜员、客户经理等基层岗（低进），支行行长、部门总经理基本靠内部逐级提拔（内升）；但柜员工资也得参考同业行情，否则人全被挖走（离不开外）。代价是内部人竞争不足、容易论资排辈（激励下降）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 概念澄清题点</div><p>内部劳动力市场<strong>不是</strong>"通常意义上为下岗工人在企业内部重新安排工作"——它是大型组织内由<strong>规则和程序</strong>指导雇佣关系调整的<strong>有序管理体系</strong>。判断题最爱在此设坑。</p></div></div>
+<div class="section"><h3>3. 优等劳动力市场与次等劳动力市场 <span class="must">必考</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>市场</th>
+<th>特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>优等</strong>劳动力市场</td>
+<td>①就业条件较好；②工资福利水平较高；③工作环境良好；④工作保障性较强；⑤<strong>进入门槛高</strong>：只有具备一定受教育水平、技术熟练程度较高或具备某种技能的人才有可能进入</td>
+</tr>
+<tr>
+<td><strong>次等</strong>劳动力市场</td>
+<td>①就业不稳定；②工资率较低；③工作条件较差；④社会地位相对较低；⑤工作报酬通常较低；⑥<strong>流动率、缺勤率和迟到率比较高</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>两者关系</strong>：①两个市场<strong>相对独立</strong>运转，<strong>存在</strong>劳动力流动，但大部分知识技能水平较低、就业机会较差的劳动者<strong>很难流入</strong>优等市场；②造成两者<strong>相对隔离</strong>的主要原因：<strong>贫穷、歧视、受教育程度缺乏导致的技能缺乏</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 优次隔离三原因</div><p><strong>"一穷二歧三没技"</strong>——贫穷、歧视、受教育程度缺乏导致的技能缺乏。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>写字楼里的白领岗（优等市场）：工资福利好、稳定，但要看学历和技能门槛；建筑工地日结零工（次等市场）：来去自由但就业不稳、报酬低，今天没工今天就缺勤（流动率、缺勤率、迟到率高）。想从工地跳进写字楼，卡在"穷、歧视、没技"三道墙上。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三个&quot;不是&quot;</div><ul>
+<li>优等与次等市场是<strong>相对独立</strong>运转，<strong>不是相互封闭</strong>——之间存在流动；</li>
+<li>次等市场就业不稳定的根源：<strong>企业</strong>（雇用这些劳动者的企业需求通常不稳定）＋<strong>劳动者</strong>（报酬低、离职损失小 → 流动率、缺勤率、迟到率高）<strong>两方面</strong>的原因，不能只赖需求方；</li>
+<li>"很难流入"≠"完全不能流入"——低技能者流入优等市场的机会是<strong>少</strong>，不是<strong>零</strong>。</li>
+</ul></div></div>
+<div class="section"><h2>三、效率工资 <span class="s3">★★★</span> <span class="hot">高频考点</span></h2>
+<h3>效率工资：高工资买来高生产率</h3>
+<p><strong>效率工资</strong>（★★★）：企业提供的一种<strong>高于市场均衡水平</strong>的工资。</p>
+<p><strong>基本假设</strong>：<strong>高工资往往能够带来高生产率</strong>。提出这一基本假设的三条理由（★★★）：
+1. 高工资能<strong>吸引到优秀的、生产率更高的员工</strong>；
+2. 高工资有利于<strong>降低离职率</strong>，强化实际生产率；
+3. 高工资能够让人产生<strong>公平感</strong>——有助于提高员工的<strong>外部公平感</strong>，并有助于提高员工<strong>对内部不公平的忍耐程度</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>公平感类型</th>
+<th>取决于什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>内部公平感</strong></td>
+<td>企业在<strong>内部工资差距设定</strong>方面的合理性</td>
+</tr>
+<tr>
+<td><strong>外部公平感</strong></td>
+<td>员工把自己的工资与<strong>自己可能在其他组织希望得到的工资</strong>比较得出的满意度</td>
+</tr>
+</tbody>
+</table>
+<p><strong>两个关键条件</strong>：
+1. 效率工资对生产率产生促进作用的前提条件（★）：劳动者期望与企业保持<strong>长期雇佣关系</strong>——都不打算长干，高工资买不来忠诚和效率；
+2. 只有当<strong>结构性的内部劳动力市场</strong>存在的情况下，效率工资<strong>才最有可能出现</strong>。</p>
+<p><strong>适合提供效率工资来刺激生产率的企业</strong>：
+1. 从<strong>降低员工流动性</strong>中获益最大的企业：①内部运营复杂的大型现代企业；②需<strong>较多人力资本投资</strong>才能胜任重要岗位的企业；
+2. <strong>难以通过基于产出的工资制度激励员工、或监督难度很大</strong>的企业。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：引人、降率、公平感</div><p>高工资为什么能带来高生产率？<strong>引人</strong>（吸引优秀员工）、<strong>降率</strong>（降低离职率）、<strong>公平感</strong>（提高外部公平感＋对内部不公平的忍耐程度）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某大厂门卫工资高出市场两成：好待遇吸引来更靠谱的人（引人）；没人为多两成工资冒险跳槽（降率）；员工觉得"公司厚道"，交接巡查更上心，也懒得为内部小不公计较（公平感）。前提是大家都打算长干——若人人干俩月就走，高工资白花。门卫产出难考核，比流水线计件工更适合效率工资。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 谁最该开效率工资</div><p>两条路判断：一看<strong>"怕不怕人走"</strong>——人走了损失大的（内部运营复杂的大企业、花大钱培训才能上岗的关键岗位）→ 开；二看<strong>"产出好不好量、人好不好盯"</strong>——难以按产出付薪、监督成本高的 → 开。反过来，计件工资一目了然的岗位就没这个必要。</p></div></div>
+<div class="section"><h2>四、晋升竞赛（晋升锦标赛）<span class="hot">高频考点</span></h2>
+<h3>晋升竞赛的特点与设计要点</h3>
+<p><strong>三大特点</strong>（★★）：
+1. 更高一级职位通常是<strong>事先设计好</strong>的，职位级别越高，对应的<strong>工资率越高</strong>；
+2. 员工晋升往往是因为<strong>比别人更有优势</strong>，但<strong>优势大小不影响</strong>晋升后的工资水平；
+3. 晋升者将获得新职位的<strong>全部报酬</strong>（即工资上涨），<strong>失败者得不到任何报酬</strong>。</p>
+<p><strong>两个设计要点</strong>（★★）：
+1. <strong>获胜的可能性</strong>：候选人在知识、能力、经验等方面应具有<strong>较高的可比性</strong>——无人有<strong>绝对把握</strong>晋升，也无人感到<strong>毫无希望</strong>；
+2. <strong>获胜后的奖金数量</strong>：在现任职位与拟晋升职位之间创造<strong>合理的工资差距</strong>。设计差距要考虑两个因素：</p>
+<table>
+<thead>
+<tr>
+<th>考虑因素</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>晋升的综合价值</strong></td>
+<td>晋升后的实际价值：工资增长、继续晋升机会、更好福利、更大权力、个人成就感</td>
+</tr>
+<tr>
+<td><strong>晋升的风险</strong></td>
+<td>取决于晋升是基于<strong>实力与绩效</strong>还是<strong>运气因素</strong>——工作结果的不确定性、运气因素、对能力及绩效衡量可能产生的误差</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 晋升竞赛口诀</div><p><strong>"职位先定、赢家通吃、对手要匀、奖差要开"</strong>——职位与工资率事先设计好；赢者拿全部报酬、输者两手空空；候选人实力要相当（才有悬念）；上下级工资差距要合理（才有干劲）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>两个大区经理竞聘销售总监：两人业绩常年咬得紧（可比性高，都有盼头也都没把握），总监岗位的年薪、股票、话语权明显高一截（工资差距合理）→ 两人都会拼到最后一刻。若总监和经理拿得差不多（差距太小），或者晋升全看老板心情（运气成分大），谁还拼命？</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 差距太小没人跑，全靠运气没人练</div><p>工资差距太小 → 赢了不划算，努力动机被削弱；晋升风险太大（靠运气、考核误差大）→ 努力与结果脱钩，同样没人努力。设计的目标是让<strong>实力与绩效</strong>成为胜负的最大变量——"优势大小不影响晋升后工资"这句特点表述也常被偷换成"优势越大晋升后工资越高"，必错。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li>劳动力市场＝要素市场；宏观＝总劳动力市场体系，微观＝达成使用权转让合约时的市场环境；三环节：机构牵线→交换质量价格信息→签雇用合同</li>
+<li>七特征"特多不难延复弱"：特殊（只转使用权）、多样（不可完全替代、价格不同）、不确定（无形市场、匹配非终身、动态属性）、难以衡量（客观指标＋面试笔试心理测验＋试用期）、延续（交易后继续参与生产过程）、复杂（工资与非工资条件可替代）、出售者不利（工会集体谈判＋政府管理总需求救助失业者）</li>
+<li>议价能力看"行情＋成色"：同种劳动力供求状况＋个人技术能力经验</li>
+<li>结构三组：全国性（稀缺高技能）/地区性（技能不高竞争力不强）；外部（一般性）/内部（低进内升、成本高、竞争不足、离不开外部）；优等/次等（隔离三因：穷、歧视、没技）</li>
+<li>效率工资＝高于市场均衡水平的工资；"引人、降率、公平感"；前提＝期望长期雇佣；结构性内部劳动力市场存在时最可能出现；适合"怕人走""产出难衡量监督难"的企业</li>
+<li>晋升竞赛：职位事先定、优势大小不影响晋升后工资、赢家通吃败者无酬；设计＝可比性＋合理工资差距（看综合价值与晋升风险）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r11s1q1" data-answer="C" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于劳动力市场特征的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 通过劳动力市场交易实现的是劳动力所有权的转移</button><button type="button" class="qopt" data-key="B">B. 劳动力市场交易的唯一条件是工资</button><button type="button" class="qopt" data-key="C">C. 劳动力市场在很多时候是无形的</button><button type="button" class="qopt" data-key="D">D. 劳动力市场实现的劳动力供求匹配是永久性的</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：劳动力交易转移的只是其<strong>使用权</strong>，所有权并没有转移，A 错误；除工资之外，工作条件和工作环境的好坏也是交易能否完成的重要决定因素，"唯一条件是工资"错误，B 排除；匹配不是终身性的，可能出现重新匹配（动态属性），D 错误。大量雇用合同是在<strong>无形市场</strong>中达成的，C 正确。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s1q2" data-answer="BCD" data-type="multi"><span class="q-tag">2021·多选</span><div class="q-stem">关于劳动力市场的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 劳动力市场就是职业介绍场所</button><button type="button" class="qopt" data-key="B">B. 不同类型的劳动力市场形成的劳动力价格通常不同</button><button type="button" class="qopt" data-key="C">C. 劳动力交易只转移劳动力的使用权</button><button type="button" class="qopt" data-key="D">D. 当劳动力市场处于供大于求状态时，劳动者的议价能力较弱</button><button type="button" class="qopt" data-key="E">E. 劳动力市场的交易条件通常比一般的商品交易更简单</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：宏观上劳动力市场是总劳动力市场体系，微观上是达成使用权转让合约时的市场环境，"就是职业介绍场所"过于片面，A 错误；劳动力因知识、技能、经验差异无法完全替代，不同市场的劳动力价格通常不同，B 正确；交易只转移使用权，C 正确；供大于求时劳动者地位不利、议价能力较弱，D 正确；交易条件具有<strong>复杂性</strong>，受工资、工作条件、工作环境等一整套条件约束，比一般商品交易更复杂而非更简单，E 错误。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s1q3" data-answer="B" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">关于优等劳动力市场和次等劳动力市场的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 劳动者从次等劳动力市场进入优等劳动力市场的机会很多</button><button type="button" class="qopt" data-key="B">B. 优等劳动力市场对劳动者的任职资格条件要求相对更高</button><button type="button" class="qopt" data-key="C">C. 次等劳动力市场就业不稳定的根源在于劳动力需求方</button><button type="button" class="qopt" data-key="D">D. 次等劳动力市场和优等劳动力市场之间是相互封闭的</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：优等劳动力市场进入门槛高，只有具备一定受教育水平、技术熟练程度较高或具备某种技能者才有可能进入，B 正确。大部分低技能劳动者很难流入优等市场，但并非完全没有机会，A 错误；次等市场就业不稳定既有企业方面（需求通常不稳定）又有员工方面（离职损失小→流动率、缺勤率、迟到率高）的原因，C 错误；两个市场相对独立运转、存在流动，并非相互封闭，D 错误。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s1q4" data-answer="BCD" data-type="multi"><span class="q-tag">2015·多选</span><div class="q-stem">下列关于内部劳动力市场的说法中，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 它是在某些特定行业内形成的有多家企业和大量劳动者参与的劳动力市场</button><button type="button" class="qopt" data-key="B">B. 它是在大型组织内形成的借助一系列规则和程序指导组织内部雇佣关系调整的有序管理体系</button><button type="button" class="qopt" data-key="C">C. 它有助于企业对员工的生产率和工作动机等做出准确判断，保护企业的大量在职培训投资</button><button type="button" class="qopt" data-key="D">D. 它有可能会因为员工之间竞争不足而导致组织内部的激励水平下降</button><button type="button" class="qopt" data-key="E">E. 它是独立于外部劳动力市场的一种自我封闭型劳动力市场</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：A 描述的是<strong>外部（一般性）</strong>劳动力市场——组织外部、不受单个企业 HR 政策影响、由大量企业和劳动者共同参与，张冠李戴，错误。B 正是内部劳动力市场的定义。长期雇佣关系下企业有充分时间观察判断员工的生产率与工作动机，并能保护在职培训投资，C 正确；员工竞争不足会导致激励水平下降甚至串谋，D 正确。内部劳动力市场<strong>不能脱离</strong>外部劳动力市场独立存在，薪酬、福利须与外部保持适度一致，并非自我封闭，E 错误。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s1q5" data-answer="A" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">关于晋升竞赛的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 高一级职位的工资率是事先设计好的</button><button type="button" class="qopt" data-key="B">B. 当前职位和晋升职位工资水平应该类似</button><button type="button" class="qopt" data-key="C">C. 同一职位的竞争者应该有较大能力差距</button><button type="button" class="qopt" data-key="D">D. 晋升失败的人可以得到小额工资提升</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：更高一级职位通常事先设计好，与每个职位对应一个确定的工资率或工资浮动区间，级别越高工资率越高，A 正确；晋升激励恰恰来自两职位间<strong>合理的工资差距</strong>，不应类似，B 错误；候选人之间应在知识、能力、经验上具有较高<strong>可比性</strong>（无人有绝对把握、也无人毫无希望），差距大反而没人努力，C 错误；晋升者获得新职位的全部报酬，失败者得不到任何报酬，D 错误。
+:::</p></div></details></div><div class="quiz-item" data-qid="r11s1q6" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">某新公司开出的工资水平明显高于市场上同类岗位的均衡工资水平。该公司提供的工资属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 效率工资</button><button type="button" class="qopt" data-key="B">B. 绩效工资</button><button type="button" class="qopt" data-key="C">C. 保留工资</button><button type="button" class="qopt" data-key="D">D. 均衡工资</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：<strong>高于市场均衡水平</strong>的工资是效率工资——用高工资"引人、降率、公平感"，换取高生产率。绩效工资是与绩效挂钩的报酬制度，与"高于市价"无关；保留工资是劳动者<strong>愿意出来工作</strong>的最低心理价位，是供给方的概念；均衡工资恰是供求相等时形成的市场工资率，效率工资正是对它的向上偏离。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力11_劳动力市场理论_第2节_劳动力供给.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 劳动力供给</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

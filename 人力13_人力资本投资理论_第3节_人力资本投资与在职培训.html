@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第13章 人力资本投资理论 · 人力资本投资与在职培训 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第三部分 人力资源经济分析</span><h1>第13章 人力资本投资理论 · 人力资本投资与在职培训</h1><div class="subtitle">第 3 节 / 共 4 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:75%"></div></div><div class="progress-text">本章进度 3/4</div><div class="sec-badge none" id="sec-badge" data-sec="r13s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住在职培训的<strong>正规与非正式</strong>两种形式，知道"边干边学"都算 <span class="hot">高频考点</span></li>
+<li>一刀切分清<strong>一般培训</strong>与<strong>特殊培训</strong> <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>背熟成本收益安排：<strong>一般自担自享、特殊共担共享</strong>，实践中"先分摊成本再分享收益" <span class="must">必考</span></li>
+<li>记住在职培训对<strong>流动率、资历、年龄</strong>的影响，会判断案例 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、在职培训及其基本类型</h2>
+<h3>1. 在职培训：最普遍、最主要的技能学习方式 <span class="hot">高频考点</span></h3>
+<p>对劳动者的技能学习来说，<strong>在职培训是最普遍、最主要的方式</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>内容</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>比较正规的</strong></td>
+<td>正式的培训课程、培训项目、<strong>正规的学徒计划</strong></td>
+<td>没受过训练的工人在有经验的技术工人指导下工作</td>
+</tr>
+<tr>
+<td><strong>大多数是非正式的</strong></td>
+<td>难以衡量和觉察：①<strong>"边干边学"</strong>——观察技术工人操作、在师傅生病或缺岗时<strong>顶岗</strong>熟悉技术；②<strong>有经验工人与新人之间的信息和技能传递</strong></td>
+<td>工间聊天中了解技术细节</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊提示：非正式在职培训范围广</div><p><strong>只要是员工自己获取到的、对工作技能提升有用的信息，均可视为非正式在职培训</strong>——不拘形式，观察、顶岗、闲聊传经都算。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小李入职第一个月：看老师傅调设备（观察学习）、师傅请假他顶了一天岗（顶岗）、午休听老员工聊参数怎么调（信息传递）——三件事没进过一间教室，却都是在职培训。</p></div></div>
+<div class="section"><h3>2. 两种基本类型（★★★）<span class="s3">★★★</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>定义</th>
+<th>技能对谁有用</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>一般在职培训</strong></td>
+<td>培训学到的职业技能<strong>对所有的行业和企业都有用</strong></td>
+<td>所有企业</td>
+<td>管理能力、打字技巧</td>
+</tr>
+<tr>
+<td><strong>特殊在职培训</strong></td>
+<td>培训学到的职业技能<strong>只对提供培训的企业有用</strong></td>
+<td>仅本企业</td>
+<td>特殊工艺、特殊产品制作</td>
+</tr>
+</tbody>
+</table>
+<p>实际中，许多在职培训<strong>既包括一般培训因素，又包括特殊培训因素</strong>，很难将两种训练内容严格区分开。</p></div>
+<div class="section"><div class="keypoint"><strong>判断标准一句话：</strong><p>问"这手艺换个公司还吃香吗"：<strong>换个公司照样吃香 → 一般培训；离开这家公司就作废 → 特殊培训</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 两类型</div><p><strong>"通用走天下，专用守一厂"</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频错误说法</div><p>"<strong>所有的</strong>在职培训都有助于提高劳动者在<strong>任何</strong>企业中的劳动生产率"——错。只有<strong>一般培训</strong>对所有企业都有用，特殊培训只提高提供培训的企业的生产率。"在职培训都是以非正式方式开展的"也错——既有正规培训，也有大量非正式培训。</p></div></div>
+<div class="section"><h2>二、在职培训的成本与收益及其安排</h2>
+<h3>3. 在职培训的成本与收益（★）</h3>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>直接成本</strong></td>
+<td>受训者工资、教师讲课费、场地租用费、设备费</td>
+</tr>
+<tr>
+<td><strong>机会成本</strong></td>
+<td>①受训者参加培训的机会成本——培训要占用时间、参训员工<strong>不能全力工作</strong>；②<strong>利用机器或有经验职工</strong>从事培训活动的机会成本——如师傅给学徒讲授技能时，工作效率必然降低</td>
+</tr>
+<tr>
+<td><strong>收益</strong></td>
+<td>受训员工<strong>生产率提高</strong>；但生产率提高的<strong>显现时间不确定</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>办一场内训：订会议室、请讲师、学员照拿工资——直接成本；车间骨干脱产 3 天、产线少出一批货，师傅带徒时自己活也干慢了——机会成本；收益是学员回去后良品率上升，但可能三个月后才看得出来（显现时间不确定）。</p></div></div>
+<div class="section"><h3>4. 成本与收益的安排（★）<span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>成本与收益安排</th>
+<th>缘由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>一般培训</strong></td>
+<td><strong>员工自担成本、自享收益</strong></td>
+<td>技能通用，员工跳槽能带走收益，所以自己掏钱</td>
+</tr>
+<tr>
+<td><strong>特殊培训</strong></td>
+<td><strong>企业共担成本、共享收益</strong></td>
+<td>技能只在本企业有用，企业和员工都从中受益，所以一起分担</td>
+</tr>
+</tbody>
+</table>
+<p>【注意】在管理实践中，企业所进行的一般培训和特殊培训实际上<strong>很难完全区分开</strong>，因此企业的各种在职培训活动中，普遍运用<strong>先分摊成本、再分享收益</strong>的双赢方式。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊提示：分摊双赢</div><p>一般培训与特殊培训在实践中<strong>难以完全区分</strong>，普遍运用<strong>先分摊成本再分享收益</strong>的双赢方式。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>公司报销一半 MBA 学费，条件是拿到学位后须为公司再服务 3 年——公司和员工<strong>共担成本、共享收益</strong>，服务期约定还能<strong>降低员工离职率</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 成本收益安排</div><p><strong>"一般自担自享，特殊共担共享；现实分不清，先摊后分双赢"</strong>。</p></div></div>
+<div class="section"><h2>三、在职培训对企业及员工行为的影响（★）</h2>
+<ol>
+<li><strong>受过特殊培训的员工流动倾向会削弱</strong>：在本企业工资高于去其他企业可能获得的工资；企业一般<strong>不愿解雇</strong>他们；特殊培训与员工的<strong>连续服务年限</strong>相关——<strong>资历越老越不易失业</strong>，裁员时通常<strong>先解雇进厂时间短的人</strong>；</li>
+<li><strong>接受正规学校教育数量越多的人，越有可能接受更多的在职培训</strong>：他们能在较短时间掌握培训内容、达到培训要求，减少企业成本支出、增加获益；有能力、学得快的人最终会选择高报酬的工作，这些工作又要求他们不断学习；</li>
+<li><strong>在职培训投资与人的生命周期有一定联系</strong>：<strong>年龄越大，进行在职培训投资的意愿越低</strong>。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>一条主线：特殊培训把人&quot;拴&quot;住：</strong><p>特殊培训像把员工和企业绑在了一条船上——员工走了技能贬值、企业走了投入打水漂，所以双方都愿意维持长期雇佣：流动率低、企业不轻易解雇、资历越老越稳。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>干了 15 年、掌握独家模具工艺的王师傅，厂里效益再差也不轻易裁他（技能只在本厂有用，裁了他培训投入就打了水漂）；而刚进厂的小工则可能先被裁。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 影响三句</div><p><strong>"特殊培训拴人心，裁员先裁新进厂；学历越高培训越多，年龄越大越不想学"</strong>。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>形式</strong>：对劳动者技能学习而言最普遍、最主要的方式；正规（课程/项目/学徒计划）＋大多数非正式（边干边学、顶岗、信息技能传递）；员工自己获取的、对技能提升有用的信息都算非正式在职培训</li>
+<li><strong>类型</strong>：一般培训（技能对所有行业企业有用，如管理能力、打字）/特殊培训（只对提供培训的企业有用，如特殊工艺、特殊产品制作）；实际难严格区分，多数两者兼有</li>
+<li><strong>成本</strong>：直接（受训者工资、教师讲课费、场地租用费、设备费）＋机会（培训时间不能全力工作；机器与有经验职工的机会成本）；<strong>收益</strong>＝生产率提高，显现时间不确定</li>
+<li><strong>安排</strong>：一般培训员工自担自享；特殊培训共担成本、共享收益；实践普遍"先分摊成本再分享收益"双赢</li>
+<li><strong>影响</strong>：特殊培训→流动倾向削弱、资历越老越不易失业、裁员先裁进厂时间短的；学历越高越可能接受更多在职培训；年龄越大培训投资意愿越低</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r13s3q1" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">从人力资本投资的角度看，在职培训不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 新员工通过观察有经验同事的工作过程提升自己的专业技能</button><button type="button" class="qopt" data-key="B">B. 大学毕业生因就业困难重新去上技工学校</button><button type="button" class="qopt" data-key="C">C. 企业组织的学徒计划</button><button type="button" class="qopt" data-key="D">D. 资深员工在工作过程中对新员工提供的指导</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：A、D 属<strong>非正式</strong>在职培训（边干边学、信息与技能传递），C 属<strong>正规</strong>在职培训（正规的学徒计划）。B 上技工学校是离开工作岗位接受<strong>正规学校教育</strong>（各级正规教育），虽也是人力资本投资，但不属于"在职培训"。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s3q2" data-answer="A" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">下列关于员工培训的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 所有的在职培训都有助于提高劳动者在任何企业中的劳动生产率</button><button type="button" class="qopt" data-key="B">B. 绝大多数在职培训既包括一般在职培训因素也包括特殊在职培训因素</button><button type="button" class="qopt" data-key="C">C. 一般培训所带来的技能对所有的行业和企业都有用</button><button type="button" class="qopt" data-key="D">D. 对于劳动者的技能学习来说，在职培训都是最普遍、最主要的方式</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：只有<strong>一般培训</strong>的技能对所有行业企业都有用，<strong>特殊培训</strong>只提高提供培训的企业的生产率（如特殊工艺、特殊产品制作），A 以偏概全，错误。B 正确——实际中许多在职培训两种因素兼有、难以严格区分；C 正确——这是一般培训的定义；D 正确——对劳动者的技能学习而言，在职培训是最普遍、最主要的方式。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s3q3" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于一般培训和特殊培训的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 公司组织的培训中，一般培训和特殊培训是很容易区分的</button><button type="button" class="qopt" data-key="B">B. 一般在职培训之后，员工可以在其他公司工作中获益</button><button type="button" class="qopt" data-key="C">C. 特殊在职培训之后，员工只能在当前的公司获得收益</button><button type="button" class="qopt" data-key="D">D. 一般培训的成本由员工个人承担</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：实际中许多在职培训既包括一般培训因素又包括特殊培训因素，<strong>很难将两种训练内容严格区分开</strong>，A 错误。B 正确——一般培训技能通用，到哪家公司都用得上；C 正确——特殊培训技能只对提供培训的企业有用；D 正确——一般培训的成本与收益安排是<strong>员工自担自享</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s3q4" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于在职培训成本承担方式的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 一般在职培训的成本应全部由企业承担</button><button type="button" class="qopt" data-key="B">B. 特殊在职培训的成本应全部由员工个人承担</button><button type="button" class="qopt" data-key="C">C. 一般在职培训和特殊在职培训的成本均可由企业和员工共同分担</button><button type="button" class="qopt" data-key="D">D. 所有在职培训的成本应全部由企业承担</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：管理实践中一般培训与特殊培训<strong>很难完全区分开</strong>，因此企业各种在职培训活动中普遍运用<strong>先分摊成本再分享收益</strong>的双赢方式——两种培训的成本都可由企业和员工共同分担（C 正确）。理论上一般培训是员工自担自享、特殊培训是共担共享，"全部由企业承担"（A、D）与"全部由员工承担"（B）都过于绝对。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s3q5" data-answer="A" data-type="single"><span class="q-tag">2019·单选</span><div class="q-stem">关于在职培训对企业和员工产生的影响的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 接受特殊在职培训较多的员工通常离职动机更强</button><button type="button" class="qopt" data-key="B">B. 企业在经济衰退时期也会尽可能避免解雇受过大量特殊在职培训的员工</button><button type="button" class="qopt" data-key="C">C. 接受一般在职培训较多的员工更容易在其他企业中找到工作</button><button type="button" class="qopt" data-key="D">D. 劳动者年纪越大，对在职培训进行投资的意愿往往越弱</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：受过特殊培训的员工，其技能只在本企业有用，本企业的工资又高于去其他企业可能获得的工资，因此<strong>流动倾向会受到削弱</strong>、更愿意长期留任——A 说"离职动机更强"正好说反。B、C、D 均正确：衰退期企业也尽量不裁受过大量特殊培训的员工；一般培训技能通用、在外部企业好找工作；年龄越大培训投资意愿越低。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力13_人力资本投资理论_第2节_人力资本投资与高等教育.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 人力资本投资与高等教育</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力13_人力资本投资理论_第4节_劳动力流动.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 劳动力流动</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第五章 生产要素市场理论 · 生产者使用生产要素的原则 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第五章 生产要素市场理论 · 生产者使用生产要素的原则</h1><div class="subtitle">第 1 节 / 共 3 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:33%"></div></div><div class="progress-text">本章进度 1/3</div><div class="sec-badge none" id="sec-badge" data-sec="b05s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住生产要素四兄弟（劳动、资本、土地、企业家才能）各自包括什么 <span class="hot">高频考点</span></li>
+<li>一眼分清要素市场与产品市场上买卖双方的角色互换 <span class="must">必考</span></li>
+<li>拿下<strong>引致需求</strong>与<strong>联合需求</strong>两个标签，会答"反映两市场联系的是谁" <span class="hot">高频考点</span></li>
+<li>会用两个公式（VMP＝MPP×P、MFC＝MPP×MC）做蛋糕店式计算题 <span class="s3">★★★</span></li>
+<li>背死使用要素的原则——<strong>边际收益产品＝边际要素成本</strong>，并会判断"多雇还是减员" <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、生产要素与两个市场</h2>
+<h3>1. 生产要素：四兄弟 <span class="hot">高频考点</span></h3>
+<p><strong>生产要素</strong>是指用于生产物品与劳务的投入，包括<strong>劳动、资本、土地、企业家才能</strong>等。</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>内容（教材口径）</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>劳动</strong></td>
+<td>体力和智力的总和</td>
+<td>出力气、动脑子都算</td>
+</tr>
+<tr>
+<td><strong>资本</strong></td>
+<td>实物形态和货币形态</td>
+<td>厂房机器是资本，钱也是资本</td>
+</tr>
+<tr>
+<td><strong>土地</strong></td>
+<td>土地本身及地上和地下的一切自然资源</td>
+<td>不只是地皮，矿藏都算</td>
+</tr>
+<tr>
+<td><strong>企业家才能</strong></td>
+<td>经营管理企业的各种能力</td>
+<td>把前三样组织起来赚钱的本事</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四要素口诀</div><p><strong>"劳资地企"</strong>——劳动拼体力智力，资本实物加货币，土地连地上地下一起算，企业家才能管经营。多选问"生产要素包括什么"，认准这四样；出现"技术、信息"等口径外的词要警惕。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一家蛋糕店靠什么生产蛋糕？师傅和店员的手艺与工时（劳动）、烤箱和店面（实物资本）加备用金（货币资本）、店面占的地块（土地）、老板统筹进货定价的本事（企业家才能）。四样缺一样，蛋糕都做不出来——这也为下面"联合需求"埋了伏笔。</p></div></div>
+<div class="section"><h3>2. 要素市场 vs 产品市场：买卖换位 <span class="must">必考</span></h3>
+<p><strong>相同点</strong>：二者均由<strong>生产者和消费者的行为共同决定价格</strong>，并以此过程调节经济资源的有效配置。</p>
+<p><strong>不同点</strong>——需求者和供给者正好换位：</p>
+<table>
+<thead>
+<tr>
+<th>市场</th>
+<th>需求者</th>
+<th>供给者</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>产品市场</strong></td>
+<td>消费者或居民</td>
+<td>生产者或厂商</td>
+</tr>
+<tr>
+<td><strong>生产要素市场</strong></td>
+<td>生产者或厂商</td>
+<td>消费者或居民</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>角色互换，厂商永远在&quot;生产&quot;那一侧：</strong><p>产品市场上居民掏钱买面包（居民＝需求者）；要素市场上面包店掏钱"买"你的劳动（厂商＝需求者、居民＝供给者）。变的只是谁站在买的位置，<strong>共同决定价格、配置资源</strong>的机制不变。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 买卖换位口诀</div><p><strong>"产品市场居民买，要素市场居民卖"</strong>——厂商始终跟着"生产"走：卖产品、买要素。</p></div></div>
+<div class="section"><h2>二、要素需求的两个标签：引致需求与联合需求 <span class="hot">高频考点</span><span class="must">必考</span></h2>
+<h3>1. 引致需求（派生需求）</h3>
+<p><strong>定义</strong>：生产者对劳动、资本、土地等生产要素的需求，是从<strong>消费者对最终消费品的需求</strong>中间接派生出来的，这种对生产要素的需求称为<strong>引致需求</strong>或<strong>派生需求</strong>。</p>
+<p>引致需求的概念反映了<strong>生产要素市场和产品市场之间的联系</strong>：生产者对生产要素的需求量很大程度上取决于<strong>消费者对产品的需求量</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>一句话抓住引致需求：</strong><p><strong>"因为你要面包，所以我要面粉。"</strong> 面包店招人、买烤箱不是因为想雇人，而是因为有人买面包。要素需求量跟着产品需求量走——这就是两个市场之间的联系。</p>
+<p>扣住"<strong>间接</strong>"两个字：消费者直接掏钱买的是面包（产品），从不直接消费师傅的手艺、烤箱（要素）——说要素需求是"直接需求""由消费者直接消费要素引起"都错，它只是<strong>间接派生</strong>出来的。</p></div></div>
+<div class="section"><h3>2. 联合需求（复合需求）</h3>
+<p><strong>定义</strong>：生产者对生产要素的需求是<strong>联合需求</strong>（或称<strong>复合需求</strong>），即对生产要素的需求具有<strong>相互依赖性</strong>，各种生产要素要<strong>共同发挥作用</strong>才能生产最终产品。</p>
+<p>由于生产要素的需求是联合需求，各生产要素之间存在<strong>互补性</strong>；同时，各生产要素之间也存在<strong>一定程度的替代性</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>又叫</th>
+<th>回答的问题</th>
+<th>考点标志</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>引致需求</strong></td>
+<td>派生需求</td>
+<td>要素需求从哪来？——从产品需求派生</td>
+<td>"反映要素市场与产品市场的联系""取决于消费者对产品的需求量"</td>
+</tr>
+<tr>
+<td><strong>联合需求</strong></td>
+<td>复合需求</td>
+<td>要素之间什么关系？——共同生产、相互依赖</td>
+<td>"共同发挥作用""互补性""一定程度的替代性"</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 引致联合口诀</div><p><strong>"引致看产品，联合看伙伴"</strong>——问"为什么需要要素／两市场联系"→ 引致（派生）；问"要素之间关系"→ 联合（复合）：互补为主、兼有一定替代。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：给要素需求乱贴标签</div><p>干扰项爱编造"生产要素需求具有外部性／虚拟性特征／公共物品需求的特征""生产要素市场属于最终市场"——全是错的。要素需求只贴两个标签：<strong>引致（派生）＋联合（复合）</strong>；产品市场才是"最终市场"，要素市场是派生出来的市场。</p></div></div>
+<div class="section"><h2>三、四个边际概念与两个公式 <span class="s3">★★★</span><span class="hot">高频考点</span></h2>
+<h3>1. 四个概念一张表</h3>
+<p>生产者用要素前要算三笔账——多产出多少、多值多少钱、多花多少钱。四个概念（先记缩写）：</p>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>缩写</th>
+<th>含义</th>
+<th>公式/关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>边际物质产品</strong>（又称边际产量）</td>
+<td>MPP</td>
+<td>单位要素投入所带来的<strong>产量增加</strong></td>
+<td>——</td>
+</tr>
+<tr>
+<td><strong>边际产品价值</strong></td>
+<td>VMP</td>
+<td>增加单位要素投入所<strong>增加的价值</strong></td>
+<td>VMP＝MPP×产品价格 P</td>
+</tr>
+<tr>
+<td><strong>边际要素成本</strong></td>
+<td>MFC</td>
+<td>增加单位要素投入所带来的<strong>成本增量</strong></td>
+<td>MFC＝MPP×边际成本 MC</td>
+</tr>
+<tr>
+<td><strong>平均要素成本</strong></td>
+<td>AFC</td>
+<td>平均每单位要素投入的成本</td>
+<td>AFC＝总成本÷要素数量</td>
+</tr>
+</tbody>
+</table>
+<p>另有<strong>边际收益产品 MRP＝边际物质产品×边际收益（MRP＝MPP×MR）</strong>，它与 VMP 的关系见本节 tip。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四概念口诀（讲义大白话）</div><p><strong>"产品是产量、价值对应价格、成本对应成本"</strong>——见"物质产品"想产量；见"产品价值"乘<strong>价格</strong>；见"要素成本"乘<strong>边际成本</strong>；带"平均"就用总量除以个数。</p></div></div>
+<div class="section"><h3>2. 蛋糕店分步演算（照着算一遍）</h3></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>第一步，求 MPP：蛋糕店增加 10 个工人，一天多做出 20 个蛋糕 → MPP＝20÷10＝<strong>2 个蛋糕</strong>。
+第二步，求 VMP：蛋糕售价 100 元/个 → 增加 1 个工人增加的价值＝2×100＝<strong>200 元</strong>（VMP＝MPP×P）。
+第三步，求 MFC：蛋糕的边际成本 80 元/个 → 增加 1 个工人增加的成本＝2×80＝<strong>160 元</strong>（MFC＝MPP×MC）。
+第四步，求 AFC：一天 10 个工人总成本 1600 元 → AFC＝1600÷10＝<strong>160 元</strong>。
+盯紧单位链条：人数 → 个数 → 元；乘价格得"价值"，乘边际成本得"成本"。</p></div></div>
+<div class="section"><h2>四、生产者使用生产要素的原则 <span class="s3">★★★</span><span class="must">必考</span><span class="hot">高频考点</span></h2>
+<h3>1. 原则：边际收益产品＝边际要素成本</h3>
+<p><strong>所有生产者使用要素的原则</strong>：在一定时间内，在一定条件下，根据企业内部的生产状况和市场情况，确定要素的使用量，以<strong>实现利润最大化</strong>。</p>
+<ul>
+<li>考试标准表述（近年真题判卷口径）：<strong>边际收益产品（MRP）＝边际要素成本（MFC）</strong>；</li>
+<li>讲义正文写作"<strong>边际产品价值＝边际要素成本</strong>"（VMP＝MFC）——完全竞争产品市场上 MR＝P，此时 MRP＝VMP，两种说法一致。做题时<strong>首选"边际收益产品"</strong>；</li>
+<li>一个总锚点：产品市场定<strong>产量</strong>看 <strong>MR＝MC</strong>（市场结构理论中企业产量决策的原则），要素市场定<strong>用量</strong>看 <strong>MRP＝MFC</strong>——两个市场用的是同一个"利润最大化"原则的对应表达，别记串。</li>
+</ul>
+<h3>2. 两侧不等时怎么调</h3>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>含义</th>
+<th>生产者的调整</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VMP＞MFC（MRP＞MFC）</td>
+<td>每增加一单位要素带来的<strong>收益大于成本</strong></td>
+<td><strong>使用更多要素</strong>，直至相等</td>
+</tr>
+<tr>
+<td>VMP＜MFC（MRP＜MFC）</td>
+<td>每增加一单位要素带来的<strong>成本大于收益</strong></td>
+<td><strong>减少要素投入</strong>，直至相等</td>
+</tr>
+<tr>
+<td>VMP＝MFC（MRP＝MFC）</td>
+<td>边际上不赚不亏</td>
+<td><strong>最优使用量</strong>，稳定下来</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 使用原则口诀</div><p><strong>"边收边要"</strong>——边际"收"益产品要挨着边际要"素"成本（MRP＝MFC）。再配讲义大白话："<strong>收益大增产，成本大减产</strong>"——哪边大往哪边调，调到两边相等为止。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易混辨析：MRP vs VMP，&quot;平均&quot;别混&quot;边际&quot;</div><ul>
+<li><strong>MRP 用"边际收益"，VMP 用"产品价格"</strong>：MRP＝MPP×MR，VMP＝MPP×P。完全竞争产品市场上 MR＝AR＝P，两者才相等（MRP＝VMP）；产品市场不完全竞争时 MR＜P（如完全垄断企业的边际收益曲线位于平均收益曲线＝需求曲线的下方），故 MRP＜VMP。真题把"要素使用原则是边际要素成本等于<strong>边际价值产品</strong>"当干扰项——原则的另一侧是"边际<strong>收益</strong>产品"。</li>
+<li>原则是"<strong>边际</strong>对<strong>边际</strong>"：见"平均要素成本等于边际产品价值"这类"平均配边际"的组合，一律排除（2025 年单选考过）。</li>
+<li>调整方向别记反：多雇还是减员，看"收益 vs 成本"谁大，不是看价格高低。</li>
+</ul></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>四要素</strong>：劳动（体力＋智力）、资本（实物＋货币）、土地（地上地下自然资源）、企业家才能（经营管理能力）</li>
+<li><strong>两市场</strong>：都由生产者＋消费者共同决定价格、配置资源；产品市场居民买、要素市场居民卖（角色互换）</li>
+<li><strong>引致需求（派生需求）</strong>：反映要素市场与产品市场的联系；需求量取决于消费者对产品的需求量</li>
+<li><strong>联合需求（复合需求）</strong>：要素共同发挥作用；互补性＋一定程度替代性</li>
+<li><strong>四概念</strong>：MPP＝增产量；VMP＝MPP×P；MFC＝MPP×MC；AFC＝总成本÷要素量；MRP＝MPP×MR</li>
+<li><strong>原则</strong>：MRP＝MFC（即 VMP＝MFC）；收益大增产、成本大减产</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b05s1q1" data-answer="A" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">反映生产要素市场和产品市场之间联系的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 引致需求</button><button type="button" class="qopt" data-key="B">B. 主观需求</button><button type="button" class="qopt" data-key="C">C. 客观需求</button><button type="button" class="qopt" data-key="D">D. 有效需求</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：<strong>引致需求</strong>（派生需求）反映两市场的联系——生产者对要素的需求从消费者对最终消费品的需求中间接派生出来，要素需求量很大程度上取决于消费者对产品的需求量。B、C、D 均为编造的干扰词，要素市场理论中没有这些概念。
+:::</p></div></details></div><div class="quiz-item" data-qid="b05s1q2" data-answer="ABC" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列关于生产要素市场理论的说法中，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 生产者使用生产要素的原则是边际要素成本等于边际收益产品</button><button type="button" class="qopt" data-key="B">B. 完全竞争生产者的要素供给曲线是一条水平线</button><button type="button" class="qopt" data-key="C">C. 边际收益产品等于边际物质产品乘以边际收益</button><button type="button" class="qopt" data-key="D">D. 生产者对生产要素的需求具有外部性</button><button type="button" class="qopt" data-key="E">E. 生产要素市场属于最终市场</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：A 对——使用要素的原则即 MRP＝MFC（讲义正文写作"边际产品价值＝边际要素成本"，是完全竞争产品市场下的等价形式）。B 对——完全竞争生产者是要素价格接受者，面临的要素供给曲线是水平线（第二节展开）。C 对——MRP＝MPP×MR。D 错——要素需求具有的是"联合需求"特征（要素之间相互依赖），不是"外部性"。E 错——产品市场才是最终市场，要素市场的需求由产品需求派生而来。
+:::</p></div></details></div><div class="quiz-item" data-qid="b05s1q3" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">不论产品市场和要素市场的具体类型，所有生产者使用要素的原则都是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 平均要素成本低于产品平均收益</button><button type="button" class="qopt" data-key="B">B. 平均要素成本等于边际产品价值</button><button type="button" class="qopt" data-key="C">C. 平均成本等于边际收益</button><button type="button" class="qopt" data-key="D">D. 边际要素成本等于边际收益产品</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：通用原则＝<strong>边际收益产品（MRP）＝边际要素成本（MFC）</strong>，不依赖市场类型。B 是最强干扰项——"平均要素成本"是平均量，原则要"边际对边际"；且"边际产品价值"只在完全竞争产品市场才与"边际收益产品"相等。A、C 均为凑数的张冠李戴。
+:::</p></div></details></div><div class="quiz-item" data-qid="b05s1q4" data-answer="BCE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于生产要素的需求的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 完全竞争生产者的要素需求曲线是一条水平线</button><button type="button" class="qopt" data-key="B">B. 生产者对生产要素的需求是联合需求</button><button type="button" class="qopt" data-key="C">C. 生产要素的需求称为引致需求</button><button type="button" class="qopt" data-key="D">D. 生产要素和消费品之间存在互补性或替代性</button><button type="button" class="qopt" data-key="E">E. 生产要素的需求称为派生需求</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCE</div><div class="q-exp"><p>析：B、C、E 对——要素需求是引致需求（派生需求）、联合需求（复合需求）。A 错——完全竞争生产者的要素<strong>需求</strong>曲线向右下方倾斜，水平线是其面临的要素<strong>供给</strong>曲线（供需方向别记反）。D 错——互补性或替代性存在于各生产要素<strong>之间</strong>（如机器与人工），不是要素与消费品之间。
+:::</p></div></details></div><div class="quiz-item" data-qid="b05s1q5" data-answer="BCD" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于生产要素需求的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 生产要素需求具有虚拟性特征</button><button type="button" class="qopt" data-key="B">B. 生产者对生产要素的需求量在很大程度上取决于消费者对产品的需求量</button><button type="button" class="qopt" data-key="C">C. 生产要素需求是一种引致需求</button><button type="button" class="qopt" data-key="D">D. 生产要素需求具有联合需求的特征</button><button type="button" class="qopt" data-key="E">E. 生产要素需求具有公共物品需求的特征</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：B 对——引致需求决定了"量看产品"；C、D 对——引致需求＋联合需求是要素需求的两个标签。A、E 错——"虚拟性""公共物品需求"都不是要素需求的特征，属于乱贴标签的编造词。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础05_生产要素市场理论_第2节_完全竞争生产者对生产要素的需求.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 完全竞争生产者对生产要素的需求</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

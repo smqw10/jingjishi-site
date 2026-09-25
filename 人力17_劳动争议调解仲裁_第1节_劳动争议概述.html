@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第17章 劳动争议调解仲裁 · 劳动争议概述 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第四部分 人力资源与社会保险政策</span><h1>第17章 劳动争议调解仲裁 · 劳动争议概述</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 35 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="r17s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>劳动争议</strong>的定义与三个特征：当事人特定、必须存在劳动关系、内容与劳动权利义务有关 <span class="hot">高频考点</span></li>
+<li>能一刀切分清<strong>适用《劳动争议调解仲裁法》的 6 类争议</strong>与<strong>不属于劳动争议的 6 类情形</strong> <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>会判断特殊用工争议按<strong>劳动关系</strong>还是<strong>劳务关系</strong>处理（退休返聘 vs 停薪留职四类人） <span class="s3">★★★</span></li>
+<li>记住处理机制"<strong>协商、调解、仲裁、诉讼</strong>"四程序与 10 人推举代表、向劳动行政部门投诉两条特殊规定 <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、劳动争议及其特征</h2>
+<h3>1. 什么是劳动争议 <span class="hot">高频考点</span></h3>
+<p><strong>劳动争议</strong>又称<strong>劳动纠纷</strong>，指<strong>劳动关系当事人</strong>之间因<strong>劳动权利和义务</strong>产生分歧而引起的争议。</p>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>含义</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>当事人是<strong>特定的</strong></td>
+<td>只发生在劳动关系当事人之间</td>
+<td>人是特定的"这一对"</td>
+</tr>
+<tr>
+<td>主体之间必须<strong>存在劳动关系</strong></td>
+<td>没有劳动关系，就谈不上"劳动"争议</td>
+<td>先有关系，才有争议</td>
+</tr>
+<tr>
+<td>内容必须与<strong>劳动权利义务</strong>有关</td>
+<td>劳动就业、劳动合同、劳动报酬、工作时间和休息时间、劳动安全与卫生、社会保险与福利、培训、奖惩等</td>
+<td>争的得是"工作上的事"</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两道门判断法：</strong><p>判断是不是劳动争议，先过两道门：<strong>第一道门看人</strong>——必须是"用人单位 vs 劳动者"（用人单位之间、劳动者之间、用人单位与没建立劳动关系的劳动者之间、国家机关与公务员之间的争议，直接出局）；<strong>第二道门看事</strong>——争议必须落在劳动权利义务上（个人借贷、私人纠纷都不算）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小张与公司因加班费吵起来——人对（用人单位与劳动者）、事对（劳动报酬），是劳动争议。小张把自己的私家车借给同事小李、小李剐蹭不赔——双方虽是"一个单位的"，但争议与劳动权利义务无关，不是劳动争议。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 劳动争议三特征</div><p><strong>"人对事对才算数"</strong>——人：特定的用人单位与劳动者，且存在劳动关系；事：劳动权利义务（就业、合同、报酬、工休、安全卫生、社保福利、培训、奖惩）。两样缺一样，就不是劳动争议。</p></div></div>
+<div class="section"><h2>二、劳动争议的范围 <span class="s3">★★★</span> <span class="must">必考</span></h2>
+<h3>2. 六类适用 vs 六类不适用</h3>
+<p><strong>（一）适用《劳动争议调解仲裁法》的劳动争议范围</strong>（用人单位与劳动者之间）：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>争议类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>因<strong>确认劳动关系</strong>发生的争议</td>
+</tr>
+<tr>
+<td>2</td>
+<td>因<strong>订立、履行、变更、解除和终止劳动合同</strong>发生的争议</td>
+</tr>
+<tr>
+<td>3</td>
+<td>因<strong>除名、辞退和辞职、离职</strong>发生的争议</td>
+</tr>
+<tr>
+<td>4</td>
+<td>因<strong>工作时间、休息休假、社会保险、福利、培训以及劳动保护</strong>发生的争议</td>
+</tr>
+<tr>
+<td>5</td>
+<td>因<strong>劳动报酬、工伤医疗费、经济补偿或者赔偿金</strong>等发生的争议</td>
+</tr>
+<tr>
+<td>6</td>
+<td>法律、法规规定的<strong>其他</strong>劳动争议</td>
+</tr>
+</tbody>
+</table>
+<p><strong>（二）不属于劳动争议的情形</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>情形</th>
+<th>白话点破</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>劳动者请求<strong>社会保险经办机构</strong>发放<strong>社会保险金</strong>的纠纷</td>
+<td>对面站的是社保机构，不是用人单位</td>
+</tr>
+<tr>
+<td>2</td>
+<td>因<strong>住房制度改革</strong>产生的<strong>公有住房转让</strong>纠纷</td>
+<td>房改历史问题，不是劳动权利义务</td>
+</tr>
+<tr>
+<td>3</td>
+<td>对<strong>劳动能力鉴定委员会</strong>伤残等级鉴定结论或<strong>职业病诊断鉴定委员会</strong>职业病诊断鉴定结论的<strong>异议</strong>纠纷</td>
+<td>对"鉴定结论"不服，走专门渠道</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>家庭或个人</strong>与<strong>家政服务人员</strong>之间的纠纷</td>
+<td>雇主是家庭，不是用人单位</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>个体工匠</strong>与<strong>帮工、学徒</strong>之间的纠纷</td>
+<td>师徒帮工关系，不是劳动关系</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>农村承包经营户</strong>与<strong>受雇人</strong>之间的纠纷</td>
+<td>承包经营户不是用人单位</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>不属于劳动争议的判断钩子：</strong><p>六类情形的共同点只有两条：<strong>要么"人"不对</strong>——对面不是用人单位（社保经办机构、家庭、个体工匠、农村承包经营户）；<strong>要么"事"不对</strong>——不是劳动权利义务（房改公房、对鉴定结论的技术异议）。做题先看主体，再看事项，秒杀。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老王退休后请了个住家保姆，工资闹纠纷——保姆的"雇主"是家庭，不适用劳动争议处理程序，只能按民事纠纷解决。而同一家公司的保洁员小刘与公司因工资闹纠纷——标准的劳动争议，可以申请仲裁。同样是"干活的"，对面是谁决定了走哪条路。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 六不属口诀</div><p><strong>"社保金、公房转、不服鉴定；家政、帮工、农承包"</strong>——前三条是"事不对"（找错门、房改事、鉴定结论有专门渠道），后三条是"人不对"（雇主不是用人单位）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：对&quot;鉴定结论&quot;不服 ≠ 因&quot;在岗时间&quot;争议</div><p>劳动者<strong>对伤残等级/职业病诊断鉴定结论不服</strong> → 不属于劳动争议；但<strong>职业病诊断时因确认在岗时间发生的争议</strong> → 属于劳动争议仲裁范围（2025 年真题就考这一对）。区别在对象：前者是向专门鉴定机构的<strong>技术结论</strong>提异议，有法定专门救济渠道；后者仍是与用人单位之间关于<strong>劳动权利义务</strong>的争议。</p></div></div>
+<div class="section"><h3>3. 按劳动关系还是劳务关系处理 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>人员类型</th>
+<th>与（新）用人单位发生用工争议，法院按什么处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>已经依法享受基本养老保险待遇或领取退休金</strong>的人员</td>
+<td><strong>劳务关系</strong></td>
+</tr>
+<tr>
+<td><strong>停薪留职</strong>人员、<strong>未达到法定退休年龄的内退</strong>人员、<strong>下岗待岗</strong>人员、<strong>企业经营性停产放长假</strong>人员</td>
+<td><strong>劳动关系</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一把尺子：有没有&quot;劳动身份&quot;：</strong><p>领了基本养老保险待遇/退休金的人，法律身份已切换，再干活是<strong>劳务</strong>；而停薪留职、内退（未到龄）、下岗待岗、停产放长假这四类"闲置人员"并没有退出劳动者队伍，与新单位的用工争议仍按<strong>劳动关系</strong>处理。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 退休返聘是劳务，四类人是劳动</div><p><strong>"领了退休金＝劳务；停薪、内退、下岗、放长假＝劳动"</strong>——记忆钩子：没真正退休的"闲置人员"再就业，还是劳动者；开始领养老金的，就不再是劳动关系了。</p></div></div>
+<div class="section"><h2>三、劳动争议处理机制</h2>
+<h3>4. 一调一裁两审与两条特殊规定 <span class="s3">★★★</span></h3>
+<p>劳动争议处理的<strong>一般程序</strong>包括：<strong>协商、调解、仲裁和诉讼</strong>（俗称"一调一裁两审"）。</p>
+<p>两条特殊规定（数字＋渠道，多选爱考）：
+1. 发生争议的劳动者一方在 <strong>10 人以上</strong>，并有<strong>共同请求</strong>的，劳动者可以<strong>推举代表</strong>参加调解、仲裁等活动；
+2. 用人单位违反国家规定，<strong>拖欠或者未足额支付劳动报酬</strong>，或者<strong>拖欠工伤医疗费、经济补偿或者赔偿金</strong>的，劳动者可以向<strong>劳动行政部门投诉</strong>，劳动行政部门应当依法处理。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某公司拖欠 30 名工人三个月工资：工人们可以推举 3 名代表去参加调解、仲裁（10 人以上＋共同请求）；也可以直接向劳动行政部门投诉，让行政机关依法处理——欠薪类争议多了"行政投诉"这条捷径，不必都挤在仲裁门口。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 处理机制口诀</div><p><strong>"协商调解仲裁诉，十人推举代表出；欠薪欠偿找监察"</strong>——四程序是主线；10 人以上＋共同请求可推代表；拖欠劳动报酬、工伤医疗费、经济补偿或赔偿金的，可向劳动行政部门投诉。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>劳动争议</strong>＝劳动关系当事人之间因劳动权利义务产生分歧；三特征"人对事对才算数"（当事人特定、存在劳动关系、内容与劳动权利义务有关）</li>
+<li><strong>适用 6 类</strong>：确认劳动关系／订立履行变更解除终止合同／除名辞退辞职离职／工休社保福利培训劳动保护／报酬工伤医疗费经济补偿赔偿金／法律法规规定的其他</li>
+<li><strong>不属 6 类</strong>：社保金（找社保机构）、公房转让（房改）、不服鉴定结论（专门渠道）、家政（雇主是家庭）、帮工学徒（个体工匠）、农承包受雇人——"社保金、公房转、不服鉴定；家政、帮工、农承包"</li>
+<li><strong>退休返聘＝劳务关系</strong>；停薪留职、未到龄内退、下岗待岗、停产放长假＝<strong>劳动关系</strong></li>
+<li><strong>机制</strong>：协商→调解→仲裁→诉讼；10 人以上共同请求推代表；欠薪欠偿可向劳动行政部门投诉</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r17s1q1" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">下列争议中，属于劳动争议仲裁范围的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 家庭和家政服务人员因劳动报酬发生的争议</button><button type="button" class="qopt" data-key="B">B. 国家机关与公务员因岗位变动发生的争议</button><button type="button" class="qopt" data-key="C">C. 劳动者对职业病认定结论不服的</button><button type="button" class="qopt" data-key="D">D. 职业病诊断时，因确认在岗时间发生的争议</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：A 家庭（或个人）与家政服务人员之间的纠纷<strong>不属于</strong>劳动争议——雇主不是用人单位；B 国家机关与<strong>公务员</strong>之间不存在劳动关系，其争议不按劳动争议处理；C 对职业病诊断鉴定<strong>结论不服</strong>的异议纠纷不属于劳动争议，走专门鉴定渠道；D 职业病诊断时<strong>因确认在岗时间</strong>发生的争议，是劳动者与用人单位之间关于劳动权利义务的争议，属于劳动争议仲裁范围。
+:::</p></div></details></div><div class="quiz-item" data-qid="r17s1q2" data-answer="ACD" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">人民法院应当按照劳动关系处理的争议（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 下岗待岗人员与新单位因休息休假引发的争议</button><button type="button" class="qopt" data-key="B">B. 领取退休金的人员与新单位因工资报酬引发的争议</button><button type="button" class="qopt" data-key="C">C. 劳动者与用人单位因经济补偿引发的争议</button><button type="button" class="qopt" data-key="D">D. 停薪留职人员与新单位因工资报酬引发的争议</button><button type="button" class="qopt" data-key="E">E. 企业员工个人借贷引发的争议</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：企业<strong>停薪留职</strong>人员、未达到法定退休年龄的<strong>内退</strong>人员、<strong>下岗待岗</strong>人员以及<strong>企业经营性停产放长假</strong>人员，与新的用人单位发生用工争议向法院起诉的，应按<strong>劳动关系</strong>处理，A、D 正确；已依法享受基本养老保险待遇或<strong>领取退休金</strong>的人员与新单位发生用工争议，应按<strong>劳务关系</strong>处理，B 错误；C 是用人单位与劳动者之间因劳动权利义务（经济补偿）产生的争议，按劳动关系处理；E 个人借贷与劳动权利义务无关，不是劳动争议。
+:::</p></div></details></div><div class="quiz-item" data-qid="r17s1q3" data-answer="ABD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">劳动争议处理机构包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 调解组织</button><button type="button" class="qopt" data-key="B">B. 劳动争议仲裁委员会</button><button type="button" class="qopt" data-key="C">C. 公安机关</button><button type="button" class="qopt" data-key="D">D. 人民法院</button><button type="button" class="qopt" data-key="E">E. 工会</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABD</div><div class="q-exp"><p>析：劳动争议处理机构＝<strong>调解组织、劳动争议仲裁委员会、人民法院</strong>三类，正好对应"调解—仲裁—诉讼"的处理程序。公安机关（C）不承担劳动争议处理职责；工会（E）可以参与调解、支持劳动者维权，但其本身不是劳动争议处理机构。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力17_劳动争议调解仲裁_第2节_劳动争议处理的基本程序.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 劳动争议处理的基本程序</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十八章 会计概论 · 会计要素确认和计量的基本原则 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第五部分 会计</span><h1>第二十八章 会计概论 · 会计要素确认和计量的基本原则</h1><div class="subtitle">第 4 节 / 共 7 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:57%"></div></div><div class="progress-text">本章进度 4/7</div><div class="sec-badge none" id="sec-badge" data-sec="b28s4">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟四大基本原则：<strong>权责发生制、配比、历史成本、划分收益性支出与资本性支出</strong> <span class="must">必考</span></li>
+<li>会分步计算权责发生制与收付实现制下的费用确认，两套基础不串门 <span class="hot">高频考点</span></li>
+<li>分清<strong>因果配比</strong>与<strong>时间配比</strong>，背熟历史成本四优点及币值稳定前提 <span class="s3">★★★</span></li>
+<li>记住收益性/资本性支出的划分标准，以及"划错方向"对应的虚增/虚减后果 <span class="hot">高频考点</span> <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、总览：四大基本原则</h2>
+<p>会计要素确认和计量的基本原则包括：<strong>权责发生制原则、配比原则、历史成本原则、划分收益性支出与资本性支出原则</strong>四项。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四原则总口诀</div><p><strong>"权配历划"</strong>（谐音"全配离花"）——<strong>权</strong>责发生制、<strong>配</strong>比、<strong>历</strong>史成本、<strong>划</strong>分收益性支出与资本性支出。多选题问"属于确认和计量基本原则的有"，<strong>持续经营、会计分期是会计基本前提</strong>，不是本节的原则，别拉进来凑数。</p></div></div>
+<div class="section"><h2>二、权责发生制原则</h2>
+<h3>1. 权责发生制（应计制）与收付实现制 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>定义</strong>：权责发生制原则是指凡是<strong>当期已经实现的收入</strong>和<strong>已经发生或应当负担的费用</strong>，<strong>无论款项是否收付</strong>，均应作为当期的收入和费用处理。</p>
+<table>
+<thead>
+<tr>
+<th>对比项目</th>
+<th>权责发生制（应计制）</th>
+<th>收付实现制（现收制）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义</td>
+<td>凡是当期<strong>已经实现</strong>的收入和<strong>已经发生或应当负担</strong>的费用，<strong>无论款项是否收付</strong>，均应作为当期的收入和费用处理</td>
+<td>以<strong>收到款项或支付款项</strong>作为确认收入和费用的基础：凡本期<strong>实际收到</strong>款项的收入，不论其应否归属本期，均作为本期的收入处理；凡本期<strong>实际以款项支付</strong>的费用，不论其应否在本期收入中得到补偿，均作为本期的费用处理</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>某企业 1 月支付上半年的设备租金 12000 元，由于此项费用的<strong>受益期是上半年（1-6 月）</strong>，企业 1 月支付租金时并不是全部计入 1 月的费用，而是在 1-6 月中<strong>每月记录费用 2000 元</strong></td>
+<td>1 月支付上半年的租金，此费用发生在 1 月，虽然 1-6 月都受益，但<strong>都直接计入 1 月费用</strong>中</td>
+</tr>
+<tr>
+<td>适用范围</td>
+<td><strong>企业会计</strong>、行政事业单位<strong>财务会计</strong></td>
+<td>行政事业单位<strong>预算会计</strong></td>
+</tr>
+</tbody>
+</table>
+<p>分步演算（两种基础各算一遍）：企业 2 月份预付上半年仓库租金 12000 元——
+1. <strong>按权责发生制</strong>算 3 月费用：租金对应 6 个月受益期，每月分摊 12000÷6＝2000 元 → 3 月费用＝<strong>2000 元</strong>；
+2. <strong>按收付实现制</strong>算 3 月费用：钱 2 月一次性付掉了，3 月没掏钱 → 3 月费用＝<strong>0 元</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>两大记账基础的分水岭：</strong><p><strong>权责发生制按"归属期"记账，收付实现制按"收付期"记账</strong>——同一笔预付租金，前者按月摊、后者付款当月一次入账。我国企业会计采用权责发生制。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>1 月你一次性交了全年健身房年费 3600 元：健身房按权责发生制，1 月只确认收入 300 元（3600÷12），其余 11 个月慢慢确认；但你的钱包是"收付实现制"——1 月账上实实在在少了 3600 元。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 权责与收付</div><p><strong>"权责看受益，收付看掏钱"</strong>——权责发生制问"这笔收支为哪个月受益"，收付实现制问"哪个月真金白银进了出"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 计算题套路（用户易错点）</div><p>先看题目<strong>问的是哪个基础</strong>：权责发生制 → "总额÷受益月数＝每月费用"（半年就÷6、全年就÷12）；收付实现制 → "付款当期全额计入，其他月份为 0"。别把"预付"和"应付"的方向搞反，也别两种基础串着用。</p></div></div>
+<div class="section"><h2>三、配比原则</h2>
+<h3>2. 配比原则 <span class="hot">高频考点</span></h3>
+<p><strong>定义</strong>：配比原则是指对一个会计期间的<strong>收入</strong>和与其相关的<strong>成本、费用</strong>应当<strong>在该会计期间内确认</strong>，并应<strong>相互配比</strong>，以便计算本期损益。配比要求：在会计核算中，一个会计期间内的各项收入与其相关的成本、费用，应当在<strong>同一会计期间内</strong>进行确认、计量和记录，而<strong>不能提前或延后</strong>，否则就会造成经营成果虚假不实。</p>
+<table>
+<thead>
+<tr>
+<th>配比方式</th>
+<th>含义</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>因果配比</strong></td>
+<td>收入与费用之间存在<strong>因果关系</strong>，直接对应</td>
+<td><strong>主营业务收入与直接成本</strong>相配比</td>
+</tr>
+<tr>
+<td><strong>时间配比</strong></td>
+<td>费用与<strong>发生在同一时间</strong>的收入相配比</td>
+<td><strong>广告费、办公费</strong>与发生在同一时间的收入相配比</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>配比原则的两层意思：</strong><p>一是"<strong>同期</strong>"：收入和它的成本费用记在同一个月/同一年，不许提前或延后；二是"<strong>配对</strong>"：有因果关系的直接对应（收入配直接成本），没有因果关系的按时间配（广告费、办公费配同期收入）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>面包店这个月卖面包收入 1000 元，这 100 个面包耗用面粉黄油 400 元（直接成本）——400 元必须和 1000 元记在<strong>同一个月</strong>，算出毛利 600 元；同月的传单印刷费 100 元按<strong>时间配比</strong>也记这个月，不能挪去下个月，否则这个月的经营成果就虚了。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 配比方式</div><p><strong>"因果找直接，时间找同期"</strong>——见"主营业务收入与直接成本"选因果配比，见"广告费、办公费"选时间配比。</p></div></div>
+<div class="section"><h2>四、历史成本原则</h2>
+<h3>3. 历史成本原则 <span class="s3">★★★</span></h3>
+<p>历史成本原则也称为<strong>实际成本原则</strong>或<strong>原始成本原则</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>定义</strong></td>
+<td>历史成本原则是指企业的<strong>各项财产在取得时应当按照实际成本计量</strong>。其后，各项财产如果发生<strong>减值</strong>，应当按照规定<strong>计提相应的减值准备</strong>。除法律、行政法规和国家统一的会计制度另有规定者外，企业<strong>一律不得自行调整其账面价值</strong></td>
+</tr>
+<tr>
+<td><strong>优点</strong></td>
+<td>①取得比较<strong>容易、比较客观</strong>；②有<strong>原始凭证</strong>作证明，<strong>便于查证</strong>；③可以<strong>防止企业随意更改</strong>；④会计核算<strong>手续简化</strong>，不必经常调整账目</td>
+</tr>
+<tr>
+<td><strong>前提与局限</strong></td>
+<td>历史成本原则是以<strong>币值稳定为前提</strong>的。在历史成本原则下，如果企业的资产发生了较大的价值变化，其账面价值就不能反映其实际价值，就<strong>不能提供正确的会计信息</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>历史成本的一颗定心丸：</strong><p>"<strong>当初如何，现在就如何</strong>"——按取得时的实际成本入账后就不许再动（除非计提减值或法规另有规定）；它敢这么"懒"，前提是<strong>币值稳定</strong>。物价大变动时账面价值会失真，这是它的局限。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>面包厂 10 年前 100 万买的厂房，如今市价 500 万：账上仍按 100 万记（历史成本），只有发生减值才按规定计提准备——企业不能嫌账面"过时"就自行改成 500 万。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 历史成本优点</div><p><strong>"容易客观、有据可查、改不了、手续简"</strong>——取得容易客观、原始凭证便于查证、防止随意更改、手续简化不必经常调账。多选坑点："<strong>能提供正确的会计信息</strong>"是局限的反面——币值不稳、价值大变时恰恰不能提供正确信息。</p></div></div>
+<div class="section"><h2>五、划分收益性支出与资本性支出原则</h2>
+<h3>4. 收益性支出与资本性支出 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>收益性支出</strong></td>
+<td>是指在本期发生的<strong>只与本期收益有关</strong>的、应当在本期已实现的收益中<strong>得到补偿</strong>的支出</td>
+</tr>
+<tr>
+<td><strong>资本性支出</strong></td>
+<td>是指为当期发生的<strong>不但与本期收益有关而且与以后会计期间收益也有关</strong>的、应当在<strong>以后若干会计期间的收益中得到补偿</strong>的支出</td>
+</tr>
+<tr>
+<td><strong>划分原则</strong></td>
+<td>①凡为取得<strong>本期收益</strong>而发生的支出——支出的效益<strong>仅惠及本会计年度（或一个营业周期）</strong>→作为<strong>收益性支出</strong>，<strong>计入当期损益</strong>，并在<strong>利润表</strong>中反映，如营业费用、管理费用等；②凡是为<strong>以后各期取得收益</strong>而发生的各种<strong>资产支出</strong>——支出的效益<strong>惠及几个会计年度（或惠及几个营业周期）</strong>→作为<strong>资本性支出</strong>，<strong>列入资产</strong>，在<strong>资产负债表</strong>中反映，并根据其与以后各期收益的关系，将其价值<strong>分摊到以后各个会计期间</strong>，如购入固定资产和无形资产的支出</td>
+</tr>
+<tr>
+<td><strong>目的</strong></td>
+<td>在于<strong>正确确认企业的当期损益</strong></td>
+</tr>
+<tr>
+<td><strong>划分错误的影响</strong></td>
+<td>①<strong>收益性支出按资本性支出处理</strong>：就会造成<strong>少计费用而多计资产价值</strong>，出现<strong>净收益和资产价值虚增</strong>的现象；②<strong>资本性支出按收益性支出处理</strong>：会出现<strong>多计费用而少计资产价值</strong>的现象，出现<strong>当期净收益降低，甚至亏损</strong>，以及<strong>资产价值偏低</strong>的结果</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>划分的唯一标尺：受益期长短：</strong><p>支出的效益<strong>只惠本期</strong>→收益性支出（进利润表、当期费用化）；效益<strong>惠及几个会计年度</strong>→资本性支出（进资产负债表、资产化后分期摊）。这样划分的目的只有一个：<strong>正确确认当期损益</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>面包厂花 200 元买面粉（只服务这个月烤面包→收益性支出，直接进当期费用）；花 30 万买一台能用 10 年的烤炉（→资本性支出，记入固定资产，逐年折旧分摊）。要是把 200 元面粉钱也记成"固定资产"，当月费用就少 200 元、利润虚增 200 元——这就是"划错方向"的后果。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 收益性 vs 资本性</div><p><strong>"买肉的钱记当期，买店的钱记资产摊以后"</strong>——再配两句方向诀：<strong>买肉当买店＝少计费用、虚增</strong>；<strong>买店当买肉＝多计费用、虚减</strong>（净收益降低甚至亏损、资产价值偏低）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 方向对照类易错题（用户高发）</div><p>题目问"若一笔××性支出按××性支出处理"：先记死两句——<strong>"收益性→费用、资本性→资产"</strong>，再看"按错的方向"推结果：按资本性处理＝<strong>费用少、资产多</strong>→净收益和资产价值<strong>虚增</strong>；按收益性处理＝<strong>费用多、资产少</strong>→净收益<strong>降低甚至亏损</strong>、资产价值<strong>偏低</strong>。两个方向千万别背反。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>四大基本原则</strong>："权配历划"——权责发生制、配比、历史成本、划分收益性支出与资本性支出（持续经营、会计分期是基本前提，别混入）</li>
+<li><strong>权责发生制（应计制）</strong>：当期已实现收入、已发生或应负担费用，无论款项是否收付都记当期；适用企业会计、行政事业单位财务会计。<strong>收付实现制</strong>：实际收付款项为基础；适用行政事业单位预算会计。口诀"权责看受益，收付看掏钱"</li>
+<li><strong>配比</strong>：收入与相关成本费用同一期间确认、计量、记录，不能提前或延后；因果配比（主营收入配直接成本）、时间配比（广告费、办公费配同期收入）</li>
+<li><strong>历史成本</strong>（实际成本/原始成本原则）：取得时按实际成本计量，减值按规定计提，不得自行调整账面价值；四优点＝容易客观、便于查证、防止随意更改、手续简化；以<strong>币值稳定</strong>为前提，价值大变时不能提供正确会计信息</li>
+<li><strong>收益性支出</strong>：效益仅惠本期→计入当期损益、利润表（营业费用、管理费用）；<strong>资本性支出</strong>：效益惠及几期→列入资产、资产负债表、分摊以后各期（购固定资产、无形资产支出）；目的＝正确确认当期损益；划错方向：收益性按资本性→虚增，资本性按收益性→虚减</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b28s4q1" data-answer="BCE" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">下列属于会计要素确认和计量基本原则的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 持续经营</button><button type="button" class="qopt" data-key="B">B. 权责发生制原则</button><button type="button" class="qopt" data-key="C">C. 配比原则</button><button type="button" class="qopt" data-key="D">D. 会计分期</button><button type="button" class="qopt" data-key="E">E. 历史成本原则</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCE</div><div class="q-exp"><p>析：确认和计量的基本原则＝权责发生制、配比、历史成本、划分收益性支出与资本性支出四项。持续经营（A）、会计分期（D）是<strong>会计基本前提</strong>，不是本节的基本原则——这是本题唯一的干扰手法。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s4q2" data-answer="C" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">企业 2 月份预付上半年仓库租金 12000 元，按收付实现制确认的 3 月份该项费用为（　）元。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 12000</button><button type="button" class="qopt" data-key="B">B. 6000</button><button type="button" class="qopt" data-key="C">C. 0</button><button type="button" class="qopt" data-key="D">D. 2000</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：收付实现制按<strong>实际收付款</strong>记账：租金 2 月一次性支付，12000 元全部计入 <strong>2 月</strong>费用，3 月没有再掏钱，费用为 <strong>0</strong>。若按权责发生制，才按受益期每月分摊 2000 元——两种基础千万别混。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s4q3" data-answer="ABDE" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">采用历史成本原则的优点在于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 会计核算手续简化</button><button type="button" class="qopt" data-key="B">B. 比较客观</button><button type="button" class="qopt" data-key="C">C. 能提供正确的会计信息</button><button type="button" class="qopt" data-key="D">D. 便于查证</button><button type="button" class="qopt" data-key="E">E. 防止企业随意更改</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：历史成本四优点：取得比较容易、比较客观（B）；有原始凭证作证明、便于查证（D）；防止企业随意更改（E）；核算手续简化、不必经常调整账目（A）。C 恰好是它的局限——历史成本以<strong>币值稳定为前提</strong>，资产价值发生较大变化时账面价值不能反映实际价值，<strong>不能</strong>提供正确的会计信息。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s4q4" data-answer="C" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">若一笔收益性支出按资本性支出处理，将造成的影响是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 净收益降低</button><button type="button" class="qopt" data-key="B">B. 少计资产价值</button><button type="button" class="qopt" data-key="C">C. 资产价值虚增</button><button type="button" class="qopt" data-key="D">D. 多计费用</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：收益性支出本该计入当期费用，错按资本性支出计入资产 → <strong>少计费用而多计资产价值</strong>，出现<strong>净收益和资产价值虚增</strong>（C）。A、D 是反方向错误（资本性支出按收益性支出处理）的后果，B 与实际方向相反。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s4q5" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">某企业在 1 月份支付全年厂房费用 18 万，计入 1 月份的费用是（　）万。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 18</button><button type="button" class="qopt" data-key="B">B. 1.5</button><button type="button" class="qopt" data-key="C">C. 3</button><button type="button" class="qopt" data-key="D">D. 9</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：企业会计采用<strong>权责发生制</strong>，费用按受益期分摊：18 万÷12 个月＝<strong>1.5 万/月</strong>，1 月只计 1.5 万。若按收付实现制，才是 18 万一次计入 1 月——这是两种记账基础的经典对照题。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s4q6" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">在会计核算中，一个会计期间内的各项收入与其相关的成本、费用，应当在同一会计期间内进行确认、计量和记录，而不能提前或延后。这一会计要素确认和计量的基本原则是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 历史成本原则</button><button type="button" class="qopt" data-key="B">B. 划分收益性支出与资本性支出原则</button><button type="button" class="qopt" data-key="C">C. 权责发生制原则</button><button type="button" class="qopt" data-key="D">D. 配比原则</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：题干正是<strong>配比原则</strong>的定义——收入与相关成本费用在同一期间确认、计量、记录，相互配比，以便计算本期损益。A 讲财产按取得时实际成本计量；B 讲支出按受益期长短归类；C 讲"无论款项是否收付、按归属期记账"，是记账基础，与"收入费用相互配比"的字眼不对应。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s4q7" data-answer="ADE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">如果将一笔资本性支出按收益性支出处理，出现的结果是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 多计费用而少计资产价值</button><button type="button" class="qopt" data-key="B">B. 少计费用而多计资产价值</button><button type="button" class="qopt" data-key="C">C. 当期净收益和资产价值虚增</button><button type="button" class="qopt" data-key="D">D. 当期净收益降低</button><button type="button" class="qopt" data-key="E">E. 资产价值偏低</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ADE</div><div class="q-exp"><p>析：资本性支出本该列入资产、分摊到以后各期，错按收益性支出计入当期费用 → <strong>多计费用而少计资产价值</strong>（A），导致<strong>当期净收益降低甚至亏损</strong>（D）、<strong>资产价值偏低</strong>（E）。B、C 是反方向错误（收益性支出按资本性支出处理）的后果。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s4q8" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">用于提供与政府财务状况、运行情况和现金流量等有关的信息的政府财务会计实行（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 收付实现制</button><button type="button" class="qopt" data-key="B">B. 权责发生制</button><button type="button" class="qopt" data-key="C">C. 永续盘存制</button><button type="button" class="qopt" data-key="D">D. 实收实付制</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：权责发生制的适用范围是<strong>企业会计</strong>和行政事业单位（政府）<strong>财务会计</strong>；行政事业单位的<strong>预算会计</strong>才实行收付实现制。政府财务会计要反映财务状况、运行情况和现金流量，与权责发生制对应。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础28_会计概论_第3节_会计要素.html"><span class="nav-label">上一节</span><span class="nav-title">第3节 会计要素</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础28_会计概论_第5节_会计基本前提.html"><span class="nav-label">下一节</span><span class="nav-title">第5节 会计基本前提</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第14章 劳动合同管理与特殊用工 · 劳动合同解除与终止 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第四部分 人力资源与社会保险政策</span><h1>第14章 劳动合同管理与特殊用工 · 劳动合同解除与终止</h1><div class="subtitle">第 2 节 / 共 4 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 2/4</div><div class="sec-badge none" id="sec-badge" data-sec="r14s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>分清<strong>协商解除</strong>与<strong>法定解除</strong>，掌握"谁提出解除，决定谁付经济补偿" <span class="must">必考</span></li>
+<li>背下用人单位<strong>过失性解除（39 条 6 项）</strong>、<strong>非过失性解除（40 条 3 项：30 日书面或代通知金）</strong>、<strong>裁员（41 条：20 人或 10%、30 日程序、优先留用）</strong> <span class="s3">★★★</span></li>
+<li>背下劳动者解除（30 日书面/试用期 3 日）与 38 条随时解除情形 <span class="hot">高频考点</span></li>
+<li>背下 <strong>42 条限制解除 6 项</strong>与<strong>医疗期 3–24 个月对照表</strong>，记住 44 条终止、45 条延续、15 日转移、文本存 2 年 <span class="s3">★★★</span></li>
+<li>会算<strong>服务期违约金</strong>（分摊培训费）、<strong>竞业限制</strong>（2 年、30%/最低工资）、<strong>经济补偿</strong>（N、半月、3 倍封顶 12 年） <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、协商解除与劳动者单方解除</h2>
+<h3>1. 协商解除（★★）</h3>
+<p><strong>协商解除</strong>是指劳动合同双方当事人因某种原因，在<strong>完全自愿</strong>的情况下互相协商，在<strong>彼此达成一致</strong>的基础上<strong>提前</strong>解除劳动合同（《劳动合同法》第 36 条：用人单位与劳动者协商一致，可以解除劳动合同）。</p></div>
+<div class="section"><div class="keypoint"><strong>协商解除三连问：</strong><p>①要法定原因吗？——<strong>不要</strong>，达成合意即可，也不强制书面形式；②谁都能提？——双方都可以提出；③给不给经济补偿？——<strong>看谁提出</strong>：<strong>用人单位提出</strong>并与劳动者协商一致解除的，单位须支付经济补偿；劳动者提出的，单位不用给。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小刘想跳槽去读研，主动找公司协商解除劳动合同并签了协议——这种情况单位不用支付经济补偿。反过来，公司业务收缩想让人走，主动找小刘"协商"解除——形式上是协商一致，但因为是<strong>单位提出</strong>的，经济补偿一分不能少。案例分析题最爱考这个"谁提出"的认定。</p></div></div>
+<div class="section"><h3>2. 劳动者单方解除（★★★）<span class="hot">高频考点</span></h3>
+<p><strong>预告解除</strong>（第 37 条）：劳动者<strong>提前 30 日以书面形式</strong>通知用人单位，可以解除劳动合同；<strong>试用期内提前 3 日</strong>通知即可。注意：预告解除是<strong>通知</strong>而非"申请"，无需单位批准。</p>
+<p><strong>随时解除</strong>（第 38 条）：用人单位有下列情形之一的，劳动者可以解除劳动合同——</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>用人单位的过错情形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>未按照劳动合同约定提供<strong>劳动保护或者劳动条件</strong></td>
+</tr>
+<tr>
+<td>②</td>
+<td><strong>未及时足额支付劳动报酬</strong></td>
+</tr>
+<tr>
+<td>③</td>
+<td><strong>未依法为劳动者缴纳社会保险费</strong></td>
+</tr>
+<tr>
+<td>④</td>
+<td>规章制度<strong>违反法律法规</strong>，损害劳动者权益</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>以<strong>欺诈、胁迫</strong>的手段或乘人之危，致使劳动合同无效</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>法律、行政法规规定的其他情形</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：胁迫、危险、不给钱、没社保</div><p>劳动者随时走人的典型情形四类——<strong>胁迫</strong>（欺诈、胁迫、乘人之危致合同无效）、<strong>危险</strong>（不给约定的劳动保护或劳动条件）、<strong>不给钱</strong>（未及时足额付酬）、<strong>没社保</strong>（未依法缴费）。再补一条：单位规章制度违法、损害劳动者权益的，同样随时解除。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 38 条解除别忘了&quot;带补偿&quot;</div><p>劳动者依 38 条（单位过错）解除的，属于经济补偿的支付范围（46 条第 1 项）——"随时走人"还能拿经济补偿；而依 37 条（预告 30 日/试用期 3 日）正常辞职的，没有经济补偿。选择题常拿这点设坑。</p></div></div>
+<div class="section"><h2>二、用人单位单方解除——过失性、非过失性与裁员</h2>
+<h3>3. 过失性解除（第 39 条，6 项）<span class="must">必考</span> <span class="hot">高频考点</span></h3>
+<p>劳动者有过错在先，单位可以<strong>立即解除</strong>（第 39 条）：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>劳动者的过失情形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td><strong>试用期间</strong>被证明<strong>不符合录用条件</strong></td>
+</tr>
+<tr>
+<td>②</td>
+<td><strong>严重违反</strong>用人单位的<strong>规章制度</strong></td>
+</tr>
+<tr>
+<td>③</td>
+<td><strong>严重失职、营私舞弊</strong>，给用人单位造成<strong>重大损害</strong></td>
+</tr>
+<tr>
+<td>④</td>
+<td>同时与其他单位建立劳动关系，对完成本单位工作任务造成<strong>严重影响</strong>，或经单位提出<strong>拒不改正</strong></td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>以欺诈、胁迫的手段或乘人之危，致使用人单位<strong>违背真实意思</strong>订立或变更劳动合同而<strong>无效</strong></td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>被依法追究<strong>刑事责任</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 过失性解除六项</div><p><strong>"试、规、失、双、骗、刑"</strong>——试用期不合格、严重违规、严重失职舞弊、双重劳动关系、欺诈胁迫、刑事责任。这六项的共同点：<strong>错在劳动者</strong>，单位解除<strong>不需要提前通知</strong>、<strong>不支付经济补偿</strong>（经济补偿范围里没有 39 条）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：第④项有两个&quot;闸门&quot;</div><p>"同时与其他用人单位建立劳动关系"<strong>本身不必然</strong>能解除——必须满足"对完成本单位工作任务造成<strong>严重影响</strong>"，或者"经用人单位提出，<strong>拒不改正</strong>"之一。2025 年多选就专设此坑：只说"建立了双重劳动关系"就开除，违法。另外注意"被判处有期徒刑"＝被依法追究刑事责任（可以解除），但"被行政拘留"不是刑事责任。</p></div></div>
+<div class="section"><h3>4. 非过失性解除（第 40 条，3 项）</h3>
+<p>劳动者<strong>没有过错</strong>，但客观上合同难以为继，用人单位可以解除，但须<strong>二选一</strong>：<strong>提前 30 日以书面形式通知劳动者本人</strong>，或者<strong>额外支付劳动者一个月工资</strong>（标准：<strong>该劳动者上一个月的工资</strong>，俗称代通知金）：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>情形</th>
+<th>配套动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>患病或非因工负伤，<strong>医疗期满</strong>后不能从事原工作，也不能从事单位<strong>另行安排的工作</strong></td>
+<td>先"另行安排"再谈解除</td>
+</tr>
+<tr>
+<td>②</td>
+<td><strong>不能胜任工作</strong>，经<strong>培训或调岗</strong>，<strong>仍</strong>不能胜任</td>
+<td>先"培训或调岗"，仍不胜任才可解除</td>
+</tr>
+<tr>
+<td>③</td>
+<td>合同订立时所依据的<strong>客观情况发生重大变化</strong>致合同无法履行，经协商<strong>未能就变更达成协议</strong></td>
+<td>先协商变更，谈崩才可解除</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>代通知金的&quot;身份&quot;：</strong><p>"+1 个月工资"只属于<strong>40 条非过失性解除</strong>：标准是<strong>上一个月的工资</strong>，不是前 12 个月平均工资，也不是本地区社平工资。39 条过失性解除不用通知也不用"+1"；37 条劳动者辞职的"30 日"是劳动者的义务，与代通知金无关。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 非过失性解除三情形</div><p><strong>"病、笨、变"</strong>——医疗期满干不了（病）、培训调岗仍不胜任（笨）、客观情况重大变化协商不成（变）。每项都自带"前置程序"：病→先另行安排；笨→先培训或调岗；变→先协商变更。跳过前置直接解除，就是违法解除。三种情形都执行"提前 30 日书面通知 <strong>或</strong> 额外支付 1 个月工资"。</p></div></div>
+<div class="section"><h3>5. 经济性裁员（第 41 条）<span class="hot">高频考点</span></h3>
+<p><strong>裁减门槛</strong>（数字必背）：需要裁减人员 <strong>20 人以上</strong>，或者<strong>裁减不足 20 人但占企业职工总数 10% 以上</strong>的，才走裁员程序。</p>
+<p><strong>法定程序</strong>：<strong>提前 30 日向工会或者全体职工说明情况</strong> → <strong>听取工会或者职工的意见</strong> → <strong>裁减人员方案向劳动行政部门报告</strong> → 可以裁减人员。</p>
+<p><strong>可以裁员的四种情形</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>情形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>依照企业破产法规定进行<strong>重整</strong></td>
+</tr>
+<tr>
+<td>②</td>
+<td>生产经营发生<strong>严重困难</strong></td>
+</tr>
+<tr>
+<td>③</td>
+<td>企业<strong>转产、重大技术革新或者经营方式调整</strong>，经<strong>变更劳动合同后仍需裁减</strong>人员</td>
+</tr>
+<tr>
+<td>④</td>
+<td>其他因劳动合同订立时所依据的<strong>客观经济情况发生重大变化</strong>，致使劳动合同无法履行</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优先留用三类人员</strong>：①与本单位订立<strong>较长期限固定期限</strong>劳动合同的；②订立<strong>无固定期限</strong>劳动合同的；③<strong>家庭无其他就业人员</strong>、有需要<strong>扶养的老人或者未成年人</strong>的。用人单位<strong>6 个月内</strong>重新招用人员的，应当<strong>通知</strong>被裁减的人员，并在<strong>同等条件下优先招用</strong>被裁减的人员。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 裁员程序与情形</div><p><strong>"二十人、一成线，三十日说清再报告"</strong>——20 人以上或不足 20 人占 10% 以上触发程序；提前 30 日向工会<strong>或全体职工</strong>说明 → 听意见 → 方案报<strong>劳动行政部门</strong>（不是"批准"，是"报告"，也不报市场监管部门）。情形记<strong>"重整、困难、转变"</strong>（重整／严重困难／转产革新调整后仍要裁／客观经济情况重大变化）。优先留用记<strong>"长、无、孤"</strong>（长期合同、无固定、家里有老小）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某 150 人的公司计划裁员 15 人：15 人不足 20 人，但 150×10%＝15 人，达到"占职工总数 10% 以上"门槛，必须走完整程序——提前 30 日向全体职工说明情况、听取意见、把裁员方案报劳动行政部门，然后才能动刀。留人时，签了无固定期限合同的老张、家里只有患病老母亲要养的小陈应优先留用。</p></div></div>
+<div class="section"><h2>三、解除的"刹车"与"程序"——限制解除与通知工会</h2>
+<h3>6. 对用人单位解除劳动合同的限制（第 42 条）与医疗期 <span class="must">必考</span></h3>
+<p><strong>第 42 条</strong>：劳动者有下列情形之一的，用人单位<strong>不得</strong>依照第 <strong>40 条、第 41 条</strong>解除劳动合同（注意：只挡 40、41 两条路）——</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>限制解除情形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>从事<strong>接触职业病危害</strong>作业未进行<strong>离岗前职业健康检查</strong>，或<strong>疑似职业病</strong>病人在诊断或医学观察期间</td>
+</tr>
+<tr>
+<td>②</td>
+<td>在本单位<strong>患职业病或者因工负伤</strong>，并被确认<strong>丧失或者部分丧失劳动能力</strong></td>
+</tr>
+<tr>
+<td>③</td>
+<td>患病或非因工负伤，在规定的<strong>医疗期内</strong></td>
+</tr>
+<tr>
+<td>④</td>
+<td>女职工在<strong>孕期、产期、哺乳期</strong></td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>在本单位<strong>连续工作满 15 年</strong>，且<strong>距法定退休年龄不足 5 年</strong></td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>法律、行政法规规定的其他情形</td>
+</tr>
+</tbody>
+</table>
+<p><strong>医疗期</strong>：企业职工因<strong>患病或非因工负伤</strong>停止工作治疗休息<strong>不得解除劳动合同的时限</strong>。医疗期长短由"实际工作年限＋本单位工作年限"双档确定（数字表必背）：</p>
+<table>
+<thead>
+<tr>
+<th>实际工作年限</th>
+<th>在本单位工作年限</th>
+<th>医疗期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10 年以下</td>
+<td>5 年以下</td>
+<td><strong>3 个月</strong></td>
+</tr>
+<tr>
+<td>10 年以下</td>
+<td>5 年以上</td>
+<td><strong>6 个月</strong></td>
+</tr>
+<tr>
+<td>10 年以上</td>
+<td>5 年以下</td>
+<td><strong>6 个月</strong></td>
+</tr>
+<tr>
+<td>10 年以上</td>
+<td>5 年以上 10 年以下</td>
+<td><strong>9 个月</strong></td>
+</tr>
+<tr>
+<td>10 年以上</td>
+<td>10 年以上 15 年以下</td>
+<td><strong>12 个月</strong></td>
+</tr>
+<tr>
+<td>10 年以上</td>
+<td>15 年以上 20 年以下</td>
+<td><strong>18 个月</strong></td>
+</tr>
+<tr>
+<td>10 年以上</td>
+<td>20 年以上</td>
+<td><strong>24 个月</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：42 条保护伞</div><p>上岸熊原话："职业病、工伤、患病医疗期、孕期、产期、哺乳期、在本单位连续工作满 15 年，且距法定退休年龄不足五年的。"压缩成<strong>"病、伤、孕、老"＋职业病观察</strong>。再记一句使用说明：42 条只挡<strong>40 条（非过失性）和 41 条（裁员）</strong>——劳动者有 39 条过失情形（如严重违规、被追究刑责）时，"三期"女职工、医疗期内员工照样可以依法解除；协商解除也不受限。</p></div></div>
+<div class="section"><div class="keypoint"><strong>医疗期查表三步法：</strong><p>第一步：看<strong>实际工作年限</strong>（累计工龄）过没过 10 年——决定用上表还是下表；第二步：找<strong>本单位工作年限</strong>落在哪一档（5 年、10 年、15 年、20 年是分界）；第三步：读出对应月数。3、6、9、12、18、24，工龄越长、资历越老保护期越长，顶格 24 个月。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老陈 45 岁，社会总工龄 16 年，在现公司干了 12 年，查出重病需长期治疗。查表：实际工作年限 10 年以上＋本单位 10 年以上 15 年以下 → 医疗期 <strong>12 个月</strong>。这 12 个月内公司不得依 40、41 条解除他；医疗期满仍不能工作、也不能从事另行安排的工作的，公司才可按 40 条①解除（提前 30 日书面通知或付代通知金，并给经济补偿）。</p></div></div>
+<div class="section"><h3>7. 对用人单位解除劳动合同的要求（★）——通知工会</h3>
+<p>用人单位<strong>单方面</strong>解除劳动合同，应<strong>事先将理由通知工会</strong>。两点延伸：</p>
+<ul>
+<li>未<strong>事先</strong>通知工会，劳动者以用人单位<strong>违法解除</strong>为由请求支付<strong>赔偿金</strong>的，法院<strong>应予支持</strong>——但<strong>起诉前</strong>用人单位已经<strong>补正</strong>有关程序的除外；</li>
+<li>用人单位违反法律、行政法规规定或者劳动合同约定的，<strong>工会有权要求纠正</strong>；用人单位应当研究工会的意见，并将处理结果<strong>书面通知工会</strong>。</li>
+</ul></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 通知工会口诀</div><p><strong>"先通知，后解除；起诉前补正，可救场。"</strong>——程序要点是"事先"两字；漏了这一步，单方解除可能被认定违法解除并赔钱，唯一的补救窗口在<strong>起诉前</strong>。处理结果记得用<strong>书面</strong>反馈工会。</p></div></div>
+<div class="section"><h2>四、劳动合同终止与附随义务</h2>
+<h3>8. 劳动合同终止（第 44 条、第 45 条）（★★）</h3>
+<p><strong>终止</strong>是指符合法定情形时，劳动合同因法定事实出现而自然终结。第 44 条法定终止情形：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>终止情形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>劳动合同<strong>期满</strong></td>
+</tr>
+<tr>
+<td>②</td>
+<td>劳动者<strong>开始依法享受基本养老保险待遇</strong>（《劳动合同法实施条例》：劳动者<strong>达到法定退休年龄</strong>的，劳动合同终止）</td>
+</tr>
+<tr>
+<td>③</td>
+<td>劳动者<strong>死亡</strong>，或被法院<strong>宣告死亡、宣告失踪</strong></td>
+</tr>
+<tr>
+<td>④</td>
+<td>用人单位被依法<strong>宣告破产</strong></td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>用人单位被<strong>吊销营业执照、责令关闭、撤销</strong>，或决定<strong>提前解散</strong></td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>法律、行政法规规定的其他情形</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 45 条（终止的"刹车"）</strong>：劳动合同期满，但劳动者有<strong>第 42 条</strong>情形之一的，劳动合同应当<strong>延续至相应情形消失时终止</strong>（如三期女职工合同到期，也要等到哺乳期结束才能终止）。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 终止情形口诀</div><p><strong>"期到、养老、人没了；破产、吊销、解散了"</strong>——前三个是"人"这边到点，后三个是"单位"那边没了。再记两条刹车：42 条情形没消失，到期也只能<strong>续延</strong>；注意"开始依法享受基本养老保险待遇"（教材主口径）与"达到法定退休年龄"（实施条例口径）的对应关系，选择题按题干给的依据作答。</p></div></div>
+<div class="section"><h3>9. 用人单位解除、终止劳动合同的附随义务（★）</h3>
+<table>
+<thead>
+<tr>
+<th>义务</th>
+<th>时限/标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>出具<strong>解除或终止劳动合同的证明</strong></td>
+<td>解除或终止劳动合同时</td>
+</tr>
+<tr>
+<td>办理<strong>档案和社会保险关系转移</strong>手续</td>
+<td><strong>15 日内</strong></td>
+</tr>
+<tr>
+<td>保存已解除或终止的<strong>劳动合同文本</strong></td>
+<td><strong>至少 2 年</strong>备查</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 附随义务口诀</div><p><strong>"一证、十五日、两年账"</strong>——离职时开证明，15 日内转档案和社保，合同文本至少存 2 年备查。三个数字（即时、15 日、2 年）都是单选秒考点。</p></div></div>
+<div class="section"><h2>五、离职后的"两根缰绳"——服务期与竞业限制</h2>
+<h3>10. 培训服务期（★★★）<span class="must">必考</span></h3>
+<p>用人单位为劳动者提供<strong>专项培训费用</strong>、进行<strong>专业技术培训</strong>的，可以与该劳动者订立协议，<strong>约定服务期</strong>。四条规则：</p>
+<ol>
+<li>劳动者<strong>违反服务期约定</strong>的，应当按照约定向用人单位支付<strong>违约金</strong>；</li>
+<li>违约金数额<strong>不得超过用人单位提供的培训费用</strong>；且<strong>不得超过服务期尚未履行部分所应分摊的培训费用</strong>；</li>
+<li>服务期不影响按照<strong>正常的工资调整机制</strong>提高劳动者在服务期间的劳动报酬；</li>
+<li><strong>劳动合同期满但服务期尚未到期</strong>的，劳动合同应当<strong>续延至服务期满</strong>；双方另有约定的，从其约定。</li>
+</ol></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 服务期违约金公式</div><p><strong>违约金上限＝培训费用 ÷ 服务期年限 × 尚未履行的年限</strong>（再与约定违约金比大小，取低）。"干几年免几年"，按比例退，不能全额索赔。配套两句话：合同到期服务期没到 → <strong>合同续延</strong>到服务期满；服务期内照常涨工资不受影响。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>公司花 12 万送小郑出国培训 3 个月，约定服务期 4 年、违约金 12 万。小郑服务满 1 年后跳槽：每年分摊 12÷4＝3 万，未履行 3 年，违约金上限＝3×3＝9 万——虽然约定写 12 万，也只能要 9 万。</p></div></div>
+<div class="section"><h3>11. 竞业限制（★★★）</h3>
+<p><strong>竞业限制</strong>是为保守用人单位的<strong>商业秘密和与知识产权相关的保密事项</strong>，在解除或终止劳动合同后，限制相关人员到<strong>有竞争关系的其他单位</strong>任职，或<strong>自己开业</strong>生产、经营同类产品，从事同类业务。要点一张表：</p>
+<table>
+<thead>
+<tr>
+<th>要点</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>适用人员</td>
+<td><strong>高级管理者、高级技术人员</strong>和<strong>其他负有保密义务的人员</strong>（不是全员）</td>
+</tr>
+<tr>
+<td>范围、地域、期限</td>
+<td>由用人单位与劳动者<strong>约定</strong>，<strong>不得违反法律法规</strong></td>
+</tr>
+<tr>
+<td>期限</td>
+<td><strong>不得超过 2 年</strong></td>
+</tr>
+<tr>
+<td>单位义务</td>
+<td>竞业限制期内<strong>按月</strong>给予劳动者<strong>经济补偿</strong></td>
+</tr>
+<tr>
+<td>劳动者义务</td>
+<td>违反约定的，按约定支付<strong>违约金</strong></td>
+</tr>
+<tr>
+<td>补偿标准（未约定时）</td>
+<td>未约定经济补偿但劳动者<strong>已履行</strong>竞业限制义务的，法院支持按解除或终止前 <strong>12 个月平均工资的 30%</strong> 按月支付；<strong>30% 低于合同履行地最低工资标准的，按最低工资标准支付</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊提示：竞业限制的解除权</div><p>上岸熊原话："在执行竞业限制协议时用人单位可以单方面要求解除；只有用人单位超过 3 个月不支付经济补偿金时劳动者才可以单方面要求解除。"——解除权<strong>不对称</strong>：单位随时可以松绑不要你竞业了；劳动者只有等单位<strong>超过 3 个月不发补偿</strong>，才有权单方面要求解除。配套数字链：<strong>"两高一密能限制，最长两年按月补；不补按 12 个月均薪 30%，低于最低工资按最低。"</strong></p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 竞业限制 vs 服务期，别混为一谈</div><p>服务期管"提前离职要赔培训费"，前提是单位<strong>出了专项培训费</strong>；竞业限制管"离职后不能去对手那儿"，前提是<strong>按月给补偿</strong>。服务期的对价可以是培训，竞业限制的对价<strong>必须是经济补偿</strong>——"约定竞业限制却不给钱，还要求员工必须遵守"是典型错误说法。</p></div></div>
+<div class="section"><h2>六、经济补偿——范围、计算、支付与纳税 <span class="hot">高频考点</span></h2>
+<h3>12. 经济补偿的范围（第 46 条）</h3>
+<p><strong>经济补偿</strong>是指在法定情形下，用人单位依法向劳动者支付的补偿性费用。应支付经济补偿的七类情形：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>情形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>劳动者依照 <strong>38 条</strong>（单位过错）解除劳动合同的</td>
+</tr>
+<tr>
+<td>②</td>
+<td><strong>用人单位提出</strong>解除并与劳动者<strong>协商一致</strong>解除的</td>
+</tr>
+<tr>
+<td>③</td>
+<td>用人单位依照 <strong>40 条</strong>（非过失性）解除的</td>
+</tr>
+<tr>
+<td>④</td>
+<td>用人单位依法<strong>裁减人员</strong>解除的</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>期满终止<strong>固定期限</strong>劳动合同的——但<strong>单位维持或提高约定条件续订、劳动者不同意续订</strong>的除外</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>单位被<strong>宣告破产</strong>、<strong>吊销营业执照、责令关闭、撤销</strong>或<strong>提前解散</strong>而终止的</td>
+</tr>
+<tr>
+<td>⑦</td>
+<td><strong>以完成一定工作任务为期限</strong>的劳动合同因<strong>任务完成</strong>而终止的</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 补偿范围口诀</div><p><strong>"他走我炒都给钱，到期不续看涨跌，破产解散任务完。"</strong>——"他走"＝38 条劳动者被迫辞职；"我炒"＝40 条解除、裁员、单位提出的协商解除；"到期不续看涨跌"＝固定期限合同到期终止，单位<strong>维持或提高</strong>条件而劳动者不肯续 → 不给；单位<strong>降低</strong>条件导致不续 → 给（该情形除外的都给）；破产、吊销、解散、任务完成 → 一律给。39 条过失性解除<strong>不在</strong>补偿范围。</p></div></div>
+<div class="section"><h3>13. 经济补偿的计算标准（★★★）<span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>年限（N）</td>
+<td>按劳动者<strong>在本单位工作的年限</strong>：<strong>每满 1 年支付 1 个月工资</strong>；<strong>6 个月以上不满 1 年的，按 1 年计算</strong>；<strong>不满 6 个月的，支付半个月工资</strong>的经济补偿</td>
+</tr>
+<tr>
+<td>月工资基数</td>
+<td>按<strong>解除或终止前 12 个月的平均工资</strong>；按<strong>应得工资</strong>计算，包括<strong>计时工资、计件工资、奖金、津贴和补贴</strong>等货币性收入</td>
+</tr>
+<tr>
+<td>高薪封顶</td>
+<td>月平均工资<strong>高于本地区上年度职工月平均工资 3 倍</strong>的，按 <strong>3 倍</strong>数额支付，支付年限<strong>最高不超过 12 年</strong>；<strong>不足 3 倍的，不受 12 年限制</strong></td>
+</tr>
+<tr>
+<td>低薪保底</td>
+<td>平均工资<strong>低于当地最低工资标准</strong>的，按<strong>最低工资标准</strong>支付</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 经济补偿&quot;一图流&quot;</div><p><strong>"一年一个月，半年算一年，不到半年给半月；高薪 3 倍封顶再加 12 年帽，不超 3 倍不限年；低于最低工资按最低。"</strong>——做题先判基数（12 个月平均应得工资），再判是否触顶（3 倍、12 年），最后套年限算 N。年限起算从<strong>开始工作之日</strong>算（不是合同签订日）：1 月 1 日签合同、2 月 1 日到岗、8 月 1 日解除 → 工作年限从 2 月 1 日起算。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老吴在公司工作 7 年 3 个月，解除前 12 个月平均应得工资 8000 元（未超社平 3 倍）。经济补偿＝每满 1 年 1 个月（7 个月）＋剩下 3 个月不满 6 个月按半个月（0.5 个月）＝7.5 个月 ×8000＝<strong>60000 元</strong>。若老吴月均工资 6 万，而当地社平工资 1.5 万，6 万＞3 倍封顶线 4.5 万 → 基数按 4.5 万算，且补偿年限最多 12 年。</p></div></div>
+<div class="section"><h3>14. 经济补偿的支付时间与纳税（★）</h3>
+<p><strong>支付时间</strong>：在<strong>办结工作交接时</strong>支付——劳动者应当按照双方约定，办理工作交接。（先交接、后拿钱，两者互为对应。）</p>
+<p><strong>纳税规则</strong>（一次性补偿收入的个税处理）：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>免征额度</td>
+<td>一次性补偿收入（含经济补偿金、生活补助费和其他补助费用）在<strong>当地上年职工平均工资 3 倍以内</strong>的部分，<strong>免征个税</strong>；<strong>超过部分</strong>按规定计征</td>
+</tr>
+<tr>
+<td>可扣除项</td>
+<td>领取一次性补偿时，按国家和地方政府规定比例实际缴纳的<strong>住房公积金、医疗保险费、基本养老保险费、失业保险费</strong>，计征个税时<strong>予以扣除</strong></td>
+</tr>
+<tr>
+<td>破产安置</td>
+<td>企业依法宣告破产后，职工从破产企业取得的<strong>一次性安置费收入，免征个税</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 补偿纳税口诀</div><p><strong>"三倍以内免税，三险一金可扣，破产安置全免。"</strong>——注意可扣除的是"公积金＋医疗＋养老＋失业"四项实际缴纳部分，工伤、生育保险（个人本就不缴）不在列。</p></div></div>
+<div class="section"><h2>七、本章数字一张表（考前速刷）</h2>
+<table>
+<thead>
+<tr>
+<th>数字</th>
+<th>考点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>3 日</strong></td>
+<td>试用期内劳动者解除，提前 3 日通知</td>
+</tr>
+<tr>
+<td><strong>30 日</strong></td>
+<td>劳动者预告解除（书面）／40 条解除提前 30 日书面通知／裁员提前 30 日向工会或全体职工说明情况</td>
+</tr>
+<tr>
+<td><strong>1 个月工资</strong></td>
+<td>40 条"代通知金"＝该劳动者<strong>上一个月</strong>的工资</td>
+</tr>
+<tr>
+<td><strong>20 人或 10%</strong></td>
+<td>裁员门槛：裁减 20 人以上，或不足 20 人但占职工总数 10% 以上</td>
+</tr>
+<tr>
+<td><strong>6 个月内</strong></td>
+<td>裁员后重新招用，应通知被裁人员并同等条件优先招用</td>
+</tr>
+<tr>
+<td><strong>6 个月</strong></td>
+<td>临时性派遣岗位存续不超过 6 个月；经济补偿"6 个月以上不满 1 年按 1 年"</td>
+</tr>
+<tr>
+<td><strong>15 日</strong></td>
+<td>解除/终止时 15 日内办档案和社保转移；非全日制报酬结算周期最长 15 日</td>
+</tr>
+<tr>
+<td><strong>2 年</strong></td>
+<td>竞业限制期限不超过 2 年；劳动合同文本至少保存 2 年</td>
+</tr>
+<tr>
+<td><strong>满 15 年＋不足 5 年</strong></td>
+<td>42 条限制解除：本单位连续工作满 15 年且距法定退休年龄不足 5 年</td>
+</tr>
+<tr>
+<td><strong>3–24 个月</strong></td>
+<td>医疗期：3、6、9、12、18、24（双档查表）</td>
+</tr>
+<tr>
+<td><strong>12 个月</strong></td>
+<td>经济补偿基数＝解除/终止前 12 个月平均工资；竞业限制补偿基数＝前 12 个月平均工资的 30%</td>
+</tr>
+<tr>
+<td><strong>3 倍／12 年</strong></td>
+<td>月均工资超当地上年社平 3 倍 → 按 3 倍支付且年限不超过 12 年；不足 3 倍不受 12 年限制</td>
+</tr>
+<tr>
+<td><strong>半个月</strong></td>
+<td>工作年限不满 6 个月，支付半个月工资的经济补偿</td>
+</tr>
+<tr>
+<td><strong>3 倍以内</strong></td>
+<td>一次性补偿收入在当地上年职工平均工资 3 倍以内部分免征个税</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>协商解除</strong>：合意即可、无需法定原因、可不书面；<strong>补偿看谁提出</strong>——单位提出必须给</li>
+<li><strong>劳动者解除</strong>：37 条提前 30 日书面/试用期 3 日（无补偿）；38 条单位过错随时解除（有补偿）："胁迫、危险、不给钱、没社保"＋规章违法损害权益</li>
+<li><strong>39 条过失性解除</strong>："试规失双骗刑"；不提前通知、<strong>无经济补偿</strong>；"双重劳动关系"须严重影响或拒不改正</li>
+<li><strong>40 条非过失性解除</strong>："病、笨、变"；提前 30 日书面通知<strong>或</strong>额外支付 1 个月工资（＝上一个月工资）；各带前置程序</li>
+<li><strong>41 条裁员</strong>：20 人或 10% 门槛；30 日说明→听意见→报劳动行政部门；情形"重整、困难、转变"；优先留用"长、无、孤"；6 个月内重招优先</li>
+<li><strong>42 条限制解除</strong>（只挡 40/41）："病、伤、孕、老"＋职业病观察＋医疗期；<strong>医疗期</strong>＝患病或非因工负伤停止治疗休息<strong>不得解除合同</strong>的时限，3/6/9/12/18/24 个月双档表</li>
+<li><strong>解除要求</strong>：事先将理由<strong>通知工会</strong>；未事先通知 → 劳动者主张违法解除赔偿金法院支持（起诉前补正除外）；结果<strong>书面</strong>反馈</li>
+<li><strong>终止</strong>（44 条）："期到、养老、人没了；破产、吊销、解散了"；42 条情形 → <strong>延续至情形消失</strong>（45 条）</li>
+<li><strong>附随义务</strong>：出具证明；<strong>15 日</strong>内转档案社保；文本存<strong>至少 2 年</strong></li>
+<li><strong>服务期</strong>：专项培训费＋专业技术培训才可约定；违约金≤培训费用、≤未履行部分分摊额（培训费÷服务期×未履行年限）；合同期未到 → 续延至服务期满</li>
+<li><strong>竞业限制</strong>：两高一密；≤2 年；按月补偿；未约定按前 12 个月均薪 <strong>30%</strong>、低于最低工资按最低；单位可单方解除，劳动者须单位超 3 个月不补才能解</li>
+<li><strong>经济补偿范围</strong>：38 条他走、40 条/裁员/单位提出协商一致"我炒"、期满不续（单位降条件）、破产吊销解散、任务完成；39 条没有</li>
+<li><strong>经济补偿计算</strong>：每满 1 年 1 个月，6 个月以上不满 1 年按 1 年，不满 6 个月半个月；基数＝前 12 个月平均<strong>应得</strong>工资；3 倍封顶＋12 年帽（不足 3 倍不受限）；低于最低工资按最低；<strong>办结工作交接时</strong>支付</li>
+<li><strong>补偿纳税</strong>：当地上年社平 3 倍以内免税；公积金＋三险实缴可扣；破产一次性安置费全免</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r14s2q1" data-answer="ABDE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">用人单位可以依法解除劳动合同的情形有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 劳动者严重违反用人单位规章制度的</button><button type="button" class="qopt" data-key="B">B. 劳动者被判处有期徒刑的</button><button type="button" class="qopt" data-key="C">C. 劳动者同时与其他用人单位建立劳动关系的</button><button type="button" class="qopt" data-key="D">D. 劳动者在试用期间被证明不符合录用条件的</button><button type="button" class="qopt" data-key="E">E. 劳动者以欺诈手段，使用人单位在违背真实意思情况下订立劳动合同的</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：本题考 39 条过失性解除六项——严重违反规章制度（A）、被依法追究刑事责任（B，被判处有期徒刑即属此列）、试用期不符合录用条件（D）、欺诈致使合同无效（E）均在列。C 错在<strong>缺限定语</strong>："同时与其他用人单位建立劳动关系"还须满足"对完成本单位工作任务造成严重影响，或经用人单位提出拒不改正"才可以解除，仅"建立双重劳动关系"不构成解除理由。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s2q2" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">钱某与公司在劳动合同中约定：&quot;劳动合同期限六年，公司为钱某提供专业技术培训，培训费用 9 万元，服务期为培训结束后三年，若钱某提前离职，需一次性支付违约金 9 万元&quot;。钱某在培训结束工作满两年后，因个人原因提前解除劳动合同。钱某应向公司支付的违约金是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 9 万元</button><button type="button" class="qopt" data-key="B">B. 3 万元</button><button type="button" class="qopt" data-key="C">C. 0 万元</button><button type="button" class="qopt" data-key="D">D. 6 万元</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：违约金<strong>不得超过服务期尚未履行部分所应分摊的培训费用</strong>：服务期 3 年、培训费 9 万，每年分摊 9÷3＝3 万；钱某已履行 2 年、剩 1 年未履行，违约金＝3×1＝3 万元（B 对）。A 的 9 万是约定数，但超过"未履行部分分摊额"的法定上限，砍到 3 万；D 对应"剩 2 年"的错误计算；C 不对——因个人原因违约就应按未履行年限支付，只有正常履行完毕或双方另有约定才可能是 0。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s2q3" data-answer="C" data-type="single"><span class="q-tag">2022·单选</span><div class="q-stem">李某的医疗期是 12 个月，他在本公司可能工作的年限是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 8 年</button><button type="button" class="qopt" data-key="B">B. 9 年</button><button type="button" class="qopt" data-key="C">C. 12 年</button><button type="button" class="qopt" data-key="D">D. 7 年</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：医疗期 12 个月对应的档位是"实际工作年限 <strong>10 年以上</strong>＋在本单位工作年限 <strong>10 年以上 15 年以下</strong>"。四个选项都在问本单位年限：只有 12 年落在 10–15 年档（C 对）；8、9、7 年都在本单位 10 年以下，若总工龄 10 年以上、本单位 5–10 年对应的医疗期只有 9 个月，凑不出 12 个月。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s2q4" data-answer="B" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">关于企业实施经济性裁员的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 经济补偿标准按员工工作年限，每满 1 年按半个月工资标准支付</button><button type="button" class="qopt" data-key="B">B. 企业应提前 30 日向工会或全体职工说明经济性裁员的情况</button><button type="button" class="qopt" data-key="C">C. 只要企业有重大技术革新情况，就可以经济性裁员</button><button type="button" class="qopt" data-key="D">D. 实施经济性裁员无须向当地劳动行政部门报告</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：裁员程序＝提前 30 日向工会<strong>或全体职工</strong>说明情况 → 听取意见 → 裁减人员方案向劳动行政部门报告（B 对，D 反了）。A 错——经济补偿是每满 1 年支付 <strong>1 个月</strong>工资，不是半个月；C 错——企业转产、重大技术革新或经营方式调整的，须<strong>经变更劳动合同后仍需裁减人员</strong>才可以裁员，"只要革新就能裁"说法太满。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s2q5" data-answer="A" data-type="single"><span class="q-tag">2019·单选</span><div class="q-stem">关于协商一致解除劳动合同的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 只需要当事人达成合意，无需法定原因</button><button type="button" class="qopt" data-key="B">B. 用人单位应支付经济补偿</button><button type="button" class="qopt" data-key="C">C. 应采取书面形式</button><button type="button" class="qopt" data-key="D">D. 用人单位无需支付经济补偿</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：协商解除的唯一条件是双方<strong>达成解除的合意</strong>，无需具备法定解除原因，也可以不要求书面形式（A 对，C 错）。要不要付经济补偿<strong>看谁提出</strong>：用人单位提出的须支付，劳动者提出的不用——B、D 都把话说死了，片面。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s2q6" data-answer="D" data-type="single"><span class="q-tag">2016·单选</span><div class="q-stem">下列关于竞业限制的说法中，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 竞业限制的人员限于用人单位的普通管理人员</button><button type="button" class="qopt" data-key="B">B. 竞业限制期限应当超过 3 年</button><button type="button" class="qopt" data-key="C">C. 竞业限制的范围由用人单位自行确定</button><button type="button" class="qopt" data-key="D">D. 劳动者违反竞业限制约定的，应当按照约定向用人单位支付违约金</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：竞业限制人员限于<strong>高级管理者、高级技术人员和其他负有保密义务的人员</strong>，不含普通管理人员（A 错）；期限<strong>不得超过 2 年</strong>（B 错）；范围、地域、期限由用人单位与劳动者<strong>约定</strong>，且不得违反法律法规，不是单位单方"自行确定"（C 错）；劳动者违反约定的，应按约定支付违约金（D 对）。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力14_劳动合同管理与特殊用工_第1节_劳动合同履行与变更.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 劳动合同履行与变更</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力14_劳动合同管理与特殊用工_第3节_用人单位劳动规章制度.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 用人单位劳动规章制度</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

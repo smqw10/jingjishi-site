@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第5章 人力资源规划 · 人力资源供求平衡的基本对策与方法 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第5章 人力资源规划 · 人力资源供求平衡的基本对策与方法</h1><div class="subtitle">第 2 节 / 共 2 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 2/2</div><div class="sec-badge none" id="sec-badge" data-sec="r05s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟<strong>需求大于供给</strong>的五条对策，分清"短期加班、长期招募"的分工 <span class="s3">★★★</span><span class="must">必考</span></li>
+<li>背熟<strong>需求小于供给</strong>的五条对策，记住裁员"最简单、最直接、见效最快" <span class="s3">★★★</span><span class="must">必考</span></li>
+<li>记住<strong>结构不匹配</strong>时的三条对策 <span class="hot">高频考点</span></li>
+<li>背熟<strong>减少过剩九法</strong>（速度×员工受伤害程度）与<strong>避免短缺七法</strong>（速度×可撤回程度）两张表 <span class="s3">★★★</span><span class="must">必考</span></li>
+<li>记住<strong>裁员</strong>的四条后遗症与<strong>离岸经营</strong>的成功方法 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、人力资源供求平衡的基本对策（★★★）<span class="s3">★★★</span></h2>
+<h3>1. 需求大于供给时的组织对策 <span class="hot">高频考点</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>对策</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①延长现有员工的工作时间</td>
+<td><strong>首先考虑</strong>的对策；适合<strong>短期或阶段性</strong>需求</td>
+</tr>
+<tr>
+<td>②招募</td>
+<td><strong>长期性</strong>需求必须考虑做好招募工作；还可聘用<strong>已退休人员</strong>、雇用<strong>非全日制员工</strong></td>
+</tr>
+<tr>
+<td>③降低现有人员流失率</td>
+<td>采取各种措施把人留住</td>
+</tr>
+<tr>
+<td>④提高员工工作效率</td>
+<td>改进生产技术、优化工作流程、加强员工培训</td>
+</tr>
+<tr>
+<td>⑤非核心业务外包</td>
+<td>将组织中的部分非核心业务外包出去</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 需求大于供给五招</div><p><strong>"加班顶短期，长期去招人；留人别跳槽，提效少用工，非核心外包"</strong>。判断题眼：短期/阶段性需求→延长工时；<strong>长期性需求</strong>→招募新员工（含返聘退休人员、非全日制），加班只是权宜之计。</p></div></div>
+<div class="section"><div class="keypoint"><strong>上岸熊注释：让员工尽量变得&quot;能干&quot;：</strong><p>第④招"提高员工工作效率"的思路，是让现有员工尽量变得<strong>能干</strong>——改进生产技术、优化工作流程、加强员工培训，三件事一个目的：同样的人干出更多的活，缺口自然缩小。</p></div></div>
+<div class="section"><h3>2. 需求小于供给时的组织对策 <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>对策</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①冻结雇用</td>
+<td>不再招新人，靠自然减员慢慢消化</td>
+</tr>
+<tr>
+<td>②鼓励员工提前退休</td>
+<td>提供优惠条件引导符合条件者早退</td>
+</tr>
+<tr>
+<td>③缩短工作时间＋工作分享</td>
+<td>缩短每位现有员工的工作时间，采用<strong>工作分享</strong>的方式<strong>同时降低工资</strong></td>
+</tr>
+<tr>
+<td>④临时性解雇或永久性裁员</td>
+<td><strong>最简单、最直接、见效最快</strong>；但可能受法律制约、受工会质疑挑战而付出较高成本，一贯如此还会损害组织在劳动力市场上的形象、不利于未来招聘</td>
+</tr>
+<tr>
+<td>⑤培训冗余人员</td>
+<td>对冗余人员进行培训，或利用现有人力资源开展<strong>新项目、新经营活动</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 需求小于供给五招</div><p><strong>"冻、退、缩、裁、训"</strong>——冻结雇用、提前退休、缩短工时（工作分享＋降工资）、裁员、培训转新岗。裁员是<strong>最快的一刀</strong>，但法律、工会、雇主形象三道坎都得过。</p></div></div>
+<div class="section"><h3>3. 需求与供给结构不匹配时的组织对策 <span class="hot">高频考点</span></h3>
+<ol>
+<li>加强对现有人员的<strong>培训开发</strong>，使他们能够胜任当前尤其是未来的工作需要；</li>
+<li>通过<strong>到期终止劳动合同、自然退休</strong>等方式，让不能胜任未来工作的现有人员离开组织，同时从外部招聘高素质新员工，<strong>储备人才</strong>；</li>
+<li>将技能不足的<strong>老员工逐渐替换到辅助性工作岗位</strong>，把重要的生产、管理类岗位留给后来招聘的有能力的候选人。</li>
+</ol></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>自动化改造后，一家工厂缺 30 名会操作数控机床的技工，普通流水线工人却多出 50 人——总量接近平衡，<strong>结构</strong>错位。解法不是简单地增或减："训"（把现有工人培训成技工）、"汰＋储"（合同到期不续签、自然退休，同时外招高素质新员工储备）、"调"（老工人挪去辅助岗，把关键生产管理岗留给新招的能人）。</p></div></div>
+<div class="section"><h2>二、人力资源供求平衡的方法（★★★）<span class="s3">★★★</span></h2>
+<h3>1. 减少未来出现劳动力过剩的方法（★★★）<span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p>九种方法，看两个维度——<strong>速度</strong>和<strong>员工受伤害程度</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>速度</th>
+<th>员工受伤害程度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①裁员</td>
+<td>快</td>
+<td>高</td>
+</tr>
+<tr>
+<td>②降薪</td>
+<td>快</td>
+<td>高</td>
+</tr>
+<tr>
+<td>③降级</td>
+<td>快</td>
+<td>高</td>
+</tr>
+<tr>
+<td>④职位调动</td>
+<td>快</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>⑤职位分享</td>
+<td>快</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>⑥冻结雇用</td>
+<td>慢</td>
+<td>低</td>
+</tr>
+<tr>
+<td>⑦自然减员</td>
+<td>慢</td>
+<td>低</td>
+</tr>
+<tr>
+<td>⑧鼓励提前退休</td>
+<td>慢</td>
+<td>低</td>
+</tr>
+<tr>
+<td>⑨进行重新培训</td>
+<td>慢</td>
+<td>低</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 过剩九法口诀</div><p><strong>"快刀三连伤得重：裁、降薪、降级；快中两招：调动、分享；温柔四招全靠等：冻结、自然减员、提前退休、重新培训"</strong>——规律：<strong>要快就要伤人，要温柔就得等</strong>。题目问"受伤害程度低"，只在慢的四招里挑。</p></div></div>
+<div class="section"><h3>2. 避免未来出现劳动力短缺的方法（★★★）<span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p>七种方法，看两个维度——<strong>速度</strong>和<strong>可撤回程度</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>速度</th>
+<th>可撤回程度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①加班加点</td>
+<td>快</td>
+<td>高</td>
+</tr>
+<tr>
+<td>②雇用临时工</td>
+<td>快</td>
+<td>高</td>
+</tr>
+<tr>
+<td>③业务外包</td>
+<td>快</td>
+<td>高</td>
+</tr>
+<tr>
+<td>④再培训后换岗</td>
+<td>慢</td>
+<td>高</td>
+</tr>
+<tr>
+<td>⑤降低流动率</td>
+<td>慢</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>⑥从外部雇用新员工</td>
+<td>慢</td>
+<td>低</td>
+</tr>
+<tr>
+<td>⑦技术创新</td>
+<td>慢</td>
+<td>低</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 短缺七法口诀</div><p><strong>"快三招随叫随到还能撤：加班、临时工、外包；慢四招看撤回：换岗高、流动中，外雇和创新低"</strong>。2022 年单选问"见效快＋可撤回程度高"——答案是延长工作时间，也就是<strong>加班加点</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 两张表的做题套路</div><p>先看问的是<strong>过剩</strong>还是<strong>短缺</strong>，方向别搞反；再看用哪套刻度：过剩表配"速度＋<strong>受伤害程度</strong>"，短缺表配"速度＋<strong>可撤回程度</strong>"——"受伤害程度"只属于过剩表，"可撤回程度"只属于短缺表，两套刻度不能串门。最后按速度筛：问"快"只在快招里挑，问"伤害低/可撤回高"重点盯慢招里那几个（冻结、自然减员、提前退休、重新培训；换岗）。</p></div></div>
+<div class="section"><h3>3. 关键方法分析</h3>
+<p><strong>（1）裁员（人员精简）</strong>（★）</p>
+<ul>
+<li><strong>原因</strong>：降低成本；关闭过时和落后的工厂或在原有工厂中引进新的技术；企业改变经营地点、员工难以随之迁移。</li>
+<li><strong>影响</strong>：在削减成本方面<strong>立竿见影</strong>；但对组织的<strong>长期有效性</strong>产生负面影响——研发密集型公司会<strong>降低长期利润</strong>；对服务业不利；对高参与工作实践（如团队）不利。</li>
+<li><strong>没有强化绩效的原因</strong>（四条，多选题眼）：①可能导致<strong>人才流失</strong>，破坏了激发员工创造性和灵活性的<strong>社会网络</strong>；②裁掉的员工是企业<strong>根本无法替代的重要资产</strong>；③<strong>留下来的员工心存戒备</strong>，工作积极性可能大幅下降、随时准备离开；④<strong>负面公众形象</strong>，使企业日后更难招募到员工。</li>
+</ul></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 裁员双面刃</div><p><strong>"省钱的刀见血快，长期的伤好得慢"</strong>——成本立竿见影地降下来，但人才、士气、声誉三本长期账都在亏。</p></div></div>
+<div class="section"><p><strong>（2）提前退休计划</strong>：提供<strong>退休奖励或其他补偿</strong>等手段，促使员工以<strong>自动离职</strong>的方式主动退休。</p>
+<p><strong>（3）雇用临时员工或劳务派遣人员</strong>，好处有六：①灵活性高；②免除大量管理与财务负担；③帮助无力自行甄选员工的小公司完成招聘与用工；④降低培训成本，且双方容易相互适应；⑤因在本企业经验少，对组织和工作程序等问题有<strong>客观看法</strong>，有助于改进效率与绩效；⑥可能在其他企业积累了丰富经验，能为用工方提供更多解决问题的备选方案。</p>
+<p><strong>（4）业务外包及离岸经营</strong></p>
+<ul>
+<li><strong>业务外包</strong>：企业将<strong>整块工作</strong>委托给外部组织去完成——可控制直接雇用的规模、聚焦关键岗位与人才、提升人力资源管理价值；同时让人力资源部门从日常事务中解放出来，专注于战略层面问题。</li>
+<li><strong>离岸经营</strong>（★★）：一种<strong>特殊的外包形式</strong>，将工作岗位<strong>从一个国家转移到另一个国家</strong>。内容如生产岗位、呼叫中心的服务岗位、证券分析、技术研发等（现已延伸到很多<strong>高技能的岗位</strong>）。</li>
+<li><strong>离岸经营取得成功的方法</strong>：①选择<strong>规模大、历史悠久</strong>的外包商；②外包<strong>模块化、非核心或非涉密</strong>的工作（避免专利或高安全要求的工作离岸外包）；③<strong>从小工作入手并密切监督</strong>，以控制潜在损失。</li>
+</ul></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 离岸经营口诀</div><p><strong>"离岸＝跨国的外包；找大牌、包模块、避开专利密件、从小盯紧"</strong>——别被"高技能岗位都不适宜离岸"骗到：证券分析、技术研发这类高技能岗位如今也能离岸（2023 年就考了这个坑）。</p></div></div>
+<div class="section"><p><strong>（5）调整薪酬和工作时数</strong>：也是实现供求平衡可以采用的方法之一。</p></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>需求＞供给五招</strong>：延工时（短期首选）→长期招募（含退休返聘、非全日制）→降流失→提效率（技术/流程/培训）→非核心业务外包</li>
+<li><strong>需求＜供给五招</strong>：冻（冻结雇用）、退（提前退休）、缩（缩短工时/工作分享＋降工资）、裁（最简单直接见效快）、训（培训或上新项目）</li>
+<li><strong>结构不匹配三招</strong>：训现有人员；到期终止＋自然退休、外招高素质储备；老员工转辅助岗</li>
+<li><strong>过剩九法</strong>：快伤高（裁/降薪/降级）、快伤中（调动/职位分享）、慢伤低（冻结/自然减员/提前退休/重新培训）</li>
+<li><strong>短缺七法</strong>：快撤高（加班/临时工/外包）、慢撤高（再培训换岗）、慢撤中（降流动率）、慢撤低（外雇新人/技术创新）</li>
+<li><strong>裁员</strong>：省钱立竿见影、长期有效性受损；四后遗症＝人才流失坏网络、裁掉不可替代资产、留任者戒备想走、负面形象难招人</li>
+<li><strong>提前退休计划</strong>＝奖励补偿促自动离职；<strong>离岸经营</strong>＝特殊外包、岗位跨国转移，成功三法＝大牌外包商＋模块化非核心非涉密＋从小入手密切监督</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r05s2q1" data-answer="ACE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">在人力资源需求大于供给时，组织可以采取的对策有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 扩大外部招募范围，加大招募投入</button><button type="button" class="qopt" data-key="B">B. 冻结雇佣，通过自然减员平衡供求</button><button type="button" class="qopt" data-key="C">C. 延长现有员工的工作时间</button><button type="button" class="qopt" data-key="D">D. 鼓励员工提前退休</button><button type="button" class="qopt" data-key="E">E. 通过培训提高员工工作效率</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACE</div><div class="q-exp"><p>析：需求大于供给的五条对策：延长现有员工的工作时间（C 对）；扩大招募范围、加大招募投入，还可聘用已退休人员和非全日制员工（A 对）；降低现有人员流失率；改进技术、优化流程、加强培训以提高效率（E 对）；部分非核心业务外包。B、D（冻结雇用、鼓励提前退休）是需求<strong>小于</strong>供给时的对策，方向弄反了。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s2q2" data-answer="C" data-type="single"><span class="q-tag">2022·单选</span><div class="q-stem">某企业出现劳动力短缺情况，见效快，可撤回程度高的方法是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 再培训转岗</button><button type="button" class="qopt" data-key="B">B. 招新员工</button><button type="button" class="qopt" data-key="C">C. 延长工作时间</button><button type="button" class="qopt" data-key="D">D. 进行技术创新</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：避免劳动力短缺的方法中"速度快＋可撤回程度高"的只有三个：<strong>加班加点</strong>（延长工作时间）、雇用临时工、业务外包。再培训转岗速度慢（A）；从外部招新员工速度慢、可撤回程度低（B）；技术创新速度慢、可撤回程度低（D）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s2q3" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">如果企业的人力资源需求增长是长期性的，适合采取的对策是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 招聘新员工</button><button type="button" class="qopt" data-key="B">B. 鼓励员工职位分享</button><button type="button" class="qopt" data-key="C">C. 雇用临时工</button><button type="button" class="qopt" data-key="D">D. 让现有员工多加班</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：延长工时、雇临时工只适合<strong>短期或阶段性</strong>需求；需求增长是<strong>长期性</strong>的，就必须考虑做好<strong>招募工作</strong>——扩大招募范围、加大招募投入，树立组织在劳动力市场上的形象和品牌（A 对）。职位分享是需求小于供给时的对策（B），临时工和加班都只是短期权宜之计（C、D）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s2q4" data-answer="C" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">当企业的人力资源需求小于供给时，比较适合采取的策略是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 鼓励员工加班加点</button><button type="button" class="qopt" data-key="B">B. 招募人员</button><button type="button" class="qopt" data-key="C">C. 裁员</button><button type="button" class="qopt" data-key="D">D. 非核心业务外包</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：需求小于供给的五条对策：冻结雇用、鼓励提前退休、缩短工时（工作分享＋降工资）、临时性解雇或永久性<strong>裁员</strong>、对冗余人员培训——C 属于其中。A 加班、B 招募、D 外包都是需求<strong>大于</strong>供给时的对策。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s2q5" data-answer="ABC" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">对人员过剩的质检类员工进行裁员，可能产生的不利影响有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 降低未被裁员的质检类员工的心理安全感</button><button type="button" class="qopt" data-key="B">B. 对企业的社会公众形象产生负面影响</button><button type="button" class="qopt" data-key="C">C. 对被裁员的质检类员工产生经济和心理伤害</button><button type="button" class="qopt" data-key="D">D. 大幅度增加企业的运营成本</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：裁员在削减成本方面<strong>立竿见影</strong>，D 说法颠倒。其不利影响包括：留下来的员工<strong>心存戒备</strong>、工作积极性大幅下降、随时准备离开（A）；<strong>负面公众形象</strong>，使企业日后更难招募员工（B）；被裁员工失去工作与收入来源、承受心理冲击（C）。此外还可能导致人才流失、破坏激发员工创造性和灵活性的社会网络。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s2q6" data-answer="AB" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">公司预测明年生产操作职位会出现人员过剩，可采取的员工受伤害程度低的措施有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 冻结雇用</button><button type="button" class="qopt" data-key="B">B. 鼓励提前退休</button><button type="button" class="qopt" data-key="C">C. 对部分员工降级</button><button type="button" class="qopt" data-key="D">D. 对员工降薪</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AB</div><div class="q-exp"><p>析：减少劳动力过剩的方法中，员工受伤害程度<strong>低</strong>的是四个"慢"办法：冻结雇用（A）、自然减员、鼓励提前退休（B）、重新培训。降级（C）、降薪（D）虽然速度快，但员工受伤害程度<strong>高</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s2q7" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">人力资源需求小于供给时的组织对策中，（　）是最简单、最直接同时也是见效最快的方法。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 对富余人员进行培训</button><button type="button" class="qopt" data-key="B">B. 临时性解雇或永久性裁员</button><button type="button" class="qopt" data-key="C">C. 鼓励员工提前退休</button><button type="button" class="qopt" data-key="D">D. 工作分享</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：<strong>临时性解雇或永久性裁员</strong>最简单、最直接、见效最快（B 对），但它可能受国家法律制约、受工会质疑挑战而付出较高成本，且若一贯如此会影响组织在劳动力市场上的形象，不利于未来招聘。培训（A）、提前退休（C）、工作分享（D）都相对温和、见效慢。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力05_人力资源规划_第1节_人力资源规划及其供求预测.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 人力资源规划及其供求预测</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

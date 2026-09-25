@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第14章 劳动合同管理与特殊用工 · 劳动合同履行与变更 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第四部分 人力资源与社会保险政策</span><h1>第14章 劳动合同管理与特殊用工 · 劳动合同履行与变更</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 35 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="r14s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住劳动合同履行的两大原则，会处理<strong>履行地与注册地不一致</strong>时的标准适用（★判断高频） <span class="hot">高频考点</span></li>
+<li>背下用人单位三项履行义务（含<strong>支付令</strong>）与劳动者三项义务 <span class="hot">高频考点</span></li>
+<li>一句话锁死<strong>特殊履行</strong>：换名换法人不换合同，合并分立合同照履行 <span class="must">必考</span></li>
+<li>记住变更须<strong>书面</strong>、口头变更＋履行超一个月的效力规则，六类变更情形能对号 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、劳动合同履行的原则与双方义务</h2>
+<h3>1. 履行的原则与"履行地"规则 <span class="hot">高频考点</span></h3>
+<p><strong>劳动合同履行</strong>是指双方当事人按照劳动合同的约定，全面完成各自义务的行为。履行遵循两大原则：<strong>全面履行</strong>（按约定全部履行，不打折扣）、<strong>合法履行</strong>（履行方式与内容不得违法）。</p>
+<p>★考试最爱考"履行地"：<strong>劳动合同履行地与用人单位注册地不一致</strong>时，有关劳动者的<strong>最低工资标准、劳动保护、劳动条件</strong>和<strong>本地区上年度职工月平均工资标准</strong>等事项，<strong>执行履行地的规定</strong>；<strong>注册地标准高于履行地标准，且双方约定按照注册地标准执行的，从其约定</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>白话：人干活在哪儿，底线标准就按哪儿：</strong><p>最低工资、劳动保护、劳动条件、社平工资这几样"底线型"事项，默认跟着<strong>履行地</strong>（实际干活的地方）走；只有"注册地标准更高＋双方白纸黑字约定按注册地"这两个条件同时满足，才改用注册地标准。缺一个条件，都按履行地。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>甲公司注册在北京，生产基地（劳动合同履行地）在河北。北京的最低工资标准高于河北——公司想按北京标准发最低工资吗？默认不行：小张在河北上班，最低工资、劳动保护等按河北标准执行；除非双方在合同里明确约定"按北京标准执行"，且北京标准确实更高，才从其约定。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 履行地规则</div><p><strong>"人在哪儿干活，标准跟哪儿走；注册地更高又约定，才按注册地来。"</strong>——四样事项（最低工资、劳动保护、劳动条件、上年度社平工资）认准履行地，例外必须"更高＋约定"双条件。</p></div></div>
+<div class="section"><h3>2. 用人单位的履行义务 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>义务</th>
+<th>内容要点</th>
+<th>考点提示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>及时足额支付劳动报酬</strong></td>
+<td>按劳动合同约定和国家规定支付</td>
+<td>拖欠或未足额 → 劳动者可依法向当地<strong>人民法院</strong>申请<strong>支付令</strong>，法院应当依法发出</td>
+</tr>
+<tr>
+<td><strong>严格执行劳动定额标准</strong></td>
+<td>不得强迫或者变相强迫劳动者加班</td>
+<td>"变相强迫"也违法</td>
+</tr>
+<tr>
+<td><strong>保护生命安全和身体健康</strong></td>
+<td>提供劳动安全卫生保护</td>
+<td>劳动者<strong>拒绝违章指挥、强令冒险作业</strong>的，<strong>不视为违反劳动合同</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>支付令：拖欠报酬的&quot;快车道&quot;：</strong><p>用人单位拖欠或者未足额支付劳动报酬的，劳动者可以依法向<strong>当地人民法院</strong>申请<strong>支付令</strong>，人民法院<strong>应当</strong>依法发出支付令——不用先仲裁，对象只能是法院。这跟"劳动争议先仲裁后诉讼"是两条不同的路，别混。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 拒绝冒险不算违约</div><p>"劳动者拒绝违章指挥、强令冒险作业，不视为违反劳动合同"是判断题高频句：单位不能以此为由处分或解除合同。看到"违章指挥""强令冒险作业"，条件反射选"不视为违约、劳动者有权拒绝"。</p></div></div>
+<div class="section"><h3>3. 劳动者的履行义务</h3>
+<table>
+<thead>
+<tr>
+<th>义务</th>
+<th>内容要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>守法守规</td>
+<td>遵守国家法律法规，遵守用人单位的规章制度</td>
+</tr>
+<tr>
+<td>完成本职</td>
+<td>完成劳动合同约定的工作内容；<strong>从事兼职不得影响本单位工作任务</strong></td>
+</tr>
+<tr>
+<td>约定事项义务</td>
+<td>遵守合同约定的特定事项：<strong>约定服务期</strong>、<strong>保守商业秘密和与知识产权相关的保密事项</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 劳动者义务三件套</div><p><strong>"守法守规、干完本职、守约守密"</strong>——服务期和保密是合同里"特别约定"的义务，为后面第 2 节的服务期违约金、竞业限制埋下伏笔。</p></div></div>
+<div class="section"><h2>二、特殊情形下的劳动合同履行 <span class="must">必考</span></h2>
+<h3>4. 单位"变了"，合同怎么办 <span class="must">必考</span></h3>
+<p><strong>特殊履行</strong>规则——单位主体发生变化时劳动合同的承接：</p>
+<table>
+<thead>
+<tr>
+<th>单位变化情形</th>
+<th>劳动合同如何处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>变更<strong>名称、法定代表人、主要负责人、投资人</strong>等事项</td>
+<td><strong>不影响</strong>劳动合同的履行；变更登记后合同继续有效，<strong>不需要重新签订</strong></td>
+</tr>
+<tr>
+<td>发生<strong>合并或分立</strong></td>
+<td>原劳动合同<strong>继续有效</strong>，由<strong>承继其权利和义务</strong>的用人单位<strong>继续履行</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>记忆抓手：</strong><p>单位"换皮"（改名、换法人、换老板）合同纹丝不动；单位"换壳"（合并、分立）合同也不动，只是换了个主体来接着履行。核心逻辑：<strong>劳动合同不因单位内部变化而失效，权利义务有人接盘</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小周与甲公司签了三年合同，第二年甲公司被乙公司吸收合并。甲公司的名称没了，但小周的合同继续有效，由乙公司（承继权利义务的单位）继续履行——小周不用重签合同，工龄也接着算。反过来，如果只是甲公司把名字改成"甲乙科技公司"，那连履行主体都没变，合同照旧。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 特殊履行：人变名变，合并分立</div><p><strong>"人变名变，合同照旧；合并分立，有人接盘。"</strong>——名称、法定代表人、主要负责人、投资人怎么换都不影响；合并、分立由承继单位继续履行。凡是选项里出现"应当重新签订劳动合同""原合同不再有效"，一律错。</p></div></div>
+<div class="section"><h2>三、劳动合同的变更</h2>
+<h3>5. 变更的形式与规则 <span class="hot">高频考点</span></h3>
+<p><strong>劳动合同变更</strong>是指合同尚未履行完毕之前，双方当事人依法对合同内容进行修改或补充的行为。两条规则：</p>
+<ol>
+<li><strong>采用书面形式</strong>。但口头变更劳动合同并<strong>实际履行超过一个月</strong>，且<strong>内容合法、不违背公序良俗</strong>的，一方再以"未采用书面形式"为由主张变更无效的，法院<strong>不予支持</strong>；</li>
+<li>用人单位与劳动者<strong>协商一致</strong>，可以变更劳动合同约定的内容；变更中协商不一致、发生争议的，<strong>任何一方</strong>均可向<strong>劳动仲裁委员会</strong>申请仲裁。</li>
+</ol></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 口头变更有效的三个条件缺一不可</div><p>①口头变更；②<strong>实际履行超过一个月</strong>；③内容合法、不违背公序良俗。三个条件同时满足，事后翻脸主张"没签书面所以无效"才不被支持。只谈了没实际履行、或变更内容本身违法，口头变更照样无效——做题时先数条件。</p></div></div>
+<div class="section"><h3>6. 变更的六类情形</h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>情形</th>
+<th>性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>双方当事人<strong>协商一致</strong>变更</td>
+<td>双方合意</td>
+</tr>
+<tr>
+<td>②</td>
+<td>订立合同时所依据的<strong>法律法规已修改或废止</strong>，部分条款与之相悖或失去依据</td>
+<td>法定被动变更</td>
+</tr>
+<tr>
+<td>③</td>
+<td>企业受<strong>产业政策、市场变化</strong>影响决定<strong>转产或调整生产任务</strong>等经济因素</td>
+<td>经营需要</td>
+</tr>
+<tr>
+<td>④</td>
+<td>订立合同时所依据的<strong>客观情况发生重大变化</strong>，致使劳动合同无法履行</td>
+<td>客观情势</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>劳动者<strong>患病或非因工负伤，医疗期满后不能从事原工作</strong>，由单位另行安排工作</td>
+<td>与第 2 节 40 条①挂钩</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>劳动者<strong>不能胜任工作，被调整了工作岗位</strong></td>
+<td>与第 2 节 40 条②挂钩</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 变更六情形</div><p><strong>"商、法、转、变、病、能"</strong>——一商量（协商一致）、二法改（法规修改废止）、三转产（产业政策市场变化）、四情变（客观情况重大变化）、五病后（医疗期满另行安排）、六不胜（不胜任调岗）。⑤⑥是"个人状态"引发的变更，②③④是"外环境"引发的变更，①是纯合意——案例分析里"调岗降薪是否合法"，先对照这六类找依据。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>履行原则</strong>：全面履行＋合法履行</li>
+<li><strong>履行地≠注册地</strong>：最低工资、劳动保护、劳动条件、上年度社平工资 → 按<strong>履行地</strong>；注册地更高<strong>且约定</strong> → 从其约定</li>
+<li><strong>单位义务</strong>：及时足额付酬（拖欠/未足额 → 向<strong>法院</strong>申请<strong>支付令</strong>）；严格执行劳动定额、不强迫变相强迫加班；保护生命安全健康（拒绝违章指挥、强令冒险作业<strong>不视为违约</strong>）</li>
+<li><strong>劳动者义务</strong>：守法守规；完成本职（兼职不影响本单位任务）；约定事项（服务期＋保密）</li>
+<li><strong>特殊履行</strong>：名称/法定代表人/主要负责人/投资人变更 → <strong>不影响履行</strong>；合并分立 → <strong>承继单位继续履行</strong></li>
+<li><strong>变更</strong>：应<strong>书面</strong>；口头＋实际履行超 1 个月＋内容合法不违公序良俗 → 主张无效不支持；六类情形"商法转变病能"</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r14s1q1" data-answer="B" data-type="single"><span class="q-tag">2017·单选</span><div class="q-stem">符合法律规定的劳动合同处理方式是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 甲公司更改名称为乙公司，那么原甲公司为劳动者签订的劳动合同不再有效</button><button type="button" class="qopt" data-key="B">B. 甲公司分立为乙公司和丙公司，甲公司与劳动者签订的劳动合同不受分立影响继续履行</button><button type="button" class="qopt" data-key="C">C. 甲公司更换法定代表人后，新的法定代表人应与劳动者重新签订劳动合同</button><button type="button" class="qopt" data-key="D">D. 甲公司和乙公司合并为丙公司后，丙公司应与甲乙公司的劳动者重新签订劳动合同</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：用人单位变更名称、法定代表人、主要负责人或者投资人等事项，<strong>不影响</strong>劳动合同的履行，A、C 错误；用人单位发生合并或者分立，原劳动合同<strong>继续有效</strong>，由承继其权利义务的用人单位<strong>继续履行</strong>，B 正确、D 错误——"重新签订"三个字就是陷阱标志。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s1q2" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">用人单位拖欠劳动报酬时，劳动者依法申请支付令的对象是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 人民法院</button><button type="button" class="qopt" data-key="B">B. 人民法院或劳动人事争议仲裁委员会</button><button type="button" class="qopt" data-key="C">C. 劳动行政部门</button><button type="button" class="qopt" data-key="D">D. 劳动人事争议仲裁委员会</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：用人单位拖欠或者未足额支付劳动报酬的，劳动者可以依法向当地<strong>人民法院</strong>申请支付令，人民法院应当依法发出支付令——对象只有法院（A 对）。B 拉上仲裁委没有依据；C 劳动行政部门管的是责令改正、警告等行政执法，不发支付令；D 仲裁委处理劳动争议案件，同样不是支付令的申请对象。
+:::</p></div></details></div><div class="quiz-item" data-qid="r14s1q3" data-answer="B" data-type="single"><span class="q-tag">自编·单选</span><div class="q-stem">甲公司注册地在 A 市，主要经营场所在 B 市，劳动合同履行地为 B 市，A 市上年度职工月平均工资标准高于 B 市，双方未作特别约定。有关该公司劳动者最低工资标准等事项，应当（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 执行 A 市标准</button><button type="button" class="qopt" data-key="B">B. 执行 B 市标准</button><button type="button" class="qopt" data-key="C">C. 由双方另行协商确定</button><button type="button" class="qopt" data-key="D">D. 执行两市中较高的标准</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：劳动合同履行地与用人单位注册地不一致的，最低工资标准、劳动保护、劳动条件、本地区上年度职工月平均工资标准等事项<strong>执行履行地的规定</strong>——人在哪儿干活按哪儿的底线标准（B 对，B 市是履行地）。只有<strong>注册地标准高于履行地标准，且双方约定按照注册地标准执行</strong>时才从其约定，本题未约定，A 不选；此类事项法定有归属，无须另行协商（C 错），也不适用"就高"原则（D 错）。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力14_劳动合同管理与特殊用工_第2节_劳动合同解除与终止.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 劳动合同解除与终止</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第九章 价格总水平和就业、失业 · 价格总水平 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第九章 价格总水平和就业、失业 · 价格总水平</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 35 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="b09s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>价格总水平</strong>的定义与度量：只算商品和服务价格、度量只认 <strong>CPI</strong> <span class="hot">高频考点</span></li>
+<li>会用<strong>费雪方程式</strong>判断货币供给量、货币流通速度、总产出与价格总水平的同向反向，分清总需求的"长期看需求、短期看供需" <span class="must">必考</span> <span class="s3">★★★</span></li>
+<li>背熟三大公式：<strong>π＝m＋v−y</strong>、<strong>实际工资≈名义工资−物价</strong>、<strong>i＝r−π</strong>，会用购买力平价说汇率 <span class="hot">高频考点</span></li>
+<li>分清价格总水平变动的<strong>直接效应</strong>（工资、利率、汇率）与<strong>间接效应</strong>（企业决策、收入分配、经济增长） <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、价格总水平的含义和度量</h2>
+<h3>1. 什么是价格总水平 <span class="hot">高频考点</span></h3>
+<p><strong>价格总水平</strong>（也叫<strong>一般价格水平</strong>）是指一个国家或地区在<strong>一定时期内</strong>全社会<strong>各类商品和服务价格变动状态的平均或综合</strong>，一般用<strong>价格指数</strong>来度量。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>是否计入价格总水平</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全社会各类<strong>商品和服务</strong>的价格变动</td>
+<td><strong>计入</strong>（这正是它的统计对象）</td>
+</tr>
+<tr>
+<td><strong>证券、期货、债券</strong>等生产要素市场价格变动</td>
+<td><strong>不计入</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>只认&quot;商品和服务&quot;：</strong><p>价格总水平＝商品和服务价格变动的"平均值"。看到选项把<strong>股票、债券、期货</strong>等生产要素市场价格混进来，一律排除——2023、2024、2025 连着三年考这条。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>菜价、房租、理发费、外卖涨没涨（商品和服务）→ 影响价格总水平；你股票账户里的票、手里的债券、期货合约涨跌再猛 → 都不算进价格总水平。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 含义口诀</div><p><strong>"总水平，看平均；商品服务才算数；证券期货债券，一边站"</strong>——定义里三个采分点：一定时期内、平均或综合、价格指数来度量。</p></div></div>
+<div class="section"><h3>2. 价格指数与基本指标 <span class="hot">高频考点</span></h3>
+<p><strong>价格指数</strong>是用来反映<strong>报告期与基期相比</strong>、商品价格水平的<strong>变化趋势和变化程度</strong>的<strong>相对数</strong>。反映价格总水平变动的叫做<strong>价格总指数</strong>，一般称为价格指数。</p>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>价格指数</td>
+<td>报告期 vs 基期价格水平变化的相对数</td>
+</tr>
+<tr>
+<td>价格总指数</td>
+<td>反映<strong>价格总水平</strong>变动的价格指数</td>
+</tr>
+<tr>
+<td>我国的基本指标</td>
+<td><strong>居民消费价格指数（CPI）</strong>——衡量价格总水平变动的基本指标</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>基本指标只有 CPI 一个：</strong><p>问"我国采用什么作为衡量价格总水平变动的基本指标"，答案永远只有<strong>居民消费价格指数（CPI）</strong>。干扰项是老熟人：期货价格指数、股票价格综合指数、PPI（生产价格指数）、核心 PPI——全不是。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>把 2020 年定为基期（100），2026 年买同样一篮子商品要花 118 元 → 报告期价格指数 118，"比基期贵了 18%"——这就是价格指数干的事：给"涨没涨、涨多快"打个数。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 度量口诀</div><p><strong>"一篮子商品打相对数，中国量物价只认 CPI"</strong>——价格指数是"报告期比基期"的相对数；CPI 是我国衡量价格总水平变动的<strong>唯一</strong>基本指标。</p></div></div>
+<div class="section"><h2>二、决定价格总水平变动的因素</h2>
+<h3>1. 货币供给量、货币流通速度与总产出：费雪方程式 <span class="must">必考</span></h3>
+<p>决定价格总水平变动的第一组因素可以合写进一个公式——<strong>费雪方程式</strong>：</p>
+<p><strong>MV＝PT，即 P＝MV/T</strong>（M 货币供给量，V 货币流通速度，P 价格总水平，T 总产出）</p>
+<p>以<strong>变动率</strong>表示的公式：<strong>π＝m＋v−y</strong>（π 价格总水平变动率，m 货币供给量变动率，v 货币流通速度变动率，y 总产出变动率）。</p>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>变动方向</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>货币供给量（M）</td>
+<td><strong>同向</strong>：货币供给量增长 → 价格总水平上升</td>
+<td>钱印多了，东西贵</td>
+</tr>
+<tr>
+<td>货币流通速度（V）</td>
+<td><strong>同向</strong>：货币流通速度加快 → 价格总水平上涨</td>
+<td>钱转得快，东西贵</td>
+</tr>
+<tr>
+<td>总产出（T）</td>
+<td><strong>反向</strong>：总产出增长 → 价格总水平一般会下降</td>
+<td>货多了，东西便宜</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>公式比口诀更硬：</strong><p>记不准方向时，直接用 <strong>P＝MV/T</strong> 推：M 在分子 → 同向；V 在分子 → 同向；T 在分母 → 反向。变动率公式 <strong>π＝m＋v−y</strong> 里同样：m、v 带加号（同向），y 带减号（反向）。两个公式互为"翻译版"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某年货币供给量增长 6%，货币流通速度不变（v＝0），总产出增长 4%：第一步代入 <strong>π＝m＋v−y＝6%＋0−4%</strong>；第二步算出 <strong>π＝2%</strong>，即价格总水平约上涨 2%。用白话复核一遍：钱多了 6%，货只多了 4%，钱比货多出来的部分就体现在涨价上。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 方向口诀（防反专用）</div><p><strong>"钱多钱快物价涨，货多产出物价降"</strong>——两个"钱"因素（货币供给量、流通速度）同向推高物价；"货"（总产出）反向拉低物价。用户最容易把"总产出"记反：产出增长是<strong>分母变大</strong>，物价降才对。</p></div></div>
+<div class="section"><h3>2. 总需求与总供给：长期看需求，短期看赛跑 <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>变动方向</th>
+<th>原理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>总需求</strong></td>
+<td>与价格总水平呈<strong>反向</strong>变动</td>
+<td>就总需求曲线而言：价格总水平越高，总需求越少</td>
+</tr>
+<tr>
+<td><strong>总供给</strong></td>
+<td><strong>长期</strong>：总供给变动与价格总水平<strong>无关</strong>；<strong>短期</strong>：总供给与价格总水平<strong>同向</strong>变动</td>
+<td>长期：决定价格总水平的是<strong>总需求</strong>；短期：价格总水平由<strong>总需求和总供给共同决定</strong></td>
+</tr>
+</tbody>
+</table>
+<p>短期的"赛跑规则"：如果<strong>总需求增长快于总供给</strong>的增长，价格总水平就<strong>有可能上升</strong>；反之，价格总水平就有可能下降。</p></div>
+<div class="section"><div class="keypoint"><strong>长短期分工：</strong><p><strong>长期</strong>：总供给曲线立起来了，它怎么变都<strong>不牵动价格总水平</strong>，说了算的只有总需求；<strong>短期</strong>：总需求、总供给两头一起定价——总需求跑赢总供给，物价有上行压力。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>春节前大家都抢着买年货（总需求猛增），商家备货跟不上（总供给没跟上）→ 年货涨价；反过来果园大丰收、苹果供给暴增，需求没变 → 苹果降价。短期物价就看这场供需赛跑谁跑得快。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 供需口诀</div><p><strong>"长期只认总需求，短期供需一起定；需求跑赢供给，物价往上走"</strong>——判断题里见"长期""总供给决定价格总水平"就是错的。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;总需求反向&quot;的两个口径，别自己打架</div><p>①<strong>沿曲线滑动</strong>（总需求曲线）：价格总水平越高、总需求越少——所以说"总需求与价格总水平呈反向变动"；②<strong>曲线整体移动</strong>（增长对比）：总需求增速跑赢总供给增速 → 价格总水平可能上升。一个说的是"曲线上滑动"，一个说的是"曲线移动"，不矛盾。另外记住：<strong>产业结构</strong>影响的是<strong>就业弹性</strong>，不是价格总水平的决定因素（"决定价格总水平变动的主要因素"多选题最爱用"产业结构"当干扰项）。</p></div></div>
+<div class="section"><h2>三、价格总水平变动的经济效应</h2>
+<h3>1. 直接效应：对工资、利率、汇率的影响 <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>效应</th>
+<th>关键概念</th>
+<th>变动方向 / 公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对<strong>工资</strong>的影响</td>
+<td><strong>名义工资</strong>＝以当时的货币形式表现的工资；<strong>实际工资</strong>＝扣除了价格变动影响因素的工资</td>
+<td>实际工资的变动与名义工资的变动<strong>成正比</strong>，与价格总水平的变动<strong>成反比</strong></td>
+</tr>
+<tr>
+<td>对<strong>利率</strong>的影响</td>
+<td><strong>名义利率</strong>（市场利率，银行规定和发布的利率）；<strong>实际利率</strong>＝扣除了价格总水平变动影响因素的利率，即<strong>货币购买力不变</strong>时的利率</td>
+<td><strong>i＝r−π</strong>；实际利率与名义利率<strong>同向</strong>变动，与价格总水平的变动<strong>反向</strong></td>
+</tr>
+<tr>
+<td>对<strong>汇率</strong>的影响</td>
+<td>购买力平价理论：汇率由<strong>两国货币购买力之比</strong>决定，货币购买力是价格总水平的<strong>倒数</strong>（购买力＝1/价格总水平）；汇率＝别国货币购买力/本国货币购买力</td>
+<td>本国价格总水平上涨率<strong>高于</strong>外国 → 本国货币<strong>贬值</strong> → 以本币表示的<strong>汇率上升</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>万能式：实际＝名义−物价（变化）：</strong><p>工资、利率都吃这一套：实际工资≈名义工资的变化减去物价的变化；实际利率 i＝r−π。"名义"里掺着物价水分，<strong>挤掉水分才是实际</strong>——这也是讲义大白话"实际＝名义−物价（变化）"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>①名义工资涨 5%，同期物价涨 8%：实际工资变动≈5%−8%＝<strong>−3%</strong>，实际工资<strong>下降</strong>——工资条数字大了，购买力反而缩水。②名义利率 3%，物价涨 5%：实际利率＝3%−5%＝<strong>−2%</strong>，存款实际是"负收益"。③本国物价上涨 6%、外国上涨 2%：本国涨价更快 → 本国货币购买力掉得更快 → 本币贬值，以本币表示的汇率上升。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 汇率方向口诀</div><p><strong>"本国物价涨得快，本币贬值汇率抬"</strong>——链条背下来：本国价格总水平上涨率高于外国 → 货币购买力下降 → 本币贬值 → 以本币表示的汇率上升。三步环环相扣，考试就爱挖中间一步。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 两个公式别串门</div><p><strong>π＝m＋v−y</strong> 是<strong>费雪方程式</strong>，回答"物价为什么变"（决定因素）；<strong>i＝r−π</strong> 是<strong>实际利率</strong>公式，回答"物价变了，利率怎么办"（效应）。还有一个文字陷阱：实际利率是货币购买力<strong>不变</strong>时的利率——不是"上升时"的利率，"上升"二字就是干扰。</p></div></div>
+<div class="section"><h3>2. 间接效应：企业决策、收入分配、经济增长</h3>
+<p>价格总水平变动的<strong>间接效应</strong>包括：对企业<strong>生产经营决策</strong>的影响、对<strong>收入分配结构</strong>的影响、以及对<strong>经济增长</strong>的影响。价格总水平变动，特别是<strong>剧烈的、大幅度的变化</strong>是<strong>不利于经济增长</strong>的。</p>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>对经济增长的可能影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通货膨胀（在一定程度上）</td>
+<td><strong>可能有利于</strong>促进经济增长</td>
+</tr>
+<tr>
+<td>通货紧缩（在一定程度上）</td>
+<td><strong>可能不利于</strong>经济增长</td>
+</tr>
+<tr>
+<td>剧烈的、大幅度的价格总水平变动</td>
+<td><strong>不利于</strong>经济增长</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>间接效应&quot;三件事&quot;：</strong><p><strong>企业、分蛋糕、经济增长</strong>——间接效应就这三件：企业生产经营决策、收入分配结构、经济增长。多选题把直接效应的三样（工资、利率、汇率）混进来当干扰，先排掉再说。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>物价温和上涨时，企业觉得产品能卖上价、利润有盼头，就愿意多雇人、多投产；通缩时东西越放越便宜，企业反而不敢生产投资。但若物价剧烈大幅波动，价格信号失灵、企业没法做长期打算，就转为不利于增长了——所以"任何通货膨胀都有利于经济增长"这种绝对化说法必错。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 直接/间接分家口诀</div><p><strong>"直接工资利率汇率，间接企业分配增长"</strong>——两行六个词对仗背，"间接效应包括"类的多选按这六词切分。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>价格总水平</strong>：一定时期内全社会各类商品和服务价格变动状态的平均或综合；不含证券、期货、债券等生产要素市场价格</li>
+<li><strong>度量</strong>：价格指数（报告期 vs 基期的相对数）；我国采用 <strong>CPI</strong> 作为衡量价格总水平变动的基本指标</li>
+<li><strong>决定因素</strong>：费雪方程式 MV＝PT → π＝m＋v−y；货币供给量、货币流通速度<strong>同向</strong>，总产出<strong>反向</strong>；长期决定价格总水平的是总需求，短期由总需求和总供给共同决定（需求跑赢供给→可能上升）</li>
+<li><strong>直接效应</strong>：工资（实际工资与名义工资成正比、与价格总水平成反比）；利率（i＝r−π，与名义利率同向、与价格总水平反向）；汇率（本国涨价快于外国→本币贬值→汇率上升）</li>
+<li><strong>间接效应</strong>：企业生产经营决策、收入分配结构、经济增长；剧烈大幅度变化不利于增长，通胀在一定程度上可能有利、通缩不利</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b09s1q1" data-answer="ABCD" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">决定价格总水平变动的主要因素有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 总产出</button><button type="button" class="qopt" data-key="B">B. 货币流通速度</button><button type="button" class="qopt" data-key="C">C. 总需求和总供给</button><button type="button" class="qopt" data-key="D">D. 货币供给量</button><button type="button" class="qopt" data-key="E">E. 产业结构</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：讲义列出的决定因素共两组合并四项——费雪方程式串起来的<strong>货币供给量、货币流通速度、总产出</strong>（B、D、A），加上<strong>总需求和总供给</strong>（C）。E"产业结构"影响的是<strong>就业弹性</strong>（第三产业占比大→就业弹性高），不是价格总水平的直接决定因素，是本题干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b09s1q2" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">实际利率、名义利率与价格总水平变动率三者之间的关系是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 实际利率＝名义利率＋价格总水平变动率</button><button type="button" class="qopt" data-key="B">B. 价格总水平变动率＝名义利率＋实际利率</button><button type="button" class="qopt" data-key="C">C. 实际利率＝名义利率－价格总水平变动率</button><button type="button" class="qopt" data-key="D">D. 名义利率＝实际利率－价格总水平变动率</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：实际利率 i＝名义利率 r−价格总水平变动率 π，C 正确。A 把减号写成加号；B 把三个量胡乱相加；D 移项错误（正确移项应为 r＝i＋π）。记"实际＝名义−物价"可秒杀此类题。
+:::</p></div></details></div><div class="quiz-item" data-qid="b09s1q3" data-answer="BDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">价格总水平变动的间接效应包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 对实际工资的影响</button><button type="button" class="qopt" data-key="B">B. 对企业生产经营决策的影响</button><button type="button" class="qopt" data-key="C">C. 对汇率变动的影响</button><button type="button" class="qopt" data-key="D">D. 对收入分配结构的影响</button><button type="button" class="qopt" data-key="E">E. 对经济增长的影响</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BDE</div><div class="q-exp"><p>析：间接效应＝企业生产经营决策、收入分配结构、经济增长，即 B、D、E。A"实际工资"、C"汇率"属于<strong>直接效应</strong>（直接效应：工资、利率、汇率三样），混进来当干扰。
+:::</p></div></details></div><div class="quiz-item" data-qid="b09s1q4" data-answer="BCD" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">关于价格总水平变动的经济效应的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 实际利率是在货币购买力上升时的利率</button><button type="button" class="qopt" data-key="B">B. 在价格总水平上涨过程中，如果名义工资不提高或提高幅度低于价格上升幅度，实际工资就会下降</button><button type="button" class="qopt" data-key="C">C. 在名义利率不变时，实际利率与价格总水平呈反向变动</button><button type="button" class="qopt" data-key="D">D. 价格总水平的变动会在一定条件下影响汇率的变动</button><button type="button" class="qopt" data-key="E">E. 任何通货膨胀都有利于促进经济增长</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：A 错——实际利率是货币购买力<strong>不变</strong>时的利率（扣除价格总水平变动影响因素），不是"上升时"；B 对——实际工资变动与价格总水平变动成反比，名义工资涨不过物价，实际工资就缩水；C 对——i＝r−π，名义利率 r 不变时，π 越大 i 越小，反向变动；D 对——按购买力平价，价格总水平变动影响购买力从而在一定条件下影响汇率；E 错——"任何"绝对化，剧烈的、大幅度的价格总水平变动不利于经济增长。
+:::</p></div></details></div><div class="quiz-item" data-qid="b09s1q5" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于价格总水平及价格指数的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 我国采用CPI 和期货价格指数加权综合指数作为价格总水平变动的基本指标</button><button type="button" class="qopt" data-key="B">B. 我国采用股票价格在内的综合价格指数作为衡量价格总水平变动的基本指标</button><button type="button" class="qopt" data-key="C">C. 我国采用PPI 作为衡量价格总水平变动的基本指标</button><button type="button" class="qopt" data-key="D">D. 我国采用CPI 作为衡量价格总水平变动的基本指标</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：我国采用<strong>CPI</strong> 作为衡量价格总水平变动的基本指标，D 正确。价格总水平只包括商品和服务价格，<strong>不包括</strong>证券、期货、债券等生产要素市场价格——A 混入期货价格指数、B 混入股票价格，全部排除；C 的 PPI（生产价格指数）也不是基本指标。
+:::</p></div></details></div><div class="quiz-item" data-qid="b09s1q6" data-answer="D" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">关于价格总水平含义的说法，正确的是()。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 价格总水平包括债券价格的变动状态</button><button type="button" class="qopt" data-key="B">B. 价格总水平包括期货市场价格的变动状态</button><button type="button" class="qopt" data-key="C">C. 价格总水平包括证券市场价格的变动状态</button><button type="button" class="qopt" data-key="D">D. 价格总水平是指用价格指数来度量的一个国家或地区各类商品和服务价格变动状态</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：价格总水平＝一个国家或地区在一定时期内<strong>各类商品和服务价格</strong>变动状态的平均或综合，用<strong>价格指数</strong>度量，D 正确。债券（A）、期货（B）、证券（C）都属于<strong>生产要素市场价格</strong>，一律不计入价格总水平。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础09_价格总水平和就业、失业_第2节_就业与失业.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 就业与失业</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第3章 组织设计与组织文化 · 组织设计 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第一部分 组织行为学</span><h1>第3章 组织设计与组织文化 · 组织设计</h1><div class="subtitle">第 1 节 / 共 3 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:33%"></div></div><div class="progress-text">本章进度 1/3</div><div class="sec-badge none" id="sec-badge" data-sec="r03s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>分清组织设计的<strong>静态/动态</strong>两种形式，背熟组织结构体系<strong>四大结构</strong>（职能/层次/部门/职权） <span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>记住<strong>十个特征因素</strong>与<strong>六个权变因素</strong>两套清单，会做"特征 vs 权变"的区分题 <span class="s3">★★★</span></li>
+<li>掌握组织设计<strong>八步程序</strong>，能对号"首要/主体/关键"三顶帽子</li>
+<li>五种设计类型（行政层级式/职能制/矩阵/事业部制/新型组织）的<strong>特点、优缺点、适用环境</strong>一条龙过关 <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、组织设计概述：从组织设计到组织结构体系</h2>
+<h3>1. 什么是组织设计与组织结构 <span class="hot">高频考点</span></h3>
+<p><strong>组织设计</strong>是对企业的<strong>组织结构及其运行方式</strong>所进行的设计。</p>
+<p>组织设计从形式上分为两种（★★★）：</p>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>别称</th>
+<th>设计对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>静态设计</strong></td>
+<td>古典的组织设计理论</td>
+<td><strong>只对组织结构</strong>进行的设计</td>
+</tr>
+<tr>
+<td><strong>动态设计</strong></td>
+<td>现代的组织设计理论</td>
+<td><strong>同时对组织结构和运行制度</strong>进行的设计</td>
+</tr>
+</tbody>
+</table>
+<p><strong>组织结构</strong>：为实现企业目标，企业全体员工进行<strong>分工协作</strong>，在<strong>职务范围、责任、权力</strong>方面所形成的结构体系，又称<strong>权责结构</strong>（实际中通常以组织图或组织树的形式出现）。</p>
+<p>组织结构的三方面含义（★★）：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>本质</strong></td>
+<td>企业员工的<strong>分工协作关系</strong></td>
+</tr>
+<tr>
+<td><strong>目的</strong></td>
+<td><strong>实现组织的目标</strong>——组织结构是实现目标的一种<strong>手段</strong></td>
+</tr>
+<tr>
+<td><strong>内涵</strong></td>
+<td>企业员工在<strong>职、权、责</strong>三方面的结构体系</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>静态与动态的分水岭：</strong><p>看设计对象里有没有"<strong>运行制度</strong>"四个字：只画组织架构图 → 静态（古典）；架构图＋规章流程一起设计 → 动态（现代）。2024 年多选 A 项"它的设计理论须是动态的，而非静态的"就是拿这里当干扰项——组织设计理论既有静态也有动态，不存在"须是"。</p></div></div>
+<div class="section"><p>组织结构设计的两种情况：①对<strong>新建企业</strong>——依据企业的战略和目标，对组织结构进行<strong>全新设计</strong>；②对<strong>现有企业</strong>——根据企业的变化和发展目标对原有组织结构进行<strong>再设计</strong>，即<strong>组织结构的变革</strong>。</p>
+<h3>2. 组织结构体系的四大结构 <span class="s3">★★★</span></h3>
+<p>组织结构体系的主要内容（★★★，2025 单选）：</p>
+<table>
+<thead>
+<tr>
+<th>结构</th>
+<th>内容</th>
+<th>记忆钩子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>职能结构</strong></td>
+<td>达到企业目标所需完成的各项<strong>业务工作</strong>及其比例和关系</td>
+<td>管业务</td>
+</tr>
+<tr>
+<td><strong>层次结构</strong></td>
+<td>各<strong>管理层次</strong>的构成</td>
+<td>又称<strong>纵向结构</strong></td>
+</tr>
+<tr>
+<td><strong>部门结构</strong></td>
+<td>各<strong>管理部门</strong>的构成</td>
+<td>又称<strong>横向结构</strong></td>
+</tr>
+<tr>
+<td><strong>职权结构</strong></td>
+<td>各管理层次、部门在<strong>权力和责任</strong>方面的分工和相互关系</td>
+<td>管权责</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四大结构一句话</div><p><strong>"职业务、层纵向、部横向、权权责"</strong>——职能管业务分工，层次是纵向等级，部门是横向单位，职权管权力责任。见"权力和责任方面的分工和相互关系"秒选<strong>职权结构</strong>；见"纵向结构"秒选<strong>层次结构</strong>、见"横向结构"秒选<strong>部门结构</strong>。</p></div></div>
+<div class="section"><p>组织结构的<strong>三要素</strong>：①<strong>复杂性</strong>——任务分工的层次、细致程度；②<strong>规范性</strong>——使用规则和标准处理方式以规范工作行为的程度；③<strong>集权度</strong>——决策权的集中程度。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>拿到一张组织结构图怎么"体检"：数一数有几个层级、分了多少个部门（复杂性）；翻一翻员工手册里"这类活必须按这五步干"的规定多不多（规范性）；查一查买 5 万元以上的设备要不要总经理签字（集权度）。</p></div></div>
+<div class="section"><h2>二、组织结构设计的主要参数 <span class="s3">★★★</span> <span class="hot">高频考点</span></h2>
+<h3>3. 十个特征因素 <span class="s3">★★★</span></h3>
+<p>组织结构设计的主要参数分为<strong>特征因素</strong>和<strong>权变因素</strong>两大类（★★★）。先看<strong>特征因素</strong>——组织结构本身的样子，共 10 个：</p>
+<table>
+<thead>
+<tr>
+<th>特征因素</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>管理层次和管理幅度</strong></td>
+<td>管理层次（组织层次）：从组织最高一级管理组织到最低一级的各个组织等级，表明组织结构的<strong>纵向复杂程度</strong>；管理幅度（管理跨度）：<strong>一名领导直接领导的下级人员的数量</strong>，反映上级领导直接控制和协调的业务活动量的多少</td>
+</tr>
+<tr>
+<td><strong>专业化程度</strong></td>
+<td>企业各职能分工的精细程度，具体表现为部门（科室）和职务（岗位）数量的多少</td>
+</tr>
+<tr>
+<td><strong>职业化程度</strong></td>
+<td>员工为掌握本职工作需要接受<strong>正规教育和培训</strong>的程度；衡量指标："平均文化程度""上岗职业培训期限"</td>
+</tr>
+<tr>
+<td><strong>规范化程度</strong></td>
+<td>员工<strong>以同种方式完成相似工作</strong>的程度；高度规范化的组织，人员更换不影响工作程序和方法</td>
+</tr>
+<tr>
+<td><strong>制度化程度</strong></td>
+<td>组织中采用<strong>书面文件的数量</strong>可以反映制度化程度</td>
+</tr>
+<tr>
+<td><strong>关键职能</strong></td>
+<td>在组织结构中处于<strong>中心地位、具有较大职责和权限</strong>的职能部门；不同组织可能有不同的关键职能</td>
+</tr>
+<tr>
+<td><strong>地区分布</strong></td>
+<td>在不同地区、城市设生产工厂和管理机构的状况，表明组织结构在<strong>空间上</strong>的复杂程度；地区分布越广，管理的复杂程度越高</td>
+</tr>
+<tr>
+<td><strong>分工形式</strong></td>
+<td>各部门<strong>横向分工</strong>所采取的形式；常见的有职能制、产品制、地区制、混合制</td>
+</tr>
+<tr>
+<td><strong>集权程度</strong></td>
+<td>集权程度高（分权程度低），组织经营决策和管理权大部分集中于<strong>高层管理者</strong>手中</td>
+</tr>
+<tr>
+<td><strong>人员结构</strong></td>
+<td>各部门人员、各职能人员在组织职工总数中的比例；衡量指标：技术人员比率、中高级领导人员比率、管理者比率、基本生产工人比率等</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 特征因素清单</div><p><strong>"两层五度一职能，地区分工加人员"</strong>——两层（管理层次和管理幅度）、五度（专业化、职业化、规范化、制度化、集权）、一职能（关键职能）、地区分布、分工形式、人员结构，正好 10 个，多选一个不落。</p></div></div>
+<div class="section"><p><strong>管理层次与管理幅度的关系</strong>（★★★，2022 多选）：
+1. 两者呈<strong>负相关</strong>的数量关系；
+2. 相互制约，其中<strong>管理幅度起主导作用</strong>——管理幅度决定管理层次，管理层次的多少取决于管理幅度的大小；同时管理层次对管理幅度也有一定的制约作用。</p></div>
+<div class="section"><div class="keypoint"><strong>层次与幅度，一字之差：</strong><p><strong>层次</strong>是"上有几级领导"（纵向等级），<strong>幅度</strong>是"一个领导直接管几个人"（横向宽度）。一个领导管的人越多，需要的层级越少，所以是负相关。判断题最爱塞进"正相关"或"管理层次起主导作用"两个坑。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一个班长直接管 8 名士兵，管理幅度就是 8；如果全连扩到 40 人，一个人管不过来，就得增设小组长——层级由此多了一级。管多少人（幅度）决定了要设几级（层次）。</p></div></div>
+<div class="section"><h3>4. 六个权变因素 <span class="hot">高频考点</span></h3>
+<p><strong>权变因素</strong>：影响企业组织结构形成的诸多<strong>外部条件和环境</strong>（★★★），包括——<strong>组织环境、组织战略、组织技术、人员素质、组织规模、组织生命周期</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 权变因素清单</div><p><strong>"环战技、素规周"</strong>（谐音"换战机，速归舟"）——组织<strong>环</strong>境、组织<strong>战</strong>略、组织<strong>技</strong>术、人员<strong>素</strong>质、组织<strong>规</strong>模、组织生命周期（<strong>周</strong>期）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 特征因素 vs 权变因素，一套题两个考法</div><ul>
+<li>权变因素是<strong>外部的、影响结构形成的</strong>；特征因素是<strong>结构本身的属性</strong>。看到"××程度、××结构、××分布"多半是特征因素；看到"环境、战略、技术、素质、规模、生命周期"才是权变因素。</li>
+<li>2023 年多选把"规范化程度、制度化程度、专业化程度"混进权变因素里当干扰项；同年的另一道多选又把"组织规模"混进特征因素里——正反两个方向都考过，两套清单务必分开背。</li>
+</ul></div></div>
+<div class="section"><h2>三、组织设计的程序 <span class="must">必考</span></h2>
+<h3>5. 八步程序 <span class="must">必考</span></h3>
+<ol>
+<li><strong>确定组织设计的基本方针和原则</strong>（如确定管理幅度、部门分工形式等）；</li>
+<li><strong>进行职能设计</strong>——<strong>首要工作</strong>；</li>
+<li><strong>设计组织结构的框架</strong>——<strong>主体工作</strong>，重点在于将组织的经营管理活动分解成各个组成部分；</li>
+<li><strong>联系方式的设计</strong>——将前面分解的各个部分连成整体，是保障整个组织结构<strong>协调一致、有效运作的关键</strong>；</li>
+<li><strong>管理规范的设计</strong>——组织结构的<strong>细化</strong>，起到使组织结构合法化、规范化，巩固和稳定组织结构的作用；</li>
+<li><strong>人员配备的设计</strong>——一般不必先考虑企业现有人员的具体情况，而应在确保组织结构运行的前提下，对人员的配备进行设计；</li>
+<li><strong>各类运行制度的设计</strong>——确保组织结构的正常运行，包括绩效评估和考核制度、激励制度、人员招聘制度、培训与开发制度；</li>
+<li><strong>反馈和修正</strong>。</li>
+</ol></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 八步程序</div><p><strong>"方针职能搭框架，联系规范配人员，运行制度反馈修"</strong>——八步一句带过：方针原则 → 职能 → 框架 → 联系方式 → 管理规范 → 人员配备 → 运行制度 → 反馈修正。</p></div></div>
+<div class="section"><div class="keypoint"><strong>三顶帽子（单选题眼）：</strong><p><strong>职能设计＝首要工作；结构框架＝主体工作；联系方式＝保障协调运作的关键</strong>。题目问"首要工作/主体工作/关键环节"分别是哪一步，就认这三顶帽子，别串。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>把设计组织结构想成装修房子：先定装修原则（方针原则），规划几个房间各干什么用（职能设计），砌墙搭出格局（框架），布水电管网把房间连起来（联系方式），定家规（管理规范），安排家人入住（人员配备），定作息制度（运行制度），住进去不顺心再改（反馈修正）。</p></div></div>
+<div class="section"><h2>四、组织设计的类型：四种经典形式 <span class="s3">★★★</span> <span class="hot">高频考点</span></h2>
+<h3>6. 行政层级式组织形式（韦伯）<span class="hot">高频考点</span></h3>
+<p>由<strong>马克斯·韦伯</strong>提出，又称<strong>科层制（官僚制）</strong>，强调<strong>权威与等级、规章与规范</strong>，组织形式较为复杂。</p>
+<p><strong>行政层级式的决定因素</strong>（★，6 个）：</p>
+<table>
+<thead>
+<tr>
+<th>决定因素</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>权力等级</strong></td>
+<td>权力集中程度高，组织很重视权力等级</td>
+</tr>
+<tr>
+<td><strong>分工</strong></td>
+<td>工作分工比较精细</td>
+</tr>
+<tr>
+<td><strong>规章</strong></td>
+<td>正式的书面规定，使组织更规范化；但<strong>过多的规章会限制个体的自主性</strong></td>
+</tr>
+<tr>
+<td><strong>程序规范</strong></td>
+<td>员工执行任务及处理问题时必须遵循的、<strong>预定的步骤顺序</strong></td>
+</tr>
+<tr>
+<td><strong>非个人因素</strong></td>
+<td>不应考虑的个人属性，如性别、籍贯、信仰、民族等</td>
+</tr>
+<tr>
+<td><strong>技术能力</strong></td>
+<td>决定工作地位的主要因素是<strong>技术能力和绩效</strong>，可作为评判录用、留用、降级、革职或升迁等决策的标准</td>
+</tr>
+</tbody>
+</table>
+<p><strong>适用范围</strong>（★★★）：在<strong>复杂/静态</strong>环境中最为有效。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 行政层级式决定因素</div><p><strong>"权力分等立规章，照章办事不认人，只认技术"</strong>——权力等级、分工、规章、程序规范、非个人因素（"不认人"）、技术能力（"只认技术"）。适用环境记"<strong>层复静</strong>"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老式机关单位、大型国企的行政序列就是典型：一层对一层汇报（权力等级）、每个科室职责写清楚（分工）、事事有文件依据（规章）、办事有流程单（程序规范）、提拔不问籍贯信仰（非个人因素）、晋升看资历和业绩（技术能力）。</p></div></div>
+<div class="section"><h3>7. 职能制（法约尔模型）<span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p>按<strong>职能</strong>划分部门的组织形式，又称<strong>法约尔模型</strong>。</p>
+<p><strong>主要特点</strong>（★★★，3 个）：
+1. <strong>职能分工</strong>：高度专业化分工；
+2. <strong>直线-参谋制</strong>：直线指挥机构和人员对<strong>直属下级发号施令</strong>；参谋机构和人员为<strong>同级</strong>直线指挥人员<strong>出谋划策</strong>，<strong>不能对下级发号施令</strong>，起指导、监督和服务作用；
+3. <strong>管理权力高度集中</strong>：经营决策权集中在最高领导层。</p>
+<p><strong>优点与缺点</strong>（★★★）：</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①有明确的任务和确定的职责，从事类似工作、面临类似问题的人在一起，可相互影响和支持</td>
+<td>①狭隘的职能观念</td>
+</tr>
+<tr>
+<td>②可消除设备及劳动力的重复，最充分地利用资源，利于专门设备的开发和对专家的培养</td>
+<td>②横向协调性差</td>
+</tr>
+<tr>
+<td>③实行专业分工，利于管理者熟练掌握本职工作技能、强化专业管理、提高工作效率</td>
+<td>③适应性差</td>
+</tr>
+<tr>
+<td>④每个管理人员固定归属一个职能机构，部门间联系能长期不变，整个组织有<strong>较高的稳定性</strong></td>
+<td>④企业领导负担重</td>
+</tr>
+<tr>
+<td>⑤管理权力高度集中，便于最高领导层对整个企业实施严格的控制</td>
+<td>⑤不利于培养全面素质、能够经营整个企业的管理人才</td>
+</tr>
+</tbody>
+</table>
+<p><strong>适用范围</strong>（★★★）：在<strong>简单/静态</strong>环境中效果较好；主要适用于<strong>中小型的、产品品种比较单一、生产技术发展变化较慢、外部环境比较稳定</strong>的企业。</p></div>
+<div class="section"><div class="keypoint"><strong>直线与参谋，一发令一献策：</strong><p>同一个人不能既是直线又是参谋：直线"能命令"（对直属下级发号施令），参谋"只建议"（为同级直线指挥人员出谋划策，起指导、监督和服务作用）。考题常把"参谋机构可以对下级发号施令"设成错误说法。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 职能制缺点与适用</div><p>缺点记<strong>"观念狭隘、横向不调、适应差、领导累、全才少"</strong>；适用环境记"<strong>职简静</strong>"（简单/静态＋中小型＋产品单一＋技术变化慢＋环境稳定）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一家小餐馆按采购、后厨、前厅、财务设岗（职能分工），每个岗位的活都干得极熟（专业化）；但后厨想临时加道菜，得绕一大圈协调前厅和采购（横向协调差），大事小事最后都等老板拍板（权力集中、领导负担重）。</p></div></div>
+<div class="section"><h3>8. 矩阵组织形式 <span class="s3">★★★</span></h3>
+<p>把按<strong>职能</strong>组合业务活动，以及按<strong>产品（或工程项目、规划项目）</strong>组合业务活动的方式结合起来，形成<strong>纵向与横向管理系统相结合</strong>、形如矩阵的组织结构。</p>
+<p><strong>主要特点</strong>（★★★，3 个）：
+1. <strong>一名员工有两位领导</strong>；
+2. 组织内部有<strong>两个层次的协调</strong>；
+3. 产品部门（或项目小组）所形成的<strong>横向联系灵活多样</strong>。</p>
+<p><strong>优点与缺点</strong>（★★★）：</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①有利于加强各职能部门之间的<strong>协作配合</strong></td>
+<td>①组织的<strong>稳定性较差</strong></td>
+</tr>
+<tr>
+<td>②有利于顺利完成规划项目，提高企业的<strong>适应性</strong></td>
+<td>②<strong>双重领导</strong>的存在，容易产生<strong>责任不清、多头指挥</strong>的混乱现象</td>
+</tr>
+<tr>
+<td>③有利于<strong>减轻高层管理人员的负担</strong></td>
+<td>③机构相对臃肿，用人较多</td>
+</tr>
+<tr>
+<td>④有利于职能部门与产品部门<strong>相互制约</strong>，保证企业整体目标的实现</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>适用范围</strong>（★★★）：在<strong>复杂/动态</strong>环境中较为有效；适合应用于因<strong>技术发展迅速和产品品种较多</strong>而具有<strong>创新性强、管理复杂</strong>特点的企业。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 矩阵三特点与适用环境</div><p>特点记<strong>"一仆二主、双层协调、横向灵活"</strong>；适用环境记"<strong>矩复动</strong>"。三种经典形式连起来背：<strong>层复静、职简静、矩复动</strong>（行政层级式=复杂/静态，职能制=简单/静态，矩阵=复杂/动态）——考试最爱的三分题。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>软件公司的老王，行政上归研发部经理管，项目上归"智慧城市项目"项目经理管——两个人都能给他派活（一仆二主）；公司里既有研发、测试、市场等职能线，又有几十个项目组，纵横两套系统同时在转，协调会上经常"双头指挥"打架。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 优缺点互串是矩阵题的固定套路</div><p>2024 年单选问"优点不包括"，把缺点"减少责任不清、多头指挥的混乱现象"混进了优点——矩阵恰恰<strong>容易产生</strong>多头指挥。做题先默写四大优点（协作配合、顺利完成项目提高适应性、减轻高层负担、相互制约保整体目标），不在名单里的就是答案。</p></div></div>
+<div class="section"><h3>9. 事业部制组织形式 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p>由<strong>通用汽车公司原总裁斯隆</strong>提出。</p>
+<p><strong>主要特点</strong>（★★★，3 个）：
+1. 按<strong>产品或地区</strong>分别建立经营事业部，实行<strong>集中决策指导下的分散经营</strong>；
+2. 每个事业部都是<strong>基本经营单位</strong>，统一管理所属产品的全部活动；
+3. 事业部实行<strong>相对的独立经营</strong>：单独核算、自负盈亏，有相应的职能部门。</p>
+<p><strong>优点与缺点</strong>（★★★）：</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①利于公司最高层摆脱具体管理事务，<strong>集中精力于战略决策和长远规划</strong></td>
+<td>①易使各事业部<strong>只顾自身利益</strong>，减弱整个公司的协调一致性</td>
+</tr>
+<tr>
+<td>②<strong>增强企业的活力</strong></td>
+<td>②<strong>职能机构重复</strong>，增加费用和管理成本</td>
+</tr>
+<tr>
+<td>③利于<strong>联合化和专业化结合</strong>，提高生产效率</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>适用范围</strong>：产品种类多且产品之间<strong>工艺差别大</strong>，或<strong>市场分布范围广且市场情况变化快、要求适应性强</strong>的<strong>大型联合企业或公司</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 事业部制八字灵魂</div><p><strong>"集中决策，分散经营"</strong>——总部管战略（集中决策），事业部自己打仗（分散经营、单独核算、自负盈亏）。考点配对：高层摆脱事务→战略规划；只顾自身利益→协调一致性差；机构重复→成本增加。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>家电集团按冰箱、空调、洗衣机设事业部：集团总部定战略、管投资（集中决策）；空调事业部从研发、生产到销售一条龙自己干、自己算账（分散经营）。代价是三个事业部各养一套采购和财务（机构重复、费用增加），抢集团内部资源时免不了本位主义（只顾自身利益）。</p></div></div>
+<div class="section"><h2>五、新型组织形式 <span class="hot">高频考点</span></h2>
+<h3>10. 团队结构、虚拟组织与无边界组织 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>团队结构</strong></td>
+<td><strong>打破部门界限</strong>，把<strong>决策权下放至工作团队成员</strong>手中。小型组织可把团队结构作为<strong>整个组织形式</strong>；大型组织则作为<strong>行政层级式的补充</strong></td>
+</tr>
+<tr>
+<td><strong>虚拟组织</strong>（★）</td>
+<td>又称<strong>"哑铃型组织"</strong>：两头（<strong>营销、研发与技术设计</strong>）大，中间（<strong>生产制造</strong>）小；是一种<strong>规模较小、但可以发挥主要职能的核心组织</strong>；<strong>决策集中化程度高</strong>，但<strong>部门化程度低或根本不存在</strong>；<strong>灵活性高</strong>；管理层对公司的主要职能活动<strong>缺乏有力的监控</strong></td>
+</tr>
+<tr>
+<td><strong>无边界组织</strong></td>
+<td>通过<strong>组织扁平化</strong>减少指挥链，<strong>对管理幅度不加限制</strong>，<strong>减少或取消各种职能部门</strong>，代之以<strong>授权的团队</strong>；打破组织结构的各种边界、将边界<strong>模糊化</strong>，实现组织中信息的有效传递和共享，达到提高工作效率和激励创新的目的</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三个&quot;新型&quot;各记一句：</strong><p>团队结构记"<strong>决策权下放</strong>"；虚拟组织记"<strong>哑铃型：决策集中、部门化低</strong>"；无边界组织记"<strong>扁平化＋取消职能部门＋授权团队</strong>"。两个高频陷阱：虚拟组织决策集中化程度<strong>高</strong>（不是低）；无边界组织是<strong>弱化</strong>而非强化职能部门的作用。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 虚拟组织口诀</div><p><strong>"哑铃两头大、中间小，决策集中部门少"</strong>——两头大的是营销、研发与技术设计，中间小的是生产制造。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>运动品牌界的经典玩法：总部抓设计研发和营销（两头大），生产全部外包给代工厂（中间小）——公司本身不大，却攥住了最值钱的环节；代价是对工厂的品控、交期缺乏直接有力的监控。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>组织设计</strong>＝对组织结构及其运行方式的设计；静态（古典，只设计结构）/动态（现代，结构＋运行制度）</li>
+<li><strong>组织结构</strong>＝权责结构；本质分工协作、目的实现目标、内涵职权责；四大结构"职业务、层纵向、部横向、权权责"；三要素：复杂性、规范性、集权度</li>
+<li><strong>特征因素 10 个</strong>："两层五度一职能，地区分工加人员"；<strong>权变因素 6 个</strong>："环战技素规周"（环境、战略、技术、素质、规模、周期）</li>
+<li><strong>层次与幅度</strong>：负相关、相互制约、<strong>幅度主导</strong>（幅度决定层次）</li>
+<li><strong>八步程序</strong>："方针职能搭框架，联系规范配人员，运行制度反馈修"；职能＝首要、框架＝主体、联系＝关键</li>
+<li><strong>行政层级式</strong>（韦伯）："权力分等立规章，照章办事不认人，只认技术"；复杂/静态</li>
+<li><strong>职能制</strong>（法约尔模型）：职能分工、直线-参谋制、权力高度集中；简单/静态；缺点"观念狭隘、横向不调、适应差、领导累、全才少"</li>
+<li><strong>矩阵</strong>：一仆二主、两层协调、横向灵活；复杂/动态；稳定性差、多头指挥、机构臃肿</li>
+<li><strong>事业部制</strong>（斯隆）："集中决策，分散经营"、单独核算自负盈亏；大型联合企业；高层脱身搞战略、活力强、联合化＋专业化</li>
+<li><strong>新型</strong>：团队（决策权下放；大组织的补充）、虚拟（哑铃型、决策集中部门化低、灵活、监控弱）、无边界（扁平化、取消职能部门、授权团队）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r03s1q1" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">在组织结构设计体系中，能够体现出组织的各管理层次、部门在权力和责任方面的分工和相互关系的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 层次结构</button><button type="button" class="qopt" data-key="B">B. 部门结构</button><button type="button" class="qopt" data-key="C">C. 职能结构</button><button type="button" class="qopt" data-key="D">D. 职权结构</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：<strong>职权结构</strong>是各管理层次、部门在权力和责任方面的分工和相互关系。职能结构是达到企业目标所需完成的各项业务工作及其比例和关系（C）；层次结构是各管理层次的构成，又称纵向结构（A）；部门结构是各管理部门的构成，又称横向结构（B）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q2" data-answer="BCDE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于组织结构的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 它的设计理论须是动态的，而非静态的</button><button type="button" class="qopt" data-key="B">B. 它是实现组织目标的一种手段</button><button type="button" class="qopt" data-key="C">C. 它本质上是企业员工的分工协作关系</button><button type="button" class="qopt" data-key="D">D. 它在实际中通常以组织图或组织树的形式出现</button><button type="button" class="qopt" data-key="E">E. 它又称为权责结构</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：组织设计从形式上分为静态设计和动态设计——只对组织结构进行的设计是静态设计，同时对组织结构和运行制度进行的设计才是动态设计，A 说设计理论"须是动态的"，错误。B、C、D、E 均为标准表述：本质是企业员工的分工协作关系，目的是实现组织目标（组织结构是实现目标的手段），实际中通常以组织图或组织树的形式出现，又称权责结构。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q3" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于组织结构特征因素中管理层次的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 管理层次也称为组织层次</button><button type="button" class="qopt" data-key="B">B. 管理层次越多，说明组织结构的纵向复杂程度越高</button><button type="button" class="qopt" data-key="C">C. 管理层次的多少取决于管理幅度的大小</button><button type="button" class="qopt" data-key="D">D. 管理层次是指一名管理者直接领导的下级人员的数量</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：D 说的是<strong>管理幅度</strong>（管理跨度）的定义——一名领导直接领导的下级人员的数量。管理层次是从组织最高一级管理组织到最低一级的各个组织等级，也称组织层次（A 对），其多少表明组织结构的纵向复杂程度（B 对）。管理幅度起主导作用、决定管理层次，C 对。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q4" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">在组织结构设计的主要参数中，可以用员工接受正规教育和培训的程度来衡量的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 集权化程度</button><button type="button" class="qopt" data-key="B">B. 规范化程度</button><button type="button" class="qopt" data-key="C">C. 制度化程度</button><button type="button" class="qopt" data-key="D">D. 职业化程度</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：<strong>职业化程度</strong>指企业员工为了掌握其本职工作，需要接受正规教育和培训的程度，衡量指标是"平均文化程度""上岗职业培训期限"。集权程度是决策权集中于高层管理者的程度（A）；规范化是员工以同种方式完成相似工作的程度（B）；制度化用组织中采用书面文件的数量来反映（C）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q5" data-answer="AD" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">影响组织结构的权变因素包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 组织技术</button><button type="button" class="qopt" data-key="B">B. 规范化程度</button><button type="button" class="qopt" data-key="C">C. 制度化程度</button><button type="button" class="qopt" data-key="D">D. 组织生命周期</button><button type="button" class="qopt" data-key="E">E. 专业化程度</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AD</div><div class="q-exp"><p>析：权变因素是影响组织结构形成的<strong>外部条件和环境</strong>，包括组织环境、组织战略、组织技术、人员素质、组织规模、组织生命周期，故 A、D 正确。B、C、E（规范化、制度化、专业化程度）都是组织结构的<strong>特征因素</strong>——看到"××程度"九成是特征因素。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q6" data-answer="BCDE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">下列组织结构设计参数中，属于组织结构特征因素的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 组织规模</button><button type="button" class="qopt" data-key="B">B. 关键职能</button><button type="button" class="qopt" data-key="C">C. 职业化程度</button><button type="button" class="qopt" data-key="D">D. 专业化程度</button><button type="button" class="qopt" data-key="E">E. 集权程度</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：特征因素包括管理层次与管理幅度、专业化程度、职业化程度、规范化程度、制度化程度、关键职能、地区分布、分工形式、集权程度、人员结构，B、C、D、E 均在其列。<strong>组织规模属于权变因素</strong>，A 错误。本题与上一题互为镜像：一个考权变因素、一个考特征因素，两套清单分开背。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q7" data-answer="BCDE" data-type="multi"><span class="q-tag">2022·多选</span><div class="q-stem">关于管理层次和管理幅度表述正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 管理层次和管理幅度存在正相关的关系</button><button type="button" class="qopt" data-key="B">B. 管理层次表明组织结构的纵向复杂程度，管理幅度反映上级领导直接控制和协调的业务活动量</button><button type="button" class="qopt" data-key="C">C. 管理层次和管理幅度存在负相关的关系</button><button type="button" class="qopt" data-key="D">D. 管理层次和管理幅度是相互制约的，其中管理幅度起主导作用</button><button type="button" class="qopt" data-key="E">E. 两者都是组织结构的特征因素</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：管理层次与管理幅度存在<strong>负相关</strong>的数量关系，A 错误。B 对：层次表明纵向复杂程度，幅度反映直接控制和协调的业务活动量。C 对：负相关。D 对：两者相互制约、<strong>幅度起主导作用</strong>（幅度决定层次，层次也反制约幅度）。E 对：两者都是特征因素。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q8" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">职能制组织设计形式最适用的环境类型是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 复杂/动态环境</button><button type="button" class="qopt" data-key="B">B. 简单/静态环境</button><button type="button" class="qopt" data-key="C">C. 复杂/静态环境</button><button type="button" class="qopt" data-key="D">D. 简单/动态环境</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：职能制在<strong>简单/静态</strong>环境中效果较好；行政层级式在<strong>复杂/静态</strong>环境中最为有效；矩阵组织形式在<strong>复杂/动态</strong>环境中较为有效。三种类型的适用环境是本章必考点，用口诀"层复静、职简静、矩复动"一套就准。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q9" data-answer="BCDE" data-type="multi"><span class="q-tag">2021·多选</span><div class="q-stem">职能制的缺点包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 管理范围较小，导致管理层懒散</button><button type="button" class="qopt" data-key="B">B. 狭隘的职能观念</button><button type="button" class="qopt" data-key="C">C. 横向协调差</button><button type="button" class="qopt" data-key="D">D. 不利于培养全面素质的管理人才</button><button type="button" class="qopt" data-key="E">E. 适应性差</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：职能制五大缺点：狭隘的职能观念、横向协调性差、适应性差、企业领导负担重、不利于培养全面素质且能够经营整个企业的管理人才。"管理范围较小导致管理层懒散"是编造的干扰项，职能制实际的问题是领导负担<strong>重</strong>而非懒散。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q10" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于职能制组织的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 实行直线-参谋制</button><button type="button" class="qopt" data-key="B">B. 强调职能分工</button><button type="button" class="qopt" data-key="C">C. 避免管理权力高度集中</button><button type="button" class="qopt" data-key="D">D. 又称法约尔模型</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：职能制的特点之一恰恰是<strong>管理权力高度集中</strong>——经营决策权集中在最高领导层，C 与特点相反。职能分工（B）、直线-参谋制（A）都是主要特点；职能制按职能划分部门，又称法约尔模型（D）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q11" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于古典组织设计理论的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 它同时关注组织结构设计和运行制度设计两方面的研究</button><button type="button" class="qopt" data-key="B">B. 它只关注组织结构设计方面的研究</button><button type="button" class="qopt" data-key="C">C. 它是动态的</button><button type="button" class="qopt" data-key="D">D. 它只关注运行制度设计方面的研究</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：古典组织设计理论＝<strong>静态组织设计</strong>，只对组织结构进行设计（B 对）；同时关注组织结构和运行制度的是动态（现代）组织设计理论（A 错）；动态的是现代理论而非古典理论（C 错）；只研究运行制度的不属于任何一类标准表述（D 错）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q12" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">矩阵组织形式的优点不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 它有利于减少责任不清，多头指挥的混乱现象</button><button type="button" class="qopt" data-key="B">B. 它有利于减轻高层管理者的负担</button><button type="button" class="qopt" data-key="C">C. 它有利于统筹兼顾全面实现组织的整体目标</button><button type="button" class="qopt" data-key="D">D. 它有利于提高整个组织的适应性</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：矩阵组织四大优点：加强各职能部门协作配合、顺利完成规划项目提高适应性、减轻高层管理者负担、职能部门与产品部门相互制约保证整体目标实现（B、C、D）。双重领导恰恰<strong>容易产生</strong>责任不清、多头指挥的混乱现象——这是缺点，A 错。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q13" data-answer="ABE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">以下属于事业部制组织形式的优点的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 可增强企业的活力</button><button type="button" class="qopt" data-key="B">B. 有利于高层管理者集中精力进行战略决策和长远规划</button><button type="button" class="qopt" data-key="C">C. 增强整个公司的协调一致性</button><button type="button" class="qopt" data-key="D">D. 能降低费用和管理成本</button><button type="button" class="qopt" data-key="E">E. 有利于把联合化和专业化结合起来，提高生产效率</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABE</div><div class="q-exp"><p>析：事业部制三大优点：高层摆脱具体管理事务、集中精力于战略决策和长远规划（B）；增强企业活力（A）；联合化与专业化结合提高生产效率（E）。C、D 说反了——各事业部易只顾自身利益，<strong>削弱</strong>整个公司的协调一致性；职能机构重复，<strong>增加</strong>费用和管理成本。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q14" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于虚拟组织形式的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 它也被称为&quot;哑铃型组织&quot;</button><button type="button" class="qopt" data-key="B">B. 它的部门化程度低或根本不存在</button><button type="button" class="qopt" data-key="C">C. 它的主要优势在于其灵活性</button><button type="button" class="qopt" data-key="D">D. 它的决策集中化程度低</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：虚拟组织是规模较小但可以发挥主要职能的核心组织，其<strong>决策集中化程度高</strong>（D 说"低"，错误）、部门化程度低或根本不存在（B 对），又称"哑铃型组织"（A 对），灵活性高是其主要优势（C 对）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s1q15" data-answer="ABC" data-type="multi"><span class="q-tag">2011·多选</span><div class="q-stem">关于各类组织形式优缺点的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 事业部制组织形式能够把联合化和专业化结合起来，从而提高生产效率</button><button type="button" class="qopt" data-key="B">B. 职能制结构有利于强化专业管理</button><button type="button" class="qopt" data-key="C">C. 行政层级式的组织可以保证高度集权以及等级管理的顺利执行</button><button type="button" class="qopt" data-key="D">D. 矩阵组织形式的稳定性较高</button><button type="button" class="qopt" data-key="E">E. 无边界组织形式有助于强化各职能部门的作用</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：A 对：联合化＋专业化提高生产效率正是事业部制的优点。B 对：专业分工、强化专业管理是职能制的优点。C 对：行政层级式权力集中程度高、重等级，能保证高度集权与等级管理的执行。D 错：矩阵组织形式<strong>稳定性较差</strong>——按产品或项目成立的组织成员经常变动、人事关系不稳定。E 错：无边界组织通过扁平化减少指挥链、<strong>取消各种职能部门</strong>代之以授权的团队，是弱化而非强化职能部门。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力03_组织设计与组织文化_第2节_组织文化.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 组织文化</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

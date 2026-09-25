@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十九章 会计循环 · 会计记录 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第五部分 会计</span><h1>第二十九章 会计循环 · 会计记录</h1><div class="subtitle">第 3 节 / 共 4 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:75%"></div></div><div class="progress-text">本章进度 3/4</div><div class="sec-badge none" id="sec-badge" data-sec="b29s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>会计记录</strong>的定义：三大载体（账户、会计凭证、账簿）＋复式记账手段＋为编制报告积累数据 <span class="hot">高频考点</span></li>
+<li>背熟四种<strong>会计记录方法</strong>：设置账户、复式记账、填制和审核凭证、登记账簿——"设复凭账" <span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>会<strong>借贷记账法</strong>：记账规则、六类账户的借贷方向与余额方向，会套公式算期末余额 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>分清<strong>原始凭证与记账凭证</strong>、账簿按用途的三分类、对账"四相符"至少每年一次 <span class="hot">高频考点</span></li>
+<li>掌握<strong>五种账务处理程序</strong>的做法、优缺点与适用范围，会按单位规模"对号入座" <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、会计记录：概念与四种方法</h2>
+<h3>1. 会计记录的概念与四种方法 <span class="hot">高频考点</span></h3>
+<p><strong>会计记录</strong>是通过<strong>账户、会计凭证和账簿</strong>等载体，运用<strong>复式记账</strong>等手段，对<strong>确认和计量的结果</strong>进行记录，<strong>为编制财务会计报告积累数据</strong>的过程。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>干什么</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>设置账户</strong></td>
+<td>按会计科目开出记账的"格子"</td>
+<td>先立户头</td>
+</tr>
+<tr>
+<td><strong>复式记账</strong></td>
+<td>每笔业务在两个（或以上）账户中以相等金额登记</td>
+<td>左右两手同时记</td>
+</tr>
+<tr>
+<td><strong>填制和审核凭证</strong></td>
+<td>取得或填制凭证并审核——<strong>会计工作的开始</strong></td>
+<td>先拿证据</td>
+</tr>
+<tr>
+<td><strong>登记账簿</strong></td>
+<td>把凭证上的业务序时、分类记入账户</td>
+<td>落到账本上</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>载体、手段、目的一句话拆开：</strong><p>载体三个：<strong>账户、会计凭证、账簿</strong>；手段：<strong>复式记账</strong>等；落点：<strong>为编制财务会计报告积累数据</strong>。考"会计记录的方法主要包括"→上面四种；"货币计量"是会计基本前提，<strong>不是</strong>记录方法。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小王出差回来报销 800 元：财务先拿到车票、发票并审核（<strong>填制和审核凭证</strong>），在"管理费用——差旅费"的格子里准备记账（<strong>设置账户</strong>），记费用增加的同时记现金减少、两边金额相等（<strong>复式记账</strong>），再把这两笔记入明细账和现金日记账（<strong>登记账簿</strong>）。四步走完，这笔业务的记录就齐了，年底编报表的数据全从这儿来。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 记录方法四件套</div><p><strong>"设、复、凭、账"</strong>（设置账户、复式记账、填制和审核凭证、登记账簿）。多选凑数时拿"货币计量""成本计算""财产清查"来排除——它们都不在四方法里。</p></div></div>
+<div class="section"><h2>二、设置账户与借贷记账法</h2>
+<h3>2. 账户：分类核算的工具 <span class="hot">高频考点</span></h3>
+<p><strong>账户</strong>是根据<strong>以会计要素划分的会计科目</strong>设置的，具有一定的<strong>格式和结构</strong>，用于<strong>分类反映会计要素各项目增减变动情况及其结果</strong>的载体，是对会计要素进行<strong>分类核算的工具</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>分类标准</th>
+<th>类别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按<strong>所反映会计要素的具体内容</strong>（经济内容）</td>
+<td><strong>资产类、负债类、所有者权益类、收入类、成本类、费用类、损益类</strong></td>
+</tr>
+<tr>
+<td>按<strong>提供信息的详细程度及其统驭关系</strong></td>
+<td><strong>总分类账户、明细分类账户</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>账户≠会计科目：</strong><p>会计科目只是"名字"，账户是<strong>有格式、有结构</strong>、能登记增减变动和余额的"格子"。考"根据会计科目设置的、有一定格式和结构、分类反映会计要素增减变动及其结果的工具"→<strong>账户</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>"银行存款"是一个会计科目；企业在账上为它开的那一页——有日期、摘要、借方、贷方、余额栏，能查出 6 月 30 日还剩多少钱——才是<strong>账户</strong>。总分类账户告诉你银行存款总共多少；明细分类账户能查到是哪个银行户头里的多少钱。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 账户两刀分类</div><p><strong>"内容分七类，粗细分两类"</strong>——按反映的经济内容（会计要素具体内容）：资产、负债、所有者权益、收入、成本、费用、损益；按详细程度与统驭关系：总分类、明细分类。见"按所反映的经济业务的具体内容分类"→选七类那组。</p></div></div>
+<div class="section"><h3>3. 借贷记账法：规则、账户结构与余额计算 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p><strong>记账规则</strong>：<strong>"有借必有贷，借贷必相等"</strong>——每笔业务记入一个（或几个）账户的借方，同时记入另一个（或几个）账户的贷方，双方金额相等。</p>
+<p>账户结构（借贷方向总表）：</p>
+<table>
+<thead>
+<tr>
+<th>账户类型</th>
+<th>借方（左方）</th>
+<th>贷方（右方）</th>
+<th>余额方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>资产类、成本类、费用类</strong></td>
+<td>登记<strong>增加</strong>额</td>
+<td>登记<strong>减少</strong>额</td>
+<td>余额在<strong>借方</strong></td>
+</tr>
+<tr>
+<td><strong>负债类、所有者权益类、收入类</strong></td>
+<td>登记<strong>减少</strong>额</td>
+<td>登记<strong>增加</strong>额</td>
+<td>余额在<strong>贷方</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>余额公式与分步演算</strong>（计算题必背）：</p>
+<ul>
+<li>资产（成本、费用）类：<strong>期末余额 ＝ 期初余额 ＋ 本期借方发生额 − 本期贷方发生额</strong></li>
+<li>负债（所有者权益、收入）类：<strong>期末余额 ＝ 期初余额 ＋ 本期贷方发生额 − 本期借方发生额</strong></li>
+</ul>
+<p>例：应收账款期初余额 100 万元，本期借方发生额（赊销增加）50 万元，本期贷方发生额（收回货款）80 万元。第一步，判账户类型：应收账款是<strong>资产类</strong>；第二步，套"借加贷减"：期末余额＝100＋50−80＝<strong>70 万元</strong>。本期收回比赊出多 30 万，余额比期初正好少 30 万，两头对得上。</p>
+<p><strong>试算平衡</strong>（通过编制<strong>总分类账户试算平衡表</strong>进行）：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>发生额试算平衡</strong></td>
+<td>全部账户本期<strong>借方发生额合计 ＝ 全部账户本期贷方发生额合计</strong></td>
+</tr>
+<tr>
+<td><strong>余额试算平衡</strong></td>
+<td>全部账户借方<strong>期初余额</strong>合计＝贷方期初余额合计；全部账户借方<strong>期末余额</strong>合计＝贷方期末余额合计</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>方向跟着&quot;谁增谁减&quot;走：</strong><p>只记一句：<strong>资产、成本、费用——借增贷减、余额在借；负债、所有者权益、收入——贷增借减、余额在贷</strong>。余额永远待在"登记增加额"的那一方。做负债类题目时，"借增贷减余额在借"的选项就是把你往资产类方向带的陷阱。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>用银行存款 5 万元买设备：设备（资产）增加记<strong>借方</strong> 5 万，银行存款（资产）减少记<strong>贷方</strong> 5 万——有借必有贷、借贷必相等。改成赊购设备：设备记借方 5 万，应付账款（负债）增加记<strong>贷方</strong> 5 万——资产类和负债类各站一边、方向相反，金额仍相等。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 借贷方向与余额口诀</div><p><strong>"资费借增余在借，负权收入贷当家"</strong>（资＝资产，费＝成本费用，负＝负债，权＝所有者权益）＋<strong>"借加贷减是资产，贷加借减是负债"</strong>算余额。计算题先判账户类型、再套公式，方向千万别套反。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频易反点：方向、余额与试算平衡</div><p>①余额方向＝<strong>增加额的登记方向</strong>：资产类增在借→余额在借；负债类增在贷→余额在贷。②试算平衡只有三组公式（借方发生额合计＝贷方发生额合计；借方期初余额合计＝贷方期初余额合计；借方期末余额合计＝贷方期末余额合计）——"全部<strong>资产</strong>账户借方发生额合计＝贷方发生额合计""收入发生额合计＝费用发生额合计"都是<strong>编造项</strong>：单个资产账户自身借贷发生额本来就不相等。③"有借必有贷、借贷必相等"说的是<strong>全部账户总和</strong>的平衡，不是让单个账户自己借＝贷。</p></div></div>
+<div class="section"><h2>三、会计凭证与账簿</h2>
+<h3>4. 填制和审核凭证：会计工作的开始 <span class="hot">高频考点</span></h3>
+<p><strong>会计凭证</strong>是<strong>记录经济业务、明确经济责任</strong>的<strong>书面证明</strong>，也是<strong>登记账簿的依据</strong>——它是具有一定格式、用以记录经济业务发生和完成情况的书面证明。<strong>填制和审核凭证是会计工作的开始</strong>。</p>
+<p>会计凭证按其<strong>填制程序和用途</strong>分为两类：</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th><strong>原始凭证</strong></th>
+<th><strong>记账凭证</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>谁来填、何时填</td>
+<td>经济业务发生时<strong>取得或填制</strong></td>
+<td><strong>会计人员</strong>根据<strong>审核无误的原始凭证</strong>或汇总原始凭证填制</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>证明经济业务的<strong>发生或完成情况</strong>，作为记账的<strong>原始依据</strong></td>
+<td>确定<strong>应借、应贷的会计科目和金额</strong>，作为<strong>登记账簿的直接依据</strong></td>
+</tr>
+<tr>
+<td>例子</td>
+<td>发票、收据、车票</td>
+<td>写好借贷分录的记账凭证</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>分界线：&quot;谁来填、定不定分录&quot;：</strong><p><strong>业务发生时拿到手的</strong>→原始凭证；<strong>会计人员事后依据原始凭证编的、写明借贷科目和金额的</strong>→记账凭证。实际工作中，<strong>会计分录是通过填制记账凭证来完成的</strong>——先编分录、再登账。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小张拿一张 300 元的餐饮发票来报销：发票是业务发生时取得的<strong>原始凭证</strong>；会计审核无误后填一张记账凭证，写明"借：管理费用——业务招待费 300，贷：库存现金 300"——这张写好应借应贷科目和金额的凭证就是<strong>记账凭证</strong>，登记账簿全靠它。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 凭证口诀</div><p><strong>"原始证业务，记账定借贷"</strong>——原始凭证证明"业务真发生了"，记账凭证确定"借贷记哪、记多少"（登账的直接依据）。考"会计工作开始于什么"→<strong>填制和审核凭证</strong>。</p></div></div>
+<div class="section"><h3>5. 登记账簿与对账 <span class="hot">高频考点</span></h3>
+<p><strong>登记账簿</strong>就是将会计凭证记录的经济业务，<strong>序时、分类地记入</strong>有关簿籍中设置的各个账户。<strong>设置和登记账簿</strong>是会计工作得以开展的<strong>基础环节</strong>，是<strong>联结会计凭证与财务会计报告的中间环节</strong>；账簿是<strong>保存会计数据资料的重要工具</strong>，是<strong>编制财务会计报告的基础</strong>。</p>
+<p>账簿按<strong>用途</strong>分类：</p>
+<table>
+<thead>
+<tr>
+<th>账簿</th>
+<th>用途</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>序时账簿</strong></td>
+<td>按业务发生的时间顺序逐日登记</td>
+<td>流水账（现金日记账、银行存款日记账）</td>
+</tr>
+<tr>
+<td><strong>分类账簿</strong></td>
+<td>按账户分类登记</td>
+<td>户口账（总分类账、明细分类账）</td>
+</tr>
+<tr>
+<td><strong>备查账簿</strong></td>
+<td>补充登记未能计入序时账、分类账的事项</td>
+<td>备忘录</td>
+</tr>
+</tbody>
+</table>
+<p><strong>对账</strong>：为了保证会计账簿所提供会计资料的<strong>真实、完整</strong>，登记账簿后需定期做好对账工作，做到<strong>账证相符、账账相符、账实相符、账表相符</strong>——对账工作<strong>至少每年进行一次</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>中间环节＋四个相符：</strong><p>账簿往前连<strong>凭证</strong>、往后连<strong>报告</strong>——考"联结会计凭证与财务会计报告的中间环节"→<strong>登记账簿</strong>；考"编制财务会计报告的基础"→<strong>账簿</strong>。四个相符按流程背："<strong>证 → 账 → 实 → 表</strong>"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>月底出纳盘点保险柜里的现金，与现金日记账余额一对——对上了就是<strong>账实相符</strong>；总账与明细账、日记账互相核对——<strong>账账相符</strong>；拿记账凭证对账簿记录——<strong>账证相符</strong>；编完报表回头再对总账——<strong>账表相符</strong>。这一套至少每年（通常年终结账前）完整来一遍。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 账簿与对账口诀</div><p><strong>"序时流水、分类户口、备查备忘"</strong>＋<strong>"证账实表四相符，至少一年跑一回"</strong>——四个相符的顺序就是账务流程：先对凭证、再账账互对、再盘实物、最后对报表。</p></div></div>
+<div class="section"><h2>四、账务处理程序</h2>
+<h3>6. 账务处理程序与五种模式 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>账务处理程序</strong>（也称<strong>会计核算组织程序</strong>）：对会计数据的<strong>记录、归类、汇总、报告</strong>的步骤和方法——即从<strong>原始凭证</strong>的整理汇总、<strong>记账凭证</strong>的填制汇总、<strong>日记账、明细分类账</strong>的登记，到<strong>会计报表</strong>的编制的步骤和方法。<strong>基本模式</strong>：<strong>原始凭证——记账凭证——会计账簿——会计报表</strong>。</p>
+<p>五种账务处理程序对照（区分点抓一条：<strong>登记总分类账的依据和方式</strong>）：</p>
+<table>
+<thead>
+<tr>
+<th>程序</th>
+<th>关键做法</th>
+<th>优点</th>
+<th>缺点</th>
+<th>适用范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>记账凭证</strong>账务处理程序</td>
+<td>根据记账凭证<strong>直接逐笔</strong>登记总分类账</td>
+<td>简单明了、易于理解，总分类账可较详细反映经济业务</td>
+<td>登记总分类账的<strong>工作量较大</strong></td>
+<td>规模<strong>较小</strong>、经济业务量<strong>较少</strong>的单位</td>
+</tr>
+<tr>
+<td><strong>汇总记账凭证</strong>账务处理程序</td>
+<td>定期编制汇总收款凭证、汇总付款凭证、汇总转账凭证，据以登总账</td>
+<td>便于了解账户之间的<strong>对应关系</strong></td>
+<td>不利于会计核算日常分工；转账凭证较多时编制汇总转账凭证工作量大</td>
+<td>规模<strong>较大</strong>、经济业务<strong>较多</strong>的单位</td>
+</tr>
+<tr>
+<td><strong>科目汇总表</strong>账务处理程序</td>
+<td>定期编制科目汇总表，据以登总账</td>
+<td><strong>减轻</strong>登总账工作量、可<strong>试算平衡</strong>、简明易懂、方便易学</td>
+<td><strong>不能反映账户对应关系</strong>，不便于查对账目</td>
+<td>经济业务量<strong>多</strong>、使用会计科目<strong>较少</strong>的单位</td>
+</tr>
+<tr>
+<td><strong>多栏式日记账</strong>账务处理程序</td>
+<td>收款、付款凭证逐日登多栏式现金/银行存款日记账，据以登总账</td>
+<td>通过日记账汇总，<strong>减少</strong>登总账工作量</td>
+<td>业务多时日记账<strong>栏目过多、账页庞大</strong>、易串行串栏</td>
+<td>规模大、业务量多、<strong>会计科目较少</strong>的单位</td>
+</tr>
+<tr>
+<td><strong>日记总账</strong>账务处理程序</td>
+<td>日记账与总分类账合一，所有业务登在一本日记总账上</td>
+<td><strong>简单易行</strong></td>
+<td>所有科目设在一张账页内，<strong>账页过长</strong>、不便记账查阅</td>
+<td>经济业务量<strong>较少</strong>、会计科目也<strong>较少</strong>的单位</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>抓&quot;登总账的依据&quot;：</strong><p>五种程序的差别只在<strong>"拿什么登记总分类账"</strong>：记账凭证<strong>直接</strong>登→记账凭证程序；<strong>汇总记账凭证</strong>登→汇总记账凭证程序；<strong>科目汇总表</strong>登→科目汇总表程序；<strong>多栏式日记账</strong>登→多栏式日记账程序；日记账与总账<strong>合一</strong>→日记总账程序。各自的优缺点都能从"登总账省不省力、保不保留账户对应关系"推出来。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>巷口小卖部一个月几十笔业务，按记账凭证一笔笔记总账也花不了多少功夫，账还记得细——<strong>记账凭证程序</strong>（规模小、业务少）；大型连锁公司一个月几万笔业务，逐笔记总账会把会计累垮，先把记账凭证汇成科目汇总表再登总账——<strong>科目汇总表程序</strong>（业务多、科目少），代价是看不出账户对应关系、查账不方便。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 五程序适用范围</div><p><strong>"小记、大汇，多科汇总、多栏大而少、日记少而少"</strong>——规模小业务少→<strong>记</strong>账凭证程序；规模大业务多→<strong>汇</strong>总记账凭证程序；业务多科目少→<strong>科目汇总表</strong>程序（多栏式日记账程序同样是"大而多但科目少"）；业务少科目也少→<strong>日记总账</strong>程序。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频考点速查</div><p>考"适用于<strong>规模较小、经济业务量较少</strong>单位"→<strong>记账凭证账务处理程序</strong>（最基本，缺点是登总账工作量大）；考"<strong>减轻</strong>登总账工作量、可<strong>试算平衡</strong>"→<strong>科目汇总表</strong>；考"便于了解账户<strong>对应关系</strong>"→<strong>汇总记账凭证</strong>；考"<strong>不能反映</strong>对应关系、不便于查对账目"→也是<strong>科目汇总表</strong>——优缺点成对背，别记串。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>会计记录</strong>：账户＋会计凭证＋账簿为载体，复式记账为手段，为编制财务会计报告积累数据</li>
+<li><strong>四方法</strong>：设置账户、复式记账、填制和审核凭证、登记账簿（"设复凭账"；货币计量不是方法）</li>
+<li><strong>账户</strong>：按会计科目设置、有格式结构、分类核算工具；按内容分七类（资产/负债/所有者权益/收入/成本/费用/损益），按粗细分总分类/明细分类</li>
+<li><strong>借贷记账法</strong>：有借必有贷、借贷必相等；<strong>资费借增余在借，负权收入贷增余在贷</strong>；资产类期末余额＝期初＋本期借方−本期贷方</li>
+<li><strong>试算平衡</strong>：全部账户借方发生额合计＝贷方发生额合计；借方期初（期末）余额合计＝贷方期初（期末）余额合计</li>
+<li><strong>凭证</strong>：会计工作<strong>开始</strong>于填制和审核凭证；原始凭证证业务、记账凭证定借贷（登账直接依据）；会计分录通过填制记账凭证完成</li>
+<li><strong>账簿</strong>：联结凭证与报告的<strong>中间环节</strong>、编报告的基础；按用途分<strong>序时/分类/备查</strong>；对账"账证、账账、账实、账表"四相符，<strong>至少每年一次</strong></li>
+<li><strong>账务处理程序</strong>（会计核算组织程序）：基本模式"原始凭证→记账凭证→会计账簿→会计报表"；五种程序抓"登总账的依据"：小记、大汇、多科汇总、多栏大而少、日记少而少</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b29s3q1" data-answer="BCDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">会计记录的方法主要包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 货币计量</button><button type="button" class="qopt" data-key="B">B. 设置账户</button><button type="button" class="qopt" data-key="C">C. 复式记账</button><button type="button" class="qopt" data-key="D">D. 填制和审核凭证</button><button type="button" class="qopt" data-key="E">E. 登记账簿</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：四种记录方法＝设置账户、复式记账、填制和审核凭证、登记账簿（B、C、D、E）。货币计量（A）是<strong>会计基本前提</strong>，不是记录方法——又是"前提混进来"的干扰项，口诀"设复凭账"里没有它。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s3q2" data-answer="BC" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">按照借贷记账法的记账规则，借方登记增加额的账户有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 所有者权益类账户</button><button type="button" class="qopt" data-key="B">B. 费用类账户</button><button type="button" class="qopt" data-key="C">C. 资产类账户</button><button type="button" class="qopt" data-key="D">D. 收入类账户</button><button type="button" class="qopt" data-key="E">E. 负债类账户</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BC</div><div class="q-exp"><p>析：<strong>资产、成本、费用</strong>类账户借方登记增加额（B、C 对）；<strong>负债、所有者权益、收入</strong>类账户贷方登记增加额、借方登记减少额（A、D、E 全反了）。口诀"资费借增余在借，负权收入贷当家"，方向题先想这句再动笔。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s3q3" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">负债类账户的一般记账规则是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 借方登记减少额，贷方登记增加额，账户余额在贷方</button><button type="button" class="qopt" data-key="B">B. 借方登记减少额，贷方登记增加额，账户余额在借方</button><button type="button" class="qopt" data-key="C">C. 借方登记增加额，贷方登记减少额，账户余额在借方</button><button type="button" class="qopt" data-key="D">D. 借方登记增加额，贷方登记减少额，账户余额在贷方</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：负债类账户与所有者权益、收入类一样，<strong>贷方记增加、借方记减少、余额在贷方</strong>（A 对）。C、D 是资产类（借增贷减）的规则，方向反了；B 方向说对了但余额位置错——余额跟着<strong>增加方</strong>走：增加记哪边、余额就在哪边。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s3q4" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">假设企业的应收账款账户期初余额为 100 万元，本期借方发生额为 50 万元，本期贷方发生额为 80 万元，其期末余额为（　）万元。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 130</button><button type="button" class="qopt" data-key="B">B. 230</button><button type="button" class="qopt" data-key="C">C. 100</button><button type="button" class="qopt" data-key="D">D. 70</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：应收账款是<strong>资产类</strong>账户，按"借加贷减"分步算：期末余额＝期初余额＋本期借方发生额−本期贷方发生额＝100＋50−80＝<strong>70</strong>（D 对）。A（130）错在把贷方发生额也加进去；B（230）错在三项全加；C 是没动账——资产类公式里贷方发生额必须<strong>减</strong>掉。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s3q5" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">会计工作开始于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 登记账簿</button><button type="button" class="qopt" data-key="B">B. 填制和审核会计凭证</button><button type="button" class="qopt" data-key="C">C. 核对账目</button><button type="button" class="qopt" data-key="D">D. 编制报表</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：<strong>填制和审核凭证是会计工作的开始</strong>（B）——会计凭证是记录经济业务、明确经济责任的书面证明，也是登记账簿的依据。流程是凭证（开始）→登记账簿→编制报表（A、D 都在凭证之后）；核对账目是对账工作，发生在登账之后，不是起点（C 错）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b29s3q6" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">科目汇总表账务处理程序的记账程序是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 原始凭证—科目汇总表—总分类账</button><button type="button" class="qopt" data-key="B">B. 原始凭证—记账凭证—科目汇总表—总分类账</button><button type="button" class="qopt" data-key="C">C. 原始凭证—记账凭证—总分类账</button><button type="button" class="qopt" data-key="D">D. 原始凭证—科目汇总表—记账凭证—总分类账</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：科目汇总表程序＝根据<strong>记账凭证</strong>定期编制<strong>科目汇总表</strong>，再据以登记总分类账（B 对）。C 是<strong>记账凭证</strong>账务处理程序（直接逐笔登总账、不过汇总表）；A、D 都跳过了"先编记账凭证"这一步——任何程序都是先有记账凭证，科目汇总表只是它的"汇总版"。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础29_会计循环_第2节_会计计量.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 会计计量</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础29_会计循环_第4节_财务会计报告.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 财务会计报告</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

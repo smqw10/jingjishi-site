@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十八章 会计概论 · 会计要素 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第五部分 会计</span><h1>第二十八章 会计概论 · 会计要素</h1><div class="subtitle">第 3 节 / 共 7 节 · 预计学习时长 55 分钟</div><div class="progress-bar"><div class="fill" style="width:42%"></div></div><div class="progress-text">本章进度 3/7</div><div class="sec-badge none" id="sec-badge" data-sec="b28s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟六要素与两大等式：<strong>资产＝负债＋所有者权益</strong>（资产负债表）、<strong>利润＝收入－费用</strong>（利润表） <span class="must">必考</span></li>
+<li>掌握<strong>资产</strong>的定义、三特征、两个确认条件、流动/非流动分类 <span class="s3">★★★</span></li>
+<li>掌握<strong>负债</strong>的定义与特征、<strong>所有者权益</strong>四大构成（"两公喂食"）与留存收益 <span class="s3">★★★</span></li>
+<li>记住收入、费用、利润都带"日常活动"定语的定义 <span class="hot">高频考点</span></li>
+<li>会用恒等式判断九类经济业务引起的会计要素变动 <span class="hot">高频考点</span> <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、会计要素与会计等式</h2>
+<h3>1. 六要素与两大等式 <span class="must">必考</span></h3>
+<p><strong>会计要素</strong>是指按照<strong>交易或事项的经济特征</strong>所作的<strong>基本分类</strong>，是会计核算和监督对象的具象化。<strong>会计等式</strong>是<strong>设置会计科目、复式记账和编制会计报表</strong>的理论依据。</p>
+<table>
+<thead>
+<tr>
+<th>会计要素分类</th>
+<th>要素</th>
+<th>具体含义</th>
+<th>报表名称</th>
+<th>会计等式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>反映企业<strong>财务状况</strong>的会计要素</td>
+<td>资产</td>
+<td>是<strong>资金的占用形态</strong></td>
+<td>资产负债表</td>
+<td><strong>资产＝负债＋所有者权益</strong></td>
+</tr>
+<tr>
+<td>↑</td>
+<td>负债</td>
+<td>与资产相对应的<strong>取得途径</strong></td>
+<td>↑</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>所有者权益</td>
+<td>↑</td>
+<td>↑</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>反映企业<strong>经营成果</strong>的会计要素</td>
+<td>收入</td>
+<td>经济活动中经济利益的<strong>总流入</strong></td>
+<td>利润表</td>
+<td><strong>利润＝收入－费用</strong></td>
+</tr>
+<tr>
+<td>↑</td>
+<td>费用</td>
+<td>经济活动中经济利益的<strong>总流出</strong></td>
+<td>↑</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>利润</td>
+<td><strong>资金运用的成果</strong></td>
+<td>↑</td>
+<td>↑</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>六要素的&quot;占用—来源&quot;骨架：</strong><p>左边想"钱变成了什么"（资产＝占用形态），右边想"钱从哪来"（负债和所有者权益＝取得途径）——"资产＝负债＋所有者权益"恒等的道理就在这：同一笔钱的两面。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>面包厂账上 170 万资产（烤箱、面粉、存款）：其中 20 万是借银行的（负债），150 万是老板的（所有者权益）——170＝20＋150，一笔钱两面记账，这就是第一个会计等式。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 六要素总口诀</div><p><strong>"占用的叫资产，来源是负债＋权益；流入是收入，流出是费用，净剩是利润"</strong>——前三要素管"家底"（资产负债表），后三要素管"成绩"（利润表）。</p></div></div>
+<div class="section"><h2>二、反映财务状况的会计要素 <span class="hot">高频考点</span></h2>
+<h3>2. 资产 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>定义</strong>：资产是指企业<strong>过去的交易或者事项</strong>形成的、由企业<strong>拥有或者控制</strong>的、<strong>预期会给企业带来经济利益</strong>的资源。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>特征</strong></td>
+<td>①必须是企业<strong>拥有或控制</strong>的资源——指企业享有某项资源的所有权，或者虽然不享有某项资源的所有权，但该资源能被企业所控制；②必须是<strong>预期能够直接或间接给企业带来经济利益</strong>的资源——例如，待处理的<strong>无价值的报废产品</strong>等不能作为企业的资产；③形成资产的交易或事项必须<strong>已经发生</strong>——即资产必须是<strong>现实的资产，而不是预期的资产</strong>，例如，计划购买的机器设备等尚未购置的，则不能作为企业的资产</td>
+</tr>
+<tr>
+<td><strong>确认条件</strong></td>
+<td>符合资产定义，并同时满足两个条件：①与该资源有关的<strong>经济利益很可能流入企业</strong>；②该资源的<strong>成本或者价值能够可靠地计量</strong></td>
+</tr>
+<tr>
+<td><strong>分类</strong>（按流动性）</td>
+<td><strong>流动资产</strong>：预计在一个<strong>正常营业周期</strong>中<strong>变现、出售或耗用</strong>，或者主要为<strong>交易目的</strong>而持有，或者预计在资产负债表日起<strong>1 年内（含 1 年）</strong>变现，以及自资产负债表日起 1 年内<strong>交换其他资产或清偿负债的能力不受限制的现金或现金等价物</strong>；主要包括<strong>货币资金、交易性金融资产、应收票据及应收账款、预付款项、其他应收款、存货</strong>等。<strong>非流动资产</strong>：流动资产以外的资产，主要包括<strong>长期股权投资、固定资产、在建工程、无形资产、开发支出</strong>等</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>资产判断三步：</strong><p>先问"<strong>过去的事形成的吗</strong>"（未来计划的不算）；再问"<strong>归企业拥有或控制吗</strong>"（融资租入的控制也算）；后问"<strong>能带来经济利益、能可靠计量吗</strong>"（报废无价值的不算）。三问全过才是资产。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>面包厂融资租入一条生产线：设备所有权在租赁公司手里，但设备由企业<strong>控制</strong>、用它生产赚钱→照样记作企业的资产。反过来，公司<strong>计划</strong>下个月买一台新烤箱——"预期的资产"不算数，今天不能入账；车间里一台彻底报废、一分钱卖不出去的旧冰柜——带不来经济利益，也不能作资产挂着。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 资产特征与分类</div><p><strong>"过去形成、拥有控制、将来生钱"</strong>＋确认两关"<strong>很可能流入、能可靠计量</strong>"。流动资产一句话：<strong>一年内（含一年）能变成钱的</strong>——货币资金、交易性金融资产、应收票据及应收账款、预付款项、其他应收款、存货；其余归非流动（长期股权投资、固定资产、在建工程、无形资产、开发支出）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频坑：&quot;拥有&quot;不等于必须有所有权</div><p>判断资产抓"<strong>拥有或控制</strong>"——<strong>控制</strong>也算，融资租赁是最典型考点。另外两个坑：<strong>待处理的无价值的报废产品</strong>不能作资产（带不来经济利益）；<strong>计划购置的设备</strong>不是资产（交易尚未发生，属"预期"）。</p></div></div>
+<div class="section"><h3>3. 负债 <span class="s3">★★★</span></h3>
+<p><strong>定义</strong>：负债是指企业<strong>过去的交易或者事项</strong>形成的、<strong>预期会导致经济利益流出企业</strong>的<strong>现时义务</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>特征</strong></td>
+<td>①只能由<strong>过去的</strong>交易活动或本期经济业务所形成，且必须于<strong>未来某一特定时期予以清偿</strong>的现时义务——企业与供应商签订的<strong>在未来可能形成负债的采购合同</strong>，在当前不能作为负债；②必须有可用<strong>货币反映的价值量</strong>；③必须是现行条件下<strong>已承担的</strong>、预期都会造成<strong>经济利益流出</strong>的现时义务</td>
+</tr>
+<tr>
+<td><strong>确认条件</strong></td>
+<td>符合负债定义，并同时满足两个条件：①与该义务有关的<strong>经济利益很可能流出企业</strong>；②<strong>未来流出的经济利益的金额能够可靠地计量</strong></td>
+</tr>
+<tr>
+<td><strong>分类</strong>（按流动性）</td>
+<td><strong>流动负债</strong>：预计在一个<strong>正常营业周期</strong>中清偿，或者主要为<strong>交易目的</strong>而持有，或者自资产负债表日起<strong>一年内到期</strong>应予清偿，或者企业<strong>无自主地将清偿推迟</strong>至资产负债表日后一年以上的负债；包括<strong>短期借款、应付票据、应付账款、预收账款、应付职工工资、应交税费、应付利息、应付股利、其他应付款</strong>等。<strong>非流动负债</strong>：流动负债以外的负债，如<strong>长期借款、应付债券</strong>等</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>负债的&quot;现时义务&quot;关窍：</strong><p>"<strong>现时</strong>"＝现在就已经担着的义务：过去借的钱、已经收下的货款、已经发生的应付款都算；<strong>将来才准备签的合同</strong>不算——合同还没签，义务根本不存在。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>面包厂跟银行借的 20 万（过去发生的借款→负债）；下个月准备跟面粉厂签的采购意向书——合同没签、货没收，<strong>现时义务</strong>不存在，今天不能记负债。至于熟人情面上的"欠个人情"——没法用货币计量，感情债、人情债不算负债。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 负债口诀</div><p><strong>"过去欠的、真要还的、能计量的"</strong>——现时义务三个定语。非流动负债认"<strong>长期</strong>"字辈＋<strong>应付债券</strong>；其余常见应付款项基本都在流动负债堆里。</p></div></div>
+<div class="section"><h3>4. 所有者权益 <span class="s3">★★★</span></h3>
+<p><strong>定义</strong>：所有者权益是指企业<strong>资产扣除负债后</strong>由所有者享有的<strong>剩余收益</strong>，又称为<strong>股东权益</strong>，即<strong>所有者权益＝资产－负债</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>来源</strong></td>
+<td>①企业投资人<strong>投入的资本</strong>（实收资本或股本、资本公积）；②<strong>直接计入所有者权益的利得和损失</strong>（资本公积）；③<strong>留存收益</strong>：历年净利润<strong>留存</strong>于企业的部分，包括<strong>盈余公积和未分配利润</strong></td>
+</tr>
+<tr>
+<td><strong>具体构成</strong></td>
+<td>①<strong>实收资本（或股本）</strong>：投资者实际投入企业的资本，是企业<strong>承担民事责任的保证</strong>；②<strong>资本公积</strong>：资本溢价（股本溢价）＋直接计入所有者权益的利得和损失；③<strong>盈余公积</strong>：按照法规从净利润中<strong>提取</strong>的留存收益；④<strong>未分配利润</strong>：企业留待以后年度分配，也属于留存收益</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>权益四构成与留存收益：</strong><p>四构成＝实收资本、资本公积、盈余公积、未分配利润；其中<strong>留存收益只装两个</strong>——盈余公积＋未分配利润（"留下没分的赚头"）。实收资本是"投进来的"，资本公积是"溢价和直接计入的利得损失"，别与留存收益混。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>面包厂账本：老板投 100 万（实收资本）；后来有人想高价入股，产生股本溢价 10 万（资本公积）；逐年从净利润里按法规提了 8 万（盈余公积）；还剩 12 万利润没分（未分配利润）——后两样合起来就是"企业历年留下没分的钱"＝留存收益。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 所有者权益构成</div><p><strong>"两公喂（未）食（实）"</strong>——两个"公"：资本<strong>公</strong>积、盈余<strong>公</strong>积；一个"未"：<strong>未</strong>分配利润；一个"实"：<strong>实</strong>收资本。再记"<strong>权益＝资产－负债</strong>"，它是<strong>剩余收益</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 辨析：所有者权益 vs 负债</div><p>两者都是资金的"来源"，但<strong>负债要还、权益不还</strong>：负债是债权人的权益（到期还本付息），所有者权益是投资人的<strong>剩余收益</strong>（经营得好才分红）。选择题对号：长期借款、应付债券→负债；实收资本、资本公积、盈余公积、未分配利润→所有者权益；应收票据、长期股权投资→<strong>资产</strong>，两头都不沾。</p></div></div>
+<div class="section"><h2>三、反映经营成果的会计要素</h2>
+<h3>5. 收入、费用与利润 <span class="hot">高频考点</span></h3>
+<p><strong>收入</strong>：指企业在<strong>日常活动</strong>中形成的、会导致<strong>所有者权益增加</strong>的、<strong>与所有者投入资本无关</strong>的经济利益的<strong>总流入</strong>。企业的日常活动包括<strong>销售商品、提供劳务及让渡资产使用权</strong>；<strong>为第三方代收的款项不属于企业收入</strong>。</p>
+<p><strong>费用</strong>：指企业在<strong>日常活动</strong>中发生的、会导致<strong>所有者权益减少</strong>的、<strong>与向所有者分配利润无关</strong>的经济利益的<strong>总流出</strong>。狭义的费用是指为取得收入而发生的各种与提供商品和劳务有关的资产耗费，即<strong>营业费用</strong>；广义的费用还包括<strong>投资损失、营业外支出和所得税费用</strong>。营业费用包括<strong>制造成本和期间费用</strong>：制造成本是指与生产产品直接有关的费用，应计入产品成本，从销售收入中得到补偿；期间费用是指与生产产品无直接关系、属于某一时期耗用的费用，包括<strong>管理费用、研发费用、财务费用和销售费用</strong>等。</p>
+<p><strong>利润</strong>：指企业在<strong>一定期间内</strong>的<strong>经营成果</strong>，是企业在生产经营过程中各种<strong>收入扣除各种费用后的盈余</strong>，是反映经营成果的<strong>最终要素</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>收入费用的&quot;三件套&quot;对照：</strong><p>两者都抓三点：①<strong>日常活动</strong>（非日常的利得/损失不算收入费用）；②<strong>影响所有者权益</strong>（收入使其增加、费用使其减少）；③<strong>与投入资本/分配利润无关</strong>（股东<strong>投钱</strong>进来的流入不是收入，给股东<strong>分红</strong>的流出不是费用）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>面包厂卖面包收款 5000 元→收入；替街道办向住户<strong>代收</strong>的 300 元垃圾处理费——只是"过手钱"，不属于企业收入。给股东分红是"分利润"，不是费用；股东追加投入是"收资本"，也不是收入。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 收入与费用</div><p><strong>"日常才配叫，代收不算数；股东投钱不是入，分给股东不是费"</strong>——利润＝收入－费用，是资金运用的成果、反映经营成果的最终要素。</p></div></div>
+<div class="section"><h2>四、经济业务发生所引起的会计要素的变动 <span class="must">必考</span></h2>
+<h3>6. 九种变动情形 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p>判断思路：①判断经济业务事项的发生引起了<strong>哪些会计要素</strong>如何变动；②根据"<strong>资产＝负债＋所有者权益</strong>"恒等式判断经济业务事项的发生是否正确——无论怎么变，<strong>等式必须始终平衡</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>变动情形</th>
+<th>具体内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>左右两边同时变动</strong></td>
+<td>(1) 一项资产和一项负债<strong>同时等额增加</strong>；(2) 一项资产和一项所有者权益<strong>同时等额增加</strong>；(3) 一项资产和一项负债<strong>同时等额减少</strong>；(4) 一项资产和一项所有者权益<strong>同时等额减少</strong></td>
+</tr>
+<tr>
+<td><strong>要素内部增减变动</strong>（左边内部）</td>
+<td>(5) 一项资产增加，另一项资产等额减少，负债和所有者权益要素不变</td>
+</tr>
+<tr>
+<td><strong>要素内部增减变动</strong>（右边内部）</td>
+<td>(6) 一项负债增加，另一项负债等额减少，资产和所有者权益要素不变；(9) 一项所有者权益增加，另一项所有者权益等额减少，资产和负债要素不变</td>
+</tr>
+<tr>
+<td><strong>资产要素不变</strong>（右边交叉）</td>
+<td>(7) 一项负债增加，另一项所有者权益等额减少，资产要素不变；(8) 一项负债减少，另一项所有者权益等额增加，资产要素不变</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>九种变动的统一原理：</strong><p>任何一笔经济业务，变完之后"<strong>资产＝负债＋所有者权益</strong>"必须依然成立。左边（资产）内部一增一减、右边（负债、权益）内部一增一减或交叉增减，总额都不动；只有<strong>左右两边同增同减</strong>才改变总额——这就是判断的总开关。</p></div></div>
+<div class="section"><p>分步演算示例：<strong>用银行存款 5 万元购买原材料</strong>
+1. <strong>找要素</strong>：银行存款（资产）减少 5 万，原材料（资产）增加 5 万；
+2. <strong>定增减</strong>：只动了<strong>资产</strong>一个要素，一增一减、金额相等；
+3. <strong>验等式</strong>：资产总额不变（＋5 万与－5 万相抵），右边纹丝不动 → 属于第 <strong>(5)</strong> 种"一项资产增加，另一项资产等额减少"。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>预收销货款 15000 元存入银行：银行存款（<strong>资产</strong>）↑15000；"预收"＝货还没给、先把钱收了，形成预收账款（<strong>负债</strong>）↑15000 → 一项资产和一项负债<strong>同时等额增加</strong>，第 (1) 种。口诀套用："钱先收、货后给"，左右两边同时变大。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 九种变动总诀</div><p><strong>"两边同增同减，一边内部有增有减，右边还能互相换"</strong>——做题三步：找要素→定增减→验等式。只要等式仍平衡，变动就成立。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 方向对照类易错题（用户高发）</div><p>最易混的是第 (1)(3) 种"<strong>资产和负债同增减</strong>"与第 (7)(8) 种"<strong>负债增、权益减（资产不动）</strong>"。区分诀窍看<strong>资产动没动</strong>：资产动了→左右同增同减；资产没动→只是右边两项"你多我少"。收到<strong>预收款</strong>、抵押取得<strong>借款</strong>都是第 (1) 种；把应付账款转作<strong>所有者权益</strong>（债转股）才是第 (8) 种。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>六要素两等式</strong>：资产（资金占用形态）＝负债＋所有者权益（取得途径），资产负债表；利润＝收入－费用，利润表；会计等式是设置会计科目、复式记账、编制会计报表的理论依据</li>
+<li><strong>资产</strong>：过去交易形成＋拥有或控制＋预期能带来经济利益；确认＝很可能流入＋能可靠计量；流动资产＝一年内（含）变现——货币资金、交易性金融资产、应收票据及应收账款、预付款项、其他应收款、存货；非流动＝长期股权投资、固定资产、在建工程、无形资产、开发支出</li>
+<li><strong>负债</strong>：过去形成＋预期导致经济利益流出＋现时义务；确认＝很可能流出＋金额可靠计量；流动负债一年内清偿——短期借款、应付票据、应付账款、预收账款、应付职工工资、应交税费、应付利息、应付股利、其他应付款；非流动＝长期借款、应付债券</li>
+<li><strong>所有者权益</strong>＝资产－负债（剩余收益、股东权益）；四构成：实收资本、资本公积、盈余公积、未分配利润（"两公喂食"）；留存收益＝盈余公积＋未分配利润</li>
+<li><strong>收入</strong>：日常活动、导致所有者权益增加、与投入资本无关的总流入（代收款不算）；<strong>费用</strong>：日常活动、导致所有者权益减少、与分配利润无关的总流出（期间费用＝管理、研发、财务、销售）；<strong>利润</strong>：一定期间收入扣费用的盈余、反映经营成果的最终要素</li>
+<li><strong>九种变动</strong>：两边同增同减（1-4）；资产内部（5）；负债内部（6）；权益内部（9）；负债与权益交叉（7-8）；恒等式始终成立</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b28s3q1" data-answer="ABCD" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">关于资产特征的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 资产必须是企业拥有或控制的资源，通过对它的有效使用，能够为企业提供未来的经济利益</button><button type="button" class="qopt" data-key="B">B. 资产必须是预期能够直接或间接给企业带来经济利益的资源</button><button type="button" class="qopt" data-key="C">C. 资产必须是现实的资产，而不是预期的资产</button><button type="button" class="qopt" data-key="D">D. 资产必须能以货币计量</button><button type="button" class="qopt" data-key="E">E. 资产是由过去的交易活动形成的且必须于未来某一特定时期予以清偿的现时义务</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：A"拥有或控制"、B"预期能带来经济利益"、C"现实的而非预期的"都是资产的标准特征；D 与资产确认条件"成本或者价值能够可靠地计量"相呼应，正确；E 说的"过去形成、未来清偿的现时义务"是<strong>负债</strong>的定义，不是资产的特征。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s3q2" data-answer="A" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">下列属于流动资产项目的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 货币资金</button><button type="button" class="qopt" data-key="B">B. 固定资产</button><button type="button" class="qopt" data-key="C">C. 在建工程</button><button type="button" class="qopt" data-key="D">D. 无形资产</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：流动资产＝预计一年内（含）变现、出售或耗用的资产，<strong>货币资金</strong>流动性最强，是典型的流动资产。固定资产、在建工程、无形资产都属于<strong>非流动资产</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s3q3" data-answer="ADE" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">下列科目中，属于所有者权益项目的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 实收资本</button><button type="button" class="qopt" data-key="B">B. 长期借款</button><button type="button" class="qopt" data-key="C">C. 应收票据</button><button type="button" class="qopt" data-key="D">D. 资本公积</button><button type="button" class="qopt" data-key="E">E. 未分配利润</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ADE</div><div class="q-exp"><p>析：所有者权益四构成＝实收资本、资本公积、盈余公积、未分配利润。长期借款是<strong>负债</strong>，应收票据是<strong>资产</strong>，都与所有者权益无关。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s3q4" data-answer="C" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">企业在日常经营中发生的，会导致所有者权益减少的，与向所有者分配利润无关的经济利益的总流出，在会计上称为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 负债</button><button type="button" class="qopt" data-key="B">B. 损失</button><button type="button" class="qopt" data-key="C">C. 费用</button><button type="button" class="qopt" data-key="D">D. 支出</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：这正是<strong>费用</strong>的标准定义——日常活动中发生、导致所有者权益减少、与向所有者分配利润无关的经济利益总流出。"与分配利润无关"是题眼：给股东分红也减少所有者权益，但那不叫费用。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s3q5" data-answer="A" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">预收销货款 15000 元，存入银行。这项经济业务所引起的会计要素变动情况属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 一项资产与一项负债同时增加</button><button type="button" class="qopt" data-key="B">B. 一项资产与一项负债同时减少</button><button type="button" class="qopt" data-key="C">C. 一项负债增加，另一项负债减少</button><button type="button" class="qopt" data-key="D">D. 一项资产增加，另一项资产减少</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：钱存入银行→银行存款（<strong>资产</strong>）增加 15000；"预收"＝货还没发、先收了钱，形成预收账款（<strong>负债</strong>）增加 15000 → 一项资产与一项负债<strong>同时等额增加</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s3q6" data-answer="ABE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">反映经营成果的会计要素包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 收入</button><button type="button" class="qopt" data-key="B">B. 费用</button><button type="button" class="qopt" data-key="C">C. 未分配利润</button><button type="button" class="qopt" data-key="D">D. 所有者权益</button><button type="button" class="qopt" data-key="E">E. 利润</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABE</div><div class="q-exp"><p>析：反映<strong>经营成果</strong>的要素＝收入、费用、利润（利润表三要素）。所有者权益属于反映<strong>财务状况</strong>的要素；未分配利润只是所有者权益的构成项目，不是独立的会计要素。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s3q7" data-answer="AC" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">所有者权益中的留存收益包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 盈余公积</button><button type="button" class="qopt" data-key="B">B. 利润</button><button type="button" class="qopt" data-key="C">C. 未分配利润</button><button type="button" class="qopt" data-key="D">D. 资本公积</button><button type="button" class="qopt" data-key="E">E. 实收资本</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AC</div><div class="q-exp"><p>析：留存收益＝历年净利润<strong>留存</strong>于企业的部分＝<strong>盈余公积＋未分配利润</strong>。实收资本是投资人投入的资本，资本公积来自资本溢价和直接计入的利得损失，都不是"企业赚下来留下没分的钱"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b28s3q8" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">某企业用银行存款购买存货，导致会计要素变动的形式是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 一项资产增加，另一项资产等额减少，负债和所有者权益不变</button><button type="button" class="qopt" data-key="B">B. 一项资产和一项负债同时等额增加</button><button type="button" class="qopt" data-key="C">C. 一项所有者权益增加，另一项所有者权益等额减少，资产和负债要素不变</button><button type="button" class="qopt" data-key="D">D. 一项资产和一项负债同时等额减少</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：银行存款（资产）减少、存货（资产）增加，金额相等——只是<strong>资产内部</strong>一增一减（第 5 种情形），负债和所有者权益都不动，资产总额不变，等式依然平衡。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础28_会计概论_第2节_会计目标.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 会计目标</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础28_会计概论_第4节_会计要素确认和计量的基本原则.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 会计要素确认和计量的基本原则</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

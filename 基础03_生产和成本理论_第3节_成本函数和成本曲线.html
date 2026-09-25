@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三章 生产和成本理论 · 成本函数和成本曲线 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第三章 生产和成本理论 · 成本函数和成本曲线</h1><div class="subtitle">第 3 节 / 共 3 节 · 预计学习时长 50 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 3/3</div><div class="sec-badge none" id="sec-badge" data-sec="b03s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>分清<strong>显成本与隐成本</strong>，背熟<strong>经济利润＝总收益−显成本−隐成本</strong>，记住正常利润的归属 <span class="must">必考</span></li>
+<li>记住<strong>机会成本</strong>＝放弃的其他生产用途中的<strong>最高收入</strong> <span class="hot">高频考点</span></li>
+<li>掌握<strong>TC＝TFC＋TVC</strong>、固定成本与可变成本的典型项目、<strong>边际成本</strong>的分步计算 <span class="hot">高频考点</span></li>
+<li>画清<strong>短期成本曲线</strong>：三条总量线的起点、MC 与 AVC／ATC 的交点及最低点顺序 <span class="s3">★★★</span> <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、成本的含义</h2>
+<h3>1. 成本与机会成本</h3>
+<p><strong>成本</strong>（又称<strong>生产费用</strong>）：生产过程中企业对所购买的<strong>各种生产要素的货币支出</strong>，也可以说是企业在生产经营过程中所支付的<strong>物质费用和人工费用</strong>。</p>
+<p><strong>机会成本</strong>：当一种生产要素被用于生产单位某产品时所<strong>放弃</strong>的，使用相同要素在<strong>其他生产用途</strong>中所得到的<strong>最高收入</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>机会成本抓三个词：</strong><p>"<strong>放弃</strong>""<strong>其他用途</strong>""<strong>最高</strong>收入"——机会成本不是实际掏出去的钱，而是把这份资源挪作别处本可以赚到的最大收益；取"最高"，不取"平均"或"最低"。</p></div></div>
+<div class="section"><h3>2. 显成本与隐成本</h3>
+<p><strong>生产成本＝显成本＋隐成本</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>显成本</th>
+<th>隐成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>含义</td>
+<td>企业<strong>购买或租用</strong>生产要素所<strong>实际支付</strong>的货币支出</td>
+<td>企业<strong>本身所拥有的</strong>、并且被用于该企业生产过程的那些生产要素的<strong>总价格</strong></td>
+</tr>
+<tr>
+<td>关键词</td>
+<td>花钱从外面"买／租"</td>
+<td>拿自家的东西用，账面上没付钱</td>
+</tr>
+<tr>
+<td>常见例子</td>
+<td>付给员工的工资、租用厂房的租金</td>
+<td>老板自有资金投厂放弃的收益、自己经营企业的报酬</td>
+</tr>
+</tbody>
+</table>
+<h3>3. 经济利润与正常利润</h3>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>公式/含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>经济利润</strong>（超额利润）</td>
+<td>＝总收益−总成本＝总收益−<strong>显成本</strong>−<strong>隐成本</strong>；企业所追求的最大利润，简称企业利润</td>
+</tr>
+<tr>
+<td><strong>正常利润</strong></td>
+<td>企业对<strong>自己所提供的企业家才能</strong>的报酬支付；是<strong>生产成本的一部分</strong>，作为<strong>隐成本的一部分</strong>计入成本；<strong>经济利润中不包括正常利润</strong></td>
+</tr>
+</tbody>
+</table>
+<p>讲义总结链：正常利润＝企业家才能的报酬，属于隐成本，本质是一种机会成本。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某水果店每年总收益 100 万、总成本 70 万，则经济利润（超额利润）＝总收益−总成本＝100−70＝<strong>30 万</strong>。注意这 70 万里已经包含隐成本——比如老板自己看店而放弃的打工年薪；老板经营才能的报酬（正常利润）也在其中计为成本，所以"30 万"里<strong>不再含</strong>正常利润。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 利润链条口诀</div><p><strong>"才能报酬即正常，计入隐本不是盈"</strong>——企业家才能的报酬＝正常利润，作为隐成本的一部分计入成本，因此经济利润里<strong>没有</strong>它。算经济利润要扣三样：显成本、隐成本（内含正常利润），先付清这些，剩下的才是企业利润。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：正常利润的三重身份</div><p>考试最爱问"企业家在自己经营的企业获得的报酬属于什么"——它是<strong>正常利润</strong>，计入<strong>隐成本</strong>，实质是<strong>机会成本</strong>；但它<strong>不属于经济利润</strong>（经济利润中不包括正常利润）。反过来，见"正常利润是显成本／属于经济利润"的选项直接判错。</p></div></div>
+<div class="section"><h2>二、成本函数</h2>
+<h3>4. 成本函数的含义与类型</h3>
+<p><strong>成本函数</strong>：表示企业<strong>总成本</strong>与<strong>产量</strong>之间关系的公式。按考察时期分为两类：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>短期成本函数</strong></td>
+<td>可分为<strong>固定成本</strong>与<strong>可变成本</strong></td>
+</tr>
+<tr>
+<td><strong>长期成本函数</strong></td>
+<td><strong>没有固定成本</strong>——从长期看，一切生产要素都是可变的</td>
+</tr>
+</tbody>
+</table>
+<p><strong>短期成本函数和长期成本函数的区别在于是否含有固定成本。</strong></p></div>
+<div class="section"><div class="keypoint"><strong>生产函数管&quot;投入→产量&quot;，成本函数管&quot;产量→成本&quot;：</strong><p>两个函数一进一出接成环：先由生产函数知道投入能产多少，再由成本函数知道生产这些产量要花多少总成本。成本函数的自变量是<strong>产量</strong>，因变量是<strong>总成本</strong>——别把两者方向记反。</p></div></div>
+<div class="section"><h3>5. 短期总成本：固定成本与可变成本</h3>
+<p><strong>总成本 TC＝总固定成本 TFC＋总可变成本 TVC。</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>含义</th>
+<th>典型项目</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>固定成本</strong></td>
+<td>短期内<strong>不随产量增减而变动</strong>的那部分成本</td>
+<td><strong>厂房设备的折旧</strong>、<strong>管理人员的工资</strong>费用</td>
+</tr>
+<tr>
+<td><strong>可变成本</strong></td>
+<td><strong>随产量变动而变动</strong>的那部分成本</td>
+<td><strong>原材料</strong>、<strong>燃料和动力</strong>、<strong>生产工人的工资</strong>费用</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 固定可变口诀</div><p><strong>"折旧管理冻，原料燃料工人动"</strong>——厂房设备折旧＋管理人员工资是"冻"住的固定成本；原材料、燃料动力＋生产工人工资是随产量"动"的可变成本。判断技巧：多产一件就要多花的是可变成本；产量归零也照付不误的是固定成本。</p></div></div>
+<div class="section"><h3>6. 平均成本与边际成本</h3>
+<ul>
+<li><strong>平均成本</strong>：单位产品成本，即生产每一单位产品的成本，由<strong>总成本除以总产量</strong>所得。</li>
+<li><strong>边际成本</strong>：<strong>增加一个单位产量时总成本的增加额</strong>。短期内固定成本不随产量变化，所以<strong>边际成本是产量变动引起的可变成本的变动</strong>。</li>
+</ul>
+<p><strong>分步演算</strong>（讲义例题）：产量为 2 个单位时，总成本 2000 元（其中总固定成本 1200 元、总可变成本 800 元）；产量为 3 个单位时，总成本 2100 元（总固定成本 1200 元、总可变成本 900 元），求边际成本。
+- 第一步：锁定公式 MC＝增加一个单位产量带来的<strong>总成本</strong>增加额＝（2100−2000）÷（3−2）＝<strong>100 元</strong>；
+- 第二步（验算）：固定成本 1200 元没动，增量全部来自可变成本 900−800＝100（元），与第一步一致；
+- 易错提醒：题干里的"平均成本 1000 元、700 元"是烟雾弹——边际成本只看<strong>总成本（可变成本）的增量</strong>，与平均量无关。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>月饼厂多生产一盒月饼：面粉、馅料、电费、临时工工资要多花——这些是可变成本；而烤炉的折旧、厂长的工资不会因为多这盒月饼而变化。所以"多产一单位多花的钱"（边际成本）天然只来自<strong>可变成本</strong>的变动。</p></div></div>
+<div class="section"><h2>三、短期成本曲线 <span class="s3">★★★</span> <span class="must">必考</span></h2>
+<h3>7. 三条总量曲线：TFC、TVC、TC</h3>
+<table>
+<thead>
+<tr>
+<th>曲线</th>
+<th>起点</th>
+<th>走势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>总固定成本 TFC</strong></td>
+<td>纵轴上某一点</td>
+<td><strong>平行于横轴的直线</strong>（短期内不随产量增减而变动）</td>
+</tr>
+<tr>
+<td><strong>总可变成本 TVC</strong></td>
+<td><strong>原点</strong>（产量为 0 时，TVC＝0）</td>
+<td>随产量增加而上升：刚开始以<strong>递减</strong>的速度上升，产量达到一定水平后以<strong>递增</strong>的速度上升</td>
+</tr>
+<tr>
+<td><strong>总成本 TC</strong></td>
+<td><strong>纵轴截点</strong>（产量为 0 时，TC＝TFC）</td>
+<td>随产量增加逐步上升：开始以递减的速度上升，之后以递增的速度上升</td>
+</tr>
+</tbody>
+</table>
+<p>总可变成本曲线与总成本曲线的<strong>变动规律是一致的</strong>（两条线上下只隔一个固定的 TFC 距离）。</p>
+<h3>8. MC、AVC、ATC：一条 U 形线穿过两条 U 形线</h3>
+<table>
+<thead>
+<tr>
+<th>曲线</th>
+<th>形状</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>边际成本 MC</strong></td>
+<td>开始随产量增加<strong>迅速下降</strong>，达到<strong>最低点</strong>后随产量增加<strong>迅速上升</strong>；无论是上升还是下降，变动都快于平均可变成本曲线</td>
+</tr>
+<tr>
+<td><strong>平均固定成本 AFC</strong></td>
+<td>随产量增加<strong>递减</strong>，逐渐向横轴接近（固定成本被摊到越来越多的产量上）</td>
+</tr>
+<tr>
+<td><strong>平均可变成本 AVC</strong></td>
+<td><strong>先下降后上升</strong>；与 MC 相交于自己的最低点 <strong>M′</strong></td>
+</tr>
+<tr>
+<td><strong>平均总成本 ATC</strong></td>
+<td><strong>先下降后上升</strong>；与 MC 相交于自己的最低点 <strong>M</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两条铁律：</strong><p>①<strong>交点前</strong>：MC＜AVC、MC＜ATC；<strong>交点后</strong>：MC＞AVC、MC＞ATC——MC 从下方先后穿过 AVC（M′ 点）和 ATC（M 点），交点分别是这两条平均线<strong>由降转升</strong>的转折处。
+②达到最低点的<strong>先后顺序</strong>：MC <strong>最早</strong>达到最低点，其次是<strong>平均可变成本</strong>曲线（M′），最后是<strong>平均总成本</strong>曲线（M）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 边均交点口诀</div><p><strong>"边穿均于最低点，交前边小交后边大；先触底的是边"</strong>——拿"新队员成绩（MC）与全队平均分（平均线）"想：新队员成绩低于平均（MC＜平均）时拉低平均分，平均分还在降；高于平均（MC＞平均）时抬高平均分；恰好等于平均的那一刻（交点），平均分正好由降转升——踩在最低点上。三条 U 形线里，MC 最先触底。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：交点是&quot;平均线&quot;的最低点，不是 MC 的最低点</div><p>"边际成本曲线与平均总成本曲线相交"意味着<strong>平均总成本曲线处于最低点</strong>（M 点），而此时 MC 已经越过它自己的最低点、处在上升段——千万别答成"边际成本曲线处于最低点"，2024 年多选就设了这个坑。同理，M′ 是平均<strong>可变</strong>成本的最低点；平均<strong>固定</strong>成本曲线则一路递减、不构成这样的交点。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>刚开张：师傅上手、烤箱热起来了，多烤一炉的成本越来越低（MC 下降）；产量过了某个点：要付加班费、抢原料、设备超负荷，多烤一炉越来越贵（MC 上升）——一条 U 形。摊到每炉面包上的总成本（ATC）和每炉的可变成本（AVC）也跟着"先降后升"，且总在 MC 穿过自己时才触底反弹。</p></div></div>
+<div class="section"><h3>9. 决定短期成本变动的主要因素</h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>影响方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>劳动、资本等生产要素的价格</strong></td>
+<td>其他条件不变，工资和原材料、机器设备等生产资料的价格以及租金<strong>提高</strong> → 生产成本相应<strong>提高</strong></td>
+</tr>
+<tr>
+<td><strong>生产率</strong>（用<strong>劳动生产率</strong>和<strong>全要素生产率</strong>表示）</td>
+<td>生产率<strong>提高</strong> → 生产成本<strong>下降</strong>；生产率<strong>下降</strong> → 成本<strong>上升</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>成本</strong>＝生产费用＝购买生产要素的货币支出（物质费用＋人工费用）</li>
+<li><strong>机会成本</strong>＝放弃的其他生产用途中的<strong>最高收入</strong></li>
+<li><strong>生产成本＝显成本＋隐成本</strong>；显＝外买外租实付；隐＝自有要素的总价格</li>
+<li><strong>经济利润</strong>＝总收益−总成本＝总收益−显−隐（又称超额利润）；<strong>正常利润</strong>＝企业家才能的报酬，计入隐成本，经济利润中不含正常利润</li>
+<li><strong>成本函数</strong>＝总成本与产量关系的公式；短期分固定/可变，长期<strong>无固定成本</strong>；两类区别＝是否含固定成本</li>
+<li><strong>TC＝TFC＋TVC</strong>；固定：厂房设备折旧＋管理人员工资；可变：原材料、燃料动力＋生产工人工资</li>
+<li><strong>平均成本</strong>＝总成本÷总产量；<strong>边际成本</strong>＝增加一单位产量总成本的增加额＝可变成本的变动</li>
+<li><strong>三线起点</strong>：固平轴、变出原、总从固出发；TVC 与 TC 变动规律一致</li>
+<li><strong>MC／AVC／ATC</strong>：均先降后升；MC 最早触底→其次 AVC（M′）→最后 ATC（M）；MC 交 AVC 于 M′、交 ATC 于 M（均为各自最低点）；交前边小、交后边大；AFC 递减趋近横轴</li>
+<li><strong>决定短期成本变动</strong>：要素价格（涨→成本升）、生产率（升→成本降）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b03s3q1" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于成本的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 在长期中所有成本都是可变的</button><button type="button" class="qopt" data-key="B">B. 在短期中所有成本都是可变的</button><button type="button" class="qopt" data-key="C">C. 在长期中部分成本是固定的</button><button type="button" class="qopt" data-key="D">D. 在短期中所有成本都是固定的</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：长期中企业可以调整<strong>一切</strong>生产要素，一切成本皆可变、<strong>没有固定成本</strong>（A 对，C 反了）；短期中总有厂房、设备等要素固定不变，因此短期是"部分固定＋部分可变"，B、D 两个"所有"都错。短期成本函数与长期成本函数的区别，就在<strong>是否含有固定成本</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s3q2" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">机会成本是指当一种生产要素被用于生产某产品时所放弃的使用该生产要素在其他生产用途中所得到的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 最高收入</button><button type="button" class="qopt" data-key="B">B. 最低收入</button><button type="button" class="qopt" data-key="C">C. 平均收入</button><button type="button" class="qopt" data-key="D">D. 超额收入</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：机会成本衡量的是<strong>最佳替代用途</strong>的收益——放弃的其他用途中<strong>最高</strong>的那笔收入，即"为做这件事付出的最大代价"。B"最低"、C"平均"都不符合定义——机会成本取的是各替代用途的上限，不是平均水平；D"超额收入"是编造的干扰词。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s3q3" data-answer="BCD" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">企业家在自己经营的企业获得的报酬属于企业的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 显成本</button><button type="button" class="qopt" data-key="B">B. 隐成本</button><button type="button" class="qopt" data-key="C">C. 机会成本</button><button type="button" class="qopt" data-key="D">D. 正常利润</button><button type="button" class="qopt" data-key="E">E. 经济利润</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：企业家<strong>自己</strong>提供了企业家才能，没有向市场购买，所以这笔报酬是<strong>隐成本</strong>（B 对；A 显成本专指向市场购买或租用要素实际支付的货币支出）；它等于把才能用于别处可得的最高收入，因而也是一种<strong>机会成本</strong>（C 对）；企业对自己提供的企业家才能的报酬支付就是<strong>正常利润</strong>（D 对）。E 错误——正常利润计入成本，<strong>经济利润中不包括正常利润</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s3q4" data-answer="BCE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">关于总成本曲线，说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 总成本曲线是从原点出发，随产量上升的曲线</button><button type="button" class="qopt" data-key="B">B. 总可变成本曲线是从原点出发，随产量上升的曲线</button><button type="button" class="qopt" data-key="C">C. 总固定成本曲线是一条平行横轴的直线</button><button type="button" class="qopt" data-key="D">D. 总可变成本曲线是从纵轴一个截点（等于总固定成本）开始，随产量上升的曲线</button><button type="button" class="qopt" data-key="E">E. 总成本曲线是从纵轴一个截点（产量为零时等于总固定成本的点）开始，随产量上升的曲线</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCE</div><div class="q-exp"><p>析：三条线的起点各有归属：总固定成本曲线平行横轴（C 对）；总可变成本曲线产量为零时为零、<strong>从原点出发</strong>随产量上升（B 对）；总成本曲线从<strong>纵轴截点</strong>（产量为零时总成本＝总固定成本）出发随产量逐步上升（E 对）。A 错误——从原点出发的是总可变成本曲线，不是总成本曲线；D 错误——"从纵轴截点（等于固定成本）出发"说的是<strong>总成本</strong>曲线，不是总可变成本曲线。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s3q5" data-answer="ABCD" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于坐标图上各种短期成本曲线及其相互关系的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 总可变成本曲线和总成本曲线的变动规律是一致的</button><button type="button" class="qopt" data-key="B">B. 当产量为零时，总可变成本为零，随着产量的增加，总可变成本逐步上升</button><button type="button" class="qopt" data-key="C">C. 平均固定成本曲线随着产量的增加而递减，逐渐向横轴接近</button><button type="button" class="qopt" data-key="D">D. 总固定成本曲线是平行于横轴的一条直线</button><button type="button" class="qopt" data-key="E">E. 当边际成本与平均总成本正好相等时，边际成本曲线处于最低点</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：TVC 与 TC 只差一个固定的总固定成本，变动规律一致（A 对）；产量为零时 TVC＝0、随产量逐步上升（B 对）；AFC 随产量增加不断被摊薄、递减趋近横轴（C 对）；TFC 不随产量变动、平行横轴（D 对）。E 错误——MC 与 ATC 相等时，是<strong>平均总成本曲线</strong>处于最低点；此时边际成本曲线已越过自己的最低点、正在上升，不是边际成本的最低点。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s3q6" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">某产品产量 10 单位时总成本为 500 元；产量 11 单位时平均成本为 51 元。根据短期成本函数，该企业的边际成本为（　）元。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 50</button><button type="button" class="qopt" data-key="B">B. 51</button><button type="button" class="qopt" data-key="C">C. 61</button><button type="button" class="qopt" data-key="D">D. 52</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：边际成本＝总成本的增量，分两步：第一步，先由平均成本<strong>还原总成本</strong>——产量 11 单位时总成本＝51×11＝561（元）；第二步，边际成本＝561−500＝61（元）。易错点：拿平均成本 51（B）或上一个平均成本 50（A）直接作答都是错的，必须先还原总成本、再作差。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础03_生产和成本理论_第2节_生产函数和生产曲线.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 生产函数和生产曲线</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

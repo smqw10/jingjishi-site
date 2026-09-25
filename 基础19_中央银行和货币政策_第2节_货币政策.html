@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十九章 中央银行和货币政策 · 货币政策 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第三部分 货币与金融</span><h1>第十九章 中央银行和货币政策 · 货币政策</h1><div class="subtitle">第 2 节 / 共 2 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 2/2</div><div class="sec-badge none" id="sec-badge" data-sec="b19s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背下货币政策的定义（只是金融政策的一部分）、三内容（目标—工具—效果）与四大目标，记牢法定表述"保持货币币值稳定，并以此促进经济增长" <span class="hot">高频考点</span></li>
+<li>掌握三大一般性工具：会推"调整率→货币乘数→货币供应量"的方向链，分清正回购 / 逆回购 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>分清选择性、直接、间接信用控制与非常规、结构性工具的代表词，"不包括"题秒杀 <span class="hot">高频考点</span></li>
+<li>背下中介目标三原则（可控可测相关）＋四个变量指标、传导机制两级链条、我国实践与 LPR 改革要点 <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、货币政策是什么——定义、内容与目标</h2>
+<h3>1. 定义与三方面内容 <span class="hot">高频考点</span></h3>
+<p><strong>货币政策并不等同于金融政策，它只是金融政策的一部分</strong>，是一国金融当局制定和执行的、<strong>通过货币量、利率或其他中介指标影响宏观经济运行</strong>的手段。</p>
+<p>货币政策一般包括三个方面的内容：<strong>政策目标 → 实现目标所运用的政策工具 → 预期达到的政策效果</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>三内容顺序不能乱：</strong><p>先定"要去哪"（政策目标），再定"怎么去"（政策工具），最后看"到没到"（预期政策效果）。多选考"包括哪些"，单选考顺序——起点永远是目标，落点是效果。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>类比开车导航：目的地（稳定币值、促进增长＝政策目标）→ 方向盘和油门（准备金率、再贴现、公开市场操作＝政策工具）→ 到达后的路况（物价稳、增长适度＝政策效果）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 货币政策三内容</div><p><strong>"标—器—效"</strong>（政策目标、政策工具、政策效果）——像射箭：先瞄靶（标），再开弓（器），后看中不中（效）。</p></div></div>
+<div class="section"><h3>2. 货币政策的四大目标 <span class="hot">高频考点</span><span class="must">必考</span></h3>
+<p>一国货币政策的目标体系一般由四项构成：<strong>(1) 稳定物价；(2) 经济增长；(3) 充分就业；(4) 平衡国际收支</strong>。</p>
+<p>《中华人民共和国中国人民银行法》规定：<strong>货币政策目标是保持货币币值的稳定，并以此促进经济的增长</strong>。这一政策要求在<strong>抑制物价上涨幅度</strong>的同时<strong>维持适度的经济增长率</strong>，并且<strong>决不以牺牲经济增长为前提</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>目标</th>
+<th>指向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>稳定物价</td>
+<td>抑制物价上涨幅度（对内币值稳定）</td>
+</tr>
+<tr>
+<td>经济增长</td>
+<td>维持适度的经济增长率</td>
+</tr>
+<tr>
+<td>充分就业</td>
+<td>劳动力充分就业</td>
+</tr>
+<tr>
+<td>平衡国际收支</td>
+<td>对外收支大体平衡</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>法定表述是单选题眼：</strong><p>"保持货币币值稳定"是前提和手段，"促进经济增长"是目的，<strong>"并以此促进"</strong>四个字把两者焊死：换掉任何一个半句都错——既不"以牺牲经济增长换取币值稳定"，也不"以物价飞涨换取增长"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>物价一年涨 8%（币值不稳）→ 央行收紧货币压物价；但若压得经济负增长，也不符合政策要求——所以要"抑制物价上涨幅度"的同时"维持<strong>适度</strong>的经济增长率"，两头兼顾、不走极端。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四目标口诀</div><p><strong>"物、长、就、收"</strong>（稳定物价、经济增长、充分就业、平衡国际收支）。核心句配一句：<strong>"先稳币值，再促增长"</strong>。</p></div></div>
+<div class="section"><h2>二、货币政策工具——三大一般性工具 <span class="s3">★★★</span><span class="must">必考</span></h2>
+<h3>3. 法定存款准备金率 <span class="s3">★★★</span><span class="hot">高频考点</span></h3>
+<p><strong>含义</strong>：根据法律规定，商业银行等将其吸收的存款和发行的票据存放在中央银行的<strong>最低比率</strong>。法定存款准备金主要用于<strong>应付商业银行等面临的挤提</strong>，通常以<strong>不兑现货币形式</strong>存放在中央银行。</p>
+<p><strong>效用</strong>：体现在它对商业银行的<strong>信用扩张能力</strong>、对<strong>货币乘数</strong>的调节。央行采取紧缩政策、提高法定存款准备金率→<strong>货币乘数减少</strong>→限制了存款货币银行的信用扩张能力→最终起到<strong>收缩货币供应量和信贷量</strong>的效果。</p>
+<p><strong>三大缺陷</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>缺陷</th>
+<th>白话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 可被反向抵消</td>
+<td>商业银行可以变动其在央行的<strong>超额存款准备金</strong>，从反方向抵消法定存款准备金率政策的作用</td>
+</tr>
+<tr>
+<td>② 作用力度强</td>
+<td>对货币乘数的影响很大，往往被当作一剂"<strong>猛药</strong>"</td>
+</tr>
+<tr>
+<td>③ 见效慢、时滞长</td>
+<td>对货币供应量和信贷量的影响要通过商业银行<strong>辗转存贷、逐级递推</strong>而实现</td>
+</tr>
+</tbody>
+</table>
+<p>因此，法定存款准备金率政策往往作为货币政策的<strong>自动稳定机制</strong>，而不将其当作适时调整的<strong>经常性政策工具</strong>来使用。</p></div>
+<div class="section"><div class="keypoint"><strong>方向链一步别走反：</strong><p><strong>提高准备金率 → 货币乘数减少 → 信用扩张能力受限 → 货币供应量收缩（紧缩）</strong>；反过来"降低→乘数变大→扩张"。2025 真题问"提高法定存款准备金率会导致什么"，答案是"<strong>货币乘数减少</strong>"——不是"增加"，动的是<strong>乘数</strong>而不是基础货币。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>央行宣布紧缩：第一步，上调法定存款准备金率；第二步，商业银行每吸收一笔存款冻结在央行的份额变多，能辗转放贷的"本钱"变少——货币乘数减少；第三步，银行体系信用扩张能力被限制；第四步，货币供应量和信贷量收缩。四步全是"减 / 缩"，没有一个反向词。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 准备金率口诀</div><p><strong>"猛、慢、能抵消——自动稳定不当常备药"</strong>：力度猛（"猛药"）、见效慢（时滞长）、可被超额准备金反向抵消，所以只当"自动稳定机制"，不作经常性工具。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;经常性工具&quot;的归属</div><p>三大工具里只有<strong>法定存款准备金率</strong>被明确"不作经常性工具"（太猛）；<strong>公开市场操作</strong>才是"随时、经常性、连续性"使用的灵活工具。见"猛药 / 时滞 / 自动稳定"选准备金率，见"微调 / 主动出击"选公开市场操作。</p></div></div>
+<div class="section"><h3>4. 再贴现 <span class="hot">高频考点</span></h3>
+<p><strong>含义</strong>：商业银行持客户贴现的商业票据<strong>向中央银行请求贴现</strong>，以取得中央银行的信用支持。</p>
+<p><strong>基本内容</strong>：中央银行根据政策需要调整<strong>再贴现率</strong>。当央行<strong>提高再贴现率</strong>时，商业银行<strong>借入资金的成本上升</strong>，<strong>基础货币得到收缩</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与法定存款准备金率相比，<strong>弹性相对较大</strong>，作用力度相对<strong>缓和</strong></td>
+<td><strong>主动权操纵在商业银行手中</strong>——商业银行还有出售证券、发行存单等融资方式；政策能否获得预期效果，取决于商业银行是否采取<strong>主动配合</strong>态度</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>主动权在谁手里：</strong><p>再贴现的"开关"其实握在商业银行手里：央行调再贴现率只是给出价格信号，商业银行可以不来贴现（转去卖证券、发存单）。这与准备金率（法律强制）、公开市场操作（央行主动出击）形成鲜明对比。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>央行把再贴现率调高，等于"向央行借钱"的价签变贵——商业银行一盘算：卖点债券、发个大额存单更划算，不来贴现了，政策的紧缩效果就打了折扣。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 再贴现口诀</div><p><strong>"温和有弹性，主动在别人"</strong>——弹性较大、力度缓和是优点；主动权在商业银行、效果看配合是缺点。</p></div></div>
+<div class="section"><h3>5. 公开市场操作（正回购与逆回购）<span class="s3">★★★</span><span class="hot">高频考点</span><span class="must">必考</span></h3>
+<p><strong>含义</strong>：中央银行在证券市场上<strong>公开买卖国债、发行票据</strong>的活动。其证券交易活动的主要对象是<strong>商业银行和其他金融机构</strong>，目的在于<strong>调控基础货币</strong>，进而影响<strong>货币供应量和市场利率</strong>。公开市场操作是<strong>比较灵活</strong>的金融调控工具。</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>央行动作</th>
+<th>流动性</th>
+<th>政策取向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>正回购</strong></td>
+<td><strong>卖出</strong>有价证券给一级交易商</td>
+<td><strong>回收</strong>流动性</td>
+<td><strong>紧缩性</strong>货币政策</td>
+</tr>
+<tr>
+<td><strong>逆回购</strong></td>
+<td>从一级交易商<strong>买入</strong>有价证券</td>
+<td><strong>释放</strong>流动性</td>
+<td><strong>宽松性</strong>货币政策</td>
+</tr>
+</tbody>
+</table>
+<p><strong>四大优点</strong>：①影响商业银行的准备金，从而<strong>直接影响货币供应量</strong>；②能随时根据金融市场变化进行<strong>经常性、连续性</strong>操作；③中央银行可以<strong>主动出击</strong>；④规模和方向可灵活安排，可对货币供应量进行<strong>微调</strong>。</p>
+<p><strong>两大缺点</strong>：①金融市场必须具有<strong>全国性</strong>和相当的<strong>独立性</strong>，可用于操作的证券种类必须齐全并达到必需的规模；②<strong>必须有其他货币政策工具配合</strong>——例如没有法定存款准备金制度的配合，这一工具就无法发挥作用。</p></div>
+<div class="section"><div class="keypoint"><strong>方向口诀：&quot;卖紧买松，正收逆放&quot;：</strong><p>央行<strong>卖</strong>证券→收走市场里的钱→<strong>紧缩</strong>；央行<strong>买</strong>证券→往市场里放钱→<strong>宽松</strong>。正回购＝卖出、回收流动性、紧缩；逆回购＝买入、释放流动性、宽松。2023 真题：央行向商业银行等<strong>出售</strong>有价证券→货币供应量<strong>减少</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>通胀压力大，央行进场：第一步，向一级交易商卖出国债（正回购）；第二步，交易商付款，基础货币从市场流回央行口袋；第三步，商业银行准备金变少、可放贷的钱变少；第四步，货币供应量收缩、市场利率上行——一整套"回收流动性"的紧缩操作。反过来做（买入＝逆回购）就是宽松。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 公开市场口诀</div><p><strong>"正收逆放，卖紧买松，直接灵活可微调"</strong>——优点四条（直接影响供应量、经常连续、主动出击、微调），缺点两条（市场要全国性独立性＋证券种类齐全上规模、需其他工具配合）。</p></div></div>
+<div class="section"><h3>6. 选择性、直接与间接信用控制 <span class="hot">高频考点</span></h3>
+<p>传统的三大一般性工具调节的是<strong>货币总量</strong>、以影响宏观经济；在此之外，还可以<strong>有选择地对某些特殊领域的信用</strong>加以调节和影响。</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>具体手段</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>选择性货币政策工具</strong></td>
+<td><strong>消费者信用控制、不动产信用控制、优惠利率、预缴进口保证金</strong></td>
+<td><strong>消费者信用控制</strong>＝央行对<strong>不动产以外</strong>的各种<strong>耐用消费品</strong>的销售融资予以控制（规定首付最低金额、还款最长期限、适用的耐用消费品种类等）；<strong>不动产信用控制</strong>＝央行对金融机构发放<strong>购买房地产</strong>等方面放款的限制措施</td>
+</tr>
+<tr>
+<td><strong>直接信用控制</strong></td>
+<td><strong>利率最高限、信用配额、流动比率、直接干预</strong></td>
+<td>以<strong>行政命令</strong>或其他方式，从<strong>质和量</strong>两个方面，直接对金融机构（尤其商业银行）的信用活动进行控制；<strong>规定存贷款最高利率限制是最常使用的</strong>直接信用管制工具（如 1986 年以前美国的"Q 条例"）</td>
+</tr>
+<tr>
+<td><strong>间接信用指导</strong></td>
+<td><strong>道义劝告、窗口指导</strong></td>
+<td><strong>窗口指导</strong>＝央行根据产业行情、物价趋势和金融市场动向等，对商业银行提出<strong>信贷增减建议</strong>；<strong>没有法律约束力，但影响力往往较大</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两个&quot;信用控制&quot;隔着&quot;不动产&quot;三个字：</strong><p>消费者信用控制管<strong>不动产以外</strong>的耐用消费品（汽车、家电等）分期融资；管<strong>房地产贷款</strong>的叫<strong>不动产信用控制</strong>——名字像双胞胎，作用对象一个"房外"一个"房内"，方向别搞反。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>家电汽车分期消费过猛→央行规定分期买耐用消费品首付比例提高、还款期限缩短（消费者信用控制）；楼市过热→限制银行对购房贷款的成数和规模（不动产信用控制）；美国 1986 年以前规定银行存款利率上限（Q 条例＝利率最高限）；央行约谈商业银行"建议"下季度信贷别冲太猛（窗口指导——没有法律约束力，但没人敢不听）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三类工具口诀</div><p><strong>"选择四小弟（消、不、优、保），直接'高信流直'，间接靠劝导"</strong>——选择性：<strong>消</strong>费者信用控制、<strong>不</strong>动产信用控制、<strong>优</strong>惠利率、预缴进<strong>口</strong>保证金；直接信用控制：利率最<strong>高</strong>限、<strong>信</strong>用配额、<strong>流</strong>动比率、<strong>直</strong>接干预（最常用＝存贷款最高利率限制）；间接信用指导：道义劝告＋窗口指导。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;不包括&quot;题的排除法</div><p>一般性工具只有三个（法定存款准备金率、再贴现、公开市场操作）——问"一般性工具<strong>不包括</strong>"，答案在"间接信用指导 / 不动产信用控制 / 消费者信用控制 / 优惠利率"里找；问"选择性工具<strong>不包括</strong>"，"再贴现"就是答案。</p></div></div>
+<div class="section"><h3>7. 非常规与结构性货币政策工具 <span class="hot">高频考点</span></h3>
+<p>2008 年国际金融危机爆发后，<strong>发达经济体中央银行</strong>引入了一套新的政策干预措施，包括<strong>超低政策利率、大规模再融资操作、资产购买计划、前瞻性指引</strong>等，这些措施统称为<strong>非常规货币政策工具</strong>。非常规货币政策是中央银行传统货币政策工具的<strong>有力补充</strong>，在应对国际金融危机及后危机时期取得了积极效果。</p>
+<p>在我国，常规货币政策工具仍有空间，但经济<strong>结构性失衡</strong>问题比较明显。<strong>2013 年以来</strong>，中国人民银行推出<strong>结构性货币政策工具</strong>，在<strong>总量性货币政策工具中附带结构调整要求</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>背景</th>
+<th>代表措施</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>非常规货币政策工具</td>
+<td>2008 年国际金融危机后（发达经济体）</td>
+<td>超低政策利率、大规模再融资操作、资产购买计划、前瞻性指引</td>
+</tr>
+<tr>
+<td>结构性货币政策工具</td>
+<td>2013 年以来（我国）</td>
+<td>在总量性货币政策工具中附带结构调整要求</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>&quot;非常规四件套&quot;按名记：</strong><p>超低<strong>政策利率</strong>（利率压到底）、大规模<strong>再融资操作</strong>（央行大额向银行供钱）、<strong>资产购买计划</strong>（央行下场买资产）、<strong>前瞻性指引</strong>（提前给市场打预期"预防针"）——2024、2025 连续两年单选考它，题干见"2008 年金融危机后 / 大规模再融资 / 前瞻性指引"直选<strong>非常规</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>危机后利率已经降到接近零，常规工具没了空间，央行宣布每月购入大量债券（资产购买计划）、公开承诺"未来长期维持超低利率"（前瞻性指引）——用"非常规"手段直接托住流动性和市场预期。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 非常规工具口诀</div><p><strong>"低利、借钱、买资产、喊话"</strong>＝超低政策利率、大规模再融资操作、资产购买计划、前瞻性指引；我国结构性工具记"<strong>2013 年起、总量里带结构</strong>"。</p></div></div>
+<div class="section"><h2>三、中介目标与传导机制 <span class="s3">★★★</span></h2>
+<h3>8. 货币政策的中介目标 <span class="s3">★★★</span><span class="hot">高频考点</span><span class="must">必考</span></h3>
+<p><strong>中介目标</strong>又称货币政策的<strong>中间指标、中间变量</strong>等，是介于<strong>货币政策工具变量（操作目标）</strong>和<strong>货币政策目标变量（最终目标）</strong>之间的变量指标。货币政策目标一经确定，中央银行按照<strong>可控性、可测性和相关性</strong>三大原则选择相应的中介目标。</p>
+<p>中介目标的变量指标包括四类：</p>
+<table>
+<thead>
+<tr>
+<th>变量指标</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>利率</strong></td>
+<td>通常指<strong>短期的市场利率</strong>，具体操作有<strong>银行间同业拆借利率、短期国库券利率</strong></td>
+</tr>
+<tr>
+<td><strong>货币供应量</strong></td>
+<td>整个社会的货币存量，是可以用作购买商品和支付劳务费的货币总额</td>
+</tr>
+<tr>
+<td><strong>超额准备金或基础货币</strong></td>
+<td><strong>超额准备金</strong>对商业银行的<strong>资产业务规模有直接决定作用</strong>；<strong>基础货币</strong>是构成货币供应量<strong>倍数伸缩的基础</strong>，满足可测性与可控性要求、数字一目了然，不少国家把它视为<strong>较为理想的中介目标</strong></td>
+</tr>
+<tr>
+<td><strong>通货膨胀率</strong></td>
+<td>设定一个适合的通货膨胀率并且予以<strong>盯住</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三原则与四指标，两张清单分开背：</strong><p>三原则答"<strong>可控、可测、相关</strong>"；四指标答"<strong>利率、货币供应量、超额准备金或基础货币、通货膨胀率</strong>"。多选混着出题：选项里混进"外汇储备数量""汇率""信贷规模"都是干扰项。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>央行盯住银行间同业拆借利率（短期市场利率）：市场钱紧它就往上蹿、钱松它就往下掉——数据天天公布（可测），央行靠公开市场操作管得住（可控），它又与物价、增长密切相关（相关），于是成了好用的中介目标。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 中介目标口诀</div><p>三原则：<strong>"可可香"</strong>（可控、可测、相关）。四指标：<strong>"超（基）货利通——超级火力桶"</strong>（超额准备金 / 基础货币、货币供应量、利率、通货膨胀率）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 超额准备金 vs 基础货币</div><p>同一栏里的两个指标分工不同：<strong>超额准备金</strong>对商业银行的<strong>资产业务规模</strong>有<strong>直接决定作用</strong>；<strong>基础货币</strong>是货币供应量<strong>倍数伸缩的基础</strong>、被视为<strong>较为理想的中介目标</strong>。单选问"对商业银行资产业务规模有直接决定作用的是"，答<strong>超额准备金</strong>。</p></div></div>
+<div class="section"><h3>9. 货币政策传导机制 <span class="hot">高频考点</span></h3>
+<p><strong>含义</strong>：货币政策传导机制是指中央银行运用货币政策工具<strong>影响中介指标</strong>，进而最终实现既定政策目标的<strong>传导途径与作用机理</strong>。传导机制是否顺畅，<strong>直接影响货币政策的实施效果</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>传导路径</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>改革开放前</strong></td>
+<td>人民银行总行→人民银行分支机构→企业</td>
+<td>传导过程<strong>简单、直接</strong>，从政策手段直接到最终目标</td>
+</tr>
+<tr>
+<td><strong>20 世纪 90 年代以来</strong></td>
+<td>传导体系：<strong>中央银行→货币市场→金融机构→企业</strong>；初步建立了<strong>政策工具→操作目标→中介目标→最终目标</strong>的间接传导机制</td>
+<td><strong>间接</strong>传导</td>
+</tr>
+</tbody>
+</table>
+<p>货币政策的有效性取决于传导机制的效率，传导效率取决于三方面：①能够对货币政策变动作出<strong>灵敏反应</strong>的经济主体；②<strong>较为发达</strong>的金融市场；③<strong>较高程度</strong>的利率汇率市场化。</p></div>
+<div class="section"><div class="keypoint"><strong>一条&quot;四级箭&quot;链：</strong><p><strong>政策工具 → 操作目标 → 中介目标 → 最终目标</strong>，从左到右四环相扣；传导体系则是"<strong>央行→货币市场→金融机构→企业</strong>"。考试直接考这两串的默写、排序与"间接传导"定性。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>央行做逆回购（工具）→银行体系超额准备金变多（操作目标）→货币市场利率下行、货币供应量增加（中介目标）→企业融资变便宜、投资消费扩大（最终目标）——哪一环卡住（比如银行不愿放贷），政策效果就打折。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 传导机制口诀</div><p><strong>"工具操作到中介，最终目标才落地"</strong>；效率三条件记"<strong>发达的市场很灵敏</strong>"（主体灵敏、市场发达、利率汇率市场化）。</p></div></div>
+<div class="section"><h2>四、我国货币政策实践与利率市场化改革</h2>
+<h3>10. 近年来我国货币政策的实践 <span class="hot">高频考点</span></h3>
+<p>21 世纪以来，我国货币政策经历了一个"<strong>稳健—从紧—适度宽松—稳健—适度宽松</strong>"的变化。中国人民银行根据宏观经济形势，适时调整货币政策立场，为宏观经济运行提供适宜的货币金融环境。</p>
+<table>
+<thead>
+<tr>
+<th>时期</th>
+<th>政策立场</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2011—2024 年</strong></td>
+<td><strong>稳健</strong>的货币政策</td>
+<td>强调"<strong>灵活适度</strong>""<strong>精准有效</strong>"，注重在稳增长、控通胀、防风险之间做好<strong>动态平衡</strong></td>
+</tr>
+<tr>
+<td><strong>2025 年至今</strong></td>
+<td><strong>适度宽松</strong>的货币政策</td>
+<td>面对经济下行压力加大、外部不确定性上升、物价持续低迷，再次转向适度宽松；强调"<strong>灵活高效运用降准降息等多种政策工具</strong>"，着力<strong>降低融资成本、支持扩大内需、稳定市场预期</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>2025 年转向是最新考点：</strong><p>2024 年 12 月中央经济工作会议提出实施<strong>适度宽松</strong>的货币政策——这是自 2011 年以来货币政策<strong>首次由稳健转向宽松</strong>（2025 真题单选、多选连考）。配套表述：发挥货币政策工具<strong>总量和结构双重功能</strong>，适时<strong>降准降息</strong>，保持流动性充裕；社会融资规模、货币供应量增长同<strong>经济增长、价格总水平预期目标</strong>相匹配；保持人民币汇率在合理均衡水平上的<strong>基本稳定</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>把 21 世纪的政策立场想成温度计刻度：稳健（常温）→从紧（降温）→适度宽松（升温）→稳健（回常温）→2025 年再度适度宽松（升温）——"稳紧宽稳宽"五拍节奏，一拍不落。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 实践口诀</div><p><strong>"稳紧宽稳宽，25 回头宽；11 到 24 稳，灵活又精准"</strong>——问"2025 年至今实施什么货币政策"答<strong>适度宽松</strong>；问"2011—2024 年"答<strong>稳健</strong>。</p></div></div>
+<div class="section"><h3>11. 利率市场化改革与 LPR <span class="s3">★★★</span><span class="hot">高频考点</span></h3>
+<p><strong>改革原则</strong>：我国利率市场化改革遵循"<strong>先外币，后本币；先贷款，后存款；先长期、大额，后短期、小额</strong>"原则稳步推进。</p>
+<p><strong>时间线</strong>：2013 年 10 月，取消金融机构贷款利率 <strong>0.7 倍</strong>的下限；同年 10 月，推出<strong>贷款市场报价利率（LPR）</strong>集中报价和发布机制；<strong>2019 年 8 月</strong>，中国人民银行对 LPR 形成机制进行<strong>全面改革</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>改革后 LPR 的特征（报价机制）</th>
+<th>改革后 LPR 的效果（四个提升）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 基于<strong>报价</strong>而非成交形成最终利率，以<strong>中期借贷便利（MLF）操作利率作为标杆</strong>、在此基础上<strong>加点</strong>形成报价</td>
+<td>① <strong>传导效率</strong>提升——政策利率变动可迅速反映在 LPR 报价中</td>
+</tr>
+<tr>
+<td>② 期限更加丰富，收益率曲线更加完善</td>
+<td>② <strong>现实反映</strong>能力提升——客观真实反映商业银行面临的市场环境和竞争情况</td>
+</tr>
+<tr>
+<td>③ 报价行范围更大，新增<strong>城市商业银行、农村商业银行、外资银行和民营互联网银行</strong>四个类别报价行</td>
+<td>③ <strong>稳定性</strong>提升——较好地隔绝市场噪声、熨平非理性波动</td>
+</tr>
+<tr>
+<td>④ <strong>降低报价频率</strong>，缓解报价频繁调整带来的摩擦成本</td>
+<td>④ <strong>约束性</strong>增强——LPR 在贷款定价中的应用情况纳入<strong>宏观审慎评估</strong>等相关考核</td>
+</tr>
+</tbody>
+</table>
+<p><strong>持续推进</strong>：未来可考虑明确以<strong>7 天期逆回购操作利率</strong>为主要政策利率，其他期限货币政策工具的利率逐步淡化政策利率色彩，理顺<strong>由短及长</strong>的传导关系。</p></div>
+<div class="section"><div class="keypoint"><strong>LPR＝MLF＋加点：</strong><p>2023 真题原题：改革后的 LPR 以（　）为标杆并在此基础上加点形成报价——答<strong>中期借贷便利操作利率</strong>。记住等式"<strong>LPR ＝ MLF 操作利率 ＋ 点</strong>"，其余选项（上海银行间同业拆放利率、10 年期国债利率、7 天银行的质押或回购加权利率）都是干扰项。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>每月报价行在 MLF 操作利率的基础上加自己的点差报出 LPR，各银行再参照 LPR 给贷款定价——政策利率一变，就顺着"MLF→LPR→贷款利率"这根藤传到企业和房贷利率上。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 利率市场化口诀</div><p><strong>"先外后本、先贷后存、先大后小"</strong>——三个"先"都选风险小、好啃的那一头。LPR 报价特征记"<strong>报价制、期限全、报价行多、频率降</strong>"，效果记"<strong>传导、反映、稳定、约束</strong>"四大提升。</p></div></div>
+<div class="section"><h3>12. 强大的货币与中央银行、"五篇大文章" <span class="hot">高频考点</span></h3>
+<p>2023 年中央金融工作会议强调，金融是国民经济的血脉，是国家核心竞争力的重要组成部分，要<strong>加快建设金融强国</strong>。2024 年 1 月，省部级主要领导干部专题研讨班提出金融强国应当具备的关键核心金融要素：拥有<strong>强大的货币、强大的中央银行、强大的金融机构、强大的国际金融中心、强大的金融监管、强大的金融人才队伍</strong>。</p>
+<p><strong>强大的货币</strong>应当具有"<strong>稳定</strong>""<strong>好用</strong>"特征：<strong>稳定</strong>＝对内<strong>币值稳定</strong>，对外保持<strong>汇率在合理均衡水平上的基本稳定</strong>；<strong>好用</strong>＝使用便捷高效安全，能够有效发挥<strong>计价单位、交易媒介、价值储藏</strong>等货币功能，在国际上被广泛作为<strong>支付货币、投融资货币和储备货币</strong>。</p>
+<p><strong>强大的中央银行</strong>有两方面含义：一是所在<strong>经济体体量大</strong>，综合实力和影响力强——这是强大中央银行的<strong>基础</strong>；二是<strong>现代中央银行制度完善</strong>，央行有能力有实力运用政策工具，通过<strong>市场化法治化</strong>方式开展金融调控、实施宏观审慎管理、维护金融稳健运行。</p>
+<p>2023 年中央金融工作会议提出，要做好<strong>科技金融、绿色金融、普惠金融、养老金融、数字金融</strong>五篇大文章：</p>
+<table>
+<thead>
+<tr>
+<th>五篇大文章</th>
+<th>核心定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>科技金融</strong></td>
+<td>以<strong>科技产业为核心</strong>，以科技创新、金融资本为手段，促进科技产业与金融资本<strong>深度融合</strong>的新型金融业态</td>
+</tr>
+<tr>
+<td><strong>绿色金融</strong></td>
+<td>支持环境改善、应对气候变化和资源节约高效利用的经济活动——环保、节能、清洁能源、绿色交通、绿色建筑等领域的投融资、项目运营、风险管理服务</td>
+</tr>
+<tr>
+<td><strong>普惠金融</strong></td>
+<td>立足<strong>机会平等</strong>要求和<strong>商业可持续</strong>原则，以<strong>可负担的成本</strong>为有金融服务需求的社会各阶层和群体提供适当、有效的金融服务</td>
+</tr>
+<tr>
+<td><strong>养老金融</strong></td>
+<td>围绕社会成员各种养老需求进行的金融活动，分为<strong>养老金金融、养老产业金融、养老服务金融</strong></td>
+</tr>
+<tr>
+<td><strong>数字金融</strong></td>
+<td>以数字技术为基础、以数据为核心、以智能化为特征、以网络化为形式、以<strong>普惠化</strong>为目标的新型金融业态</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>强大货币&quot;两字诀&quot;：</strong><p><strong>稳定</strong>管币值（对内物价稳、对外汇率基本稳），<strong>好用</strong>管功能（计价、交易、储藏三功能＋国际上支付、投融资、储备三角色）。<strong>强大的中央银行</strong>记两句："体量大是基础，制度完善是保障"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一种货币怎样才算"好用"？出国能直接用人民币支付（支付货币）、外国投资者愿意持有人民币债券（投融资货币）、别国央行把人民币纳入外汇储备（储备货币）——三个国际角色齐了，才谈得上"强大的货币"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 五篇大文章口诀</div><p><strong>"科绿普裂数"</strong>（科技、绿色、普惠、数字、养老）。2024 真题问"不包括"，混进来的"开放金融"是编的。养老金融三分记"<strong>钱、业、服</strong>"（养老金金融、养老产业金融、养老服务金融）。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>货币政策</strong>：只是金融政策的一部分；三内容＝政策目标→政策工具→预期政策效果（标—器—效）</li>
+<li><strong>四目标</strong>："物、长、就、收"（稳定物价、经济增长、充分就业、平衡国际收支）；法定表述＝保持货币币值稳定，并以此促进经济增长；决不以牺牲经济增长为前提</li>
+<li><strong>三大一般性工具</strong>：法定存款准备金率（猛、慢、可被超额准备金抵消，作自动稳定机制不作经常性工具）；再贴现（弹性大、力度缓和，主动权在商业银行）；公开市场操作（灵活、主动、微调、经常连续；缺点＝市场须全国性独立性＋需其他工具配合）</li>
+<li><strong>方向链</strong>：提高准备金率→货币乘数减少→信用扩张受限→货币供应量收缩；提高再贴现率→借入成本上升→基础货币收缩；正回购＝卖＝收＝紧，逆回购＝买＝放＝松</li>
+<li><strong>其他工具</strong>：选择性＝消费者信用控制（不动产以外耐用品）/不动产信用控制/优惠利率/预缴进口保证金；直接信用控制＝利率最高限（最常用，Q 条例）/信用配额/流动比率/直接干预；间接信用指导＝道义劝告、窗口指导（无法律约束力、影响力大）；非常规＝超低政策利率、大规模再融资操作、资产购买计划、前瞻性指引；结构性＝2013 年起总量工具附带结构调整要求</li>
+<li><strong>中介目标</strong>：三原则"可可香"（可控、可测、相关）；四指标"超（基）货利通"；超额准备金直接决定商业银行资产业务规模，基础货币是倍数伸缩基础、较理想</li>
+<li><strong>传导机制</strong>：政策工具→操作目标→中介目标→最终目标；体系＝央行→货币市场→金融机构→企业；效率三条件＝主体灵敏、市场发达、利率汇率市场化</li>
+<li><strong>实践</strong>："稳健—从紧—适度宽松—稳健—适度宽松"；2011—2024 稳健（灵活适度、精准有效）；2025 至今适度宽松（2024.12 中央经济工作会议，2011 年来首次转向）</li>
+<li><strong>利率市场化</strong>：先外后本、先贷后存、先大后小；2013.10 取消 0.7 倍下限＋推 LPR 报价机制；2019.8 全面改革；LPR＝MLF 操作利率＋加点；未来以 7 天期逆回购操作利率为主要政策利率</li>
+<li><strong>金融强国六强大</strong>：货币、中央银行、金融机构、国际金融中心、金融监管、金融人才队伍；强大货币＝稳定＋好用；五篇大文章＝"科绿普裂数"</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b19s2q1" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">中央银行使用的一般性货币政策工具不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 公开市场操作</button><button type="button" class="qopt" data-key="B">B. 间接信用指导</button><button type="button" class="qopt" data-key="C">C. 法定存款准备金率</button><button type="button" class="qopt" data-key="D">D. 再贴现</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：一般性货币政策工具就三个——公开市场操作（A）、法定存款准备金率（C）、再贴现（D）。B"间接信用指导"是央行通过<strong>道义劝告、窗口指导</strong>等办法间接影响商业银行信用创造的工具，不在三大一般性工具之列。
+:::</p></div></details></div><div class="quiz-item" data-qid="b19s2q2" data-answer="BCE" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">关于一般性货币政策工具的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 中央银行提高法定存款准备金率，扩大了商业银行的信用扩张能力</button><button type="button" class="qopt" data-key="B">B. 商业银行掌握着再贴现政策的主动权</button><button type="button" class="qopt" data-key="C">C. 法定存款准备金率政策作用力度强</button><button type="button" class="qopt" data-key="D">D. 调整法定存款准备金率能迅速影响货币供应量</button><button type="button" class="qopt" data-key="E">E. 中央银行运用公开市场业务直接影响货币供应量</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCE</div><div class="q-exp"><p>析：B 对——再贴现的主动权操纵在商业银行手中（它还可出售证券、发行存单融资）；C 对——准备金率对货币乘数影响很大，是一剂"猛药"；E 对——公开市场操作通过影响商业银行准备金，直接影响货币供应量。A 反了，提高准备金率是<strong>限制</strong>信用扩张能力；D 反了，准备金率要经商业银行辗转存贷逐级递推，<strong>时滞较长</strong>，不能"迅速"影响。
+:::</p></div></details></div><div class="quiz-item" data-qid="b19s2q3" data-answer="ABCD" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">通常情况下，可以作为货币政策中介目标的变量指标有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 通货膨胀率</button><button type="button" class="qopt" data-key="B">B. 货币供应量</button><button type="button" class="qopt" data-key="C">C. 基础货币</button><button type="button" class="qopt" data-key="D">D. 超额准备金</button><button type="button" class="qopt" data-key="E">E. 外汇储备数量</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：中介目标四类变量指标——利率、货币供应量（B）、超额准备金或基础货币（C、D）、通货膨胀率（A），故 ABCD 全取。E"外汇储备数量"是国家储备资产，不满足中介目标三原则，是固定干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b19s2q4" data-answer="B" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">改革后的 LPR 以（　）为标杆并在此基础上加点形成报价。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 上海银行间同业拆放利率</button><button type="button" class="qopt" data-key="B">B. 中期借贷便利操作利率</button><button type="button" class="qopt" data-key="C">C. 10 年期国债利率</button><button type="button" class="qopt" data-key="D">D. 7 天银行的质押或回购加权利率</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：2019 年 8 月改革后，LPR 基于<strong>报价</strong>而非成交形成最终利率，以<strong>中期借贷便利（MLF）操作利率</strong>作为标杆，在此基础上加点形成报价。记住等式"LPR＝MLF＋点"，A、C、D 均非标杆利率。
+:::</p></div></details></div><div class="quiz-item" data-qid="b19s2q5" data-answer="C" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">《中华人民共和国中国人民银行法》规定，货币政策目标是保持货币币值的稳定，并以此促进（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 充分就业</button><button type="button" class="qopt" data-key="B">B. 国际收支平衡</button><button type="button" class="qopt" data-key="C">C. 经济增长</button><button type="button" class="qopt" data-key="D">D. 金融稳定</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：法定表述为"保持货币币值的稳定，并以此促进<strong>经济增长</strong>"——币值稳定是前提和手段，经济增长是目的，且决不以牺牲经济增长为前提。充分就业（A）、国际收支平衡（B）虽是货币政策目标体系成员，但不在这句法定表述里；D"金融稳定"是央行职能方向，非本句表述。
+:::</p></div></details></div><div class="quiz-item" data-qid="b19s2q6" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">2024 年 12 月中央经济工作会议提出，要实施（　）的货币政策。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 适度宽松</button><button type="button" class="qopt" data-key="B">B. 宽松</button><button type="button" class="qopt" data-key="C">C. 稳健</button><button type="button" class="qopt" data-key="D">D. 从紧</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：2024 年 12 月中央经济工作会议提出实施<strong>适度宽松</strong>的货币政策，这是自 2011 年以来货币政策首次由稳健转向宽松。注意修饰词——是"<strong>适度</strong>宽松"而非笼统的"宽松"（B）；C 稳健是 2011—2024 年的立场；D 从紧是更早时期的取向。
+:::</p></div></details></div><div class="quiz-item" data-qid="b19s2q7" data-answer="BCD" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">货币政策目标一经确定，中央银行按照（　）原则选择相应的中介目标。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 独立性</button><button type="button" class="qopt" data-key="B">B. 相关性</button><button type="button" class="qopt" data-key="C">C. 可测性</button><button type="button" class="qopt" data-key="D">D. 可控性</button><button type="button" class="qopt" data-key="E">E. 可行性</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：中介目标选择三原则＝<strong>可控性</strong>（D）、<strong>可测性</strong>（C）、<strong>相关性</strong>（B），口诀"可可香"。A"独立性"是中央银行自身业务活动的特征，不是选指标的原则；E"可行性"是编造的干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b19s2q8" data-answer="C" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">2008 年金融危机后，市场出现大规模再融资操作和前瞻性指引，这些货币政策工具属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 一般性政策工具</button><button type="button" class="qopt" data-key="B">B. 选择性货币政策工具</button><button type="button" class="qopt" data-key="C">C. 非常规货币政策工具</button><button type="button" class="qopt" data-key="D">D. 结构性政策工具</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：2008 年国际金融危机后，发达经济体央行引入<strong>超低政策利率、大规模再融资操作、资产购买计划、前瞻性指引</strong>等新措施，统称<strong>非常规货币政策工具</strong>（C），是传统工具的有力补充。A 一般性工具是"两率一操作"；B 选择性工具是消费者信用控制、不动产信用控制、优惠利率、预缴进口保证金；D 结构性工具是我国 2013 年以来在总量性工具中附带结构调整要求的工具——均与题干不符。
+:::</p></div></details></div><div class="quiz-item" data-qid="b19s2q9" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">提高法定存款准备金率这一紧缩性货币政策会导致（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 货币乘数增加</button><button type="button" class="qopt" data-key="B">B. 货币乘数减少</button><button type="button" class="qopt" data-key="C">C. 基础货币增加</button><button type="button" class="qopt" data-key="D">D. 基础货币减少</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：方向链一步步推——提高法定存款准备金率→商业银行缴存央行的准备金占比上升、可辗转放贷的"本钱"变少→<strong>货币乘数减少</strong>（B）→信用扩张能力受限→货币供应量和信贷量收缩。A 方向反了；C、D 错在该工具调节的是<strong>货币乘数</strong>，并不直接增减基础货币（提高再贴现率才是收缩基础货币的路径）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b19s2q10" data-answer="AC" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">下列货币政策操作中，属于紧缩性货币政策的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 提高法定存款准备金率</button><button type="button" class="qopt" data-key="B">B. 通过公开市场向商业银行购买有价证券</button><button type="button" class="qopt" data-key="C">C. 提高再贴现率</button><button type="button" class="qopt" data-key="D">D. 降低法定存款准备金率</button><button type="button" class="qopt" data-key="E">E. 降低再贴现率</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AC</div><div class="q-exp"><p>析：紧缩＝把钱往回收——提高法定存款准备金率（A，乘数减少、信用扩张受限）、提高再贴现率（C，商业银行借入成本上升、基础货币收缩）。B 央行<strong>买入</strong>证券是投放流动性（宽松）；D、E 都是"降低"，方向与紧缩相反，属扩张性操作。口诀"卖紧买松、提紧降松"。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础19_中央银行和货币政策_第1节_中央银行.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 中央银行</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

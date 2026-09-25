@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第16章 社会保险体系 · 基本医疗保险 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第四部分 人力资源与社会保险政策</span><h1>第16章 社会保险体系 · 基本医疗保险</h1><div class="subtitle">第 2 节 / 共 6 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:33%"></div></div><div class="progress-text">本章进度 2/6</div><div class="sec-badge none" id="sec-badge" data-sec="r16s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住职工医保缴费分工：单位按当地规定比例、个人一般为本人工资收入的 2%，按月缴纳 <span class="hot">高频考点</span></li>
+<li>背准医保"四不报"：工伤基金该付的、第三人该担的、公共卫生该管的、境外就医的 <span class="hot">高频考点</span><span class="must">必考</span></li>
+<li>记住门诊共济保障机制（支付比例从 50% 起步）与个人账户的家庭共济范围、三个"不得" <span class="hot">高频考点</span></li>
+<li>记住居民医保筹资与待遇（政策范围内住院支付比例 70% 左右）、大病保险双重激励（＋1000 元、20% 封顶）与断保等待期规则（固定 3 个月） <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、职工基本医疗保险</h2>
+<h3>1. 制度与缴费（★★★）<span class="hot">高频考点</span></h3>
+<p><strong>基本医疗保险制度</strong>是为了<strong>抗御疾病风险</strong>而建立的一种社会保险制度，被保险人患病就诊发生医疗费用后，由医疗保险机构对其给予一定的<strong>经济补偿</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>参保主体</th>
+<th>缴费规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用人单位＋职工</td>
+<td><strong>共同缴纳</strong>、<strong>按月缴纳</strong>；用人单位缴费比例<strong>在不同地区有所不同</strong>，个人缴费比例一般为<strong>本人工资收入的 2%</strong></td>
+</tr>
+<tr>
+<td>无雇工的个体工商户、未在用人单位参加职工医保的<strong>非全日制从业人员</strong>以及其他灵活就业人员</td>
+<td><strong>可以参加</strong>职工基本医疗保险，由<strong>个人</strong>按照国家规定缴纳基本医疗保险费</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>医保的退休&quot;免缴费&quot;条款：</strong><p>参加职工医保的个人，<strong>达到法定退休年龄</strong>时<strong>累计缴费达到国家规定年限</strong>的，<strong>退休后不再缴纳基本医疗保险费</strong>，按照国家规定享受基本医疗保险待遇；<strong>未达到国家规定年限的，可以缴费至国家规定年限</strong>。对比记忆：养老保险是"到龄＋缴满 15 年"领待遇；医保是"到龄＋缴够规定年限"之后<strong>不用再缴、继续享受</strong>。</p></div></div>
+<div class="section"><h3>2. 医保待遇与"四不报"（★★★）<span class="hot">高频考点</span> <span class="must">必考</span></h3>
+<p><strong>能报的</strong>：符合<strong>基本医疗保险药品目录、诊疗项目、医疗服务设施标准</strong>以及<strong>急诊、抢救</strong>的医疗费用，按照国家规定从基本医疗保险基金中支付，<strong>直接结算</strong>。</p>
+<p><strong>不纳入基本医疗保险基金支付范围的四类费用</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>不予支付的情形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>应当从<strong>工伤保险基金</strong>中支付的</td>
+</tr>
+<tr>
+<td>②</td>
+<td>应当由<strong>第三人</strong>负担的</td>
+</tr>
+<tr>
+<td>③</td>
+<td>应当由<strong>公共卫生</strong>负担的</td>
+</tr>
+<tr>
+<td>④</td>
+<td>在<strong>境外就医</strong>的</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 医保&quot;四不报&quot;口诀</div><p><strong>"工伤找工伤，第三人找第三人，公共卫生归公家，境外就医不算账——医保基金四不管。"</strong> 各归其主，医保只管"三目录＋急诊抢救"范围内的钱。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小李上班途中被闯红灯的电动车撞伤住院——属于"应当由<strong>第三人</strong>负担"的费用，不在医保基金支付范围；同病房的老张在门诊看高血压开药——属于门诊慢性病保障范围，可以按规定报销。</p></div></div>
+<div class="section"><h3>3. 门诊共济保障机制与个人账户（★★）<span class="hot">高频考点</span></h3>
+<p><strong>门诊共济保障机制</strong>：在做好<strong>高血压、糖尿病</strong>等群众负担较重的门诊<strong>慢性病、特殊疾病</strong>医疗保障工作的基础上，逐步将<strong>多发病、常见病的普通门诊费用</strong>纳入统筹基金支付范围；普通门诊统筹覆盖<strong>职工基本医疗保险全体参保人员</strong>，政策范围内支付比例<strong>从 50% 起步</strong>。</p>
+<p><strong>个人账户能付什么、不能付什么</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>能付（家庭共济）</th>
+<th>不能付</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>参保人员<strong>本人及其配偶、父母、子女</strong>在<strong>定点医疗机构</strong>就医发生的由个人负担的医疗费用</td>
+<td><strong>公共卫生费用</strong></td>
+</tr>
+<tr>
+<td>在<strong>定点零售药店</strong>购买<strong>药品、医疗器械、医用耗材</strong>发生的由个人负担的费用</td>
+<td><strong>体育健身</strong>或<strong>养生保健消费</strong>等不属于基本医疗保险保障范围的支出</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小王参加职工医保，他的个人账户余额可以给<strong>自己、妻子、父母、孩子</strong>在定点医疗机构看病时个人负担的部分买单，也可以在定点零售药店给家人买药、买血压计（医疗器械）、买医用耗材——但<strong>不能</strong>刷个人账户去办健身卡、买保健品、付公共卫生费用。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 个人账户口诀</div><p><strong>"本人加三亲（配偶、父母、子女），定点就医药店购，医药械耗个人担；公共卫生、健与养，一个不能刷。"</strong></p></div></div>
+<div class="section"><h2>二、城乡居民基本医疗保险</h2>
+<h3>1. 筹资与待遇（★★）<span class="hot">高频考点</span></h3>
+<ul>
+<li><strong>衔接规则</strong>：<strong>农民工和灵活就业人员</strong>依法参加<strong>职工基本医疗保险</strong>，参加有困难的，可以按照当地规定参加<strong>城乡居民基本医疗保险</strong>。</li>
+<li><strong>筹资方式</strong>：<strong>个人缴费＋政府补助</strong>（鼓励集体、单位或其他社会经济组织给予扶持或资助）。</li>
+<li><strong>基金用途</strong>：主要用于支付参保人员发生的<strong>住院和门诊</strong>医药费用；<strong>政策范围内住院费用支付比例保持在 70% 左右</strong>。</li>
+</ul>
+<h3>2. 大病保险激励机制与断保等待期（★★）<span class="s3">★★★</span></h3>
+<p><strong>大病保险待遇激励机制</strong>（数字必背）：</p>
+<table>
+<thead>
+<tr>
+<th>激励类型</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>连续参保激励</strong></td>
+<td>满 <strong>4 年</strong>后，每多连续参保 1 年，大病保险限额提高<strong>不低于 1000 元</strong>（断保后重新参保的，连续参保年数<strong>重新计算</strong>）；累计提高总额<strong>不超过所在统筹地区大病保险原封顶线的 20%</strong></td>
+</tr>
+<tr>
+<td><strong>零报销激励</strong></td>
+<td>当年<strong>零报销</strong>的，次年大病保险限额提高<strong>不低于 1000 元</strong>（发生大病报销<strong>使用奖励额度后，积累额度清零</strong>）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>断保后待遇等待期</strong>（除新生儿等特殊群体外，对未在居民医保集中参保期内参保或未连续参保的人员）：</p>
+<ul>
+<li>设置参保后<strong>固定待遇等待期 3 个月</strong>；</li>
+<li><strong>每多断保 1 年</strong>，原则上在固定等待期基础上<strong>增加变动待遇等待期 1 个月</strong>；</li>
+<li><strong>修复机制</strong>：每多缴纳 1 年，可<strong>减少 1 个月</strong>变动待遇等待期；</li>
+<li><strong>连续断缴 4 年及以上</strong>的，修复后总的等待期原则上<strong>不少于 6 个月</strong>。</li>
+</ul></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 等待期口诀</div><p><strong>"断保先等三个月，多断一年加一月；多缴一年减一月，连断四年六月起步。"</strong></p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 大病保险三个数字各管一件事</div><p><strong>1000 元</strong>是"涨"的单位（连续参保涨、零报销也涨）；<strong>20%</strong> 是连续参保激励累计提高的"天花板"（按原封顶线算）；<strong>3 个月</strong>是断保后的固定等待期。问"连续参保激励累计不超过多少"答原封顶线的 20%；问"当年没报销第二年怎样"答限额提高不低于 1000 元。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>职工医保缴费</strong>：单位＋职工按月共同缴，单位比例各地不同、个人一般为本人工资收入的 2%；个体工商户、非全日制从业人员、灵活就业人员可参加、个人缴费</li>
+<li><strong>医保退休</strong>：到龄＋缴费达国家规定年限→退休后不再缴费、照常享受；不够年限可缴费至规定年限</li>
+<li><strong>能报</strong>：三目录（药品目录、诊疗项目、医疗服务设施标准）＋急诊、抢救，直接结算</li>
+<li><strong>四不报</strong>：工伤基金该付的、第三人该担的、公共卫生该管的、境外就医的</li>
+<li><strong>门诊共济</strong>：普通门诊费用纳入统筹、覆盖全体参保人员、政策范围内支付比例从 50% 起步</li>
+<li><strong>个人账户</strong>：本人＋配偶、父母、子女的定点医疗机构个人负担医疗费＋定点药店买药、械、耗材个人负担部分；不得用于公共卫生费用、体育健身、养生保健消费</li>
+<li><strong>居民医保</strong>：个人缴费＋政府补助；支付住院和门诊医药费用；政策范围内住院支付比例 70% 左右</li>
+<li><strong>大病保险</strong>：连续参保满 4 年后每多 1 年限额＋≥1000 元（累计≤原封顶线 20%）；当年零报销次年＋≥1000 元（使用后清零）</li>
+<li><strong>断保等待期</strong>：固定 3 个月＋每多断 1 年加 1 个月变动等待期；多缴 1 年减 1 个月；连断 4 年及以上修复后原则上不少于 6 个月</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r16s2q1" data-answer="C" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">甲月收入工资为 5000 元，其基本医疗个人缴纳金额为（　）元。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 400</button><button type="button" class="qopt" data-key="B">B. 200</button><button type="button" class="qopt" data-key="C">C. 100</button><button type="button" class="qopt" data-key="D">D. 300</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：基本医疗保险费由用人单位和职工<strong>共同缴纳</strong>。用人单位缴费水平为职工工资总额 6% 左右，<strong>个人缴费一般为本人工资收入的 2%</strong>。5000×2%＝<strong>100 元</strong>。A（400 元）按 8% 算、B（200 元）按 4% 算，都是把其他险种的比例张冠李戴。
+:::</p></div></details></div><div class="quiz-item" data-qid="r16s2q2" data-answer="CDE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">职工基本医疗保险基金的支付范围包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 因工伤事故发生的费用</button><button type="button" class="qopt" data-key="B">B. 在境外就医发生的费用</button><button type="button" class="qopt" data-key="C">C. 符合基本医疗保险药品目录的费用</button><button type="button" class="qopt" data-key="D">D. 因急诊抢救发生的医疗费用</button><button type="button" class="qopt" data-key="E">E. 符合基本医疗保险诊疗项目的费用</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CDE</div><div class="q-exp"><p>析：符合<strong>基本医疗保险药品目录、诊疗项目、医疗服务设施标准以及急诊、抢救</strong>的医疗费用，按照国家规定从基本医疗保险基金中支付，故 C、D、E 正确。A 错误——工伤事故的费用应当从<strong>工伤保险基金</strong>中支付；B 错误——<strong>在境外就医</strong>的费用不纳入基本医疗保险基金支付范围。
+:::</p></div></details></div><div class="quiz-item" data-qid="r16s2q3" data-answer="AB" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">在职工基本医疗保险普通门诊费用统筹中，个人账户可以支付的范围有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 参保人员的配偶在定点零售药店购买药品发生的由个人负担的医疗费用</button><button type="button" class="qopt" data-key="B">B. 参保人员在定点医疗机构就医发生的由个人负担的医疗费用</button><button type="button" class="qopt" data-key="C">C. 参保人员用于个人养生保健的费用</button><button type="button" class="qopt" data-key="D">D. 参保人员需要承担的公共卫生费用</button><button type="button" class="qopt" data-key="E">E. 参保人员参加体育健身的费用</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AB</div><div class="q-exp"><p>析：个人账户可以支付参保人员<strong>本人及其配偶、父母、子女</strong>在<strong>定点医疗机构</strong>就医发生的由个人负担的医疗费用，以及在<strong>定点零售药店购买药品、医疗器械、医用耗材</strong>发生的由个人负担的费用，故 A（配偶在定点药店买药）、B（本人定点就医的个人负担部分）正确。C（养生保健）、D（公共卫生费用）、E（体育健身）均属个人账户<strong>不得</strong>支付的范围。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力16_社会保险体系_第1节_基本养老保险.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 基本养老保险</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力16_社会保险体系_第3节_工伤保险.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 工伤保险</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

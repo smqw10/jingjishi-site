@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第8章 薪酬管理 · 薪酬成本预算与控制 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第8章 薪酬管理 · 薪酬成本预算与控制</h1><div class="subtitle">第 4 节 / 共 4 节 · 预计学习时长 30 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 4/4</div><div class="sec-badge none" id="sec-badge" data-sec="r08s4">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>薪酬成本预算两方法</strong>（自上而下／自下而上）与自上而下的优缺点 <span class="hot">高频考点</span></li>
+<li>背熟<strong>薪酬成本控制五途径</strong>：雇佣量、基本薪酬、奖金、福利支出、薪酬技术手段 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>分清<strong>人工成本三类分析指标</strong>（总量／结构／比率型）各自反映什么、常用哪些 <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、薪酬成本预算的方法</h2>
+<h3>1. 两种预算方法 {s}</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>自上而下的方法</strong></td>
+<td>可控制<strong>整体薪酬成本和部门薪酬成本</strong>，便于调控企业人力成本开支与企业<strong>支付能力、企业绩效的对称性</strong></td>
+<td><strong>缺乏灵活性</strong>，受<strong>主观因素影响较大</strong>，降低了预算的准确性，<strong>不利于调动员工积极性</strong></td>
+</tr>
+<tr>
+<td><strong>自下而上的方法</strong></td>
+<td>（讲义仅列名目，方向与自上而下相反：由基层单位先估算、再逐级汇总）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 预算两方向</div><p><strong>"上控下活"</strong>——自上而下是"总部先定盘子往下切"，控得住总成本但不灵活；自下而上是"基层先报数往上汇总"，方向相反、特点对着记。考试重点落在<strong>自上而下的优缺点</strong>四连：缺灵活、受主观、欠准确、伤积极性。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>集团年底定预算：A 集团董事长拍板"明年人工成本总额 5 亿，各部门按比例领"——自上而下；B 集团先让各分公司报明年的用人计划和薪酬需求，再汇总平衡成总预算——自下而上。A 控得住但基层没参与感，B 贴实际但容易越报越胖。</p></div></div>
+<div class="section"><h2>二、薪酬成本的控制</h2>
+<h3>2. 薪酬成本控制的五条途径 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>途径</th>
+<th>控什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①<strong>控制雇佣量</strong></td>
+<td><strong>员工数量＋工时数量</strong>（雇佣量＝雇佣人数与工时数量的乘积，两头都要控）</td>
+</tr>
+<tr>
+<td>②<strong>控制基本薪酬</strong></td>
+<td>控制加薪的<strong>规模（或幅度）、时间和覆盖面</strong></td>
+</tr>
+<tr>
+<td>③<strong>控制奖金</strong></td>
+<td>控制奖金的<strong>规模、时间和覆盖面</strong>，并重点<strong>利用一次性奖金</strong>来改善劳动力成本的可调节幅度</td>
+</tr>
+<tr>
+<td>④<strong>控制福利支出</strong></td>
+<td>①<strong>与基本薪酬相联系</strong>的福利：<strong>刚性较大</strong>；②<strong>与基本薪酬无联系</strong>的福利：短期福利项目，数额较小，弹性较小；③<strong>福利管理费用</strong>：<strong>较高弹性</strong></td>
+</tr>
+<tr>
+<td>⑤<strong>利用适当的薪酬技术手段</strong></td>
+<td>利用<strong>工作评价、薪酬调查、薪酬结构、薪酬宽带</strong>等技术手段改善薪酬成本控制</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一次性奖金的妙用：</strong><p>控制奖金不只是"少发"——2024 年真题解析专门强调：在控制奖金<strong>支付规模、时间和覆盖面</strong>之外，还要重点利用它的<strong>一次性支付性质</strong>来<strong>改善劳动力成本的可调节幅度</strong>。一次性发的钱不进基本薪酬基数，今年发了明年可停，企业调节人工成本的余地就大。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 控制五途径</div><p><strong>"一量二薪三奖四福五技术"</strong>——量（雇佣量＝人数×工时）、薪（基本薪酬加薪的规模时间覆盖面）、奖（规模时间覆盖面＋一次性奖金）、福（三块福利弹性不同）、技术（工作评价、薪酬调查、薪酬结构、薪酬宽带）。问"不包括"就找选项外的（如"控制市场薪酬水平"）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 福利的&quot;刚性排序&quot;</div><p>与基本薪酬挂钩的福利<strong>刚性最大</strong>（动了就像降薪，会闹情绪）；不挂钩的短期福利数额小、弹性较小；<strong>福利管理费用弹性最高</strong>——想省福利钱，先从管理费用和短期项目下手，别碰与基本薪酬挂钩的部分。</p></div></div>
+<div class="section"><h2>三、企业人工成本</h2>
+<h3>3. 企业人工成本及其分析指标 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>概念</strong>：企业人工成本是指在一定时期内，在<strong>生产、经营和提供劳务活动</strong>中，因<strong>使用劳动力</strong>而支付的<strong>直接费用和间接费用的总和</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>反映什么</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>人工成本总量指标</strong></td>
+<td>人工成本<strong>总量水平</strong></td>
+<td>考虑企业规模差异，常用<strong>人均人工成本</strong>指标进行分析——既体现<strong>员工平均收入</strong>，也是企业向<strong>劳动力市场提供的价格信号</strong></td>
+</tr>
+<tr>
+<td><strong>人工成本结构指标</strong></td>
+<td><strong>各组成部分占总额的比例</strong></td>
+<td>反映人工成本的<strong>构成与合理性</strong></td>
+</tr>
+<tr>
+<td><strong>人工成本分析比率型指标</strong></td>
+<td>将人工成本与<strong>经济效益</strong>联系起来的<strong>相对数</strong></td>
+<td>衡量<strong>劳动投入与效益</strong>的关系，寻求最佳投入产出"度"；例如：<strong>劳动生产率、人工费比率、劳动分配率、人工成本占总成本比重</strong>等</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>问"今年人工成本一共花了多少"→看<strong>总量指标</strong>（再除以人数得人均，顺带跟同行比工资高低）；问"钱都花在哪几块、结构合理吗"→看<strong>结构指标</strong>（各组成部分占总盘子的比例）；问"花这些钱换来的效益划不划算"→看<strong>比率型指标</strong>（劳动生产率、人工费比率、劳动分配率、占总成本比重）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 人工成本三指标</div><p><strong>"总量看人均（平均收入＋价格信号），结构看占比（构成合理性），比率看效益（找投入产出的'度'）"</strong>。看到"劳动生产率、人工费比率、劳动分配率、占总成本比重"四个词连排，就是比率型指标。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>预算两方法</strong>：自上而下＝控总量、便于调控支付能力与绩效对称性，但欠灵活、受主观、欠准确、伤积极性；自下而上方向相反（基层先报逐级汇总）</li>
+<li><strong>控制五途径</strong>：雇佣量（人数×工时）／基本薪酬（加薪规模、时间、覆盖面）／奖金（规模时间覆盖面＋一次性奖金）／福利支出（挂钩福利刚性大、不挂钩弹性较小、管理费用弹性高）／薪酬技术手段（工作评价、薪酬调查、薪酬结构、薪酬宽带）</li>
+<li><strong>人工成本</strong>＝使用劳动力支付的直接＋间接费用总和；总量指标（人均＝平均收入＋劳动力市场价格信号）、结构指标（构成与合理性）、比率型指标（与效益挂钩的相对数：劳动生产率、人工费比率、劳动分配率、占总成本比重）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r08s4q1" data-answer="ABCD" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">薪酬成本控制的主要策略包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 控制福利支出</button><button type="button" class="qopt" data-key="B">B. 控制雇佣量</button><button type="button" class="qopt" data-key="C">C. 控制基本薪酬</button><button type="button" class="qopt" data-key="D">D. 控制奖金</button><button type="button" class="qopt" data-key="E">E. 控制市场薪酬水平</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：薪酬成本控制的途径包括：①控制<strong>雇佣量</strong>（员工数量与工时数量）；②控制<strong>基本薪酬</strong>（加薪的规模或幅度、时间和覆盖面）；③控制<strong>奖金</strong>（支付规模、时间和覆盖面，并利用一次性支付性质改善成本可调节幅度）；④控制<strong>福利支出</strong>；⑤利用适当的薪酬技术手段。A、B、C、D 全对。E 错——市场薪酬水平由劳动力市场决定，不是企业单方面"控制"的对象。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s4q2" data-answer="ABCD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">薪酬成本控制的方法有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 冻结雇佣</button><button type="button" class="qopt" data-key="B">B. 控制基本薪酬</button><button type="button" class="qopt" data-key="C">C. 减少奖金</button><button type="button" class="qopt" data-key="D">D. 压缩福利费用</button><button type="button" class="qopt" data-key="E">E. 加班加点</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：A 对——冻结或缩减雇佣属于<strong>控制雇佣量</strong>（人数与工时两头控）；B 对——<strong>控制基本薪酬</strong>的加薪规模、时间与覆盖面；C 对——<strong>控制奖金</strong>的规模、时间和覆盖面；D 对——<strong>控制福利支出</strong>。E 错——加班加点增加了工时数量，反而<strong>推高</strong>人工成本，与控制雇佣量（含工时数量）背道而驰。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s4q3" data-answer="C" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">关于企业人工成本的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 人工成本分析比率型指标能够显示本企业员工平均收入的高低</button><button type="button" class="qopt" data-key="B">B. 人工成本结构指标通常用于对企业的支付能力进行分析和控制</button><button type="button" class="qopt" data-key="C">C. 企业人工成本既包括直接费用也包括间接费用</button><button type="button" class="qopt" data-key="D">D. 人工成本总量指标能够反映人工成本投入构成的情况与合理性</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：企业人工成本是因<strong>使用劳动力</strong>而支付的<strong>直接费用和间接费用的总和</strong>，C 正确。A 错——显示员工平均收入高低的是<strong>人均人工成本</strong>（属总量指标的应用），比率型指标管的是人工成本与经济效益的关系；B 错——用于支付能力分析和控制的是<strong>人均人工成本</strong>指标，不是结构指标；D 错——反映投入构成情况与合理性的是<strong>结构指标</strong>，总量指标只反映总量水平。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s4q4" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">在人工成本分析中，可以体现出企业的人工成本与产出之间的相对关系的指标是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 人工成本总量指标</button><button type="button" class="qopt" data-key="B">B. 人工成本增速指标</button><button type="button" class="qopt" data-key="C">C. 人工成本分析比率型指标</button><button type="button" class="qopt" data-key="D">D. 人工成本结构指标</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：人工成本分析比率型指标是把人工成本与<strong>经济效益</strong>联系起来的<strong>相对数</strong>，衡量劳动投入与效益的关系、寻求最佳投入产出"度"，一般包括<strong>劳动生产率、人工费比率、劳动分配率、人工成本占总成本的比重</strong>等，C 正确。A 只反映总量水平；D 反映各组成部分占总额的比例（构成与合理性）；B"增速指标"不属于教材所列三类指标。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力08_薪酬管理_第3节_特殊群体的薪酬管理.html"><span class="nav-label">上一节</span><span class="nav-title">第3节 特殊群体的薪酬管理</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

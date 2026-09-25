@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十五章 政府预算 · 我国政府预算体系 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第二部分 财政</span><h1>第十五章 政府预算 · 我国政府预算体系</h1><div class="subtitle">第 3 节 / 共 5 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:60%"></div></div><div class="progress-text">本章进度 3/5</div><div class="sec-badge none" id="sec-badge" data-sec="b15s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背出四本预算：<strong>一般公共预算、政府性基金预算、国有资本经营预算、社会保险基金预算</strong>（"公基资保"） <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>记牢一般公共预算的地位（体系基础、统计公报数字就它而言）与收入构成（税收＋非税） <span class="hot">高频考点</span></li>
+<li>记牢政府性基金预算"以收定支、专款专用、结余结转"与审批链条，国资预算五档收取比例（20/15/10/5/免） <span class="s3">★★★</span></li>
+<li>记住社保基金预算五原则、按险种编制与"人社编、财政审、联合报国务院"</li>
+<li>分清四本预算"独立＋衔接"：一般能去社保，社保不去一般 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、四本预算总览</h2>
+<h3>1. 我国政府预算体系的构成 <span class="s3">★★★</span></h3>
+<p>按照建立与社会主义市场经济体制相适应的财政制度的要求，我国完整的政府预算体系包括：<strong>一般公共预算、政府性基金预算、国有资本经营预算和社会保险基金预算</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>预算</th>
+<th>凭什么收钱</th>
+<th>钱花在哪</th>
+<th>一句话特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>一般公共预算</strong></td>
+<td>以<strong>税收</strong>为主体（税收收入＋非税收入）</td>
+<td>保障和改善民生、维持国家行政职能正常运转、保障国家安全等</td>
+<td>体系<strong>基础</strong>；统计公报的财政数字就它而言</td>
+</tr>
+<tr>
+<td><strong>政府性基金预算</strong></td>
+<td>向社会征收<strong>基金、收费</strong>以及<strong>出让土地、发行彩票</strong>等</td>
+<td>支持特定<strong>基础设施建设和社会事业发展</strong>（如铁路、港口建设基金）</td>
+<td><strong>专款专用</strong>、以收定支</td>
+</tr>
+<tr>
+<td><strong>国有资本经营预算</strong></td>
+<td>从国家出资企业取得的<strong>利润、股利、股息</strong>等国有资本收益</td>
+<td>花在国企身上（补充资本金、弥补改革成本）</td>
+<td>国家以<strong>所有者身份</strong>取得；<strong>不列赤字</strong></td>
+</tr>
+<tr>
+<td><strong>社会保险基金预算</strong></td>
+<td>社会保险缴费、一般公共预算安排和其他方式筹集</td>
+<td><strong>专项用于社会保障</strong></td>
+<td>就是"五险"的账</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>四本预算的&quot;身份&quot;对照：</strong><p><strong>社会管理者</strong>身份收税→一般公共预算；凭借政治权力向特定对象无偿征收专项资金→政府性基金预算；<strong>所有者</strong>身份分国企的红→国有资本经营预算；社保缴费专户→社会保险基金预算。身份决定预算，考试问"某笔钱进哪本预算"，先问"政府当时是什么身份"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>工资卡（一般公共预算——主要靠"工资"＝税收）、专门为装修设的专项存款（政府性基金预算——专款专用）、从自家商铺分来的红利（国有资本经营预算——所有者身份）、全家凑的看病钱（社会保险基金预算——专项看病用）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四本预算口诀</div><p><strong>"公基资保四本账"</strong>——公（一般公共预算）、基（政府性基金预算）、资（国有资本经营预算）、保（社会保险基金预算）。多选送分题，四本一个都不能少。</p></div></div>
+<div class="section"><h2>二、一般公共预算 <span class="hot">高频考点</span></h2>
+<h3>2. 一般公共预算</h3>
+<p><strong>一般公共预算</strong>是指政府凭借<strong>国家政治权力</strong>，以<strong>社会管理者</strong>身份筹集<strong>以税收为主体</strong>的财政收入，用于<strong>保障和改善民生、维持国家行政职能正常运转、保障国家安全</strong>等方面的收支预算。目前我国每年统计公报公布的<strong>财政收入、财政支出、财政赤字</strong>的数字，就是就一般公共预算而言的。</p>
+<table>
+<thead>
+<tr>
+<th>构成</th>
+<th>具体内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>税收收入</strong></td>
+<td>增值税、消费税、企业所得税、个人所得税、资源税、城市维护建设税、房产税、印花税、城镇土地使用税、土地增值税、车船税、船舶吨税、车辆购置税、关税、耕地占用税、契税等</td>
+</tr>
+<tr>
+<td><strong>非税收入</strong></td>
+<td>专项收入、行政事业性收费收入、罚没收入、国有资本经营收入、国有资源（资产）有偿使用收入等</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>支出分类口径</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>按支出功能分类</strong></td>
+<td>一般公共服务、外交、国防、公共安全、教育、科学技术、文化旅游体育与传媒、社会保障和就业、卫生健康、节能环保、城乡社区、农林水、交通运输、金融、其他支出和转移性支出等</td>
+</tr>
+<tr>
+<td><strong>按支出经济性质分类</strong></td>
+<td>工资福利支出、商品和服务支出、对个人和家庭的补助、对企事业单位的补贴、转移性支出、赠与、债务利息支出、基本建设支出、其他资本性支出、贷款转贷及产权参股、其他支出</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两个&quot;出处&quot;考点：</strong><p>①统计公报的财政三数（收入、支出、赤字）＝<strong>一般公共预算</strong>口径；②一般公共预算收入＝<strong>税收为主</strong>＋非税为辅。多选题问"非税收入包括什么"，别把增值税、关税这些<strong>税收</strong>选进去。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>交警开的罚单（罚没收入）、办护照交的手续费（行政事业性收费）都是<strong>非税收入</strong>，和税收一起进一般公共预算，用来发工资、办教育、保安全——这些钱是政府以"社会管理者"身份收的。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 一般公共预算口诀</div><p><strong>"管理者收税管民生"</strong>——身份（社会管理者）、钱路（税收为主体）、去处（民生、行政运转、国家安全）三个采分点全在一句里。</p></div></div>
+<div class="section"><h2>三、政府性基金预算 <span class="hot">高频考点</span></h2>
+<h3>3. 政府性基金预算</h3>
+<p><strong>政府性基金</strong>：各级人民政府及其所属部门根据法律、行政法规和中共中央、国务院文件规定，为支持<strong>特定公共基础设施建设和公共事业发展</strong>，向公民、法人和其他组织<strong>无偿征收的具有专项用途</strong>的财政资金。</p>
+<p><strong>政府性基金预算</strong>：政府通过<strong>向社会征收基金、收费以及出让土地、发行彩票</strong>等方式取得收入，<strong>专项用于</strong>支持特定基础设施建设和社会事业发展的收支预算。</p>
+<table>
+<thead>
+<tr>
+<th>管理要点</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>管理原则</td>
+<td><strong>以收定支、专款专用、结余结转下年继续使用</strong></td>
+</tr>
+<tr>
+<td>项目审批</td>
+<td>政府性基金项目由<strong>财政部审批</strong>，<strong>重要的</strong>政府性基金项目须报<strong>国务院审批</strong></td>
+</tr>
+<tr>
+<td>预算管理</td>
+<td><strong>所有</strong>政府性基金都纳入政府性基金预算管理，通过政府性基金收支表列示，按照法定程序接受<strong>人民代表大会</strong>的审查和监督；财政部<strong>每年向社会公布</strong>政府性基金项目目录，接受社会监督</td>
+</tr>
+<tr>
+<td>审批程序</td>
+<td>财政部汇总中央和地方政府性基金预决算，形成<strong>全国政府性基金预决算草案</strong>，经<strong>国务院审定</strong>后，报<strong>全国人民代表大会</strong>审查批准</td>
+</tr>
+<tr>
+<td>与一般公共预算的主要不同</td>
+<td>资金的<strong>管理方式</strong>：政府性基金预算收入具有<strong>指定用途、专款专用</strong>的特征，支出按照专款专用原则与基金预算收入<strong>一一对应</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>结余能结转、审批链条要记全：</strong><p>①结余<strong>结转下年继续使用</strong>——选项说"不得结转"就错；②项目审批两级：一般<strong>财政部</strong>批、<strong>重要</strong>的报<strong>国务院</strong>批；③全国预决算草案的审批链条："财政部汇总→<strong>国务院审定</strong>→<strong>全国人民代表大会</strong>审查批准"——说"常委会审批"就错。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>买房时房价里含的土地出让金、买彩票的钱、坐飞机的民航发展基金——都是政府为特定事业收的专款：卖地的钱用于土地开发和配套建设，彩票公益金办社会福利，钱从哪来就花到哪去，不能挪去发工资。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 政府性基金口诀</div><p><strong>"以收定支、专款专用、结余结转"</strong>——十二字管理原则；来源记"<strong>基金、收费、卖地、彩票</strong>"四条路。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 与一般公共预算三连辨</div><p>一是<strong>用途不同</strong>：一般公共预算统筹安排；基金预算<strong>指定用途、专款专用</strong>、支出与收入一一对应。二是<strong>结余处理不同</strong>：基金预算结余<strong>结转下年</strong>继续用。三是<strong>审批口径不同</strong>：别把"全国人大批准"偷换成"全国人大常委会批准"。这三处是历年干扰项的固定产地。</p></div></div>
+<div class="section"><h2>四、国有资本经营预算 <span class="hot">高频考点</span></h2>
+<h3>4. 国有资本经营预算</h3>
+<p><strong>国有资本经营预算</strong>是国家以<strong>所有者身份</strong>依法取得<strong>国有资本收益</strong>，并对所得收益进行分配而发生的各项收支预算，是政府预算的重要组成部分。国有资本经营预算支出按照<strong>当年预算收入规模安排，不列赤字</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心</td>
+<td>调整<strong>国家和国有企业之间</strong>的分配关系，是实现国有资本经营战略目标的重要手段</td>
+</tr>
+<tr>
+<td>编制原则</td>
+<td>①<strong>统筹兼顾、适度集中</strong>；②<strong>相对独立、相互衔接</strong>；③<strong>分级编制、逐步实施</strong></td>
+</tr>
+<tr>
+<td>收入</td>
+<td>主要包括从国家出资企业取得的<strong>利润、股利、股息和国有产权（股权）转让收入、清算收入</strong>等</td>
+</tr>
+<tr>
+<td>支出</td>
+<td>主要用于对重要企业<strong>补充资本金</strong>和弥补一些国有企业的<strong>改革成本</strong>等</td>
+</tr>
+</tbody>
+</table>
+<p><strong>五档收取比例</strong>（按企业类别）：</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>比例</th>
+<th>典型企业</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一类</td>
+<td>企业税后利润的 <strong>20%</strong></td>
+<td>烟草企业</td>
+</tr>
+<tr>
+<td>第二类</td>
+<td>企业税后利润的 <strong>15%</strong></td>
+<td>石油石化、电力、电信、煤炭等具有<strong>资源垄断性</strong>特征的行业企业</td>
+</tr>
+<tr>
+<td>第三类</td>
+<td>企业税后利润的 <strong>10%</strong></td>
+<td>钢铁、运输、电子、贸易、施工等<strong>一般竞争性</strong>行业企业</td>
+</tr>
+<tr>
+<td>第四类</td>
+<td><strong>5%</strong></td>
+<td>转制科研院所、邮政集团公司等</td>
+</tr>
+<tr>
+<td>第五类</td>
+<td><strong>免缴</strong></td>
+<td>中国储备粮总公司、中国储备棉总公司等<strong>政策性公司</strong></td>
+</tr>
+</tbody>
+</table>
+<p>2024 年 1 月，国务院印发《国务院关于进一步完善国有资本经营预算制度的意见》，提出到"十四五"末，基本形成<strong>全面完整、结构优化、运行顺畅、保障有力</strong>的国有资本经营预算制度。</p></div>
+<div class="section"><div class="keypoint"><strong>不列赤字＋政策性公司免缴：</strong><p>①国有资本经营预算"量入为出"：支出按<strong>当年预算收入规模</strong>安排、<strong>不列赤字</strong>——区别于可列赤字发债弥补的一般公共预算；②免缴名单只认<strong>政策性公司</strong>（储粮、储棉）——烟草要交 20%、邮政只交 5%，别把"免缴"安到它们头上。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>烟草公司利润高又属专卖，按税后利润 20% 上缴；中石油、电网这类垄断央企交 15%；普通竞争性国企交 10%；转制科研院所、邮政集团交 5%；中储粮管国家粮仓，赔着本也要囤粮，国家干脆不收它的——"鼓励发展的少收点，储备的不收"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 收取比例口诀</div><p><strong>"烟二油十五，铁十邮五金，储粮储棉免"</strong>——烟 20%、油电煤（垄断）15%、钢运电子（竞争）10%、院所邮政 5%、储备类免缴。数字题按"从高到低"的顺序背。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 编制原则别串门</div><p>国有资本经营预算编制原则是"<strong>统筹兼顾适度集中、相对独立相互衔接、分级编制逐步实施</strong>"；"<strong>以收定支、专款专用</strong>"是<strong>政府性基金预算</strong>的管理原则——两套"原则"最爱互相客串干扰项，见"以收定支"直接想基金预算。</p></div></div>
+<div class="section"><h2>五、社会保险基金预算</h2>
+<h3>5. 社会保险基金预算</h3>
+<p><strong>社会保险基金预算</strong>：政府通过<strong>社会保险缴费、一般公共预算安排和其他方式</strong>筹集的资金，<strong>专项用于社会保障</strong>的收支预算。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>五项原则</td>
+<td>①<strong>依法建立，规范统一</strong>；②<strong>统筹编制，明确责任</strong>；③<strong>专项基金，专款专用</strong>；④<strong>相对独立，有机衔接</strong>；⑤<strong>收支平衡，留有结余</strong></td>
+</tr>
+<tr>
+<td>编制范围</td>
+<td><strong>按险种分别编制</strong>：企业职工基本养老保险基金、失业保险基金、城镇职工基本医疗保险基金、工伤保险基金、生育保险基金等内容（"五险"）</td>
+</tr>
+<tr>
+<td>编报审批</td>
+<td>全国社会保险基金预算<strong>草案</strong>由<strong>人力资源社会保障部汇总编制</strong>，<strong>财政部审核</strong>后，由财政部和人力资源社会保障部<strong>联合向国务院报告</strong>（决算草案同）</td>
+</tr>
+<tr>
+<td>执行调整</td>
+<td>社会保险基金预算<strong>不得随意调整</strong>；执行中因特殊情况需<strong>增加支出或减少收入</strong>，应当编制<strong>社会保险基金预算调整方案</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>谁编、谁审、报给谁：</strong><p><strong>"人社编、财政审、两家联合报国务院"</strong>——汇总编制是人力资源社会保障部，审核是财政部，报告对象是国务院。社保基金预算<strong>单独编报</strong>，与财政预算和国有资本经营预算<strong>相对独立、有机衔接</strong>：<strong>社会保险基金不能用于平衡财政预算，财政预算可补助社会保险基金</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>个人和单位每月交的养老、医疗、失业、工伤、生育五险费，进的就是社会保险基金预算这本"专账"——按险种各记各的账，专款专用，谁也不能拿去平衡别的预算；但财政可以掏钱补助社保（每年对养老保险基金的财政补助就是这么来的）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 社保五原则口诀</div><p><strong>"依法统编专款用，相对独立收支平"</strong>——依法建立规范统一／统筹编制明确责任／专项基金专款专用／相对独立有机衔接／收支平衡留有结余。五条各两个词，多选题逐条对。</p></div></div>
+<div class="section"><h2>六、四类预算之间的关系 <span class="must">必考</span></h2>
+<h3>6. 既相互独立，又有机衔接</h3>
+<table>
+<thead>
+<tr>
+<th>关系</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>独立性</strong></td>
+<td>每一类预算与政府预算的关系都是<strong>局部与全局</strong>的关系；各自有不同的<strong>收入来源、支出用途和管理方式</strong>，<strong>不可相互混用</strong>；特别是<strong>社会保险基金预算不能用于平衡一般公共预算等其他预算</strong></td>
+</tr>
+<tr>
+<td><strong>衔接性</strong></td>
+<td><strong>一般公共预算</strong>中安排了<strong>大量社会保障支出</strong>；<strong>国有资本经营预算和政府性基金预算</strong>中，都可以<strong>调剂部分资金用于社会保障</strong>；<strong>一般公共预算是政府预算体系的基础</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>单向闸门：只能&quot;进&quot;社保，不能&quot;出&quot;社保：</strong><p>资金调剂是<strong>单向</strong>的：一般公共预算、国有资本经营预算、政府性基金预算都可以往社会保障方向出钱；但<strong>社会保险基金预算的钱不能拿去平衡一般公共预算等其他预算</strong>。方向记反就丢分——这是本节最高频的判断点。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>三个钱包（一般公共、国资经营、政府性基金）都装了通向"看病钱"（社保）的水管——能往里灌；但"看病钱"那个钱包上只有进水口、没有出水口，闸门只朝一个方向开。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四类预算关系口诀</div><p><strong>"一般能去社保，社保不去一般；一般公共预算是基础"</strong>——衔接看"都往社保送"，独立看"社保不外借"。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>四本预算</strong>："公基资保"——一般公共（税收主体、体系基础、统计公报口径）／政府性基金（基金收费卖地彩票、以收定支专款专用结余结转）／国有资本经营（所有者身份、不列赤字、比例 20/15/10/5/免）／社会保险基金（五险、按险种编、人社编财政审联合报国务院）</li>
+<li><strong>基金审批</strong>：项目财政部批、重要报国务院；全国预决算草案国务院审定后报<strong>全国人民代表大会</strong>批准</li>
+<li><strong>国资预算</strong>：核心＝调整国家与国企的分配关系；编制原则＝统筹兼顾适度集中、相对独立相互衔接、分级编制逐步实施；支出按当年收入规模安排、不列赤字</li>
+<li><strong>社保预算</strong>：五原则"依法统编专款用，相对独立收支平"；不得随意调整，调整须编预算调整方案</li>
+<li><strong>关系</strong>：独立（不可混用，社保不能平衡一般）＋衔接（一般公共预算安排大量社保支出；国资、基金可调剂部分资金用于社保；一般公共预算是体系基础）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b15s3q1" data-answer="ACD" data-type="multi"><span class="q-tag">讲义例7·多选</span><div class="q-stem">关于政府性基金预算的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 政府性基金预算也属于政府预算的范畴</button><button type="button" class="qopt" data-key="B">B. 政府性基金预算的结余不得结转下年使用</button><button type="button" class="qopt" data-key="C">C. 政府性基金预算的收入具有指定用途、专款专用的特征</button><button type="button" class="qopt" data-key="D">D. 政府性基金预算是政府通过向社会征收基金、收费以及出让土地、发行彩票等方式取得</button><button type="button" class="qopt" data-key="E">E. 政府性基金预算由全国人民代表大会常务委员会审批</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：政府性基金预算是四本预算之一，当然属于政府预算范畴（A 对）；收入来源正是"向社会征收基金、收费以及出让土地、发行彩票"（D 对）；其收入具有<strong>指定用途、专款专用</strong>的特征（C 对）。B 错——管理原则是"以收定支、专款专用、<strong>结余结转下年继续使用</strong>"；E 错——全国政府性基金预决算草案经<strong>国务院审定</strong>后，报<strong>全国人民代表大会</strong>审查批准，不是常委会。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s3q2" data-answer="B" data-type="single"><span class="q-tag">讲义例8·单选</span><div class="q-stem">下列单位中，属于免缴国有资本收益的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 中国烟草总公司</button><button type="button" class="qopt" data-key="B">B. 中国储备粮集团公司</button><button type="button" class="qopt" data-key="C">C. 中国邮政集团公司</button><button type="button" class="qopt" data-key="D">D. 中国石油天然气集团有限公司</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：免缴国有资本收益的是<strong>中国储备粮总公司、中国储备棉总公司等政策性公司</strong>（B 对）。烟草是第一类，按税后利润 <strong>20%</strong> 上缴（A 错）；邮政集团是第四类，缴 <strong>5%</strong>（C 错）；中石油属石油石化等资源垄断性行业，第二类缴 <strong>15%</strong>（D 错）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s3q3" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">政府预算体系基础是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 零基预算</button><button type="button" class="qopt" data-key="B">B. 一般公共预算</button><button type="button" class="qopt" data-key="C">C. 部门预算</button><button type="button" class="qopt" data-key="D">D. 政府性基金预算</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：<strong>一般公共预算是政府预算体系的基础</strong>。A 零基预算是按编制内容和方法划分的预算类型；C 部门预算是预算编制制度的基本形式；D 政府性基金预算只是四本预算之一，不是体系的基础。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s3q4" data-answer="ABCD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">社会保险基金预算的原则有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 依法建立，规范统一</button><button type="button" class="qopt" data-key="B">B. 统筹编制，明确责任</button><button type="button" class="qopt" data-key="C">C. 相互独立，相互衔接</button><button type="button" class="qopt" data-key="D">D. 收支平衡，留有结余</button><button type="button" class="qopt" data-key="E">E. 专项基金，综合使用</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：社会保险基金预算五项原则：依法建立规范统一（A）、统筹编制明确责任（B）、专项基金<strong>专款专用</strong>、相对独立有机衔接（C 即此条的表述）、收支平衡留有结余（D）。E 错——是"专项基金、<strong>专款专用</strong>"，各项基金严格按法律法规规范收支内容、标准和范围，<strong>不得挤占或挪作他用</strong>，绝不是"综合使用"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s3q5" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">国有资本经营预算编制遵循的原则不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 分级编制，逐步实施</button><button type="button" class="qopt" data-key="B">B. 统筹兼顾，适度集中</button><button type="button" class="qopt" data-key="C">C. 以收定支，专款专用</button><button type="button" class="qopt" data-key="D">D. 相对独立，相互衔接</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：国有资本经营预算编制原则三条：统筹兼顾适度集中、相对独立相互衔接、分级编制逐步实施（A、B、D 均在其列）。"<strong>以收定支、专款专用</strong>"是<strong>政府性基金预算</strong>的管理原则（C 当选）——两个预算的"原则"最爱互相串门。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s3q6" data-answer="BCD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">关于我国政府现有的四类预算的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 社会保险基金预算可用于平衡一般公共预算</button><button type="button" class="qopt" data-key="B">B. 一般公共预算是政府预算体系的基础</button><button type="button" class="qopt" data-key="C">C. 一般公共预算中安排了大量社会保障支出</button><button type="button" class="qopt" data-key="D">D. 国有资本经营预算中可以调剂部分资金用于社会保障</button><button type="button" class="qopt" data-key="E">E. 政府性基金预算中不可以调剂部分资金用于社会保障</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：B、C、D 是衔接性的标准表述：一般公共预算是体系<strong>基础</strong>、其中安排了大量社保支出、国有资本经营预算<strong>可以</strong>调剂部分资金用于社保。A 错——<strong>社会保险基金预算不能用于平衡一般公共预算等其他预算</strong>（单向闸门只进不出）；E 错——政府性基金预算<strong>可以</strong>调剂部分资金用于社会保障，说"不可以"正好说反。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础15_政府预算_第2节_我国政府预算职权划分.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 我国政府预算职权划分</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础15_政府预算_第4节_我国政府预算编制和执行制度.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 我国政府预算编制和执行制度</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

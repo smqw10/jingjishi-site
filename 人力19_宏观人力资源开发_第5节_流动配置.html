@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第19章 宏观人力资源开发 · 流动配置 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第四部分 人力资源与社会保险政策</span><h1>第19章 宏观人力资源开发 · 流动配置</h1><div class="subtitle">第 5 节 / 共 5 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 5/5</div><div class="sec-badge none" id="sec-badge" data-sec="r19s5">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>分清<strong>公共</strong>（政府办、免费八项服务）与<strong>经营性</strong>（职业中介须行政许可）人力资源服务机构 <span class="must">必考</span> <span class="hot">高频考点</span></li>
+<li>背熟经营性机构"<strong>四明示</strong>"（照、项、价、话）、服务台账<strong>保存 2 年以上</strong>、分支机构 <strong>15 日</strong>书面报告 <span class="s3">★★★</span></li>
+<li>掌握外国人来华工作许可的 A/B/C 三类条件：<strong>A 类不受年龄、学历和工作经历限制且无数量限制</strong> <span class="hot">高频考点</span></li>
+<li>背熟永久居留待遇（免办工作许可、公民同等待遇）与两条永居申请通道（4年＋6月＋6倍工资＋20%个税；外籍华人博士） <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、人力资源市场建设</h2>
+<h3>1. 人力资源服务机构（★★★）<span class="must">必考</span></h3>
+<p><strong>人力资源服务机构</strong>包括<strong>公共人力资源服务机构</strong>和<strong>经营性人力资源服务机构</strong>两类。</p>
+<p><strong>公共人力资源服务机构</strong>：指<strong>县级以上人民政府</strong>设立的公共就业和人才服务机构，提供服务<strong>不得收费</strong>，经费<strong>纳入政府预算</strong>。八项免费服务：</p>
+<ol>
+<li>人力资源供求、市场工资指导价位、职业培训等<strong>信息发布</strong>；</li>
+<li><strong>职业介绍、职业指导和创业开业指导</strong>；</li>
+<li>就业创业和人才<strong>政策法规咨询</strong>；</li>
+<li>对就业困难人员实施<strong>就业援助</strong>；</li>
+<li>办理<strong>就业登记、失业登记</strong>等事务；</li>
+<li>办理高等学校、中等职业学校、技工学校<strong>毕业生接收手续</strong>；</li>
+<li><strong>流动人员人事档案管理</strong>；</li>
+<li>县级以上人民政府确定的<strong>其他服务</strong>。</li>
+</ol>
+<p><strong>经营性人力资源服务机构</strong>：从事<strong>职业中介活动</strong>的，应当在市场主体登记办理完毕后，依法向<strong>住所地</strong>人力资源社会保障行政部门申请<strong>行政许可</strong>，取得<strong>人力资源服务许可证</strong>；从事<strong>网络招聘服务</strong>的，还应当依法取得<strong>电信业务经营许可证</strong>。申请行政许可可以<strong>自愿选择</strong>按照一般程序或者<strong>告知承诺制</strong>方式。</p></div>
+<div class="section"><div class="keypoint"><strong>公共免费、经营持证：</strong><p>公共机构＝<strong>政府办＋免费＋经费进预算</strong>；经营性机构干"职业中介"必须先拿"人力资源服务许可证"，叠加"网络招聘"再＋"电信业务经营许可证"——两证是<strong>叠加</strong>关系，不是二选一。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 公共服务八项</div><p><strong>"信息、介绍、咨询、援助、登记、接收、档案、其他"</strong>——政府白送八件套；注意"档案管理"也在免费清单里，考题最爱拿"档案服务收费"当错项。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 许可与备案的分界</div><p>从事<strong>职业中介活动</strong>→行政许可（人力资源服务许可证）；从事就业和创业指导等<strong>其他</strong>人力资源服务业务→向人社部门<strong>备案</strong>即可。两个门槛级别不同，判断题常互换。</p></div></div>
+<div class="section"><h3>2. 人力资源市场活动规范</h3>
+<ol>
+<li>接受用人单位委托招聘人员，应当要求用人单位提供<strong>招聘简章、营业执照或者有关部门批准设立的文件、经办人的身份证件、用人单位的委托证明</strong>，并对材料的<strong>真实性、合法性</strong>进行审查；</li>
+<li>行为红线：不得采取<strong>欺诈、暴力、胁迫</strong>或者其他不正当手段；不得<strong>以招聘为名牟取不正当利益</strong>；不得介绍用人单位或劳动者<strong>从事违法活动</strong>；</li>
+<li>人力资源<strong>服务外包</strong>：不得<strong>改变用人单位与劳动者的劳动关系</strong>，不得与用人单位串通侵害劳动者合法权益；</li>
+<li><strong>四明示</strong>：经营性人力资源服务机构应当在服务场所明示①<strong>营业执照</strong>、②<strong>服务项目</strong>、③<strong>收费标准</strong>、④<strong>监督机关和监督电话</strong>，并接受人力资源社会保障行政部门和市场监督管理、价格等主管部门的监督检查；</li>
+<li><strong>服务台账</strong>：如实记录<strong>服务对象、服务过程、服务结果</strong>等信息，台账应当<strong>保存 2 年以上</strong>；</li>
+<li><strong>分支机构</strong>：经营性机构设立分支机构的，应当自市场主体登记办理完毕之日起 <strong>15 日内</strong>，书面报告分支机构住所地人力资源社会保障行政部门。</li>
+</ol></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四明示</div><p><strong>"照、项、价、话"</strong>——营业执照、服务项目、收费标准、监督机关和监督电话。门口挂的是"四明示"，台账里记的才是"服务对象"——两个清单别互换。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>走进一家人力资源中介门店，墙上该挂着营业执照、服务项目、收费标准和监督电话四样；店里翻台账，能看到服务对象、过程、结果，而且台账得留够 2 年；这家店要是隔壁市开了分号，登记办完 15 天内就得书面报告当地人社部门。</p></div></div>
+<div class="section"><h2>二、人力资源的国际流动</h2>
+<h3>3. 外国人来华工作许可（★★★）<span class="hot">高频考点</span></h3>
+<p><strong>许可依据</strong>：《中华人民共和国出境入境管理法》第 41 条——外国人在中国境内工作，应当按照规定取得<strong>工作许可和工作类居留证件</strong>；<strong>任何单位和个人不得聘用</strong>未取得工作许可和工作类居留证件的外国人。申请 <strong>R 字签证</strong>，应当符合外国<strong>高层次人才和急需紧缺专门人才</strong>的引进条件和要求；申请 <strong>Z 字签证</strong>，应当提交<strong>工作许可</strong>等证明材料。</p>
+<p><strong>许可对象</strong>：聘用外国人的<strong>用人单位</strong>和<strong>外国人</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主体</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用人单位</td>
+<td>①依法设立，无严重违法失信记录；②岗位有特殊需要，<strong>国内暂缺适当人选</strong>，且不违反国家有关规定；③支付所聘用外国人的工资薪金<strong>不得低于当地最低工资标准</strong>；④法律法规规定应由行业主管部门前置审批的，需经批准</td>
+</tr>
+<tr>
+<td>申请人</td>
+<td>①<strong>年满 18 周岁</strong>，身体健康，无犯罪记录，境内有确定的用人单位，具有从事其工作所必需的专业技能或相适应的知识水平；②所从事的工作符合我国经济社会发展需要，为国内急需紧缺的专业人员；③法律法规另有规定的从其规定</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>机构</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>受理机构</td>
+<td>省级人民政府和新疆生产建设兵团外国人工作管理部门及其授权的地方人民政府外国人工作管理部门<strong>及委托的机构</strong></td>
+</tr>
+<tr>
+<td>决定机构</td>
+<td>省级人民政府和新疆生产建设兵团外国人工作管理部门及其授权的地方人民政府外国人工作管理部门</td>
+</tr>
+</tbody>
+</table>
+<p>三类人才分档管理：</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>条件限制</th>
+<th>数量限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>外国高端人才（A 类）</strong></td>
+<td>符合"<strong>高精尖缺</strong>"和市场需求导向，中国经济社会发展需要的科学家、科技领军人才、国际企业家、专门特殊人才等</td>
+<td><strong>可不受年龄、学历和工作经历限制</strong>；<strong>无</strong>数量限制</td>
+</tr>
+<tr>
+<td><strong>外国专业人才（B 类）</strong></td>
+<td>符合外国人来华工作指导目录和岗位需求，具有<strong>学士及以上学位</strong>和 <strong>2 年及以上</strong>相关工作经历，<strong>年龄不超过 60 周岁</strong>；确有需要的（创新创业人才、专业技能类人才、优秀外国毕业生等）可适当放宽</td>
+<td>根据市场需求限制</td>
+</tr>
+<tr>
+<td><strong>其他外国人员（C 类）</strong></td>
+<td>满足国内劳动力市场需求，符合国家政策规定的其他外国人员</td>
+<td>按国家有关规定执行</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 ABC 三类</div><p><strong>"A 类高精尖三不限还无限量，B 类学士两年六十岁，C 类按政策"</strong>——看到"诺奖得主、院士、知名科学家"直接想 A 类：年龄、学历、经历全不受限。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>71 岁诺贝尔奖得主受聘来华高校任教——他是 A 类高端人才，年龄、学历、经历统统不受限，"因年龄大不符合条件"的说法错误；工作许可的受理、决定在<strong>省级（及兵团）层面及其授权的地方机构</strong>，不是随便是哪个街道就能批的。</p></div></div>
+<div class="section"><h3>4. 外国人永久居留服务管理（★★★）<span class="must">必考</span></h3>
+<ul>
+<li><strong>永久居留证的功能</strong>：外国人可持证在中国境内办理<strong>金融、教育、医疗、交通、通信、就业和社会保险、财产登记、诉讼</strong>等事务；持证人<strong>居留期限不受限制</strong>，可以凭本人护照和永久居留证<strong>出境入境</strong>；</li>
+<li><strong>工作生活相关待遇</strong>：</li>
+<li>永久居留外国人在中国境内工作<strong>免办外国人工作许可</strong>，可按规定参加技术职务任职资格和职业资格考试；</li>
+<li>在<strong>购房、办理金融业务、申领驾照、子女入学、交通出行、住宿登记</strong>等方面依法享受<strong>中国公民同等待遇</strong>；</li>
+<li>在中国境内工作的，<strong>依法参加相应社会保险</strong>，缴存和使用公积金；</li>
+<li>在中国境内居住但未工作，且符合统筹地区规定的，可参照国内城乡居民参加居住地<strong>城镇居民基本医疗保险和城乡居民基本养老保险</strong>；</li>
+<li>在海关通关时，携带的自用物品按照海关规定办理相关手续。</li>
+</ul></div>
+<div class="section"><div class="keypoint"><strong>免办工作许可≠免缴社保：</strong><p>永久居留外国人"免办<strong>工作许可</strong>"，但"依法参加<strong>社会保险</strong>、缴存公积金"一条没少——两个"免/不"别串门，2023 年真题就用"可以不参加社会保险"当错项。</p></div></div>
+<div class="section"><h3>5. 移民与出入境便利化</h3>
+<p>两条申请在华永久居留的通道：</p>
+<table>
+<thead>
+<tr>
+<th>通道</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>普通通道</strong></td>
+<td>在中国境内工作，<strong>连续工作满 4 年</strong>、每年实际居住<strong>不少于 6 个月</strong>，工资性年收入不低于上一年度所在地区城镇在岗职工平均工资的 <strong>6 倍</strong>，年缴纳个人所得税不低于工资性年收入标准的 <strong>20%</strong>；其外籍<strong>配偶和未成年子女</strong>可随同申请</td>
+</tr>
+<tr>
+<td><strong>外籍华人通道</strong></td>
+<td>在中国境内工作的外籍华人，具有<strong>博士研究生学历</strong>，<strong>或者</strong>在国家重点发展区域<strong>连续工作满 4 年</strong>、每年实际居住<strong>不少于 6 个月</strong>；其外籍配偶和未成年子女可随同申请</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 永居两条道</div><p><strong>"普通人 4·6·6·20——4 年、住 6 月、6 倍工资、20% 个税；外籍华人博士一证搞定，或在重点区域 4 年＋住 6 月"</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 数字&quot;6 个月&quot;是两条通道的公共项</div><p>"每年实际居住不少于 6 个月"在普通通道和外籍华人通道里<strong>都出现</strong>；选项里换成 4、5、7 个月都是干扰。"6 倍工资＋20% 个税"只属于普通通道，外籍华人通道<strong>不要求</strong>收入和纳税条件。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>服务机构</strong>：公共＝县级以上政府设立＋免费＋经费进预算（八项服务含档案管理）；经营性＝职业中介须人力资源服务许可证、网络招聘再加电信业务经营许可证、可告知承诺制</li>
+<li><strong>市场规范</strong>：委托招聘审四材料（简章、执照/批文、经办人证件、委托证明）；三不得（欺诈暴力胁迫、招聘牟利、介绍违法）；外包不得改变劳动关系；四明示＝照项价话；台账 2 年以上；分支机构 15 日书面报告</li>
+<li><strong>工作许可</strong>：出境入境管理法第 41 条，工作许可＋工作类居留证件；R 字签证对高层次人才、Z 字签证附工作许可；A 类高精尖缺三不限无数量限制、B 类学士＋2 年经历＋≤60 周岁、C 类按政策；受理/决定在省级（兵团）及其授权地方机构</li>
+<li><strong>永久居留</strong>：居留期限不受限制、凭护照＋永居证出入境；境内工作免办工作许可但依法参保缴公积金；购房、驾照、子女入学等公民同等待遇</li>
+<li><strong>便利化两通道</strong>：普通＝4 年＋住 6 月＋6 倍工资＋20% 个税；外籍华人＝博士学历或重点区域 4 年＋住 6 月；配偶和未成年子女可随同</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r19s5q1" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于公共人力资源服务机构的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 公共人力资源服务机构的经费应该纳入政府预算</button><button type="button" class="qopt" data-key="B">B. 人力资源服务机构不可以向创业者提供创业开业方面的指导服务</button><button type="button" class="qopt" data-key="C">C. 公共人力资源服务机构可以向流动人员提供档案管理服务，并按规定收取费用</button><button type="button" class="qopt" data-key="D">D. 公共人力资源服务机构在完成基本业务基础上，可以开展部分经营性业务</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：A 正确——公共人力资源服务机构提供服务<strong>不得收费</strong>，经费<strong>纳入政府预算</strong>。B 错——职业介绍、职业指导和<strong>创业开业指导</strong>正是其服务事项；C 错——流动人员人事档案管理是<strong>免费</strong>公共服务项，"收取费用"错误；D 与公共机构"不得收费"的定位冲突。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s5q2" data-answer="ABC" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于经营性人力资源服务机构的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 从事就业和创业指导的，应当向人力资源社会保障部门备案</button><button type="button" class="qopt" data-key="B">B. 从事职业中介活动的，应当在服务场所明示人力资源服务许可证</button><button type="button" class="qopt" data-key="C">C. 具有向行政部门提交经营情况年度报告的义务</button><button type="button" class="qopt" data-key="D">D. 不得设立分支机构</button><button type="button" class="qopt" data-key="E">E. 服务台账应当保存 1 年以上</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：A 正确——<strong>职业中介活动</strong>才需要行政许可，从事就业和创业指导等其他人力资源服务业务的向人社部门<strong>备案</strong>即可；B 正确——从事职业中介活动的应取得人力资源服务许可证并在服务场所明示；C 是经营性机构的法定义务。D 错——<strong>可以</strong>设立分支机构，但应自市场主体登记办理完毕之日起 <strong>15 日内</strong>书面报告分支机构住所地人社部门；E 错——服务台账应当保存 <strong>2 年以上</strong>，不是 1 年。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s5q3" data-answer="ABDE" data-type="multi"><span class="q-tag">题库·多选</span><span class="q-tag">2025</span><div class="q-stem">经营性人力资源服务机构应当在服务场所明示（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 服务项目</button><button type="button" class="qopt" data-key="B">B. 收费标准</button><button type="button" class="qopt" data-key="C">C. 服务对象</button><button type="button" class="qopt" data-key="D">D. 营业执照</button><button type="button" class="qopt" data-key="E">E. 监督机关和监督电话</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析："四明示"＝<strong>营业执照、服务项目、收费标准、监督机关和监督电话</strong>（口诀"照项价话"）。C 的"服务对象"是<strong>服务台账</strong>里如实记录的信息（服务对象、服务过程、服务结果），不是门口明示的事项——台账清单与明示清单互换是本考点的经典陷阱。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s5q4" data-answer="A" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">一个 71 岁获得过诺贝尔奖的外国人才，要来国内某高校工作，下列选项中错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 这位科学家因年龄较大，不符合工作许可的申请条件</button><button type="button" class="qopt" data-key="B">B. 该高校应该向所在市政府的外国人管理部门申请外国人工作许可</button><button type="button" class="qopt" data-key="C">C. 这位科学家应当办理工作许可和工作类居留证件</button><button type="button" class="qopt" data-key="D">D. 这位科学家可以申请办理 R 字签证</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：A 错误——诺奖得主属于<strong>外国高端人才（A 类）</strong>，可<strong>不受年龄、学历和工作经历限制</strong>，且 A 类<strong>无数量限制</strong>，"因年龄较大不符合条件"不成立。C 正确——外国人在中国境内工作应当取得工作许可和工作类居留证件；D 正确——R 字签证正面向外国高层次人才和急需紧缺专门人才；B 正确——受理、决定机构为省级（及兵团）外国人工作管理部门<strong>及其授权的地方人民政府外国人工作管理部门</strong>，所在市部门经授权即可办理。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s5q5" data-answer="ABCD" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">外籍人员获得中国永久居留资格后，可以享受的权益有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 可以在中国购房、并享受中国公民同等待遇</button><button type="button" class="qopt" data-key="B">B. 可以无限期在中国（境内）居留</button><button type="button" class="qopt" data-key="C">C. 在中国境内工作，可以不办理外国人来华工作许可</button><button type="button" class="qopt" data-key="D">D. 可以在中国境内申请驾照</button><button type="button" class="qopt" data-key="E">E. 在中国境内工作，可以不参加社会保险</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：持证人<strong>居留期限不受限制</strong>，B 正确；永久居留外国人在中国境内工作<strong>免办外国人工作许可</strong>，C 正确；在<strong>购房、办理金融业务、申领驾照、子女入学、交通出行、住宿登记</strong>等方面依法享受中国公民同等待遇，A、D 正确；在中国境内工作的应当<strong>依法参加相应社会保险</strong>、缴存和使用公积金，E 错误——"免办工作许可"免的是许可，不免社保。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s5q6" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><span class="q-tag">2024</span><div class="q-stem">在中国境内工作，具有博士研究生学历的外籍华人，申请在华永久居留的条件之一是每年实际居住时间不少于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 5 个月</button><button type="button" class="qopt" data-key="B">B. 7 个月</button><button type="button" class="qopt" data-key="C">C. 4 个月</button><button type="button" class="qopt" data-key="D">D. 6 个月</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：外籍华人申请在华永久居留：具有<strong>博士研究生学历</strong>，<strong>或</strong>在国家重点发展区域连续工作满 4 年，两者都要求<strong>每年实际居住不少于 6 个月</strong>。C 的"4"是把"连续工作满 4 年"的"年"混进"月"里的干扰；A、B 无出处。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力19_宏观人力资源开发_第4节_教育培训.html"><span class="nav-label">上一节</span><span class="nav-title">第4节 教育培训</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十五章 抽样调查 · 几种基本的概率抽样方法 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十五章 抽样调查 · 几种基本的概率抽样方法</h1><div class="subtitle">第 2 节 / 共 3 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:66%"></div></div><div class="progress-text">本章进度 2/3</div><div class="sec-badge none" id="sec-badge" data-sec="b25s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>掌握<strong>简单随机抽样</strong>：放回／不放回之分、优缺点与"不多不广不大"的适用条件 <span class="hot">高频考点</span></li>
+<li>背熟<strong>分层抽样</strong>的定义、三大优点与"<strong>层内小、层间大</strong>"的要求 <span class="must">必考</span> <span class="s3">★★★</span></li>
+<li>会识别<strong>系统抽样</strong>（等距抽样）："先抽头、等距走"，间隔＝总体规模÷样本量 <span class="hot">高频考点</span></li>
+<li>分清<strong>整群抽样</strong>的优缺点与"<strong>群内大、群间小</strong>"的适用条件，警惕与分层抽样方向拧反 <span class="must">必考</span></li>
+<li>认识<strong>多阶段抽样</strong>：两个或以上阶段、抽样框分级准备，与整群抽样"再抽"与"全查"的区别 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、简单随机抽样 <span class="hot">高频考点</span></h2>
+<p><strong>定义</strong>：<strong>最基本的随机抽样方法</strong>，分为两种：</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>做法</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有放回简单随机抽样</td>
+<td>抽出一个样本单位、记录观察结果后，将其<strong>放回总体</strong>中，再抽取下一个</td>
+<td>单位有<strong>被重复抽中</strong>的可能，容易造成<strong>信息重叠</strong>、影响估计的效率，<strong>较少采用</strong></td>
+</tr>
+<tr>
+<td>不放回简单随机抽样</td>
+<td>每次都在所有<strong>尚未被抽入样本</strong>的单元中抽取下一个</td>
+<td>每个单位<strong>最多只能被抽中一次</strong>，比放回抽样有<strong>更低的抽样误差</strong></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优点</td>
+<td><strong>操作简单</strong>；每个单位的<strong>入样概率相同</strong>；样本统计量形式也比较简单</td>
+</tr>
+<tr>
+<td>缺点</td>
+<td>① <strong>未利用抽样框中更多的辅助信息</strong>，用样本统计量估计总体参数的效率受影响；② 样本分布可能<strong>十分分散</strong>，增加调查过程中的费用和时间</td>
+</tr>
+<tr>
+<td>适用条件</td>
+<td>① 抽样框中<strong>没有更多</strong>可以利用的辅助信息；② 调查对象分布的范围<strong>不广阔</strong>；③ 个体之间的差异<strong>不是很大</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>最基本≠最好用：</strong><p>简单随机抽样是"最基本的"，但不是最省的：放着抽样框里的辅助信息不用（估计效率低），样本撒得满地都是（费用时间涨）。所以它只适合"<strong>不多不广不大</strong>"的场合。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 放回可重样，不放回误差低</div><p><strong>"放回可重复、信息重叠效率低；不放回只一次、误差更低"</strong>。适用条件三连：<strong>"不多不广不大"</strong>——辅助信息不多、范围不广、差异不大。讲义大白话："因为简单，所以不多不广不大。"</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>新学期迎新想从全校抽 100 名志愿者，直接用摇号在所有学号中摇出 100 个——每个学号被抽中的概率一样，这就是简单随机抽样；抽过的号不放回、不可能再中，是不放回式。但全校学生遍布各院系（范围广、差异大），这样抽出来的样本又散又费腿脚。</p></div></div>
+<div class="section"><h2>二、分层抽样 <span class="must">必考</span></h2>
+<p><strong>定义</strong>：先按照某种规则把总体分为<strong>不同的层</strong>，然后在<strong>不同的层内独立、随机地</strong>抽取样本，这样所得的样本称为分层样本；如果每层中的抽样都是<strong>简单随机抽样</strong>，则称为<strong>分层随机抽样</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优点</td>
+<td>① <strong>既可以估计总体参数，同时也可以估计各层的参数</strong>；② <strong>便于抽样工作的组织</strong>（分层编制抽样框）；③ 每层都抽取一定样本单位，样本在总体中<strong>分布比较均匀，可以降低抽样误差</strong></td>
+</tr>
+<tr>
+<td>样本量分配</td>
+<td>各层样本量分配分两类：<strong>等比例分配</strong>和<strong>不等比例分配</strong>；条件具备（各层的总体方差已知）时，<strong>不等比例抽样的抽样误差可能比等比例抽样更小</strong></td>
+</tr>
+<tr>
+<td>适用条件</td>
+<td>① 抽样框中有<strong>足够的辅助信息</strong>，能够将总体单位按某种标准划分到各层之中；② <strong>同一层内各单位之间的差异尽可能小，不同层之间各单位的差异尽可能大</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>分层的账：既估总体，又估各层：</strong><p>分层后每一层都有自己的样本，所以总体参数、各层参数<strong>都能估</strong>——这是简单随机抽样给不了的；同时样本均匀铺开、误差更小。分层的前提是抽样框里<strong>有足够的辅助信息</strong>可供分层。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 层内抱团、层间拉开</div><p><strong>"层内差异小、层间差异大"</strong>——同一层里的人越像越好，层与层之间拉得越开越好。与整群抽样正好拧着来（整群要"群内大、群间小"），这对方向对照是本章第一大易混点，考试反复拿来设反。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>做全国居民消费调查，先按省把总体分成 31 层，再在每个省内部独立随机抽样——既能让每个省（层）都有自己的样本、算出本省的消费参数，又因为省内居民相对相似而让总体估计更稳、误差更低。</p></div></div>
+<div class="section"><h2>三、系统抽样（等距抽样）<span class="hot">高频考点</span></h2>
+<p><strong>定义</strong>：先将总体中的所有单元<strong>按一定顺序排列</strong>，在规定范围内<strong>随机抽取一个初始单元</strong>，然后按<strong>事先规定的规则</strong>抽取其他样本单元；最简单的系统抽样是<strong>等距抽样</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优点</td>
+<td>① <strong>操作简便</strong>：只需随机确定起始单位，整个样本就自然确定了；② 对<strong>抽样框的要求比较简单</strong>：只要求总体单位按一定顺序排列，<strong>不一定是一份严格的名单清单</strong></td>
+</tr>
+<tr>
+<td>缺点</td>
+<td><strong>方差估计比较复杂</strong>，给计算抽样误差带来一定困难</td>
+</tr>
+<tr>
+<td>等距间隔</td>
+<td>抽样间隔＝<strong>总体规模 N ÷ 样本量 n</strong>（如 N＝1000、n＝100，即每 10 个抽 1 个）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>只抽一次头，后面全自动：</strong><p>系统抽样随机性只用在"起始单元"上——先随机抽一个头，之后按规则自动选出后续单元。正因为只需"排序＋起点"，它对抽样框要求最松（有顺序就行，不必是完整名单）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 先抽头、等距走</div><p><strong>"先随机抽头，再等距走人"</strong>。见"随机确定初始（起始）单元，然后每隔××抽取"→系统抽样；见"抽样框要求简单、不一定名单清单"→也是系统抽样；间隔公式<strong>总体规模÷样本量</strong>用于计算题。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>在 00–99 号中随机抽一个起始号（比如 33），之后每隔 10 个自动选出一个：33、43、53、63……样本就这么"顺"出来了——像尾号限行按号轮停，起始点随机、后续全自动。</p></div></div>
+<div class="section"><h2>四、整群抽样 <span class="hot">高频考点</span></h2>
+<p><strong>定义</strong>：将总体中所有的基本单位按照一定规则划分为<strong>互不重叠的群</strong>，抽样时<strong>直接抽取群</strong>，对抽中的群调查其<strong>全部</strong>的基本单位，对没有抽中的群则不进行调查。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优点</td>
+<td>① 实施调查<strong>方便</strong>，可以<strong>节省费用和时间</strong>；② <strong>抽样框编制得以简化</strong>，抽样时只需要<strong>群的抽样框</strong></td>
+</tr>
+<tr>
+<td>缺点</td>
+<td>群内各单位之间存在<strong>相似性、差异比较小</strong>，而<strong>群与群之间的差别比较大</strong>，使得整群抽样的<strong>抽样误差比较大</strong></td>
+</tr>
+<tr>
+<td>适用条件</td>
+<td>如果<strong>群内各单位之间存在较大差异、群与群的结果相似</strong>，整群抽样会<strong>降低估计误差</strong>；整群抽样特别适合于对某些<strong>特殊群结构</strong>进行调查</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>抽中全查＝整群：</strong><p>整群抽样的动作只有两步：<strong>直接抽群→群内全查</strong>。抽中的群里一个不落全调查，没抽中的群一个不查。见到"对被抽中××内<strong>所有</strong>单位进行全面调查"，就是整群抽样。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 群内大、群间小，抽中全查</div><p><strong>"整群要群内差异大、群间差异小；抽中一个群，群里全都要"</strong>。对比分层："分层层内小、层间大，层层都抽一部分"。两句话背死，方向题就不会反。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>调查某城市餐饮个体户经营状况：把全市调查小区当"群"，随机抽 50 个小区，被抽中小区里的<strong>所有</strong>餐饮个体户全部调查——只需编"小区名单"这一层抽样框，省事省钱；但小区内个体户彼此相似（群内差异小），误差比简单随机抽样大。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：分层与整群&quot;正好拧着来&quot;</div><ul>
+<li>分层要求<strong>层内差异小、层间差异大</strong>；整群适合<strong>群内差异大、群间差异小</strong>——口诀"分层抱团内，整群散群内"，方向感靠这句锚。</li>
+<li>误差方向：分层<strong>降低</strong>抽样误差；整群<strong>误差比较大</strong>。</li>
+<li>与多阶段抽样的区别：抽中群后<strong>全查</strong>＝整群；抽中群后<strong>还要再抽</strong>＝多阶段。情景题先看"抽中之后是查全部还是继续抽"。</li>
+</ul></div></div>
+<div class="section"><h2>五、多阶段抽样</h2>
+<p><strong>定义</strong>：在大规模抽样调查中，一次抽到最终样本单位很难实现，往往需要经过<strong>两个或两个以上阶段</strong>才能抽到最终样本单位，这就是多阶段抽样方法。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>特点</td>
+<td>① 抽样<strong>分阶段进行</strong>，<strong>抽样框也可以分级进行准备</strong>（每一阶段只需准备下一级的名单）；② 在初选单位中<strong>再抽选</strong>，使样本的分布<strong>相对集中</strong>，节省调查的人力和财力；③ <strong>抽样设计比较复杂，抽样误差计算比较复杂</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>每一阶段都要各自的抽样框：</strong><p>多阶段抽样分几级走，抽样框就<strong>分级准备</strong>：第一阶段要"一级单位名单"，第二阶段只要"被抽中的一级单位里的二级单位名单"……考"该调查需要哪些抽样框"时，按"<strong>被抽中的上一层＋下一层的名单</strong>"逐级配对，多一份、少一份都是错。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 阶段两跳及以上</div><p><strong>"阶段两跳往上算，框也分级往下备"</strong>——经过两个或以上阶段才到最终样本单位的，就是多阶段抽样；抽样框按级配套。数一数情景题里"抽"了几次，两次及以上就是多阶段。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>调查农户情况：先从全省随机抽 n 个县，再从每个抽中的县抽 m 个村，最后从每个抽中的村抽 k 个农户——"省→县→村→户"三级跳。每一级只需要本级名单（抽样框分级准备），样本集中在被抽中的县村、好跑腿省经费；但设计复杂、误差计算也复杂。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>简单随机抽样</strong>：最基本；放回（可重复、信息重叠、较少用）／不放回（只一次、误差更低）；优＝操作简单、入样概率相同；缺＝未用辅助信息、样本分散；适用＝"不多不广不大"</li>
+<li><strong>分层抽样</strong>：先分层、层内独立随机抽（每层都是简单随机抽样称分层随机抽样）；优＝估总体也估各层、便于组织、降低误差；分配＝等比例／不等比例（各层总体方差已知时不等比例可能误差更小）；要求＝<strong>层内差异小、层间差异大</strong></li>
+<li><strong>系统抽样</strong>：排序→随机抽初始单元→按规则抽其余；最简单的是等距抽样，间隔＝N÷n；优＝简便、抽样框要求简单（不必名单清单）；缺＝方差估计复杂</li>
+<li><strong>整群抽样</strong>：划分互不重叠的群→直接抽群→<strong>群内全查</strong>；优＝方便省钱、只需群的抽样框；缺＝群内相似、<strong>误差比较大</strong>；适用＝<strong>群内差异大、群间差异小</strong></li>
+<li><strong>多阶段抽样</strong>：两个或以上阶段；抽样框分级准备；样本相对集中、省人力财力；抽样设计与误差计算复杂</li>
+<li>方向对照总锚：<strong>分层抱团内、整群散群内；抽中再抽＝多阶段，抽中全查＝整群</strong></li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b25s2q1" data-answer="D" data-type="single"><span class="q-tag">例6·单选</span><div class="q-stem">属于分层抽样的要求的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 层内差别大，层间差别小</button><button type="button" class="qopt" data-key="B">B. 层内差别小，层间差别小</button><button type="button" class="qopt" data-key="C">C. 层内差别大，层间差别大</button><button type="button" class="qopt" data-key="D">D. 层内差别小，层间差别大</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：分层抽样的要求是<strong>同一层内各单位差异尽可能小、不同层之间差异尽可能大</strong>（D 对）——层内抱团、层间拉开，才能让每层样本都有代表性并降低抽样误差。A 把方向整个拧反了（那是把"整群"的要求安到了分层头上）；B、C 各只对了半句。防反口诀："分层层内小，整群群内大"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b25s2q2" data-answer="D" data-type="single"><span class="q-tag">例7·单选</span><div class="q-stem">在调查某城市餐饮行业个体户的经营状况时，从该城市的所有调查小区中随机抽取 50 个，然后对每个被抽中调查小区中所有餐饮行业个体户进行全面调查，这种抽样方法是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 判断抽样</button><button type="button" class="qopt" data-key="B">B. 分层抽样</button><button type="button" class="qopt" data-key="C">C. 等距抽样</button><button type="button" class="qopt" data-key="D">D. 整群抽样</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：整群抽样＝<strong>直接抽群，对抽中的群调查全部单位</strong>——"调查小区"是群，抽中的小区内"所有"个体户都查（D 对）。没有按标准分层的动作（B 错）；没有排序等距的动作（C 错）；抽取是"随机"的，不是凭主观确定样本单元（A 错）。识别题眼："抽中之后<strong>全面调查／所有单位</strong>"→整群；"抽中之后<strong>再抽一部分</strong>"→多阶段。
+:::</p></div></details></div><div class="quiz-item" data-qid="b25s2q3" data-answer="ABDE" data-type="multi"><span class="q-tag">例8·多选</span><div class="q-stem">在某城市的一项在职职工亚健康情况抽样调查中，调查人员先将工作单位按照行业和规模分层，然后在各层内随机抽取初始单位后，等距抽取 5 家单位，再对被抽中单位内所有员工进行体检和调查。该调查中采用的抽样方法有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 分层抽样</button><button type="button" class="qopt" data-key="B">B. 简单随机抽样</button><button type="button" class="qopt" data-key="C">C. 配额抽样</button><button type="button" class="qopt" data-key="D">D. 整群抽样</button><button type="button" class="qopt" data-key="E">E. 系统抽样</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：逐句拆解："按行业和规模<strong>分层</strong>"→分层抽样（A）；"各层内<strong>随机抽取</strong>初始单位"→简单随机抽样（B）；"<strong>等距</strong>抽取 5 家单位"→系统（等距）抽样（E）；"对被抽中单位内<strong>所有员工</strong>"进行调查→把单位当"群"全查→整群抽样（D）。配额抽样（C）属非概率抽样，本题各环节都按随机原则进行，不含配额，是干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b25s2q4" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">等距抽样的抽样间隔计算公式为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 总体规模＋样本量</button><button type="button" class="qopt" data-key="B">B. 总体规模／样本量</button><button type="button" class="qopt" data-key="C">C. 样本量／总体规模</button><button type="button" class="qopt" data-key="D">D. 总体规模－样本量</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：等距（系统）抽样先把总体 N 个单位排序，要抽 n 个，抽样间隔 k＝<strong>总体规模÷样本量</strong>（B 对）——如 N＝1000、n＝100，则每 10 个抽 1 个。C 把分子分母弄反：算出的是抽样比例（100/1000＝1/10，回答"抽多少"），不是间隔（回答"隔多少"）；A、D 是凑数的干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b25s2q5" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">某省通过对农户进行抽样调查来了解乡村振兴建设推进情况，先从全省随机抽取 n 个县级行政单位，然后从每个被抽中的县级行政单位中随机抽取 m 个村，再从每个被抽中的村中随机抽取 k 个农户，该调查采用的抽样方法是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 分层抽样</button><button type="button" class="qopt" data-key="B">B. 整群抽样</button><button type="button" class="qopt" data-key="C">C. 系统抽样</button><button type="button" class="qopt" data-key="D">D. 多阶段抽样</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析："省→县→村→户"<strong>层层往下抽、经过三个阶段</strong>才到最终样本单位（农户），是典型的多阶段抽样（D 对）。若是整群抽样，抽中村后就该把村内<strong>全部农户</strong>都调查，而本题最后还要再抽 k 个（B 错）；分层要求先按标准把总体分层、再层内抽样，本题是分步抽取而不是分层（A 错）；全程没有"排序＋等距"的动作（C 错）。题眼：<strong>抽中之后还继续再抽</strong>→多阶段；抽中之后<strong>全查</strong>→整群。
+:::</p></div></details></div><div class="quiz-item" data-qid="b25s2q6" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于整群抽样的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 如果群内的差异小，则整群抽样的误差较小</button><button type="button" class="qopt" data-key="B">B. 整群抽样的调查不方便</button><button type="button" class="qopt" data-key="C">C. 整群抽样的抽样复杂</button><button type="button" class="qopt" data-key="D">D. 如果群间的差异小，则整群抽样的误差较小</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：整群抽样的适用条件是"<strong>群内差异大、群间差异小</strong>"——群间差异小，抽中少数几个群就能代表总体，误差较小（D 对）。A 拧反了方向：恰恰是群内差异<strong>小</strong>（群内相似）使得整群抽样<strong>误差比较大</strong>；B 反了，实施调查<strong>方便</strong>、节省费用和时间是整群抽样的优点；C 混淆对象，整群抽样<strong>抽样框编制简化</strong>（只需群的抽样框），"抽样设计与误差计算复杂"是<strong>多阶段抽样</strong>的缺点。本题考的就是"分层与整群要求正好相反"这个易混点。
+:::</p></div></details></div></div>
+<div class="section"><p>:::</p></div><div class="footer-nav"><a class="prev" href="基础25_抽样调查_第1节_抽样调查的基本概念.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 抽样调查的基本概念</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础25_抽样调查_第3节_估计量和样本量.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 估计量和样本量</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

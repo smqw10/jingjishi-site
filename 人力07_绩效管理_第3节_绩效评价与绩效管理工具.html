@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第7章 绩效管理 · 绩效评价与绩效管理工具 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第7章 绩效管理 · 绩效评价与绩效管理工具</h1><div class="subtitle">第 3 节 / 共 5 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:60%"></div></div><div class="progress-text">本章进度 3/5</div><div class="sec-badge none" id="sec-badge" data-sec="r07s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>分清<strong>三大类八种</strong>绩效评价技术，重点背<strong>量表法三兄弟</strong>（图尺度/行为锚定/行为观察量表）的优缺点 <span class="s3">★★★</span></li>
+<li>记住 <strong>8 种绩效评价误区</strong>，会做情景判断题（首因/近因/晕轮/刻板/盲点……）<span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>掌握四大绩效管理工具：<strong>目标管理法、标杆超越法、关键绩效指标法、平衡计分卡法</strong>的概念、适用情形与优缺点 <span class="s3">★★★</span></li>
+<li>记住 KPI 的 <strong>SMART 原则</strong>、四种指标类型、基本标准与卓越标准 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、绩效评价技术（3 大类 8 种方法）</h2>
+<h3>1. 量表法（★★★）</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>做法</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>图尺度评价法</strong>（又称等级评价法，<strong>最简单、最常用</strong>）</td>
+<td>列举一些<strong>特征要素</strong>，并分别为每个要素列举绩效的<strong>取值范围</strong></td>
+<td>容易开发；具有普遍适用性；实用且<strong>开发成本低</strong></td>
+<td>①与<strong>组织战略之间常常差异较大</strong>；②只有<strong>模糊和抽象</strong>的绩效标准，不同评价者理解不同，结果受评估者<strong>主观因素</strong>影响比较大；③<strong>无法提供具体指导</strong>，不利于绩效反馈</td>
+</tr>
+<tr>
+<td><strong>行为锚定法</strong></td>
+<td>将每项工作的特定行为用一张<strong>等级表</strong>反映，从<strong>最积极</strong>的行为到<strong>最消极</strong>的行为划分级别，评价时将员工的行为<strong>对号入座</strong></td>
+<td>①使工作的<strong>计量更为准确</strong>；②评价标准<strong>更为明确</strong>，排除评估者主观臆断，评估结果有较高的<strong>信度</strong>；③<strong>反馈功能良好</strong>——借等级尺度上的关键事件，很容易向员工解释优势与不足、明确改进方向</td>
+<td><strong>开发成本很高</strong>；操作流程复杂，需付出大量人力、物力、财力</td>
+</tr>
+<tr>
+<td><strong>行为观察量表法</strong></td>
+<td>由工作绩效所要求的一系列<strong>合乎组织期望的行为</strong>组成表单，评估者将员工的实际行为与标准对照，看行为<strong>出现的频率或完成的程度</strong>（从"几乎没有"到"几乎总是"）</td>
+<td>①<strong>内部一致性（信度）令人满意</strong>；②用<strong>使用者提供的数据</strong>针对使用者开发，理解和应用比较便利；③有利于<strong>清晰的绩效反馈</strong>；④可以<strong>单独作为职位说明书的补充</strong></td>
+<td>①量表很难包括所有行为指标的代表性样本，<strong>效度有待提高</strong>；②使管理者<strong>单独考核工作量过大</strong>，一般<strong>不具有可操作性</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 量表法三兄弟</div><p><strong>"图尺最便宜但模糊，锚定最准确但最贵，观察信度好但量大干不动"</strong>——三句话对应三组优缺点，多选正反都能考。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>给客服打分：图尺度法列"沟通能力 1–5 分"打个总分（快但模糊）；行为锚定法把"耐心安抚—敷衍挂断"分级，小赵的行为对号入座（准但建表费钱）；行为观察量表列 20 条好行为数出现频率（信度高，可主管天天光记录就不用干别的了）。</p></div></div>
+<div class="section"><h3>2. 比较法（★）</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>做法</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>排序法</strong>（简单排序法、交替排序法）</td>
+<td>将员工的业绩按照<strong>从高到低</strong>的顺序排列</td>
+<td>简单明了；实施成本低廉</td>
+<td>员工易有<strong>心理压力</strong>，不容易接受评估结果；很难提供详细具体的绩效评估结果</td>
+</tr>
+<tr>
+<td><strong>配对比较法</strong></td>
+<td>根据某项评价标准，将每位员工<strong>逐一与其他员工比较</strong>，选出每次比较的优胜者，最后按<strong>获胜次数</strong>进行绩效排序</td>
+<td>比排序法<strong>更加科学</strong>；能在<strong>人数较少</strong>的情况下快速比较员工绩效</td>
+<td>①员工人数增加，评估工作量<strong>成倍增加</strong>；②只能得到绩效<strong>排名</strong>，<strong>不能反映差距</strong></td>
+</tr>
+<tr>
+<td><strong>强制分布法</strong></td>
+<td>要求评估者将被评估者的绩效结果放入一个<strong>类似于正态分布</strong>的标准中（假设：优秀、一般和较差的员工同时存在）</td>
+<td>避免考核结果可能出现的<strong>趋中趋势</strong>；有利于管理手段的实施</td>
+<td><strong>主观性强</strong>，容易弱化评估分数的差距；员工<strong>都非常优秀</strong>时<strong>有失公平</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 比较法三兄弟</div><p><strong>"排序简单压力大，配对科学翻倍忙，强制分布防趋中"</strong>——见"人数较少快速比较"选配对；见"避免趋中"选强制分布。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>部门 10 个人，年终强制分布：2 优秀、6 合格、2 待改进——哪怕 10 个人都很优秀也得"垫"两个待改进，这就是它"有失公平"的软肋；好处是谁也别想当"老好人"打一圈中间分。</p></div></div>
+<div class="section"><h3>3. 描述法</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>做法</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>关键事件法</strong></td>
+<td>评估者在绩效周期内将员工身上的<strong>关键事件</strong>（<strong>非同寻常</strong>的行为；一般或平常的表现<strong>不予考虑</strong>）都记录下来，作为绩效评估的<strong>事实依据</strong>。核心：<strong>明确关键事件的定义和所包含的项目</strong></td>
+<td>①将工作行为与评估结果联系在一起，评价结果<strong>更加客观</strong>；②确定员工工作中的<strong>优势与不足</strong>，使培训更有针对性；③为<strong>绩效反馈面谈奠定基础</strong></td>
+<td>①<strong>非常费时</strong>；②不同职位的关键事件不同，<strong>无法比较</strong>员工之间、部门之间和团队之间的业绩</td>
+</tr>
+<tr>
+<td><strong>不良事故评估法</strong></td>
+<td>通过<strong>预先设计不良事故的清单</strong>对员工的绩效进行考核</td>
+<td>帮助企业<strong>尽量避免重大损失</strong></td>
+<td>不能提供丰富的绩效反馈信息；不能比较员工、部门、团队的绩效水平</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 描述法两兄弟</div><p><strong>"关键事件费时但客观，不良事故防大损失"</strong>——见"非同寻常的行为/事实依据"选关键事件法；见"事故清单/避免损失"选不良事故评估法。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>客服主管只记"大事"：成功拦截一起集体投诉、把怒气冲冲的客户变成回头客——这叫关键事件；工厂给电工列一张"漏电、短路、烧毁设备"清单，出一次记一次——这叫不良事故评估。</p></div></div>
+<div class="section"><h3>4. 绩效评价常见误区（★★★）</h3>
+<table>
+<thead>
+<tr>
+<th>误区</th>
+<th>表现</th>
+<th>情景题题眼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>晕轮效应</strong></td>
+<td>对员工<strong>某一项特质</strong>强烈而清晰的感知，<strong>掩盖</strong>了其他方面的品质；通常给自己信任和喜爱的下属高分</td>
+<td>"以点概面""偏心喜欢的人"</td>
+</tr>
+<tr>
+<td><strong>趋中倾向</strong></td>
+<td>主管<strong>不愿得罪人</strong>或<strong>管辖范围过大</strong>难以全面了解，把分数集中在某一固定范围，评价结果<strong>没有好坏差异</strong></td>
+<td>"不敢高分不敢低分，一团和气"</td>
+</tr>
+<tr>
+<td><strong>过宽或过严倾向</strong></td>
+<td>一些主管在评价中<strong>过分严厉或过分宽大</strong></td>
+<td>"普遍打太高/太低"</td>
+</tr>
+<tr>
+<td><strong>年资或职位倾向</strong></td>
+<td>倾向于给<strong>年资较久、担任职务较高</strong>的被评价者较高分数</td>
+<td>"论资排辈"</td>
+</tr>
+<tr>
+<td><strong>盲点效应</strong></td>
+<td>主管<strong>难于发现员工身上与自身相似的缺点和不足</strong></td>
+<td>"自己也这毛病，看不见"</td>
+</tr>
+<tr>
+<td><strong>刻板印象</strong></td>
+<td>个人对他人的看法往往受到其<strong>所属群体</strong>的影响</td>
+<td>"给群体贴标签"</td>
+</tr>
+<tr>
+<td><strong>首因效应</strong></td>
+<td>根据<strong>第一印象（最初印象）</strong>判断一个人</td>
+<td>"第一面定终身"</td>
+</tr>
+<tr>
+<td><strong>近因效应</strong></td>
+<td><strong>最近或最终的印象</strong>最为强烈，可以<strong>冲淡</strong>之前产生的各种因素</td>
+<td>"只记得最近那件事"</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 八误区口诀</div><p><strong>"晕、中、宽、资、盲、刻、首、近"</strong>——晕轮、趋中、宽严、年资职位、盲点、刻板、首因、近因，八种全在一句里。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>主管小李面试时咖啡洒了裙子的姑娘第一印象差，年底打分先扣三分（首因）；看老王资历老直接给最高分（年资倾向）；觉得"女生做销售不行"（刻板印象）；自己也算不上敬业，看不出小王天天摸鱼（盲点）——一个人能把好几个误区一次集齐。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 误区题抢分：关键词秒杀</div><p>"最初/第一印象"→<strong>首因</strong>；"最近/最后"→<strong>近因</strong>；"某项特质掩盖其他"→<strong>晕轮</strong>；"所属群体影响"→<strong>刻板</strong>；"与自身相似的缺点"→<strong>盲点</strong>；"不愿得罪人、分数集中"→<strong>趋中</strong>；"年资久职务高给高分"→<strong>年资或职位倾向</strong>；"过分严厉/宽大"→<strong>过宽或过严</strong>。情景题先圈关键词再对号。</p></div></div>
+<div class="section"><h2>二、绩效管理工具</h2>
+<h3>1. 目标管理法</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>概念（★）</td>
+<td>强调企业<strong>上下一起协商</strong>，将企业目标<strong>分解成个人目标</strong>，并将这些目标作为公司<strong>经营、评估、奖励</strong>的标准</td>
+</tr>
+<tr>
+<td>适用（★）</td>
+<td><strong>战略稳定</strong>的企业</td>
+</tr>
+<tr>
+<td>优点（★★★）</td>
+<td>①<strong>有效性</strong>——使各级员工明确需要完成的目标；②<strong>启发了员工的自觉性</strong>，调动了员工的积极性；③<strong>操作比较容易</strong>；④<strong>较为公平</strong>（很少出现主观偏见）</td>
+</tr>
+<tr>
+<td>缺点（★★★）</td>
+<td>①倾向于聚焦<strong>短期目标</strong>，可能是以牺牲企业的<strong>长远利益</strong>为代价的；②假设员工乐于工作，<strong>高估</strong>了企业内部自觉、自治氛围形成的可能性；③可能<strong>增加企业的管理成本</strong>；④目标可能<strong>难以制定</strong>（企业目标难以定量化、具体化）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 目标管理法记四字</div><p><strong>"稳、短、估、费"</strong>——适用战略<strong>稳</strong>定；缺点聚焦<strong>短</strong>期；高估自觉自治（<strong>估</strong>）；可能增加管理成本（<strong>费</strong>）。优点记"明确目标、启发自觉、操作容易、较为公平"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>公司年初上下协商定目标："华东区销售额 8000 万、次品率 1% 以下"，达成情况直接兑现奖金——人人清楚要干什么，但大家也可能只顾冲今年的数，没人管三年后的转型。</p></div></div>
+<div class="section"><h3>2. 标杆超越法（★★★）</h3>
+<p><strong>概念</strong>：通过<strong>对比和分析业内外领先企业</strong>的经营方式，对本企业的产品或服务、业务流程等<strong>关键成功因素</strong>进行改进和变革，使企业成为<strong>同行业最佳</strong>的方法。</p>
+<p><strong>三个方面理解</strong>：①标杆指的是<strong>最佳实践或最佳标准</strong>（榜样）；②标杆的寻找范围<strong>并不局限在同行业</strong>，应该有更广阔的视角；③相比其他系统的考核方法，标杆超越法<strong>更重视比较和衡量</strong>。</p>
+<p><strong>设计流程</strong>（6 步）：发现"瓶颈" → 选择标杆 → 收集数据 → 通过比较分析确定绩效标准 → 沟通与交流 → 采取行动。</p>
+<p><strong>标杆的四种类型</strong>（按标杆对象所处的位置划分）：内部标杆、竞争标杆、行业标杆、最优标杆。<strong>选择标杆的两个标准</strong>（★★★）：标杆企业要有<strong>卓越的业绩</strong>；标杆企业<strong>被瞄准的领域与本企业有相似的特点</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①有助于<strong>激发员工、团队潜能</strong>；②促进企业经营者<strong>激励机制的完善</strong></td>
+<td>①容易使企业<strong>陷入模仿标杆企业的漩涡</strong>中；②一旦<strong>标杆选取出现偏差</strong>，可能导致自身经营决策的失误</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 标杆超越法</div><p><strong>"找榜样不限行，卓越＋相似才能当"</strong>——找标杆不限同行业；选标杆两标准：卓越业绩＋瞄准领域相似。再记一句"超越不抄作业"——缺点就是容易变成照抄。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小厂学行业第一的服务流程（行业标杆），也可以跨界学海底捞的待客之道（不限本行业）；但如果只学了个皮毛、连人家的高毛利模式也一起抄，就容易水土不服——标杆选偏，决策跟着偏。</p></div></div>
+<div class="section"><h3>3. 关键绩效指标法（KPI）</h3>
+<p><strong>适用</strong>：企业<strong>战略进行重大调整</strong>的时期。<strong>关键绩效指标</strong>：反映<strong>个体</strong>关键绩效贡献的<strong>评价依据和量化指标</strong>。</p>
+<p><strong>五个方面理解</strong>（★★）：①对企业<strong>战略目标的分解</strong>，是<strong>联结个人绩效与企业绩效的桥梁</strong>；②由<strong>主管人员决定并被员工认可</strong>；③是对<strong>重点经营活动</strong>的反映，<strong>不是</strong>对所有业务流程活动的概括；④必须是<strong>可量化或可行为化</strong>的；⑤<strong>不是一成不变</strong>的，需随企业战略的变化而调整。</p>
+<p><strong>设计流程</strong>：
+（1）确定考核指标——遵守 <strong>SMART 原则</strong>（★）：</p>
+<table>
+<thead>
+<tr>
+<th>字母</th>
+<th>原则</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S</strong></td>
+<td><strong>具体的</strong></td>
+<td>准确切中目标、适度细化、随着环境的改变而变化</td>
+</tr>
+<tr>
+<td><strong>M</strong></td>
+<td><strong>可测量的</strong></td>
+<td>可量化或可行为化，支持它的数据或信息要具有<strong>可得性</strong></td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td><strong>可实现的</strong></td>
+<td>在考核周期内、员工<strong>付出努力的情况下可以实现</strong></td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td><strong>相关的</strong></td>
+<td>与工作职位的<strong>职能职责密切相关</strong></td>
+</tr>
+<tr>
+<td><strong>T</strong></td>
+<td><strong>有时限的</strong></td>
+<td>强调完成的<strong>期限</strong>，关注完成的效率</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键绩效指标的四种类型</strong>（★）：<strong>数量类</strong>（产品的数量、销售量等）；<strong>质量类</strong>（合格产品的数量、不合格品比率等）；<strong>成本类</strong>（单位产品的成本、投资回报率等）；<strong>时限类</strong>（及时性、供货周期等）。</p>
+<p>（2）确定评估标准：<strong>基本标准</strong>——期望被评估者达到的水平，<strong>经过努力都能达到</strong>；<strong>卓越标准</strong>——被评估者可以超额达到的绩效水平，主要用于<strong>识别核心员工</strong>。</p>
+<p><strong>注意事项</strong>（★）：①关键绩效指标的<strong>数量不宜过多</strong>；②<strong>同类型职位</strong>的关键绩效指标<strong>必须保持一致</strong>；③要<strong>彻底贯彻企业战略重点</strong>。</p>
+<p><strong>优缺点</strong>（★★★）：优点——将企业绩效指标与企业<strong>战略目标紧密联系</strong>在一起，将<strong>企业目标和个人目标整合</strong>在一起；缺点——①对某些职位，设计关键绩效指标<strong>比较困难</strong>；②<strong>缺少完整的对操作有指导意义的指标框架体系</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 SMART 与四类型</div><p><strong>"具、测、可、相、限"</strong>——具体、可测量、可实现、相关、有时限；指标四类型记"<strong>数、质、成、时</strong>"（数量、质量、成本、时限）。两个标准一句话：<strong>基本人人能达，卓越挑出核心</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>"不合格品比率降到 2% 以内"——质量类 KPI；"季度末前交付"——时限类。定指标时若写"大幅提升客户满意度"却没有数据来源，就违反了"可测量"；写"三个月做成行业第一"，就违反了"可实现"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 KPI 五理解的正反说法（2023 真题）</div><p>"由主管人员决定"——<strong>不完整</strong>，必须加上"<strong>并被员工认可</strong>"；"覆盖所有业务流程活动"——<strong>错</strong>，只反映<strong>重点经营活动</strong>；"一旦确定不再变动"——<strong>错</strong>，要随战略调整而调整。反面说法是选择题最爱。</p></div></div>
+<div class="section"><h3>4. 平衡计分卡法（BSC）</h3>
+<p><strong>定位</strong>：一种<strong>新型的战略性绩效管理</strong>工具和方法，比较适用于企业<strong>战略进行重大调整</strong>的时期；着眼于公司的<strong>长远发展</strong>，从<strong>四个角度</strong>关注企业的绩效（★★★）。</p>
+<table>
+<thead>
+<tr>
+<th>角度</th>
+<th>白话记忆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>财务角度</strong>指标</td>
+<td>赚钱的事干得怎么样</td>
+</tr>
+<tr>
+<td><strong>客户角度</strong>指标</td>
+<td>客户满不满意</td>
+</tr>
+<tr>
+<td><strong>内部流程角度</strong>指标</td>
+<td>内部运转顺不顺</td>
+</tr>
+<tr>
+<td><strong>学习与发展角度</strong>指标</td>
+<td>明天还能不能更强</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意事项</strong>（4 条）：①<strong>高层管理者</strong>需要<strong>积极参与</strong>；②防止平衡计分卡<strong>使用目的的单一</strong>；③要<strong>谨慎选择考核指标</strong>；④要充分重视实施的<strong>连续性和持久性</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>优点（★★★）</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①<strong>消除了财务指标一统天下</strong>的局面；②从企业<strong>战略层次</strong>考虑问题，并揭示了四个考核角度之间的<strong>因果关系</strong>，发展了<strong>战略管理系统</strong>；③实现了<strong>评估系统与控制系统的结合</strong>；④迫使管理者将重要绩效指标<strong>放在一起综合考虑</strong>，提高了企业发展的<strong>协调性</strong></td>
+<td><strong>实施成本很高</strong>，耗费大量的人力、物力和财力</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 平衡计分卡四角度</div><p><strong>"财、客、内、学"</strong>——财务、客户、内部流程、学习与发展，四角度缺一不可，多选考"包括哪些角度"直接对号。适用情形与 KPI 相同：<strong>战略重大调整时期</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>外卖平台不光看佣金收入（财务），还看骑手准时率和用户评分（客户）、出餐配送流程耗时（内部流程）、骑手技能培训与新功能迭代（学习与发展）——四个角度连起来看，才知道"现在赚钱的模式能不能持续"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 四工具一张表对比（案例分析题必背）</div><table>
+<thead>
+<tr>
+<th>工具</th>
+<th>适用情形</th>
+<th>一句话特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标管理法</td>
+<td><strong>战略稳定</strong></td>
+<td>上下协商分解目标；客观量化、较为公平；易聚焦短期</td>
+</tr>
+<tr>
+<td>标杆超越法</td>
+<td>改进赶超（成本领先战略的绩效改进环节也用它）</td>
+<td>对标最佳实践；更重视比较和衡量；警惕模仿漩涡</td>
+</tr>
+<tr>
+<td>关键绩效指标法</td>
+<td><strong>战略重大调整时期</strong></td>
+<td>抓重点、可量化；联结个人绩效与企业绩效；缺完整指标框架</td>
+</tr>
+<tr>
+<td>平衡计分卡法</td>
+<td><strong>战略重大调整时期</strong></td>
+<td>四角度消除财务一统天下；揭示因果关系；实施成本很高</td>
+</tr>
+</tbody>
+</table>
+<p>见"战略稳定"选目标管理法；见"战略重大调整"选 KPI 或平衡计分卡；见"对标先进企业"选标杆超越法。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>量表法</strong>：图尺度（最简单常用、开发成本低；战略脱节、标准模糊、无具体指导）、行为锚定（计量准确、标准明确信度高、反馈好；开发成本高操作复杂）、行为观察量表（信度满意、便于使用、清晰反馈、可补职位说明书；效度待提高、单独考核工作量过大不可操作）</li>
+<li><strong>比较法</strong>：排序（简单省钱；压力大难具体）、配对（更科学、人数少好用；工作量成倍增、只排名不反映差距）、强制分布（防趋中；主观、都优秀时不公平）</li>
+<li><strong>描述法</strong>：关键事件（客观、培训有针对性、为面谈奠基；费时、无法跨职位比较）、不良事故评估（防重大损失；反馈信息不丰富、不能比较）</li>
+<li><strong>八误区</strong>：晕、中、宽、资、盲、刻、首、近——首因第一面，近因最后见</li>
+<li><strong>目标管理法</strong>：战略稳定；上下协商分解目标；优点"有效、自觉、容易、公平"；缺点"短期、高估自治、增成本、目标难定"</li>
+<li><strong>标杆超越法</strong>：最佳实践/标准；范围不限同行业；更重视比较和衡量；流程"瓶颈→标杆→数据→标准→沟通→行动"；选标杆＝卓越业绩＋领域相似</li>
+<li><strong>KPI</strong>：战略重大调整时期；个体关键绩效贡献的量化指标；SMART＝具测可相限；类型＝数质成时；基本标准人人可达，卓越标准识别核心员工；数量不宜多、同类职位一致、贯彻战略重点</li>
+<li><strong>平衡计分卡</strong>：战略重大调整时期；财客内学四角度；高层参与、防目的单一、谨慎选指标、重连续持久；消除财务一统天下、揭示因果关系；实施成本很高</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r07s3q1" data-answer="ABCE" data-type="multi"><span class="q-tag">2021·多选</span><div class="q-stem">关于各类绩效评价技术的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 行为锚定法可以使工作绩效的评价标准更为明确</button><button type="button" class="qopt" data-key="B">B. 图尺度评价法与组织战略之间往往联系较弱</button><button type="button" class="qopt" data-key="C">C. 行为锚定法能更为准确地对工作进行计量</button><button type="button" class="qopt" data-key="D">D. 图尺度评价法的开发成本高</button><button type="button" class="qopt" data-key="E">E. 行为观察量表法可以作为职位说明书的补充</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：行为锚定法标准明确（A）、计量更准确（C），且排除主观臆断、信度高；图尺度评价法与组织战略之间常常差异较大（B），但它<strong>容易开发、开发成本低</strong>，D 错误；行为观察量表法本身可以单独作为职位说明书的补充（E）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s3q2" data-answer="BCD" data-type="multi"><span class="q-tag">2015·多选</span><div class="q-stem">下列关于绩效评价技术的说法中，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 行为观察量表法开发成本较低，且应用较为普遍</button><button type="button" class="qopt" data-key="B">B. 行为锚定法的计量方法更为准确，评估结果具有较高的信度</button><button type="button" class="qopt" data-key="C">C. 配对比较法在人数较少的情况下，能快速比较出员工的绩效水平</button><button type="button" class="qopt" data-key="D">D. 强制分布法可有效避免考核结果的趋中趋势</button><button type="button" class="qopt" data-key="E">E. 关键事件法可以高效地衡量员工的绩效水平，降低绩效评估成本</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：行为锚定法计量准确、信度高（B 对）；配对比较法在人数较少时能快速比较（C 对）；强制分布法可避免趋中趋势（D 对）。A 错误——行为观察量表要求依据详尽的行为清单进行观察，很难包含所有行为指标的代表性样本、效度有待提高，且主管单独考核工作量太大、一般不具有可操作性；E 错误——关键事件法<strong>非常费时</strong>，并不能降低评估成本。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s3q3" data-answer="B" data-type="single"><span class="q-tag">2017·单选</span><div class="q-stem">关于绩效评价误区的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 上级根据最初印象对员工做出绩效评价，因此产生的评价误区称为刻板印象</button><button type="button" class="qopt" data-key="B">B. 上级对员工某一特质产生强烈、清晰的感知，导致其忽略了此员工其他方面品质，因此产生的评价误区称为晕轮效应</button><button type="button" class="qopt" data-key="C">C. 上级不恰当地给自己喜爱的下属较高的绩效评价分数，因此产生的评价误区称为盲点效应</button><button type="button" class="qopt" data-key="D">D. 上级对员工的绩效评价结果受到员工所属群体的影响，因此产生的评价误区称为首因效应</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：B 正是晕轮效应的定义——一项特质强烈而清晰的感知掩盖其他品质。A 错误——根据最初印象评价是<strong>首因效应</strong>；C 错误——给信任喜爱的下属高分属于<strong>晕轮效应</strong>的表现，盲点效应是难于发现员工身上与自身相似的缺点；D 错误——受所属群体影响是<strong>刻板印象</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s3q4" data-answer="D" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">关于目标管理法的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 该方法过程中通常很少存在主观偏见</button><button type="button" class="qopt" data-key="B">B. 该方法可能增加企业管理成本</button><button type="button" class="qopt" data-key="C">C. 通过该方法设定的指标通常是可量化的客观标准</button><button type="button" class="qopt" data-key="D">D. 该方法倾向于聚焦长期目标</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：目标管理法倾向于聚焦<strong>短期</strong>目标，甚至以牺牲企业长远利益为代价，D 说成"长期目标"，错误当选。A、C 正确——指标通常是可量化的客观标准，考核中很少出现主观偏见、较为公平；B 正确——目标确定需上下级反复沟通商定，可能耗费大量时间和精力，增加管理成本。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s3q5" data-answer="C" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">关于关键绩效指标的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 关键绩效指标是由主管人员决定的</button><button type="button" class="qopt" data-key="B">B. 关键绩效指标一旦确定，就不应随企业战略的调整而变动</button><button type="button" class="qopt" data-key="C">C. 关键绩效指标应当是可量化的或可行为化的</button><button type="button" class="qopt" data-key="D">D. 关键绩效指标应该覆盖所有的业务流程活动</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：KPI 必须是<strong>可量化或可行为化</strong>的，C 正确。A 错误——KPI 由主管人员决定<strong>并被员工认可</strong>，缺了后半句；B 错误——KPI 不是一成不变的，需随企业战略的变化而调整；D 错误——KPI 是对<strong>重点经营活动</strong>的反映，而不是对所有业务流程活动的概括。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s3q6" data-answer="DE" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">关于绩效管理工具，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 关键绩效指标是反映团队绩效指标贡献的</button><button type="button" class="qopt" data-key="B">B. 标杆超越法通过分析个体的高绩效表现实现评价指标的量化</button><button type="button" class="qopt" data-key="C">C. 平衡计分卡是适用组织战略稳定时期</button><button type="button" class="qopt" data-key="D">D. 平衡计分卡关注财务、客户、内部流程、学习与发展四个角度</button><button type="button" class="qopt" data-key="E">E. 目标管理法是客观可量化的指标</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：DE</div><div class="q-exp"><p>析：平衡计分卡关注财务、客户、内部流程、学习与发展四个角度（D 对）；目标管理法以可量化的客观标准作为经营、评估、奖励的依据（E 对）。A 错误——KPI 反映的是<strong>个体</strong>关键绩效贡献；B 错误——标杆超越法是通过对比和分析<strong>业内外领先企业的经营方式</strong>改进关键成功因素，与"分析个体高绩效表现"无关；C 错误——平衡计分卡适用于企业<strong>战略进行重大调整</strong>的时期，不是战略稳定时期。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力07_绩效管理_第2节_绩效计划与绩效监控及辅导.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 绩效计划与绩效监控及辅导</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力07_绩效管理_第4节_绩效反馈面谈、绩效改进和绩效考核结果的分析与应用.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 绩效反馈面谈、绩效改进和绩效考核结果的分析与应用</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

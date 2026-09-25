@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第19章 宏观人力资源开发 · 人才评价 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第四部分 人力资源与社会保险政策</span><h1>第19章 宏观人力资源开发 · 人才评价</h1><div class="subtitle">第 1 节 / 共 5 节 · 预计学习时长 55 分钟</div><div class="progress-bar"><div class="fill" style="width:20%"></div></div><div class="progress-text">本章进度 1/5</div><div class="sec-badge none" id="sec-badge" data-sec="r19s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>掌握人才评价机制改革<strong>四大任务</strong>，记住"品德是人才评价的首要内容" <span class="hot">高频考点</span></li>
+<li>分清<strong>准入类 vs 水平评价类</strong>职业资格，背熟国家职业资格目录"两个一律＋一个严禁" <span class="must">必考</span></li>
+<li>背熟职称三级评审标准、评委会组建规则与人数（系列25/专业11）、组织评审"两个2/3＋公示5个工作日" <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+<li>记住职称申报的逐级原则与三条绿色通道（重大贡献跳级、海外放资历、基层放学历） <span class="hot">高频考点</span></li>
+<li>背熟职业技能等级"旧五级→新八级"（2022年3月），最高等级是首席技师 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、人才评价机制改革 <span class="hot">高频考点</span></h2>
+<h3>1. 四大改革任务 <span class="hot">高频考点</span></h3>
+<p>人才评价机制改革围绕"<strong>标准—方式—领域—管理服务</strong>"四条主线展开，每一处都是单选、多选的命题点：</p>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>核心内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>分类健全人才评价标准</strong></td>
+<td>以<strong>职业属性和岗位要求</strong>为基础，健全科学的人才分类评价体系；<strong>突出品德评价</strong>，坚持德才兼备，把品德作为人才评价的<strong>首要内容</strong>；注重凭<strong>能力、业绩和贡献</strong>评价人才，克服<strong>唯学历、唯资历、唯论文</strong>等倾向，合理设置和使用论文等评价指标，解决评价标准"一刀切"问题</td>
+</tr>
+<tr>
+<td><strong>改进和创新人才评价方式</strong></td>
+<td>创新多元评价方式：以<strong>同行评价为基础</strong>，引入<strong>市场评价和社会评价</strong>；科学合理设置人才评价周期；畅通人才评价渠道，<strong>打破户籍、地域等限制</strong>；促进人才评价和项目评审、机构评估有机衔接</td>
+</tr>
+<tr>
+<td><strong>加快推进重点领域人才评价改革</strong></td>
+<td>科学评价哲学社会科学和文化艺术人才；健全教育人才评价体系；改进医疗卫生人才评价机制；创新技术技能人才评价机制；完善面向<strong>企业、基层一线和青年人才</strong>的评价机制</td>
+</tr>
+<tr>
+<td><strong>健全完善人才评价管理服务制度</strong></td>
+<td>保障和落实<strong>用人单位自主权</strong>，合理界定和<strong>下放</strong>人才评价权限，推动具备条件的高校、科研院所等企事业单位自主开展人才评价；明确政府、市场、用人主体的职能定位；优化公平公正的人才评价环境</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>品德才是&quot;首要内容&quot;：</strong><p>凡问"把××作为人才评价的首要内容"，答案只有一个：<strong>品德</strong>。2021 年真题把 E 项写成"把能力作为人才评价的首要内容"——把"品德"偷换成"能力"，就错了。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某科研院所评职称不再"数论文"，改为看成果转化和实际贡献，还请企业专家一起当评委——这就是"克服唯论文"＋"引入市场评价"的落地。而"打破户籍、地域等限制"，意味着外地人才在工作地就能参评，不用再回原籍开证明。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 评价改革四任务</div><p><strong>"定标准、改方式、抓重点、强服务"</strong>——分类定标准（品德首要、克服三唯）、多元改方式（同行为基础＋市场社会评价、破户籍地域）、重点领域抓改革、管理服务放权限（用人单位自主权）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 两个易反的表述</div><ul>
+<li>"克服唯学历、唯资历、唯论文"<strong>不等于不用论文</strong>——原文是"合理设置和使用论文等评价指标"，说"不再使用论文指标"就错。</li>
+<li>多元评价的记忆点：<strong>同行评价是基础</strong>，市场评价、社会评价是"引入"的——说"以市场评价为基础"就反了。</li>
+</ul></div></div>
+<div class="section"><h2>二、职业资格制度 <span class="must">必考</span></h2>
+<h3>2. 职业资格与国家职业资格目录 <span class="must">必考</span></h3>
+<p><strong>职业资格</strong>是对从事某一职业所必备的<strong>学识、技术和能力的基本要求</strong>。职业资格由人力资源社会保障部门通过<strong>学历认定、资格考试、专家评定、职业技能鉴定</strong>等方式进行评价，对合格者授予<strong>国家职业资格证书</strong>——它是国家对申请人职业（工种）学识、技术、能力的认可，是<strong>求职、任职、独立开业和单位录用</strong>的主要依据。</p>
+<p>职业资格分两类：</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>准入类职业资格</th>
+<th>水平评价类职业资格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所涉职业（工种）</td>
+<td>必须<strong>关系公共利益</strong>或涉及<strong>国家安全、公共安全、人身健康、生命财产安全</strong></td>
+<td>应具有<strong>较强的专业性和社会通用性</strong>，技术技能要求较高，行业管理和人才队伍建设确实需要</td>
+</tr>
+<tr>
+<td>设定依据</td>
+<td><strong>必须有法律法规或国务院决定</strong>作为依据</td>
+<td>——</td>
+</tr>
+</tbody>
+</table>
+<p><strong>国家职业资格目录</strong>实行<strong>清单式管理</strong>：目录之外一律不得许可和认定职业资格；目录之内<strong>除准入类职业资格外</strong>一律不得与就业创业挂钩；目录接受社会监督、保持相对稳定、<strong>实行动态调整</strong>。人力资源社会保障部门负责职业资格的监督管理，<strong>严禁在目录之外开展职业资格许可和认定工作</strong>。</p>
+<p>行业协会、学会等社会组织和企事业单位可依据市场需要<strong>自行开展能力水平评价活动</strong>，但<strong>不得变相开展资格资质许可和认定</strong>，证书不得使用"中华人民共和国""中国""中华""国家""全国""职业资格"或"人员资格"等字样和国徽标志。</p></div>
+<div class="section"><div class="keypoint"><strong>目录管理&quot;两个一律＋一个严禁&quot;：</strong><p><strong>目录之外</strong>→一律不得许可和认定职业资格；<strong>目录之内</strong>（除准入类）→一律不得与就业创业挂钩；再加一条"严禁目录之外开展许可认定"。前两句管的行为不同：一个管"许可发放"，一个管"证书使用"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 准入水平两分法</div><p><strong>"准入关安全，水平比高低"</strong>——题干出现"国家安全、公共利益、法律法规或国务院决定"→准入类；出现"专业性强、社会通用性高"→水平评价类。社会组织发证<strong>七禁词</strong>："中华、中国、国家、全国、职业资格、人员资格＋国徽标志"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小张收到某"协会"颁发的"全国高级××师（职业资格）"证书——协会自行开展的只是能力水平评价，证书上带"全国""职业资格"字样就已经违规，更不能当准入门槛用。反过来，考"法律职业资格"这类证书是拿法律法规撑腰的准入类，没证就不能干这一行。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 目录内外两条线别互换</div><p>判断题最爱把两句话的主语对调："目录之外一律不得许可和认定"管的是<strong>发证行为</strong>；"目录之内除准入类外一律不得与就业创业挂钩"管的是<strong>证书怎么用</strong>。另外注意"保持相对稳定"与"动态调整"并存——不矛盾，目录总体稳定、个别动态调。</p></div></div>
+<div class="section"><h2>三、职称制度 <span class="s3">★★★</span></h2>
+<h3>3. 职称与职称评审标准 <span class="s3">★★★</span></h3>
+<p><strong>职称</strong>是专业技术人才<strong>学术技术水平和专业能力的主要标志</strong>；<strong>职称制度</strong>是专业技术人才评价和管理的<strong>基本制度</strong>。</p>
+<p>管理体制三级分工：<strong>国务院</strong>人社行政部门负责全国职称评审的统筹规划和综合管理；<strong>县级以上地方</strong>人社行政部门负责本地区的综合管理和组织实施；<strong>行业主管部门</strong>在各自职责范围内负责本行业的职称评审管理和实施。</p>
+<p>职称评审标准分为<strong>国家标准、地区标准、单位标准</strong>三级：</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>制定主体</th>
+<th>硬约束</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>国家标准</td>
+<td>国务院人社行政部门<strong>会同行业主管部门</strong>制定</td>
+<td>地区标准、单位标准<strong>不得低于国家标准</strong></td>
+</tr>
+<tr>
+<td>地区标准</td>
+<td>各地区人社行政部门会同行业主管部门，依据国家标准、结合本地区实际制定</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>单位标准</td>
+<td>具有职称评审权的用人单位，依据国家标准、地区标准，结合本单位实际制定</td>
+<td>↑</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两个定位语：</strong><p>"职称＝学术技术水平和专业能力的<strong>主要标志</strong>"，"职称制度＝评价和管理的<strong>基本制度</strong>"——两个搭配语经常在单选里互换设错。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三级标准</div><p><strong>"国家定、地区调、单位落，就高不就低"</strong>——下级标准只能比国家标准严，不能松。</p></div></div>
+<div class="section"><h3>4. 职称评审委员会（★★★）</h3>
+<ol>
+<li>各职称评审委员会按照<strong>职称系列或专业</strong>组建，<strong>不得跨系列组建综合性职称评审委员会</strong>；</li>
+<li>分为<strong>高级、中级、初级</strong>职称评审委员会；高级职称评审委员会须具备四条件：①拟评审的系列或专业为组建单位<strong>主体</strong>系列或专业；②在行业内具有重要影响力，能代表本领域专业发展水平；③具有一定数量的专业技术人才和符合条件的高级职称评审专家；④具有开展高级职称评审的能力；</li>
+<li>人数红线：按职称<strong>系列</strong>组建的高级职称评审委员会评审专家<strong>不少于 25 人</strong>；按<strong>专业</strong>组建的<strong>不少于 11 人</strong>。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>25 与 11：</strong><p><strong>"系列 25、专业 11"</strong>——系列覆盖面大，专家要求多；专业更聚焦，11 人起步。再记一句：评委会只能按"系列或专业"组建，"跨系列综合性评委会"是被明令禁止的。</p></div></div>
+<div class="section"><h3>5. 职称申报审核（★★★）</h3>
+<p><strong>正常规则</strong>：申报人应当为<strong>本单位在职</strong>的专业技术人才；<strong>离退休人员不得申报</strong>；事业单位工作人员受到<strong>记过以上处分</strong>的，<strong>受处分期间不得申报</strong>；一般应当按照职称层级<strong>逐级申报</strong>。</p>
+<p><strong>三条绿色通道</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>通道</th>
+<th>适用对象与政策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直接申报高级</td>
+<td>取得<strong>重大基础研究和前沿技术突破</strong>、解决<strong>重大工程技术难题</strong>、在经济社会各项事业发展中作出<strong>重大贡献</strong>的专业技术人才</td>
+</tr>
+<tr>
+<td>放宽资历、年限</td>
+<td>对引进的<strong>海外高层次人才</strong>和<strong>急需紧缺人才</strong>，可合理放宽资历、年限等条件限制</td>
+</tr>
+<tr>
+<td>放宽学历、任职年限</td>
+<td>对长期在<strong>艰苦边远地区和基层一线</strong>工作的，侧重考查<strong>实际工作业绩</strong>，适当放宽学历和任职年限要求</td>
+</tr>
+</tbody>
+</table>
+<p>申报程序兜底：<strong>非公有制经济组织</strong>的专业技术人才，可由所在工作单位<strong>或者人事代理机构</strong>等履行审核、公示、推荐等程序；<strong>自由职业者</strong>可由人事代理机构等履行。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 申报绿色通道</div><p><strong>"重大跳级报，海外放资历，基层放学历"</strong>——三个通道各管一头：重大贡献管"层级"（直接报高级），海外人才管"资历年限"，基层人才管"学历年限"，方向别串。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 申报资格的四个&quot;不得/例外&quot;</div><p>离退休人员不得申报；受记过以上处分期间不得申报；逐级申报是原则、直接申报高级是例外；跨级申报对普通人不行、对"重大贡献者"行。多选题里出现"退休两年内可以申报""受处分期间可以申报"都是错的。</p></div></div>
+<div class="section"><h3>6. 组织职称评审（★★★）</h3>
+<ol>
+<li>出席评审会议的专家人数应当<strong>不少于职称评审委员会人数的 2/3</strong>；采取少数服从多数原则，<strong>无记名投票</strong>表决，<strong>同意票数达到出席评审会议的评审专家总数 2/3 以上</strong>的即为评审通过；<strong>未出席</strong>的专家不得委托他人投票或者补充投票；</li>
+<li>评审委员会组建单位对评审结果进行<strong>公示，公示期不少于 5 个工作日</strong>；</li>
+<li>不具备组建条件的地区和单位，可<strong>委托经核准备案</strong>的职称评审委员会代为评审；</li>
+<li>专业技术人才<strong>跨区域、跨单位流动</strong>时，其职称按照职称评审管理权限<strong>重新评审或者确认</strong>，国家另有规定的除外。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>两个 2/3 与一个 5 个工作日：</strong><p>第一个 2/3 管"<strong>开会</strong>"（出席人数门槛）；第二个 2/3 管"<strong>通过</strong>"（同意票占<strong>出席专家总数</strong>的比例——不是占全体专家）；公示不少于 5 个<strong>工作日</strong>。计算基数一律用"出席专家总数"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某高级评委会共有专家 30 人，评审会议实际出席 21 人（≥30 的 2/3，会能开）。表决时同意票达到 21×2/3＝14 票即通过——如果错用 30 作基数算成 20 票，就掉坑了。</p></div></div>
+<div class="section"><h3>7. 职称系列</h3>
+<ul>
+<li>全国共 <strong>27 个职称系列</strong>，每个系列均分为<strong>初级、中级、高级</strong>三个层级；</li>
+<li>除<strong>农业技术推广研究员</strong>（属于农业技术人员）外，其他系列的高级层级均下设<strong>两个层级</strong>；</li>
+<li><strong>卫生技术人员、工程技术人员、中小学教师等 11 个系列</strong>的初级职称下设两个层级。</li>
+</ul></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 职称系列数字串</div><p><strong>"27 个系列三台阶，高级普遍分两级；特例农推不分层，11 个系列初级也分两级"</strong>。</p></div></div>
+<div class="section"><h2>四、职业技能等级制度 <span class="hot">高频考点</span></h2>
+<h3>8. 从旧五级到新八级 <span class="hot">高频考点</span> <span class="must">必考</span></h3>
+<p>职业技能等级原分<strong>五级</strong>，由低到高为：</p>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>五级</td>
+<td>初级工</td>
+</tr>
+<tr>
+<td>四级</td>
+<td>中级工</td>
+</tr>
+<tr>
+<td>三级</td>
+<td>高级工</td>
+</tr>
+<tr>
+<td>二级</td>
+<td>技师</td>
+</tr>
+<tr>
+<td>一级</td>
+<td>高级技师</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2021 年 9 月</strong>，人社部发布通知，在全国范围开展<strong>特级技师评聘试点</strong>（试点企业范围为经省级及以上人社部门备案开展职业技能等级认定的企业）。</p>
+<p><strong>2022 年 3 月</strong>，人社部印发《关于健全完善新时代技能人才职业技能等级制度的意见（试行）》，将技能人才职业技能等级分为<strong>八级</strong>，由低到高：<strong>学徒工、初级工、中级工、高级工、技师、高级技师、特级技师、首席技师</strong>——标志着我国职业技能等级制度正式进入"新八级"时代。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 新八级</div><p><strong>"学徒打头、首席封顶，两头加新、中间不变"</strong>——相比旧五级，新增的是<strong>学徒工、特级技师、首席技师</strong>三个等级；<strong>最高等级是首席技师</strong>（特级技师之上还有一级）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小王是某新能源汽车企业的中级工（旧四级），一路晋升的话，他的技能等级天花板不再是"高级技师"，而是"首席技师"——这正是 2025 年真题考的场景：中级工的最高目标是"首席技师"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;新八级&quot;考点三连</div><p>①新增哪几个（学徒工、特级技师、首席技师）；②哪一年（2022 年 3 月）；③最高级是谁（首席技师）。三个问法来回考，一表全包。</p></div></div>
+<div class="section"><h3>9. 国家职业标准与职业技能等级认定</h3>
+<p><strong>2023 年版《规程》</strong>的变化点：①<strong>统一名称表述</strong>——统称"<strong>国家职业标准</strong>"；②<strong>优化编制程序</strong>——职业标准开发程序分为<strong>组织开发</strong>和<strong>公开征集</strong>两种；③<strong>完善申报条件</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>概念</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>国家职业标准（技能类）</td>
+<td>在职业分类的基础上，根据职业活动内容，对从事本职业应具备的知识和技能要求提出的综合性水平规定</td>
+</tr>
+<tr>
+<td>国家职业标准（专业技术类）</td>
+<td>在职业分类的基础上，按照专业技术类有关职业的职业属性和工作要求，对从业人员的理论知识、专业能力提出的综合性规定</td>
+</tr>
+</tbody>
+</table>
+<p>人社部开发了"<strong>技能人才评价工作网</strong>"，覆盖目前正式出版的<strong>全部</strong>国家职业标准。</p>
+<p><strong>职业技能等级认定</strong>：依据是<strong>国家职业技能标准和行业、企业评价规范</strong>；主要由<strong>用人单位</strong>和<strong>社会培训评价组织</strong>开展——</p>
+<table>
+<thead>
+<tr>
+<th>认定主体</th>
+<th>开展范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用人单位</td>
+<td>结合实际面向<strong>本单位职工</strong>自主开展；符合条件的，按规定面向本单位以外人员提供</td>
+</tr>
+<tr>
+<td>社会培训评价组织</td>
+<td>根据市场和就业需要，面向<strong>全体劳动者</strong>开展</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 认定主体的范围差异</div><p>用人单位默认"对内"，符合条件才"对外"；社会培训评价组织天生"面向全体劳动者"。判断题把两者的范围对调，就是坑。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>评价改革四任务</strong>：定标准（品德首要、克服唯学历资历论文）、改方式（同行为基础＋市场社会评价、破户籍地域）、抓重点、强服务（用人单位自主权、下放权限）</li>
+<li><strong>职业资格</strong>：准入类（公共利益/国家安全，须法律法规或国务院决定依据）vs 水平评价类（专业性强、社会通用性高）；目录外一律不得许可认定、目录内除准入类外一律不得与就业创业挂钩；社会组织证书禁用"中华/中国/国家/全国/职业资格/人员资格"字样和国徽</li>
+<li><strong>职称</strong>：主要标志／基本制度；标准分国家、地区、单位三级，下级不得低于国家标准；评委会按系列或专业组建（禁跨系列综合），高级评委会系列≥25 人、专业≥11 人；逐级申报为原则，重大贡献可直接报高级；出席≥2/3、同意票≥出席专家 2/3、公示≥5 个工作日；27 个系列，除农推员外高级分两级</li>
+<li><strong>技能等级</strong>：旧五级→2022 年 3 月新八级（新增学徒工、特级技师、首席技师），最高首席技师；认定依据＝国家职业技能标准＋行业企业评价规范；认定主体＝用人单位（对内为主）＋社会培训评价组织（面向全体劳动者）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r19s1q1" data-answer="ABCD" data-type="multi"><span class="q-tag">2021·多选</span><div class="q-stem">下列措施中，有利于完善人才评价机制的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 建立科学的人才分类评价体系</button><button type="button" class="qopt" data-key="B">B. 合理设置和使用论文等评价指标</button><button type="button" class="qopt" data-key="C">C. 支持具备条件的用人单位自主评价人才</button><button type="button" class="qopt" data-key="D">D. 注重引入市场评价、社会评价，发挥多元评价主体作用</button><button type="button" class="qopt" data-key="E">E. 把能力作为人才评价的首要内容</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：E 错在把"品德"偷换成"能力"——突出品德评价，坚持德才兼备，把<strong>品德</strong>作为人才评价的首要内容。A 对应"分类健全人才评价标准"；B 对应"合理设置和使用论文等评价指标"（克服唯论文不是不用论文）；C 对应"保障和落实用人单位自主权"；D 对应"创新多元评价方式，引入市场评价和社会评价"。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s1q2" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><span class="q-tag">2025</span><div class="q-stem">关于人才评价机制改革的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 分类健全人才评价标准</button><button type="button" class="qopt" data-key="B">B. 改进和创新人才评价方式</button><button type="button" class="qopt" data-key="C">C. 加快推进重点领域人才评价改革</button><button type="button" class="qopt" data-key="D">D. 提高人才评价管理权限</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：改革的四大任务是分类健全人才评价标准、改进和创新人才评价方式、加快推进重点领域人才评价改革、<strong>健全完善人才评价管理服务制度</strong>。D 方向反了——改革是"合理界定和<strong>下放</strong>人才评价权限"、保障用人单位自主权，不是"提高权限"。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s1q3" data-answer="ACE" data-type="multi"><span class="q-tag">2021·多选</span><div class="q-stem">下列关于职称申报审核的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 针对海外高层次人才可以合理放宽资历、年限等条件限制</button><button type="button" class="qopt" data-key="B">B. 退休两年内的专业技术人才可以申报职称</button><button type="button" class="qopt" data-key="C">C. 长期在基层一线的专业技术人才，侧重考查其实际工作业绩，适当放宽学历要求</button><button type="button" class="qopt" data-key="D">D. 受处分期间的专业技术人员可以申报职称</button><button type="button" class="qopt" data-key="E">E. 具有重大技术研究突破的专业技术人才，可以直接申报高级职称</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACE</div><div class="q-exp"><p>析：申报人应当为本单位<strong>在职</strong>的专业技术人才，<strong>离退休人员不得申报</strong>，B 错误；事业单位工作人员受到记过以上处分的，<strong>受处分期间不得申报</strong>，D 错误。A、C、E 正是三条绿色通道：海外高层次人才放宽资历年限、艰苦边远地区和基层一线放宽学历年限（侧重实际业绩）、重大贡献者直接申报高级。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s1q4" data-answer="AB" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">关于职称评审的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 事业单位工作人员受记过以上处分的，在受处分期间不得申报参加职称评审</button><button type="button" class="qopt" data-key="B">B. 职称评审结果是专业技术人员聘用、考核、晋升等的重要依据</button><button type="button" class="qopt" data-key="C">C. 申报人不可以跨级申报参加职称评审</button><button type="button" class="qopt" data-key="D">D. 职称评审标准分为国家标准和单位标准</button><button type="button" class="qopt" data-key="E">E. 离退休人员可以申报参加职称评审</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AB</div><div class="q-exp"><p>析：C 错——一般按职称层级<strong>逐级申报</strong>，但取得重大基础研究和前沿技术突破、解决重大工程技术难题、作出重大贡献的可以直接申报<strong>高级</strong>职称评审；D 错——评审标准分为国家标准、地区标准和单位标准<strong>三级</strong>；E 错——离退休人员不得申报，申报人应为本单位在职专业技术人才。A、B 正确。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s1q5" data-answer="ACE" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">目前我国正在为技能人才探索建立新八级职业技能等级制度。相比原有的五级，新增的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 学徒工</button><button type="button" class="qopt" data-key="B">B. 高级工</button><button type="button" class="qopt" data-key="C">C. 首席技师</button><button type="button" class="qopt" data-key="D">D. 高级技师</button><button type="button" class="qopt" data-key="E">E. 特级技师</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACE</div><div class="q-exp"><p>析：旧五级为五级/初级工、四级/中级工、三级/高级工、二级/技师、一级/高级技师；新八级在旧五级<strong>两端各延伸</strong>——向下新增"学徒工"，向上新增"特级技师、首席技师"。高级工（B）、高级技师（D）都是原有五级中就有的等级，不算新增。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s1q6" data-answer="C" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">小王是某新能源汽车企业的中级工，关于小王职业发展的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 小王可以获得的最高技能等级是高级工</button><button type="button" class="qopt" data-key="B">B. 小王可以获得的最高技能等级是高级技师</button><button type="button" class="qopt" data-key="C">C. 小王可以获得的最高技能等级是首席技师</button><button type="button" class="qopt" data-key="D">D. 小王可以获得的最高技能等级是特级技师</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：2022 年 3 月人社部将技能人才职业技能等级分为八级：学徒工、初级工、中级工、高级工、技师、高级技师、<strong>特级技师、首席技师</strong>——最高等级是<strong>首席技师</strong>，特级技师上面还有一级，D 是最强的干扰项。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力19_宏观人力资源开发_第2节_激励保障.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 激励保障</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

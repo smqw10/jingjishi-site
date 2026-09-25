@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二章 市场需求、供给与价格均衡 · 弹性 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第二章 市场需求、供给与价格均衡 · 弹性</h1><div class="subtitle">第 4 节 / 共 4 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 4/4</div><div class="sec-badge none" id="sec-badge" data-sec="b02s4">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟弹性通式：<strong>弹性系数＝因变量变动比例÷自变量变动比例</strong>，分子分母都是<strong>百分比</strong>（相对变化） <span class="must">必考</span></li>
+<li>三大需求弹性一网打尽：<strong>正替负补</strong>（交叉）、<strong>负低正常过一高</strong>（收入）、<strong>大富小缺一单位</strong>（价格） <span class="s3">★★★</span></li>
+<li>会用需求价格弹性与<strong>总销售收入</strong>的关系做方向题，会用<strong>弧弹性中点公式</strong>做计算题 <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+<li>分清影响需求价格弹性（4 因素）与供给价格弹性（3 因素，时间首要）两套清单 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、弹性的概念：一条通式管全家</h2>
+<h3>1. 弹性系数的一般公式 <span class="must">必考</span></h3>
+<p>弹性概念可以应用在<strong>所有具有因果关系的变量</strong>之间：作为原因的变量称作<strong>自变量</strong>，受其作用发生改变的量称作<strong>因变量</strong>。</p>
+<p><strong>弹性系数 ＝ 因变量的变动比例 ÷ 自变量的变动比例</strong></p></div>
+<div class="section"><div class="keypoint"><strong>相对比，不是绝对差：</strong><p>分子和分母都是<strong>变动比例</strong>（变化了百分之几），不是变动的绝对量。教材原例：体重身高弹性＝体重变化了百分之几÷身高变化了百分之几；考试分数备考时长弹性＝考试分数变化了百分之几÷备考时长变化了百分之几。所以"长高 1 厘米、体重长 5 斤"不能直接相除——必须先各自除以原来的基数，换成百分比再比。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>2022 年 GDP 为 100 万亿元、财政支出 20 万亿元；2023 年 GDP 为 108 万亿元、财政支出 21 万亿元。求财政支出的增长弹性系数。
+第一步，分别算<strong>增长率</strong>（相对变化）：财政支出增长率＝(21−20)÷20＝<strong>5%</strong>；GDP 增长率＝(108−100)÷100＝<strong>8%</strong>。
+第二步，套通式：弹性系数＝因变量变动比例÷自变量变动比例＝5%÷8%＝<strong>0.625</strong>。
+错题警报：拿增量直接除（1÷8＝0.125）就是把<strong>绝对变化</strong>当<strong>相对变化</strong>——本章计算题最经典的坑。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 弹性通式口诀</div><p><strong>"因比自，百比百"</strong>——因变量的变动<strong>比</strong>例 ÷ 自变量的变动<strong>比</strong>例，百分比 ÷ 百分比。后面三大需求弹性＋供给价格弹性，全是这条通式换变量，公式不用背五遍、背熟这一遍就够。</p></div></div>
+<div class="section"><h2>二、需求交叉弹性：正替负补</h2>
+<h3>1. 定义与公式</h3>
+<p><strong>需求交叉弹性</strong>：一种商品（j）价格的相对变化与由此引起的另一种商品（i）需求量相对变动之间的比率。</p>
+<p><strong>Eij ＝ 商品 i 需求量变动% ÷ 商品 j 价格变动% ＝ (ΔQi/Qi) ÷ (ΔPj/Pj)</strong></p>
+<h3>2. 类型判别 <span class="hot">高频考点</span></h3>
+<p>需求交叉弹性是<strong>确定两种商品之间是否具有替代关系或互补关系的标准</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>Eij 取值</th>
+<th>商品间关系</th>
+<th>背后逻辑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eij ＞ 0</td>
+<td><strong>替代品</strong></td>
+<td>j 涨价 → 消费者改买 i → i 的需求量增加（同向）</td>
+</tr>
+<tr>
+<td>Eij ＜ 0</td>
+<td><strong>互补品</strong></td>
+<td>j 涨价 → j 少人买 → 连带的 i 也少人买 → i 的需求量减少（反向）</td>
+</tr>
+<tr>
+<td>Eij ＝ 0</td>
+<td>无相关关系</td>
+<td>两商品互不相干</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>交叉弹性：别人涨价，我的量怎么动：</strong><p>分子是"<strong>我的</strong>需求量变动"，分母是"<strong>别人（相关品）</strong>的价格变动"。别人涨价、我的销量反而涨 → 同向、正数 → 替代；别人涨价、我的销量跟着跌 → 反向、负数 → 互补。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>猪肉（j）涨价 → 不少人改吃鸡肉 → 鸡肉（i）需求量增加 → Eij＞0，互为<strong>替代品</strong>；若考察的是猪肉与炖肉用的八角：猪肉涨价 → 炖肉少了 → 八角需求量减少 → Eij＜0，是<strong>互补品</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 正替负补</div><p><strong>"正替负补零无关"</strong>——Eij 为<strong>正</strong>＝<strong>替</strong>代品，为<strong>负</strong>＝<strong>互补</strong>品，与第一节的"替同补反"完全同源：同向即正、反向即负。题目给系数 <strong>−2</strong> → 负数 → <strong>互补品</strong>，秒选不犹豫。</p></div></div>
+<div class="section"><h2>三、需求收入弹性与恩格尔定律</h2>
+<h3>1. 定义与公式</h3>
+<p><strong>需求收入弹性</strong>：需求量的变动和引起这一变动的消费者收入之比，用以衡量需求变动对消费者收入变动的反应程度。</p>
+<p><strong>Ey ＝ 需求量变动% ÷ 收入变动% ＝ (ΔQ/Q) ÷ (ΔY/Y)</strong></p>
+<h3>2. 类型判别 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>Ey 取值</th>
+<th>商品类型</th>
+<th>白话逻辑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ey ＞ 1</td>
+<td>高档品（奢侈品）</td>
+<td>收入涨一点，奢侈品消费涨得更猛</td>
+</tr>
+<tr>
+<td>0 ＜ Ey ＜ 1</td>
+<td>必需品（正常品）</td>
+<td>收入涨了，必需品多买一点但幅度有限</td>
+</tr>
+<tr>
+<td>Ey ＜ 0</td>
+<td>低档品（劣等品）</td>
+<td>有钱了就弃用的东西</td>
+</tr>
+</tbody>
+</table>
+<p>注意口径：<strong>高档品和必需品统称"正常品"</strong>（Ey＞0 的都算正常品）；Ey＞1 的又称奢侈品。</p>
+<h3>3. 恩格尔定律</h3>
+<p>在一个家庭或一个经济体中，<strong>食物支出在收入中所占的比例，随着收入的增加而减少</strong>。用弹性表述：对于一个家庭或一个经济体来说，<strong>富裕程度越高，则食物支出的需求收入弹性就越小</strong>；反之，富裕程度越低，食物支出的需求收入弹性就越大。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某消费者收入增加 20%，对商品 A 的需求增加 10% → Ey＝10%÷20%＝<strong>0.5</strong>，对表："负低、正常、过一高"——0＜0.5＜1 → 商品 A 是<strong>正常品（必需品）</strong>。变式：收入＋20%、需求−5% → Ey＝−0.25 → 低档品；收入＋20%、需求＋30% → Ey＝1.5 → 高档品。先除出系数，再对表入座。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 负低、正常、过一高</div><p><strong>"负低、正常、过一高"</strong>——Ey 为<strong>负</strong>＝<strong>低</strong>档品；0 到 1 之间＝<strong>正常品（必需品）</strong>；<strong>大于 1</strong>＝<strong>高档</strong>品（奢侈品）。多选题判口径："大于 0 就是正常品"对（高档＋必需统称正常品）；"大于 0 就是奢侈品"错——必需品也被你开除正常品籍了。</p></div></div>
+<div class="section"><h2>四、需求价格弹性：本章的重中之重 <span class="s3">★★★</span> <span class="hot">高频考点</span></h2>
+<h3>1. 定义与公式</h3>
+<p><strong>需求价格弹性</strong>（常简称需求弹性）：需求量对价格的<strong>反映程度</strong>，是需求量变动百分比与价格变动百分比的比率。</p>
+<p><strong>Ed ＝ 需求量变动% ÷ 价格变动% ＝ (ΔQ/Q) ÷ (ΔP/P)</strong></p>
+<p>价格与需求量呈<strong>相反</strong>方向变化，因此 Ed 始终为<strong>负数</strong>；为简便起见，通常<strong>把负号略去，取其绝对值</strong>（下文按正数比较大小）。</p>
+<h3>2. 三种基本类型</h3>
+<table>
+<thead>
+<tr>
+<th>Ed 取值</th>
+<th>名称</th>
+<th>白话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ed ＞ 1</td>
+<td>需求<strong>富有</strong>弹性（高弹性）</td>
+<td>价格小动、需求大动</td>
+</tr>
+<tr>
+<td>Ed ＜ 1</td>
+<td>需求<strong>缺乏</strong>弹性（低弹性）</td>
+<td>价格大动、需求小动</td>
+</tr>
+<tr>
+<td>Ed ＝ 1</td>
+<td>需求<strong>单位</strong>弹性（单一弹性）</td>
+<td>需求量与价格同比例变动</td>
+</tr>
+</tbody>
+</table>
+<h3>3. 需求价格弹性与总销售收入的关系 <span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>弹性档位</th>
+<th>价格下跌</th>
+<th>价格上升</th>
+<th>经营策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ed ＞ 1（富有弹性）</td>
+<td>销售收入<strong>增加</strong></td>
+<td>销售收入减少</td>
+<td>适合<strong>薄利多销</strong></td>
+</tr>
+<tr>
+<td>Ed ＜ 1（缺乏弹性）</td>
+<td>销售收入<strong>减少</strong></td>
+<td>销售收入<strong>增加</strong></td>
+<td>涨价保收</td>
+</tr>
+<tr>
+<td>Ed ＝ 1（单位弹性）</td>
+<td>销售收入不变</td>
+<td>销售收入不变</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 富降必增，缺涨才赚</div><p><strong>"富有弹性敢降价，缺乏弹性才敢涨"</strong>——Ed＞1：需求对价格敏感，一降价销量暴涨，总收入增加（薄利多销）；Ed＜1：柴米油盐涨价也得买，涨价反而增收。反向送分：选项说"缺乏弹性降价增收"或"富有弹性涨价增收"，一律是反的。</p></div></div>
+<div class="section"><h3>4. 影响需求价格弹性的因素（4 个）<span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>规律</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①商品的重要性</td>
+<td>生活基本必需品弹性<strong>小</strong>；非必需的高档商品弹性<strong>大</strong></td>
+<td>盐再贵也得买；名牌包涨价就观望</td>
+</tr>
+<tr>
+<td>②商品用途的多少</td>
+<td>用途越多，需求弹性<strong>越大</strong></td>
+<td>一物多用，贵了处处可省</td>
+</tr>
+<tr>
+<td>③替代品的数量和相近程度</td>
+<td>替代品数量越多、越相近，弹性<strong>越大</strong></td>
+<td>可选品牌多，贵了就换</td>
+</tr>
+<tr>
+<td>④时间</td>
+<td>时间越长，商品需求弹性<strong>越大</strong></td>
+<td>涨价久了总能找到替代办法</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 必需没得挑，其余三招全是&quot;大&quot;</div><p><strong>"必需弹性小，用途多、替得多、时间长都变大"</strong>——四个因素里只有"生活必需品"让弹性变<strong>小</strong>，其余三个（用途多、替代品多、时间长）都让弹性变<strong>大</strong>。单选题问"需求价格弹性高的商品"：四个选项里挑<strong>有许多替代品</strong>的那个。</p></div></div>
+<div class="section"><h3>5. 点弹性与弧弹性 <span class="hot">高频考点</span></h3>
+<p>需求价格弹性系数有<strong>两种计算公式</strong>：<strong>点弹性</strong>与<strong>弧弹性</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>公式</th>
+<th>适用场合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>点弹性</td>
+<td>价格与需求量变动<strong>较小</strong>的场合</td>
+</tr>
+<tr>
+<td>弧弹性</td>
+<td>价格与需求量变动<strong>较大</strong>的场合</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某商品价格 6 元/件时销量 1200 件，价格提高到 8 元/件时销量 800 件，求需求价格弹性。
+第一步，需求量的相对变动＝(1200−800)÷[(1200＋800)÷2]＝400÷1000＝<strong>0.4</strong>；
+第二步，价格的相对变动＝(8−6)÷[(8＋6)÷2]＝2÷7≈<strong>0.2857</strong>；
+第三步，Ed＝0.4÷0.2857≈<strong>1.4</strong>（取绝对值）→ 大于 1 → 富有弹性。
+注意分母用的是<strong>变动前后的平均数</strong>（中点），不是起点值——这是弧弹性的标志。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 弧弹性为什么除以平均数</div><p>变动较大时，用起点作分母，"涨"和"跌"两个方向算出来的系数会不一致，所以取<strong>变动前后的中点平均数</strong>作分母，两个方向结果才一致。判断口径记八个字："<strong>动小用点，动大用弧</strong>"。考题最爱写反——见"弧弹性＋变动较小"直接判错。</p></div></div>
+<div class="section"><h2>五、供给价格弹性</h2>
+<h3>1. 定义与公式</h3>
+<p><strong>供给价格弹性</strong>：供给量对价格变动的反应程度。</p>
+<p><strong>Es ＝ 供给量的相对变动 ÷ 价格的相对变动 ＝ (ΔQs/Qs) ÷ (ΔP/P)</strong></p>
+<p>价格和供给量呈<strong>同方向</strong>变化，因此 <strong>Es 为正值</strong>（与需求价格弹性"天生为负、取绝对值"不同，它天生为正）。</p>
+<h3>2. 五种类型 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>Es 取值</th>
+<th>类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Es ＞ 1</td>
+<td>供给富有弹性</td>
+<td></td>
+</tr>
+<tr>
+<td>Es ＜ 1</td>
+<td>供给缺乏弹性</td>
+<td>如<strong>农产品</strong></td>
+</tr>
+<tr>
+<td>Es ＝ 1</td>
+<td>供给单位弹性</td>
+<td></td>
+</tr>
+<tr>
+<td>Es ＝ 0</td>
+<td>供给<strong>无弹性</strong></td>
+<td>现实的市场很少见到，如<strong>土地</strong></td>
+</tr>
+<tr>
+<td>Es ＝ ∞</td>
+<td>供给<strong>完全有弹性</strong></td>
+<td>现实的市场很少见到</td>
+</tr>
+</tbody>
+</table>
+<h3>3. 影响供给价格弹性的因素（3 个）<span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>规律</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①<strong>时间</strong>（决定供给弹性的<strong>首要</strong>因素）</td>
+<td>短期内供给价格弹性一般较小</td>
+</tr>
+<tr>
+<td>②生产周期和自然条件</td>
+<td>短期内生产者和销售者无法利用价格上涨迅速增加生产和销售，短期供给价格弹性系数几乎为零</td>
+</tr>
+<tr>
+<td>③投入品替代性大小和相似程度</td>
+<td>替代性越大、相似程度越高，供给弹性越大（其他行业的投入品可转入该商品生产，涨价时供给能迅速增加）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>土地：任凭价格怎么涨，城里的地就那么多，供给量几乎纹丝不动 → Es≈0（供给无弹性的典型）；农产品：生产周期由季节说了算，短期内想多种也来不及 → 供给缺乏弹性；而服装代工的投入品（布料、工人、设备）各行各业通用，替代性强，订单涨价就能迅速扩产 → 供给弹性大。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 时间定乾坤，两套清单别串门</div><p><strong>"时间首要，周期自然卡短期，投入品可换弹性大"</strong>。与需求价格弹性的 4 因素对照防混：需求看"<strong>替代品</strong>数量、<strong>重要性、用途</strong>、时间"；供给看"<strong>投入品</strong>替代性、<strong>生产周期和自然条件</strong>、时间"。选项里出现"商品的用途和重要性" → 需求弹性因素；出现"生产周期和自然条件" → 供给弹性因素。两边共用的一项是"时间"。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>弹性通式</strong>＝因变量变动比例÷自变量变动比例（百分比÷百分比；勿把绝对变化当相对变化）</li>
+<li><strong>交叉弹性 Eij</strong>＝商品 i 需求量变动%÷商品 j 价格变动%；<strong>正替负补零无关</strong></li>
+<li><strong>收入弹性 Ey</strong>＝需求量变动%÷收入变动%；<strong>负低、正常（0＜Ey＜1 必需品）、过一高（高档品/奢侈品）</strong>；高档＋必需＝正常品</li>
+<li><strong>恩格尔定律</strong>：食物支出占收入的比例随收入增加而减少；越富，食物支出的收入弹性越小</li>
+<li><strong>价格弹性 Ed</strong>＝需求量变动%÷价格变动%，天生为负、取绝对值；＞1 富有、＜1 缺乏、＝1 单位</li>
+<li>与销售收入关系：<strong>富降必增（薄利多销）、缺涨才赚、单位不变</strong></li>
+<li>影响需求价格弹性 4 因素：重要性（必需小）、用途多→大、替代品多→大、时间长→大</li>
+<li>两种计算公式：点弹性（变动小）、弧弹性（变动大，分母用前后平均数）</li>
+<li><strong>供给价格弹性 Es</strong> 天生为正；＞1 富有、＜1 缺乏（农产品）、＝1 单位、＝0 无弹性（土地）、＝∞ 完全有弹性</li>
+<li>影响供给价格弹性 3 因素：时间（首要）、生产周期和自然条件（短期几乎为零）、投入品替代性（越大弹性越大）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b02s4q1" data-answer="D" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">若甲产品和乙产品的需求交叉弹性系数为 −2，则表明（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 甲产品和乙产品都属于生活必需品</button><button type="button" class="qopt" data-key="B">B. 甲产品和乙产品是替代品</button><button type="button" class="qopt" data-key="C">C. 甲产品和乙产品都属于低档商品</button><button type="button" class="qopt" data-key="D">D. 甲产品和乙产品是互补品</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：交叉弹性判关系，口诀"正替负补"——Eij＝−2 是<strong>负数</strong> → 两商品是<strong>互补品</strong>（D 对，B 反了）。"生活必需品/低档商品"（A、C）是<strong>需求收入弹性</strong>的分类标签，与交叉弹性是两套体系，属概念串场干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b02s4q2" data-answer="D" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">假设某一时期消费者的收入增加了 20%，该消费者对商品 A 的需求增加了 10%，说明商品属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 边际商品</button><button type="button" class="qopt" data-key="B">B. 低档品</button><button type="button" class="qopt" data-key="C">C. 吉芬商品</button><button type="button" class="qopt" data-key="D">D. 正常品</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：先算收入弹性：Ey＝需求量变动%÷收入变动%＝10%÷20%＝<strong>0.5</strong>。口诀"负低、正常、过一高"：0＜0.5＜1 → <strong>正常品（必需品）</strong>（D 对）。低档品要求 Ey＜0（B 错）；吉芬商品是需求价格弹性框架下的特例概念（C 串场）；"边际商品"是凑数项（A）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b02s4q3" data-answer="CDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">对于需求缺乏弹性的商品而言，下列（　）说法是错误的。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 价格上升会使销售收入增加</button><button type="button" class="qopt" data-key="B">B. 价格下降会使销售收入减少</button><button type="button" class="qopt" data-key="C">C. 价格下降会使销售收入增加</button><button type="button" class="qopt" data-key="D">D. 价格上升会使销售收入减少</button><button type="button" class="qopt" data-key="E">E. 适合采用薄利多销策略</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CDE</div><div class="q-exp"><p>析：本题选<strong>错误</strong>项。缺乏弹性（Ed＜1）记"<strong>缺涨才赚</strong>"：价格<strong>上升</strong> → 销售收入增加（A 对）、价格<strong>下降</strong> → 销售收入减少（B 对）——所以 C、D 两项方向全反，错误。<strong>薄利多销</strong>是<strong>富有</strong>弹性（Ed＞1）商品的策略（E 错），缺乏弹性的商品降价只会减收。
+:::</p></div></details></div><div class="quiz-item" data-qid="b02s4q4" data-answer="ACE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列因素中，属于影响需求价格弹性的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 商品的重要性</button><button type="button" class="qopt" data-key="B">B. 生产周期和自然条件</button><button type="button" class="qopt" data-key="C">C. 时间</button><button type="button" class="qopt" data-key="D">D. 消费者收入水平</button><button type="button" class="qopt" data-key="E">E. 商品用途的多少</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACE</div><div class="q-exp"><p>析：影响需求价格弹性的 4 因素＝替代品的数量和相近程度、<strong>商品的重要性</strong>（A）、<strong>商品用途的多少</strong>（E）、<strong>时间</strong>（C）。生产周期和自然条件（B）是影响<strong>供给</strong>价格弹性的因素；消费者收入水平（D）影响的是需求本身（对应需求收入弹性），不是需求价格弹性的影响因素。
+:::</p></div></details></div><div class="quiz-item" data-qid="b02s4q5" data-answer="ABCE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列关于需求价格弹性的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 需求价格弹性系数有两种计算公式</button><button type="button" class="qopt" data-key="B">B. 需求价格弹性系数大于 1 时，称作需求富有弹性</button><button type="button" class="qopt" data-key="C">C. 需求价格弹性系数小于 1 时，称作需求缺乏弹性</button><button type="button" class="qopt" data-key="D">D. 弧弹性适用于价格与需求量变动较小的场合</button><button type="button" class="qopt" data-key="E">E. 需求价格弹性系数等于 1 时，称作需求单一弹性</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：两种计算公式＝<strong>点弹性</strong>与<strong>弧弹性</strong>（A 对）；三档类型：Ed＞1 富有（B 对）、Ed＜1 缺乏（C 对）、Ed＝1 单一/单位弹性（E 对）。D 错——<strong>点</strong>弹性适用于变动<strong>较小</strong>的场合，<strong>弧</strong>弹性适用于变动<strong>较大</strong>的场合，正好说反（"动小用点，动大用弧"）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b02s4q6" data-answer="CDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">通常情况下，影响商品供给价格弹性的主要因素有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 替代品数量和相近程度</button><button type="button" class="qopt" data-key="B">B. 商品的用途和重要性</button><button type="button" class="qopt" data-key="C">C. 投入品替代性的大小</button><button type="button" class="qopt" data-key="D">D. 生产周期和自然条件状况</button><button type="button" class="qopt" data-key="E">E. 时间</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CDE</div><div class="q-exp"><p>析：影响<strong>供给</strong>价格弹性的 3 因素＝时间（首要因素，E）、生产周期和自然条件（D）、<strong>投入品</strong>替代性大小和相似程度（C）。替代品数量和相近程度（A）、商品的用途和重要性（B）是影响<strong>需求</strong>价格弹性的因素——需求看"<strong>替代品</strong>"、供给看"<strong>投入品</strong>"，一字之差两个场，最易互串。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础02_市场需求、供给与价格均衡_第3节_均衡价格.html"><span class="nav-label">上一节</span><span class="nav-title">第3节 均衡价格</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

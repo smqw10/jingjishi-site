@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第17章 劳动争议调解仲裁 · 劳动争议处理的基本程序 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第四部分 人力资源与社会保险政策</span><h1>第17章 劳动争议调解仲裁 · 劳动争议处理的基本程序</h1><div class="subtitle">第 2 节 / 共 4 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 2/4</div><div class="sec-badge none" id="sec-badge" data-sec="r17s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>走通"协商→调解→仲裁"全流程：协商 5 日不回应＝不愿协商、调解委员会组成对等、四类给付事项可申请<strong>支付令</strong> <span class="hot">高频考点</span></li>
+<li>背熟仲裁组织三句话：<strong>三方原则人数单数、不按行政区划层层设立、委员会之间无隶属</strong> <span class="must">必考</span></li>
+<li>用"数字一张表"拿下仲裁全流程期限：<strong>时效 1 年、受理 5 日、答辩 10 日、裁决 45＋15 日</strong> <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>分清仲裁时效<strong>中断</strong>（重新计算）与<strong>中止</strong>（继续计算），以及劳动报酬争议的特殊时效 <span class="hot">高频考点</span></li>
+<li>记住<strong>终局裁决</strong>两类范围＋12 个月标准、劳动者 15 日起诉、用人单位 30 日申请撤销的 6 种情形 <span class="s3">★★★</span> <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、劳动争议协商</h2>
+<h3>1. 协商的程序与三种结局</h3>
+<p>协商的流程：一方当事人<strong>提出协商要求</strong> → 另一方当事人<strong>口头或书面回应</strong>。三种结局：</p>
+<table>
+<thead>
+<tr>
+<th>结局</th>
+<th>认定标准</th>
+<th>后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>不愿协商</strong></td>
+<td>另一方 <strong>5 日内不回应</strong></td>
+<td>可调解、可仲裁</td>
+</tr>
+<tr>
+<td><strong>协商不成</strong></td>
+<td>当事人<strong>书面约定协商期限</strong>，约定期限内没有达成一致，视为协商不成</td>
+<td>可调解、可仲裁</td>
+</tr>
+<tr>
+<td><strong>协商一致</strong></td>
+<td>签订<strong>书面和解协议</strong></td>
+<td>达成协议后，当事人<strong>约定期限内不履行</strong>协议的，同样可调解、可仲裁</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>协商不是必经程序，和解协议靠自觉：</strong><p>协商是四程序的第一环，但<strong>不是法定必经程序</strong>——不愿协商、协商不成、签了协议不履行，三条路都通向"可调解、可仲裁"。和解协议只对双方有<strong>约束力</strong>（应当履行），<strong>没有强制执行力</strong>，对方不履行不能直接申请法院执行，只能转入下一程序。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小李觉得公司少发了绩效奖，找公司协商，人事说"研究研究"就没下文——5 日不回应，视为不愿协商，小李可以直接申请仲裁。若公司承诺"两周内补发"并签了和解协议，到期却没给，小李同样可以转调解或仲裁，但不能拿和解协议去法院申请强制执行。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 协商三种结局</div><p><strong>"五日不回是不愿，约期没成算白谈；签了协议不履行，调解仲裁随便选"</strong>——三条出口全都通向调解或仲裁，协商永远"不挡路"。</p></div></div>
+<div class="section"><h2>二、劳动争议调解</h2>
+<h3>2. 调解委员会的组成 <span class="hot">高频考点</span></h3>
+<p>企业劳动争议调解委员会由<strong>职工（劳动者）代表</strong>和<strong>企业代表</strong>组成；人数由双方协商确定，<strong>双方人数应当对等</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>组成</th>
+<th>产生方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>职工（劳动者）代表</td>
+<td>由<strong>工会成员</strong>担任，或由<strong>全体职工（劳动者）推举</strong>产生</td>
+</tr>
+<tr>
+<td>企业代表</td>
+<td>由<strong>企业负责人指定</strong></td>
+</tr>
+<tr>
+<td>委员会主任</td>
+<td>由<strong>工会成员</strong>或者<strong>双方推举的人员</strong>担任</td>
+</tr>
+</tbody>
+</table>
+<p>调解员依法履行调解职责，需要占用生产或者工作时间的，<strong>企业应当予以支持，并按照正常出勤对待</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>主任不能由企业单方任命：</strong><p>调解委员会是"劳资对等"的机构：职工代表不能由企业指定（必须是工会成员或全体职工推举），<strong>主任也不能由总经理任命人力资源经理担任</strong>——主任只能出自工会成员或双方推举的人员。这类"谁指定、谁推举"的细节是单选高频题眼。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 调解委员会组成</div><p><strong>"职工工会或推举，企业老板来指定；主任工会双方选，两边人数要对等"</strong>——三个主体三种产生方式，再加上"对等"二字，一个都不能错位。</p></div></div>
+<div class="section"><h3>3. 调解协议的效力与支付令 <span class="must">必考</span></h3>
+<ol>
+<li>生效的调解协议对双方当事人<strong>具有约束力</strong>，当事人应当履行（但同样<strong>不具有强制执行力</strong>）；</li>
+<li><strong>支付令</strong>：因支付<strong>拖欠劳动报酬、工伤医疗费、经济补偿或者赔偿金</strong>事项达成调解协议，用人单位在<strong>协议约定期限内不履行</strong>的，劳动者可以<strong>持调解协议书</strong>依法向<strong>人民法院</strong>申请支付令，人民法院<strong>应当依法发出支付令</strong>。</li>
+</ol></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>公司欠小陈三个月工资，双方在企业调解委员会主持下达成调解协议，约定月底前付清。到期公司没付——小陈不用重新仲裁，拿着调解协议书直接向法院申请支付令。注意：能走这条"快车道"的只有<strong>劳动报酬、工伤医疗费、经济补偿、赔偿金</strong>四类给付事项，其余事项的调解协议不履行仍要走仲裁。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 支付令四事项</div><p><strong>"欠薪、医疗费、补偿、赔偿金——协议到期不给钱，拿着协议要支付令"</strong>。申请对象是<strong>人民法院</strong>， 法院是"<strong>应当</strong>发出"（没有裁量余地）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 同一串事项出现三处，别张冠李戴</div><p>"<strong>劳动报酬、工伤医疗费、经济补偿或者赔偿金</strong>"这一串在教材里出现三次，适用场景完全不同：①<strong>调解协议不履行</strong> → 持协议向法院申请<strong>支付令</strong>；②仲裁中<strong>根据当事人申请</strong> → 可裁决<strong>先予执行</strong>，移送法院执行；③<strong>标的不超过当地月最低工资标准 12 个月金额</strong> → 仲裁裁决<strong>终局</strong>。看到这串词先问"处在哪个环节"，再对号入座。</p></div></div>
+<div class="section"><h2>三、劳动争议仲裁：机构与仲裁庭</h2>
+<h3>4. 劳动人事争议仲裁委员会与仲裁庭 <span class="must">必考</span></h3>
+<p>劳动争议仲裁是<strong>必经程序</strong>：劳动争议仲裁是劳动人事争议仲裁委员会对用人单位与劳动者之间发生的劳动争议，<strong>依法作出裁决</strong>的活动。</p>
+<p><strong>仲裁委员会</strong>（组织三句话）：
+1. 由<strong>人力资源社会保障行政部门代表、工会代表和企业方面代表</strong>组成，人数<strong>应是单数</strong>，体现"<strong>三方原则</strong>"；
+2. <strong>不按行政区划层层设立</strong>，委员会之间<strong>不具有行政隶属关系</strong>；
+3. 设立规则：<strong>省、自治区</strong>人民政府可以决定在<strong>市、县</strong>设立；<strong>直辖市</strong>人民政府可以决定在<strong>区、县</strong>设立；<strong>直辖市、设区的市</strong>可以设立<strong>一个或者若干个</strong>仲裁委员会。</p>
+<p><strong>仲裁庭</strong>：仲裁委裁决劳动争议案件实行<strong>仲裁庭制</strong>。仲裁庭由 <strong>3 名仲裁员</strong>组成，设<strong>首席仲裁员</strong>；<strong>简单</strong>劳动争议案件可以由 <strong>1 名仲裁员独任</strong>仲裁。</p></div>
+<div class="section"><div class="keypoint"><strong>&quot;不层层设立&quot;是与行政机关的根本区别：</strong><p>劳动人事争议仲裁委员会<strong>不是</strong>按省—市—县层层设立的行政机构，相互之间<strong>没有上下级隶属关系</strong>——所以"按行政区划层层设立"的说法必错。这与它"三方原则"的组成（政府＋工会＋企业方）一起，构成仲裁组织题的两大考点。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>省人力资源社会保障厅决定在 A 市、B 县各设一个仲裁委——这两个仲裁委谁也不领导谁；A 市作为设区的市，还可以设若干个仲裁委。开庭时，普通案件由 3 名仲裁员组庭、设首席仲裁员；而"讨一笔数额清楚的加班费"这类简单案件，可以由 1 名仲裁员独任速裁。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 仲裁组织口诀</div><p><strong>"三方单数不层层，相互之间无隶属；庭上三人设首席，简单案件独任裁"</strong>——前三句管仲裁委（组成、设立、关系），后两句管仲裁庭（人数、首席、独任）。</p></div></div>
+<div class="section"><h2>四、仲裁时效（★★★）</h2>
+<h3>5. 时效期间与"劳动争议发生之日" <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p>劳动争议申请仲裁的时效期间是 <strong>1 年</strong>，从当事人<strong>知道或者应当知道其权利被侵害之日</strong>起计算；超过申请时效期间，仲裁委将<strong>不受理</strong>仲裁申请。</p>
+<p>视为"劳动争议发生之日"的三种情形：</p>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>能证明</th>
+<th>不能证明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①劳动关系<strong>存续期间</strong>的<strong>支付工资</strong>争议</td>
+<td>用人单位能证明已<strong>书面通知拒付</strong>工资的 → <strong>书面通知送达之日</strong></td>
+<td><strong>劳动者主张权利之日</strong></td>
+</tr>
+<tr>
+<td>②因<strong>解除或终止劳动关系</strong>产生的争议</td>
+<td>——（按收到书面通知时间认定）</td>
+<td>用人单位不能证明劳动者收到解除/终止书面通知时间的 → <strong>劳动者主张权利之日</strong></td>
+</tr>
+<tr>
+<td>③解除或终止<strong>后</strong>发生<strong>支付工资、经济补偿金、福利待遇</strong>等争议</td>
+<td>劳动者能证明用人单位<strong>承诺支付</strong>的具体日期的 → <strong>承诺支付之日</strong></td>
+<td><strong>解除或终止劳动关系之日</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>起算点的本质是&quot;知道权利被侵害&quot;：</strong><p>三情形万变不离其宗：<strong>谁能证明"哪天知道"，就从哪天算</strong>。单位能证明送达拒付通知 → 送达日劳动者就该知道了；单位证明不了 → 以劳动者主张权利之日倒推；解除终止后的给付争议 → 有承诺支付日期按承诺日，没有就按解除终止日。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>公司 12 月 1 日向张某发出解除通知，张某 12 月 3 日收到——从收到通知这天起，张某"知道权利被侵害"，仲裁时效从 12 月 3 日起算（2023 年真题）。反过来，如果公司拿不出证据证明张某何时收到通知，则以张某之后主张权利之日为"劳动争议发生之日"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 争议发生之日</div><p><strong>"证明得了按通知，证明不了按主张；解除之后讨给付，有承诺按承诺日，没承诺按解除日"</strong>——核心是"知道或应当知道权利被侵害"。</p></div></div>
+<div class="section"><h3>6. 中断、中止与劳动报酬特殊时效 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p><strong>（1）仲裁时效中断</strong>——在时效期间内出现下列情形之一的，时效中断，<strong>从中断时起，时效期间重新计算</strong>：
+① 一方当事人通过<strong>协商、申请调解</strong>等方式向对方<strong>主张权利</strong>的；
+② 一方当事人通过向<strong>有关部门投诉</strong>、向仲裁委<strong>申请仲裁</strong>、向法院<strong>起诉或者申请支付令</strong>等方式<strong>请求权利救济</strong>的；
+③ <strong>对方当事人同意履行义务</strong>的。</p>
+<p><strong>（2）仲裁时效中止</strong>——因<strong>不可抗力</strong>，或有<strong>无民事行为能力/限制民事行为能力劳动者的法定代理人未确定</strong>等其他正当理由，当事人不能在法定 1 年时效期间申请仲裁的，时效中止；<strong>从中止时效原因消除之日起，时效期间继续计算</strong>。</p>
+<p><strong>（3）劳动报酬争议的特殊时效</strong>——劳动关系<strong>存续期间</strong>因拖欠劳动报酬发生争议的，申请仲裁<strong>不受 1 年时效期间的限制</strong>；但是劳动关系<strong>终止</strong>的，应当自<strong>劳动关系终止之日起 1 年内</strong>提出仲裁申请。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>时效中断</th>
+<th>时效中止</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>触发原因</td>
+<td>当事人的<strong>行为</strong>（主张权利、请求救济、同意履行）</td>
+<td><strong>客观障碍</strong>（不可抗力、法定代理人未确定等正当理由）</td>
+</tr>
+<tr>
+<td>计算</td>
+<td><strong>从中断时起重新计算</strong></td>
+<td>从原因消除之日起<strong>继续计算</strong></td>
+</tr>
+<tr>
+<td>白话</td>
+<td>时钟拨回零点重走</td>
+<td>时钟暂停，障碍除后再走</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>在职期间公司欠薪，第 10 个月小李向劳动监察投诉——时效<strong>中断</strong>，从投诉这天重新起算 1 年（虽然在职讨薪本来也不受 1 年限制）。换个场景：小李刚要申请仲裁就遭遇地震、交通中断——时效<strong>中止</strong>，等生活恢复后接着算，之前走过的日子不作废。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 时效口诀</div><p><strong>"一年时效侵权算，中断重算中止算；在职讨薪不设限，离职一年须办完"</strong>——中断三情形（主张权利、请求救济、同意履行）是"人的行为"，中止（不可抗力、法定代理人未确定）是"客观障碍"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 上岸熊提示：中断中止要分清</div><p>注意区分<strong>中断</strong>和<strong>中止</strong>：中断＝重新计算，中止＝继续计算。<strong>劳动报酬的争议必须在劳动关系存续期间，其仲裁时效才不受一年时间限制</strong>——离职后再讨薪，就只剩"终止之日起 1 年"。另记：仲裁申请的审理一般在 <strong>45 日</strong>内结束，最长在 <strong>60 日</strong>内结束（45＋15）。</p></div></div>
+<div class="section"><h2>五、仲裁程序：从申请到裁决（数字一张表）</h2>
+<h3>7. 申请、受理、答辩与反申请 <span class="hot">高频考点</span></h3>
+<p><strong>申请</strong>：提交<strong>书面</strong>仲裁申请；书写确有困难的，可以<strong>口头申请</strong>，由仲裁委记入笔录，告知对方当事人。</p>
+<p><strong>数字一张表</strong>（全流程期限，逐一对表记）：</p>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>期限</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>仲裁委决定是否<strong>受理</strong></td>
+<td>收到申请后 <strong>5 日内</strong></td>
+<td>不予受理或<strong>逾期未决定</strong>的，申请人可向<strong>人民法院提起诉讼</strong></td>
+</tr>
+<tr>
+<td>仲裁申请书<strong>副本送达</strong>被申请人</td>
+<td>受理后 <strong>5 日内</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>被申请人提交<strong>答辩书</strong></td>
+<td>收到副本后 <strong>10 日内</strong></td>
+<td><strong>未提交答辩书不影响仲裁程序进行</strong></td>
+</tr>
+<tr>
+<td>答辩书<strong>副本送达</strong>申请人</td>
+<td>仲裁委收到答辩书后 <strong>5 日内</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>反申请</strong>的提出与决定</td>
+<td>被申请人在<strong>答辩期内</strong>提出；仲裁委 <strong>5 日内</strong>决定是否受理并通知被申请人</td>
+<td>决定受理的，可与原申请<strong>合并处理</strong>；<strong>答辩期满后</strong>提出的反申请，应<strong>另行提出、另案处理</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>反申请看&quot;答辩期&quot;这道闸：</strong><p>反申请必须在<strong>答辩期内</strong>提出才能与原申请<strong>合并处理</strong>；答辩期满后再提，就要<strong>另案处理</strong>。判题只认一个时间锚点——答辩期。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>公司申请仲裁主张小赵赔偿培训违约金，小赵在答辩期内反手申请仲裁主张公司拖欠加班费——仲裁委 5 日内决定受理反申请，两案<strong>合并</strong>审理。若小赵过了答辩期才提加班费反申请，那就得另案另提，一个庭变两个庭。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 程序数字口诀</div><p><strong>"五日受理五日达，十日答辩五日转；答辩期内可反申请，五日定夺并一案"</strong>——受理 5 日、送达 5 日、答辩 10 日、答辩书转发 5 日、反申请决定 5 日。</p></div></div>
+<div class="section"><h3>8. 开庭、裁决与回避 <span class="s3">★★★</span></h3>
+<p><strong>开庭与和解</strong>：当事人申请仲裁后可以<strong>自行和解</strong>，达成和解协议的，可以<strong>撤回仲裁申请</strong>。仲裁庭作出裁决前<strong>应当先行调解</strong>；调解达成协议的，制作<strong>调解书</strong>，经双方当事人<strong>签收后</strong>发生法律效力。</p>
+<p><strong>裁决规则</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>规则</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>裁决期限</td>
+<td>自仲裁委<strong>受理</strong>仲裁申请之日起 <strong>45 日内</strong>结束；案情复杂需延期的，经仲裁委<strong>主任批准</strong>可延期并<strong>书面通知</strong>当事人，延长<strong>不得超过 15 日</strong></td>
+</tr>
+<tr>
+<td><strong>先行裁决</strong></td>
+<td>一部分事实已经清楚的，可以就该部分<strong>先行裁决</strong></td>
+</tr>
+<tr>
+<td><strong>先予执行</strong></td>
+<td>对追索<strong>劳动报酬、工伤医疗费、经济补偿或者赔偿金</strong>的案件，根据当事人申请，可以裁决<strong>先予执行</strong>，移送<strong>人民法院执行</strong></td>
+</tr>
+<tr>
+<td>持不同意见的仲裁员</td>
+<td>可以在仲裁书上<strong>签名，也可以不签名</strong></td>
+</tr>
+<tr>
+<td><strong>逾期未裁决</strong></td>
+<td>当事人可以就该劳动争议事项向<strong>人民法院提起诉讼</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>回避</strong>（仲裁员有下列情形之一的，<strong>应当回避</strong>）：①是本案当事人或者当事人、代理人的<strong>近亲属</strong>；②与本案有<strong>利害关系</strong>；③与本案当事人、代理人有<strong>其他关系，可能影响公正裁决</strong>；④<strong>私自会见</strong>当事人、代理人，或者<strong>接受</strong>当事人、代理人的<strong>请客送礼</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>调解书&quot;签收&quot;才生效：</strong><p>仲裁中的调解书不是作出就生效，而是<strong>经双方当事人签收后</strong>发生法律效力——不签收就不生效，这也呼应当事人"调解书<strong>送达前有权反悔</strong>"的权利。而<strong>终局裁决</strong>是"自<strong>作出之日</strong>起"发生法律效力，两者生效时点必考易混。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>仲裁庭审理小周的工伤赔偿案：赔偿数额一时算不清，但拖欠的 6 万元工资事实清楚——仲裁庭可就该部分<strong>先行裁决</strong>；小周生活困难申请先予执行，仲裁庭裁决先予执行并移送法院执行。合议时第三名仲裁员不同意结论，他可以在裁决书上不签名，不影响裁决作出。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 回避四情形</div><p><strong>"亲属利害拉关系，吃请送礼必须避"</strong>——近亲属、利害关系、其他可能影响公正的关系、私自会见或请客送礼，占一条就应当回避。</p></div></div>
+<div class="section"><h2>六、终局裁决（★★★）</h2>
+<h3>9. 终局裁决的范围与两种救济 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p>下列劳动争议，仲裁裁决<strong>一般为终局裁决</strong>，裁决书<strong>自作出之日起</strong>发生法律效力：
+1. 追索<strong>劳动报酬、工伤医疗费、经济补偿或者赔偿金</strong>，<strong>不超过当地月最低工资标准 12 个月金额</strong>的争议；
+2. 因<strong>执行国家的劳动标准</strong>在<strong>工作时间、休息休假、社会保险</strong>等方面发生的争议。</p>
+<p>终局裁决的两种"出口"：</p>
+<table>
+<thead>
+<tr>
+<th>主体</th>
+<th>途径</th>
+<th>期限</th>
+<th>法院</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>劳动者</strong>不服</td>
+<td>向人民法院提起<strong>诉讼</strong></td>
+<td>自收到裁决书之日起 <strong>15 日内</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>用人单位</strong>有证据证明存在法定情形</td>
+<td>向仲裁委<strong>所在地</strong>的<strong>中级人民法院</strong>申请<strong>撤销裁决</strong>（撤销后可向法院起诉）</td>
+<td>自收到裁决书之日起 <strong>30 日内</strong></td>
+<td>中级人民法院</td>
+</tr>
+</tbody>
+</table>
+<p>用人单位可申请撤销的 <strong>6 种情形</strong>：
+① 适用法律、法规<strong>确有错误</strong>；② 仲裁委<strong>无管辖权</strong>；③ <strong>违反法定程序</strong>；④ 裁决<strong>依据的证据是伪造</strong>的；⑤ 对方当事人<strong>隐瞒了足以影响公正裁决的证据</strong>；⑥ 仲裁员有<strong>索贿受贿、徇私舞弊、枉法裁决</strong>行为。</p>
+<p>对终局裁决<strong>以外</strong>的其他仲裁裁决不服的：自收到裁决书之日起 <strong>15 日内</strong>向人民法院提起诉讼；<strong>期满不起诉</strong>的，仲裁裁决书<strong>发生法律效力</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>终局≠绝对终局：劳动者永远可诉：</strong><p>"终局"约束的主要是<strong>用人单位</strong>——单位不能起诉，只能在 6 种法定情形下<strong>申请撤销</strong>（中院、30 日）；而<strong>劳动者</strong>任何情况下都可以在 15 日内起诉。这种"一边关门、一边留门"的不对称，正是法律向劳动者倾斜保护的体现，也是判断题最爱考的逻辑。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小吴追讨被拖欠的工资 3 万元（当地月最低工资 2000 元，3 万元超过 12 个月金额 2.4 万）——不属终局裁决，公司不服可在 15 日内起诉。若小吴只追讨 2 万元（未超 12 个月金额），裁决即终局：公司不能起诉，只有拿到"证据伪造"等 6 种情形之一的证据，才能在 30 日内向中院申请撤销；而小吴不服照样可以 15 日内起诉。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 终局裁决口诀</div><p><strong>"小额追薪加国标，作出之日就生效；劳动者十五去起诉，单位三十中院撤"</strong>——两类范围（≤12 个月最低工资的给付争议＋执行国家劳动标准的工休社保争议）；两条救济通道（15 日 vs 30 日、法院 vs 中院）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 撤销六情形怎么背</div><p><strong>"法律用错、没有管辖、程序违规、证据伪造、隐瞒证据、仲裁员枉法"</strong>——前两条说"案子本身站不住"（适用法律错误、无管辖权），中间三条说"证据不可靠"（程序违规、证据伪造、隐瞒证据），最后一条说"人坏了"（索贿受贿、徇私舞弊、枉法裁决）。多选题见"用人单位对终局裁决不服"就往这 6 条里找，见"直接向法院起诉"必错。</p></div></div>
+<div class="section"><h2>七、仲裁公开、仲裁费用与仲裁案卷</h2>
+<h3>10. 公开原则、不收费与案卷保存期</h3>
+<table>
+<thead>
+<tr>
+<th>事项</th>
+<th>规定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>仲裁公开</strong></td>
+<td>劳动争议仲裁<strong>公开</strong>进行；但当事人<strong>协议不公开</strong>，或涉及<strong>国家秘密、商业秘密和个人隐私</strong>的除外</td>
+</tr>
+<tr>
+<td><strong>仲裁费用</strong></td>
+<td>劳动争议仲裁<strong>不收费</strong>（仲裁委经费由<strong>财政</strong>保障）</td>
+</tr>
+<tr>
+<td><strong>仲裁案卷</strong></td>
+<td>仲裁<strong>调解和其他方式结案</strong>的案卷，保存期<strong>不少于 5 年</strong>；仲裁<strong>裁决结案</strong>的案卷，保存期<strong>不少于 10 年</strong>（国家另有规定的从其规定）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>&quot;不收费&quot;是倾斜保护的又一处：</strong><p>仲裁不收费、经费财政保障——劳动者维权的门槛被降到最低；与之对照，后面的<strong>诉讼费每件 10 元</strong>，也别混。公开是原则，四个例外记"协议不公开＋三类秘密隐私"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小郑申请仲裁主张加班费，担心影响再就业想不公开审理——仲裁以公开为原则，但只要双方当事人<strong>协议不公开</strong>，就可以不公开；若案件涉及公司商业秘密，即使不协议也应当例外处理。全程仲裁委不收小郑一分钱。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 公开费用案卷口诀</div><p><strong>"仲裁公开不收费，案卷五载十年规"</strong>——调解等方式结案存 5 年以上，裁决结案存 10 年以上。</p></div></div>
+<div class="section"><h2>八、仲裁管辖（★★★）</h2>
+<h3>11. 管辖五规则 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>规则</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>地域管辖</strong></td>
+<td>仲裁委负责管辖<strong>本区域内</strong>发生的劳动争议</td>
+</tr>
+<tr>
+<td><strong>申请人选择</strong></td>
+<td>申请人可以选择向<strong>劳动合同履行地</strong>或<strong>用人单位所在地</strong>的仲裁委中的<strong>任何一个</strong>申请</td>
+</tr>
+<tr>
+<td><strong>劳动合同履行地管辖</strong></td>
+<td>双方<strong>分别</strong>向两地仲裁委申请的，由<strong>劳动合同履行地</strong>的仲裁委管辖；案件<strong>受理后</strong>两地发生变化的，<strong>不改变</strong>管辖</td>
+</tr>
+<tr>
+<td><strong>移送管辖</strong></td>
+<td>仲裁委发现已受理案件<strong>不属于其管辖范围</strong>的，应移送至<strong>有管辖权</strong>的仲裁委并<strong>书面通知</strong>当事人；受移送的仲裁委<strong>应依法受理</strong>；受移送的认为也不属于其管辖，或仲裁委之间因管辖争议<strong>协商不成</strong>的，报请<strong>共同的上一级仲裁委主管部门指定管辖</strong>；<strong>多个仲裁委都有管辖权的，先受理的管辖</strong></td>
+</tr>
+<tr>
+<td><strong>管辖异议</strong></td>
+<td>当事人提出管辖异议，应当在<strong>答辩期满前书面</strong>提出；逾期提出的，<strong>不影响仲裁程序进行</strong>，当事人因此对裁决不服的，可依法向法院起诉或申请撤销</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>履行地优先、先受理优先：</strong><p>两个"优先"撑起管辖题的半壁江山：双方都申请时<strong>劳动合同履行地优先</strong>于用人单位所在地；多个仲裁委都有管辖权时<strong>先受理优先</strong>。另一个高频点：受理后履行地/用人单位所在地<strong>变化不改变管辖</strong>——管辖"锁死"在受理之时。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小冯劳动合同履行地在江东区、用人单位注册在江北区：他可以任选一地申请仲裁；若小冯和公司分别向两地仲裁委申请，则由<strong>江东区</strong>（履行地）管辖。公司提出"应去注册地审"的管辖异议，必须在答辩期满前<strong>书面</strong>提出，晚了不影响审理。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 管辖口诀</div><p><strong>"两地任选一，都告履行地；变动不改管，移送必须收；协商不成报上级，谁先受理谁管辖；异议答辩期满前，书面提出才作数"</strong>。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>协商</strong>：5 日不回应＝不愿协商；书面约定期限内未达成一致＝协商不成；一致则签书面和解协议；不愿协商/协商不成/协议不履行 → 可调解可仲裁</li>
+<li><strong>调解委员会</strong>：职工代表（工会成员或全体职工推举）＋企业代表（企业负责人指定），人数对等；主任＝工会成员或双方推举；占用工作时间按正常出勤</li>
+<li><strong>支付令</strong>：拖欠劳动报酬、工伤医疗费、经济补偿或赔偿金达成调解协议、到期不履行 → 持协议书向法院申请，法院应当发出</li>
+<li><strong>仲裁委</strong>：人社部门＋工会＋企业方面代表，单数，三方原则；不按行政区划层层设立、无隶属；庭制 3 名＋首席，简单案件 1 名独任</li>
+<li><strong>时效</strong>：1 年，自知或应知权利被侵害之日起算；中断（主张权利/请求救济/同意履行）重新算，中止（不可抗力、法定代理人未确定）继续算；在职讨薪不受 1 年限制，终止后 1 年内</li>
+<li><strong>程序数字</strong>：受理 5 日（不受理或逾期→起诉）、副本 5 日、答辩 10 日（不答辩不影响）、答辩书副本 5 日、反申请答辩期内＋5 日定夺、裁决 45 日＋15 日（主任批准）、先行调解签收生效、先行裁决、先予执行移送法院、逾期未裁可起诉、不同意见可不签名</li>
+<li><strong>回避四情形</strong>：近亲属、利害关系、其他可能影响公正的关系、私自会见请客送礼</li>
+<li><strong>终局裁决</strong>：≤当地月最低工资 12 个月金额的追索劳动报酬/工伤医疗费/经济补偿/赔偿金 ＋ 执行国家劳动标准的工休社保争议；作出之日生效；劳动者 15 日起诉；用人单位 30 日向中院申请撤销（6 情形：法律用错/无管辖/程序违规/证据伪造/隐瞒证据/仲裁员枉法）；其他裁决 15 日不起诉则生效</li>
+<li><strong>公开不收费</strong>：协议不公开或涉密除外；不收费财政保障；案卷调解 5 年、裁决 10 年</li>
+<li><strong>管辖</strong>：地域管辖；履行地或单位所在地任选；都申请→履行地；受理后变化不改；移送应受理、协商不成报共同上级指定；先受理优先；异议答辩期满前书面提</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r17s2q1" data-answer="D" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">关于劳动人事争议仲裁委员会的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 委员会之间并不具有行政隶属关系</button><button type="button" class="qopt" data-key="B">B. 委员会由劳动行政部门代表、工会代表和企业方面代表组成</button><button type="button" class="qopt" data-key="C">C. 直辖市可以设立若干个委员会</button><button type="button" class="qopt" data-key="D">D. 委员会按行政区划层层设立</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：劳动人事争议仲裁委员会<strong>不按行政区划层层设立</strong>，委员会之间不具有行政隶属关系，D 的说法错误（本题选错误项）。A、B 正确：仲裁委由劳动（人力资源社会保障）行政部门代表、工会代表和企业方面代表组成，体现三方原则；C 正确：直辖市、设区的市可以设立<strong>一个或者若干个</strong>仲裁委。
+:::</p></div></details></div><div class="quiz-item" data-qid="r17s2q2" data-answer="ABD" data-type="multi"><span class="q-tag">2012·多选</span><div class="q-stem">李某与用人单位发生争议，在人民调解委员会主持下达成了调解协议，如用人单位不履行该调解协议，李某可以就（　）事项向人民法院申请支付令。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 支付经济补偿金</button><button type="button" class="qopt" data-key="B">B. 支付拖欠劳动报酬</button><button type="button" class="qopt" data-key="C">C. 承租单位宿舍</button><button type="button" class="qopt" data-key="D">D. 支付工伤医疗费</button><button type="button" class="qopt" data-key="E">E. 补签书面劳动合同</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABD</div><div class="q-exp"><p>析：可申请<strong>支付令</strong>的限于四类给付事项——<strong>拖欠劳动报酬</strong>（B）、<strong>工伤医疗费</strong>（D）、<strong>经济补偿</strong>（A）或者<strong>赔偿金</strong>，且以双方就这些事项达成调解协议、用人单位在约定期限内不履行为前提。C 承租单位宿舍属于房屋租赁关系，E 补签书面劳动合同属于行为义务，都不在四类给付事项之内，不能申请支付令。
+:::</p></div></details></div><div class="quiz-item" data-qid="r17s2q3" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">张某 2020 年 1 月 1 日入职，2023 年 12 月 31 日离职，期间 2020 年 6 月份工资有争议，公司一直未支付，如张某主张该月工资申请仲裁，仲裁时效截止时间是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 2024 年 6 月 30 日</button><button type="button" class="qopt" data-key="B">B. 2024 年 12 月 31 日</button><button type="button" class="qopt" data-key="C">C. 2021 年 6 月 30 日</button><button type="button" class="qopt" data-key="D">D. 2020 年 12 月 31 日</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：劳动关系<strong>存续期间</strong>因拖欠劳动报酬发生争议的，劳动者申请仲裁<strong>不受 1 年仲裁时效期间的限制</strong>；但是劳动关系<strong>终止</strong>的，应当自<strong>劳动关系终止之日起 1 年内</strong>提出。本题劳动关系于 2023 年 12 月 31 日终止，故仲裁时效截止 2024 年 12 月 31 日。C、D 用"侵权之日"起算 1 年是一般时效，对在职欠薪不适用。
+:::</p></div></details></div><div class="quiz-item" data-qid="r17s2q4" data-answer="D" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">人民法院审理劳动争议案件时查明：某公司于 12 月 1 日向张某发出解除劳动关系的通知，张某于 12 月 3 日收到书面通知。12 月 20 日，张某通过快递以书面形式向公司提出异议，公司在 12 月 21 日签收书面异议。据此，劳动争议发生之日为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 12 月 1 日</button><button type="button" class="qopt" data-key="B">B. 12 月 21 日</button><button type="button" class="qopt" data-key="C">C. 12 月 20 日</button><button type="button" class="qopt" data-key="D">D. 12 月 3 日</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：仲裁时效期间从当事人<strong>知道或者应当知道其权利被侵害之日</strong>起计算。12 月 3 日张某<strong>收到书面解除通知</strong>，此刻才知道自己的权利受到侵害，故劳动争议发生之日为 12 月 3 日。12 月 1 日是公司发出日（张某尚不知情），12 月 20 日、21 日是张某异议及公司签收日，都不是起算点。
+:::</p></div></details></div><div class="quiz-item" data-qid="r17s2q5" data-answer="C" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">下列情形中，仲裁时效中断的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 无民事行为能力劳动者的法定代理人还未确定</button><button type="button" class="qopt" data-key="B">B. 限制民事行为能力劳动者的法定代理人还未确定</button><button type="button" class="qopt" data-key="C">C. 劳动者向劳动行政部门书面投诉用人单位拖欠工资</button><button type="button" class="qopt" data-key="D">D. 受不可抗力影响</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：时效<strong>中断</strong>的三种情形都是当事人的"主动行为"：①协商、申请调解等向对方<strong>主张权利</strong>；②向有关部门<strong>投诉</strong>、申请仲裁、起诉或申请支付令等<strong>请求权利救济</strong>；③对方<strong>同意履行义务</strong>。C 属于第②种，时效中断并<strong>重新计算</strong>。A、B（法定代理人未确定）与 D（不可抗力）都是客观障碍，引起时效<strong>中止</strong>，从中止原因消除之日起<strong>继续计算</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="r17s2q6" data-answer="B" data-type="single"><span class="q-tag">2018·单选</span><div class="q-stem">2018 年 8 月，小李向该单位主张支付加班费，仲裁委员会支持了小李的仲裁请求，关于本案裁决的说法错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 因执行国家劳动标准在工作时间方面发生的争议，属于一裁终局</button><button type="button" class="qopt" data-key="B">B. 仲裁裁决被撤销后，中级人民法院可以直接做出判决</button><button type="button" class="qopt" data-key="C">C. 劳动者隐瞒足以影响公正裁决的证据时，法院可以撤销仲裁裁决</button><button type="button" class="qopt" data-key="D">D. 仲裁庭裁决争议案件时，其中一部分事实已经清楚，可以就该部分先行裁决</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：本题选错误项。仲裁裁决被人民法院裁定<strong>撤销</strong>的，当事人可以自收到裁定书之日起 <strong>15 日内</strong>就该劳动争议事项向法院提起<strong>诉讼</strong>——并不是撤销后中院直接作出判决，B 错误。A 正确：因执行国家劳动标准在<strong>工作时间、休息休假、社会保险</strong>等方面的争议属终局裁决；C 正确：用人单位有证据证明对方当事人<strong>隐瞒足以影响公正裁决的证据</strong>的，可自收到裁决书之日起 30 日内向仲裁委所在地中级人民法院申请撤销裁决；D 正确：一部分事实已经清楚的，可以就该部分<strong>先行裁决</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="r17s2q7" data-answer="C" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">双方当事人分别向实际工作场所地和用人单位所在地劳动争议仲裁委员会申请仲裁的，案件管辖权应属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 用人单位所在地劳动争议仲裁委员会</button><button type="button" class="qopt" data-key="B">B. 两地劳动争议仲裁委员会均可以</button><button type="button" class="qopt" data-key="C">C. 实际工作场所地劳动争议仲裁委员会</button><button type="button" class="qopt" data-key="D">D. 由上级劳动争议仲裁委员会决定</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：双方当事人<strong>分别</strong>向<strong>劳动合同履行地</strong>（本题的实际工作场所地）和<strong>用人单位所在地</strong>的仲裁委申请仲裁的，由<strong>劳动合同履行地</strong>的仲裁委管辖。注意区分：一方向仲裁时是"两地任选其一"；<strong>双方都申请</strong>时才"履行地优先"，B 是最大干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="r17s2q8" data-answer="BCE" data-type="multi"><span class="q-tag">2018·多选</span><div class="q-stem">关于劳动争议仲裁的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 仲裁委员会按行政区划层层设立</button><button type="button" class="qopt" data-key="B">B. 劳动争议仲裁审理期限最长不超过 60 日</button><button type="button" class="qopt" data-key="C">C. 仲裁委员会由劳动行政部门代表、工会代表以及用人单位代表组成</button><button type="button" class="qopt" data-key="D">D. 劳动争议仲裁可以按规定收取仲裁费</button><button type="button" class="qopt" data-key="E">E. 劳动争议仲裁实施地域管辖</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCE</div><div class="q-exp"><p>析：B 正确：裁决应自受理之日起 <strong>45 日</strong>内结束，案情复杂经主任批准可延长但不超过 <strong>15 日</strong>，故最长 45＋15＝60 日；C 正确：仲裁委由劳动行政部门代表、工会代表和企业（用人单位）方面代表组成，体现三方原则；E 正确：仲裁实行<strong>地域管辖</strong>。A 错误：仲裁委<strong>不按</strong>行政区划层层设立，委员会间无隶属关系；D 错误：劳动争议仲裁<strong>不收费</strong>，经费由财政保障。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力17_劳动争议调解仲裁_第1节_劳动争议概述.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 劳动争议概述</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力17_劳动争议调解仲裁_第3节_劳动争议当事人和举证责任.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 劳动争议当事人和举证责任</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第7章 绩效管理 · 绩效反馈面谈、绩效改进和绩效考核结果的分析与应用 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第7章 绩效管理 · 绩效反馈面谈、绩效改进和绩效考核结果的分析与应用</h1><div class="subtitle">第 4 节 / 共 5 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:80%"></div></div><div class="progress-text">本章进度 4/5</div><div class="sec-badge none" id="sec-badge" data-sec="r07s4">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟绩效反馈面谈的<strong>四大目的</strong>（上岸熊口诀"反目分备"）与三条注意事项 <span class="hot">高频考点</span></li>
+<li>记住面谈中主管的<strong>五大误区</strong>与四条面谈技巧（"积极、合适"）<span class="hot">高频考点</span></li>
+<li>分清<strong>四种绩效改进方法</strong>的关注点，咬死六西格玛的关键词"减少偏差" <span class="s3">★★★</span></li>
+<li>掌握按"态度×能力"划分的<strong>四种员工类型</strong>及对应措施（"公安罗峰"）——案例分析高频 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、绩效反馈面谈</h2>
+<h3>1. 面谈的目的与作用（★★）</h3>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>目的</strong>（4 条）</td>
+<td>①向员工<strong>反馈绩效考核结果</strong>；②向员工<strong>传递组织远景目标</strong>；③<strong>弄清绩效不合格原因</strong>；④为<strong>下一绩效周期工作的展开做好准备</strong></td>
+</tr>
+<tr>
+<td><strong>作用</strong>（3 条）</td>
+<td>①提供<strong>沟通平台</strong>，使考核<strong>公开化</strong>；②使员工了解不足，有利于<strong>改善绩效</strong>；③通过沟通，<strong>消除组织目标与个人目标之间的冲突</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：反目分备</div><p><strong>"反、目、分、备"</strong>——<strong>反</strong>馈考核结果、传递远<strong>目</strong>标（远景目标）、<strong>分</strong>析不合格原因、准<strong>备</strong>下一绩效周期。四条背死，多选、单选（"不包括"题型）都能秒。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>年底经理约小周面谈：先告诉他考核得分和依据（反馈结果），再聊聊公司明年要打的仗（传递远景），一起弄清"为什么下半年掉了链子"（弄清原因），最后定下明年第一季度的小目标（准备下一周期）——面谈就齐活了。</p></div></div>
+<div class="section"><h3>2. 面谈的注意事项（★）</h3>
+<ol>
+<li>主管人员应当采取<strong>赞扬与建设性批评相结合</strong>的方式，避免员工产生抵触情绪；</li>
+<li>把重点放在<strong>解决问题</strong>上——<strong>关注未来而不是过去</strong>，反馈面谈的最终目的是<strong>改进绩效</strong>；</li>
+<li><strong>鼓励员工积极参与</strong>到反馈过程中。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>一句话定调：</strong><p>面谈不是"批斗会"：夸与批结合、向前看（解决问题）而非翻旧账、让员工多开口。最终目的只有一个——<strong>改进绩效</strong>。</p></div></div>
+<div class="section"><h3>3. 面谈中主管人员的误区（★）</h3>
+<table>
+<thead>
+<tr>
+<th>误区</th>
+<th>表现</th>
+<th>对策提示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>不适当发问</strong></td>
+<td>诱导发问、发问内容无逻辑性</td>
+<td>避免一次问两件事、问题要有逻辑</td>
+</tr>
+<tr>
+<td><strong>理解不足</strong></td>
+<td>没有真正听懂对方的观点</td>
+<td>将对方谈话<strong>归纳、回馈</strong>，确保理解</td>
+</tr>
+<tr>
+<td><strong>期待预期结果</strong></td>
+<td>在无意识中<strong>曲解员工的观点</strong></td>
+<td>放下预设答案</td>
+</tr>
+<tr>
+<td><strong>自我中心和感情化的态度</strong></td>
+<td>会失去面谈的<strong>客观性和公正性</strong></td>
+<td>对事不对人</td>
+</tr>
+<tr>
+<td><strong>以对方为中心及同情的态度</strong></td>
+<td><strong>过度关怀</strong>会使对方产生<strong>厌烦情绪</strong></td>
+<td>关怀有度</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 五误区口诀</div><p><strong>"问、解、期，自、同情"</strong>——不适当发问、理解不足、期待预期结果；自我中心感情化、以对方为中心同情。注意最后一个："过度同情"本身也是误区。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小赵倾诉完，主管直接说"所以你是不想干了？"（诱导式不适当发问）；聪明的做法是把小赵的话复述一遍："你的意思是排班太紧导致出错多，对吗？"（归纳回馈，破解理解不足）。</p></div></div>
+<div class="section"><h3>4. 绩效面谈的技巧（★）</h3>
+<ol>
+<li><strong>时间场所的选择</strong>：避免<strong>上下班、开会</strong>等让人分心的时段；选择<strong>安静、轻松的会客厅</strong>；</li>
+<li><strong>建立彼此信任</strong>，开诚布公、坦诚沟通；</li>
+<li>主管人员<strong>认真倾听</strong>；<strong>鼓励员工多说话</strong>；</li>
+<li>以<strong>积极的方式结束对话</strong>（该结束时立即结束）。</li>
+</ol></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊提示：积极、合适</div><p><strong>"积极、合适"</strong>——结束方式要<strong>积极</strong>（令人振奋地收尾），时间场所要<strong>合适</strong>（避开上下班开会、选安静轻松处）；再加"多听少打断"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 2018 真题排雷</div><p>"重点放在批评教育"（错，重在解决问题）、"随时打断员工陈述"（错，应认真倾听、鼓励多说话）、"在食堂吃午餐时面谈"（错，场所应安静轻松）——三个错误说法对应三条技巧的反面。</p></div></div>
+<div class="section"><h2>二、绩效改进</h2>
+<h3>1. 绩效改进的概念与程序（★）</h3>
+<p><strong>概念</strong>：通过找出组织或员工工作绩效中的<strong>差距</strong>，<strong>制订并实施有针对性的改进计划</strong>来提高员工绩效水平的过程。</p>
+<p><strong>程序</strong>（5 步）：①<strong>绩效诊断与分析</strong>（绩效改进过程的<strong>第一步</strong>）；②组建绩效改进部门；③选择绩效改进方法；④绩效改进实施管理；⑤绩效改进效果评价。</p>
+<h3>2. 四种绩效改进方法（★★★）</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>关注点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>卓越绩效标准</strong></td>
+<td>关注组织<strong>管理理念</strong>——描述卓越企业的管理信念和行为，改进组织整体效率和能力</td>
+</tr>
+<tr>
+<td><strong>六西格玛管理</strong></td>
+<td>关注组织<strong>业务流程的误差率</strong>——通过<strong>减少企业业务流程中的偏差</strong>（减少失误率、控制错误和废品增加），提升组织绩效</td>
+</tr>
+<tr>
+<td><strong>ISO 质量管理体系</strong></td>
+<td>关注组织<strong>产品（服务）的生产过程</strong>——在企业内部制定、实施和改进质量管理体系，使产品或服务水平提升，<strong>增强客户满意度</strong></td>
+</tr>
+<tr>
+<td><strong>标杆超越</strong></td>
+<td>关注点<strong>灵活多变</strong>——可以把优秀企业的某个管理"片断"作为标杆，也可以把优秀企业<strong>整体</strong>作为标杆</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊提示：六西格玛的关键词</div><p>六西格玛管理的关键词是<strong>失误率、错误率、误差率、差错率、废品率、偏差</strong>等，但<strong>不能是正确率、准确率、合理性</strong>等——考题问"通过减少业务流程中的偏差提升绩效"，选六西格玛；选项里出现"提高正确率"式的说法就掉坑了。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四方法口诀</div><p><strong>"卓越管理念，六西格玛纠偏差，ISO 抓生产过程，标杆灵活变"</strong>——四个方法各抱一个关注点，先看题干关键词再对号。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>工厂半年废品率超标，引入六西格玛项目专门压偏差、降废品率（六西格玛管理）；食堂后厨按 ISO 流程改造，饭菜质量稳定了顾客更满意（ISO 质量管理体系）；小公司整体对标行业龙头学管理信念（卓越绩效标准），也可以只学人家一个班组的交接班制度（标杆超越）。</p></div></div>
+<div class="section"><h3>3. 绩效改进效果评价（★★）</h3>
+<p>从四个方面进行：①<strong>反馈</strong>——客户、员工、供应商对改进结果的反馈；②<strong>能力</strong>——改进实施后员工<strong>能力素质的提升程度</strong>；③<strong>转变</strong>——改进活动对<strong>工作方式的影响</strong>；④<strong>结果</strong>——改进所形成的结果<strong>与预期的对比</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 效果评价四字诀</div><p><strong>"反、能、转、结"</strong>——反馈、能力、转变、结果，顺序固定，多选直接对号。</p></div></div>
+<div class="section"><h2>三、绩效考核结果的分析与应用</h2>
+<h3>1. 绩效考核结果的分析：四种员工类型（★★★）</h3>
+<p>根据员工的<strong>工作态度</strong>和<strong>工作能力</strong>两个维度，把组织中的员工划分为四种类型：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>工作态度</th>
+<th>工作能力</th>
+<th>应对措施</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>贡献型</strong></td>
+<td>好</td>
+<td>高</td>
+<td>组织要给予必要的<strong>奖励</strong></td>
+</tr>
+<tr>
+<td><strong>安分型</strong></td>
+<td>好</td>
+<td>不足</td>
+<td>组织要进行必要的<strong>培训</strong>以提升其工作技能</td>
+</tr>
+<tr>
+<td><strong>堕落型</strong></td>
+<td>差</td>
+<td>低</td>
+<td>进行适当的<strong>惩罚</strong>、敦促其改进绩效</td>
+</tr>
+<tr>
+<td><strong>冲锋型</strong></td>
+<td>差</td>
+<td>高</td>
+<td>主管人员应当对其进行<strong>绩效辅导</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：公安罗峰</div><p><strong>"公（贡献型）、安（安分型）、罗（堕落型）、峰（冲锋型）"</strong>——四类型先记名字，再记对策一句话：<strong>贡献奖、安分训、堕落罚、冲锋辅</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小组四个人：老陈态度好能力强，年终发大奖（贡献型）；小吴踏实肯干但方法不对，送去培训（安分型）；小马又懒又不行的，谈话警告（堕落型）；小孙能力拔尖却自由散漫，主管多辅导多沟通，把心拢住（冲锋型）。</p></div></div>
+<div class="section"><h3>2. 绩效考核结果的应用（★）</h3>
+<ol>
+<li>应用于<strong>衡量招聘结果</strong>；</li>
+<li>为<strong>人员调配</strong>提供依据；</li>
+<li>为<strong>奖金分配</strong>提供依据；</li>
+<li>用于员工的<strong>培训与开发</strong>；</li>
+<li>应用于员工<strong>职业生涯规划</strong>。</li>
+</ol></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 应用五条口诀</div><p><strong>"招、调、奖、培、职"</strong>——衡量招聘、人员调配、奖金分配、培训开发、职业生涯规划。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>面谈目的</strong>："反目分备"——反馈结果、传递远景目标、弄清不合格原因、准备下一周期</li>
+<li><strong>面谈作用</strong>：沟通平台考核公开化、了解不足改善绩效、消除组织与个人目标冲突</li>
+<li><strong>注意事项</strong>：赞扬＋建设性批评结合；重点解决问题（关注未来，最终目的是改进绩效）；鼓励员工参与</li>
+<li><strong>主管五误区</strong>：不适当发问、理解不足（对策＝归纳回馈）、期待预期结果、自我中心感情化、以对方为中心同情（过度关怀招厌烦）</li>
+<li><strong>面谈技巧</strong>：时间场所合适（避开上下班开会、安静轻松）、建立信任坦诚沟通、认真倾听鼓励多说话、以积极方式结束</li>
+<li><strong>绩效改进</strong>：第一步＝绩效诊断与分析；四方法＝卓越绩效标准（管理理念）、六西格玛（减少流程偏差）、ISO（生产过程、客户满意度）、标杆超越（灵活多变）；效果评价＝反、能、转、结</li>
+<li><strong>四种员工</strong>（态度×能力）：贡献型奖励、安分型培训、堕落型惩罚、冲锋型绩效辅导（公安罗峰）</li>
+<li><strong>结果应用</strong>：招、调、奖、培、职</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r07s4q1" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">绩效反馈面谈的目的不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 弄清员工绩效不合格的原因</button><button type="button" class="qopt" data-key="B">B. 掌握下属的工作绩效情况</button><button type="button" class="qopt" data-key="C">C. 向员工传递组织远景目标</button><button type="button" class="qopt" data-key="D">D. 向员工反馈绩效考核结果</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：面谈四大目的＝反馈考核结果（D）、传递组织远景目标（C）、弄清绩效不合格原因（A）、为下一绩效周期工作做准备。"掌握下属的工作绩效情况"（B）是<strong>绩效监控</strong>环节的任务，属于面谈的前提而非目的——面谈开始时绩效状况应当已经掌握。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s4q2" data-answer="D" data-type="single"><span class="q-tag">2018·单选</span><div class="q-stem">关于绩效面谈技巧的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 在绩效面谈中，主管人员应当将重点放在对员工进行批评和教育方面</button><button type="button" class="qopt" data-key="B">B. 主管人员应该主导绩效面谈，可以随时打断员工的陈述</button><button type="button" class="qopt" data-key="C">C. 主管人员可以利用在公司食堂吃午餐的时间与员工进行绩效面谈</button><button type="button" class="qopt" data-key="D">D. 在绩效面谈时，主管人员应当以积极的方式结束谈话</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：面谈技巧的落脚点之一就是以积极的方式结束对话，该结束时立即结束，D 正确。A 错误——重点应放在<strong>解决问题</strong>上，关注未来而不是过去；B 错误——应认真倾听、鼓励员工多说话，不能随意打断；C 错误——面谈应选择<strong>安静、轻松</strong>的场所，食堂嘈杂且不私密。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s4q3" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">为了避免走入绩效面谈中的&quot;理解不足&quot;误区，管理者应采取的行为是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 在面谈结束时，归纳并确认谈话内容</button><button type="button" class="qopt" data-key="B">B. 尽量避免同时对两件以上的事情发问</button><button type="button" class="qopt" data-key="C">C. 多提一些开放性的问题，引发员工思考</button><button type="button" class="qopt" data-key="D">D. 尽量考虑对方的立场，以同情的态度提出建议</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：破解"理解不足"的办法是把对方的谈话<strong>加以归纳、回馈</strong>，确保对问题的真正理解，A 正确。B 针对的是"不适当发问"；C 属于面谈的一般技巧，与理解不足无直接对应；D 本身就是"以对方为中心及同情的态度"误区——过度关怀会使对方产生厌烦情绪。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s4q4" data-answer="C" data-type="single"><span class="q-tag">2019·单选</span><div class="q-stem">通过减少企业业务流程中的偏差，提升组织绩效水平的绩效改进方法是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 卓越绩效标准</button><button type="button" class="qopt" data-key="B">B. 标杆超越</button><button type="button" class="qopt" data-key="C">C. 六西格玛管理</button><button type="button" class="qopt" data-key="D">D. ISO 质量管理体系</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：六西格玛管理关注组织业务流程的<strong>误差率</strong>，通过<strong>减少企业业务流程中的偏差</strong>（减少失误率、控制错误和废品增加）使组织绩效提升到更高水平。卓越绩效标准关注管理理念；标杆超越关注对标最佳实践；ISO 质量管理体系关注产品（服务）的生产过程。记住"偏差/误差率"三个字，此题零思考。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s4q5" data-answer="ABCE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">绩效改进的方法主要有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 标杆超越</button><button type="button" class="qopt" data-key="B">B. 卓越绩效标准</button><button type="button" class="qopt" data-key="C">C. ISO 质量管理体系</button><button type="button" class="qopt" data-key="D">D. 关键事件法</button><button type="button" class="qopt" data-key="E">E. 六西格玛管理</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：绩效改进四方法＝卓越绩效标准（B）、六西格玛管理（E）、ISO 质量管理体系（C）、标杆超越（A）。关键事件法（D）属于<strong>绩效评价技术</strong>（描述法），不是绩效改进方法——两个章节的工具名词混在一起是本题陷阱。
+:::</p></div></details></div><div class="quiz-item" data-qid="r07s4q6" data-answer="ABCD" data-type="multi"><span class="q-tag">2018·多选</span><div class="q-stem">企业可以根据绩效考核结果划分出四种类型的员工，关于针对这四种员工应当采取的措施的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 应该对堕落型员工进行适当的惩罚以促使其改善绩效</button><button type="button" class="qopt" data-key="B">B. 应该对贡献型的员工给予必要的奖励</button><button type="button" class="qopt" data-key="C">C. 应该对冲锋型的员工进行绩效辅导</button><button type="button" class="qopt" data-key="D">D. 应该对安分型的员工进行必要的培训以提升其工作技能</button><button type="button" class="qopt" data-key="E">E. 应该对防守型的员工加以更严密的监督</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：按"工作态度×工作能力"分四类——贡献型（态度好能力强）给予必要的<strong>奖励</strong>（B 对）；安分型（态度好能力不足）进行必要的<strong>培训</strong>提升技能（D 对）；堕落型（态度差能力低）适当的<strong>惩罚</strong>、敦促改进绩效（A 对）；冲锋型（态度差能力强）进行<strong>绩效辅导</strong>（C 对）。E 的"防守型"是编造的类型，四类型就是"公安罗峰"。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力07_绩效管理_第3节_绩效评价与绩效管理工具.html"><span class="nav-label">上一节</span><span class="nav-title">第3节 绩效评价与绩效管理工具</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力07_绩效管理_第5节_特殊群体的绩效管理.html"><span class="nav-label">下一节</span><span class="nav-title">第5节 特殊群体的绩效管理</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

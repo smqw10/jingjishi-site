@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第8章 薪酬管理 · 股权激励 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第8章 薪酬管理 · 股权激励</h1><div class="subtitle">第 2 节 / 共 4 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 2/4</div><div class="sec-badge none" id="sec-badge" data-sec="r08s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟<strong>股票期权</strong>三大特征、激励对象"五类排除"、10%／1% 额度红线与时间四规定 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>分清<strong>限制性股票</strong>（禁售不低于 2 年、解锁不低于 3 年）与<strong>股票增值权</strong>（虚拟期权、现金结算、奖金延期支付） <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+<li>会用一张对比表区分三种上市公司股权激励工具的优缺点与适用企业（案例分析题素材库） <span class="hot">高频考点</span></li>
+<li>掌握<strong>非上市公司</strong>三工具（股份期权／业绩股份／虚拟股票期权）的权利边界差异 <span class="hot">高频考点</span></li>
+<li>背熟<strong>员工持股计划</strong>的数字规定（12／36 个月、10%／1%、90%、20%、4:1）与三原则 <span class="s3">★★★</span> <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、上市公司股权激励</h2>
+<h3>1. 股票期权（经营者股票期权 ESO）<span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p><strong>概念</strong>：上市公司授予激励对象在<strong>未来一定期限内（行权期）</strong>，以<strong>预先确定的价格（行权价）和条件</strong>购买本公司<strong>一定数量股票</strong>的权利。</p>
+<p><strong>三大特征</strong>（★★★）：</p>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>是一种<strong>权利</strong>而不是<strong>义务</strong>（是否行权由受益人决定）</td>
+<td>给你一张"可买可不买"的购票凭证，不买不罚款</td>
+</tr>
+<tr>
+<td>只有在<strong>行权价低于行权时企业股票的市场价格</strong>才有价值</td>
+<td>市价涨过行权价，这张纸才值钱；跌了直接弃权</td>
+</tr>
+<tr>
+<td>是公司<strong>无偿给予</strong>激励对象的</td>
+<td>权利本身白送，但行权买股票要自己掏钱</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>上岸熊提示：免费的是&quot;权利&quot;不是&quot;股票&quot;：</strong><p><strong>免费获得的只是购买权利，购买股票还是需要花钱的</strong>。行权资金来源是困扰激励对象获得股权的最大障碍，而且上市公司<strong>不得</strong>为激励对象依股权激励计划获取有关权益提供贷款以及其他任何形式的<strong>财务资助</strong>，包括为其贷款提供担保。</p></div></div>
+<div class="section"><p><strong>激励范围和对象</strong>（★★★）：</p>
+<table>
+<thead>
+<tr>
+<th>可以成为激励对象</th>
+<th>不得成为激励对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>董事、高级管理人员、核心技术人员或核心业务人员、其他员工</strong>（含外籍员工）</td>
+<td>①<strong>独立董事和监事</strong>；②单独或合计持有上市公司 <strong>5% 以上股份的股东或实际控制人及其配偶、父母、子女</strong>；③最近 <strong>3 年</strong>被证券交易所<strong>公开谴责</strong>或宣布为不适当人选的；④最近 <strong>3 年</strong>内因重大违法违规行为被中国证监会<strong>行政处罚</strong>的；⑤《公司法》规定<strong>不得担任董事、监事、高管</strong>情形的</td>
+</tr>
+</tbody>
+</table>
+<p>【注意】激励对象<strong>不能同时参加两个或两个以上公司</strong>的股权激励计划。</p>
+<p><strong>激励额度</strong>（★★★）：
+- 上市公司<strong>全部有效</strong>的股权激励计划所涉及的<strong>标的股票总数</strong>累计不得超过公司股本总额的 <strong>10%</strong>；
+- <strong>非经股东大会特别决议批准</strong>，任何<strong>一名激励对象</strong>通过全部有效的股权激励计划获授的本公司股票累计不得超过公司股本的 <strong>1%</strong>。</p>
+<p><strong>股票及资金来源</strong>：股票来源三种——①公司<strong>发行新股票</strong>；②通过<strong>留存股票账户回购</strong>股票；③从<strong>二级市场购买</strong>股票。</p>
+<p><strong>涉及时间规定</strong>（★★★，数字必背）：</p>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>规定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>授权日</strong></td>
+<td>向激励对象授予股票期权的日期，必须是<strong>交易日</strong>；不得是：①定期报告公布前 <strong>30 日</strong>；②重大交易或重大事项决定过程中至该事项公告后 <strong>2 个交易日</strong>；③其他可能影响股价的重大事件发生之日起至公告后 <strong>2 个交易日</strong></td>
+</tr>
+<tr>
+<td><strong>等待期</strong></td>
+<td>授予日与获授股票期权<strong>首次可以行权日</strong>之间间隔<strong>不得少于 1 年</strong></td>
+</tr>
+<tr>
+<td><strong>行权期</strong></td>
+<td>开始行权的日期必须是<strong>交易日</strong>；应当在公司<strong>定期报告公布后的第 2 个交易日</strong>，至<strong>下一次定期报告公布前 10 个交易日</strong>内行权；不得在重大交易或重大事项决定过程中至公告后 2 个交易日、其他影响股价的重大事件发生之日起至公告后 2 个交易日内行权</td>
+</tr>
+<tr>
+<td><strong>股票期权有效期</strong></td>
+<td>从期权授予之日起至所有股票期权<strong>行权或注销完毕</strong>之日终止，<strong>不得超过 10 年</strong></td>
+</tr>
+<tr>
+<td><strong>股权激励计划有效期</strong></td>
+<td>从<strong>首次授予权益日</strong>起，一般<strong>不超过 10 年</strong>；计划有效期满，<strong>不得再授予任何股权</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>行权价格的三种确定方法</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>实值法</strong></td>
+<td>行权价格<strong>低于</strong>授予期权时的公平市价</td>
+</tr>
+<tr>
+<td><strong>平值法</strong></td>
+<td>行权价格<strong>等于</strong>授予期权时的公平市价</td>
+</tr>
+<tr>
+<td><strong>虚值法</strong></td>
+<td>行权价格<strong>高于</strong>授予期权时的公平市价</td>
+</tr>
+</tbody>
+</table>
+<p>【注意】我国采用<strong>平值法＋"孰高原则"</strong>：取股权激励计划草案摘要公布<strong>前 1 日</strong>的公司标的股票<strong>收盘价</strong>与公布<strong>前 30 个交易日</strong>的公司标的股票<strong>平均收盘价</strong>两者中的较高者。</p>
+<p><strong>执行方式</strong>（3 种）：①<strong>现金行权</strong>——个人缴纳行权费和税金；②<strong>无现金行权</strong>——证券商出售部分股票作为行权费，其余股票存入个人账户；③<strong>无现金行权并出售</strong>——对部分或全部可行权的股票期权行权并出售，赚取差价。</p>
+<p><strong>优缺点</strong>（★★）：</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①把经营者利益与<strong>股东利益及企业发展</strong>结合起来，使股东的资产权益首先得到保障；②让经营者分享企业的<strong>预期收益</strong>，突破只分享当前收益的局限性，经营者可以在<strong>风险较小</strong>的前提下得到较大的激励；③激励手段比较<strong>灵活</strong>，便于个案处理</td>
+<td>①只适用于<strong>上市公司</strong>，而且是<strong>成长性好、股价呈强势上涨</strong>的上市公司；②需要依托<strong>规范有生机的股票市场</strong>，需要建立规范的法人治理结构；③容易诱发<strong>弄虚作假、恶意操纵和短期炒作</strong>等不良行为；④<strong>难以准确衡量</strong>经营者的表现和企业真实的经营状况</td>
+</tr>
+</tbody>
+</table>
+<p><strong>模式总览</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+<th>适用企业</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.降低<strong>委托代理成本</strong>；2.可以<strong>锁定激励对象的风险</strong>，持有人不行权就没有任何额外损失；3.降低企业激励成本，且企业有<strong>现金流入</strong>；4.激励力度比较大，具有<strong>长期激励</strong>效果</td>
+<td>1.可能带来大量经理人的<strong>短期行为</strong>；2.公司股本变化，<strong>原股东的股权可能被稀释</strong>；3.过分依赖股票市场有效性</td>
+<td><strong>成长性较好、股价呈强势上涨的上市公司</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小马获授某上市公司 10 万股股票期权，行权价 10 元，等待期满三年后市价 25 元：小马掏 100 万元（10 万股×10 元，自己筹钱，公司不能借钱给他）买股票，转手值 250 万，赚 150 万差价。若三年后市价只有 8 元，小马<strong>放弃行权</strong>，一分钱不亏——这就是"锁定风险"：损失的上限是零收益，而不是本金。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 期权三特征与排除名单</div><p><strong>"权不是义务、差价才有值、白送不要钱"</strong>；激励对象排除记——<strong>"独董监事不要，大股东亲属（5% 以上股东及其实控人的配偶父母子女）不要，三年污点（公开谴责、行政处罚）不要"</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 时间数字速记</div><p><strong>"等待 1 年、有效期 10 年；授权躲开财报前 30 天；行权挑在财报后第 2 天到下次财报前 10 天；敏感窗口一律 2 个交易日"</strong>。多选问"不得作为授权日的期间"，把"定期报告公布前 30 日"和两个"公告后 2 个交易日"全选上。</p></div></div>
+<div class="section"><h3>2. 限制性股票 {s}</h3>
+<p><strong>概念</strong>：公司将一定数量的限制性股票<strong>无偿赠予或以较低价格</strong>售予公司高管人员，但对其<strong>出售这种股票的权利进行限制</strong>——激励对象只有在<strong>工作年限或业绩目标</strong>符合股权激励计划规定条件时，才可出售限制性股票并从中获益；否则，公司有权将限制性股票<strong>收回</strong>或<strong>以购买时的价格回购</strong>。</p>
+<p><strong>时间规定</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>规定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>禁售期</strong></td>
+<td>员工取得限制性股票后不得通过二级市场或其他方式进行转让的期限，<strong>不得低于 2 年</strong></td>
+</tr>
+<tr>
+<td><strong>解锁期</strong></td>
+<td>禁售期满后进入解锁期，公司业绩满足计划规定条件的，限制性股票可<strong>按计划分期解锁</strong>，解锁期<strong>不低于 3 年</strong>；解锁后，股票就可以在二级市场<strong>自由出售</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>模式总览</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+<th>适用企业</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.有可能是<strong>免费或低价</strong>获得，<strong>激励更强</strong>；2.通过对业绩条件、禁售期限的严格规定，使<strong>激励与约束对等</strong></td>
+<td>1.<strong>业绩目标或股价的科学确定较困难</strong>；2.<strong>现金流压力较大</strong>；3.会促使经理人<strong>放弃对高风险、高回报项目的投资</strong></td>
+<td><strong>成熟型企业</strong>；对资金投入要求不是非常高的企业</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 限制性股票&quot;冻两解三&quot;</div><p><strong>"先冻两年（禁售不低于 2 年），再解三年（解锁不低于 3 年），达标才能卖，不达标收回或按原价回购"</strong>。对比记忆：期权是"等待期≥1 年"，限制性股票是"禁售≥2 年＋解锁≥3 年"，别串门。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>公司以 5 元／股（市价 20 元）向高管出售 10 万股限制性股票：头两年（禁售期）一股不能卖；两年后业绩达标，按计划分三年（解锁期≥3 年）逐批解锁，解锁的部分才能在二级市场变现。若业绩没达标，公司按 5 元／股原价回购——白送的魅力与紧箍咒并存。</p></div></div>
+<div class="section"><h3>3. 股票增值权 <span class="s3">★★★</span></h3>
+<p><strong>概念</strong>：上市公司授予激励对象在一定时期和条件下，获得<strong>规定数量的股票价格上升所带来的收益</strong>的权利。<strong>实质</strong>（★★★，三条都要背）：
+1. <strong>虚拟的股票期权</strong>——不实际买卖股票，仅通过<strong>模拟股票市场价格变化</strong>的方式，在规定时段内获得由公司支付的<strong>行权价格与行权日市场价格之间的差额</strong>；
+2. <strong>股票期权的现金结算</strong>——由公司以<strong>现金</strong>形式支付给激励对象；
+3. <strong>企业奖金的延期支付</strong>。</p>
+<p><strong>特点</strong>（★★★）：①行权期一般<strong>超过任期</strong>，与公司利益捆绑，约束短期行为；②激励对象拥有股价上升收益，但<strong>不拥有股票所有权、表决权、配股权</strong>；③可<strong>全额或部分兑现</strong>；④实施时可以用<strong>现金</strong>，也可以折合成<strong>股票</strong>或现金股票形式的<strong>结合</strong>。</p>
+<p><strong>适用</strong>（★）：发行<strong>境外上市外资股</strong>的公司。</p>
+<p><strong>模式总览</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+<th>适用企业</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.激励对象<strong>无须现金付出</strong>；2.操作<strong>方便、快捷</strong>；3.<strong>无须证监会审批</strong>，无须解决股票来源问题</td>
+<td>1.激励对象<strong>不能获得真正意义上的股票</strong>，激励效果相对较差；2.对<strong>资本市场有效性依赖大</strong>，可能导致公司高管层与庄家合谋操纵公司股价等问题；3.公司的<strong>现金压力较大</strong></td>
+<td><strong>现金流量比较充裕且股价比较稳定的上市公司；境外上市公司</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 增值权＝纸面富贵</div><p><strong>"只吃差价不拿股票，公司掏现金来结账，境外上市专用权，全额部分都能兑"</strong>。见到"虚拟的股票期权""现金结算""奖金延期支付"三个短语连出，就是股票增值权。</p></div></div>
+<div class="section"><h3>4. 三种工具一表看懂 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>股票期权</th>
+<th>限制性股票</th>
+<th>股票增值权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>拿到什么</td>
+<td>未来买股票的<strong>权利</strong></td>
+<td>现在就给的股票（出售受限）</td>
+<td><strong>虚拟</strong>差价收益权</td>
+</tr>
+<tr>
+<td>是否取得股票所有权</td>
+<td>行权后才取得</td>
+<td>即时取得（受禁售解锁约束）</td>
+<td><strong>始终不取得</strong>（也无表决权、配股权）</td>
+</tr>
+<tr>
+<td>要不要掏现金</td>
+<td>行权时<strong>自己掏钱</strong>（公司不得资助）</td>
+<td>无偿赠予或低价购买</td>
+<td><strong>无须现金付出</strong></td>
+</tr>
+<tr>
+<td>关键期限</td>
+<td>等待期≥1 年；有效期≤10 年</td>
+<td>禁售期≥2 年；解锁期≥3 年</td>
+<td>行权期一般<strong>超过任期</strong></td>
+</tr>
+<tr>
+<td>兑现方式</td>
+<td>行权卖出赚差价</td>
+<td>解锁后二级市场出售</td>
+<td>全额或部分兑现；现金／折股／结合</td>
+</tr>
+<tr>
+<td>对公司现金的影响</td>
+<td>有<strong>现金流入</strong>，激励成本低</td>
+<td><strong>现金流压力较大</strong></td>
+<td><strong>现金压力较大</strong></td>
+</tr>
+<tr>
+<td>适用企业</td>
+<td>成长性较好、股价呈强势上涨的上市公司</td>
+<td>成熟型、资金投入要求不高的企业</td>
+<td>现金流量充裕且股价稳定的上市公司；境外上市公司</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三工具的&quot;现金方向&quot;别搞反</div><p><strong>期权是企业"进钱"（行权缴款，有现金流入）；限制性股票和股票增值权都是企业"出钱"（现金压力较大）</strong>。真题常把"股票增值权模式对公司现金压力较小""限制性股票有利于科学确定股价"当错误选项——增值权现金压力大、限制性股票的业绩目标与股价恰恰<strong>难以</strong>科学确定。</p></div></div>
+<div class="section"><h3>5. 非上市公司股权激励 <span class="hot">高频考点</span></h3>
+<p>非上市公司没有公开市场股价，玩的是"股份＋账面"的游戏，三种工具对照：</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>核心机制</th>
+<th>权利边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>股份期权</strong>（又称<strong>期股</strong>）</td>
+<td>公司授予激励对象在未来一定期限内以<strong>预先确定的价格和条件</strong>购买本公司一定数量<strong>股份</strong>的权利；购股价格一般<strong>参照股份的当前价格</strong>决定</td>
+<td>只是取得股份的<strong>分红权、配股权等部分权益，无处置权</strong>；最终价值体现在<strong>购买价和行权价的价差</strong>上</td>
+</tr>
+<tr>
+<td><strong>业绩股份</strong></td>
+<td>激励对象在一定期限内达到<strong>预定（合理）业绩目标</strong>，公司授予其一定股份，或<strong>提取一定的奖励基金</strong>购买公司股份；以后若干年内经<strong>业绩考核通过</strong>后获准<strong>兑现规定比例</strong>的业绩股份</td>
+<td>规定期限内享有<strong>分红和送配股</strong>的权利，<strong>不享有表决权</strong></td>
+</tr>
+<tr>
+<td><strong>虚拟股票期权</strong></td>
+<td>股份期权模式的一种<strong>变通</strong>：授予"虚拟"股票，公司股份增值时据此享受<strong>股份的溢价收益</strong></td>
+<td>只是<strong>名义上持有</strong>而非真的购买；<strong>没有表决权</strong>、股份<strong>不能转让和出售</strong>、<strong>离开公司时自动失效</strong>；股票只在公司内部<strong>账面反映、登记形式</strong>买卖；行权价格不取决于市价，而是<strong>公司虚拟股票的内部市场价格</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 非上市三件套</div><p><strong>"期股有分红没处置，业绩股分红送配没表决，虚拟股纯账面、离职即清零"</strong>。案例分析题给一个"非上市公司"，可选项只有这三样——上市公司专用的股票期权、限制性股票、股票增值权都<strong>不能</strong>搬给非上市公司。</p></div></div>
+<div class="section"><h2>二、员工持股计划</h2>
+<h3>6. 员工持股计划 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p><strong>概念</strong>：公司根据<strong>员工意愿</strong>通过合作方式使员工获得本公司股票并<strong>长期持有</strong>，股份权益按约定分配给员工的制度安排。</p>
+<table>
+<thead>
+<tr>
+<th>考点</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>特点</strong>（★★★）</td>
+<td>①持股人或认购者<strong>必须是本企业的员工</strong>；②员工所认购的股份在<strong>转让、交易</strong>等方面受到一定限制</td>
+</tr>
+<tr>
+<td><strong>作用</strong>（★★★）</td>
+<td>①<strong>激励员工，吸引人才</strong>，提高企业核心竞争力，起到<strong>留人</strong>作用；②令企业获得<strong>稳定的、长期的、低成本资金</strong>，能够<strong>减轻企业的税务负担</strong></td>
+</tr>
+<tr>
+<td><strong>设计宗旨</strong></td>
+<td>①能够促进企业的<strong>长远发展</strong>；②能够激发员工的<strong>工作积极性</strong>；③能够改善企业<strong>法人治理结构</strong></td>
+</tr>
+<tr>
+<td><strong>基本原则</strong>（★★）</td>
+<td>①<strong>依法合规</strong>原则；②<strong>自愿参与</strong>原则；③<strong>风险自担</strong>原则</td>
+</tr>
+<tr>
+<td><strong>种类</strong></td>
+<td><strong>杠杆型</strong>——主要利用<strong>信贷杠杆</strong>实现，涉及员工持股计划基金会、公司、公司股东和<strong>贷款银行</strong>；<strong>非杠杆型</strong>——也称"<strong>股票奖金计划</strong>"，不利用信贷杠杆</td>
+</tr>
+</tbody>
+</table>
+<p><strong>激励对象</strong>（★★★，四类）：①在企业<strong>工作满一定时间的正式员工</strong>；②公司<strong>董事、监事、经理</strong>；③企业派往投资企业、代表处工作，<strong>劳动人事关系仍在本企业</strong>的外派人员；④<strong>在册管理的离退休人员</strong>。</p>
+<p><strong>资金及股票来源</strong>：资金来源——员工<strong>合法薪酬</strong>、其他方式；股票来源——上市公司<strong>回购</strong>本公司股票、<strong>二级市场购买</strong>、<strong>认购非公开发行的股票</strong>、<strong>股东自愿赠予</strong>、其他。</p>
+<p><strong>相关数字要求</strong>（★★★，全章最爱考的数字堆）：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>规定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>持股期限</strong></td>
+<td>每期持股期限<strong>不得低于 12 个月</strong>；以<strong>非公开发行</strong>方式实施的<strong>不得低于 36 个月</strong>；上市公司应在员工持股计划<strong>届满前 6 个月</strong>公告到期计划持有的股票数量</td>
+</tr>
+<tr>
+<td><strong>持股规模</strong></td>
+<td>全部有效的员工持股计划所持有的股票总数累计<strong>不得超过公司股本总额的 10%</strong>；<strong>单个员工</strong>所获股份权益对应的股票总数累计<strong>不得超过公司股本总额的 1%</strong></td>
+</tr>
+<tr>
+<td><strong>股份设置</strong></td>
+<td>原则上要求正式聘用员工都参与，明确规定<strong>参与比例不得低于员工总数的 90%</strong>；员工购买数量由其<strong>工资在员工全体薪金总额的比例</strong>确定</td>
+</tr>
+<tr>
+<td><strong>持股比例</strong></td>
+<td>员工持股占企业总股本的比例一般<strong>不超过企业总股本的 20%</strong>；一般企业<strong>高管人员与一般职工</strong>认购比例原则上控制在 <strong>4:1</strong> 范围内</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 员工持股数字串</div><p><strong>"十二三六（期限 12／36 个月），十一双上限（总额 10%、个人 1%），九成参与两成顶（参与≥90%、占总股本≤20%），高管职工四比一"</strong>。对比记忆：股权激励计划的 10%／1% 管的是"激励对象"，员工持股计划的 10%／1% 管的是"持股计划"，两套数字长得一样、适用对象不同。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某上市公司推员工持股计划：干满两年的流水线工人（正式员工）可以参加，独立董事不在名单里但<strong>监事可以</strong>参加（注意与股权激励对象正好相反），退休返聘且在册管理的老张也有份；全公司 92% 的员工参与（达标，≥90%）；资金从工资里按比例扣，股票从回购账户里出；锁定期 12 个月起步，总盘子不超过股本的 10%。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 两个&quot;激励名单&quot;对比着背</div><p><strong>股票期权排除监事和独立董事；员工持股计划反而容纳董事、监事、经理和离退休人员</strong>——同一个"监事"在两套制度里待遇相反，案例分析题最爱拿这一点挖坑。另外"自愿参与"对应"不得摊派、强行分配"，"风险自担"对应"盈亏自负"。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>股票期权三特征</strong>：权利非义务、行权价低于市价才有价值、公司无偿给予；免费的是权利，买股票自己掏钱（公司不得贷款资助含担保）</li>
+<li><strong>对象排除</strong>：独董监事、5% 以上股东及实控人的配偶父母子女、3 年内公开谴责／行政处罚者；不能同时参加两个以上公司的股权激励计划</li>
+<li><strong>额度</strong>：标的股票总数≤股本 10%；个人非经股东大会特别决议≤1%</li>
+<li><strong>时间</strong>：授权日为交易日（躲财报前 30 日）；等待期≥1 年；行权窗口＝财报后第 2 个交易日至下次财报前 10 个交易日；期权有效期≤10 年；计划有效期一般≤10 年、期满不得再授予</li>
+<li><strong>行权价</strong>：实值／平值／虚值；我国平值＋孰高（草案摘要公布前 1 日收盘价 vs 前 30 个交易日平均收盘价）</li>
+<li><strong>限制性股票</strong>：禁售≥2 年、解锁≥3 年；不达标收回或按购买价回购；适用成熟型企业</li>
+<li><strong>股票增值权</strong>：虚拟期权＋现金结算＋奖金延期支付；只有收益权；可全额／部分兑现；适用现金充裕股价稳定、境外上市公司</li>
+<li><strong>三工具现金方向</strong>：期权进钱（现金流入），限制性股票与增值权出钱（现金压力大）</li>
+<li><strong>非上市三件套</strong>：期股（分红配股无处置）、业绩股份（分红送配无表决）、虚拟股票期权（账面、内部价格、离职失效）</li>
+<li><strong>员工持股</strong>：四类对象（正式员工／董事监事经理／外派／在册离退休）；三原则（依法合规、自愿参与、风险自担）；数字串"十二三六、十一双上限、九成两成、四比一"</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r08s2q1" data-answer="ACD" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">股份激励中的股票期权的主要特征有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 被授予者可获得在未来购买股票的权利</button><button type="button" class="qopt" data-key="B">B. 被授予者可即时获得股票所有权</button><button type="button" class="qopt" data-key="C">C. 需要设置行权价格</button><button type="button" class="qopt" data-key="D">D. 其价值受股价波动的影响大</button><button type="button" class="qopt" data-key="E">E. 仅适用于非上市公司</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：股票期权是<strong>未来</strong>以预定行权价购买股票的<strong>权利</strong>，A、C 正确；其价值来自行权价与市价的差额，受股价波动影响大，D 正确。B 错——授予日与首次可行权日之间<strong>等待期不得少于 1 年</strong>，并非即时获得股票所有权；E 错——股票期权只适用于<strong>上市公司</strong>（成长性较好、股价呈强势上涨），不是非上市公司的工具。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s2q2" data-answer="B" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">关于股权激励中股票期权计划的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 股票期权是收益人应该承担的义务</button><button type="button" class="qopt" data-key="B">B. 任职上市公司董事的外籍员工可以成为股票期权的激励对象</button><button type="button" class="qopt" data-key="C">C. 单独或合计持有上市公司 5% 以上股份的实际控制人可以成为股票期权的激励对象</button><button type="button" class="qopt" data-key="D">D. 监事可以成为股票期权的激励对象</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：股票期权是一种<strong>权利而不是义务</strong>，受益人可以买也可以不买，A 错误。激励对象包括董事、高级管理人员、核心技术人员或核心业务人员及其他员工（<strong>含外籍员工</strong>），B 正确。<strong>不得</strong>成为激励对象的：独立董事和监事（D 错）、单独或合计持股 5% 以上的股东或实际控制人及其配偶父母子女（C 错）等。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s2q3" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于股票增值权的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 股票增值权的行权期一般超过任期</button><button type="button" class="qopt" data-key="B">B. 股票增值权行权时需要全额兑现</button><button type="button" class="qopt" data-key="C">C. 股票增值权在行权时不必实际买卖股票</button><button type="button" class="qopt" data-key="D">D. 股票增值权实质上是企业奖金的延期支付</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：股票增值权<strong>可以全额兑现，也可以部分兑现</strong>，"需要全额兑现"说反了，B 错误。A 对——行权期一般超过任期，与公司利益捆绑、约束短期行为；C 对——它是虚拟的股票期权，不实际买卖股票，只结算行权价与市价的差额；D 对——实质之一就是企业奖金的延期支付。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s2q4" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">关于上市公司各类股权激励模式特点的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 股票期权模式能降低委托代理成本</button><button type="button" class="qopt" data-key="B">B. 股票增值权模式对公司现金压力较小</button><button type="button" class="qopt" data-key="C">C. 限制性股票模式下有利于科学地确定股价</button><button type="button" class="qopt" data-key="D">D. 限制性股票模式对现金流压力较小</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：降低<strong>委托代理成本</strong>正是股票期权模式总览里的第一条优点，A 正确。B 错——股票增值权由公司以现金支付差价，<strong>现金压力较大</strong>；C、D 错——限制性股票的<strong>业绩目标或股价的科学确定较困难</strong>，且<strong>现金流压力较大</strong>（低价或无偿给真股票，公司要承担成本）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s2q5" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于我国上市公司股票期权激励计划的说法，表述错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 非经股东大会批准，每名激励对象通过全部有效的股权激励计划获授的本公司股票累积不得超过公司股本总额的 1%</button><button type="button" class="qopt" data-key="B">B. 公司全部有效的股权激励计划涉及的标的股票总数累积不得超过公司股本总额的 10%</button><button type="button" class="qopt" data-key="C">C. 允许公司为激励对象依股权激励计划获取有关权益而提供贷款</button><button type="button" class="qopt" data-key="D">D. 股权激励计划有效期满时，公司不得依据此计划再授予任何股权</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：上市公司<strong>不得</strong>为激励对象依股权激励计划获取有关权益提供贷款以及其他任何形式的<strong>财务资助</strong>，包括为其贷款提供担保，C 表述错误。A、B 对应两条额度红线——个人累计不超过 1%（非经股东大会特别决议批准）、计划标的股票总数累计不超过 10%；D 对——计划有效期满，不得再依据该计划授予任何股权。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s2q6" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于我国上市公司限制性股票的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 若激励对象的业绩目标未达成，公司有权按激励对象购买时的价格回购股票</button><button type="button" class="qopt" data-key="B">B. 若激励对象的工作年限未满足约定要求，公司有权收回免费赠予的限制性股票</button><button type="button" class="qopt" data-key="C">C. 激励对象可以低价获得一定数量的公司限制性股票</button><button type="button" class="qopt" data-key="D">D. 激励对象获得公司限制性股票后可以自由转让</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：限制性股票的"限制"就落在<strong>出售权</strong>上：取得后设有<strong>禁售期（不得低于 2 年）</strong>，不得通过二级市场或其他方式转让，解锁后才能自由出售，D 错误。A、B 对——条件不达标时公司有权<strong>收回</strong>（无偿赠予的）或<strong>按购买时价格回购</strong>（低价购买的）；C 对——无偿赠予或以较低价格售予正是其获得方式。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s2q7" data-answer="AB" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">关于非上市公司业绩股份激励方案，激励对象享有的权利有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 配股权</button><button type="button" class="qopt" data-key="B">B. 分红权</button><button type="button" class="qopt" data-key="C">C. 表决权</button><button type="button" class="qopt" data-key="D">D. 所有权</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AB</div><div class="q-exp"><p>析：激励对象持有的业绩股份，在规定持股期限内享有<strong>分红和送配股</strong>的权利（A、B 正确），<strong>不享有表决权</strong>（C 错误）；该模式下权利受限、按持股份额登记管理，并非完整的股份所有权（D 错误）。对比记忆：虚拟股票期权连分红都未必有，离职自动失效。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s2q8" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于员工持股计划的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 会增加经营者成本</button><button type="button" class="qopt" data-key="B">B. 公司可以通过贷款筹集资金</button><button type="button" class="qopt" data-key="C">C. 这是员工的权利不是义务</button><button type="button" class="qopt" data-key="D">D. 可以节约公司成本</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：员工持股计划的作用是<strong>激励员工、吸引人才、留人</strong>，并令企业获得<strong>稳定的、长期的、低成本资金</strong>、减轻税务负担——是"省钱"不是"增本"，A 错误、D 正确。B 对——杠杆型员工持股计划主要利用<strong>信贷杠杆</strong>实现，涉及员工持股计划基金会、公司、公司股东和贷款银行；C 对——它依员工<strong>意愿</strong>参加，是权利不是义务（对应自愿参与原则）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s2q9" data-answer="BC" data-type="multi"><span class="q-tag">2018·多选</span><div class="q-stem">关于员工持股计划的股份设置及持股比例的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 参与员工持股计划的员工不得高于企业员工总数的 90%</button><button type="button" class="qopt" data-key="B">B. 只有本企业正式聘用的员工才能参与员工持股</button><button type="button" class="qopt" data-key="C">C. 参与员工持股计划的员工能够购买的企业股票数量由本人工资在员工全体薪金总额的比例确定</button><button type="button" class="qopt" data-key="D">D. 员工持股占企业总股本的比例应超过 20%</button><button type="button" class="qopt" data-key="E">E. 一般企业高管人员与一般职工在员工持股中的认购比例不得低于 10：1</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BC</div><div class="q-exp"><p>析：B 对——员工持股严格限定在<strong>本企业正式聘用的员工</strong>范围内（特点之一）；C 对——购买数量由<strong>本人工资占全体薪金总额的比例</strong>确定。A 反了——参与比例<strong>不得低于</strong>员工总数的 90%（强调广泛参与性）；D 反了——占总股本比例一般<strong>不宜超过</strong> 20%；E 反了——高管与一般职工认购比例<strong>不宜拉得太大</strong>，原则上控制在 <strong>4:1</strong> 范围之内。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s2q10" data-answer="ABC" data-type="multi"><span class="q-tag">2020·多选</span><div class="q-stem">关于员工持股计划主要内容的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 上市公司全部有效的员工持股计划所持有的股票总数累计不得超过公司股本总额的 10%</button><button type="button" class="qopt" data-key="B">B. 它的激励对象包括企业在册管理的离退休人员</button><button type="button" class="qopt" data-key="C">C. 以非公开发行方式实施员工持股计划的持股期限不得低于 36 个月</button><button type="button" class="qopt" data-key="D">D. 单个员工所获股份权益对应的股票总数累计不得超过公司股本总额的 2%</button><button type="button" class="qopt" data-key="E">E. 每期员工持股计划的持股期限不得低于 24 个月</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：A 对——持股规模红线"总额 10%"；B 对——四类激励对象包含<strong>在册管理的离退休人员</strong>；C 对——<strong>非公开发行</strong>方式实施的持股期限<strong>不低于 36 个月</strong>。D 错——单个员工的上限是股本总额的 <strong>1%</strong> 不是 2%；E 错——每期持股期限<strong>不得低于 12 个月</strong>，只有非公开发行才提高到 36 个月。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力08_薪酬管理_第1节_薪酬管理概述.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 薪酬管理概述</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力08_薪酬管理_第3节_特殊群体的薪酬管理.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 特殊群体的薪酬管理</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

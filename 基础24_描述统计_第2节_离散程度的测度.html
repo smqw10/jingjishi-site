@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十四章 描述统计 · 离散程度的测度 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十四章 描述统计 · 离散程度的测度</h1><div class="subtitle">第 2 节 / 共 4 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 2/4</div><div class="sec-badge none" id="sec-badge" data-sec="b24s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>理解"离散程度越大、集中趋势测度值的代表性越差"这条跷跷板，方向永不反 <span class="hot">高频考点</span></li>
+<li>会用三步法算方差，分清总体方差（除 N）与样本方差（除 n−1）<span class="s3">★★★</span></li>
+<li>记住离散系数＝标准差÷均值，会跨行业、跨变量比较离散程度（高频）<span class="must">必考</span> <span class="s3">★★★</span></li>
+<li>分清"绝对离散测度"（标准差）与"相对离散测度"（离散系数），别拿标准差硬比不同变量 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、离散程度与代表性</h2>
+<h3>1. 离散程度是什么 <span class="hot">高频考点</span></h3>
+<p><strong>离散程度</strong>反映的是<strong>数据之间的差异程度</strong>。集中趋势的测度值对一组数据的<strong>代表程度，取决于该组数据的离散水平</strong>：数据的<strong>离散程度越大</strong>，集中趋势的测度值对该组数据的<strong>代表性就越差</strong>；<strong>离散程度越小</strong>，其<strong>代表性就越好</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>离散程度</th>
+<th>均值的代表性</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>大（数据散）</td>
+<td>差</td>
+<td>大家差得远，"平均数"说话没人服</td>
+</tr>
+<tr>
+<td>小（数据齐）</td>
+<td>好</td>
+<td>大家都差不多，"平均数"就是典型</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>跷跷板定律：</strong><p>离散程度和代表性是一根跷跷板：一头翘起来另一头就落下去——<strong>越散越没代表性，越齐越有代表性</strong>。这句话是本节所有概念的总纲，方向永远不变，题目换个说法（"方差越小均值代表性越好"）也要能认出来。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>甲班 5 人成绩：78、79、80、81、82；乙班 5 人成绩：40、60、80、100、120。两班均值都是 80，但甲班人人贴着 80，"平均 80 分"很有代表性；乙班分散到两头，"平均 80"形同虚设。所以光看集中趋势不够，必须再看离散程度。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 离散–代表性口诀</div><p><strong>"越散越没代表性"</strong>——见"方差/标准差越小，均值代表性越好"为对；见"离散越大代表性越好"或"越小越差"均为方向反，判错。</p></div></div>
+<div class="section"><h2>二、三个离散程度测度值</h2>
+<h3>2. 方差 <span class="s3">★★★</span></h3>
+<p><strong>方差</strong>：数据组中各数值<strong>与其均值离差平方的平均数</strong>。方差<strong>越小</strong>，说明数据值与均值的<strong>平均距离越小</strong>，均值的<strong>代表性越好</strong>。注意：<strong>方差的单位是原数据单位的平方，没有解释意义</strong>（"元的平方"说不出人话）。</p>
+<p><strong>计算公式</strong>：总体方差 σ² ＝ Σ(Xᵢ−X̄)² ÷ N；样本方差 s² ＝ Σ(Xᵢ−X̄)² ÷ (n−1)</p>
+<p><strong>分步演算</strong>（大白话三步：一减、二方、三平均）：数据 2、2、4、4。第一步减均值：均值＝3，离差为 −1、−1、1、1；第二步平方：1、1、1、1；第三步平均：若是总体（除 N＝4），方差＝4÷4＝<strong>1</strong>；若是样本（除 n−1＝3），方差＝4÷3≈<strong>1.33</strong>。离差直接相加会正负抵消成 0，所以必须先平方再平均。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>总体方差</th>
+<th>样本方差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公式分母</td>
+<td>N（总体规模）</td>
+<td><strong>n−1</strong>（样本规模减 1）</td>
+</tr>
+<tr>
+<td>记号</td>
+<td>σ²</td>
+<td>s²</td>
+</tr>
+<tr>
+<td>考点</td>
+<td>分母别混</td>
+<td>多选题最爱考"分母是样本规模减 1"</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>方差三步法：</strong><p><strong>"一减二方三平均"</strong>——每个数减均值（得离差）→ 离差平方（消掉正负号）→ 再平均（总体除 N，样本除 n−1）。方差单位是原单位的平方，没有解释意义，所以下一步要开根号得标准差。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 方差口诀</div><p><strong>"总体除 N，样本减一再除"</strong>——题目问"样本方差分母"，答"n−1"；问"方差是什么的平均数"，答"离差<strong>平方</strong>的平均数"，少"平方"二字就是错项。</p></div></div>
+<div class="section"><h3>3. 标准差 <span class="s3">★★★</span></h3>
+<p><strong>标准差</strong>：即<strong>方差的平方根</strong>。标准差<strong>越小</strong>，说明数据值与均值的平均距离越小，均值的<strong>代表性越好</strong>。<strong>标准差只适用于数值型数据，对极端值敏感</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>方差</th>
+<th>标准差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关系</td>
+<td>标准差的平方</td>
+<td>方差的平方根</td>
+</tr>
+<tr>
+<td>单位</td>
+<td>原数据单位的<strong>平方</strong>（无解释意义）</td>
+<td>与原数据<strong>同单位</strong>（可解释）</td>
+</tr>
+<tr>
+<td>适用数据</td>
+<td>数值型</td>
+<td><strong>数值型</strong>（分类、顺序数据不行）</td>
+</tr>
+<tr>
+<td>极端值</td>
+<td>敏感</td>
+<td><strong>敏感</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>为什么还要开根号：</strong><p>方差把单位变成了"平方"（元的平方、分的平方），没法跟原数据对话；开根号变回标准差，<strong>单位回到原数据单位</strong>，才能说"平均偏离了多少元"。标准差是最常用的<strong>绝对</strong>离散测度——但"绝对"就有局限：它的大小既跟<strong>测度单位</strong>有关，又跟<strong>观测值（均值）水平</strong>有关。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 标准差口诀</div><p><strong>"方差开根号，单位回原家"</strong>——计算题先见方差求标准差（开方），再见标准差求方差（平方），一步不乱。</p></div></div>
+<div class="section"><h3>4. 离散系数 <span class="must">必考</span> <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>离散系数</strong>也称<strong>变异系数</strong>或<strong>标准差系数</strong>，即<strong>标准差与均值的比值</strong>，记为 CV，<strong>主要用于不同类别（不同变量/不同总体）数据离散程度的比较</strong>。</p>
+<p><strong>计算公式</strong>：CV ＝ s ÷ X̄</p>
+<p>为什么需要它：<strong>标准差的大小不仅与数据的测度单位有关，也与观测值的均值大小有关，不能直接用标准差比较不同变量的离散程度</strong>；而<strong>离散系数消除了测度单位和观测值水平不同的影响，因而可以直接用来比较变量的离散程度</strong>。</p>
+<p><strong>分步演算</strong>：一组数据方差＝100、均值＝50。第一步，标准差＝√100＝10；第二步，CV＝10÷50＝<strong>0.2</strong>。（高频错误：忘了开方，直接 100÷50＝2——方差必须先开根号变成标准差才能进公式。）</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>标准差</th>
+<th>离散系数 CV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性质</td>
+<td><strong>绝对</strong>离散测度</td>
+<td><strong>相对</strong>离散测度</td>
+</tr>
+<tr>
+<td>公式</td>
+<td>s</td>
+<td>s ÷ X̄</td>
+</tr>
+<tr>
+<td>受测度单位影响</td>
+<td>有</td>
+<td>无（分子分母相约）</td>
+</tr>
+<tr>
+<td>受观测值水平影响</td>
+<td>有</td>
+<td>无</td>
+</tr>
+<tr>
+<td>用途</td>
+<td>同一组数据内部、单位相同时</td>
+<td><strong>不同类别/不同变量间比较</strong>离散程度</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某班身高 CV＝0.05、体重 CV＝0.08。身高的标准差也许是 8 厘米、体重的是 5 千克——单位一个厘米一个千克，标准差根本没法直接比；化成离散系数后比大小：0.08＞0.05，<strong>体重的离散程度更大</strong>。再如比较金融业与制造业从业人员的年薪离散程度，两行业年薪水平差距悬殊，也必须用变异系数。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 离散系数口诀</div><p><strong>"异单位、异水平，比离散找 CV"</strong>——CV＝标准差÷均值，除完没单位、没水平差，专门伺候"跨类别比较"。一句防错：<strong>"绝对看标准差，相对看离散系数"</strong>——拿标准差直接比两个不同变量，就是把"绝对"当"相对"用，必错。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 计算题三连防错</div><p>①给方差先<strong>开方</strong>得标准差再算 CV（方差 100→标准差 10，不是 100）；②CV 结果<strong>没有单位</strong>，选项带单位的都是干扰项；③见"金融业 vs 制造业""身高 vs 体重""爸爸的工资 vs 孩子的零花钱"这类<strong>跨变量比较</strong>字眼，秒选变异系数——标准差、标准分数、相关系数、偏态系数都是陪跑的。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li>离散程度＝数据差异程度；<strong>离散越大→代表性越差，越小→越好</strong>（跷跷板，方向不变）</li>
+<li><strong>方差</strong>＝离差<strong>平方</strong>的平均数；三步"一减二方三平均"；总体除 N、<strong>样本除 n−1</strong>；单位是原单位的平方、无解释意义</li>
+<li><strong>标准差</strong>＝方差的平方根；与原数据同单位；只适用<strong>数值型</strong>数据；对极端值<strong>敏感</strong></li>
+<li><strong>离散系数</strong> CV＝标准差÷均值；消除<strong>测度单位</strong>和<strong>观测值水平</strong>的影响；用于<strong>不同类别数据</strong>离散程度比较；CV 无单位</li>
+<li>绝对测度（标准差）vs 相对测度（CV）：跨变量比较只用 CV</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b24s2q1" data-answer="B" data-type="single"><span class="q-tag">2014·单选</span><div class="q-stem">根据 2014 年某城市金融业和制造业各 1000 人的年薪样本数据来比较这两个行业从业人员年薪的离散程度，应采用的统计量是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 标准分数</button><button type="button" class="qopt" data-key="B">B. 变异系数</button><button type="button" class="qopt" data-key="C">C. 相关系数</button><button type="button" class="qopt" data-key="D">D. 偏态系数</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：两行业年薪的<strong>均值水平相差悬殊</strong>，标准差受观测值水平影响，不能直接比较；<strong>变异系数（离散系数）＝标准差÷均值</strong>，消除了观测值水平和测度单位的影响，可直接比较不同变量的离散程度。标准分数比较的是个体取值的相对位置（A 错）；相关系数度量两变量间的相关关系（C 错）；偏态系数测度分布形态（D 错）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s2q2" data-answer="AB" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列统计量中，适用于测度数据离散程度的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 方差</button><button type="button" class="qopt" data-key="B">B. 标准差</button><button type="button" class="qopt" data-key="C">C. 众数</button><button type="button" class="qopt" data-key="D">D. 中位数</button><button type="button" class="qopt" data-key="E">E. 均值</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AB</div><div class="q-exp"><p>析：离散程度的测度是<strong>方差、标准差</strong>（加上离散系数），A、B 对。众数、中位数、均值测度的是<strong>集中趋势</strong>，C、D、E 错——尤其别把"均值"误当离散测度：均值是重心，它的代表性好不好才由离散程度说了算。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s2q3" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">下列关于集中趋势和离散程度的关系，说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 集中趋势测度值的代表程度，取决于该组数据的离散水平</button><button type="button" class="qopt" data-key="B">B. 离散程度反映的是数据之间的相似程度</button><button type="button" class="qopt" data-key="C">C. 离散程度越小，集中趋势的测度值对该组数据的代表性越差</button><button type="button" class="qopt" data-key="D">D. 离散程度越大，集中趋势的测度值对该组数据的代表性越好</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：集中趋势测度值（如均值）对一组数据的<strong>代表程度取决于离散水平</strong>，A 正确。离散程度反映的是数据之间的<strong>差异程度</strong>而非相似程度（B 错）；方向应是：离散程度<strong>越小</strong>代表性越<strong>好</strong>、越大代表性越<strong>差</strong>，C、D 都把跷跷板方向说反了。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s2q4" data-answer="C" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">一组数据方差为 100，均值为 50，离散系数为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 2</button><button type="button" class="qopt" data-key="B">B. 3</button><button type="button" class="qopt" data-key="C">C. 0.2</button><button type="button" class="qopt" data-key="D">D. 0.3</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：分步算：第一步，标准差＝方差的平方根＝√100＝10；第二步，离散系数＝标准差÷均值＝10÷50＝0.2，选 C。A（＝2）是<strong>忘了开方</strong>、直接拿 100÷50 的结果——方差必须先开根号变成标准差才能进 CV 公式，这是本题埋的最大坑。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s2q5" data-answer="ABCE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于方差的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 样本方差计算公式中的分母是样本规模减 1</button><button type="button" class="qopt" data-key="B">B. 方差越小，说明均值的代表性越好</button><button type="button" class="qopt" data-key="C">C. 方差是标准差的平方</button><button type="button" class="qopt" data-key="D">D. 方差是各数值与均值离差的平均数</button><button type="button" class="qopt" data-key="E">E. 方差对极端值比较敏感</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：样本方差分母是 <strong>n−1</strong>（总体方差才除 N），A 对；方差越小说明数据离均值越近、均值代表性越好，B 对；标准差是方差的平方根，反过来说方差就是标准差的平方，C 对；离差有正有负、直接平均会抵消成 0，所以方差是<strong>离差平方</strong>的平均数，D 漏掉"平方"二字，错；平方会放大极端差距，方差对极端值敏感，E 对。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s2q6" data-answer="BC" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">关于离散系数的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 离散系数适用于分类数据</button><button type="button" class="qopt" data-key="B">B. 离散系数不受观测水平的影响</button><button type="button" class="qopt" data-key="C">C. 离散系数不受观测单位的影响</button><button type="button" class="qopt" data-key="D">D. 离散系数适用于顺序数据</button><button type="button" class="qopt" data-key="E">E. 离散系数不受极端值的影响</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BC</div><div class="q-exp"><p>析：离散系数＝标准差÷均值，分子分母单位相同、直接约掉，所以<strong>消除了测度单位和观测值水平不同的影响</strong>，B、C 对。它由标准差和均值算出，二者都只适用于<strong>数值型数据</strong>，分类、顺序数据谈不上标准差（A、D 错）；标准差对极端值敏感，离散系数作为标准差的变形同样<strong>受极端值影响</strong>，E 错。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础24_描述统计_第1节_集中趋势的测度.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 集中趋势的测度</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础24_描述统计_第3节_分布形态的测度.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 分布形态的测度</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

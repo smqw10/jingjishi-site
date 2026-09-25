@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第5章 人力资源规划 · 人力资源规划及其供求预测 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第5章 人力资源规划 · 人力资源规划及其供求预测</h1><div class="subtitle">第 1 节 / 共 2 节 · 预计学习时长 55 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 1/2</div><div class="sec-badge none" id="sec-badge" data-sec="r05s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住人力资源规划的定义，分清<strong>广义</strong>与<strong>狭义</strong>两种口径，背熟狭义规划的<strong>四步基本流程</strong> <span class="hot">高频考点</span><span class="must">必考</span></li>
+<li>掌握人力资源需求预测的<strong>四大影响因素</strong>，会用"定、变、革、造"秒判案例 <span class="s3">★★★</span><span class="hot">高频考点</span></li>
+<li>分清需求预测五种方法的<strong>定性/定量</strong>归属，背熟德尔菲法"20～30 人"等数字细节 <span class="s3">★★★</span><span class="hot">高频考点</span></li>
+<li>掌握供给预测的影响因素：<strong>员工技能数据库</strong>三类信息＋<strong>外部供给五来源</strong> <span class="hot">高频考点</span></li>
+<li>分清供给预测两大方法：<strong>人员替换分析法</strong>与<strong>马尔科夫分析法</strong>（转移矩阵横、纵读法） <span class="s3">★★★</span><span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、人力资源规划概述</h2>
+<h3>1. 什么是人力资源规划 <span class="hot">高频考点</span></h3>
+<p><strong>人力资源规划</strong>是指组织根据<strong>自身战略的需要</strong>，采用<strong>科学的手段</strong>来预测组织未来可能会遇到的人力资源<strong>需求</strong>和<strong>供给</strong>状况，进而制订的人力资源<strong>获取、利用、保留和开发</strong>计划。</p>
+<p>按覆盖范围的大小，分广义与狭义两个口径：</p>
+<table>
+<thead>
+<tr>
+<th>口径</th>
+<th>含义</th>
+<th>包括哪些规划</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>广义</strong></td>
+<td>与人力资源管理问题有关的各种<strong>规划活动</strong></td>
+<td>人力资源战略规划、人员供求规划、培训开发规划、绩效管理规划、薪酬福利规划、员工关系规划等</td>
+</tr>
+<tr>
+<td><strong>狭义</strong></td>
+<td>专指组织的<strong>人员供求规划</strong>或<strong>雇用规划</strong></td>
+<td>——</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>定义里的四个抓手：</strong><p>①依据是<strong>战略需要</strong>；②手段是<strong>科学预测</strong>——需求和供给两头都要预测；③产出是四类计划：<strong>获取、利用、保留、开发</strong>；④本质是组织<strong>主动应对环境变化</strong>的过程——不是等环境稳定了才做规划，恰恰是为应对变化而做。</p></div></div>
+<div class="section"><h3>2. 狭义人力资源规划的基本流程（★★）</h3>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>做什么</th>
+<th>关键点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①人力资源需求预测</td>
+<td>预测未来一段时期<strong>需要多少名员工、需要哪些类型</strong>的员工</td>
+<td>包含人员的<strong>数量、质量、结构</strong>；<strong>不考虑</strong>组织内部现在的人力资源状况</td>
+</tr>
+<tr>
+<td>②人力资源供给预测</td>
+<td>估计未来某一特定时期能够<strong>获得</strong>的人力资源<strong>数量、质量以及结构</strong></td>
+<td><strong>同时考虑</strong>组织外部劳动力市场形势＋组织内部的人力资源供给情况</td>
+</tr>
+<tr>
+<td>③供求平衡分析</td>
+<td>把需求与供给放在一起比对，找出缺口</td>
+<td>——</td>
+</tr>
+<tr>
+<td>④实施供求平衡计划</td>
+<td>按平衡分析的结果落地执行</td>
+<td>——</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：规划全景一张图</div><p><strong>流程</strong>：需求预测 → 供给预测 → 供求平衡分析 → 实施供求平衡计划。<strong>需求预测方法</strong>：定性——经验判断法、德尔菲法；定量——比率分析、趋势预测、回归分析。<strong>供给预测方法</strong>：人员替换分析、马尔科夫分析。一张图把第一节的方法全部装下，考前扫一眼。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>新能源车企明年扩产：<strong>需求预测</strong>回答"明年要多要 300 名电池工程师还是 500 名普工"——只看未来要多少人，不管账上现在有多少人；<strong>供给预测</strong>回答"这 300 人从哪来"——内部现有技师能不能提拔、外部劳动力市场好不好招，两头都看。</p></div></div>
+<div class="section"><h3>3. 人力资源规划的意义和作用（★★）</h3>
+<ol>
+<li>有利于<strong>战略目标</strong>的实现；</li>
+<li>有利于整体人力资源管理系统的<strong>稳定性、一致性和有效性</strong>，有利于组织健康和可持续发展；</li>
+<li>有助于组织对<strong>人工成本</strong>的合理控制。</li>
+</ol>
+<p>一句话：规划既保证组织在需要的时候<strong>获得所需的各类人力资源</strong>，又保证员工队伍的<strong>精简和高效</strong>。</p></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 意义考点的三个错误话术</div><p>2024 年单选把意义反过来考：<strong>"必须在内外部环境稳定的情况下才能开展"</strong>——错，规划正是主动应对变化的过程；<strong>"对战略目标实现的作用不大"</strong>——错，第 1 条意义；<strong>"可以不考虑控制人工成本的因素"</strong>——错，第 3 条意义。背熟三条意义，"说法正确/错误"题直接秒。</p></div></div>
+<div class="section"><h2>二、人力资源需求预测 <span class="s3">★★★</span></h2>
+<h3>1. 需求预测的影响因素（★★★）<span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>怎么影响需求</th>
+<th>典型例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①组织战略定位和调整</td>
+<td>扩大规模、进入新业务领域→需求<strong>增加</strong>；缩小规模→需求<strong>减少</strong></td>
+<td>公司决定开拓新业务</td>
+</tr>
+<tr>
+<td>②产品和服务的变化情况</td>
+<td>劳动力需求是一种<strong>引致需求（派生需求）</strong>：产品服务需求扩张→人力需求增加，萎缩→减少</td>
+<td>产品畅销扩大招工</td>
+</tr>
+<tr>
+<td>③技术变革</td>
+<td>影响<strong>不仅体现在数量上，还体现在质量上</strong>：机器对劳动者的替代（生产自动化、新技术引进、人工智能使用）；计算机系统对<strong>复杂脑力劳动</strong>的替代</td>
+<td>电子化交易程序替代证券交易员</td>
+</tr>
+<tr>
+<td>④组织结构调整和流程再造</td>
+<td>组织结构的重新调整（如<strong>直线职能制→事业部制</strong>）；流程再造（如<strong>业务外包</strong>）</td>
+<td>职能制改事业部制</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：定、变、革、造</div><p><strong>"定、变、革、造"</strong>——战略<strong>定</strong>位和调整、产品服务<strong>变</strong>化、技术<strong>革</strong>新、结构流程再<strong>造</strong>。案例题对号入座：扩张收缩找"定"，产品好卖难卖找"变"，上机器上系统找"革"，重组改流程找"造"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>证券公司上线电子化交易程序后，传统证券交易员的需求大幅减少——注意这不是"机器换体力活"，而是<strong>计算机替代复杂脑力劳动</strong>，仍属"技术变革"这一因素，2025 年单选考的就是这个例子。技术变革的影响既体现在<strong>数量</strong>上（要的人少了），也体现在<strong>质量</strong>上（要的人不一样了）。</p></div></div>
+<div class="section"><h3>2. 需求预测的主要方法（★★★）<span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p>先分家——<strong>2 个定性＋3 个定量</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>方法</th>
+<th>要点</th>
+<th>适用与特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定性</td>
+<td>①经验判断法</td>
+<td>中高层管理人员凭<strong>经验及直觉</strong>估计；<strong>最简单</strong>的一种方法；要求管理人员具有比较丰富的个人经验</td>
+<td>主要适用<strong>短期预测</strong>，以及规模较小、经营环境相对稳定、人员流动率不很高的组织</td>
+</tr>
+<tr>
+<td>定性</td>
+<td>②德尔菲法（专家预测法）</td>
+<td>邀请专家组成小组，专家<strong>不见面、不沟通</strong>，<strong>独立匿名</strong>完成问卷，经过<strong>几轮意见反馈</strong>，看法逐渐趋于收敛</td>
+<td>集思广益、避免从众、准确度高</td>
+</tr>
+<tr>
+<td>定量</td>
+<td>③比率分析法</td>
+<td>基于<strong>关键经营或管理指标与人力资源需求量之间的固定比率关系</strong>预测</td>
+<td>如"每 X 名学生配 1 名教师"</td>
+</tr>
+<tr>
+<td>定量</td>
+<td>④趋势预测法（简单的时间序列分析法）</td>
+<td>根据组织<strong>雇佣水平最近若干年的总体变化趋势</strong>，预测未来某一时期的需求量</td>
+<td><strong>假定经营环境及重要技术稳定</strong>；实用性较强，但比较粗糙、准确度打折扣</td>
+</tr>
+<tr>
+<td>定量</td>
+<td>⑤回归分析法</td>
+<td>建立<strong>需求数量与影响因素之间的函数关系（回归方程）</strong>，把影响因素的未来估计值代入，算出需求量</td>
+<td>定量程度最高</td>
+</tr>
+</tbody>
+</table>
+<p><strong>德尔菲法的四个注意问题</strong>（多选题眼）：
+1. 专家人数不能太少，<strong>至少要达到 20～30 人</strong>；
+2. 专家的挑选要有<strong>代表性</strong>；
+3. <strong>问题设计要合理</strong>，不要让专家一次回答过多的问题；
+4. 向专家提供的<strong>资料和信息要相对充分</strong>。</p>
+<p><strong>德尔菲法的三个优点</strong>：
+1. 吸取综合了<strong>众多专家</strong>的意见，避免个人预测的<strong>片面性</strong>；
+2. <strong>不集体讨论、匿名</strong>进行，专家独立判断，避免<strong>从众行为</strong>，也避免了专家必须在一起开会的麻烦；
+3. <strong>多轮</strong>预测，经过几轮反复，专家意见趋于一致，<strong>准确度高</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 定性定量两分家</div><p><strong>"定性经验加德尔，定量比率趋势回归"</strong>——先背这句分家口诀。德尔菲法再补两句：注意点记"<strong>二三十、有代表、问题少、资料足</strong>"，优点记"<strong>集思广益防从众，多轮收敛准确高</strong>"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 方法判断题的&quot;题眼词&quot;</div><ul>
+<li>"凭经验、凭直觉、最简单"→<strong>经验判断法</strong>；坑点固定：<strong>只适用短期</strong>，见"适用于长期预测"必错；</li>
+<li>"专家小组、匿名问卷、多轮反馈、不见面"→<strong>德尔菲法</strong>；见"集体讨论、单一专家"反着选；</li>
+<li>"固定比率、每 X 人配 1 名"→<strong>比率分析法</strong>；</li>
+<li>"最近若干年、总体变化趋势、时间序列"→<strong>趋势预测法</strong>；</li>
+<li>"函数关系、回归方程、影响因素代入计算"→<strong>回归分析法</strong>。</li>
+</ul></div></div>
+<div class="section"><h2>三、人力资源供给预测 <span class="s3">★★★</span></h2>
+<h3>1. 供给预测的影响因素（★～★★）</h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>关键内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①组织内部现有的人力资源状况（★★）</td>
+<td><strong>员工技能数据库</strong>是评价现有员工供给状况的<strong>主要工具</strong>；三类信息：<strong>员工历史信息、员工目前技能状况信息、员工未来发展方面的信息</strong></td>
+</tr>
+<tr>
+<td>②外部劳动力市场总体供给情况（★）</td>
+<td>考虑<strong>组织所在地区的地区性劳动力市场</strong>情况和<strong>全国劳动力市场</strong>的情况——国家整体性因素（未来的国家经济形势、教育发展状况尤其是未来的毕业生规模）；地区因素（经济发展水平、人口数量及劳动力参与率、本地区对其他地区劳动力的吸引力、本地区高等教育和技能教育发展水平、本地区其他企业对劳动力需求的增长情况等）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>外部人力资源供给来源</strong>（★）五种：各类学校的毕业生、失业人员、退役军人、其他组织中准备离职换工作的人、获得相关政策支持的外国人。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 外部供给五来源</div><p><strong>"毕业的、失业的、退伍的、跳槽的、外来的"</strong>——五类人凑一桌。内部家底看<strong>技能数据库</strong>：过去（历史信息）、现在（技能状况）、将来（发展信息）三段各记一笔。</p></div></div>
+<div class="section"><h3>2. 供给预测的主要方法（★★★）<span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p>供给预测可采取<strong>主观判断法</strong>和<strong>历史统计模型分析法</strong>，具体包括两种方法：</p>
+<p><strong>①人员替换分析法</strong>：针对组织内部的<strong>某个或某些特定职位</strong>，确定能够在未来承担该职位工作的<strong>合格候选人</strong>。强调<strong>从组织内部</strong>选拔合适候选人——有利于<strong>激励员工士气</strong>、<strong>降低招聘成本</strong>，还能为未来的职位填补需要<strong>提前做好候选人的准备</strong>。</p>
+<p><strong>②马尔科夫分析法</strong>：基于<strong>多种职位以及人员流动状况</strong>进行预测，利用<strong>转移矩阵</strong>的统计分析程序——矩阵能显示<strong>不同时间不同职位类型的员工所占的比例（或数量）</strong>，显示一年当中人员如何从一种状态（职位类型）转变为另一种。如果公司各种条件稳定，可用来预测公司未来的人力资源供给状况。</p>
+<p>转移矩阵的两种读法（★★★）：</p>
+<table>
+<thead>
+<tr>
+<th>读法</th>
+<th>回答的问题</th>
+<th>能看出什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>横向</strong>（按行看）</td>
+<td>前一年在这种职位上的员工，本年度<strong>去哪了</strong></td>
+<td><strong>职业发展通道</strong></td>
+</tr>
+<tr>
+<td><strong>纵向</strong>（按列看）</td>
+<td>本年度处在这种职位上的员工，<strong>从哪来</strong></td>
+<td><strong>供给来源</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某公司转移矩阵中，"销售代表"一行：60% 留在本岗位、5% 升为销售经理、35% 离开公司——横向读是<strong>去向</strong>，顺着看还能看出"见习销售员→销售代表→销售经理"这条<strong>职业发展通道</strong>。"生产管理"一列：75% 上年就在本岗、10% 由生产操作工提拔而来、5% 从厂长助理降级而来、10% 为新进人员——纵向读是<strong>来路</strong>，可以看出该职位有 4 条<strong>供给来源</strong>渠道。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 两法分工</div><p><strong>"替换盯一个位，马尔可夫看全局"</strong>——人员替换分析法给<strong>特定职位</strong>找接班人（强调内部选拔）；马尔科夫分析法靠<strong>转移矩阵</strong>管<strong>多种职位</strong>的流动。见"特定职位、合格候选人、接班"选替换；见"转移矩阵、流动比例、多种职位"选马尔可夫。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 马尔科夫题的两个固定坑</div><p>干扰项话术背下来：<strong>"主要用于对外部劳动力市场供给趋势的分析"</strong>——错，它做的是<strong>内部</strong>劳动力供给预测；<strong>"基于单一职位的员工流动情况"</strong>——错，它基于<strong>多种</strong>职位。2025 年多选就埋了这两个坑，正确项是"可预测未来供给状况""能看职业发展通道""分析不同时间不同职位类型间的转换"。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>规划</strong>＝依战略＋科学预测需求与供给→制订获取、利用、保留、开发计划；广义＝人力资源管理的各种规划；狭义＝人员供求（雇用）规划</li>
+<li><strong>四步流程</strong>：需求预测→供给预测→供求平衡分析→实施供求平衡计划</li>
+<li><strong>意义三条</strong>：利战略实现；利系统稳定一致有效、组织健康可持续；控人工成本</li>
+<li><strong>需求影响因素</strong>："定变革造"；劳动力需求是引致需求（派生需求）；技术变革既替体力也替脑力，影响数量＋质量</li>
+<li><strong>需求预测方法</strong>：定性＝经验判断（最简单、短期、小规模稳定组织）＋德尔菲（20～30 人、匿名不讨论、多轮收敛）；定量＝比率（固定比率）、趋势（时间序列、假定环境稳定、较粗糙）、回归（函数方程）</li>
+<li><strong>供给影响因素</strong>：内部＝员工技能数据库（历史/技能状况/未来发展）；外部五来源＝毕业、失业、退伍、跳槽、外来</li>
+<li><strong>供给预测方法</strong>：人员替换（特定职位找内部候选人，激励士气降成本）＋马尔科夫（转移矩阵：横看去向＝通道，纵看来路＝来源）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r05s1q1" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">关于人力资源规划的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 人力资源规划是组织主动应对环境变化的过程</button><button type="button" class="qopt" data-key="B">B. 人力资源规划必须在内外部环境稳定的情况下才能开展</button><button type="button" class="qopt" data-key="C">C. 人力资源规划对组织战略目标实现的作用不大</button><button type="button" class="qopt" data-key="D">D. 人力资源规划可以不考虑控制人工成本的因素</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：规划是对不同时期、不同内外部环境、不同战略目标下供需情况进行预测的<strong>主动应对</strong>过程（A 对）。B 错——规划恰恰是为应对环境变化而生，不需要环境稳定作前提；C 错——有利于战略目标实现是规划的第一条意义；D 错——合理控制人工成本正是规划的作用之一。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s1q2" data-answer="C" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">电子化交易程序的广泛运用，使得证券交易公司对传统证券交易员的需求减少。这体现了人力资源需求的重要影响因素之一是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 产品服务变化</button><button type="button" class="qopt" data-key="B">B. 组织结构重组</button><button type="button" class="qopt" data-key="C">C. 技术变革</button><button type="button" class="qopt" data-key="D">D. 组织战略定位调整</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：技术变革不只表现为机器对重复性劳动的替代，还包括<strong>计算机系统对比较复杂的脑力劳动的替代</strong>——电子化交易程序替代证券交易员正是典型例子。它不是产品/服务变化（A），也不涉及结构调整（B）或战略定位调整（D）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s1q3" data-answer="D" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">关于人力资源需求预测中的经验判断法的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 经验判断法在一些情况下比较有效</button><button type="button" class="qopt" data-key="B">B. 经验判断法是一种定性的方法</button><button type="button" class="qopt" data-key="C">C. 经验判断法要求管理者具有丰富经验</button><button type="button" class="qopt" data-key="D">D. 经验判断法适用于长期的预测</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：经验判断法凭借管理者的主观感觉和经验进行预测，主要适用于<strong>短期预测</strong>，以及规模较小、经营环境相对稳定、人员流动率不太高的组织，"适用于长期预测"错误。A、B、C 均为正确表述——在缺乏历史数据或环境变化很大的情况下，依靠管理者长期积累的经验判断可以是最佳方式。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s1q4" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">在人力资源需求预测的方法中，德尔菲法的主要优势是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 采用集体讨论的方式进行预测</button><button type="button" class="qopt" data-key="B">B. 依据单一的专家经验</button><button type="button" class="qopt" data-key="C">C. 基于历史数据进行预测，结果更可靠</button><button type="button" class="qopt" data-key="D">D. 通过多轮匿名反馈方式进行预测，预测准确性较高</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：德尔菲法三优点：吸取综合众多专家意见、避免片面性；<strong>不集体讨论、匿名</strong>进行，专家独立判断、避免从众；<strong>多轮</strong>预测、意见趋于一致、准确性较高——D 正确。A 反了（恰恰不集体讨论），B 反了（是综合众多专家而非单一专家），C 是趋势预测法、回归分析法这类定量方法的特征。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s1q5" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">幼儿园根据&quot;幼师幼儿比&quot;确定需要招聘的幼师人数，这种人力资源需求预测方法是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 比率分析法</button><button type="button" class="qopt" data-key="B">B. 趋势预测法</button><button type="button" class="qopt" data-key="C">C. 经验判断法</button><button type="button" class="qopt" data-key="D">D. 回归分析法</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：比率分析法基于<strong>关键经营或管理指标与人力资源需求量之间的固定比率关系</strong>预测需求——"幼师幼儿比"正是固定比率。趋势预测法看雇佣水平的历史变化趋势（B）；经验判断法靠管理者经验和直觉（C）；回归分析法建立需求量与影响因素之间的函数关系（D）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s1q6" data-answer="B" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">关于企业人力资源供给预测的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 经济发展形势和毕业生规模会对企业的人力资源供给产生影响</button><button type="button" class="qopt" data-key="B">B. 企业人力资源供给预测就是对企业人力资源外部的供给情况进行预测</button><button type="button" class="qopt" data-key="C">C. 企业人力资源供给情况会受到外部劳动力市场供给情况的影响</button><button type="button" class="qopt" data-key="D">D. 企业人力资源供给预测需综合考虑人力资源供给的数量、质量和结构等情况</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：供给预测必须<strong>同时考虑组织外部</strong>的供给状况<strong>和组织内部</strong>的供给状况，只讲外部一头的 B 错误。A 属于外部劳动力市场的国家整体性因素（经济形势、毕业生规模），C 正确，D 对应供给预测的数量、质量、结构三个维度。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s1q7" data-answer="ABCE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">关于人力资源供给预测方法中人员替换分析法的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 有利于激励员工士气，同时降低招聘成本</button><button type="button" class="qopt" data-key="B">B. 有助于对组织中的职位在未来的人员需求提前做好准备</button><button type="button" class="qopt" data-key="C">C. 需要对候选人的能力水平和晋升潜力进行评估</button><button type="button" class="qopt" data-key="D">D. 强调从组织外部招聘员工中填补职位空缺</button><button type="button" class="qopt" data-key="E">E. 主要用于组织内特定职位上的合格候选人确定</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：人员替换分析法针对组织内部的<strong>特定职位</strong>确定未来能承担该职位的<strong>合格候选人</strong>，强调<strong>从组织内部</strong>选拔——有利于激励士气、降低招聘成本，并为未来的职位填补提前做好准备（A、B、E 对），C 是确定候选人的应有之义。D 反了——强调内部选拔而非从外部招聘填补空缺。
+:::</p></div></details></div><div class="quiz-item" data-qid="r05s1q8" data-answer="ADE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">关于人力资源供给预测中的马尔科夫分析法的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 它可以预测组织在未来的人力资源供给状况</button><button type="button" class="qopt" data-key="B">B. 它主要用于对外部劳动力市场上的劳动力供给趋势的分析</button><button type="button" class="qopt" data-key="C">C. 它是基于单一职位上的员工流动情况进行内部劳动力供给预测</button><button type="button" class="qopt" data-key="D">D. 它能够帮助预测员工在组织中的职业发展通道</button><button type="button" class="qopt" data-key="E">E. 它会分析员工在不同时间点上在组织内不同职位类型间的转换情况</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ADE</div><div class="q-exp"><p>析：马尔科夫分析法利用<strong>转移矩阵</strong>做<strong>内部</strong>供给预测：矩阵显示不同时间各职位类型员工的比例（或数量）及人员在不同职位类型间的转换情况（A、E 对），条件稳定时还可预测未来供给。B 错——用于内部而非外部劳动力市场分析；C 错——基于<strong>多种</strong>职位而非单一职位；D 对——横向读矩阵能看出职业发展通道。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力05_人力资源规划_第2节_人力资源供求平衡的基本对策与方法.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 人力资源供求平衡的基本对策与方法</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

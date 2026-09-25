@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第七章 国民收入核算和简单的宏观经济模型 · 消费、储蓄和投资 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第七章 国民收入核算和简单的宏观经济模型 · 消费、储蓄和投资</h1><div class="subtitle">第 3 节 / 共 4 节 · 预计学习时长 50 分钟</div><div class="progress-bar"><div class="fill" style="width:75%"></div></div><div class="progress-text">本章进度 3/4</div><div class="sec-badge none" id="sec-badge" data-sec="b07s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟<strong>凯恩斯消费理论三个假设</strong>与消费函数 <strong>C=α+βY</strong>，记住"边际消费倾向总是小于平均消费倾向" <span class="s3">★★★</span><span class="must">必考</span></li>
+<li>一刀切分清三大消费理论：凯恩斯看收入、莫迪利安尼看生命周期、弗里德曼看持久收入 <span class="hot">高频考点</span><span class="must">必考</span></li>
+<li>记住储蓄函数 S=Y−C 与两组"凑 1"：APC+APS=1、MPC+MPS=1 <span class="hot">高频考点</span></li>
+<li>记住投资<strong>不包括金融投资</strong>，投资是<strong>利率的减函数</strong>（I=e−dr） <span class="hot">高频考点</span></li>
+<li>会分步计算<strong>投资乘数</strong> k=1/(1−β)=1/s 与<strong>均衡国民收入</strong> Y=(α+I)/(1−β)（三部门加 G） <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、消费理论——三大流派</h2>
+<h3>1. 凯恩斯消费理论：三个假设与消费函数 <span class="hot">高频考点</span><span class="must">必考</span><span class="s3">★★★</span></h3>
+<p><strong>凯恩斯消费理论建立在三个假设（前提）之上</strong>：</p>
+<ol>
+<li><strong>边际消费倾向递减规律</strong>——随着收入增加，消费增加得越来越少；</li>
+<li><strong>收入是决定消费的最重要因素</strong>——其他因素可看作短期内变化不大或影响轻微；</li>
+<li><strong>平均消费倾向会随着收入的增加而减少</strong>。</li>
+</ol>
+<p><strong>凯恩斯消费函数：C=α+βY</strong>（消费等于自发消费和引致消费之和）：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>α</td>
+<td><strong>自发消费</strong></td>
+<td>必不可少的部分，即便没有收入也必须发生，是个常数</td>
+</tr>
+<tr>
+<td>β</td>
+<td><strong>边际消费倾向（MPC）</strong></td>
+<td>增加的消费/增加的收入，<strong>0＜β＜1</strong></td>
+</tr>
+<tr>
+<td>βY</td>
+<td><strong>引致消费</strong></td>
+<td>由收入引致的消费</td>
+</tr>
+</tbody>
+</table>
+<p>倾向关系：<strong>平均消费倾向（APC＝消费/收入）可能大于、等于或小于 1</strong>；<strong>边际消费倾向总是小于平均消费倾向（MPC＜APC）</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>为什么 MPC＜APC：</strong><p>平均消费倾向 APC=C/Y=α/Y+β，比边际消费倾向 β <strong>多出一块 α/Y</strong>（自发消费摊到每单位收入上的部分）。收入越大，α/Y 越小，APC 越贴近 β——这也正是"平均消费倾向随收入增加而减少"的原因。大白话：<strong>平均里有"自发"垫底，所以平均总比边际大</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小张月薪 3000 元时每月吃饭租房要 2500 元（自发消费打底），APC≈0.83；涨到 1 万元时花 7000 元，APC=0.7；涨到 3 万元时花 1.8 万元，APC=0.6——收入越高，新增收入里用于消费的比例（MPC）越低、存下的越多，这就是"边际消费倾向递减"的日常版。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 凯恩斯三假设口诀</div><p><strong>"边递减、均递减、收入定乾坤"</strong>——①边际消费倾向递减；②平均消费倾向随收入增加而减少；③收入是决定消费的最重要因素。三个假设多选必背，一个都不能少。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别把两句话弄混</div><ul>
+<li>"<strong>平均</strong>消费倾向<strong>可能</strong>大于、等于或小于 1"——对，低收入时消费可以超过收入（借钱花）；</li>
+<li>"<strong>边际</strong>消费倾向<strong>总是小于</strong>平均消费倾向"——也对；</li>
+<li>两句同时成立，考试常拿其中一句改字设错："边际消费倾向可能大于平均消费倾向""平均消费倾向总是小于边际消费倾向"都是<strong>错</strong>的。</li>
+</ul></div></div>
+<div class="section"><h3>2. 莫迪利安尼：生命周期消费理论 <span class="hot">高频考点</span></h3>
+<p><strong>核心观点</strong>：消费取决于<strong>家庭所处的生命周期阶段</strong>。在<strong>人口构成没有发生重大变化</strong>的情况下，<strong>从长期来看边际消费倾向是稳定的</strong>，消费支出与可支配收入和实际国民生产总值之间存在一种<strong>稳定的关系</strong>。但如果一个社会的<strong>人口构成比例发生变化</strong>，则边际消费倾向也会发生变化：<strong>社会上年轻人和老年人的比例增大，则消费倾向会提高</strong>；<strong>如果中年人口的比例增大，则消费倾向会降低</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>一生摊平花钱：</strong><p>生命周期理论的灵魂是"<strong>跨时期安排</strong>"——人们会在<strong>更长的时间范围内</strong>计划生活消费开支，以达到<strong>整个生命周期内消费的最佳配置</strong>：年轻时收入低也敢花（借贷），中年多挣少花（储蓄还债），老年动用积蓄。消费看的不是"今年挣多少"，而是"一辈子有多少"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>25 岁的小李刚工作，收入不高但贷款买了车（消费＞收入）；50 岁的李父收入正处巅峰、拼命攒养老金（消费倾向低）；75 岁的李爷爷退休金缩水、动用存款过日子（消费倾向高）。一个社会老人和年轻人多了，整体消费倾向就被抬上去；中年人多了，就被拉下来。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 生命周期口诀</div><p><strong>"人口两头多，消费倾向高；中年占比大，倾向往下掉"</strong>——年轻人＋老年人比例增大 → 消费倾向提高；中年人口比例增大 → 消费倾向降低。</p></div></div>
+<div class="section"><h3>3. 弗里德曼：持久收入理论 <span class="hot">高频考点</span></h3>
+<p><strong>核心观点</strong>：消费者的消费支出<strong>不是根据他的当前收入</strong>决定的，而是<strong>根据他的持久收入</strong>决定的；<strong>消费是持久性收入的稳定的函数</strong>。持久收入是消费者可以预计到的<strong>长期收入</strong>——长期中持久收入是稳定的，所以消费函数也是稳定的。</p></div>
+<div class="section"><div class="keypoint"><strong>持久收入 vs 当前收入：</strong><p>"当前收入"是本期到手的钱，有起有落；"持久收入"是长期稳定的收入水平。弗里德曼说消费跟着<strong>持久收入</strong>走：一次性横财不敢花掉，长期涨薪才敢扩大消费。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小王彩票中 10 万（当前收入暴增），每月开销几乎没变——因为这不是"持久收入"，只是一次性所得；后来他工资从 8000 涨到 1 万且长期稳定，他才把月消费提高一截。这就是"消费是持久收入的稳定函数"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三大消费理论一张嘴</div><p><strong>"凯恩斯看眼前，莫迪利安尼管一生，弗里德曼认持久"</strong>——见"收入决定消费/边际消费倾向递减"选凯恩斯；见"生命周期阶段/人口构成影响消费倾向"选莫迪利安尼；见"持久收入/稳定函数"选弗里德曼。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 归属判断眼力（理论串场陷阱）</div><ul>
+<li>见"<strong>整个生命周期内消费的最佳配置</strong>""人口构成变化"→ 莫迪利安尼；</li>
+<li>见"<strong>持久收入</strong>""消费是稳定函数"→ 弗里德曼；</li>
+<li>见"<strong>边际消费倾向递减</strong>""APC 随收入增加而减少""MPC＜APC"→ 凯恩斯；</li>
+<li>"科斯消费理论"之类的选项是<strong>编造</strong>的——科斯是产权理论代表人物，没有消费理论。</li>
+</ul></div></div>
+<div class="section"><h3>4. 储蓄函数：与消费函数互为补数 <span class="hot">高频考点</span></h3>
+<p><strong>定义</strong>：储蓄与收入之间的<strong>依存关系</strong>被称为储蓄函数。由于收入=消费＋储蓄（Y=C+S），所以 <strong>S=Y−C</strong>。凯恩斯认为：随着收入的不断增加，<strong>消费增加的会越来越少，而储蓄增加的则会越来越多</strong>。</p>
+<p><strong>消费函数和储蓄函数互为补数，二者之和总是等于收入。</strong></p>
+<table>
+<thead>
+<tr>
+<th>倾向</th>
+<th>公式</th>
+<th>凑 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>平均消费倾向 APC</strong></td>
+<td>总消费/总收入</td>
+<td><strong>APC＋APS=1</strong></td>
+</tr>
+<tr>
+<td><strong>平均储蓄倾向 APS</strong></td>
+<td>总储蓄/总收入</td>
+<td>↑</td>
+</tr>
+<tr>
+<td><strong>边际消费倾向 β（MPC）</strong></td>
+<td>增加的消费/增加的收入</td>
+<td><strong>β＋s=1</strong></td>
+</tr>
+<tr>
+<td><strong>边际储蓄倾向 s（MPS）</strong></td>
+<td>增加的储蓄/增加的收入</td>
+<td>↑</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两条凑 1 规则：</strong><p>"一块钱收入掰成两瓣，一瓣消费一瓣储蓄"——<strong>平均配平均、边际配边际</strong>，加起来都是 1：APC+APS=1，β+s=1。知道其中一个，另一个就是 1 减它：β=0.8 → s=0.2。千万别拿"平均"和"边际"硬凑。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小李涨薪 1000 元，多花 800、多存 200 → MPC=0.8、MPS=0.2（0.8+0.2=1）。他全年收入 12 万、总消费 9 万 → APC=0.75、APS=0.25（0.75+0.25=1）。两组"1"各管各的——0.8 和 0.25 凑不出 1，因为一个边际一个平均。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 储蓄函数口诀</div><p><strong>"储蓄等于收入减消费，同平同边才凑 1"</strong>——S=Y−C；APC+APS=1、MPC+MPS=1；β 与 s 是"1 的两半"，知道一个另一个就是 1−它。</p></div></div>
+<div class="section"><h2>二、投资函数与投资乘数</h2>
+<h3>1. 投资的含义与决定因素 <span class="hot">高频考点</span></h3>
+<p><strong>定义</strong>：投资是<strong>购置物质资本</strong>（例如厂房、设备和存货，以及住房建筑物）的活动，即<strong>形成资产</strong>的活动，一般<strong>不包括金融投资</strong>在内。</p>
+<table>
+<thead>
+<tr>
+<th>要点</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>决定投资的主要因素</td>
+<td><strong>实际利率、预期收益率和投资风险</strong>等</td>
+</tr>
+<tr>
+<td>一定程度影响投资的因素</td>
+<td><strong>预期通货膨胀率和折旧</strong>等</td>
+</tr>
+<tr>
+<td>投资的成本</td>
+<td><strong>利息</strong>；决定利息的直接因素是<strong>实际利率</strong>，因此投资的成本取决于实际利率</td>
+</tr>
+<tr>
+<td>利率与投资的关系</td>
+<td>预期收益率既定时，实际利率越高 → 投资成本越高 → 投资<strong>减少</strong> → <strong>投资是利率的减函数</strong></td>
+</tr>
+<tr>
+<td>投资函数</td>
+<td><strong>I=e−dr</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>I=e−dr 两项拆解：</strong><ul>
+<li><strong>e：自主投资</strong>——由<strong>人口、技术、资源</strong>等<strong>外生变量</strong>的变动所引起，<strong>与利率无关</strong>，即使利率为零也会存在（函数的"底"）；</li>
+<li><strong>−dr：引致投资</strong>——随利率的变化呈<strong>反方向</strong>变化（r 越大，这一项把 I 拖得越低）。</li>
+</ul></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小刘想贷款开店：年利率 5% 时预期赚头够本，决定开；利率涨到 12%，利息吃掉大半利润，不开了——利率越高、投资越少，这就是"减函数"。而不管利率多高，人口在增长、技术在进步，总有一些基础投资要做——这就是自主投资 e。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 投资函数口诀</div><p><strong>"e 打底，dr 拖后腿；利率涨，投资退"</strong>——自主投资与利率无关（利率为零也在），引致投资与利率反方向，整体上<strong>投资是利率的减函数</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 名义利率不是&quot;决定者&quot;</div><p>决定投资的是<strong>实际利率</strong>，不是名义利率——选项见"决定投资的是名义利率"必错。同时记住"金融投资（买股票、基金）不算这里说的投资"，见"不应算作投资"就选它；不同投资方式下利率与投资的关系<strong>都是</strong>减函数，"不同投资方式关系不同"也是干扰说法。</p></div></div>
+<div class="section"><h3>2. 投资乘数：国民收入放大若干倍 <span class="hot">高频考点</span><span class="s3">★★★</span></h3>
+<p><strong>含义</strong>：乘数也叫<strong>倍数</strong>，即一个因素或变量的变化对整个社会经济活动的影响程度。决定收入的各种因素变化都会对国民收入产生乘数作用，例如投资乘数、政府购买支出乘数、税收乘数等。<strong>投资乘数</strong>：增加一笔投资，在国民经济重新达到均衡状态时，由此引起的<strong>国民收入增加量是初始投资量的若干倍</strong>。</p>
+<p><strong>公式</strong>：<strong>k=ΔY/ΔI=1/(1−β)=1/s</strong>（β 为边际消费倾向，s 为边际储蓄倾向）——投资乘数 k 是<strong>边际储蓄倾向 s 的倒数</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>一轮接一轮的放大链：</strong><p>投资 100 万变成别人的收入 → 按 β=0.8 花掉 80 万 → 又变成再下一轮收入 → 再花 64 万……总放大=1+0.8+0.8²+…=1/(1−0.8)=5 倍。β 越大（s 越小），链条越长，乘数越大——<strong>乘数与储蓄倾向互为倒数</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>第一步：s=1−β=1−0.8=0.2；
+第二步：k=1/(1−β)=1/0.2=<strong>5</strong>（验证：1/s=1/0.2=5 ✓）；
+第三步：ΔY=k×ΔI=5×100=<strong>500 万</strong>。
+三步走：先求 s，再求 k，最后乘 ΔI——每一步都有检查点，不怕算错。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 投资乘数口诀</div><p><strong>"一减贝塔倒一倒，储蓄倒数它也是"</strong>——k=1/(1−β)=1/s。易错提醒：分母是 <strong>1−β</strong> 不是 β；β=0.8 时 k=5，不是 1/0.8=1.25。</p></div></div>
+<div class="section"><h3>3. 均衡国民收入的计算：解一个方程 <span class="hot">高频考点</span><span class="s3">★★★</span></h3>
+<p>依据<strong>总收入=总支出</strong>的原理计算。<strong>两部门</strong>经济中，均衡国民收入 Y＝消费 C＋投资 I，将凯恩斯消费函数代入：</p>
+<p>Y＝（自发消费＋边际消费倾向×均衡国民收入 Y）＋投资 Ī，即 Y=α+βY+Ī，移项得：</p>
+<p><strong>Y=(α+Ī)/(1−β)</strong></p>
+<p>三部门、四部门计算原理一样。三部门包含<strong>政府购买 G</strong>：<strong>Y=(α+Ī+G)/(1−β)</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>分母死死咬住 1−β：</strong><p>所有均衡收入公式的分母都是 <strong>1−β</strong>（就是边际储蓄倾向 s）。分子是"<strong>不随 Y 变的那一坨</strong>"：自发消费 α＋投资 Ī（三部门再加 G）。解方程本质只有一步：Y−βY=(1−β)Y=α+Ī(+G)。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>第一步：列均衡条件 Y=C+I+G=100+0.8Y+300+160；
+第二步：移项合并 Y−0.8Y=560，即 0.2Y=560；
+第三步：Y=560÷0.2=<strong>2800 亿元</strong>。
+套公式即 Y=(α+I+G)/(1−β)=(100+300+160)/(1−0.8)；两部门就把 G 拿掉，用 Y=(α+I)/(1−β)。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 均衡收入口诀</div><p><strong>"α＋I（+G）进分子，1−β 压分母"</strong>——分子装"不随收入变"的部分（自发消费、投资，三部门再加政府购买），分母永远是 1−β。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 计算题三查（公式计算类高频失分点）</div><p>一查<strong>分母</strong>：必须是 1−β（把 β 直接当分母、忘了做 1−β 是最高频错误）；二查<strong>分子</strong>：三部门别漏 G、别把 G 乘进 β 里；三查<strong>移项</strong>：Y−βY=(1−β)Y，系数别丢。按"列式→移项→除以 (1−β)"三步走，慢而不错。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>凯恩斯三假设</strong>："边递减、均递减、收入定乾坤"；消费函数 <strong>C=α+βY</strong>（α 自发、β 边际倾向 0＜β＜1、βY 引致）；APC 可能大于、等于、小于 1；<strong>MPC 总是小于 APC</strong></li>
+<li><strong>莫迪利安尼</strong>：消费取决于<strong>生命周期阶段</strong>；人口构成不变 → 长期 MPC 稳定；年轻＋老年占比大 → 倾向高，中年占比大 → 倾向低</li>
+<li><strong>弗里德曼</strong>：消费由<strong>持久收入</strong>决定，消费是持久收入的<strong>稳定</strong>函数</li>
+<li><strong>储蓄函数</strong> S=Y−C；与消费函数互为补数（和=收入）；<strong>APC+APS=1、β+s=1</strong></li>
+<li><strong>投资</strong>：购置物质资本、<strong>不含金融投资</strong>；决定因素=实际利率、预期收益率、投资风险；<strong>投资是利率的减函数</strong>；I=e−dr（e 自主与利率无关、−dr 引致反方向）</li>
+<li><strong>投资乘数</strong> k=ΔY/ΔI=1/(1−β)=1/s（边际储蓄倾向的倒数）</li>
+<li><strong>均衡国民收入</strong>：两部门 Y=(α+I)/(1−β)；三部门 Y=(α+I+G)/(1−β)</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b07s3q1" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于边际消费倾向和平均消费倾向的关系，说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 边际消费倾向可能大于平均消费倾向</button><button type="button" class="qopt" data-key="B">B. 边际消费倾向小于平均消费倾向</button><button type="button" class="qopt" data-key="C">C. 边际消费倾向等于平均消费倾向</button><button type="button" class="qopt" data-key="D">D. 平均消费倾向小于边际消费倾向</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：凯恩斯消费函数 C=α+βY 中有自发消费 α，使平均消费倾向（C/Y=α/Y+β）总比边际消费倾向 β 多出一块 α/Y，所以<strong>边际消费倾向总是小于平均消费倾向</strong>（B 对）。A、C、D 均与该结论相悖。另注意：平均消费倾向可能大于、等于或小于 1，别把这两件事搅在一起。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s3q2" data-answer="ABC" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">凯恩斯消费理论的三个假设是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 边际消费倾向递减</button><button type="button" class="qopt" data-key="B">B. 平均消费倾向随着收入的增加而减少</button><button type="button" class="qopt" data-key="C">C. 收入是决定消费的最重要的因素</button><button type="button" class="qopt" data-key="D">D. 人们会在更长的时间范围内计划他们的生活消费开支，以达到他们在整个生命周期内消费的最佳配置</button><button type="button" class="qopt" data-key="E">E. 预期影响消费结构</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：三假设＝①<strong>边际消费倾向递减规律</strong>；②<strong>收入是决定消费的最重要因素</strong>；③<strong>平均消费倾向随收入增加而减少</strong>，A、B、C 全中。D 是<strong>莫迪利安尼生命周期理论</strong>的观点——"跨时期安排"是它的标志性表述；E 与凯恩斯三假设无关，属编外干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s3q3" data-answer="B" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">在一个两部门经济中，已知消费函数为 C=100+0.75Y，投资 I=460 亿元，则均衡国民收入等于（　）亿元。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 2000</button><button type="button" class="qopt" data-key="B">B. 2240</button><button type="button" class="qopt" data-key="C">C. 2560</button><button type="button" class="qopt" data-key="D">D. 2800</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：两部门均衡条件 Y=C+I。分步算：Y=100+0.75Y+460 → Y−0.75Y=560 → 0.25Y=560 → Y=560÷0.25=<strong>2240</strong>（B 对）。也可套公式 Y=(α+I)/(1−β)=(100+460)/(1−0.75)=560/0.25=2240。易错点：分母必须是 1−β=0.25，直接拿 0.75 当分母就会掉坑。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s3q4" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">弗里德曼认为消费支出（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 在收入中所占的比重会不断减少</button><button type="button" class="qopt" data-key="B">B. 与个人生命周期有关系，不同的时期消费支出不一样</button><button type="button" class="qopt" data-key="C">C. 是根据持久收入决定的</button><button type="button" class="qopt" data-key="D">D. 由自发消费和引致消费构成</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：弗里德曼持久收入理论：消费支出<strong>不是根据当前收入</strong>、而是<strong>根据持久收入决定</strong>的，消费是持久性收入的稳定函数（C 对）。A"比重不断减少"说的是凯恩斯的平均消费倾向随收入增加而减少；B 是莫迪利安尼生命周期理论的观点；D"自发消费＋引致消费"是凯恩斯消费函数 C=α+βY 的构成——三个干扰项恰好把另外两套理论和凯恩斯串了个遍。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s3q5" data-answer="D" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">假设一个社会的边际消费倾向 β 为 0.8，则投资乘数 K 等于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 0.20</button><button type="button" class="qopt" data-key="B">B. 1.25</button><button type="button" class="qopt" data-key="C">C. 0.80</button><button type="button" class="qopt" data-key="D">D. 5.00</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：投资乘数 k=1/(1−β)=1/(1−0.8)=1/0.2=<strong>5</strong>（D 对）。A 0.20 是边际储蓄倾向 s=1−β；B 1.25 是拿 0.8 当分母求倒数（1/0.8）的错法——分母应为 1−β；C 0.80 是把乘数误当成 β 本身。口诀："一减贝塔倒一倒"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s3q6" data-answer="D" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">在一个三部门经济中，已知消费函数为 C=100+0.8Y，投资 I=300 亿元，政府购买 G=160 亿元。则均衡国民收入是（　）亿元。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 5000</button><button type="button" class="qopt" data-key="B">B. 4000</button><button type="button" class="qopt" data-key="C">C. 1500</button><button type="button" class="qopt" data-key="D">D. 2800</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：三部门均衡 Y=C+I+G。分步算：Y=100+0.8Y+300+160 → Y−0.8Y=560 → 0.2Y=560 → Y=560÷0.2=<strong>2800</strong>（D 对）。套公式 Y=(α+I+G)/(1−β)=(100+300+160)/(1−0.8)=560/0.2。漏加 G 会得 2000，分母误用 β 会得 700——分子查 G、分母查 1−β。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础07_国民收入核算和简单的宏观经济模型_第2节_宏观经济均衡的基本模型.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 宏观经济均衡的基本模型</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础07_国民收入核算和简单的宏观经济模型_第4节_总需求和总供给.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 总需求和总供给</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三章 生产和成本理论 · 生产者的组织形式和企业理论 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第三章 生产和成本理论 · 生产者的组织形式和企业理论</h1><div class="subtitle">第 1 节 / 共 3 节 · 预计学习时长 30 分钟</div><div class="progress-bar"><div class="fill" style="width:33%"></div></div><div class="progress-text">本章进度 1/3</div><div class="sec-badge none" id="sec-badge" data-sec="b03s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>生产者</strong>的定义与<strong>三种组织形式</strong>，分清"利润最大化"是目标假设、"销售收入/市场份额最大化"只是经验做法 <span class="hot">高频考点</span></li>
+<li>背熟<strong>科斯企业理论</strong>四件套：1937 年《企业的本质》、为节约交易费用而产生、是价格机制的替代物、根本原因是交易成本的节约 <span class="must">必考</span></li>
+<li>记住<strong>交易费用</strong>的两类构成，以及企业与市场交易费用差异的根源——<strong>信息的不完全性</strong> <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、生产者及其组织形式</h2>
+<h3>1. 什么是生产者</h3>
+<p><strong>生产者</strong>是指能够作出<strong>统一的生产决策</strong>的单个经济单位，即<strong>企业</strong>或<strong>厂商</strong>。企业是产品生产过程中的主要组织形式，主要包括三类：</p>
+<table>
+<thead>
+<tr>
+<th>组织形式</th>
+<th>一句话理解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>个人独资企业</strong></td>
+<td>一个人出资、一个人作主的企业</td>
+</tr>
+<tr>
+<td><strong>合伙制企业</strong></td>
+<td>几个人合伙出资、共同经营的企业</td>
+</tr>
+<tr>
+<td><strong>公司制企业</strong></td>
+<td>依法设立的公司，现代企业的主要形式</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小区门口一个人开的早餐铺——个人独资企业；几个朋友合伙开的设计工作室——合伙制企业；家电上市公司——公司制企业。形式不同，但它们都是能"作出统一生产决策"的生产者。</p></div></div>
+<div class="section"><h3>2. 生产者的目标：利润最大化 <span class="hot">高频考点</span></h3>
+<p><strong>生产者或企业的目标：追求利润最大化。</strong>这是生产者行为分析的基本假设。但要记住三层递进（判断、单选都爱在"唯一""经验做法"上设坑）：</p>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>表述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基本假设</td>
+<td>生产者或企业的目标是追求<strong>利润最大化</strong></td>
+</tr>
+<tr>
+<td>现实修正</td>
+<td>经济学家<strong>并不认为</strong>追求利润最大化是人们从事生产和交易活动的<strong>唯一动机</strong>（所有者不是真正的经营者）</td>
+</tr>
+<tr>
+<td>经验做法</td>
+<td>企业<strong>长期生存</strong>的经验做法：实现<strong>销售收入最大化</strong>或<strong>市场份额最大化</strong>，以此取代利润最大化决策</td>
+</tr>
+<tr>
+<td>底线结论</td>
+<td>实现<strong>利润最大化</strong>是所有企业在竞争中求得<strong>生存</strong>的关键</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>抓&quot;假设&quot;两个字：</strong><p>题目问"一般假设生产者的目标是什么"，答案只有<strong>利润最大化</strong>；"销售收入最大化""市场份额最大化"是<strong>长期生存的经验做法</strong>，不是行为分析中的目标假设——两者层次不同，别混。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 企业目标口诀</div><p><strong>"假设唯一是利润，做法可以换份额"</strong>——行为分析的假设只有一个：利润最大化；长期生存的经验做法才换成销售收入最大化或市场份额最大化。</p></div></div>
+<div class="section"><h2>二、企业形成的相关理论——科斯的企业理论 <span class="hot">高频考点</span></h2>
+<h3>3. 企业的本质：市场机制的替代物</h3>
+<p>美国经济学家<strong>科斯</strong>于 <strong>1937 年</strong>发表《企业的本质》，提出两大论断：</p>
+<ol>
+<li>企业是为了<strong>节约市场交易费用（或交易成本）</strong>而产生的；</li>
+<li>企业的<strong>本质或显著特征</strong>，是作为<strong>市场机制或价格机制的替代物</strong>。</li>
+</ol>
+<p><strong>交易费用</strong>是指围绕<strong>交易契约</strong>所产生的成本或费用，包括两类：</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一类</td>
+<td>签订契约时交易双方面临的<strong>偶然因素</strong>可能带来的损失——或因事先不可能被预见而没写进契约，或虽能被预见、但因为太复杂而无法写进契约</td>
+</tr>
+<tr>
+<td>第二类</td>
+<td><strong>签订契约</strong>以及<strong>监督和执行契约</strong>所花费的成本</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>交易费用是&quot;围绕契约&quot;的费用：</strong><p>抓限定词"<strong>围绕交易契约</strong>"：它不是生产本身的耗费，而是和市场上的"谈判、签约、防违约"打交道的成本。企业把一堆这样的市场交易收进内部，用统一决策替代一单一单的契约，交易费用就省下来了。</p></div></div>
+<div class="section"><h3>4. 企业存在的根本原因：交易成本的节约</h3>
+<p><strong>交易成本的节约是企业存在的根本原因</strong>，即企业是市场交易费用节约的产物。</p>
+<p>企业产生以后，企业与<strong>市场机制</strong>就是两种不同的<strong>协调生产和配置资源</strong>的方式，社会上形成两种交易：</p>
+<table>
+<thead>
+<tr>
+<th>交易类型</th>
+<th>发生位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>企业<strong>外部</strong>的市场交易</td>
+<td>企业与企业、企业与消费者之间，靠价格机制协调</td>
+</tr>
+<tr>
+<td>企业<strong>内部</strong>的交易</td>
+<td>企业内部的生产经营协作，靠统一决策协调</td>
+</tr>
+</tbody>
+</table>
+<p>导致市场机制和企业的<strong>交易费用不同</strong>的主要因素在于：<strong>信息的不完全性</strong>。通过企业这种组织形式，可以使一部分市场交易<strong>内部化</strong>，从而<strong>消除或降低</strong>一部分交易费用。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>每天中午吃饭：下馆子是"市场交易"——挑馆子、看菜单、怕缺斤短两，处处花心思（交易费用）；自己开火是"内部化"——食材流程自己统一安排，把一串市场交易变成了家里的"内部工序"。科斯说：当内部统一安排比一笔笔市场交易更省钱时，"企业"这种组织就诞生了。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 科斯理论四句诀</div><p><strong>"三七写本质，企业替市场；为省交易费，信息不完全"</strong>——1937 年《企业的本质》；企业是市场（价格）机制的<strong>替代物</strong>；为<strong>节约交易费用</strong>而产生、根本原因是<strong>交易成本的节约</strong>；企业内外交易费用不同的主要因素是<strong>信息的不完全性</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：两个&quot;科斯&quot;别串场</div><p>本章的科斯＝<strong>企业理论</strong>（企业因节约交易费用而产生、替代市场机制）；"市场失灵"一章的科斯＝<strong>产权理论</strong>（明确产权解决外部性）。题目问"企业产生的根本原因"选<strong>交易成本的节约</strong>；"克服外部性""明确产权"是拿另一章内容做的干扰项，见到就排除。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>生产者</strong>＝能够作出统一生产决策的单个经济单位（企业/厂商）；组织形式：个人独资、合伙制、公司制</li>
+<li><strong>目标假设</strong>：追求利润最大化；但并非唯一动机；长期生存的经验做法＝销售收入最大化或市场份额最大化</li>
+<li><strong>科斯</strong>（1937《企业的本质》）：企业为节约交易费用而产生；本质/显著特征＝市场机制或价格机制的替代物；根本原因＝交易成本的节约</li>
+<li><strong>交易费用</strong>＝围绕交易契约的成本费用＝偶然因素可能的损失＋签订、监督、执行契约的成本</li>
+<li>两种交易：企业外部市场交易、企业内部交易；费用差异主要因素＝<strong>信息的不完全性</strong>；企业使市场交易内部化</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b03s1q1" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">在生产者行为分析中，一般假设生产者或企业的目标是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 追求销售收入的持续增长</button><button type="button" class="qopt" data-key="B">B. 追求利润最大化</button><button type="button" class="qopt" data-key="C">C. 追求市场占有率的提高</button><button type="button" class="qopt" data-key="D">D. 追求收入最大化</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：生产者行为分析的基本假设就是企业追求<strong>利润最大化</strong>。A、C、D 的迷惑点在于"销售收入最大化""市场份额最大化"确有其事——但那是企业<strong>长期生存的经验做法</strong>，不是行为分析中的目标假设，层次不同。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s1q2" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">按照美国经济学家科斯的理论，企业产生的原因是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 提高产品产量</button><button type="button" class="qopt" data-key="B">B. 节约交易费用</button><button type="button" class="qopt" data-key="C">C. 扩大市场范围</button><button type="button" class="qopt" data-key="D">D. 促进新技术的应用</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：科斯在《企业的本质》中提出，企业是为了<strong>节约市场交易费用（交易成本）</strong>而产生的，交易成本的节约是企业存在的<strong>根本原因</strong>。A"提高产量"、C"扩大市场"、D"促进新技术"都与科斯的论证无关。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s1q3" data-answer="BDE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">美国经济学家科斯关于企业本质属性问题的观点主要有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 企业的本质是作为市场机制的组成部分，而非价格机制的替代物</button><button type="button" class="qopt" data-key="B">B. 通过企业这种组织形式，可以使一部分市场交易内部化</button><button type="button" class="qopt" data-key="C">C. 大多数生产者或企业的目标是追求生产规模最大化</button><button type="button" class="qopt" data-key="D">D. 企业是市场交易费用节约的产物</button><button type="button" class="qopt" data-key="E">E. 企业是为了节约市场交易费用或交易成本而产生的</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BDE</div><div class="q-exp"><p>析：B、D、E 均为科斯的观点——企业为节约交易费用而产生（E），是交易费用节约的产物（D），并可使一部分市场交易内部化、从而降低交易费用（B）。A 错误，科斯说的是企业的本质是<strong>作为</strong>市场机制或价格机制的<strong>替代物</strong>，不是市场机制的"组成部分"；C 错误，企业的目标是追求<strong>利润</strong>最大化，不是生产规模最大化。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s1q4" data-answer="B" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">作为两种不同的协调生产和配置资源的方式，企业和市场机制的交易费用是不同的，导致二者交易费用不同的主要因素是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 信息爆炸</button><button type="button" class="qopt" data-key="B">B. 信息的不完全性</button><button type="button" class="qopt" data-key="C">C. 信息技术进步</button><button type="button" class="qopt" data-key="D">D. 市场机制的滞后性</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：导致市场机制和企业的交易费用不同的主要因素是<strong>信息的不完全性</strong>——正因为信息不完全，市场契约才充满偶然与监督成本，企业才能通过把交易内部化来节约费用。A"信息爆炸"、C"信息技术进步"、D"滞后性"都是编造的干扰词，教材没有这些表述。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s1q5" data-answer="D" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">根据科斯的企业理论，企业存在的根本原因是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 生产力发展的需要</button><button type="button" class="qopt" data-key="B">B. 克服外部性</button><button type="button" class="qopt" data-key="C">C. 内部治理结构的优化</button><button type="button" class="qopt" data-key="D">D. 交易成本的节约</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：<strong>交易成本的节约</strong>是企业存在的根本原因，即企业是市场交易费用节约的产物。B"克服外部性"是典型串场干扰——那是科斯<strong>产权理论</strong>（市场失灵一章）解决外部性问题的思路，别拿"科斯"二字往企业理论上乱接。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s1q6" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">企业这一组织形式与市场相比，可以减少交易费用，是因为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 企业具有完全独立性</button><button type="button" class="qopt" data-key="B">B. 企业可以提供激励机制</button><button type="button" class="qopt" data-key="C">C. 企业可以不断模拟市场</button><button type="button" class="qopt" data-key="D">D. 企业减少了需要签订的契约数量</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：企业作为市场机制的替代物，大大<strong>减少了需要签订的契约数量</strong>——原本要在市场上反复谈判、签约、监督的交易，变成企业内部的统一指挥与协作，从而大量节约交易费用。A"完全独立性"、B"激励机制"、C"模拟市场"均不是科斯理论的原因表述。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础03_生产和成本理论_第2节_生产函数和生产曲线.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 生产函数和生产曲线</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

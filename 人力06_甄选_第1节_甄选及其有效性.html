@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第6章 甄选 · 甄选及其有效性 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第6章 甄选 · 甄选及其有效性</h1><div class="subtitle">第 1 节 / 共 2 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 1/2</div><div class="sec-badge none" id="sec-badge" data-sec="r06s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住甄选的三个要点与对组织的三重价值，想通"匹配≠越高越好" <span class="hot">高频考点</span></li>
+<li>背熟<strong>信度</strong>：定义、信度系数（0～1、0.7 分界）与四种类型，见情景能秒判 <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+<li>背熟<strong>效度</strong>三种类型（内容/效标/构想），分得清预测效度与同时效度 <span class="s3">★★★</span></li>
+<li>记死信度与效度的关系："可信不一定有效，有效必定可信" <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、甄选的概念及其意义</h2>
+<h3>1. 甄选的三个要点（★★★）<span class="hot">高频考点</span></h3>
+<p>甄选是组织在招聘环节"挑人"的决策过程，教材给了三个要点：</p>
+<table>
+<thead>
+<tr>
+<th>要点</th>
+<th>内容</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 有风险</td>
+<td>甄选决策本身蕴含着一定的<strong>风险</strong></td>
+<td>看走眼是常态，谁也不能打包票</td>
+</tr>
+<tr>
+<td>② 求匹配</td>
+<td>甄选的目的在于谋求<strong>职位</strong>与<strong>求职者所具有的某种特性的恰当水平</strong>，实现<strong>最优匹配</strong>（并非在所有情况下都是求职者智力水平越高越好）</td>
+<td>不是招"最厉害的人"，是招"最合适的人"</td>
+</tr>
+<tr>
+<td>③ 对标准</td>
+<td>不要把注意力过多地放在<strong>求职者之间相互比较</strong>上，要重点关注<strong>求职者与空缺职位需要达到的客观标准</strong>之间的比较</td>
+<td>拿人比岗位，不是拿人比人</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>甄选的核心逻辑是&quot;匹配&quot;二字：</strong><p>甄选不是选秀——不是把最聪明、学历最高的人捞进来，而是找到"岗位要求"与"个人特性"<strong>恰当水平</strong>的交汇点。比较的参照物是<strong>岗位的客观标准</strong>，不是其他候选人。这两句话是多选题的高频命题点。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>公司招一名出纳，日常工作是点钞、记账、跑银行。一位博士来应聘，智力水平远超岗位要求，但大概率干不长、留不住（大材小用）；一位会计专业大专生，细心稳重、技能刚好够用，反而更"匹配"——这就是"并非智力水平越高越好"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 甄选三要点</div><p><strong>"有风险、求匹配、对标准"</strong>——决策本身有风险；追求职位与特性的恰当水平、最优匹配（不是越高越好）；比的是人与岗位客观标准，不是人与人互比。</p></div></div>
+<div class="section"><h3>2. 甄选对组织的价值与意义</h3>
+<ol>
+<li>符合企业需要的<strong>优秀员工</strong>是确保<strong>组织战略目标达成</strong>的最根本保障；</li>
+<li>弥补甄选决策失误的<strong>代价可能极高</strong>；</li>
+<li>甄选决策失误可能会<strong>对员工本人造成伤害</strong>。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>甄选失误是&quot;双向伤害&quot;：</strong><p>组织这边：招错人要付出招聘重来的成本、培训成本、业绩损失，代价可能极高；员工那边：把人放错岗位，他的职业生涯也被耽误——所以甄选失误伤的是两头。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>把一个不擅长应酬的人硬放到大客户经理岗上：丢单、客户流失、再重招重训，组织付出了极高代价；这位员工也在不断的挫败里自我怀疑，几年黄金期被耽误——组织、个人双双受伤。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 价值三条</div><p><strong>"保战略、代价高、伤员工"</strong>——优秀员工是战略达成的最根本保障；弥补失误代价极高；失误还会伤害员工本人。</p></div></div>
+<div class="section"><h2>二、信度——测得"稳不稳"</h2>
+<h3>1. 信度的概念与信度系数（★）</h3>
+<p><strong>信度</strong>即测试的<strong>内部一致性程度或稳定性程度</strong>，是对任何一种测试工具的<strong>最基本要求</strong>。它指一种测试手段<strong>不受随机误差干扰</strong>的程度，反映一个人<strong>反复接受同一种测试或等值形式的测试</strong>时所得分数的<strong>一致性程度</strong>。</p>
+<p><strong>信度系数</strong>：信度的高低用信度系数来表述，系数介于 <strong>0～1</strong> 之间（0 表示信度最低，1 表示信度最高），<strong>系数不低于 0.7</strong> 的测试工具被视为<strong>信度较好</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>信度＝&quot;再测一次还一样吗&quot;：</strong><p>信度回答的问题是：同一个尺子量同一个人，量几次结果稳不稳。它只关心"稳"，不关心"准"——准不准是效度的事。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一台体重秤，今天称 60 公斤、明天称 60 公斤、后天还是 60 公斤——读数高度一致，这台秤"信度"很高；至于它量的是不是真实的体重（准不准），那就是另一回事了。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 信度系数</div><p><strong>"0 到 1 打分，0.7 过关"</strong>——信度系数介于 0～1，不低于 0.7 即视为信度较好。数字题直接选。</p></div></div>
+<div class="section"><h3>2. 信度的四种类型（★★★）<span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>考什么</th>
+<th>关键词与例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>重测信度</strong>（再测信度）</td>
+<td>用<strong>同一种测试工具</strong>在<strong>不同时间</strong>对<strong>同一群人</strong>进行多次测试，结果的一致性程度——考察测试在<strong>时间上的稳定性</strong></td>
+<td>两次测试的时间间隔<strong>半个月到半年</strong>比较合适</td>
+</tr>
+<tr>
+<td><strong>复本信度</strong></td>
+<td>对同一组被试者使用<strong>两种功能等值但表面内容不同</strong>的测试形式，考察两套分数之间的相关程度——反映两种复本测试在<strong>内容上的等值程度</strong></td>
+<td>高考 A 卷、B 卷</td>
+</tr>
+<tr>
+<td><strong>内部一致性信度</strong></td>
+<td><strong>同一测试内容各个题目之间</strong>得分的一致性程度——考察这些题目是否确实都在测量同一内容或特质</td>
+<td>①<strong>分半信度</strong>：把题目一分为二（如按<strong>奇偶数</strong>顺序分成两半），考察两个半份测试结果的相关系数；②<strong>同质性信度</strong>：测试内部所有题目考察同一内容的程度，常用参数是<strong>克伦巴赫 α 系数</strong></td>
+</tr>
+<tr>
+<td><strong>评价者信度</strong></td>
+<td><strong>不同评价者</strong>使用同一种测试工具时所给<strong>分数之间</strong>的一致性程度</td>
+<td>几位面试官给同一个人的打分是否接近</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>四种信度分别在&quot;比&quot;什么：</strong><p>重测比<strong>时间</strong>（同一群人、同一工具、隔段时间再测）；复本比<strong>卷子</strong>（两套等值卷的分差）；内部一致性比<strong>题目</strong>（卷内题目之间齐不齐心）；评价者比<strong>考官</strong>（不同打分人之间齐不齐心）。判断题先问"比的对象是谁"，答案就出来了。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>公司统一笔试招人：怕题目泄露，隔半个月用 B 卷给同一批人重考（重测）；怕泄题更彻底，同一场考试发 A、B 两套等值卷（复本）；阅卷后看看奇数题和偶数题的得分是否一致（分半信度）；三位面试官独立给同一候选人打分，一个 88、一个 87、一个 89（评价者信度高）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四种信度</div><p><strong>"重测比时间，复本比卷子，一致比题目，评价者比考官"</strong>。再补两个细节钩子：见"半个月到半年"→重测；见"A 卷 B 卷"→复本；见"奇偶分半 / 克伦巴赫 α 系数"→内部一致性。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 信度类型识别题眼</div><ul>
+<li><strong>重测</strong>：同一工具＋不同时间＋同一群人；</li>
+<li><strong>复本</strong>：两套"功能等值、表面不同"的卷子（A 卷 B 卷）；</li>
+<li><strong>内部一致性</strong>：题目之间（分半＝奇偶对半劈；同质＝克伦巴赫 α 系数）；</li>
+<li><strong>评价者</strong>：不同评价者打分的一致性。
+考试爱把"复本信度"与"重测信度"对调、把"分半"包装成"分半效度"（没有这个词，信度效度别串门）。</li>
+</ul></div></div>
+<div class="section"><h3>3. 达到较高信度需注意的问题（★）</h3>
+<ol>
+<li><strong>测试过程要标准化</strong>，尽可能按照测量学的要求去做；</li>
+<li>选取的<strong>样本要具有广泛的代表性</strong>（样本应具有<strong>异质性</strong>，而不是集中于某一类人）；</li>
+<li>保持<strong>良好的测试环境</strong>（包括<strong>心理环境、物理环境</strong>），努力使被测试者保持一种<strong>轻松自然</strong>的心态；</li>
+<li>注意测试的<strong>难度和长度</strong>——</li>
+<li><strong>难度</strong>：太难或太易都不好，会出现<strong>地板效应</strong>（得分普遍过低）或<strong>天花板效应</strong>（得分普遍偏高）；</li>
+<li><strong>长度</strong>：测试条目<strong>不宜过多</strong>（条目越多信度往往越高，但太多会引起疲劳和厌倦，影响测试质量）。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>信度是&quot;测得稳&quot;的工程问题：</strong><p>想让分数稳定，就得把测试当"精密实验"来做：流程标准化、样本多样化、环境舒服、难度适中、题量克制——五个抓手，一个都不能瘸。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>拿小学一年级的"1+1=?"考大学生——人人满分，分数挤在顶部区分不出差异，这就是<strong>天花板效应</strong>；反过来拿高等数学考他们中的文科生——普遍接近零分挤在底部，这就是<strong>地板效应</strong>。两种情况下分数都"稳"，但对甄选毫无用处。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 提信度四件事</div><p><strong>"过程标准、样本异质、环境舒服、难度长度"</strong>；再记一句：<strong>"太难躺地板，太易顶天花板"</strong>——多选题见"测试难度越大越好""样本集中于某一类人更好"都是错的。</p></div></div>
+<div class="section"><h2>三、效度——测得"准不准"</h2>
+<h3>1. 效度的概念与三种类型（★★★）<span class="hot">高频考点</span></h3>
+<p><strong>效度</strong>指一种测试的<strong>有效性</strong>，反映一种测试工具对于它<strong>所要测量的内容或特质</strong>进行<strong>准确测量</strong>的程度。三种类型：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>测什么</th>
+<th>关键点与例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>内容效度</strong></td>
+<td>测试<strong>内容</strong>与测试所要达到的<strong>目标</strong>之间的相关程度，即测试内容能够<strong>代表</strong>所要测量的主题或特质的程度</td>
+<td>检验主要采用<strong>专家判断法</strong>；<strong>不太适合评价较为抽象的特质</strong>。例：预测驾驶员的基本驾驶技术，让他直接开车上路测试</td>
+</tr>
+<tr>
+<td><strong>效标效度</strong>（效标关联效度）</td>
+<td>测试对被试者的<strong>工作行为或工作绩效</strong>进行<strong>预测的准确程度</strong></td>
+<td>两个子类：①<strong>预测效度</strong>——<strong>雇佣前</strong>的测试分数与<strong>雇佣后</strong>的实际工作绩效之间是否存在实证性联系；②<strong>同时效度</strong>（同步效度）——已经在工作岗位上的<strong>任职者</strong>的测试分数与其<strong>绩效数据</strong>之间的关系</td>
+</tr>
+<tr>
+<td><strong>构想效度</strong>（结构效度）（★）</td>
+<td>测试对于<strong>不可观察的、比较抽象的构想或特质</strong>进行测量的程度，即测试结果能否证实或解释某一<strong>理论上的假设、术语等构想</strong></td>
+<td>测"责任心""进取心"这类看不见摸不着的特质</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三种效度回答三个问题：</strong><p><strong>内容效度</strong>问："你考的，是不是你想考的？"（内容对不对路）——<strong>效标效度</strong>问："你测出的分数，能不能预测工作表现？"（分数管不管用）——<strong>构想效度</strong>问："看不见的抽象特质，你测得出来吗？"（理论构想起立得住）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>招客服想测"沟通能力"，卷子却全是数学计算题——内容与目标脱节，<strong>内容效度</strong>低；入职前的岗位测试里得高分的那批人，半年后绩效确实普遍更好——分数预测了绩效，<strong>预测效度</strong>（效标效度的一种）高；设计一份问卷去测"责任心"这种抽象特质，测出来的结果能不能支撑"这个人责任心强"的结论，考验的是<strong>构想效度</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三种效度</div><p><strong>"内容对目标，效标对绩效，构想对理论"</strong>；效标效度再切两刀：<strong>"先测后雇是预测，边雇边测是同时"</strong>——雇佣前测分数、看它对雇佣后绩效的预测力＝预测效度；对在职员工边测分数边拿绩效数据比＝同时效度。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 效度识别题眼</div><ul>
+<li>见"<strong>预测</strong>工作行为/工作绩效的<strong>准确程度</strong>"→<strong>效标效度</strong>；</li>
+<li>见"内容能否<strong>代表</strong>所要测量的主题/特质""<strong>专家判断法</strong>"→<strong>内容效度</strong>；</li>
+<li>见"<strong>抽象</strong>构想/特质""理论假设""<strong>结构</strong>效度"→<strong>构想效度</strong>；</li>
+<li>陷阱：<strong>预测效度、同时效度是效标效度的子类</strong>，不是与它并列的第三种效度；也别把它们错当信度。</li>
+</ul></div></div>
+<div class="section"><h3>2. 信度与效度的关系（★★）<span class="must">必考</span></h3>
+<ol>
+<li><strong>信度是效度的必要条件（但不是充分条件）</strong>；</li>
+<li>一项甄选测试的<strong>信度如果不好，其效度一定较差</strong>；反过来，一项测试的<strong>效度较好，则其信度一定也比较高</strong>；</li>
+<li>从误差角度看：<strong>信度</strong>只受测量中<strong>非系统性误差</strong>（随机误差）的影响；<strong>效度</strong>同时受<strong>非系统性误差和系统性误差（固定误差）</strong>的影响。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>信度是地基，效度是房子：</strong><p>地基不稳（信度低），房子必歪（效度一定差）；但地基牢（信度高），房子不一定正（效度未必好）——一台每次都<strong>稳定地少称 2 公斤</strong>的秤，读数很一致（信度高），却称不准（效度低）。所以"可信的不一定有效，有效的必定可信"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>两位面试官给同一位候选人都打 85 分（评价者信度高），但他们一个只看表达能力、一个只看学历背景，谁也没测到岗位真正需要的东西——信度有了，效度没有。这就是"信度高 ≠ 效度高"的活例子。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 信效度关系</div><p><strong>"可信不一定有效，有效必定可信"</strong>——信度是效度的<strong>必要非充分</strong>条件。选择题见"信度不好效度一定差"（对）、"效度好信度一定高"（对）、"信度好效度一定好"（错）、"效度好信度不一定好"（错）。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>甄选三要点</strong>：有风险、求匹配（恰当水平，并非智力越高越好）、对标准（人与岗位标准比，非人与人比）</li>
+<li><strong>价值三条</strong>：保战略（优秀员工是战略达成的最根本保障）、代价高（弥补失误代价极高）、伤员工</li>
+<li><strong>信度</strong>＝内部一致性/稳定性程度，测试工具的<strong>最基本要求</strong>；信度系数 0～1，<strong>≥0.7</strong> 较好</li>
+<li><strong>四信度</strong>：重测（时间，隔半个月到半年）/复本（A 卷 B 卷等值）/内部一致性（分半＝奇偶对半、同质＝克伦巴赫 α）/评价者（不同打分人）</li>
+<li><strong>提信度</strong>：过程标准化、样本异质、环境好、难度长度（<strong>地板＝普遍过低，天花板＝普遍偏高</strong>）</li>
+<li><strong>三效度</strong>：内容（专家判断，不适合抽象特质）/效标（<strong>预测＝先测后雇，同时＝在职者</strong>）/构想（抽象特质，又称结构效度）</li>
+<li><strong>信效度关系</strong>：信度是效度的<strong>必要非充分</strong>条件；信度只受非系统误差影响，效度受系统＋非系统误差影响；<strong>可信不一定有效，有效必定可信</strong></li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r06s1q1" data-answer="D" data-type="single"><span class="q-tag">2016·单选</span><div class="q-stem">下列关于信度与效度的关系的说法中，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 信度与效度的含义相同</button><button type="button" class="qopt" data-key="B">B. 一个测验有效却不一定可信</button><button type="button" class="qopt" data-key="C">C. 信度与效度都有可能受到测量中系统误差的影响</button><button type="button" class="qopt" data-key="D">D. 一个测验可信但不一定有效</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：<strong>信度</strong>只受测量中<strong>非系统性误差</strong>（随机误差）的影响，而<strong>效度</strong>同时受非系统性误差和<strong>系统性误差（固定误差）</strong>的影响，C 错误。因此一个测验可能<strong>可信但不一定有效</strong>（D 正确），却不可能"有效而不可信"（B 反了）——信度是效度的<strong>必要而非充分条件</strong>。A 显然错误：信度管"稳不稳"，效度管"准不准"，含义并不相同。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s1q2" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">同一测试内容多个题目得分的一致性属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 内部一致性信度</button><button type="button" class="qopt" data-key="B">B. 构想效度</button><button type="button" class="qopt" data-key="C">C. 评价者信度</button><button type="button" class="qopt" data-key="D">D. 效标效度</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：<strong>内部一致性信度</strong>反映的就是同一测试内容的各个题目之间得分的一致性程度，考察这些题目是否都在测量同一内容或特质。B 构想效度是测抽象构想的能力；C 评价者信度比的是<strong>不同评价者</strong>打分之间的一致性；D 效标效度看分数能否预测工作绩效——三者都与"题目之间的一致性"对不上号。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s1q3" data-answer="A" data-type="single"><span class="q-tag">2019·单选</span><div class="q-stem">当企业同时使用同一种测试的 A 卷和 B 卷进行甄选测试时，A 卷和 B 卷在测试内容上的等值程度称为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 复本信度</button><button type="button" class="qopt" data-key="B">B. 分半效度</button><button type="button" class="qopt" data-key="C">C. 重测信度</button><button type="button" class="qopt" data-key="D">D. 预测效度</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：<strong>复本信度</strong>指对同一组被试者使用<strong>两种功能等值但表面内容并不相同</strong>的测试形式（典型如高考 A 卷、B 卷），考察两套分数之间的相关程度——它反映的正是两种复本测试在<strong>内容上的等值程度</strong>。C 重测信度是同一份工具<strong>隔时间</strong>再测；D 预测效度是雇佣前分数对雇佣后绩效的预测；B"分半效度"是拼凑的干扰词——"分半"是内部一致性信度的考察方式（题目一分为二），且它是信度概念，不叫"效度"。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s1q4" data-answer="C" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">某个测试的目的是测试求职者的逻辑推理能力，测试设计的题目却主要围绕文字写作能力展开。该测试的（　）比较低。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 内部一致性信度</button><button type="button" class="qopt" data-key="B">B. 效标效度</button><button type="button" class="qopt" data-key="C">C. 内容效度</button><button type="button" class="qopt" data-key="D">D. 复本信度</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：<strong>内容效度</strong>＝测试内容与测试所要达到的目标之间的相关程度，即测试内容能否<strong>代表</strong>所要测量的主题或特质。想测逻辑推理却考文字写作，"考的"与"要测的"脱节，内容效度自然低。A、D 是信度指标，管题目一致性、卷子等值性；B 效标效度看分数能否预测工作绩效，题干没有涉及绩效信息。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s1q5" data-answer="C" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">某项甄选测试预测候选人未来工作绩效的准确性程度比较高，这表明该测试具有比较好的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 复本信度</button><button type="button" class="qopt" data-key="B">B. 重测信度</button><button type="button" class="qopt" data-key="C">C. 效标效度</button><button type="button" class="qopt" data-key="D">D. 构想效度</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：<strong>效标效度</strong>（效标关联效度）指一种测试或甄选技术对被试者的一种或多种<strong>工作行为或工作绩效进行预测的准确程度</strong>——"预测未来工作绩效准不准"正是它的标准题眼。A、B 是信度指标，管等值性与时间稳定性；D 构想效度管的是抽象特质能否被测出来，都与"预测绩效"无关。
+:::</p></div></details></div><div class="quiz-item" data-qid="r06s1q6" data-answer="ABCE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">要使测试达到较高的信度，需要注意（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 样本要有广泛的代表性</button><button type="button" class="qopt" data-key="B">B. 注意测试的难度和长度</button><button type="button" class="qopt" data-key="C">C. 保持良好的测试环境</button><button type="button" class="qopt" data-key="D">D. 测试的难度越大越好</button><button type="button" class="qopt" data-key="E">E. 让被测试者保持轻松自然的心态</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：提高信度的注意点：①测试过程<strong>标准化</strong>；②样本有广泛代表性（<strong>异质性</strong>，不集中于某一类人，A 对）；③保持良好的测试环境（心理环境＋物理环境，使被测试者<strong>轻松自然</strong>，C、E 对）；④注意<strong>难度和长度</strong>（B 对）——太难或太易都不好：太易出现<strong>天花板效应</strong>（得分普遍偏高）、太难出现<strong>地板效应</strong>（得分普遍过低），所以 D"难度越大越好"错误；此外测试条目不宜过多，以免引起疲劳和厌倦。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力06_甄选_第2节_甄选的主要方法.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 甄选的主要方法</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

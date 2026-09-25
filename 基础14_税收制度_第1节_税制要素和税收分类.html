@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十四章 税收制度 · 税制要素和税收分类 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第二部分 财政</span><h1>第十四章 税收制度 · 税制要素和税收分类</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="b14s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>说清税制三大<strong>基本要素</strong>（纳税人、课税对象、税率）与各自的"考点身份"，会认其他要素 <span class="hot">高频考点</span><span class="must">必考</span></li>
+<li>一刀切分清<strong>纳税人、负税人、扣缴义务人</strong>，会判断何时一致、何时分离 <span class="hot">高频考点</span></li>
+<li>背熟五大<strong>税收分类</strong>维度与每类典型税种，盯住"按××划分"四个字秒选 <span class="s3">★★★</span></li>
+<li>记住现行 <strong>18 个税种、5 大类</strong>的归属和税收法律级次 6 级 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、税制要素</h2>
+<h3>1. 三大基本要素 <span class="hot">高频考点</span> <span class="must">必考</span></h3>
+<p><strong>税制要素</strong>是指构成一国税收制度的主要因素，具体包括纳税人、课税对象、税率、纳税环节、纳税期限、减税和免税、违章处理、纳税地点等。其中，<strong>纳税人、课税对象和税率</strong>是税制的<strong>基本要素</strong>。</p>
+<p>三个基本要素各管一件事：</p>
+<table>
+<thead>
+<tr>
+<th>基本要素</th>
+<th>回答的问题</th>
+<th>精确定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>纳税人</strong></td>
+<td>对<strong>谁</strong>收</td>
+<td>纳税主体，即税法规定<strong>直接负有纳税义务</strong>的单位和个人</td>
+</tr>
+<tr>
+<td><strong>课税对象</strong></td>
+<td>对<strong>什么</strong>收</td>
+<td>即<strong>征税客体</strong>，税法规定的征税的目的物；是<strong>不同税种间相互区别的主要标志</strong>，规定了政府可以对什么征税</td>
+</tr>
+<tr>
+<td><strong>税率</strong></td>
+<td>收<strong>多少</strong></td>
+<td>税法规定的<strong>应征税额与课税对象之间的比例</strong>，是计算应征税额的标准，是<strong>税收制度的中心环节</strong>；税率的高低体现征税的<strong>深度</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三个&quot;考点身份&quot;：</strong><p>课税对象＝<strong>税种区分标志</strong>；税率＝<strong>税收制度的中心环节</strong>；纳税人＝<strong>纳税主体</strong>。题目问"区分不同税种的主要标志"选课税对象，问"税收制度的中心环节"选税率，这两个身份要贴上标签背死。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>你发年终奖缴个人所得税：对谁收？——你本人（纳税人）；对什么收？——你的所得（课税对象）；收多少？——按税率表算（税率）。任何一个税种都能用"对谁收、对什么收、收多少"三连问拆开。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三要素定位口诀</div><p><strong>"对谁收、对什么收、收多少"</strong>——纳税人、课税对象、税率一一对应。考试问"属于/不包括"，拿这三件对照，剩下的（纳税期限、纳税地点等）都是其他要素。</p></div></div>
+<div class="section"><h3>2. 纳税人、负税人、扣缴义务人 <span class="hot">高频考点</span></h3>
+<p>纳税人相关概念辨析：</p>
+<table>
+<thead>
+<tr>
+<th>相关概念</th>
+<th>具体内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>纳税人</strong></td>
+<td>即纳税主体，是指<strong>直接负有纳税义务</strong>的单位和个人</td>
+</tr>
+<tr>
+<td><strong>负税人</strong></td>
+<td><strong>最终负担税款</strong>的单位和个人；纳税人和负税人<strong>可能一致也可能不一致</strong>：(1) 个人所得税和企业所得税两者<strong>一致</strong>；(2) 增值税、消费税<strong>不一致</strong></td>
+</tr>
+<tr>
+<td><strong>扣缴义务人</strong></td>
+<td>负有<strong>代扣代缴、代收代缴税款义务</strong>的单位和个 人</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>何时一致、何时分离：</strong><p>所得税类"<strong>谁纳税谁负担</strong>"（直接税，一致）；货物和劳务税类"<strong>纳税人把税转嫁给别人</strong>"（间接税，分离）。这一条直接通着后面的"直接税/间接税"分类——两处考点是一根线。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>打开个人所得税 APP，能看到你的<strong>扣缴义务人</strong>——通常就是你的雇主：发工资时单位<strong>代扣代缴</strong>税款，单位是扣缴义务人，你本人才是纳税人兼负税人。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三个&quot;人&quot;口诀</div><p><strong>"交钱的是纳税人，掏钱的是负税人，代扣的是扣缴义务人"</strong>；一致性记<strong>"所得两税一致，增消两税分离"</strong>（个人所得税、企业所得税一致；增值税、消费税不一致）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：纳税人 ≠ 负税人</div><p>题目说"增值税的纳税人是最终消费者"就错了——增值税的<strong>纳税人</strong>是销售货物的单位和个人，<strong>负税人</strong>才是最终消费者。判断题最爱在这里设坑。</p></div></div>
+<div class="section"><h3>3. 课税对象、税目与计税依据 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>精确定义</th>
+<th>记忆点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>课税对象</strong></td>
+<td>税法规定的征税的<strong>目的物</strong>（即征税客体）</td>
+<td>不同税种间相互区别的<strong>主要标志</strong></td>
+</tr>
+<tr>
+<td><strong>税目</strong></td>
+<td>税法规定的<strong>课税对象的具体项目</strong>，是对课税对象的具体划分，反映具体的征税范围</td>
+<td>代表征税的<strong>广度</strong></td>
+</tr>
+<tr>
+<td><strong>计税依据</strong></td>
+<td>也称<strong>课税标准</strong>，是<strong>计算应纳税额的依据</strong>，规定如何确定和度量课税对象</td>
+<td>两种主要形式：<strong>计税金额</strong>（从价税）、<strong>计税数量</strong>（从量税）；计税金额可以是收入额、利润额、财产额等</td>
+</tr>
+<tr>
+<td><strong>税源</strong></td>
+<td>税收的<strong>经济来源或最终出处</strong></td>
+<td>税源总是以<strong>收入</strong>的形式存在</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>广度与深度的分界：</strong><p><strong>税目管"广"（征多宽），税率管"深"（征多重）</strong>；计税依据管"怎么算"，税源管"钱从哪来"。四个词各管一段，考试就爱混着问。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>消费税的课税对象是"特定消费品"，具体划分成烟、酒、高档化妆品等税目——这是"征税的广度"；小汽车再按排气量分档定税率，就是"征多深"的问题。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 税目口诀</div><p><strong>"税目广，从价量"</strong>——见"代表征税的广度/具体项目/具体划分"选<strong>税目</strong>；见"计算应纳税额的依据/课税标准"选<strong>计税依据</strong>；见"经济来源或最终出处"选<strong>税源</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 四个词一句话辨析</div><p>"不同税种相互区别的主要标志"→课税对象；"税收制度的中心环节"→税率；"代表征税的广度"→税目；"计算应纳税额的依据"→计税依据（又叫税基）。四个"身份"互为干扰项，背的时候成对背。</p></div></div>
+<div class="section"><h3>4. 税率：税收制度的中心环节 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>税率</strong>是指税法规定的应征税额与课税对象之间的比例，是计算应征税额的标准，是<strong>税收制度的中心环节</strong>；税率的高低体现征税的<strong>深度</strong>。税率的基本类型：</p>
+<table>
+<thead>
+<tr>
+<th>税率类型</th>
+<th>主要内容</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>比例税率</strong></td>
+<td>对同一征税对象，<strong>不论其数量大小都按同一比例征税</strong>；税率不随征税对象数量的变动而变动</td>
+<td>多少都一个价</td>
+</tr>
+<tr>
+<td><strong>定额税率（固定税额）</strong></td>
+<td>按征税对象的<strong>一定计量单位规定固定税额</strong>，以<strong>绝对金额</strong>表示</td>
+<td>按件、按吨收固定的钱；一般适用于<strong>从量计征</strong>的税种</td>
+</tr>
+<tr>
+<td><strong>累进税率</strong></td>
+<td>税率<strong>随课税对象的增大而提高</strong>，包括<strong>全额累进税率、超额累进税率</strong>等</td>
+<td>赚得越多，档位越高</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 累进税率的第三种：超率累进（通识补充）</div><p>教材此处写"全额累进税率、超额累进税率<strong>等</strong>"，这个"等"字里还有一种——<strong>超率累进税率</strong>：以征税对象的<strong>相对率</strong>（而不是绝对额）划分级距、分段累进计算，最典型的是<strong>土地增值税</strong>（按增值额与扣除项目金额的比率分四级超率累进，税率 30%～60%）。多选"累进税率的种类"遇"超率累进"别当错项；"全额/超额"的计算辨析仍以教材重点讲的两者为准。</p></div></div>
+<div class="section"><div class="keypoint"><strong>超额累进为什么&quot;温和&quot;：</strong><p>超额累进只对<strong>超过上一档次的部分</strong>用高税率，全额累进把<strong>全部数额</strong>按所对应的最高档税率一次计算——同样的所得，全额累进税负更重。<strong>"各等级计算出的税额加总"是超额累进的特征</strong>，2024 年真题就在这里设错。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>假设某所得税率表为：所得 3 万元以下 3%，超过 3 万元的部分 10%。某人应税所得 5 万元：
+- <strong>全额累进</strong>：全部按 10% 算，5×10%＝0.5 万元；
+- <strong>超额累进</strong>：分段加总，3×3%＋2×10%＝0.09＋0.2＝0.29 万元。
+同一笔所得，超额累进少缴 0.21 万元——只有"超过的部分"才用高税率。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 税率三类型口诀</div><p><strong>"税率深，必（比）定累"</strong>——三大类型：比（比例税率）、定（定额税率）、累（累进税率）。见"不论数量大小同一比例"选比例；见"计量单位规定固定税额、从量计征"选定额；见"随课税对象增大而提高"选累进。</p></div></div>
+<div class="section"><h3>5. 其他税制要素 <span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>税制要素</th>
+<th>含义及主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>纳税环节</strong></td>
+<td>国民收入与支出环流的过程中，按税法规定<strong>应当缴纳税款的环节</strong></td>
+</tr>
+<tr>
+<td><strong>纳税期限</strong></td>
+<td>又称计税期间，是<strong>纳税人缴纳税款的周期</strong>，通常为一个时间段；相关概念还有纳税义务发生时间和纳税申报期限</td>
+</tr>
+<tr>
+<td><strong>减税免税</strong></td>
+<td>税法对某些纳税人或征税对象给予鼓励和照顾的<strong>特殊规定</strong>：<strong>减税</strong>＝对应纳税额<strong>少征一部分</strong>；<strong>免税</strong>＝对应纳税额<strong>全部免征</strong>；除税法列举的免税项目外，一般减税、免税都属于<strong>定期减免</strong>性质，<strong>到期应当恢复征税</strong></td>
+</tr>
+<tr>
+<td><strong>违章处理</strong></td>
+<td>税务机关对纳税人违反税法的行为采取的<strong>处罚性措施</strong>，是<strong>税收强制性特征的体现</strong></td>
+</tr>
+<tr>
+<td><strong>纳税地点</strong></td>
+<td>纳税人<strong>应当缴纳税款的地点</strong>；一般来说与纳税义务发生地<strong>一致</strong>，但特殊情况下<strong>二者也可不一致</strong>（如与总公司不在同一地点的分公司利润在总公司汇总纳税）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两个判断题钩子：</strong><p>①"违章处理体现税收的强制性"——<strong>对</strong>；②"纳税地点和纳税义务发生地一定一致"——<strong>错</strong>，一般一致、特殊情况可不一致。另外"定期减免、到期恢复征税"也别忘。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某公司在北京注册，在广州设一家非独立核算的分公司，分公司赚了钱，税款却汇总到北京总公司缴纳——这就是"纳税地点与纳税义务发生地不一致"的典型。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 其他要素五连问</div><p><strong>"哪个环节、多久、优惠、敢不交？、去哪交"</strong>——纳税环节、纳税期限、减税免税、违章处理、纳税地点，顺着五个问题把其他要素一次背全。</p></div></div>
+<div class="section"><h2>二、税收分类</h2>
+<h3>1. 五大分类维度 <span class="hot">高频考点</span> <span class="must">必考</span> <span class="s3">★★★</span></h3>
+<p>税收可以从五个角度分类，做题必盯住题干"<strong>按××划分/分类</strong>"几个字：</p>
+<table>
+<thead>
+<tr>
+<th>分类标准</th>
+<th>类型</th>
+<th>典型税种/内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>按课税对象</strong></td>
+<td>所得税</td>
+<td>以纳税人的所得（收益或收入）为征税对象：企业所得税、个人所得税</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>货物和劳务税</td>
+<td>在生产、流通和服务领域以商品或劳务的<strong>销售额</strong>为征税对象：增值税、消费税、关税</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>财产税</td>
+<td>以各种<strong>动产和不动产</strong>为征税对象：房产税、契税、车船税</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>资源税</td>
+<td>对从事资源开发的单位和个人征收：城镇土地使用税等</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>行为税</td>
+<td>对纳税人的某些<strong>特定行为</strong>开征：印花税等</td>
+</tr>
+<tr>
+<td><strong>按计量课税对象的标准</strong></td>
+<td>从价税</td>
+<td>以课税对象的<strong>价格</strong>为计税依据：增值税、所得税</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>从量税</td>
+<td>以课税对象的<strong>数量、重量、容量或体积</strong>为计税依据：我国消费税中的啤酒、汽油、柴油等</td>
+</tr>
+<tr>
+<td><strong>按税收与价格的关系</strong></td>
+<td>价内税</td>
+<td>税款<strong>构成</strong>商品或劳务价格的组成部分：消费税</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>价外税</td>
+<td>税款作为价格<strong>以外附加</strong>的税收：增值税</td>
+</tr>
+<tr>
+<td><strong>按税负能否转嫁</strong></td>
+<td>直接税</td>
+<td>由纳税人<strong>直接负担税负、不发生税负转嫁关系</strong>，纳税人就是负税人：所得税和财产税</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>间接税</td>
+<td>纳税人<strong>能将税负转嫁给他人</strong>负担：增值税和消费税</td>
+</tr>
+<tr>
+<td><strong>按税收管理权限和使用权限</strong></td>
+<td>中央税</td>
+<td>由<strong>中央</strong>管辖课征并支配：消费税、关税</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>地方税</td>
+<td>由<strong>地方</strong>管辖课征并支配：契税、房产税、耕地占用税、土地增值税、城镇土地使用税、车船税等</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>中央和地方共享税</td>
+<td>中央政府和地方政府<strong>共同享有并按一定比例分成</strong>：增值税、企业所得税、个人所得税</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三对&quot;孪生分类&quot;各看一眼：</strong><p>价内/价外看"<strong>税在不在价格里</strong>"；直接/间接看"<strong>税负能不能转出去</strong>"；从价/从量看"<strong>按钱算还是按量算</strong>"。价内税、价外税与直接税、间接税没有必然的对应关系——消费税既是价内税也是间接税，增值税既是价外税也是间接税，判断依据各是各的。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>增值税按课税对象属<strong>货物和劳务税</strong>；按计量标准属<strong>从价税</strong>；按与价格的关系属<strong>价外税</strong>；按税负能否转嫁属<strong>间接税</strong>（转嫁给最终消费者）；按管理权限属<strong>中央和地方共享税</strong>。一个税种五个标签，互不冲突。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 五维分类口诀</div><p><strong>"消费内增值外；直接所得财产、间接消费增值；中央消关、共享增企个"</strong>——价内价外记消费税/增值税；直接税记所得税＋财产税；中央税记消费税＋关税；共享税记增值税＋企业所得税＋个人所得税；剩下的契税、房产税、耕地占用税、土地增值税、城镇土地使用税、车船税全归地方税。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 审题三步法</div><p>第一步圈出"<strong>按××划分</strong>"；第二步套对应口诀锁定类型；第三步核对典型税种。2024 年真题"车船税属于地方税"就考地方税清单——六个地方税种背熟就能秒杀。</p></div></div>
+<div class="section"><h3>2. 我国现行税收法律制度 <span class="must">必考</span></h3>
+<p>我国现行税收法律制度是由<strong>法律、法规和规章</strong>组成的一个统一的法律体系，法律级次共 6 级：</p>
+<table>
+<thead>
+<tr>
+<th>级次</th>
+<th>制定主体</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>全国人民代表大会和全国人民代表大会常务委员会制定的<strong>税收法律</strong></td>
+<td>《税收征收管理法》《企业所得税法》《个人所得税法》《车船税法》《环境保护税法》《烟叶税法》《船舶吨税法》《耕地占用税法》《车辆购置税法》《资源税法》《契税法》《城市维护建设税法》等</td>
+</tr>
+<tr>
+<td>②</td>
+<td>全国人大或其常委会<strong>授权立法</strong></td>
+<td>国务院经授权立法制定的《房产税暂行条例》《城镇土地使用税暂行条例》等暂行条例</td>
+</tr>
+<tr>
+<td>③</td>
+<td>国务院制定的<strong>税收行政法规</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>④</td>
+<td>地方人民代表大会及其常务委员会制定的<strong>税收地方性法规</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>国务院税务主管部门制定的<strong>税收部门规章</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>地方政府制定的<strong>税收地方规章</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>现行税收法律制度共由 <strong>18 个税种</strong>组成，按其性质和作用大致分为 5 类：</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>包括税种（个数）</th>
+<th>调节作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>货物和劳务税类</strong></td>
+<td>增值税、消费税、关税（3）</td>
+<td>主要在生产、流通或者服务业中发挥调节作用</td>
+</tr>
+<tr>
+<td><strong>所得税类</strong></td>
+<td>企业所得税、个人所得税（2）</td>
+<td>在国民收入形成后，对生产经营者的利润和个人的纯收入发挥调节作用</td>
+</tr>
+<tr>
+<td><strong>财产税类</strong></td>
+<td>房产税、契税、车船税（3）</td>
+<td>主要对某些财产和行为发挥调节作用</td>
+</tr>
+<tr>
+<td><strong>资源税类</strong></td>
+<td>资源税、城镇土地使用税、耕地占用税、土地增值税（4）</td>
+<td>主要对因开发和利用自然资源而形成的<strong>级差收入</strong>发挥调节作用</td>
+</tr>
+<tr>
+<td><strong>行为目的税类</strong></td>
+<td>环境保护税、印花税、城市维护建设税、车辆购置税、烟叶税、船舶吨税（6）</td>
+<td>为达到特定目的，对特定对象和特定行为发挥调节作用</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>18＝3＋2＋3＋4＋6：</strong><p>五类个数加总正好 18，背个数能自检：<strong>货劳 3、所得 2、财产 3、资源 4、行为目的 6</strong>。漏一个税种或归错类，多选题立刻丢分。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>很多人顺手把"土地增值税"归进货物和劳务税或财产税——错了，它在<strong>资源税类</strong>（调节开发利用自然资源形成的级差收入）。同理，城市维护建设税在<strong>行为目的税类</strong>，不在货劳类。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 五类个数口诀</div><p><strong>"货劳 3、所得 2、财产 3、资源 4、行为目的 6"</strong>——32346，加总 18 自检。资源税类四兄弟记"<strong>资源城镇耕土</strong>"（资源税、城镇土地使用税、耕地占用税、土地增值税）。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>税制要素</strong>：纳税人、课税对象、税率、纳税环节、纳税期限、减税和免税、违章处理、纳税地点；<strong>基本要素只有前三个</strong></li>
+<li><strong>三要素定位</strong>：对谁收＝纳税人；对什么收＝课税对象（税种区分标志）；收多少＝税率（税收制度的中心环节，体现深度）</li>
+<li><strong>三个"人"</strong>：纳税人＝直接负纳税义务；负税人＝最终负担税款（个税企税一致、增消分离）；扣缴义务人＝代扣代缴、代收代缴</li>
+<li><strong>税目</strong>＝课税对象的具体项目/具体划分，代表<strong>广度</strong>；计税依据＝计算应纳税额的依据（计税金额从价、计税数量从量）；税源＝经济来源，总以收入形式存在</li>
+<li><strong>税率三类型</strong>：比例（不论数量同一比例）、定额（固定税额、从量计征）、累进（全额累进/超额累进；分等级加总＝超额累进）</li>
+<li><strong>其他要素</strong>：违章处理＝强制性体现；纳税地点与纳税义务发生地一般一致、可不一致（分公司汇总纳税）；减免一般定期、到期恢复征税</li>
+<li><strong>五大分类</strong>：课税对象（所得/货劳/财产/资源/行为）、从价从量、价内（消费税）价外（增值税）、直接（所得税财产税）间接（增值税消费税）、中央（消关）地方（契房耕土增车船）共享（增企个）</li>
+<li><strong>现行制度</strong>：法律级次 6 级；18 税种 5 类＝货劳 3＋所得 2＋财产 3＋资源 4＋行为目的 6</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b14s1q1" data-answer="B" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">下列不属于税制基本要素的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 税率</button><button type="button" class="qopt" data-key="B">B. 纳税期限</button><button type="button" class="qopt" data-key="C">C. 课税对象</button><button type="button" class="qopt" data-key="D">D. 纳税人</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：税制<strong>基本要素</strong>只有三个：纳税人（D）、课税对象（C）、税率（A）。纳税期限（B）与纳税环节、减税和免税、违章处理、纳税地点一样，属于<strong>其他税制要素</strong>，不属于基本要素，当选。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s1q2" data-answer="BCDE" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">下列要素中，属于税制要素的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 征税机关</button><button type="button" class="qopt" data-key="B">B. 纳税期限</button><button type="button" class="qopt" data-key="C">C. 减税和免税</button><button type="button" class="qopt" data-key="D">D. 纳税地点</button><button type="button" class="qopt" data-key="E">E. 违章处理</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：税制要素包括纳税人、课税对象、税率、纳税环节、<strong>纳税期限（B）</strong>、<strong>减税和免税（C）</strong>、<strong>违章处理（E）</strong>、<strong>纳税地点（D）</strong>等。"征税机关"（A）是税收的征收主体，不属于构成税收制度的要素。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s1q3" data-answer="ACE" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">下列关于税目的说法中，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 税目代表征税的广度</button><button type="button" class="qopt" data-key="B">B. 税目体现征税的深度</button><button type="button" class="qopt" data-key="C">C. 税目是对课税对象的具体划分</button><button type="button" class="qopt" data-key="D">D. 税目是计算应纳税额的依据</button><button type="button" class="qopt" data-key="E">E. 税目是税法规定的课税对象的具体项目</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACE</div><div class="q-exp"><p>析：税目＝税法规定的<strong>课税对象的具体项目</strong>（E 对），是对课税对象的<strong>具体划分</strong>（C 对），反映具体的征税范围、代表征税的<strong>广度</strong>（A 对）。体现征税<strong>深度</strong>的是<strong>税率</strong>（B 错）；<strong>计算应纳税额的依据</strong>是计税依据（D 错）——"广度看税目、深度看税率、计算看税基"，三句话各管一个选项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s1q4" data-answer="B" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">关于税制要素的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 纳税人、课税对象和税率是税制的基本要素</button><button type="button" class="qopt" data-key="B">B. 使用全额累进税率的纳税人，其应纳税款总额由各个等级计算出的税额加总而成</button><button type="button" class="qopt" data-key="C">C. 计税金额可以是收入额、利润额、财产额等</button><button type="button" class="qopt" data-key="D">D. 纳税地点和纳税义务发生地可以不一致</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：由<strong>各个等级计算出的税额加总</strong>的是<strong>超额累进税率</strong>；全额累进税率是按课税对象全额所对应的最高一级税率一次计算，B 表述张冠李戴，当选。A 是基本要素的标准表述；计税金额（从价税的计税依据）可以是收入额、利润额、财产额等（C 对）；纳税地点与纳税义务发生地<strong>一般一致</strong>，但特殊情况下<strong>可以不一致</strong>，如分公司利润在总公司汇总纳税（D 对）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s1q5" data-answer="CD" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">目前我国开征的税种中，属于财产税的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 增值税</button><button type="button" class="qopt" data-key="B">B. 关税</button><button type="button" class="qopt" data-key="C">C. 契税</button><button type="button" class="qopt" data-key="D">D. 房产税</button><button type="button" class="qopt" data-key="E">E. 消费税</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CD</div><div class="q-exp"><p>析：财产税以各类<strong>动产和不动产</strong>为征税对象，现行税种中财产税类＝<strong>房产税（D）、契税（C）、车船税</strong>。增值税（A）、关税（B）、消费税（E）都属于<strong>货物和劳务税类</strong>，在生产、流通或服务业中发挥调节作用。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s1q6" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">能够将税负转嫁给他人负担的税收，属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 间接税</button><button type="button" class="qopt" data-key="B">B. 行业税</button><button type="button" class="qopt" data-key="C">C. 所得税</button><button type="button" class="qopt" data-key="D">D. 价内税</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：按<strong>税负能否转嫁</strong>划分：纳税人能将税负转嫁给他人负担的是<strong>间接税</strong>（A 对），如增值税、消费税；由纳税人直接负担、不发生转嫁关系的是直接税，如所得税和财产税（C 错）。"行业税"不是法定分类（B 错）；价内税、价外税按税收与价格的关系划分，与能否转嫁不是同一维度（D 错）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s1q7" data-answer="C" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">关于税收分类的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 所得税属于从量税</button><button type="button" class="qopt" data-key="B">B. 消费税属于直接税</button><button type="button" class="qopt" data-key="C">C. 车船税属于地方税</button><button type="button" class="qopt" data-key="D">D. 增值税属于价内税</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：车船税由<strong>地方</strong>管辖课征并支配，属<strong>地方税</strong>（C 对）。所得税以应纳税所得额（金额）为计税依据，属<strong>从价税</strong>而非从量税（A 错）；消费税可以转嫁，属<strong>间接税</strong>而非直接税（B 错）；增值税税款在价格之外附加征收，属<strong>价外税</strong>而非价内税（D 错）——口诀"消费内增值外、直接所得财产间接消费增值"，四个选项正反各考一遍。
+:::</p></div></details></div><div class="quiz-item" data-qid="b14s1q8" data-answer="A" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">下列税种中，不属于行为目的税类的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 资源税</button><button type="button" class="qopt" data-key="B">B. 印花税</button><button type="button" class="qopt" data-key="C">C. 城市维护建设税</button><button type="button" class="qopt" data-key="D">D. 环境保护税</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：行为目的税类共 6 个：<strong>环境保护税（D）、印花税（B）、城市维护建设税（C）、车辆购置税、烟叶税、船舶吨税</strong>，为达到特定目的对特定对象和特定行为发挥调节作用。资源税属于<strong>资源税类</strong>（与城镇土地使用税、耕地占用税、土地增值税同类），A 当选。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础14_税收制度_第2节_货物和劳务税类.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 货物和劳务税类</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

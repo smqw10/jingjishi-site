@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第19章 宏观人力资源开发 · 教育培训 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第四部分 人力资源与社会保险政策</span><h1>第19章 宏观人力资源开发 · 教育培训</h1><div class="subtitle">第 4 节 / 共 5 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:80%"></div></div><div class="progress-text">本章进度 4/5</div><div class="sec-badge none" id="sec-badge" data-sec="r19s4">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>了解职业技能培训<strong>八类重点群体</strong>与配套计划名（春潮行动、雨露计划等），记住"企业是培训主体" <span class="s3">★★★</span></li>
+<li>背熟继续教育：<strong>公需＋专业</strong>两科目、每年累计<strong>不少于 90 学时</strong>、专业科目一般<strong>不少于 2/3</strong> <span class="must">必考</span> <span class="hot">高频考点</span></li>
+<li>背熟公务员培训四类型（初任/任职/专门业务/在职）与天数（12 天、30 天、15 天），县处级以上五年 3 个月 <span class="hot">高频考点</span></li>
+<li>背熟事业单位培训四类型与学时（年度 90 学时或 12 天；岗前 40 学时或 5 天等） <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、职业技能培训（★）</h2>
+<h3>1. 八类重点群体</h3>
+<p>职业技能培训按群体对号入座，每个群体挂一个专属项目名：</p>
+<table>
+<thead>
+<tr>
+<th>群体</th>
+<th>项目／计划</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>高校毕业生</td>
+<td>技能<strong>就业行动</strong></td>
+</tr>
+<tr>
+<td>化解过剩产能涉及的失业人员和转岗职工</td>
+<td>特别职业培训计划</td>
+</tr>
+<tr>
+<td>农村转移就业人员和新生代农民工</td>
+<td>职业技能提升计划——"<strong>春潮行动</strong>"</td>
+</tr>
+<tr>
+<td>新型职业农民、农村实用人才</td>
+<td>新型职业农民培育工程和农村实用人才培训计划，全面建立<strong>职业农民制度</strong></td>
+</tr>
+<tr>
+<td>城乡未继续升学的<strong>初、高中毕业生</strong></td>
+<td><strong>劳动预备制</strong>培训</td>
+</tr>
+<tr>
+<td>退役军人</td>
+<td>退役前技能储备培训和职业指导；就业技能培训</td>
+</tr>
+<tr>
+<td>农村"低保"家庭、困难职工家庭和残疾人</td>
+<td>技能脱贫攻坚行动："<strong>雨露计划</strong>"、技能脱贫千校行动、残疾人职业技能提升计划</td>
+</tr>
+<tr>
+<td>服刑人员、强制隔离戒毒人员</td>
+<td>以顺利<strong>回归社会</strong>为目的的就业技能培训</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 八类群体</div><p><strong>"毕业、产能、春潮、农人、预备、退役、脱贫、回归"</strong>——八类群体对八张名片，"春潮"对农民工、"雨露"对困难群体，配对考多选。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>农民工老周想学电工，对应的正是"春潮行动"；他刚初中毕业的侄子不想再读书，参加的是"劳动预备制培训"；家里是农村低保的小杨走的则是"雨露计划"。三个人的项目名别张冠李戴。</p></div></div>
+<div class="section"><h3>2. 岗位技能提升、高技能人才与创业创新培训</h3>
+<ul>
+<li><strong>岗位技能提升培训</strong>：明确<strong>企业的培训主体地位</strong>；鼓励<strong>规模以上企业</strong>建立职业培训机构开展职工培训，并积极面向<strong>中小企业和社会</strong>承担培训任务；采取岗前培训、学徒培训、在岗培训、脱产培训、业务研修、岗位练兵、技术比武、技能竞赛等方式；全面推行<strong>企业新型学徒制度</strong>——对企业<strong>新招用和转岗</strong>的技能岗位人员，通过<strong>校企合作</strong>方式进行系统职业技能培训；发挥失业保险促进就业作用。</li>
+<li><strong>高技能人才培训</strong>：深入实施<strong>国家高技能人才振兴计划</strong>（开展技师、高级技师培训）；对重点关键岗位的高技能人才开展新知识、新技术、新工艺培训和技术研修攻关；支持高技能领军人才参与国家科研项目；实施<strong>国家高技能人才培训基地</strong>和<strong>技能大师工作室</strong>建设项目。</li>
+<li><strong>创业创新培训</strong>：以<strong>高校毕业生、退役军人、返乡创业人员</strong>等为重点；健全政策支持、孵化实训、科技金融、创业服务支撑体系，将学生在校期间的"<strong>试创业</strong>"活动纳入政策支持范围；发挥技能大师、劳模和职工创新工作室作用。</li>
+</ul></div>
+<div class="section"><div class="keypoint"><strong>培训主体是企业：</strong><p>"明确企业培训主体地位"意味着：企业办培训<strong>不只对内</strong>——规模以上企业还要"积极面向中小企业和社会承担培训任务"。说"企业只能面向内部员工培训""公共实训机构不能开展培训"都是错的。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三大培训抓手</div><p><strong>"岗位提升靠企业、高技人才靠基地（工作室）、创业创新靠孵化"</strong>——分别记"新型学徒制、振兴计划＋基地＋工作室、试创业"三个抓手。</p></div></div>
+<div class="section"><h2>二、专业技术人员继续教育</h2>
+<h3>3. 管理体制、内容与学时 <span class="must">必考</span></h3>
+<ul>
+<li>管理体制：<strong>统筹规划、分级负责、分类指导</strong>；人社部负责全国的综合管理和统筹协调，县级以上地方人社行政部门负责本地区，行业主管部门负责本行业；</li>
+<li>内容：<strong>公需科目＋专业科目</strong>——</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>科目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公需科目</td>
+<td>专业技术人员应当普遍掌握的<strong>法律法规、理论政策、职业道德、技术信息</strong>等基本知识</td>
+</tr>
+<tr>
+<td>专业科目</td>
+<td>从事专业工作应当掌握的<strong>新理论、新知识、新技术、新方法</strong>等专业知识</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>学时：专业技术人员参加继续教育的时间，<strong>每年累计应不少于 90 学时</strong>，其中<strong>专业科目一般不少于总学时的 2/3</strong>；</li>
+<li>计入学时的方式：①参加<strong>培训班、研修班或者进修班</strong>学习；②参加继续教育<strong>实践活动</strong>；③参加<strong>远程教育</strong>；④参加<strong>学术会议、学术讲座、学术访问</strong>等活动；⑤符合规定的其他方式。</li>
+</ul></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 继续教育数字</div><p><strong>"90 学时打底，专业占三分之二"</strong>；科目就两个——公需管"通识"（法规、政策、道德、信息），专业管"四新"（新理论、新知识、新技术、新方法）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 公需与专业互换陷阱</div><p>把"法律法规、理论政策、职业道德、技术信息"说成<strong>专业科目</strong>内容、或把"四新"说成<strong>公需科目</strong>内容，都是经典错误项——公需是人人要学的"通识盘"，专业是干哪行学哪行的"行业盘"。</p></div></div>
+<div class="section"><h2>三、公务员培训</h2>
+<h3>4. 培训对象与四类培训 <span class="hot">高频考点</span></h3>
+<ul>
+<li>培训对象是<strong>全体公务员</strong>；</li>
+<li><strong>县处级以上领导职务</strong>：每 <strong>5 年</strong>应当参加党校、行政学院、干部学院，或经<strong>厅局级以上</strong>单位组织（人事）部门认可的其他培训机构累计 <strong>3 个月以上</strong>的培训；提拔担任领导职务确因特殊情况在提任前未达到培训要求的，应当在<strong>提任后 1 年内</strong>完成培训；</li>
+<li><strong>其他公务员</strong>：参加脱产培训的时间一般<strong>每年累计不少于 12 天或者 90 学时</strong>；培训经考核合格后，获得相应的培训结业证书；</li>
+<li>参加组织选派的脱产培训期间，工资和各项福利待遇<strong>与在岗人员相同</strong>；</li>
+<li>个人参加<strong>社会化培训</strong>，费用<strong>一律由本人承担</strong>，不得由财政经费和单位经费报销，不得接受任何机构和他人的资助或者变相资助。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>培训类型</th>
+<th>培训人群</th>
+<th>培训目的</th>
+<th>培训时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>初任培训</strong></td>
+<td>新录用公务员</td>
+<td>提高思想政治素质和依法依规办事等适应机关工作的能力</td>
+<td>在<strong>试用期内</strong>完成，时间一般<strong>不少于 12 天</strong></td>
+</tr>
+<tr>
+<td><strong>任职培训</strong></td>
+<td><strong>晋升领导职务</strong>的公务员</td>
+<td>提高胜任职务的政治能力和领导能力</td>
+<td>任职前或任职后<strong>一年内</strong>进行；<strong>县处级副职以上不少于 30 天，乡科级不少于 15 天</strong></td>
+</tr>
+<tr>
+<td><strong>专门业务培训</strong></td>
+<td>从事专项工作的公务员</td>
+<td>提高业务工作能力</td>
+<td>根据需要确定</td>
+</tr>
+<tr>
+<td><strong>在职培训</strong></td>
+<td><strong>全体</strong>公务员</td>
+<td>学习领会党中央决策部署、提高政治素质和工作能力、更新知识</td>
+<td>根据需要确定</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 公务员培训四型</div><p><strong>"初任 12 天试用内，任职 30／15 一年内（县处副以上 30、乡科 15），专门业务和在职按需"</strong>；再加上两条总账——大领导"<strong>五年仨月</strong>"，普通公务员"<strong>一年 12 天或 90 学时</strong>"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 四型对号要抓&quot;人群&quot;</div><p>初任看"新录用"、任职看"晋升领导职务"、专门业务看"专项工作"、在职看"全体"。把"任职培训不少于 30 天"安到全体公务员头上、或把初任培训说成"转正后进行"，都是设错手法——初任培训在<strong>试用期内</strong>完成。</p></div></div>
+<div class="section"><h2>四、事业单位工作人员培训</h2>
+<h3>5. 四类培训与学时</h3>
+<p>事业单位工作人员培训分为<strong>岗前培训、在岗培训、转岗培训和专项培训</strong>四类；一般<strong>每年度</strong>参加各类培训的时间累计<strong>不少于 90 学时或者 12 天</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>对象</th>
+<th>方式</th>
+<th>时间要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>岗前培训</strong></td>
+<td>新聘用工作人员（公共科目和专业科目）</td>
+<td>脱产培训、网络培训、以师带徒等</td>
+<td>被聘用之日起 <strong>6 个月内</strong>完成，最长不超过 <strong>12 个月</strong>，累计<strong>不少于 40 学时或者 5 天</strong></td>
+</tr>
+<tr>
+<td><strong>在岗培训</strong></td>
+<td>正常在岗工作人员（公共科目和专业科目）</td>
+<td>脱产培训、网络培训、集体学习等</td>
+<td>一个聘期内至少参加一次<strong>不少于 20 学时或者 3 天</strong>的公共科目脱产培训</td>
+</tr>
+<tr>
+<td><strong>转岗培训</strong></td>
+<td>转变岗位工作人员</td>
+<td>事业单位或者主管部门自主确定</td>
+<td>在岗位职责变化<strong>前</strong>完成，或变化后 <strong>3 个月内</strong>完成，累计<strong>不少于 40 学时或者 5 天</strong></td>
+</tr>
+<tr>
+<td><strong>专项培训</strong></td>
+<td>对参加重大项目、重大工程、重大行动等特定任务的工作人员</td>
+<td>根据该工作任务的实际需要确定（如团队集训等）</td>
+<td>培训时间可计入规定岗前培训累计时间中</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 事业单位培训四型</div><p><strong>"岗前 6 个月内 40 学时（5 天），在岗聘期一次 20 学时（3 天），转岗 3 个月内 40 学时（5 天），专项按需"</strong>；年度总账永远是"<strong>90 学时或 12 天</strong>"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三套&quot;90 学时&quot;别串门</div><ul>
+<li>专业技术人员<strong>继续教育</strong>：每年 ≥<strong>90 学时</strong>（专业科目 ≥2/3）；</li>
+<li><strong>其他公务员</strong>脱产培训：每年 ≥<strong>12 天或者 90 学时</strong>；</li>
+<li><strong>事业单位工作人员</strong>：每年 ≥<strong>90 学时或者 12 天</strong>。
+数字相同、"或"字搭配不同。多选题先看主语是"专业技术人员、公务员还是事业单位工作人员"，再看搭配。</li>
+</ul></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>技能培训八群体</strong>：毕业生—就业行动；产能职工—特别计划；农民工—春潮行动；新农民—培育工程；初高中生—劳动预备制；退役军人—储备＋技能；困难群体—雨露计划等；服刑戒毒—回归社会；<strong>企业是培训主体</strong>，新型学徒制走校企合作</li>
+<li><strong>继续教育</strong>：统筹规划、分级负责、分类指导；公需（法规/政策/道德/信息）＋专业（四新）；每年 ≥90 学时、专业 ≥2/3；方式五种（培训班、实践、远程、学术活动、其他）</li>
+<li><strong>公务员培训</strong>：全体对象；县处级以上每 5 年 ≥3 个月，提任后 1 年内补训；其他公务员每年 ≥12 天或 90 学时；初任 12 天试用内、任职县处副以上 30 天乡科 15 天（任职前后一年内）、专门业务与在职按需；社会化培训自费</li>
+<li><strong>事业单位培训</strong>：年度 ≥90 学时或 12 天；岗前 6 个月内（最长 12 个月）40 学时或 5 天；在岗一个聘期一次 20 学时或 3 天公共科目脱产；转岗变化前或 3 个月内 40 学时或 5 天；专项按需</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r19s4q1" data-answer="C" data-type="single"><span class="q-tag">2020·单选</span><div class="q-stem">关于职业技能培训的说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 公共实训机构不可以独立开展职业技能培训</button><button type="button" class="qopt" data-key="B">B. 企业可以建立培训机构面向企业内部员工，不可面向社会培训</button><button type="button" class="qopt" data-key="C">C. 国家实施高技能人才振兴计划包括开展技师、高级技师培训</button><button type="button" class="qopt" data-key="D">D. 培训对象不包括农村转移就业人员和退役军人</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：C 正确——深入实施国家高技能人才振兴计划，开展<strong>技师、高级技师培训</strong>。A 错——公共实训机构可以作为主要载体开展培训工作；B 错——企业是培训主体，规模以上企业建立职业培训机构开展职工培训后，还应<strong>积极面向中小企业和社会承担培训任务</strong>；D 错——"春潮行动"针对农村转移就业人员，退役军人有退役前技能储备培训和就业技能培训。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s4q2" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><span class="q-tag">2025</span><div class="q-stem">按照国家相关政策，关于专业技术人员继续教育的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 每年累计总学时应不少于 120 学时</button><button type="button" class="qopt" data-key="B">B. 内容包括公共科目、基础科目和专业科目</button><button type="button" class="qopt" data-key="C">C. 专业科目内容包括从事专业工作所需要的新理论、新知识、新技术、新方法等</button><button type="button" class="qopt" data-key="D">D. 专业科目一般不低于总学时的二分之一</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：C 正是专业科目"<strong>四新</strong>"内容的标准表述。A 错——每年累计应不少于 <strong>90</strong> 学时，不是 120；B 错——内容只包括<strong>公需科目和专业科目</strong>两块，"公共、基础、专业"三分法是编造；D 错——专业科目一般不少于总学时的 <strong>2/3</strong>，不是二分之一。
+:::</p></div></details></div><div class="quiz-item" data-qid="r19s4q3" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">下列关于继续教育内容的表述，说法不正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 继续教育包括公需科目和专业科目两种</button><button type="button" class="qopt" data-key="B">B. 专业科目包括法律法规、理论政策、职业道德、技术信息等</button><button type="button" class="qopt" data-key="C">C. 专业技术人员参加继续教育的时间每年累计应不少于 90 学时</button><button type="button" class="qopt" data-key="D">D. 专业科目一般不少于总学时的 2/3</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：B 张冠李戴——<strong>法律法规、理论政策、职业道德、技术信息</strong>等基本知识属于<strong>公需科目</strong>；专业科目是从事专业工作应当掌握的<strong>新理论、新知识、新技术、新方法</strong>等专业知识。A、C、D 均为正确表述。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力19_宏观人力资源开发_第3节_管理使用.html"><span class="nav-label">上一节</span><span class="nav-title">第3节 管理使用</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力19_宏观人力资源开发_第5节_流动配置.html"><span class="nav-label">下一节</span><span class="nav-title">第5节 流动配置</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

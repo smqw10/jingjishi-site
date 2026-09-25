@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第六章 市场失灵和政府的干预 · 市场失灵的原因及政府对市场的干预 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第六章 市场失灵和政府的干预 · 市场失灵的原因及政府对市场的干预</h1><div class="subtitle">第 2 节 / 共 2 节 · 预计学习时长 55 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 2/2</div><div class="sec-badge none" id="sec-badge" data-sec="b06s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>市场失灵</strong>的定义与四大原因——<strong>垄断、外部性、公共物品、信息不对称</strong>（"垄外公信"）<span class="hot">高频考点</span><span class="must">必考</span></li>
+<li>掌握<strong>外部性</strong>的两种分类（生产/消费 × 经济/不经济）与对产量的影响方向："正外低、负外高" <span class="s3">★★★</span></li>
+<li>背熟消除外部性的方法：税收补贴、合并（传统）＋明晰产权/科斯定理（现代），分清两套 <span class="s3">★★★</span></li>
+<li>分清公共物品的<strong>非竞争性、非排他性</strong>与纯/准公共物品，记牢搭便车因果链和"私横公纵" <span class="hot">高频考点</span></li>
+<li>一眼识别<strong>逆向选择 vs 道德风险</strong>（事前选错人／事后办坏事），记住政府对各类失灵的干预手段 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、市场失灵：含义与四大原因</h2>
+<h3>1. 什么是市场失灵 <span class="hot">高频考点</span></h3>
+<p><strong>市场失灵</strong>就是指由于<strong>市场机制不能充分地发挥作用</strong>而导致的<strong>资源配置缺乏效率</strong>或者<strong>资源配置失当</strong>的情况。</p></div>
+<div class="section"><div class="keypoint"><strong>一个病根、两种病症：</strong><p>病根只有一个：市场机制不能充分发挥作用。病症两种写法：<strong>缺乏效率</strong>（配置达不到帕累托最优）和<strong>配置失当</strong>（配置错了方向）。问"市场失灵的含义"就答这两句，别多也别少。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>菜市场平时价格一波动，供需自动平衡——这是市场机制在干活。可一旦有人往河里排污水却不用赔钱、有人卖事故车买家却看不出来，价格这只"看不见的手"就够不着了：资源配置要么不足、要么错配，这就是失灵。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 市场失灵定义口诀</div><p><strong>"机制没使够，配置就出错"</strong>——病根：市场机制不能充分发挥作用；病症：缺乏效率或配置失当。</p></div></div>
+<div class="section"><h3>2. 四大原因总览 <span class="s3">★★★</span><span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>原因</th>
+<th>一句话病根</th>
+<th>政府的药方（后文逐个展开）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>垄断</strong></td>
+<td>不完全竞争广泛存在，产量低、价格高</td>
+<td>法律手段＋公共管制</td>
+</tr>
+<tr>
+<td><strong>外部性</strong></td>
+<td>影响别人却不付代价、不得利益</td>
+<td>税收补贴、合并、明晰产权</td>
+</tr>
+<tr>
+<td><strong>公共物品</strong></td>
+<td>非竞争、非排他，搭便车让私人不愿提供</td>
+<td>政府承担主要提供者职责</td>
+</tr>
+<tr>
+<td><strong>信息不对称</strong></td>
+<td>买卖双方掌握的信息量不一样</td>
+<td>法律规定＋信息服务</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四大原因口诀</div><p><strong>"垄、外、公、信"</strong>——记成"<strong>龙外公的心</strong>"：龙（垄断）、外（外部性）、公（公共物品）、信（信息不对称）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 判断套路</div><p>多选问"下列哪些情况存在市场失灵"：先默写四字诀"垄外公信"；再注意外部性会拆成"外部经济的存在""外部不经济的存在"两个选项同时出现（都对）；最后警惕"私人物品的生产"这类反向干扰项——私人物品恰是市场机制最擅长的领域，不会导致失灵。</p></div></div>
+<div class="section"><h2>二、外部性 <span class="s3">★★★</span><span class="hot">高频考点</span></h2>
+<h3>1. 外部性的含义与分类 <span class="hot">高频考点</span></h3>
+<p><strong>定义</strong>：所谓外部性或外部影响，是指某个人或某个企业的经济活动对其他人或其他企业<strong>造成了影响</strong>，但是<strong>没有因此付出代价或得到利益</strong>。</p>
+<p>两种分类维度：</p>
+<table>
+<thead>
+<tr>
+<th>分类依据</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按经济活动<strong>主体</strong>是生产者还是消费者</td>
+<td>生产的外部性 / 消费的外部性</td>
+</tr>
+<tr>
+<td>按<strong>对他人的影响</strong></td>
+<td>外部经济 / 外部不经济</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>再细分</th>
+<th>含义</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>外部经济</strong></td>
+<td>给他人带来<strong>好处</strong>，却<strong>无法取得补偿</strong>（得不到利益）</td>
+<td>帮了别人，收不到钱</td>
+</tr>
+<tr>
+<td><strong>外部不经济</strong></td>
+<td>给他人带来<strong>损害</strong>，却<strong>没有付出代价</strong>（不付代价）</td>
+<td>坑了别人，不用赔钱</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>抓&quot;有影响、无价格&quot;：</strong><p>外部性＝影响别人却不"过账"。分类先问主体（生产者还是消费者），再问影响方向（好还是坏），两个维度互不冲突、可以组合（如"生产的外部不经济"）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>邻居在楼道摆满绿植，全楼闻着清香（消费的外部经济）；楼上深夜装修电钻响，整栋楼睡不好（消费的外部不经济）；化工厂排废气，周边楼盘跌价（生产的外部不经济）；你接种了流感疫苗，同事被传染的概率也跟着下降（消费的外部经济）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 外部性定义口诀</div><p><strong>"影响别人不掏钱，帮了别人不收钱"</strong>——不掏钱＝外部不经济，不收钱＝外部经济。</p></div></div>
+<div class="section"><h3>2. 外部性对资源配置效率的影响 <span class="s3">★★★</span><span class="hot">高频考点</span></h3>
+<p><strong>外部性导致资源配置失当</strong>：即使是在<strong>完全竞争</strong>条件下，由于存在外部性的影响，整个经济的资源配置也<strong>不可能达到帕累托最优状态</strong>。</p>
+<p>两类外部性对产量的影响（方向别搞反）：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>关键不等式</th>
+<th>后果</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>外部经济</strong></td>
+<td>私人收益 <strong>＜</strong> 社会收益</td>
+<td>产出水平<strong>低于</strong>社会最优产出水平</td>
+<td>好处别人白拿，自己就少干</td>
+</tr>
+<tr>
+<td><strong>外部不经济</strong></td>
+<td>私人成本 <strong>＜</strong> 社会成本</td>
+<td>产出水平<strong>高于</strong>社会最优产出水平</td>
+<td>成本甩给社会，自己就多干</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>为什么会&quot;少干／多干&quot;：</strong><p>外部经济的生产者创造的好处有一部分被别人白拿、自己拿不全，积极性被压低 → 产量<strong>低于</strong>社会想要的水平；外部不经济的生产者把一部分成本甩给了社会、账面成本比真实成本低 → 倾向于多生产，产量<strong>高于</strong>社会最优水平。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>蜂农养蜂，蜜蜂顺带帮隔壁果园授粉，果园增产的好处蜂农一分钱拿不到（私人收益＜社会收益）→ 蜂农养的蜂比社会真正需要的少（产出偏低）。反过来，上游纸厂排污不用赔下游渔场的钱（私人成本＜社会成本）→ 纸厂开足马力多生产（产出偏高）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 方向对照口诀</div><p><strong>"正外低、负外高"</strong>——外部<strong>经</strong>济（正外部性）→ 产出<strong>低</strong>于社会最优；外部<strong>不</strong>经济（负外部性）→ 产出<strong>高</strong>于社会最优。再配一句："<strong>拿不全收益就少干，甩不掉成本就多干</strong>"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 方向题三步走（易错重灾区）</div><ol>
+<li>圈题型：题干说的是"外部经济"还是"外部不经济"？</li>
+<li>配不等式：经济→私人收益＜社会收益；不经济→私人成本＜社会成本。</li>
+<li>定方向：经济→产出偏低；不经济→产出偏高。
+最常见的错误是把"私人收益小于社会收益"配成"产出高于社会最优"——方向反了。两步走完再对选项，别凭感觉。</li>
+</ol></div></div>
+<div class="section"><h3>3. 消除外部性的方法：两传统一现代 <span class="s3">★★★</span><span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>类别</th>
+<th>怎么起作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>税收和补贴</strong></td>
+<td>传统</td>
+<td>对负外部性企业<strong>征税</strong> → 私人成本＝社会成本；对正外部性企业<strong>补贴</strong> → 私人收益＝社会收益</td>
+</tr>
+<tr>
+<td><strong>合并相关企业</strong></td>
+<td>传统</td>
+<td>使外部性得以"<strong>内部化</strong>"，把影响的双方变成一家人</td>
+</tr>
+<tr>
+<td><strong>明晰产权</strong></td>
+<td>现代</td>
+<td>产权界定清晰（<strong>科斯定理</strong>），让市场自己谈判解决</td>
+</tr>
+</tbody>
+</table>
+<p><strong>科斯定理</strong>：只要<strong>财产权是明确的</strong>，并且<strong>交易成本是零或者很小</strong>，那么<strong>无论在开始时将财产权赋予谁</strong>，市场均衡的最终结果都是<strong>有效率的</strong>，实现资源配置的<strong>帕累托最优</strong>。进一步看：一旦<strong>考虑到交易成本</strong>，<strong>产权的初始界定</strong>对经济运行的效率就会产生十分重要的影响——由此引申出重要结论：<strong>不同的产权制度，会导致不同的资源配置效率</strong>。</p>
+<p>实践应用：科斯定理提供了通过<strong>市场机制</strong>解决外部性问题的新思路，美国和一些国家先后实行了<strong>污染排放权或排放指标的交易</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>科斯定理&quot;三件套＋一个转折&quot;：</strong><p>前提三件套：<strong>产权明确＋交易成本为零或很小＋产权给谁都一样</strong>（结果都有效率）。转折：一旦交易成本不为零，产权<strong>最初</strong>给谁就重要了——不同的产权制度→不同的资源配置效率。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>河边工厂和渔场起纠纷：只要"河水的产权"界定清楚、双方谈判又不费钱，工厂要么赔钱给渔场、要么自己上治污设备——产权判给谁都一样，结果都有效率。谈判太费劲怎么办？政府干脆发"排污指标"让工厂之间买卖，这就是科斯思路的现实版。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 消除外部性口诀</div><p><strong>"税补合并是传统，科斯产权是现代"</strong>。科斯三件套再配一句：<strong>"权要清、费要小、给谁都有效；费用一大，产权就重要"</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易混辨析：传统 vs 现代</div><p>考试爱把"明确产权归属""减少交易费用"混进"传统方法"里。分界线记住：<strong>税收、补贴、合并＝传统</strong>；<strong>明晰产权（科斯思路）＝现代</strong>，"减少交易费用"是围绕科斯定理的现代思路，也不属于传统方法。问"传统方法包括"时，选项里的"产权""交易费用"一律要警惕。</p></div></div>
+<div class="section"><h2>三、公共物品 <span class="s3">★★★</span><span class="hot">高频考点</span></h2>
+<h3>1. 从私人物品说起：两个特征 <span class="hot">高频考点</span></h3>
+<p><strong>公共物品</strong>是满足<strong>社会公共需要</strong>的物品，它与<strong>私人物品</strong>相对应。私人物品有两个明显的特征——<strong>竞争性</strong>和<strong>排他性</strong>；公共物品的特征正好是这两条的"反向"。</p>
+<table>
+<thead>
+<tr>
+<th>物品</th>
+<th>特征一</th>
+<th>特征二</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>私人物品</strong></td>
+<td><strong>竞争性</strong>：其他条件不变时，对既定产品，增加一个人的消费就必然减少另一个人的消费</td>
+<td><strong>排他性</strong>：私人物品在<strong>财产所有权上的独占性</strong>，可以把不付钱的人挡在外面</td>
+</tr>
+<tr>
+<td><strong>公共物品</strong></td>
+<td><strong>非竞争性</strong>：我对某公共物品的消费<strong>并不影响</strong>其他人对它的消费（如国防、道路、环境治理、电视广播）</td>
+<td><strong>非排他性</strong>：任何消费者都可以消费，<strong>任何一个消费者都不会被排斥在外</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两对特征镜像记：</strong><p>私人物品的"竞争性、排他性"前面各加一个"非"字，就是公共物品的特征。竞争性说的是"你我之间抢不抢"，排他性说的是"能不能把人挡在外面"——先想私人物品，再取反，不会乱。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一个苹果：你咬一口我就少一口（竞争性），不付钱就别想吃（排他性）——私人物品。路灯：你享受照明丝毫不妨碍我（非竞争性），也没法把过路人都挡在灯光之外（非排他性）——公共物品。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 特征口诀</div><p><strong>"私物竞争又排他，公共两个都加'非'"</strong>。</p></div></div>
+<div class="section"><h3>2. 搭便车与政府提供 <span class="hot">高频考点</span></h3>
+<p>公共物品的这种特性决定了：<strong>绝大多数公共物品的消费中必然出现"搭便车"</strong>。所谓<strong>搭便车</strong>，就是<strong>某人不进行购买而消费某物品</strong>。由于公共物品不是排他的，<strong>搭便车问题阻止了私人市场提供公共物品</strong>——因此，<strong>政府承担公共物品主要提供者的职责</strong>，例如政府提供<strong>国防、治安、消防和公共卫生</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>因果链背到底：</strong><p>非排他性 → 必然搭便车 → 私人市场不愿提供 → 政府是<strong>主要</strong>提供者。注意限定词"主要"而不是"唯一"，举例锁定四件套：<strong>国防、治安、消防、公共卫生</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小区想集资装门禁：总有人盘算"别人交钱我照蹭"，最后众筹总差一截——这就是搭便车。门禁这种"人人都能用、拦不住人蹭"的东西，靠自愿掏钱办不成，只能由物业（扮演政府角色）统一收费安装。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 搭便车口诀</div><p><strong>"非排他→必搭车→私人不干政府干"</strong>——一条因果链背到底。考试问"为什么私人市场提供不了公共物品"，答"非排他性导致搭便车"。</p></div></div>
+<div class="section"><h3>3. 纯公共物品与准公共物品 <span class="s3">★★★</span><span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>对照项</th>
+<th><strong>纯公共物品</strong></th>
+<th><strong>准公共物品</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>特征</td>
+<td><strong>完全的</strong>非竞争性＋<strong>完全的</strong>非排他性</td>
+<td><strong>有限的</strong>非竞争性和非排他性（有一定<strong>拥挤性</strong>：消费者增加到一定程度会出现拥挤而产生消费的竞争）</td>
+</tr>
+<tr>
+<td>购买方式</td>
+<td>通过<strong>纳税间接购买</strong>而<strong>被动消费</strong></td>
+<td><strong>部分间接购买、部分直接购买</strong></td>
+</tr>
+<tr>
+<td>可分割性</td>
+<td>消费时<strong>无法分割</strong></td>
+<td>消费时<strong>可以部分分割</strong></td>
+</tr>
+<tr>
+<td>提供者</td>
+<td><strong>只能由政府提供</strong></td>
+<td><strong>政府和私人都可以提供</strong></td>
+</tr>
+<tr>
+<td>典型例子</td>
+<td><strong>国防、治安</strong></td>
+<td><strong>教育、医疗卫生、收费公路</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>分界线：完全 vs 有限：</strong><p>两大类只认一条分界线：非竞争性、非排他性是"<strong>完全</strong>"还是"<strong>有限</strong>"。完全→纯公共物品（只能政府提供）；有限→准公共物品（政府和私人都可提供）。"拥挤性"是理解"有限"的钥匙：高速路一堵车，你再上路就妨碍我了——非竞争性打了折。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>国防：全国人人共享、没法分割、也拦不住任何人"被保护"——纯公共物品。收费公路：不交钱可以拦（有排他性），不堵车时多一辆车也不妨碍谁（非竞争性）——准公共物品；教育、医疗卫生同理，公办民办都能办。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 纯／准口诀</div><p><strong>"纯靠税收白给，准可买卖分享"</strong>——纯公共物品：纳税间接买、被动消费、无法分割、只能政府（国防治安）；准公共物品：部分直接购买、可部分分割、政府和私人都可提供（教育、医疗、收费公路）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 四象限判断法</div><p>判断"某物品具备什么特征"，先问"抢不抢"（竞争性），再问"拦不拦"（排他性）：个人电脑＝抢＋拦（私人物品）；网络付费视频＝不抢＋拦（非竞争、排他）；国防＝不抢＋不拦（非竞争、非排他）；海洋渔业资源＝抢＋不拦（竞争、非排他）。四个例子记牢，选项直接对号入座。</p></div></div>
+<div class="section"><h3>4. 公共物品的供给与需求：曲线怎么加总 <span class="s3">★★★</span><span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th><strong>私人物品</strong></th>
+<th><strong>公共物品</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市场需求曲线</td>
+<td>个人需求曲线<strong>水平方向（数量上）求和</strong></td>
+<td>个人需求曲线<strong>纵向（价格方向）求和</strong></td>
+</tr>
+<tr>
+<td>供给曲线</td>
+<td>由厂商的边际成本曲线<strong>横向加总</strong>得到</td>
+<td>生产上与私人物品<strong>并无区别</strong>，同样由生产该公共物品的厂商的边际成本曲线<strong>横向加总</strong>得到</td>
+</tr>
+<tr>
+<td>最优数量</td>
+<td>市场机制可求得</td>
+<td><strong>并没有什么实际意义</strong>：消费者并不清楚自己对公共物品的需求价格，无法加总需求曲线，<strong>求不出最优数量</strong></td>
+</tr>
+<tr>
+<td>最优条件</td>
+<td>——</td>
+<td><strong>边际利益＝边际成本</strong>时，公共物品的数量达到最优</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>为什么&quot;私横公纵&quot;：</strong><p>私人物品：同一价格下大家各买各的，把<strong>数量</strong>加起来 → 水平（横向）相加；公共物品：大家一起消费<strong>同一个量</strong>，各自愿付的价格要<strong>叠加</strong> → 纵向（价格方向）相加。供给端两类物品没区别：都是边际成本曲线横向加总。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 曲线加总口诀</div><p><strong>"私横公纵"</strong>——私人需求<strong>横</strong>着加（加数量），公共需求<strong>纵</strong>着加（加价格）。这对方向是选择题常客，千万别背反。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;最优数量&quot;的表述坑</div><p>理论上"边际利益＝边际成本"时公共物品数量最优，但<strong>现实中消费者说不清自己的需求价格、需求曲线加总不了</strong>，所以公共物品的最优数量"<strong>并没有什么实际意义</strong>"。选项说"最优数量具有重要的实际意义""纯公共物品领域应当而且能够实行市场机制引导资源配置"——都是错的。</p></div></div>
+<div class="section"><h2>四、信息不对称 <span class="must">必考</span><span class="hot">高频考点</span></h2>
+<h3>1. 逆向选择与道德风险 <span class="s3">★★★</span><span class="must">必考</span></h3>
+<p><strong>信息不对称</strong>是指市场上<strong>买卖双方掌握的信息量不一样</strong>的一种情况。它的表现形式是<strong>逆向选择</strong>和<strong>道德风险</strong>两种。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th><strong>逆向选择</strong></th>
+<th><strong>道德风险</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义</td>
+<td>买卖双方在不对称信息的情况下，出现<strong>劣质的商品或服务驱逐优质商品或服务</strong>，以致<strong>市场萎缩甚至消失</strong></td>
+<td>市场的一方<strong>不能观察到另一方的行动</strong>，另一方就可能<strong>采取不利于对方的行动</strong></td>
+</tr>
+<tr>
+<td>白话版</td>
+<td>事前"看走眼"：差的把好的挤出去</td>
+<td>事后"看不见"：瞒着对方使坏</td>
+</tr>
+<tr>
+<td>记忆锚</td>
+<td><strong>劣币驱逐良币</strong></td>
+<td>买了保险后不注意防盗、不认真驾驶</td>
+</tr>
+<tr>
+<td>典型市场</td>
+<td><strong>旧车市场、健康保险市场、劳动力市场</strong>等</td>
+<td><strong>保险市场、劳动力市场</strong>等</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一眼识别法：</strong><p>问自己：问题出在"<strong>成交前看不出谁好谁坏</strong>"还是"<strong>成交后看不见对方干什么</strong>"？前者＝逆向选择（劣币驱逐良币、市场萎缩甚至消失）；后者＝道德风险（一方行动观察不到，采取不利于对方的行动）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>二手车市场：卖家知道车出过事故，买家不知道 → 买家只肯出"平均价" → 好车车主觉得亏就不卖了 → 市场上剩下的全是差车 → 市场萎缩甚至消失（逆向选择）。车险市场：投保之后车主开车变猛、停车不上锁，保险公司看不见他的行动（道德风险）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 逆向选择 vs 道德风险口诀</div><p><strong>"事前选错人＝逆向选择，事后办坏事＝道德风险"</strong>——见"劣币驱逐良币""市场萎缩甚至消失"选逆向选择；见"不能观察对方的行动""投保后疏于防范"选道德风险。</p></div></div>
+<div class="section"><h3>2. 政府对信息不对称的干预 <span class="hot">高频考点</span></h3>
+<p>为了解决因信息不对称所造成的市场失灵，政府两手抓：一手<strong>立规矩</strong>——对许多商品的<strong>说明、质量标准和广告</strong>做出具体的<strong>法律规定</strong>；另一手<strong>递信息</strong>——通过多种方式<strong>为消费者提供信息服务</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>干预对着病根来：</strong><p>信息不对称的病根是"你不知道"，干预就围绕"让你知道"：法律强制商家交代清楚（说明、质量标准、广告），政府再主动送信息（信息服务）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>超市货架上的食品必须印配料表和保质期（说明的法律规定）、电器必须贴能效标识（质量标准）、广告不许虚构疗效（广告的法律规定），再加上政府发布的消费提示和抽检信息（信息服务）——全是在对冲"商家比你知道得多"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 信息不对称干预口诀</div><p><strong>"说、标、广＋信息服务"</strong>——说明、质量标准、广告三件事立法，信息服务跟上。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 干预手段别串门</div><p>各病各的药，考试最爱"张冠李戴"：<strong>税收和补贴、明晰产权</strong>→治<strong>外部性</strong>；<strong>法律规定＋信息服务</strong>→治<strong>信息不对称</strong>；<strong>反垄断法律＋公共管制</strong>→治<strong>垄断</strong>。选项说"通过税收补贴／明晰产权可以解决信息不对称导致的市场失灵"——直接判错。</p></div></div>
+<div class="section"><h2>五、垄断与政府对垄断的干预 <span class="hot">高频考点</span></h2>
+<h3>1. 垄断与资源配置的效率 <span class="hot">高频考点</span></h3>
+<p>根据微观经济学的分析：<strong>只有完全竞争市场上，企业的生产成本从长期看才是最低的</strong>，市场机制才能实现资源的有效配置——资源得到充分利用，<strong>产量最大，价格最低</strong>，消费者获得<strong>最大满足</strong>。由于<strong>不完全竞争市场的广泛存在</strong>，市场机制很难充分有效地发挥作用，资源<strong>不可能实现最优配置</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>市场形态</th>
+<th>长期结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>完全竞争</strong></td>
+<td>生产成本最低、资源充分利用、<strong>产量最大、价格最低</strong>、消费者获得最大满足</td>
+</tr>
+<tr>
+<td><strong>垄断（不完全竞争）</strong></td>
+<td>产量<strong>低于</strong>社会最优水平、价格<strong>高于</strong>市场均衡价格，社会福利受到损害</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>和完全竞争对照记：</strong><p>完全竞争是"完美基准"：产量最大、价格最低。垄断就是把基准反过来：产量低、价格高。基准记住了，垄断的表现反着写就行。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>完全竞争像早市上几十家摊贩卖同样的鸡蛋，谁也不敢抬价、不敢缺斤短两；垄断像景区里唯一的矿泉水摊——东西给得少（产量低于社会最优）、价还高（价格高于均衡），游客没得选。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 垄断后果口诀</div><p><strong>"竞则量大价低，垄则量少价高"</strong>——完全竞争与垄断的一切对比，都从这八个字推出来。</p></div></div>
+<div class="section"><h3>2. 政府对垄断的干预 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>手段</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>法律手段</strong></td>
+<td>限制垄断和反对不正当竞争，如制定<strong>《反不正当竞争法》《反垄断法》</strong></td>
+</tr>
+<tr>
+<td><strong>公共管制</strong></td>
+<td>对垄断行业的产品或服务的<strong>价格进行管制</strong>或<strong>规定限价</strong>，或<strong>规定利润率</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两手抓：</strong><p>一手<strong>立法</strong>（《反不正当竞争法》《反垄断法》），一手<strong>管价</strong>（公共管制：价格管制、限价或规定利润率）。注意公共管制管的是<strong>价格／利润率</strong>，不是产量，也不是市场准入。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>电网、自来水这类没法拆分的独家生意，政府就管它的价格——准许"成本＋合理利润"定价，不许漫天要价（公共管制）；平台"二选一"、经营者串通抬价，则用《反垄断法》《反不正当竞争法》去查处（法律手段）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 垄断干预口诀</div><p><strong>"一手法律一手管价"</strong>——法律＝《反不正当竞争法》《反垄断法》；公共管制＝价格管制、限价、规定利润率。</p></div></div>
+<div class="section"><h2>六、政府干预一览 <span class="hot">高频考点</span></h2>
+<p>把四大原因与干预手段放一张表里收束全章：</p>
+<table>
+<thead>
+<tr>
+<th>失灵原因</th>
+<th>政府干预手段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>垄断</strong></td>
+<td>法律手段（《反不正当竞争法》《反垄断法》）＋公共管制（价格管制、规定限价、规定利润率）</td>
+</tr>
+<tr>
+<td><strong>外部性</strong></td>
+<td>税收和补贴、合并相关企业（<strong>传统方法</strong>）；明晰产权——科斯定理（<strong>现代方法</strong>，如排污权／排放指标交易）</td>
+</tr>
+<tr>
+<td><strong>公共物品</strong></td>
+<td>政府承担<strong>主要提供者</strong>职责：国防、治安、消防、公共卫生</td>
+</tr>
+<tr>
+<td><strong>信息不对称</strong></td>
+<td>说明、质量标准、广告的法律规定＋为消费者提供信息服务</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 收尾自测</div><p>遮住左列，看手段反推病因；再遮右列，看病因背手段——两个方向各过一遍，本章多选就稳了。特别盯三处限定词：外部性方法分"传统／现代"；公共物品政府是"<strong>主要</strong>提供者"（不是唯一）；信息不对称靠"法律＋信息服务"（税收补贴、明晰产权治不了它）。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li>市场失灵＝市场机制不能充分发挥作用→资源配置<strong>缺乏效率</strong>或<strong>配置失当</strong>；四大原因<strong>"垄外公信"</strong>（垄断、外部性、公共物品、信息不对称）</li>
+<li><strong>外部性</strong>＝影响别人却不付代价／不得利益；按主体分<strong>生产／消费</strong>，按影响分<strong>外部经济／外部不经济</strong></li>
+<li>方向：外部经济（私人收益＜社会收益）→产出<strong>低于</strong>社会最优；外部不经济（私人成本＜社会成本）→产出<strong>高于</strong>社会最优（"正外低、负外高"）；完全竞争下外部性照样使配置达不到帕累托最优</li>
+<li>消除外部性：<strong>税收补贴、合并（传统）＋明晰产权／科斯定理（现代）</strong>；科斯：产权明确＋交易成本零或很小→无论产权给谁都有效率；考虑交易成本→<strong>不同产权制度→不同配置效率</strong>；应用＝污染排放权／排放指标交易</li>
+<li><strong>公共物品</strong>：非竞争性＋非排他性；<strong>搭便车</strong>＝不购买而消费→私人不愿提供→政府是主要提供者（国防、治安、消防、公共卫生）</li>
+<li>纯公共物品（完全非竞争非排他、纳税间接购买、无法分割、只能政府：国防、治安）vs 准公共物品（有限、有拥挤性、可部分分割、政府和私人都可提供：教育、医疗卫生、收费公路）</li>
+<li>需求曲线：<strong>私横公纵</strong>（私人加数量、公共加价格）；供给曲线＝边际成本曲线横向加总；边际利益＝边际成本时数量最优；公共物品最优数量<strong>没有实际意义</strong></li>
+<li><strong>信息不对称</strong>：逆向选择（劣币驱逐良币、市场萎缩甚至消失，如旧车、健康保险市场）＋道德风险（看不见的行动，如保险、劳动力市场）；政府管说明、质量标准、广告＋信息服务</li>
+<li><strong>垄断</strong>：完全竞争＝成本最低、产量最大、价格最低；垄断＝产量低于社会最优、价格高于均衡；干预＝法律（反垄断法）＋公共管制（限价／利润率）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b06s2q1" data-answer="ABCD" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">在下述（　）情况下，市场失灵情况存在。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 垄断</button><button type="button" class="qopt" data-key="B">B. 公共物品</button><button type="button" class="qopt" data-key="C">C. 外部经济的存在</button><button type="button" class="qopt" data-key="D">D. 外部不经济的存在</button><button type="button" class="qopt" data-key="E">E. 私人物品的生产</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：市场失灵四大原因"垄外公信"——垄断（A）、公共物品（B）、外部性（C、D 都是外部性的两种形态）全对。E 错：私人物品具有竞争性和排他性，恰是市场机制能够有效配置的领域，不会导致市场失灵。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q2" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">下列关于外部性的说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 在完全竞争条件下，外部性的存在不会影响资源的最优配置</button><button type="button" class="qopt" data-key="B">B. 即使在完全竞争条件下，外部性的存在也使得资源配置难以达到帕累托最优状态</button><button type="button" class="qopt" data-key="C">C. 外部性问题只有在垄断竞争市场条件下存在</button><button type="button" class="qopt" data-key="D">D. 外部性假设在完全竞争条件下，市场资源达到最优配置</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：外部性导致资源配置失当——即使在完全竞争条件下，只要存在外部性，整个经济的资源配置也不可能达到帕累托最优（B 对）。A、D 把"完全竞争"当成万能保险，忘了外部性是一条独立的市场失灵原因；C 错——外部性在任何市场条件下都可能存在，并非垄断竞争所独有。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q3" data-answer="D" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">产生外部经济的生产者，产出水平低于社会最优产出水平的原因是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 边际私人成本低于边际成本</button><button type="button" class="qopt" data-key="B">B. 边际私人成本等于边际社会成本</button><button type="button" class="qopt" data-key="C">C. 私人收益等于社会收益</button><button type="button" class="qopt" data-key="D">D. 私人收益小于社会收益</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：外部经济＝经济活动给他人带来好处却无法取得补偿，因此<strong>私人收益小于社会收益</strong>（D 对）——生产者拿不全自己创造的好处，积极性不足，产出水平低于社会最优。C 错——若私人收益等于社会收益就不存在外部性了；A、B 在成本端绕圈子且表述混乱，与"外部经济、产出偏低"的因果对不上。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q4" data-answer="ACE" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">消除外部性的传统方法包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 政府对那些产生外部不经济的企业征收适度的排污税</button><button type="button" class="qopt" data-key="B">B. 明确产权归属</button><button type="button" class="qopt" data-key="C">C. 政府对那些具有外部经济的企业给予财政补贴</button><button type="button" class="qopt" data-key="D">D. 减少交易费用</button><button type="button" class="qopt" data-key="E">E. 通过合并相关企业使外部性得以&quot;内部化&quot;</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACE</div><div class="q-exp"><p>析：传统方法＝<strong>税收和补贴＋合并相关企业</strong>：排污税使产生外部不经济的企业的私人成本等于社会成本（A 对），财政补贴使具有外部经济的企业的私人收益等于社会收益（C 对），合并相关企业使外部性"内部化"（E 对）。B"明确产权归属"与 D"减少交易费用"都属于<strong>明晰产权的现代方法</strong>（科斯定理思路），不是传统方法。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q5" data-answer="A" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">关于经济学家科斯提出的产权理论的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 很多外部性的产生都是因为产权不清晰导致的</button><button type="button" class="qopt" data-key="B">B. 不同的产权制度会导致相同的资源配置效率</button><button type="button" class="qopt" data-key="C">C. 不论产权是否明确，只要交易成本为零，就可以实现资源的最优配置</button><button type="button" class="qopt" data-key="D">D. 如果产权是明晰的，不论交易成本多大，市场最终会实现资源的最优配置</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：科斯认为外部性之所以存在并导致资源配置失当，都是由于<strong>产权界定不清晰</strong>（A 对）。B 错——重要结论是不同产权制度导致<strong>不同</strong>的资源配置效率；C 错——定理的前提是"财产权是明确的"，产权不明确谈不上市场自动实现最优；D 错——前提还有"交易成本是零或者很小"，交易成本很大时谈判本身就不划算，市场结果未必有效率。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q6" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">&quot;纯公共物品&quot;的两大特征是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 消费上的非竞争性和非排他性</button><button type="button" class="qopt" data-key="B">B. 消费上的竞争性和排他性</button><button type="button" class="qopt" data-key="C">C. 消费上的竞争性和非排他性</button><button type="button" class="qopt" data-key="D">D. 消费上的非竞争性和排他性</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：纯公共物品具有<strong>完全的非竞争性和完全的非排他性</strong>（A 对），典型如国防、治安。B 是私人物品的特征；C"竞争＋非排他"如海洋渔业资源；D"非竞争＋排他"如网络付费视频——C、D 都不是纯公共物品的特征组合。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q7" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">下列物品中，具备非竞争性和排他性特征的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 个人电脑</button><button type="button" class="qopt" data-key="B">B. 网络付费视频</button><button type="button" class="qopt" data-key="C">C. 国防</button><button type="button" class="qopt" data-key="D">D. 海洋渔业资源</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：网络付费视频不付费看不了（<strong>排他性</strong>），一人观看不影响他人观看（<strong>非竞争性</strong>），B 对。个人电脑是竞争性＋排他性（私人物品）；国防是非竞争性＋非排他性（纯公共物品）；海洋渔业资源是竞争性（你捕走我就捕不到）＋非排他性（拦不住别人来捕）。判断口诀：先问"抢不抢"（竞争性），再问"拦不拦"（排他性）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q8" data-answer="CE" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">关于公共物品的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 公共物品的市场需求曲线是所有消费者的需求曲线的横向加总</button><button type="button" class="qopt" data-key="B">B. 公共物品必须由政府提供</button><button type="button" class="qopt" data-key="C">C. 公共物品的消费可能产生&quot;搭便车&quot;现象</button><button type="button" class="qopt" data-key="D">D. 市场无法供给公共物品</button><button type="button" class="qopt" data-key="E">E. 公共物品包括纯公共物品和准公共物品</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CE</div><div class="q-exp"><p>析：C、E 为标准表述——非排他性决定公共物品消费中必然出现搭便车；公共物品分为纯公共物品和准公共物品两大类。A 错——公共物品的市场需求曲线是个人需求曲线<strong>纵向（价格方向）</strong>求和，横向（数量上）加总的是<strong>私人物品</strong>；B 错——政府是<strong>主要</strong>提供者，准公共物品政府和私人都可以提供，"必须由政府提供"太绝对；D 错——说法过于绝对，准公共物品可以由私人提供（如收费公路、民办教育）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q9" data-answer="B" data-type="single"><span class="q-tag">真题·单选</span><div class="q-stem">下列现象属于逆向选择的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 购买了健康保险之后，就不注意维护身体健康</button><button type="button" class="qopt" data-key="B">B. 劣币驱逐良币</button><button type="button" class="qopt" data-key="C">C. 购买财产保险后不注意防盗</button><button type="button" class="qopt" data-key="D">D. 购买汽车保险后不认真驾驶汽车</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：逆向选择＝不对称信息下劣质商品或服务驱逐优质商品或服务，以致市场萎缩甚至消失，即"<strong>劣币驱逐良币</strong>"（B 对）。A、C、D 都是投保<strong>之后</strong>改变自己的行为、让保险公司吃亏——属于签约后"看不见的行动"，是<strong>道德风险</strong>。区分口诀：事前选错人＝逆向选择，事后办坏事＝道德风险。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q10" data-answer="BC" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">信息不对称是导致市场失灵的重要原因，表现形式有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 帕累托改进</button><button type="button" class="qopt" data-key="B">B. 逆向选择</button><button type="button" class="qopt" data-key="C">C. 道德风险</button><button type="button" class="qopt" data-key="D">D. 增加交易成本</button><button type="button" class="qopt" data-key="E">E. 搭便车</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BC</div><div class="q-exp"><p>析：信息不对称的两种表现形式＝<strong>逆向选择</strong>（劣币驱逐良币、市场萎缩甚至消失）和<strong>道德风险</strong>（一方不能观察另一方的行动，采取不利于对方的行动）。A 帕累托改进是资源配置的概念；D"增加交易成本"是科斯定理里的概念；E 搭便车是公共物品非排他性带来的现象——都与信息不对称的表现形式无关。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q11" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">垄断是导致市场失灵的主要原因，其具体表现是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 生产者的产量高于社会最优水平，价格低于市场的均衡价格</button><button type="button" class="qopt" data-key="B">B. 消费者的剩余增加大于生产者的剩余增加，社会福利受到损害</button><button type="button" class="qopt" data-key="C">C. 生产者的产量等于社会最优水平，价格高于市场均衡价格</button><button type="button" class="qopt" data-key="D">D. 生产者的产量低于社会最优水平，价格高于市场均衡价格</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：垄断（不完全竞争）下市场机制难以充分发挥作用：生产者<strong>产量低于社会最优水平、价格高于市场均衡价格</strong>（D 对），正好与完全竞争"产量最大、价格最低"相反。A 把两个方向全说反了；B 的剩余比较关系与垄断损害社会福利的逻辑不符；C"产量等于社会最优水平"与"价格高于均衡"自相矛盾。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q12" data-answer="BD" data-type="multi"><span class="q-tag">真题·多选</span><div class="q-stem">在限制垄断方面，政府采取的措施包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 合并相关企业</button><button type="button" class="qopt" data-key="B">B. 制定《反垄断法》</button><button type="button" class="qopt" data-key="C">C. 补贴政策</button><button type="button" class="qopt" data-key="D">D. 进行公共管制</button><button type="button" class="qopt" data-key="E">E. 明晰产权</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BD</div><div class="q-exp"><p>析：政府对垄断的干预两手：<strong>法律手段</strong>（制定《反不正当竞争法》《反垄断法》，B 对）＋<strong>公共管制</strong>（对垄断行业的产品或服务价格进行管制、规定限价或利润率，D 对）。A"合并相关企业"和 E"明晰产权"是消除<strong>外部性</strong>的方法；C"补贴政策"是对外部经济企业的手段——都不是限制垄断的措施。
+:::</p></div></details></div><div class="quiz-item" data-qid="b06s2q13" data-answer="ABDE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">为了克服市场失灵，优化资源配置，政府可以根据实际情况，通过（　）等手段对市场进行干预。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 对垄断性行业的产品或服务的价格进行管制</button><button type="button" class="qopt" data-key="B">B. 使用税收手段对那些产生外部不经济的企业进行干预</button><button type="button" class="qopt" data-key="C">C. 制定各种保险收费标准</button><button type="button" class="qopt" data-key="D">D. 制定和实施限制垄断的法律法规</button><button type="button" class="qopt" data-key="E">E. 对于产生外部经济的企业给予财政补贴</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：A 对垄断行业价格管制（公共管制）、D 限制垄断的法律法规——治垄断；B 税收治外部不经济、E 补贴鼓励外部经济——治外部性，均正确。C"制定各种保险收费标准"与政府矫正市场失灵的干预手段无关，是编造的干扰项。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础06_市场失灵和政府的干预_第1节_市场失灵的含义.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 市场失灵的含义</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第16章 社会保险体系 · 工伤保险 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第四部分 人力资源与社会保险政策</span><h1>第16章 社会保险体系 · 工伤保险</h1><div class="subtitle">第 3 节 / 共 6 节 · 预计学习时长 60 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 3/6</div><div class="sec-badge none" id="sec-badge" data-sec="r16s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住工伤保险三大原则（无过失责任、损害补偿、预防补偿康复相结合）与七类"用人单位责任"的归属规则 <span class="hot">高频考点</span></li>
+<li>记住缴费规则：只有用人单位缴纳、职工不缴；费率"以支定收、收支平衡"，行业差别费率＋行业内档次 <span class="hot">高频考点</span></li>
+<li>熟背应当认定工伤七情形、视同工伤三情形、不得认定三情形，会判案例 <span class="must">必考</span><span class="s3">★★★</span></li>
+<li>背准时限链条：单位 30 日申请、个人 1 年、受理 60 日出决定、简案 15 日；劳动能力鉴定 60＋30 日、15 日再鉴定、1 年复查 <span class="s3">★★★</span></li>
+<li>熟记待遇数字：停工留薪 12＋12、生活护理费 50%/40%/30%、伤残补助金 27～7 个月、伤残津贴 90%～60%、工亡"丧葬 6 个月＋抚恤金 40%/30%＋全国 20 倍" <span class="must">必考</span><span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、工伤保险制度、原则与缴费</h2>
+<h3>1. 工伤保险的原则（★）</h3>
+<table>
+<thead>
+<tr>
+<th>原则</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>无过失责任</strong></td>
+<td>只要不是受害者<strong>本人故意</strong>所为，就应按规定标准给予赔偿——劳动者自己的<strong>一般过失不影响</strong>工伤认定和赔偿</td>
+</tr>
+<tr>
+<td><strong>损害补偿</strong></td>
+<td>除考虑<strong>直接损失</strong>外，还要考虑<strong>伤害程度、伤害性质及职业康复</strong>等因素</td>
+</tr>
+<tr>
+<td><strong>预防、补偿和康复相结合</strong></td>
+<td>经济补偿与医疗康复以及工伤预防有机结合</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>无过失责任的考试含义：</strong><p>"无过失"针对的是<strong>劳动者</strong>：只要不是本人<strong>故意</strong>（故意犯罪、自残自杀等），即使操作违规、疏忽大意出了事故，照样认定工伤、照样赔偿。单位常拿"他自己有错"拒赔——错，这正是本原则要堵住的漏洞。</p></div></div>
+<div class="section"><h3>2. 用人单位的责任（★★★）<span class="hot">高频考点</span></h3>
+<p>一般要求：用人单位应当将参加工伤保险的有关情况<strong>在本单位内公示</strong>。七种特殊情形下工伤保险责任的归属：</p>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>责任归属</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>分立、合并、转让</strong></td>
+<td><strong>承继单位</strong>承担原用人单位的工伤保险责任；原单位已参保的，承继单位应到当地经办机构办理工伤保险<strong>变更登记</strong></td>
+</tr>
+<tr>
+<td>实行<strong>承包经营</strong></td>
+<td>由<strong>职工劳动关系所在单位</strong>承担</td>
+</tr>
+<tr>
+<td>职工被<strong>借调</strong>期间受到工伤事故伤害</td>
+<td>由<strong>原用人单位</strong>承担（原单位与借调单位可约定补偿办法）</td>
+</tr>
+<tr>
+<td><strong>企业破产</strong></td>
+<td>破产清算时依法拨付应由单位支付的工伤保险待遇费用</td>
+</tr>
+<tr>
+<td>职工被<strong>派遣出境</strong>工作</td>
+<td>依据前往国家/地区法律<strong>应当</strong>参加当地工伤保险的→参加当地，其国内工伤保险关系<strong>中止</strong>；<strong>不能</strong>参加当地工伤保险的→国内关系<strong>不中止</strong></td>
+</tr>
+<tr>
+<td>在<strong>两个或两个以上</strong>用人单位<strong>同时就业</strong>（含非全日制就业人员）</td>
+<td>各单位<strong>分别</strong>缴纳工伤保险费；发生工伤，由<strong>职工受到伤害时工作的单位</strong>依法承担工伤保险责任</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 责任归属口诀</div><p><strong>"分合转让承继担，承包跟着劳动关系走，借调找原东家，破产清算拨，出境看当地，多处就业看受伤地。"</strong></p></div></div>
+<div class="section"><h3>3. 工伤保险费的缴纳（★★★）<span class="hot">高频考点</span></h3>
+<ul>
+<li>由<strong>用人单位</strong>缴纳工伤保险费，<strong>职工不缴纳</strong>工伤保险费（与养老、医疗、失业的"共同缴"形成对照）。</li>
+<li><strong>缴费数额＝本单位职工工资总额 × 单位缴费费率</strong>。</li>
+<li><strong>费率确定原则</strong>：以支定收、收支平衡；<strong>不同行业</strong>实行<strong>行业差别费率</strong>，<strong>同一行业</strong>内设<strong>费率档次</strong>。</li>
+</ul>
+<p><strong>特殊缴费基数</strong>（小行业、小企业灵活计缴）：</p>
+<table>
+<thead>
+<tr>
+<th>主体</th>
+<th>缴费办法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>建筑施工企业</strong></td>
+<td>可以以<strong>建筑施工项目</strong>为单位，按<strong>项目工程总造价</strong>的一定比例计缴保费</td>
+</tr>
+<tr>
+<td><strong>小型服务业企业</strong>（商贸、餐饮、住宿、美容美发、洗浴及文体娱乐）及<strong>有雇工的个体工商户</strong></td>
+<td>可按<strong>营业面积</strong>大小核定应参保人数，按统筹地区上年度职工月平均工资的一定比例和相应费率计缴；也可按<strong>营业额</strong>的一定比例计缴</td>
+</tr>
+<tr>
+<td><strong>小型矿山企业</strong></td>
+<td>按<strong>总产量、吨矿工资含量</strong>和相应费率计缴</td>
+</tr>
+</tbody>
+</table>
+<p><strong>工伤保险基金构成</strong>：用人单位缴纳的工伤保险费＋工伤保险基金的利息＋依法纳入工伤保险基金的其他资金。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 缴费口诀</div><p><strong>"工伤只由单位缴，工资总额乘费率；以支定收求平衡，行业差别有档次。"</strong> 建筑按造价、服务业按面积或营业额、矿山按产量——"三小"各有各的算法。</p></div></div>
+<div class="section"><h2>二、工伤认定（★★★）</h2>
+<h3>1. 应当认定为工伤的七种情形 <span class="must">必考</span> <span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>情形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td><strong>工作时间</strong>和<strong>工作场所</strong>内，因<strong>工作原因</strong>受到事故伤害</td>
+</tr>
+<tr>
+<td>②</td>
+<td>工作时间<strong>前后</strong>在工作场所内，从事与工作有关的<strong>预备性或者收尾性</strong>工作受到事故伤害</td>
+</tr>
+<tr>
+<td>③</td>
+<td>工作时间和工作场所内，因<strong>履行工作职责</strong>受到<strong>暴力等意外伤害</strong></td>
+</tr>
+<tr>
+<td>④</td>
+<td>患<strong>职业病</strong></td>
+</tr>
+<tr>
+<td>⑤</td>
+<td><strong>因工外出</strong>期间，由于工作原因受到伤害或者发生事故<strong>下落不明</strong></td>
+</tr>
+<tr>
+<td>⑥</td>
+<td><strong>上下班途中</strong>，受到<strong>非本人主要责任</strong>的交通事故或者城市轨道交通、客运轮渡、火车事故伤害</td>
+</tr>
+<tr>
+<td>⑦</td>
+<td>法律、行政法规规定应当认定为工伤的<strong>其他情形</strong></td>
+</tr>
+</tbody>
+</table>
+<p>两个高频细节：
+- "上下班途中"的<strong>非本人主要责任</strong>，以<strong>有关机关出具的法律文书或者人民法院的生效裁决</strong>为依据；
+- "因工外出"的认定看两点：外出是否属于<strong>用人单位指派</strong>的因工作外出；遭受的事故伤害是否<strong>因工作原因</strong>所致。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 认定七情形口诀</div><p><strong>"三工（工作时间、场所、原因）、前后收尾、履职被打、职业病、因工外出、途中非主责，外加一条兜底。"</strong></p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小李下班被后车追尾，交警认定对方全责（小李<strong>非本人主要责任</strong>）→认定为工伤；老王酒后驾车追尾前车，交警认定老王负主要责任→<strong>不</strong>认定为工伤。判断顺序：先看是否"上下班途中＋交通事故（含城市轨道交通、客运轮渡、火车）"，再看责任认定里是否"非本人主要责任"。</p></div></div>
+<div class="section"><h3>2. 视同工伤的三种情形 <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>情形</th>
+<th>特别规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>在<strong>工作时间和工作岗位</strong>，<strong>突发疾病死亡</strong>或者在 <strong>48 小时之内</strong>经抢救无效死亡</td>
+<td>记住"岗位上、48 小时"两个要件</td>
+</tr>
+<tr>
+<td>②</td>
+<td>在<strong>抢险救灾</strong>等维护国家利益、公共利益活动中受到伤害</td>
+<td>不限时间地点</td>
+</tr>
+<tr>
+<td>③</td>
+<td>职工<strong>原在军队服役</strong>，因战、因公负伤致残，已取得<strong>残疾军人证</strong>，到用人单位后<strong>旧伤复发</strong></td>
+<td>享受<strong>除一次性伤残补助金以外</strong>的工伤保险待遇</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 视同三情形口诀</div><p><strong>"岗位暴病四十八，抢险救灾国家事，军人旧伤算工伤。"</strong></p></div></div>
+<div class="section"><h3>3. 不得认定工伤的三种情形 <span class="hot">高频考点</span></h3>
+<p>①<strong>故意犯罪</strong>的；②<strong>醉酒或者吸毒</strong>的；③<strong>自残或者自杀</strong>的。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：故意犯罪必不算</div><p>凡是"<strong>故意犯罪</strong>"均不属于工伤，但如果只是犯罪不一定——排除工伤的必须是"<strong>故意</strong>"犯罪，过失犯罪不在排除之列；同时排除事由是"<strong>醉酒或者吸毒</strong>"，一般饮酒未达醉酒程度不影响认定。</p></div></div>
+<div class="section"><h3>4. 工伤认定申请（★★★）<span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>事项</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单位申请</td>
+<td>自事故伤害发生之日或被诊断、鉴定为职业病之日起 <strong>30 日内</strong>，向<strong>统筹地区社会保险行政部门</strong>提出申请；遇特殊情况，经报社会保险行政部门同意，申请时限可以<strong>适当延长</strong></td>
+</tr>
+<tr>
+<td>个人/工会申请</td>
+<td>单位不按规定提出申请的，<strong>工伤职工或其近亲属、工会组织</strong>可以在 <strong>1 年内</strong>直接向<strong>用人单位所在地</strong>统筹地区社会保险行政部门提出申请</td>
+</tr>
+<tr>
+<td>单位逾期的后果</td>
+<td>单位未在 30 日时限内提交申请，<strong>在此期间</strong>发生的符合《工伤保险条例》规定的工伤待遇等有关费用<strong>由该用人单位承担</strong></td>
+</tr>
+<tr>
+<td>申请材料</td>
+<td>①工伤认定申请表；②与用人单位存在<strong>劳动关系（包括事实劳动关系）</strong>的证明材料；③<strong>医疗诊断证明</strong>或者<strong>职业病诊断证明</strong>（职业病诊断鉴定书）</td>
+</tr>
+<tr>
+<td>举证责任</td>
+<td>职工或其近亲属认为是工伤、用人单位不认为是工伤的，由<strong>用人单位</strong>承担举证责任</td>
+</tr>
+<tr>
+<td>认定时限</td>
+<td>社会保险行政部门自<strong>受理</strong>之日起 <strong>60 日内</strong>作出工伤认定的决定；对受理的<strong>事实清楚、权利义务明确</strong>的申请，应当在 <strong>15 日内</strong>作出</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 时限口诀</div><p><strong>"单位三十、个人一年；受理六十、简案十五；单位拖过三十天，期间费用单位担。"</strong></p></div></div>
+<div class="section"><h3>5. 劳动能力鉴定（★）</h3>
+<p>职工发生工伤，经治疗<strong>伤情相对稳定</strong>后存在<strong>残疾、影响劳动能力</strong>的，应当进行劳动能力鉴定。</p>
+<table>
+<thead>
+<tr>
+<th>鉴定维度</th>
+<th>分级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>劳动功能障碍</strong></td>
+<td>分为 <strong>10 个伤残等级</strong>，最重的为<strong>一级</strong>，最轻的为<strong>十级</strong></td>
+</tr>
+<tr>
+<td><strong>生活自理障碍</strong></td>
+<td>分为 <strong>3 个等级</strong>：生活完全不能自理、生活大部分不能自理、生活部分不能自理</td>
+</tr>
+</tbody>
+</table>
+<p><strong>鉴定流程</strong>：
+1. <strong>劳动能力鉴定委员会</strong>是负责劳动能力鉴定的专门机构，由其建立<strong>医疗卫生专家库</strong>；
+2. <strong>设区的市级</strong>劳动能力鉴定委员会自收到劳动能力鉴定申请之日起 <strong>60 日内</strong>作出鉴定结论，必要时作出结论的期限可以<strong>延长 30 日</strong>；
+3. 申请鉴定的单位或个人对结论不服的，可在收到结论之日起 <strong>15 日内</strong>向<strong>省、自治区、直辖市</strong>劳动能力鉴定委员会提出<strong>再次鉴定申请</strong>——<strong>省级作出的结论为最终结论</strong>；
+4. 自结论作出之日起 <strong>1 年后</strong>，工伤职工或其近亲属、所在单位或经办机构认为<strong>伤残情况发生变化</strong>的，可以申请<strong>劳动能力复查鉴定</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 鉴定流程口诀</div><p><strong>"市级六十加三十，不服十五上省里，省级终局；一年之后可复查。"</strong></p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：工会只能管一半</div><p><strong>工会组织可以代为申请工伤认定，不能代为申请劳动能力鉴定</strong>——两套程序的主体别混。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 &quot;认定&quot;与&quot;视同&quot;的待遇差别</div><p>军人旧伤复发属"<strong>视同</strong>工伤"，但<strong>不享受一次性伤残补助金</strong>（享受除此之外的其他工伤保险待遇）——这是"视同"与"认定"在待遇上的经典差别点，多选题常拿"军人旧伤复发享受全部工伤保险待遇"设错。</p></div></div>
+<div class="section"><h2>三、工伤保险待遇（★★★）</h2>
+<h3>1. 工伤保险基金支付范围（★★）</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>治疗工伤的费用</td>
+<td>符合<strong>工伤保险诊疗项目目录、工伤保险药品目录、工伤保险住院服务标准</strong>的治疗费、药费、住院费</td>
+</tr>
+<tr>
+<td>伙食补助与外地就医费用</td>
+<td>职工住院治疗工伤的<strong>伙食补助费</strong>；经<strong>医疗机构出具证明、报经办机构同意</strong>，到<strong>统筹地区以外</strong>就医所需的<strong>交通、食宿费</strong></td>
+</tr>
+<tr>
+<td>康复费用</td>
+<td>到<strong>签订服务协议</strong>的医疗机构进行工伤康复的符合规定费用</td>
+</tr>
+</tbody>
+</table>
+<h3>2. 停工留薪期（★★★）<span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>要点</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期内待遇</td>
+<td><strong>原工资福利待遇不变</strong>，由<strong>所在单位按月支付</strong></td>
+</tr>
+<tr>
+<td>期限</td>
+<td>一般<strong>不超过 12 个月</strong>；伤情严重或情况特殊，经<strong>设区的市级</strong>劳动能力鉴定委员会确认，可以适当延长，但<strong>延长不得超过 12 个月</strong></td>
+</tr>
+<tr>
+<td>评残后</td>
+<td>工伤职工评定伤残等级后，<strong>停发原待遇</strong>，按《工伤保险条例》有关规定享受<strong>伤残待遇</strong></td>
+</tr>
+<tr>
+<td>期满后仍需治疗</td>
+<td><strong>继续享受工伤医疗待遇</strong></td>
+</tr>
+<tr>
+<td>期内护理</td>
+<td>生活不能自理的工伤职工在停工留薪期<strong>需要护理的，由所在单位负责</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 停工留薪口诀</div><p><strong>"十二加十二，工资单位发；评残停旧待遇，期满治疗还管；期内要护理，单位来负责。"</strong></p></div></div>
+<div class="section"><h3>3. 生活护理费（★）</h3>
+<p>已评定伤残等级并经劳动能力鉴定委员会确认<strong>需要生活护理</strong>的，从<strong>工伤保险基金按月</strong>支付生活护理费：</p>
+<table>
+<thead>
+<tr>
+<th>生活自理障碍</th>
+<th>支付标准（统筹地区上年度职工月平均工资）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>生活<strong>完全</strong>不能自理</td>
+<td><strong>50%</strong></td>
+</tr>
+<tr>
+<td>生活<strong>大部分</strong>不能自理</td>
+<td><strong>40%</strong></td>
+</tr>
+<tr>
+<td>生活<strong>部分</strong>不能自理</td>
+<td><strong>30%</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 生活护理费口诀</div><p><strong>"全五、大四、部分三。"</strong> 障碍越重比例越高；基数统一是"统筹地区上年度职工月平均工资"，按月从基金支付。</p></div></div>
+<div class="section"><h3>4. 伤残待遇（★★）<span class="must">必考</span> <span class="s3">★★★</span></h3>
+<p><strong>（1）一至四级伤残</strong>——最重的一档："<strong>保留劳动关系、退出工作岗位</strong>"：</p>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>一次性伤残补助金</th>
+<th>按月伤残津贴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一级</td>
+<td><strong>27 个月</strong>本人工资</td>
+<td>本人工资的 <strong>90%</strong></td>
+</tr>
+<tr>
+<td>二级</td>
+<td><strong>25 个月</strong></td>
+<td><strong>85%</strong></td>
+</tr>
+<tr>
+<td>三级</td>
+<td><strong>23 个月</strong></td>
+<td><strong>80%</strong></td>
+</tr>
+<tr>
+<td>四级</td>
+<td><strong>21 个月</strong></td>
+<td><strong>75%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>配套规则：伤残津贴<strong>低于最低工资标准</strong>的，由<strong>工伤保险基金</strong>补足差额；办理<strong>退休手续</strong>后<strong>停发伤残津贴</strong>，改按国家规定享受基本养老保险待遇（养老待遇低于伤残津贴的，由工伤保险基金补差）；由<strong>用人单位和职工个人以伤残津贴为基数</strong>，缴纳基本医疗保险费。</p>
+<p><strong>（2）五至六级伤残</strong>——"保留劳动关系、安排适当工作"：</p>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>一次性伤残补助金</th>
+<th>难以安排工作时的伤残津贴（单位按月发）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>五级</td>
+<td><strong>18 个月</strong>本人工资</td>
+<td>本人工资的 <strong>70%</strong></td>
+</tr>
+<tr>
+<td>六级</td>
+<td><strong>16 个月</strong></td>
+<td><strong>60%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>配套规则：津贴实际金额低于当地最低工资标准的，由<strong>用人单位</strong>补足差额；经<strong>职工本人提出</strong>，可以与用人单位解除或终止劳动关系，由<strong>工伤保险基金</strong>支付<strong>一次性工伤医疗补助金</strong>、由<strong>用人单位</strong>支付<strong>一次性伤残就业补助金</strong>（具体标准由省、自治区、直辖市人民政府规定）；由用人单位按规定为其缴纳应缴的各项社会保险费。</p>
+<p><strong>（3）七至十级伤残</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>一次性伤残补助金</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>七级</td>
+<td><strong>13 个月</strong>本人工资</td>
+</tr>
+<tr>
+<td>八级</td>
+<td><strong>11 个月</strong></td>
+</tr>
+<tr>
+<td>九级</td>
+<td><strong>9 个月</strong></td>
+</tr>
+<tr>
+<td>十级</td>
+<td><strong>7 个月</strong></td>
+</tr>
+</tbody>
+</table>
+<p>劳动、聘用合同期满终止，或者职工本人提出解除劳动、聘用合同的，同样由<strong>工伤保险基金</strong>支付一次性工伤医疗补助金、由<strong>用人单位</strong>支付一次性伤残就业补助金（具体标准由省级人民政府规定）。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：津贴谁付看等级</div><p><strong>工伤保险基金支付一级至四级的伤残津贴；用人单位支付五级至六级的伤残津贴。所有被鉴定为工伤的均可获得一次性伤残补助金。工伤职工离职均可获得由工伤保险基金支付的一次性工伤医疗补助金和由用人单位支付的一次性伤残就业补助金。</strong>——一句话锁定三对"付钱人"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 伤残数字口诀</div><p><strong>"补助金：一级 27 往下每级减 2 到四级 21；五级 18、六级 16；七级 13 减到十级 7。津贴：一至四级 90% 每级减 5 到 75%；五级 70%、六级 60%。"</strong></p></div></div>
+<div class="section"><h3>5. 遗属待遇（★★★）<span class="hot">高频考点</span></h3>
+<p>职工<strong>因工死亡</strong>的，其近亲属可从工伤保险基金领取三项待遇：</p>
+<table>
+<thead>
+<tr>
+<th>待遇</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>丧葬补助金</strong></td>
+<td><strong>6 个月</strong>的<strong>统筹地区上年度职工月平均工资</strong></td>
+</tr>
+<tr>
+<td><strong>供养亲属抚恤金</strong></td>
+<td>发给由因工死亡职工<strong>生前提供主要生活来源、无劳动能力</strong>的亲属：<strong>配偶每月 40%</strong>、其他亲属<strong>每人每月 30%</strong>（按职工本人工资的一定比例）；<strong>孤寡老人或者孤儿</strong>每人每月在上述标准基础上<strong>增加 10%</strong></td>
+</tr>
+<tr>
+<td><strong>一次性工亡补助金</strong></td>
+<td><strong>上年度全国城镇居民人均可支配收入的 20 倍</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>死亡情形与待遇范围的对应</strong>：①职工因工死亡、伤残职工在<strong>停工留薪期内因工伤导致死亡</strong>的——其近亲属享受<strong>全部三项</strong>待遇；②<strong>一级至四级</strong>伤残职工在<strong>停工留薪期满后死亡</strong>的——其近亲属只享受<strong>前两项</strong>（丧葬补助金＋供养亲属抚恤金）。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某职工因工死亡，当地上年度职工月平均工资为 6000 元/月，其本人月工资 8000 元：丧葬补助金＝6000×6＝<strong>3.6 万元</strong>；供养亲属抚恤金——无劳动能力的妻子每月领 8000×40%＝3200 元、未成年的女儿每月领 8000×30%＝2400 元（若母亲属孤寡老人，在其 30% 的基础上再加 10%）；一次性工亡补助金＝上年度全国城镇居民人均可支配收入×20。三笔钱都从工伤保险基金出。</p></div></div>
+<div class="section"><div class="keypoint"><strong>两套&quot;遗属待遇&quot;对照表：</strong><table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>养老保险（因病或非因工死亡）</th>
+<th>工伤保险（因工死亡）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>丧葬补助金</td>
+<td>本省上年度<strong>城镇居民月人均可支配收入 × 2</strong></td>
+<td>统筹地区上年度<strong>职工月平均工资 × 6 个月</strong></td>
+</tr>
+<tr>
+<td>抚恤金</td>
+<td>一次性发放，月数按缴费年限分档（3/6/9→最高 24 个月）</td>
+<td><strong>供养亲属抚恤金按月发</strong>：配偶 40%、其他 30%、孤寡孤儿＋10%</td>
+</tr>
+<tr>
+<td>第三笔</td>
+<td>—</td>
+<td>一次性工亡补助金＝全国城镇居民人均可支配收入×20</td>
+</tr>
+<tr>
+<td>资金来源</td>
+<td>企业职工基本养老保险统筹基金</td>
+<td>工伤保险基金</td>
+</tr>
+</tbody>
+</table></div></div>
+<div class="section"><h3>6. 停止享受工伤保险待遇的情形（★）</h3>
+<p>①<strong>丧失享受待遇条件</strong>的；②<strong>拒不接受劳动能力鉴定</strong>的；③<strong>拒绝治疗</strong>的。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 停止待遇口诀</div><p><strong>"条件没了、鉴定不去、治疗不治——三种停发。"</strong></p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>三原则</strong>：无过失责任（非本人故意即赔）、损害补偿、预防补偿和康复相结合</li>
+<li><strong>单位责任</strong>：分合转让→承继单位（办理变更登记）；承包→劳动关系所在单位；借调→原单位；破产→清算时依法拨付；出境→能参加当地则国内中止、不能参加则不中止；多处就业→受伤时工作的单位担责；参保情况单位内公示</li>
+<li><strong>缴费</strong>：单位缴、职工不缴；数额＝本单位工资总额×单位缴费费率；以支定收收支平衡；行业差别费率＋行业内档次；建筑施工按项目造价、小服务业按面积/营业额、小矿山按总产量</li>
+<li><strong>认定七情形</strong>：三工、前后预备收尾、履职受暴力、职业病、因工外出下落不明、上下班非本人主要责任交通事故（含轨道/轮渡/火车）、兜底</li>
+<li><strong>视同三情形</strong>：岗位暴病 48 小时内亡、抢险救灾、军人旧伤复发（无一次性伤残补助金）</li>
+<li><strong>不算工伤</strong>：故意犯罪、醉酒或吸毒、自残或自杀</li>
+<li><strong>申请</strong>：单位 30 日（可延长）、个人/工会 1 年、材料三件（申请表＋劳动关系证明＋医疗/职业病诊断证明）、单位举证；受理 60 日出决定、简案 15 日；单位逾期期间费用自担</li>
+<li><strong>劳动能力鉴定</strong>：伤残 10 级（1 级最重）、自理障碍 3 级；市级 60＋30 日；15 日内向省级再鉴定、省级终局；1 年后可复查</li>
+<li><strong>基金支付</strong>：治疗费药费住院费、伙食补助＋统筹地区以外交通食宿费、康复费</li>
+<li><strong>停工留薪</strong>：原工资福利单位按月付；12＋12 个月；评残后停原待遇转伤残待遇；期满仍需治疗继续工伤医疗待遇；期内护理单位负责</li>
+<li><strong>生活护理费</strong>：完全 50%、大部分 40%、部分 30%（统筹地区上年度职工月平均工资，按月、基金付）</li>
+<li><strong>伤残待遇</strong>：1–4 级补助金 27/25/23/21 个月＋津贴 90/85/80/75%（基金付、保留劳动关系退出岗位）；5–6 级 18/16 个月＋津贴 70%/60%（单位付、安排工作）；7–10 级 13/11/9/7 个月；离职均＝基金一次性工伤医疗补助金＋单位一次性伤残就业补助金</li>
+<li><strong>遗属</strong>：丧葬 6 个月职工月平均工资；供养亲属抚恤金配偶 40%、其他 30%、孤寡孤儿＋10%；工亡补助金＝上年度全国城镇居民人均可支配收入×20；停工留薪期内因工伤死亡享三项、一至四级期满后死亡只享前两项</li>
+<li><strong>停止待遇</strong>：丧失享受待遇条件、拒不接受劳动能力鉴定、拒绝治疗</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r16s3q1" data-answer="BDE" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">下列情况中，可以认定工伤的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 在上下班途中受到交通事故伤害的</button><button type="button" class="qopt" data-key="B">B. 工作时间前后在工作场所内从事与工作有关的预备性工作受到事故伤害的</button><button type="button" class="qopt" data-key="C">C. 在工作时间和工作岗位上突发疾病在 72 小时内抢救无效死亡的</button><button type="button" class="qopt" data-key="D">D. 在工作时间和工作场所内因工作原因受到事故伤害的</button><button type="button" class="qopt" data-key="E">E. 患职业病的</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BDE</div><div class="q-exp"><p>析：B、D、E 均属"应当认定为工伤"的情形。A 错误——上下班途中只有受到<strong>非本人主要责任</strong>的交通事故或者城市轨道交通、客运轮渡、火车事故伤害才认定工伤，选项缺了关键限定；C 错误——双重陷阱：在工作时间和工作岗位突发疾病死亡或<strong>48 小时</strong>之内经抢救无效死亡属"<strong>视同</strong>工伤"而非"认定"，且时限是 48 小时不是 72 小时。
+:::</p></div></details></div><div class="quiz-item" data-qid="r16s3q2" data-answer="D" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">根据《工伤保险条例》，下列情形中，不应认定为工伤的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 员工为公司看守大门，因阻挡外来人员进入被打受伤</button><button type="button" class="qopt" data-key="B">B. 员工下班关电扇时，不小心触电受伤</button><button type="button" class="qopt" data-key="C">C. 员工在工作岗位工作，被顶棚掉下来的吊扇砸伤</button><button type="button" class="qopt" data-key="D">D. 员工驾车下班途中发生交通事故，本人对交通事故负主要责任</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：上下班途中只有受到<strong>非本人主要责任</strong>的交通事故才认定为工伤，D 本人负主要责任，不应认定。A 是"在工作时间和工作场所内因<strong>履行工作职责</strong>受到暴力等意外伤害"；B 是"工作时间前后在工作场所内从事与工作有关的<strong>收尾性工作</strong>"受伤；C 是"在工作时间和工作场所内因<strong>工作原因</strong>"受伤——均应认定为工伤。
+:::</p></div></details></div><div class="quiz-item" data-qid="r16s3q3" data-answer="C" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">三级伤残职工在停工留薪期满后死亡的，其近亲属可以享受的补助类型为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 供养亲属抚恤金和失业保险金</button><button type="button" class="qopt" data-key="B">B. 供养亲属抚恤金和一次性工亡补助金</button><button type="button" class="qopt" data-key="C">C. 丧葬补助金和供养亲属抚恤金</button><button type="button" class="qopt" data-key="D">D. 丧葬补助金和一次性工亡补助金</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：职工因工死亡的，近亲属可从工伤保险基金领取丧葬补助金、供养亲属抚恤金和一次性工亡补助金三项；伤残职工在<strong>停工留薪期内</strong>因工伤导致死亡的，享受<strong>全部三项</strong>；<strong>一级至四级</strong>伤残职工在<strong>停工留薪期满后</strong>死亡的，只享受<strong>前两项</strong>——丧葬补助金＋供养亲属抚恤金。三级伤残正属一至四级，故选 C。B、D 把"停工留薪期内因工伤导致死亡"才有的<strong>一次性工亡补助金</strong>混了进来；失业保险金（A）与工亡待遇无关。
+:::</p></div></details></div><div class="quiz-item" data-qid="r16s3q4" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">一次性工亡补助金的计算标准是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 上年度全国城镇居民人均可支配收入的 20 倍</button><button type="button" class="qopt" data-key="B">B. 上年度全国城镇居民人均可支配收入的 25 倍</button><button type="button" class="qopt" data-key="C">C. 上年度当地在岗职工平均工资收入的 20 倍</button><button type="button" class="qopt" data-key="D">D. 上年度当地在岗职工平均工资收入的 25 倍</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：一次性工亡补助金标准为<strong>上年度全国城镇居民人均可支配收入的 20 倍</strong>。两个易错点：基数是<strong>全国</strong>（不是当地）的<strong>城镇居民人均可支配收入</strong>（不是在岗职工平均工资）；倍数是 20 倍——"6 个月职工月平均工资"是丧葬补助金的口径，别混。
+:::</p></div></details></div><div class="quiz-item" data-qid="r16s3q5" data-answer="B" data-type="single"><span class="q-tag">2018·单选</span><div class="q-stem">关于工伤认定申请程序的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 如果单位未按期为小孙申请工伤认定，小孙本人可以申请工伤认定</button><button type="button" class="qopt" data-key="B">B. 如果单位未按规定申请工伤认定，工会组织可以申请工伤认定，且没有申请时间限制</button><button type="button" class="qopt" data-key="C">C. 小孙发生事故后，单位应在 30 天内申请工伤认定</button><button type="button" class="qopt" data-key="D">D. 如单位未按期为小孙申请工伤认定，在此期间发生的符合《工伤保险条例》的工伤保险待遇由该单位承担</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：B 错误——用人单位未按规定提出申请的，工伤职工或其近亲属、<strong>工会组织</strong>可以在事故伤害发生之日或被诊断、鉴定为职业病之日起 <strong>1 年内</strong>直接提出工伤认定申请，同样受 <strong>1 年时限</strong>约束，并非没有时间限制。A 正确（本人可以申请）；C 正确（单位应在 30 日内申请，特殊情况经报社会保险行政部门同意可延长）；D 正确（单位未在 30 日时限内提交申请，期间发生的符合条例规定的工伤待遇等费用由单位承担）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r16s3q6" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">小孙下班收工关闭车床时，因与同事聊天，未遵守操作规程，导致手指被车床挤伤，两个月无法上班。单位认为小孙因个人过失导致受伤，不愿承担赔偿责任。下列关于本案的说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 小孙是在下班收工关闭车床时受伤，所以不能认定工伤</button><button type="button" class="qopt" data-key="B">B. 小孙在手指受伤的事故中存在过错，所以不应认定工伤</button><button type="button" class="qopt" data-key="C">C. 单位未为小孙缴纳工伤保险费，所以小孙不能认定工伤</button><button type="button" class="qopt" data-key="D">D. 小孙符合认定工伤的条件，应当认定工伤</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：工伤保险实行<strong>无过失责任</strong>原则——只要不是受害者本人故意行为（故意犯罪、醉酒或吸毒、自残或自杀）所致，就应按规定给予赔偿，一般过失<strong>不影响</strong>工伤认定，B 错误。下班收工关闭车床属于"工作时间前后在工作场所内从事与工作有关的<strong>收尾性工作</strong>"，符合应当认定为工伤的情形，A 错误。是否参加工伤保险与工伤<strong>认定</strong>无关（未参保只影响有关待遇由用人单位支付），C 错误。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力16_社会保险体系_第2节_基本医疗保险.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 基本医疗保险</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力16_社会保险体系_第4节_失业保险.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 失业保险</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三十二章 政府会计 · 政府会计的概念 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第五部分 会计</span><h1>第三十二章 政府会计 · 政府会计的概念</h1><div class="subtitle">第 1 节 / 共 3 节 · 预计学习时长 30 分钟</div><div class="progress-bar"><div class="fill" style="width:33%"></div></div><div class="progress-text">本章进度 1/3</div><div class="sec-badge none" id="sec-badge" data-sec="b32s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背下<strong>政府会计</strong>定义四步动作（确认、计量、记录、报告），抓牢"<strong>受托责任</strong>"题眼 <span class="hot">高频考点</span></li>
+<li>一刀切分清<strong>政府会计主体</strong>范围，见到"国有企业、商业银行"秒排除 <span class="must">必考</span></li>
+<li>背熟双基础口诀<strong>"预算收付，财务权责"</strong>，构成类单选不丢分 <span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>说得出政府会计目标三层意思：<strong>资源分配决策、反映受托责任、预测持续经营</strong> <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、政府会计的定义与主体</h2>
+<h3>1. 什么是政府会计 <span class="hot">高频考点</span></h3>
+<p><strong>政府会计</strong>：用于<strong>确认、计量、记录和报告</strong>政府会计主体<strong>财务收支活动</strong>及其<strong>受托责任履行情况</strong>的会计体系。</p></div>
+<div class="section"><div class="keypoint"><strong>政府会计和企业会计差在哪：</strong><p>记账对象不同：企业会计记"买卖赚没赚钱"，政府会计记"财政的钱<strong>从哪来、花哪去、有没有履行受托责任</strong>"。题眼是"<strong>受托责任</strong>"——政府花的是纳税人的钱，记账第一使命是向社会交代。四步动作则和企业会计一样：<strong>确认 → 计量 → 记录 → 报告</strong>，一步不少。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>市财政局 2026 年拨给市教育局 5000 万元办学经费：钱到了"收下"（确认）、"折多少钱"（计量）、"记进账本"（记录）、"年底编报告晒账"（报告）——政府会计管的正是这套"财务收支活动 ＋ 受托责任履行情况"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 定义四要件口诀</div><p><strong>"四步动作管收支，受托责任是题眼"</strong>——确认、计量、记录、报告四步一个不能少；体系管的对象是"财务收支活动＋受托责任履行情况"，单选里少了"受托责任"这半句的说法不完整。</p></div></div>
+<div class="section"><h3>2. 政府会计主体 <span class="hot">高频考点</span> <span class="must">必考</span></h3>
+<p><strong>政府会计主体</strong>：<strong>各级政府</strong>以及与<strong>本级政府财政部门直接或间接发生预算拨款关系</strong>的<strong>国家机关、军队、政党组织、社会团体、事业单位</strong>和<strong>其他单位</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>判定</th>
+<th>单位</th>
+<th>为什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ 属于主体</td>
+<td><strong>各级政府</strong></td>
+<td>本尊</td>
+</tr>
+<tr>
+<td>✅ 属于主体</td>
+<td>国家机关、军队、政党组织、社会团体、事业单位、其他单位</td>
+<td>与本级财政部门<strong>直接或间接</strong>发生<strong>预算拨款关系</strong></td>
+</tr>
+<tr>
+<td>❌ 不属于主体</td>
+<td>国有企业、商业银行等企业</td>
+<td>与财政是缴税、持股等关系，<strong>不是预算拨款关系</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>认定标准只有一条：</strong><p>不看单位名字唬不唬人，看<strong>钱的关系</strong>：跟本级政府财政部门<strong>直接或间接发生预算拨款关系</strong>的，才是政府会计主体。"国有企业"听着像"国家的"，但它是<strong>企业</strong>，走企业经营会计那套，不在政府会计主体的圈子里。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>查身份三步法：第一步，是不是各级政府本尊？不是；第二步，跟本级财政部门有没有直接或间接的预算拨款关系？市教育局每年拿财政拨款（<strong>直接</strong>），某主管部门二级单位靠主管部门转拨经费（<strong>间接</strong>），都算；第三步，若它是企业（国有企业、商业银行），直接出局。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 主体范围口诀</div><p><strong>"机军政党社团事"</strong>——国<strong>机</strong>关、<strong>军</strong>队、<strong>政党</strong>组织、<strong>社会团</strong>体、<strong>事业</strong>单位，外加各级政府和其他单位；再配一句<strong>"拨款定身份，企业靠边站"</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：国有企业</div><p>"国有企业""商业银行"是本知识点最爱的干扰项。判断只问一句：它和本级财政部门有没有<strong>预算拨款关系</strong>？企业不吃"财政拨款"这碗饭（它向国家缴税利），所以一律不选。2025 年多选考主体范围，用的就是商业银行、国有企业当干扰项。</p></div></div>
+<div class="section"><h2>二、政府会计的构成与目标</h2>
+<h3>1. 政府会计的构成：预算会计＋财务会计 <span class="hot">高频考点</span> <span class="must">必考</span></h3>
+<p><strong>政府会计由预算会计和财务会计构成</strong>——两套账、两种基础、各管一摊：</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>预算会计</th>
+<th>财务会计</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提供的信息</td>
+<td>与政府<strong>预算执行</strong>有关的信息</td>
+<td>政府的<strong>财务状况</strong>、<strong>运行情况（含运行成本）</strong>和<strong>现金流量</strong>等信息</td>
+</tr>
+<tr>
+<td>核算基础</td>
+<td><strong>收付实现制</strong>（<strong>国务院另有规定的，依照其规定</strong>）</td>
+<td><strong>权责发生制</strong></td>
+</tr>
+<tr>
+<td>白话版</td>
+<td>管"预算的钱花没花出去"的流水账</td>
+<td>管"家底厚不厚、运行贵不贵"的全景账</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两套账不是二选一：</strong><p>政府会计是<strong>双体系</strong>：同一笔业务，预算会计按收付实现制记"现金流水"，财务会计按权责发生制记"家底与运行成本"。考试爱把两者的<strong>信息内容</strong>（预算执行 vs 财务状况/运行情况/现金流量）和<strong>核算基础</strong>互相调包，见词对号即可。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>同一个月里财政实际付了 2 亿元水电费：预算会计账上"预算支出＋2 亿"（看<strong>付没付</strong>）；财务会计同时确认费用（看<strong>该不该算这个月的运行成本</strong>）。查预算执行进度用前者，看政府运行成本用后者——两套信息各有用途。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 双基础口诀</div><p><strong>"预算收付，财务权责"</strong>——八个字解决本知识点九成的单选。见"预算执行"→ 收付实现制；见"财务状况、运行情况、现金流量"→ 权责发生制。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别漏了&quot;国务院另有规定&quot;</div><p>预算会计实行收付实现制后面跟着一句"<strong>国务院另有规定的，依照其规定</strong>"——把这半句砍掉的说法不严谨；另外单选爱设"<strong>现收现付制</strong>"（把"收付实现制"故意写乱）当干扰项，正确名词只有"收付实现制"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三双口诀</div><p><strong>"双功能、双基础、双报告"</strong>——政府会计的架子用三个"双"串起来：<strong>功能成双</strong>（预算会计＋财务会计，就是上面这张对比表）、<strong>基础成双</strong>（收付实现制＋权责发生制）、<strong>报告成双</strong>（政府决算报告＋政府财务报告，教材明说两套报告<strong>都应当编制</strong>，一个不能少）。再竖着配一条线更好背：<strong>预算会计走收付，收尾靠决算报告；财务会计走权责，收尾靠财务报告</strong>——学到第三章两套报告时回来对这条线，构成、基础、报告三章一起锁死。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 权威提法：&quot;适度分离并相互衔接&quot;＋&quot;平行记账&quot;</div><p>财政部《权责发生制政府综合财务报告制度改革方案》对这套架子的官方表述是：构建<strong>"财务会计与预算会计适度分离并相互衔接"</strong>的政府会计核算体系。"相互衔接"靠什么实现？——<strong>平行记账</strong>（对纳入部门预算管理的现金收支业务，既按权责发生制做财务会计核算，又同时做预算会计核算，一笔业务两套分录，俗称"双分录"）。高顿讲义正文未展开这两句，但它是政府会计章的背景性标准提法（多选"关于政府会计的说法"里可能混入），判断"双功能、双基础、双报告""适度分离并相互衔接"都是<strong>正确</strong>描述，别当错误项排除。</p></div></div>
+<div class="section"><h3>2. 政府会计的目标 <span class="s3">★★★</span></h3>
+<p>三句话，各管一层：</p>
+<table>
+<thead>
+<tr>
+<th>目标</th>
+<th>关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提供有助于广大使用者对<strong>资源分配</strong>作出决策、以及<strong>评价</strong>会计主体<strong>财务状况、业绩和现金流量</strong>的信息</td>
+<td>决策有用</td>
+</tr>
+<tr>
+<td><strong>反映</strong>会计主体对<strong>受托资源管理责任</strong></td>
+<td>受托责任</td>
+</tr>
+<tr>
+<td>提供有助于<strong>预测持续经营所需资源、持续经营所产生资源以及风险和不确定性</strong>的信息</td>
+<td>预测未来</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>&quot;分、托、测&quot;三字锚点：</strong><p>目标题不用逐字背，抓三个词：<strong>资源分配</strong>（决策用）、<strong>受托责任</strong>（向社会交代）、<strong>预测</strong>（持续经营所需与所产生资源、风险和不确定性）。选项落到这三层意思之一，就是政府会计目标的内容。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>政府晒账像班主任期末总结：这张表告诉家长（使用者）班费怎么分配合适（资源分配决策）、老师有没有把班费管好（受托责任）、下学期还缺什么、有什么风险（预测持续经营）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 政府会计目标口诀</div><p><strong>"分配要决策，受托要交代，预测管未来"</strong>——三句话三层目标，多选全要、单选对号。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>政府会计</strong>＝确认、计量、记录、报告政府会计主体<strong>财务收支活动</strong>及<strong>受托责任履行情况</strong>的会计体系</li>
+<li><strong>主体</strong>：各级政府＋与本级财政部门直接/间接有<strong>预算拨款关系</strong>的国家机关、军队、政党组织、社会团体、事业单位、其他单位（口诀"机军政党社团事"）；<strong>企业一律不算</strong></li>
+<li><strong>构成</strong>：预算会计（<strong>预算执行</strong>信息·<strong>收付实现制</strong>·国务院另有规定除外）＋财务会计（<strong>财务状况/运行情况含运行成本/现金流量</strong>·<strong>权责发生制</strong>）</li>
+<li><strong>目标</strong>：资源分配决策有用＋反映受托责任＋预测持续经营资源与风险</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b32s1q1" data-answer="BCDE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列机构中，属于政府会计主体的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 国有企业</button><button type="button" class="qopt" data-key="B">B. 政党组织</button><button type="button" class="qopt" data-key="C">C. 社会团体</button><button type="button" class="qopt" data-key="D">D. 国家机关</button><button type="button" class="qopt" data-key="E">E. 军队</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：政府会计主体＝各级政府＋与本级政府财政部门直接或间接发生<strong>预算拨款关系</strong>的国家机关、军队、政党组织、社会团体、事业单位和其他单位。政党组织（B）、社会团体（C）、国家机关（D）、军队（E）都在列。国有企业（A）是<strong>企业</strong>，与财政不存在预算拨款关系，不属于政府会计主体——这是本考点头号干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b32s1q2" data-answer="CDE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">以下单位中，属于政府会计主体的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 商业银行</button><button type="button" class="qopt" data-key="B">B. 国有企业</button><button type="button" class="qopt" data-key="C">C. 社会团体</button><button type="button" class="qopt" data-key="D">D. 事业单位</button><button type="button" class="qopt" data-key="E">E. 行政机关</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CDE</div><div class="q-exp"><p>析：社会团体（C）、事业单位（D）、行政机关（E，属国家机关）均与本级财政部门发生预算拨款关系，属于政府会计主体。商业银行（A）、国有企业（B）是企业，走企业会计那套，不在主体范围内。口诀"拨款定身份，企业靠边站"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b32s1q3" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">政府会计的构成是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 预算会计和财务会计</button><button type="button" class="qopt" data-key="B">B. 财务会计和管理会计</button><button type="button" class="qopt" data-key="C">C. 预算会计和责任会计</button><button type="button" class="qopt" data-key="D">D. 财务会计和成本会计</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：政府会计由<strong>预算会计和财务会计</strong>构成。管理会计、责任会计、成本会计是<strong>企业（管理）会计</strong>体系里的分支，与政府会计构成无关，B、C、D 都是拿企业会计词汇拼出来的干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b32s1q4" data-answer="B" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">政府会计由预算会计和财务会计构成。财务会计提供与政府的财务状况、运行情况和现金流量等有关信息，实行（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 现收现付制</button><button type="button" class="qopt" data-key="B">B. 权责发生制</button><button type="button" class="qopt" data-key="C">C. 收付实现制</button><button type="button" class="qopt" data-key="D">D. 历史成本制</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：<strong>财务会计实行权责发生制</strong>（B 对）。收付实现制（C）是<strong>预算会计</strong>的核算基础；A"现收现付制"是把"收付实现制"故意写乱的干扰词；D 历史成本制是计量属性，不是核算基础。口诀"预算收付，财务权责"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b32s1q5" data-answer="CE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">政府会计的组成部分包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 决策会计</button><button type="button" class="qopt" data-key="B">B. 责任会计</button><button type="button" class="qopt" data-key="C">C. 预算会计</button><button type="button" class="qopt" data-key="D">D. 成本会计</button><button type="button" class="qopt" data-key="E">E. 财务会计</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CE</div><div class="q-exp"><p>析：政府会计由<strong>预算会计</strong>（C）和<strong>财务会计</strong>（E）构成。决策会计、责任会计、成本会计（A、B、D）属于企业会计尤其是管理会计的内容，与政府会计构成无关。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础32_政府会计_第2节_政府会计要素.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 政府会计要素</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

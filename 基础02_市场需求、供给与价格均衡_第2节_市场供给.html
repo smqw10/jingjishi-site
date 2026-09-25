@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二章 市场需求、供给与价格均衡 · 市场供给 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第二章 市场需求、供给与价格均衡 · 市场供给</h1><div class="subtitle">第 2 节 / 共 4 节 · 预计学习时长 30 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 2/4</div><div class="sec-badge none" id="sec-badge" data-sec="b02s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>供给＝愿意＋可能</strong>，与需求"欲望＋能力"结构同源 <span class="must">必考</span></li>
+<li>掌握影响供给的 6 大因素，与需求 7 因素<strong>对照防串场</strong>（偏好收入归需求，成本技术归供给） <span class="hot">高频考点</span></li>
+<li>分清<strong>供给数量变动（点移动）</strong>与<strong>供给变动（线移动）</strong>，成本、技术、预期动的是整条曲线 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、供给的含义</h2>
+<h3>1. 什么是供给 <span class="must">必考</span></h3>
+<p><strong>供给</strong>：在某一时间内和一定价格水平下，生产者<strong>愿意并可能</strong>为市场提供商品或服务的数量。</p>
+<p><strong>市场供给</strong>：在每一个可能的价格下，生产同一种商品的<strong>所有生产者供给的总和</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>供给与需求：一字之差，结构同源：</strong><p>需求＝消费者"<strong>愿意</strong>而且<strong>能够</strong>"买；供给＝生产者"<strong>愿意</strong>并<strong>可能</strong>"卖——都是"主观意愿＋客观能力"两条腿。想卖没货不叫供给（缺"可能"），有货不想卖也不叫供给（缺"愿意"）。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>菜市场里土豆的供给，就是当前菜价下所有种土豆的农户愿意拿出来卖的土豆总筐数：张三 20 筐＋李四 15 筐……加总起来才是"市场供给"。张三还有一窖土豆舍不得卖（不愿意）、李四想卖但地里已没货（不可能），都算不进供给。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 愿并能三字诀</div><p><strong>"愿意并可能"</strong>四个字一个不能丢——多选题把定义改成"愿意并出售""愿意并生产"都是偷换，只有"愿意并<strong>可能</strong>"是原文。</p></div></div>
+<div class="section"><h2>二、影响供给的主要因素（6 个）<span class="hot">高频考点</span></h2>
+<h3>1. 六大因素总览</h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>对供给的影响</th>
+<th>白话记忆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①产品价格</td>
+<td>自身价格与供给<strong>正方向</strong>变化（价格提高 → 收益或利润增加 → 企业多生产，其他企业也来生产）</td>
+<td>价高多产多卖</td>
+</tr>
+<tr>
+<td>②生产成本</td>
+<td>自身成本与供给<strong>反方向</strong>变化</td>
+<td>成本涨、少产</td>
+</tr>
+<tr>
+<td>③生产技术</td>
+<td>技术水平在一定程度上决定生产成本并进而影响供给；技术提高 → 供给增加</td>
+<td>技术好、产得多</td>
+</tr>
+<tr>
+<td>④预期</td>
+<td>生产者/销售者预期未来价格上涨 → <strong>囤积惜售、减少现期供给</strong>（等涨价再卖）；预期跌价 → 加快抛售、增加现期供给</td>
+<td>捂货等涨价</td>
+</tr>
+<tr>
+<td>⑤相关产品的价格</td>
+<td>一块地既可种大蒜也可种生姜：大蒜涨价 → 多种大蒜（大蒜供给增加）、少种生姜（生姜供给减少）</td>
+<td>种了这个就种不了那个</td>
+</tr>
+<tr>
+<td>⑥其他因素</td>
+<td>生产要素的价格以及国家政策等</td>
+<td>杂项兜底</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 预期对供给的方向：两套逻辑别打架</div><p>"预期涨价对供给的影响"在不同资料里写法相反，根源是<strong>主体和时间维度不同</strong>：①<strong>市场供给（现期）视角</strong>——主流经济学教材（曼昆、高鸿业）与多数经济师辅导资料：预期未来涨价 → <strong>囤积惜售、待价而沽</strong> → 现期供给<strong>减少</strong>（曲线左移）；②<strong>生产者扩产视角</strong>——部分讲义（如高顿）写"预期商品价格上涨，供给量增加"，说的是生产者为抓住涨价预期<strong>扩大生产</strong>的长期逻辑。考试答"影响供给的因素包括哪些"，两套口径下"预期"都入选；<strong>若考移动方向，按①"减少现期供给"作答</strong>（与主流教材一致），并与需求侧对比着记——同一个"预期涨价"，消费者提前买（需求增加）、销售者捂货（现期供给减少），方向正好相反。2026 官方教材原文表述请以人事社教材为最终依据。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>农户老王只有一块地，大蒜涨价 → 种大蒜更赚 → 老王把地多腾给大蒜 → 大蒜供给增加、生姜供给减少。相关产品（争用同一种资源的产品）之间，价格此消彼长，供给也随之此消彼长——这就是"相关产品的价格"影响供给的逻辑。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 需求 7 因素 vs 供给 6 因素：分篮子</div><p><strong>"偏好收入给需求，成本技术给供给"</strong>——消费者偏好、消费者收入、消费者预期是<strong>需求</strong>篮子里的；生产成本、生产技术、生产要素价格是<strong>供给</strong>篮子里的。"预期"两边都有，审题先看是谁的预期：<strong>消费者预期</strong>影响需求，<strong>生产者预期</strong>影响供给。多选题把"消费者偏好"混进供给选项，就是最常见的坑。</p></div></div>
+<div class="section"><h2>三、供给规律与供给曲线</h2>
+<h3>1. 供给规律与供给曲线</h3>
+<p><strong>供给规律</strong>：供给量与市场价格呈<strong>同方向</strong>变化。
+<strong>供给曲线</strong>：用于描述供给量与价格之间关系的曲线，<strong>向右上方倾斜</strong>。</p>
+<p>对照记忆：需求规律"反向"、需求曲线向<strong>右下方</strong>倾斜；供给规律"正向"、供给曲线向<strong>右上方</strong>倾斜——一反一正、一低一高。</p>
+<h3>2. 供给的两种变动 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>供给数量变动</th>
+<th>供给变动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原因</td>
+<td><strong>价格</strong>因素（商品自身价格）</td>
+<td><strong>非价格</strong>因素（成本、技术、预期等）</td>
+</tr>
+<tr>
+<td>图形表现</td>
+<td><strong>点的移动</strong>（沿既定供给曲线）</td>
+<td><strong>线的移动</strong>（整条曲线位移/平移）</td>
+</tr>
+</tbody>
+</table>
+<p>本节小结的方向：<strong>产品价格不变，生产成本降低、生产技术提高等因素，会导致供给曲线向右平移</strong>（成本上升则左移）。</p></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>香烟厂商面对增税：生产成本上升 → 非价格因素 → <strong>供给曲线左移</strong>（整条线退）；若只是香烟市场价上涨：自身价格因素 → 沿既定供给曲线<strong>点移动</strong>（价升量增，曲线不动）。考试把这两问并排放，考的就是"点线之分"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 点线规则全章通用</div><p><strong>"自己价格走点，别的因素走线"</strong>——需求和供给两条曲线完全一样。再记一句："<strong>成本降、技术进，供给曲线向右奔；成本升，向左退</strong>"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 看见成本、税、技术，先想供给</div><p>需求曲线的移动看"<strong>买方的钱包和口味</strong>"（收入、偏好、消费者预期、相关品价格）；供给曲线的移动看"<strong>卖方的账本</strong>"（成本、技术、生产要素价格、相关产品价格、生产者预期）。题干出现"增税、原料涨价、技术革新、生产周期"，动的一定是供给曲线。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>供给</strong>＝一定时间、价格下，生产者愿意并可能提供的数量；市场供给＝所有生产者供给的总和</li>
+<li>影响供给 6 因素：产品价格（正向）、生产成本（反向）、生产技术（决定成本）、生产者预期（涨价预期→增供）、相关产品价格（大蒜生姜）、其他（要素价格、政策）</li>
+<li>分篮子：偏好、收入、消费者预期→需求；成本、技术、要素价格→供给</li>
+<li>供给规律＝同方向（价高多产）；供给曲线<strong>向右上方倾斜</strong></li>
+<li>点移动＝自身价格；线移动＝成本、技术、预期等非价格因素；成本降、技术进 → 右移</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b02s2q1" data-answer="CDE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">影响供给的因素有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 消费者偏好</button><button type="button" class="qopt" data-key="B">B. 消费者预期</button><button type="button" class="qopt" data-key="C">C. 产品价格</button><button type="button" class="qopt" data-key="D">D. 生产成本</button><button type="button" class="qopt" data-key="E">E. 生产技术</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CDE</div><div class="q-exp"><p>析：影响供给的因素＝产品价格（C）、生产成本（D）、生产技术（E）、预期、相关产品的价格、其他（生产要素价格、国家政策）。消费者偏好（A）、消费者<strong>预期</strong>（B）是影响<strong>需求</strong>的因素——注意 B 特意写明"消费者"预期，管的是需求一侧；只有"生产者预期价格上涨→供给量增加"才能归供给。
+:::</p></div></details></div><div class="quiz-item" data-qid="b02s2q2" data-answer="BCE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">在横轴表示供给量，纵轴表示价格的坐标图上，导致某种产品的供给曲线发生位移的因素有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 该产品的市场价格下降</button><button type="button" class="qopt" data-key="B">B. 生产者预期该产品价格将上涨</button><button type="button" class="qopt" data-key="C">C. 该产品的生产成本上升</button><button type="button" class="qopt" data-key="D">D. 该产品的市场价格上升</button><button type="button" class="qopt" data-key="E">E. 该产品的生产技术进步</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCE</div><div class="q-exp"><p>析：<strong>位移＝线移动＝价格以外的因素</strong>。生产者预期涨价（B）、生产成本上升（C）、生产技术进步（E）都不是"该产品的市场价格"，都会使整条供给曲线移动。市场价格下降/上升（A、D）是<strong>自身价格</strong>因素，只引起沿既定供给曲线的<strong>点移动</strong>，曲线本身不位移。
+:::</p></div></details></div><div class="quiz-item" data-qid="b02s2q3" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于供给和供给函数的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 供给是指每一个可能的价格下，生产同一种商品的所有生产者供给的总和</button><button type="button" class="qopt" data-key="B">B. 供给函数表示某一种商品的供给量和影响该商品供给量的各种因素之间的相互关系</button><button type="button" class="qopt" data-key="C">C. 在供给函数中，供给量是因变量，影响供给量的各种因素是自变量</button><button type="button" class="qopt" data-key="D">D. 在其他条件不变的情况下，市场上商品或服务的供给量与市场价格呈正方向变化</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：A 偷换概念——"每一个可能的价格下，生产同一种商品的所有生产者供给的总和"是<strong>市场供给</strong>的定义；<strong>供给</strong>本身是指"某一时间内和一定价格水平下，生产者愿意并可能为市场提供商品或服务的数量"。B、C、D 都是标准表述：供给量是因变量、价格等影响因素是自变量，供给量与市场价格同方向变化。
+:::</p></div></details></div><div class="quiz-item" data-qid="b02s2q4" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">引起供给数量沿着既定供给曲线变动的原因是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 技术水平变化</button><button type="button" class="qopt" data-key="B">B. 生产者预期变化</button><button type="button" class="qopt" data-key="C">C. 成本变化</button><button type="button" class="qopt" data-key="D">D. 价格变化</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：沿既定曲线变动＝<strong>点移动</strong>＝自身<strong>价格</strong>因素（价格上升供给增加、价格下降供给减少，D 对）。技术水平（A）、预期（B）、成本（C）都是价格以外的因素，引起的是整条供给曲线的位移（线移动）——口诀"自己价格走点，别的因素走线"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b02s2q5" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">假设纵轴是商品价格，横轴是数量，绘制出某种香烟的供给曲线和需求曲线。当政府实行增税措施，使得香烟的生产成本增加，在坐标图上的曲线变化是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 香烟的需求曲线将向左移动</button><button type="button" class="qopt" data-key="B">B. 香烟的供给曲线将向右移动</button><button type="button" class="qopt" data-key="C">C. 香烟的供给曲线将向左移动</button><button type="button" class="qopt" data-key="D">D. 香烟的需求曲线将向右移动</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：增税 → 生产<strong>成本</strong>上升 → 成本与供给<strong>反方向</strong> → 供给减少 → 供给曲线<strong>左移</strong>（C 对，B 方向反了）。成本是供给侧因素，不直接移动需求曲线（A、D 错）——见到"成本、税、技术"，动的都是供给曲线。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础02_市场需求、供给与价格均衡_第1节_市场需求.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 市场需求</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础02_市场需求、供给与价格均衡_第3节_均衡价格.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 均衡价格</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十六章 回归分析 · 模型的检验和预测 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十六章 回归分析 · 模型的检验和预测</h1><div class="subtitle">第 3 节 / 共 3 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 3/3</div><div class="sec-badge none" id="sec-badge" data-sec="b26s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟使用估计的回归方程前的<strong>三项检验内容</strong>（系数含义合理、假设检验、拟合效果） <span class="hot">高频考点</span></li>
+<li>掌握<strong>决定系数 R²</strong>：取值 0~1、测度拟合程度、越接近 1 越好，会算"未解释比例＝1-R²" <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>记住 <strong>t 检验</strong>：验证自变量 X 对因变量 Y 是否有显著影响，原理是反证法，P 小于 0.05 即显著 <span class="hot">高频考点</span></li>
+<li>会把 X 代入估计的回归方程<strong>算预测值</strong>，并按"增减同向、绝对量"解读斜率 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、回归模型的拟合效果分析（★★★）</h2>
+<h3>1. 回归分析检验的内容 <span class="hot">高频考点</span></h3>
+<p>一般情况下，<strong>使用估计的回归方程之前</strong>，需要对模型进行检验，其内容包括三项：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>检验内容</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>（1）</td>
+<td>结合<strong>经济理论和经验</strong>，分析<strong>回归系数的经济含义是否合理</strong></td>
+<td>系数讲不讲理</td>
+</tr>
+<tr>
+<td>（2）</td>
+<td>对模型进行<strong>假设检验</strong></td>
+<td>检验过没过硬</td>
+</tr>
+<tr>
+<td>（3）</td>
+<td>分析估计的模型对数据的<strong>拟合效果</strong>如何</td>
+<td>贴数据贴得紧不紧</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>用方程前先&quot;验货&quot;：</strong><p>估计出来的方程不能拿来就用，先过三道工序：一看<strong>系数</strong>符不符合经济常识（比如消费随收入增加而增加，斜率为正才合理）；二做<strong>假设检验</strong>（t 检验）；三看<strong>拟合效果</strong>（决定系数 R²）。三件事在多选题里常与编造项混在一起，按这三条对照。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>拿到方程 Y=1368.7+0.637X：第一道，斜率 0.637&gt;0，"收入越高消费越高"符合经济常识——系数含义合理；第二道，对回归系数做 t 检验，看收入对消费的影响是否显著；第三道，看决定系数 R² 有多大，判断这条直线贴不贴合样本数据。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 检验三件事</div><p><strong>"讲理、检验、看拟合"</strong>——系数含义要讲理、假设检验要做、拟合效果要看。多选题出现三条以外的"新工序"，多为编造。</p></div></div>
+<div class="section"><h3>2. 决定系数 R² <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p><strong>决定系数</strong>（也称为 R²）可以测度<strong>回归直线对样本数据的拟合程度</strong>。其本质：说明了回归模型所能<strong>解释</strong>的因变量变化，占因变量<strong>总变化</strong>的<strong>比例</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>R² 的取值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>取值范围</td>
+<td><strong>0 到 1 之间</strong></td>
+</tr>
+<tr>
+<td><strong>R²=1</strong></td>
+<td>所有观测点都落在回归直线上，回归直线可以解释因变量的<strong>所有变化</strong></td>
+</tr>
+<tr>
+<td><strong>R²=0</strong></td>
+<td>回归直线<strong>无法解释</strong>因变量的变化，因变量的变化与自变量<strong>无关</strong></td>
+</tr>
+<tr>
+<td><strong>越接近 1</strong></td>
+<td>拟合效果<strong>越好</strong>，模型解释因变量的能力越强</td>
+</tr>
+<tr>
+<td><strong>越接近 0</strong></td>
+<td>拟合效果<strong>越差</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>R² 是&quot;解释份额&quot;：</strong><p>把因变量的总变化想成一块蛋糕：R² 就是"模型吃掉的份额"（能解释的比例），剩下的 1-R² 是"没吃到的份额"（解释不了的比例）。所以<strong>未解释比例＝1-R²</strong>——2023 年就考过：R²=0.81，残差平方和占总离差平方和的比重＝1-0.81＝0.19。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某城市消费方程的决定系数 R²=0.96：意思是居民消费支出的变化里，96% 可以由收入的变化解释，只剩 4% 归随机因素——像一门考了 96 分的课，"掌握率"极高，这条回归直线对样本数据的拟合效果很好。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 决定系数口诀</div><p><strong>"R² 是解释份额，0 到 1，越大越好"</strong>——它回答"因变量的变化里有多大比例被模型解释"；再补一刀：<strong>未解释比例＝1-R²</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易混：决定系数 vs 相关系数的取值范围</div><p><strong>决定系数 R² 只在 0~1 之间</strong>，没有负数；<strong>相关系数 r 才在 -1~1 之间</strong>。选项说"决定系数的取值在 -1 到 1 之间"直接判错——这是拿相关系数的范围来冒充决定系数。</p></div></div>
+<div class="section"><h3>3. 回归系数的显著性检验：t 检验 <span class="hot">高频考点</span></h3>
+<p>在<strong>大样本假定</strong>的条件下，回归系数的最小二乘估计量<strong>渐进服从正态分布</strong>，可以用 <strong>t 检验</strong>方法验证<strong>自变量 X 对因变量 Y 是否有显著影响</strong>。<strong>t 检验的原理是反证法</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>t 检验结果（显著性水平 0.05）</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P 值 <strong>小于</strong> 0.05</td>
+<td>拒绝原假设，认为自变量对因变量<strong>有显著影响</strong></td>
+</tr>
+<tr>
+<td>P 值 <strong>大于</strong> 0.05</td>
+<td>不能认为自变量对因变量有显著影响</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>t 检验只干一件事：</strong><p>t 检验回答的问题只有一个："<strong>X 对 Y 的影响是不是显著</strong>"。判读看 P 值与显著性水平比大小：P 小于 0.05 → 显著；P 大于 0.05 → 不能认为显著。注意两个坑：①P 值是概率，不是"影响 8%"这样的效应量；②"不能认为显著"不等于"断言毫无关系"，只是证据不足。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>同一套数据，甲样本算出 t 检验 P 值 0.02（小于 0.05 → 显著），乙样本算出 P 值 0.08（大于 0.05 → 在 0.05 显著性水平下不能认为有显著影响）。同样"收入影响消费"，样本不同、P 值不同，结论就可能翻车——所以用方程前必须先过 t 检验这一关。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 t 检验口诀</div><p><strong>"P 小 0.05，显著跑不了；P 大 0.05，显著不能喊"</strong>——P 值与 0.05 比大小，一步定结论。</p></div></div>
+<div class="section"><h2>二、模型预测（★★）</h2>
+<h3>4. 用估计的回归方程做预测 <span class="must">必考</span></h3>
+<p>回归分析的一个重要应用就是<strong>预测</strong>，即利用估计的回归模型<strong>预估因变量数值</strong>——把给定的自变量 X 值<strong>代入方程</strong>，算出因变量的估计值。</p>
+<p><strong>分步演算</strong>（教材例）：根据估计的回归方程 Y=1368.7+0.637X，当城镇居民家庭人均可支配收入 X=40000 元时，计算人均消费支出：</p>
+<ol>
+<li>代入：Y = 1368.7 + 0.637 × 40000</li>
+<li>先乘：0.637 × 40000 = 25480</li>
+<li>后加：1368.7 + 25480 = <strong>26848.7 元</strong></li>
+</ol>
+<p><strong>读方程四看</strong>（解读回归方程的万能框架）：</p>
+<table>
+<thead>
+<tr>
+<th>看什么</th>
+<th>怎么解读</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>斜率的<strong>符号</strong></td>
+<td>b&gt;0，X 与 Y 同向（正相关）；b&lt;0，反向</td>
+<td>方向由符号定</td>
+</tr>
+<tr>
+<td>斜率的<strong>数值</strong></td>
+<td>X 每增加 1 个单位，Y <strong>平均</strong>变动 b 个单位</td>
+<td>是平均、是绝对量</td>
+</tr>
+<tr>
+<td>问"<strong>减少</strong>"</td>
+<td>X 每减少 1，Y 平均<strong>减少</strong> b</td>
+<td>增减方向要跟着变，别说反</td>
+</tr>
+<tr>
+<td>求<strong>预测值</strong></td>
+<td>把 X 的取值代入方程算 Y</td>
+<td>别把 b 当百分比</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>预测两步走：</strong><p>第一步<strong>代入</strong>：把题目给的 X 值原封不动代进估计的回归方程；第二步<strong>按顺序算</strong>：先乘后加。解读斜率时盯死三点：方向看符号、变化说"平均"、单位是<strong>绝对量</strong>——"X 每增加 1%，Y 增长 b%"是把绝对变化当相对变化，必错。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>方程 Y=1300+0.6X（X 为月收入，Y 为月消费支出）：问"月收入每减少 1 元"，答案是"月消费支出<strong>平均减少</strong> 0.6 元"——斜率为正只说明同向，收入往下走，消费也跟着往下走，千万别答成"增长"；问"月收入 10000 元时消费多少"，代入：1300+0.6×10000＝7300 元。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 预测解读口诀</div><p><strong>"号定方向，代得数值；增说增，减说减"</strong>——符号管方向，代入算预测；题目说增就答平均增、说减就答平均减，单位永远是绝对量。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 两大选项陷阱（预测题必查）</div><p>①<strong>方向反说</strong>：方程斜率为正，选项却写"X 每减少 1，Y 平均增长 b"——增减方向没跟着变，直接排除；②<strong>绝对当相对</strong>：把"X 每增加 1，Y 平均增加 b"偷换成"X 每增加 1%，Y 增长 b%"——回归系数是绝对量，不是弹性，见到"%"就要警觉。验证预测类选项（如"X=20000 时 Y 为多少"）就老老实实代入算一遍。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>检验内容三条</strong>：①结合经济理论和经验分析回归系数的经济含义是否合理；②对模型进行假设检验；③分析模型对数据的拟合效果</li>
+<li><strong>决定系数 R²</strong>：测度回归直线对样本数据的拟合程度；取值 0~1；＝模型解释的因变量变化占因变量总变化的比例；越接近 1 越好；R²=1 解释所有变化；R²=0 无法解释（与自变量无关）；未解释比例＝1-R²</li>
+<li><strong>t 检验</strong>：大样本下最小二乘估计量渐进服从正态分布；验证自变量 X 对因变量 Y 是否有显著影响；原理是反证法；P 值小于 0.05 → 有显著影响，大于 0.05 → 不能认为显著</li>
+<li><strong>预测</strong>：把 X 代入估计的回归方程求 Y（先乘后加）；斜率 b 是绝对量、说"平均变动"、方向随增减变；"每增加 1% 增长 b%"必错</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b26s3q1" data-answer="ACD" data-type="multi"><span class="q-tag">教材例7·多选</span><div class="q-stem">关于决定系数的表述正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 决定系数可以测度回归直线对样本数据的拟合程度</button><button type="button" class="qopt" data-key="B">B. 决定系数的取值在 -1 到 1 之间</button><button type="button" class="qopt" data-key="C">C. 决定系数等于 1，说明回归直线可以解释因变量的所有变化</button><button type="button" class="qopt" data-key="D">D. 决定系数等于 0，说明回归直线无法解释因变量的变化，因变量与自变量无关</button><button type="button" class="qopt" data-key="E">E. 决定系数越接近 0，回归直线的拟合效果越好</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：A 对——决定系数就是测度回归直线对样本数据<strong>拟合程度</strong>的指标；B 错——决定系数取值在 <strong>0 到 1 之间</strong>，"-1 到 1"是相关系数的范围；C 对——R²=1 时所有观测点都落在回归直线上，可以解释因变量的所有变化；D 对——R²=0 时无法解释因变量的变化，因变量的变化与自变量无关；E 错——决定系数越接近 <strong>1</strong> 拟合效果越好，越接近 0 越差，正好说反。
+:::</p></div></details></div><div class="quiz-item" data-qid="b26s3q2" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">在估计的一元线性回归方程决定系数 R²=0.81，残差平方和占总离差平方和的比重是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 0.1</button><button type="button" class="qopt" data-key="B">B. 0.19</button><button type="button" class="qopt" data-key="C">C. 0.81</button><button type="button" class="qopt" data-key="D">D. 0.9</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：R²=0.81 表示回归直线解释了总离差平方和的 81%，剩下的（残差平方和）占 <strong>1-0.81=0.19</strong>（B 对）——口诀"未解释比例＝1-R²"。C 0.81 是<strong>被解释</strong>的份额，题问的是没被解释的残差部分；D 0.9 是把 0.81 开方的结果（相关系数的绝对值），与本题无关；A 0.1 无任何依据。（2023 年真题）
+:::</p></div></details></div><div class="quiz-item" data-qid="b26s3q3" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">某医学机构采用回归分析方法评估药物剂量对患者康复率的影响，回归模型中药物剂量的 t 检验 P 值为 0.08，这表明（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 药物剂量每增加一个单位，康复率提高 8%</button><button type="button" class="qopt" data-key="B">B. 药物剂量和康复率无线性关系</button><button type="button" class="qopt" data-key="C">C. 在 0.05 显著水平下，不能认为药物剂量对康复有显著影响</button><button type="button" class="qopt" data-key="D">D. 在 0.05 显著水平下，可以认为药物剂量对康复有显著影响</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：P 值 0.08 <strong>大于</strong> 0.05，按口诀"P 大 0.05，显著不能喊"——在 0.05 显著性水平下不能认为药物剂量对康复有显著影响（C 对，D 反了）。A 把 P 值错当效应量——0.08 是概率值，不是"提高 8%"；B 说得太满——检验结论只是"未发现显著影响"，不等于断言两者无线性关系。（2025 年真题）
+:::</p></div></details></div><div class="quiz-item" data-qid="b26s3q4" data-answer="ABD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">关于回归模型检验的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 可结合经济理论和经验分析回归系数的经济含义是否合理</button><button type="button" class="qopt" data-key="B">B. 决定系数测度回归模型对样本数据的拟合程度</button><button type="button" class="qopt" data-key="C">C. R² 不受自变量个数的影响</button><button type="button" class="qopt" data-key="D">D. t 检验方法验证自变量 X 对因变量 Y 是否有显著影响</button><button type="button" class="qopt" data-key="E">E. 若 t 检验不显著（P&lt;0.05），则模型整体不显著</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABD</div><div class="q-exp"><p>析：A 对——检验内容第一条就是结合经济理论和经验分析回归系数的经济含义是否合理；B 对——决定系数（R²）测度回归模型对样本数据的拟合程度；C 错——"R² 不受自变量个数影响"没有依据，是编造的说法；D 对——t 检验正是验证自变量 X 对因变量 Y 是否有显著影响的方法；E 错且自相矛盾——P&lt;0.05 说明 t 检验<strong>显著</strong>（拒绝原假设），且单个系数的检验结论也推不出"模型整体不显著"。（2025 年真题）
+:::</p></div></details></div><div class="quiz-item" data-qid="b26s3q5" data-answer="ABCD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">在某项研究中，采用学生的身高 X（cm）和体重 Y（kg）数据进行回归分析，得到估计的回归方程 Y=-50+0.8X，决定系数 R²=0.64。关于该回归模型的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 身高 170cm 的学生体重预测值为 86kg</button><button type="button" class="qopt" data-key="B">B. 身高每减少 1cm，体重平均减少 0.8kg</button><button type="button" class="qopt" data-key="C">C. 64% 的体重差异可以由身高解释</button><button type="button" class="qopt" data-key="D">D. 身高每增加 1cm，体重平均增加 0.8kg</button><button type="button" class="qopt" data-key="E">E. 身高和体重的相关系数为 0.64</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：A 对——代入预测：Y=-50+0.8×170=-50+136=86kg；B 对、D 对——斜率 0.8&gt;0，身高与体重同向：每增加 1cm 体重平均增加 0.8kg，每<strong>减少</strong> 1cm 则平均<strong>减少</strong> 0.8kg，方向跟着增减走；C 对——R²=0.64 表示 64% 的体重变化可以由身高解释；E 错——0.64 是<strong>决定系数</strong>，不是相关系数，两个是不同的指标（决定系数取值 0~1，相关系数取值 -1~1）。（2025 年真题）
+:::</p></div></details></div><div class="quiz-item" data-qid="b26s3q6" data-answer="ABDE" data-type="multi"><span class="q-tag">教材例9·多选</span><div class="q-stem">在某城市随机抽取 1000 户居民作为样本，对该城市居民消费水平进行研究，对居民月消费支出 Y（单位：元）和月收入 X（单位：元）建立回归模型，得到估计的回归方程 Y=1300+0.6X，决定系数 0.96。关于该模型的说法正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 居民月收入和月消费支出之间正相关</button><button type="button" class="qopt" data-key="B">B. 回归模型的拟合效果很好</button><button type="button" class="qopt" data-key="C">C. 居民月收入难以解释月消费支出的变化</button><button type="button" class="qopt" data-key="D">D. 居民月收入每增长 1 元，月消费支出将平均增长 0.6 元</button><button type="button" class="qopt" data-key="E">E. 居民月收入为 10000 元时，居民人均月消费支出大约为 7300 元</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：A 对——斜率 0.6&gt;0，月收入与月消费支出同向变动，即正相关；B 对——决定系数 0.96 接近 1，回归模型的拟合效果很好；C 错——正好说反，0.96 的高低说明月收入<strong>能</strong>解释月消费支出变化的 96%；D 对——月收入每增长 1 元，月消费支出平均增长 0.6 元；E 对——代入预测：Y=1300+0.6×10000=1300+6000=7300 元。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础26_回归分析_第2节_最小二乘法.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 最小二乘法</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

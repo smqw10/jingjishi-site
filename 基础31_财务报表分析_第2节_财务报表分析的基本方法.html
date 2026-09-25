@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三十一章 财务报表分析 · 财务报表分析的基本方法 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第五部分 会计</span><h1>第三十一章 财务报表分析 · 财务报表分析的基本方法</h1><div class="subtitle">第 2 节 / 共 3 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:66%"></div></div><div class="progress-text">本章进度 2/3</div><div class="sec-badge none" id="sec-badge" data-sec="b31s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>分清财务报表分析的三大基本方法，记住<strong>比较分析法是最基本</strong>的分析方法 <span class="hot">高频考点</span></li>
+<li>一刀切分清比率分析法三比率：<strong>相关、结构、效率</strong>，会排除"定基动态比率"类混入项 <span class="must">必考</span> <span class="s3">★★★</span></li>
+<li>背熟比较分析法两种分类口诀"<strong>对象绝绝百、标准计上先</strong>"与四类评价标准"<strong>公行目史</strong>"（2:1、1:1 公认标准） <span class="s3">★★★</span></li>
+<li>会算<strong>定基动态比率</strong>与<strong>环比动态比率</strong>，分母永不选错 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、比率分析法</h2>
+<h3>1. 什么是比率分析法与三种常用财务比率 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p><strong>比率分析法</strong>是将会计报表及有关资料中<strong>两项彼此相关联的项目</strong>加以比较，通过<strong>计算关联项目的比率</strong>，揭示企业财务状况、经营成果和现金流量情况，确定经济活动<strong>变动程度</strong>的一种分析方法。</p>
+<p>在比率分析中常用的财务比率有三种：</p>
+<table>
+<thead>
+<tr>
+<th>财务比率</th>
+<th>含义</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>相关比率</strong></td>
+<td>以<strong>同一时期</strong>会计报表及有关资料中<strong>某个项目</strong>和<strong>与其有关但又不同的项目</strong>加以比较所得的比率，反映有关经济活动的<strong>相互关系</strong>，可以考查有联系的相关业务安排是否合理</td>
+<td><strong>资产负债率</strong></td>
+</tr>
+<tr>
+<td><strong>结构比率</strong>（构成比率）</td>
+<td>会计报表中<strong>某项目的数值占各项目总和的比率</strong>，反映<strong>部分与总体</strong>的关系</td>
+<td>存货与流动资产的比率、流动资产与全部资产的比率</td>
+</tr>
+<tr>
+<td><strong>效率比率</strong></td>
+<td>某项经济活动中<strong>所费与所得</strong>的比例，反映<strong>投入与产出</strong>的关系</td>
+<td>利润与销售收入、销售成本、净资产相比，得主营业务利润率、成本利润率、净资产利润率，从不同角度观察企业<strong>盈利能力</strong>的高低及增减变化</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三比率的判断标准：</strong><p>拿到一个比率先问"它比的是什么"：两个<strong>有关联的不同项目</strong>相除 → <strong>相关比率</strong>；<strong>部分÷总体</strong> → <strong>结构比率</strong>；<strong>所费（投入）换所得（产出）</strong>，分子是利润类 → <strong>效率比率</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>同一张报表能算出三种比率：负债总额÷资产总额＝资产负债率（负债与资产是相关联的两个项目 → <strong>相关比率</strong>）；存货÷流动资产（部分占总体的份额 → <strong>结构比率</strong>）；利润÷销售成本（所费换所得，看赚不赚 → <strong>效率比率</strong>）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三比率口诀</div><p><strong>"相关看关系，结构看占比，效率看所费所得"</strong>——牵线搭桥的比"关系"，部分对整体比"份额"，投入产出比"赚头"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频陷阱：谁不属于比率分析法</div><p>比率分析法只有<strong>相关、结构、效率</strong>三种比率。<strong>定基动态比率、环比动态比率</strong>属于<strong>趋势分析法</strong>；<strong>绝对数比较、绝对数增减变动、百分比增减变动</strong>属于<strong>比较分析法</strong>。多选问"比率分析常用的财务比率"，见到"定基动态比率""绝对数差异"一律不选——三套方法的家伙什别混着放。</p></div></div>
+<div class="section"><h2>二、比较分析法</h2>
+<h3>2. 什么是比较分析法与两种分类 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>比较分析法</strong>是通过某项财务指标与<strong>性质相同的指标评价标准</strong>进行对比，揭示企业财务状况、经营成果和现金流量情况的一种分析方法，是<strong>最基本</strong>的分析方法。</p></div>
+<div class="section"><div class="keypoint"><strong>&quot;最基本&quot;三个字会考：</strong><p>财务报表分析的基本方法有<strong>比率分析法、比较分析法、趋势分析法</strong>三种，其中<strong>比较分析法是最基本的</strong>。单选问"最基本的分析方法"，直接选比较分析法。
+一眼分家：题干见"<strong>同计划／上期／先进企业比</strong>"→比较分析法（和标准比，比出差异）；见"<strong>算关联项目的比值</strong>"→比率分析法（相关、结构、效率三比率，看变动程度）；见"<strong>多期定基、环比</strong>"→趋势分析法（看变动的方向、数额和幅度）。</p></div></div>
+<div class="section"><p>在运用比较分析法时，由于<strong>比较对象、比较标准</strong>的不同，比较分析法的形式也不同：</p>
+<table>
+<thead>
+<tr>
+<th>分类标准</th>
+<th>形式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按照<strong>比较对象</strong>的不同</td>
+<td>①<strong>绝对数</strong>比较分析；②<strong>绝对数增减变动</strong>分析；③<strong>百分比增减变动</strong>分析</td>
+</tr>
+<tr>
+<td>按照<strong>比较标准</strong>的不同</td>
+<td>①实际指标同<strong>计划</strong>指标比较；②<strong>本期</strong>指标与<strong>上期</strong>指标比较；③本企业指标同<strong>国内外先进企业</strong>指标比较</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 两种分类口诀</div><p><strong>"对象绝绝百，标准计上先"</strong>——按比较对象：绝对数、绝对数增减变动、百分比增减变动（绝绝百）；按比较标准：计划、上期、先进企业（计上先）。两组各有三条，多选答题先看题干问的是"对象"还是"标准"，别串场。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某公司利润去年 80 万元、今年 100 万元：
+- <strong>绝对数增减变动</strong>：100−80＝<strong>增加 20 万元</strong>（看差了多少元）；
+- <strong>百分比增减变动</strong>：20÷80＝<strong>增长 25%</strong>（看变了百分之几）。
+同一个事实，"多 20 万"和"增 25%"是两种不同的分析形式——题干问哪种就答哪种，这是考生最容易混的一对。</p></div></div>
+<div class="section"><h3>3. 四类比较指标评价标准 <span class="hot">高频考点</span></h3>
+<p>应用比较分析法对同一性质指标进行数量比较时，要注意所用指标的<strong>可比性</strong>，必须在指标<strong>内容、期间、计算口径、计价基础</strong>等方面一致。常用的比较指标评价标准有四类：</p>
+<table>
+<thead>
+<tr>
+<th>评价标准</th>
+<th>反映什么</th>
+<th>用途与例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>公认指标评价标准</strong></td>
+<td>各类企业<strong>不同时期都普遍适用</strong></td>
+<td><strong>2:1 的流动比率、1:1 的速动比率</strong>是典型的公认标准，能揭示企业<strong>短期偿债能力</strong>及财务风险的一般状况</td>
+</tr>
+<tr>
+<td><strong>行业指标评价标准</strong></td>
+<td><strong>某行业</strong>水平</td>
+<td>揭示本企业<strong>在同行业中所处的地位</strong>及存在的差距</td>
+</tr>
+<tr>
+<td><strong>目标指标评价标准</strong></td>
+<td>本企业<strong>目标水平</strong></td>
+<td>实际财务指标<strong>达不到目标标准</strong>时，应<strong>进一步分析原因</strong>，以便改进财务管理工作</td>
+</tr>
+<tr>
+<td><strong>历史指标评价标准</strong></td>
+<td>本企业<strong>历史水平</strong></td>
+<td><strong>期末与期初对比、本期与历史同期对比、本期与历史最好水平对比</strong>，揭示变化趋势及存在的差距</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>给"考了 85 分"定位：全国统一划的线（如 60 分及格）＝<strong>公认标准</strong>；和同年级其他班的平均分比＝<strong>行业标准</strong>；和开学定下的"目标 90 分"比＝<strong>目标标准</strong>；和自己上次考试的 80 分比＝<strong>历史标准</strong>。同一个分数，参照系不同，结论完全不同——这就是比较分析法的四类标准。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四类标准口诀</div><p><strong>"公行目史"</strong>——公认、行业、目标、历史。配对题眼：见到"2:1、1:1"选<strong>公认</strong>；"同行业地位"选<strong>行业</strong>；"达不到要找原因"选<strong>目标</strong>；"期末比期初、比历史同期、比历史最好"选<strong>历史</strong>。</p></div></div>
+<div class="section"><h2>三、趋势分析法</h2>
+<h3>4. 什么是趋势分析法：定基与环比 <span class="hot">高频考点</span></h3>
+<p><strong>趋势分析法</strong>是利用会计报表提供的数据资料，将<strong>两期或多期连续的相同指标或比率</strong>进行<strong>定基对比和环比对比</strong>，得出它们增减变动的<strong>方向、数额和幅度</strong>的一种分析方法。</p>
+<p>采用趋势分析法通常要编制<strong>比较会计报表</strong>，具体做法有两种：</p>
+<table>
+<thead>
+<tr>
+<th>做法</th>
+<th>怎么编</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>编制<strong>绝对数</strong>趋势会计报表</td>
+<td>将一般会计报表的"<strong>金额</strong>"栏划分成<strong>若干期</strong>的金额，以便进行比较分析</td>
+</tr>
+<tr>
+<td>编制<strong>相对数</strong>趋势会计报表</td>
+<td>将报表上<strong>某一关键项目的金额当作 100%</strong>，再计算其他项目对关键项目的<strong>百分比</strong>，显示各项目的相对地位，把连续若干期按相对数编制的报表合并为一张比较会计报表，反映各项目<strong>结构上的变化</strong></td>
+</tr>
+</tbody>
+</table>
+<p>对不同时期的财务指标进行比较时，可以计算<strong>动态比率</strong>指标，由于<strong>选择的基期不同</strong>，分为两种：</p>
+<table>
+<thead>
+<tr>
+<th>动态比率</th>
+<th>公式</th>
+<th>分母是谁</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>定基动态比率</strong></td>
+<td>定基比率＝分析期数额÷<strong>固定基期</strong>数额</td>
+<td>永远是同一个固定基期</td>
+</tr>
+<tr>
+<td><strong>环比动态比率</strong></td>
+<td>环比比率＝分析期数额÷<strong>前期</strong>数额</td>
+<td>挨着分析期的前一期</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>定基与环比只差分母：</strong><p>两个公式的分子都是<strong>分析期数额</strong>，唯一区别在分母：<strong>固定基期</strong>（从头到尾不换）还是<strong>前期</strong>（跟着分析期往前挪）。做题第一步——圈出题目让"和谁比"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某公司 2022–2024 年营业收入：2022 年 100 万元、2023 年 120 万元、2024 年 150 万元，以 2022 年为固定基期：
+- 第一步，认准分析期：2024 年，数额 150 万元；
+- 第二步，算<strong>定基</strong>动态比率：150÷<strong>100</strong>（固定基期 2022 年）＝<strong>150%</strong>；
+- 第三步，算<strong>环比</strong>动态比率：150÷<strong>120</strong>（前期 2023 年）＝<strong>125%</strong>；
+- 分母一换，结果就变——"和 2022 年比"用定基，"和上一年比"用环比。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 定基与环比口诀</div><p><strong>"定基咬定基期不放松，环比挨着前一期算"</strong>——分母认死理：见"固定基期"选定基，见"前期／上年"选环比。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>基本方法三种</strong>：比率分析法、比较分析法（<strong>最基本</strong>）、趋势分析法</li>
+<li><strong>比率分析法</strong>：相关比率（如资产负债率，比"关系"）、结构比率（部分÷总体，如存货与流动资产之比）、效率比率（所费÷所得，如成本利润率、净资产利润率）</li>
+<li><strong>比较分析法</strong>：按比较对象＝绝对数比较／绝对数增减变动／百分比增减变动（绝绝百）；按比较标准＝实际对计划／本期对上期／本企业对国内外先进（计上先）；可比性四一致＝内容、期间、计算口径、计价基础</li>
+<li><strong>四类评价标准</strong>：公认（2:1 流动比率、1:1 速动比率）、行业（同行地位）、目标（达不到找原因）、历史（期末比期初、本期比历史同期、比历史最好）——公行目史</li>
+<li><strong>趋势分析法</strong>：定基比率＝分析期÷<strong>固定基期</strong>，环比比率＝分析期÷<strong>前期</strong>；做法＝绝对数／相对数（关键项目当 100%）趋势报表</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b31s2q1" data-answer="ABE" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">在对财务报表进行比率分析时，常用的财务比率有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 结构比率</button><button type="button" class="qopt" data-key="B">B. 效率比率</button><button type="button" class="qopt" data-key="C">C. 定基动态比率</button><button type="button" class="qopt" data-key="D">D. 绝对数差异</button><button type="button" class="qopt" data-key="E">E. 相关比率</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABE</div><div class="q-exp"><p>析：比率分析法常用的财务比率只有三种——<strong>相关比率、结构比率（构成比率）、效率比率</strong>（A、B、E）。定基动态比率（C）属于<strong>趋势分析法</strong>的动态比率；绝对数差异（D）属于<strong>比较分析法</strong>的绝对数增减变动分析，都不是比率分析法的家伙。
+:::</p></div></details></div><div class="quiz-item" data-qid="b31s2q2" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">下列财务指标中，属于财务报表分析中比率分析法中常用的比率的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 绝对额增加量</button><button type="button" class="qopt" data-key="B">B. 定基动态率</button><button type="button" class="qopt" data-key="C">C. 计划执行率</button><button type="button" class="qopt" data-key="D">D. 结构比率</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：比率分析法常用比率＝相关比率、<strong>结构比率</strong>、效率比率，选 D。绝对额增加量（A）是比较分析法的对象，定基动态率（B）属于趋势分析法，计划执行率（C）是拼凑的干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b31s2q3" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">某些财务指标与性质相同的指标评价标准进行对比，揭示企业财务状况、经营成果和现金流量情况的一种分析方法是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 比率分析法</button><button type="button" class="qopt" data-key="B">B. 比较分析法</button><button type="button" class="qopt" data-key="C">C. 趋势分析法</button><button type="button" class="qopt" data-key="D">D. 结构分析法</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：<strong>比较分析法</strong>＝将某项财务指标与<strong>性质相同的指标评价标准</strong>进行对比，且是<strong>最基本</strong>的分析方法。比率分析法靠计算关联项目的比率（A），趋势分析法做多期定基、环比对比看变动方向和幅度（C），结构分析法是杜撰的选项（D）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b31s2q4" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">在财务报表分析时，用某项经济活动中所费与所得的比例来反映投入与产出关系的比率是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 增长比率</button><button type="button" class="qopt" data-key="B">B. 结构比率</button><button type="button" class="qopt" data-key="C">C. 相关比率</button><button type="button" class="qopt" data-key="D">D. 效率比率</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：<strong>效率比率</strong>＝某项经济活动中<strong>所费与所得</strong>的比例，反映<strong>投入与产出</strong>的关系，如主营业务利润率、成本利润率、净资产利润率。结构比率是部分占总体的比（B），相关比率是有关联的两个项目相除（C），增长比率（A）不是比率分析法的分类。
+:::</p></div></details></div><div class="quiz-item" data-qid="b31s2q5" data-answer="ABD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">进行财务报表比较分析时，按照比较标准的不同采取的主要形式包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 实际指标和计划指标比较</button><button type="button" class="qopt" data-key="B">B. 本期指标和上期指标比较</button><button type="button" class="qopt" data-key="C">C. 本企业不同时期进行比较</button><button type="button" class="qopt" data-key="D">D. 本企业指标同国内外同行业先进企业指标比较</button><button type="button" class="qopt" data-key="E">E. 本企业不同财务指标的增减变动差额进行比较</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABD</div><div class="q-exp"><p>析：按<strong>比较标准</strong>的不同，比较分析法有三种形式——实际指标同<strong>计划</strong>指标比较（A）、<strong>本期</strong>指标与<strong>上期</strong>指标比较（B）、本企业指标同<strong>国内外先进企业</strong>指标比较（D）。C 的说法不规范，标准表述是"本期指标与上期指标比较"；E 属于按比较对象分类的增减变动分析且表述错误，都是混入项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b31s2q6" data-answer="ACE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">在运用比较分析法进行财务报表分析时，由于比较对象的不同而采取的分析形式有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 百分比增减变动分析</button><button type="button" class="qopt" data-key="B">B. 计划指标和实际执行绝对数比较分析</button><button type="button" class="qopt" data-key="C">C. 绝对数增减变动分析</button><button type="button" class="qopt" data-key="D">D. 本期指标和上期指标变化分析</button><button type="button" class="qopt" data-key="E">E. 绝对数比较分析</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACE</div><div class="q-exp"><p>析：按<strong>比较对象</strong>的不同，比较分析法分为<strong>绝对数比较分析</strong>（E）、<strong>绝对数增减变动分析</strong>（C）、<strong>百分比增减变动分析</strong>（A）三种，即"绝绝百"。B、D 是按<strong>比较标准</strong>分类的内容（实际对计划、本期对上期），题干问的是比较对象，两组别串场。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础31_财务报表分析_第1节_财务报表分析的意义和内容.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 财务报表分析的意义和内容</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础31_财务报表分析_第3节_财务报表分析的基本指标.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 财务报表分析的基本指标</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十五章 政府预算 · 政府预算的职能与原则 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第二部分 财政</span><h1>第十五章 政府预算 · 政府预算的职能与原则</h1><div class="subtitle">第 1 节 / 共 5 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:20%"></div></div><div class="progress-text">本章进度 1/5</div><div class="sec-badge none" id="sec-badge" data-sec="b15s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背住<strong>政府预算的定义</strong>（法律规定＋法定程序＋年度收支计划），记住它是<strong>政府理财的主导环节</strong> <span class="hot">高频考点</span></li>
+<li>掌握三大职能"<strong>反监控</strong>"：反映政府部门活动、监督政府收支运作、控制政府支出 <span class="must">必考</span></li>
+<li>背熟六大原则"完整统一又可靠，合法公开按年度"，会挑"没有的原则" <span class="hot">高频考点</span></li>
+<li>掌握六大分类的口径与类型，能对号入座（形式／时间／内容方法／平衡／效益／层级） <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、政府预算的含义与职能</h2>
+<h3>1. 什么是政府预算 <span class="hot">高频考点</span></h3>
+<p><strong>政府预算</strong>是具有<strong>法律规定和制度保证</strong>的、经<strong>法定程序审核批准</strong>的政府<strong>年度财政收支计划</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>三个限定词缺一不可：</strong><p>"法律规定和制度保证"（不是随便一本收支账）＋"经法定程序审核批准"（要过人大这一关）＋"年度"（以一年为周期）。选择题把这三个词拆开考，找齐三块的选项才是对的。另记一句单选原题考点：<strong>政府理财的主导环节就是政府预算</strong>。</p></div></div>
+<div class="section"><p>从不同侧面看，政府预算还有两副面孔：</p>
+<table>
+<thead>
+<tr>
+<th>角度</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>技术方面</strong></td>
+<td>以年度财政收支计划的形式存在，<strong>反映了政府资金的来源和流向</strong>，也<strong>反映了政府准备购买的具体公共物品</strong></td>
+</tr>
+<tr>
+<td><strong>政治方面</strong></td>
+<td>是<strong>重大的政治行为</strong>：①背后反映的是政府在<strong>做什么和不做什么之间</strong>的选择；②反映了<strong>支出上的优先权</strong>；③是<strong>国家和政府意志的体现</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一个城市今年把大头花在地铁还是花在学校，就是"支出上的优先权"；哪些领域政府出钱、哪些交给市场，就是"做什么和不做什么的选择"——所以预算从来不只是会计问题，而是一份政治文件。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 含义口诀</div><p><strong>"法定程序批一年，理财主导是预算"</strong>——定义三要素（法律规定、法定程序、年度计划）加一句地位（政府理财的主导环节）。</p></div></div>
+<div class="section"><h3>2. 政府预算的三大职能 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>职能</th>
+<th>内容</th>
+<th>关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>反映</strong>政府部门活动的功能</td>
+<td>反映和规定了政府在预算年度内的<strong>工作或活动范围、方向和重点</strong></td>
+<td>政府干了啥</td>
+</tr>
+<tr>
+<td><strong>监督</strong>政府部门收支运作情况的功能</td>
+<td>作为我国各级人民代表大会审议的重要文件，是人大代表和全体人民<strong>监督政府收支运作的途径和窗口</strong></td>
+<td>人民的窗口</td>
+</tr>
+<tr>
+<td><strong>控制</strong>政府部门支出的功能</td>
+<td>经各级人民代表大会审议批准的政府预算，实质是对政府支出规模的<strong>法定授权</strong>；只有授权范围内的支出才合法有效</td>
+<td>法定授权</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>控制职能的&quot;授权&quot;逻辑：</strong><p>预算批准＝授权花钱。<strong>超出授权范围的支出，即便是必需的</strong>，也要以<strong>预算调整案</strong>的形式提交<strong>同级人大常委会</strong>审议、批准。这句是控制职能的必考点——"必需"不是乱花钱的理由，程序必须走。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某局半年花完全年办公经费，眼看不够用，也不能直接从别的钱里挪，必须走"预算调整案"报同级人大常委会批准，批准了才能花——这就是"控制政府部门支出"职能的现实运作。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三职能口诀：反监控</div><p><strong>"反监控"</strong>——反（反映政府部门活动，像<strong>镜子</strong>照出政府干了啥）、监（监督政府部门收支运作）、控（控制政府部门支出）。题干出现"活动范围、方向和重点"选反映；出现"人大审议的文件、监督的途径和窗口"选监督；出现"法定授权"选控制。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频干扰项：财政职能≠政府预算职能</div><p>财政的三大基本职能是<strong>资源配置、收入分配、经济稳定和发展</strong>；政府预算的职能只有"反监控"三条。多选问"政府预算的基本职能"，选项里混进"资源配置""收入分配"，千万别选——那是财政整体的职能，不是政府预算的职能，两个"职能"名单别串门。</p></div></div>
+<div class="section"><h2>二、政府预算的六大原则 <span class="hot">高频考点</span></h2>
+<h3>3. 六原则逐条拿下</h3>
+<table>
+<thead>
+<tr>
+<th>原则</th>
+<th>核心内容</th>
+<th>抓手词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>完整性</strong></td>
+<td>必须包括政府<strong>所有的财政收入和支出</strong>内容，以便全面反映国家的财政活动</td>
+<td>一分不漏</td>
+</tr>
+<tr>
+<td><strong>统一性</strong></td>
+<td>中央和地方各级政府预算必须按<strong>统一的预算科目、统一的口径、程序</strong>计算、填列和编制统一的预算</td>
+<td>全国一个口径</td>
+</tr>
+<tr>
+<td><strong>可靠性</strong></td>
+<td>也称为"<strong>谨慎性</strong>"原则，强调<strong>真实可靠、有充分确实的依据</strong>；收入预算编制要可靠、完整、能够落实，支出预算安排要真实、可靠</td>
+<td>别虚报</td>
+</tr>
+<tr>
+<td><strong>合法性</strong></td>
+<td>每个环节都必须<strong>按照法定程序</strong>进行；预算的成立、执行中的调整、执行结果都必须经<strong>立法机关审查批准</strong>；是政府<strong>对纳税人负责</strong>理念的重要体现</td>
+<td>过人大</td>
+</tr>
+<tr>
+<td><strong>公开性</strong></td>
+<td>除少数涉及<strong>国家秘密</strong>的信息外，必须明确并采取一定形式<strong>公诸于众</strong>；制定、执行以及决策过程也应向公众公开</td>
+<td>阳光账本</td>
+</tr>
+<tr>
+<td><strong>年度性</strong></td>
+<td>起讫时间通常为一年，称<strong>预算年度</strong>；预算年度有<strong>历年制</strong>（每年 1 月 1 日至同年 12 月 31 日）和<strong>跨年制</strong>两种；编制、审查批准、执行和决算评估等环节在年度内依次递进、年度间循环往复</td>
+<td>一年一本账</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>我国采用历年制（常考单选）：</strong><p>预算年度两种类型里藏着一个小考点：<strong>我国采用历年制</strong>（每年 1 月 1 日起至同年 12 月 31 日止为一个预算年度）；采用历年制的国家还有德国、法国、韩国等，跨年制的如英国、美国、日本。高顿讲义此处只列两种类型没点我国，官方教材有——单选问"我国政府预算年度属于"，答<strong>历年制</strong>。</p></div></div>
+<div class="section"><div class="keypoint"><strong>两个&quot;别名／内涵&quot;锚点：</strong><p>可靠性也叫"<strong>谨慎性</strong>"原则（别名考点）；合法性是政府<strong>对纳税人负责</strong>理念的重要体现（内涵考点）。括号里的这两句就是题眼，单选直接照抄考。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>把家人的私房钱漏记——违反<strong>完整性</strong>；你家和兄弟姐妹家记账口径不一样没法汇总——违反<strong>统一性</strong>；把预计收入吹上天——违反<strong>可靠性</strong>；花钱不经全家商议——违反<strong>合法性</strong>；账本锁起来谁也不给看——违反<strong>公开性</strong>；记了三年才结一次账——违反<strong>年度性</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 六原则口诀</div><p><strong>"完整统一又可靠，合法公开按年度"</strong>——完、统、靠、法、开、年六个字按顺序背，可靠性记别名"谨慎性"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 高频干扰项：这四个&quot;原则&quot;不存在</div><p><strong>固定性、保密性、周期性、平衡性</strong>——都不是政府预算的原则。"保密性"恰好和公开性唱反调，"周期性"和年度性最像但名字不对。问"不包括"，优先在这四个里找答案。</p></div></div>
+<div class="section"><h2>三、政府预算的六大分类 <span class="s3">★★★</span></h2>
+<h3>4. 按编制形式与作用时间分</h3>
+<p><strong>①按预算编制形式</strong>：单式预算 vs 复式预算。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>单式预算</th>
+<th>复式预算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义</td>
+<td>将政府财政收支<strong>汇集编入一个总预算</strong>之内，形成一个<strong>收支项目安排对照表</strong></td>
+<td>将预算年度内全部财政收支<strong>按收入来源和支出性质</strong>，分别编制<strong>两个或两个以上</strong>的预算，形成两个或两个以上的收支对照表</td>
+</tr>
+<tr>
+<td>组成</td>
+<td>一个总预算</td>
+<td>一般由<strong>经常预算</strong>和<strong>资本预算</strong>组成</td>
+</tr>
+<tr>
+<td>优点</td>
+<td><strong>简单明了</strong>、整体性强，能清晰反映政府财政收支全貌，有利于公众监督；<strong>便于编制、易于操作</strong></td>
+<td>区分了收支的<strong>经济性质和用途</strong>：便于科学安排预算收支结构、突出重点、分类控制预算收支平衡；便于政府<strong>灵活运用资本性投资和国债等手段</strong>，对宏观经济运行实施宏观调控</td>
+</tr>
+<tr>
+<td>缺点</td>
+<td><strong>没有区分</strong>各项财政收支的经济性质，<strong>不利于</strong>政府对复杂的财政活动进行深入分析、管理和监督</td>
+<td>编制和实施<strong>比较复杂</strong>，有一定难度</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>经常预算与资本预算各管一摊：</strong><p><strong>经常预算</strong>：以<strong>税收</strong>为收入来源，以<strong>行政事业项目</strong>为支出对象（如维持政府机关运转的日常活动经费支出等）；<strong>资本预算</strong>：以<strong>国债</strong>为收入来源，以<strong>经济建设</strong>项目为支出对象（如政府贷款及偿还国债等支出）。"谁的钱、办谁的事"两两配对，是多选必考点。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小卖部把卖货钱和买房钱记在同一本账上，看着省事，但分不清日常开销和置办家业——这是"单式"；分开记"生活账"和"置业账"，各用各的钱、各有各的来源——这就是"复式"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 单复式口诀</div><p><strong>"单式一本全，复式分两半；经常税收过日子，资本国债搞建设"</strong>。见"经济性质、两个对照表、经常＋资本"选复式；见"一个总预算、一张对照表、编制简单"选单式。</p></div></div>
+<div class="section"><p><strong>②按预算作用时间长短</strong>：年度预算 vs 多年预算。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义及特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>年度预算</strong></td>
+<td>预算有效期为<strong>一年</strong>的政府预算</td>
+</tr>
+<tr>
+<td><strong>多年预算</strong></td>
+<td>也称<strong>中期预算、滚动预算</strong>；预算有效期为几年（<strong>多为三年至五年</strong>）的政府预算；编制时采取<strong>逐年递推或滚动</strong>的形式——<strong>每年编制一次，每次向前滚动一年</strong>；一般<strong>不具有法律效力</strong>，要提交国家权力机关作为<strong>审议年度预算时的参照</strong>，但<strong>不需要</strong>经过国家权力机关的批准</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>公司做"未来五年规划"，每年年底把规划向前滚动更新一年，始终盯着五年后的目标——多年预算就是这样"年年编、年年滚"的滚动计划，先拿来当审议年度预算的参考，并不算正式批准生效的文件。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 多年预算口诀</div><p><strong>"中期滚动三五年，每年滚一年；没效力、作参照、不批准"</strong>——三个关键词对应三道单选：法律效力（没有）、权力机关（提交作参照）、批准（不需要）。</p></div></div>
+<div class="section"><h3>5. 按内容方法与收支平衡分</h3>
+<p><strong>③按预算编制的内容和方法</strong>：增量（基数）预算 vs 零基预算。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>增量（基数）预算</strong></td>
+<td>预算年度的财政收支计划指标<strong>在以前预算年度的基础上</strong>，按新预算年度的经济发展情况<strong>加以调整后确定</strong>；保持了财政收支指标的<strong>连续性</strong>；是一种<strong>传统的预算编制方法</strong></td>
+</tr>
+<tr>
+<td><strong>零基预算</strong></td>
+<td>新预算年度财政收支计划指标的确定，<strong>不考虑以前年度</strong>的财政收支执行情况，只以<strong>新预算年度经济社会发展情况和财力可能</strong>为依据；零基预算<strong>并不是一切都要重新开始</strong>，而是<strong>对已有项目需要重新审定和安排，起点为零</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>最易错：零基≠一切推倒重来：</strong><p>零基预算的"零"是<strong>起点为零、重新审定</strong>，不是把政府清零重建。"并不是一切都要重新开始，而是对已有项目需要重新审定和安排"这句话本身就是考点——题干若说"零基预算就是一切从零开始、全部推倒"，是错的。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老张每年健身预算都在去年的基础上再加点钱——"增量"；新来的小李把每项开支都拿出来重新过一遍"还该不该花、该花多少"——"零基"。小李不是把生活清零，只是每笔钱重新审。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 增量零基口诀</div><p><strong>"增量看基数添一添，零基放下旧账重新审"</strong>——见"以前年度基础上调整、保持连续性、传统方法"选增量；见"不考虑以前年度、重新审定、起点为零"选零基。</p></div></div>
+<div class="section"><p><strong>④按预算收支平衡状况</strong>：平衡预算 vs 差额预算。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>平衡预算</strong></td>
+<td><strong>预算收入基本等于预算支出</strong>的预算；实际工作中<strong>略有结余或略有赤字</strong>的预算通常<strong>也被视为</strong>平衡预算</td>
+</tr>
+<tr>
+<td><strong>差额预算</strong></td>
+<td>预算收入<strong>大于或小于</strong>预算支出的预算，包括收大于支的<strong>盈余预算</strong>和支大于收的<strong>赤字预算</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小王家一年进账 20 万、花销 19.8 万，虽然剩两千，也算"收支平衡"；进 20 万花 25 万，是支大于收的赤字型差额预算；进 20 万花 18 万，是收大于支的盈余型差额预算。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 平衡差额口诀</div><p><strong>"基本相等算平衡，一多一少是差额"</strong>——"略有结余或略有赤字也算平衡预算"是判断题最爱。</p></div></div>
+<div class="section"><h3>6. 按经济效益与管理层级分</h3>
+<p><strong>⑤按预算项目是否直接反映经济效益</strong>：投入预算、绩效预算、规划-项目预算。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>主要内容</th>
+<th>抓手词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>投入预算</strong></td>
+<td>用来<strong>控制各项支出用途和金额</strong>的预算；根据预算控制各项支出，要求<strong>按预算规定的用途和金额使用资金</strong></td>
+<td>管用途管金额</td>
+</tr>
+<tr>
+<td><strong>绩效预算</strong></td>
+<td>先由政府部门确定<strong>需要履行的职能以及为履行职能需要消耗的资源</strong>，在此基础上<strong>制定绩效目标</strong>，并用<strong>量化指标</strong>来衡量其在实施每项计划过程中取得的成绩和完成工作的情况</td>
+<td>定目标、量化衡量</td>
+</tr>
+<tr>
+<td><strong>规划-项目预算</strong></td>
+<td>根据国家经济现状与发展趋势以及当前所要达到的总体目标，利用<strong>系统分析</strong>以及<strong>成本-效益和成本-有效性分析</strong>等工具来评估各项公共计划的成本效益，协助政府拟定最优决策，以利于国家经济资源合理配置</td>
+<td>系统分析、成本效益</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 经济效益三兄弟口诀</div><p><strong>"投入管花销，绩效看量化，规划算效益"</strong>。情景题抓动词：见"用途和金额"选投入；见"绩效目标、量化指标"选绩效；见"系统分析、成本-效益分析、最优决策"选规划-项目预算。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>给部门按人头和标准核定办公用品额度（投入）；先立军令状"全年办结率 95%"再按完成情况打分（绩效）；把修路和建校两个方案放一起算"花 1 块钱能带来几块钱的好处"再拍板（规划-项目）。</p></div></div>
+<div class="section"><p><strong>⑥按预算管理层级</strong>：中央预算 vs 地方预算。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>中央预算</strong></td>
+<td>中央政府的预算，包括<strong>中央一般公共预算、中央政府性基金预算、中央国有资本经营预算和社会保险基金预算</strong></td>
+</tr>
+<tr>
+<td><strong>地方预算</strong></td>
+<td>由各省、自治区、直辖市总预算组成</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>中央预算＝四本预算的&quot;中央版&quot;：</strong><p>中央预算不是一本账，而是四类预算在中央层面的集合。层级分类问"中央预算包括什么"，按四本预算作答，少一本都不得分。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 六大分类总口诀（分类对号）</div><p><strong>"式对式（单式/复式），年对年（年度/多年），基数对零基（内容方法），平衡对差额（平衡状况），效益对投入（投入/绩效/规划-项目），层级对中央（中央/地方）"</strong>——先认题目问的是哪个分类标准，再对类型名，别把"零基预算"答到"平衡分类"里去。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>定义</strong>：具有法律规定和制度保证、经法定程序审核批准的政府年度财政收支计划；<strong>政府理财的主导环节</strong></li>
+<li><strong>两副面孔</strong>：政治＝做什么与不做的选择＋支出优先权＋国家和政府意志；技术＝资金来源和流向＋准备购买的公共物品</li>
+<li><strong>三职能"反监控"</strong>：反映（活动范围方向重点）／监督（人大审议文件、人民的窗口）／控制（法定授权；超授权支出即便必需也要以预算调整案报同级人大常委会批准）</li>
+<li><strong>六原则</strong>："完整统一又可靠，合法公开按年度"；可靠性＝谨慎性；合法性＝对纳税人负责；没有固定性、保密性、周期性、平衡性</li>
+<li><strong>六分类</strong>：形式（单式/复式，经常税收＋资本国债）／时间（年度/多年：三五年、滚一年、没效力作参照不批准）／内容方法（增量/零基：起点为零≠全重来）／平衡（平衡/差额：略有结余赤字也算平衡）／效益（投入/绩效/规划-项目）／层级（中央四本/地方）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b15s1q1" data-answer="B" data-type="single"><span class="q-tag">讲义例1·单选</span><div class="q-stem">政府理财的主导环节是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 部门预算</button><button type="button" class="qopt" data-key="B">B. 政府预算</button><button type="button" class="qopt" data-key="C">C. 中期滚动预算</button><button type="button" class="qopt" data-key="D">D. 政府综合财务报告</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：<strong>政府预算</strong>是政府理财的主导环节，它是具有法律规定和制度保证、经法定程序审核批准的政府年度财政收支计划。部门预算（A）只是部门层面的编制形式，中期滚动预算（C）是多年期规划工具，政府综合财务报告（D）是反映财务状况的报告，都算不上"政府理财的主导环节"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s1q2" data-answer="ACD" data-type="multi"><span class="q-tag">讲义例2·多选</span><div class="q-stem">从政治方面看，政府预算是重大的政治行为，具体包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 反映了支出上的优先权</button><button type="button" class="qopt" data-key="B">B. 反映了政府资金的来源和流向</button><button type="button" class="qopt" data-key="C">C. 是国家和政府意志的体现</button><button type="button" class="qopt" data-key="D">D. 背后反映的是政府在做什么和不做什么之间的选择</button><button type="button" class="qopt" data-key="E">E. 反映了政府准备购买的具体公共物品</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACD</div><div class="q-exp"><p>析：政治方面三条：反映了<strong>支出上的优先权</strong>（A）、是<strong>国家和政府意志的体现</strong>（C）、背后反映<strong>政府在做什么和不做什么之间的选择</strong>（D）。B、E 说的是政府预算作为年度财政收支计划"反映了政府资金的来源和流向""反映了政府准备购买的具体公共物品"，属于<strong>技术方面</strong>的表现，不是政治方面——两副面孔别串门。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s1q3" data-answer="A" data-type="single"><span class="q-tag">讲义例3·单选</span><div class="q-stem">作为政府收支安排的一个基本计划，政府预算反映和规定了政府在预算年度内的工作或活动范围、方向和重点，体现的是政府预算的（　）职能。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 反映政府部门的活动</button><button type="button" class="qopt" data-key="B">B. 监督政府部门收支运作的情况</button><button type="button" class="qopt" data-key="C">C. 控制政府部门的支出</button><button type="button" class="qopt" data-key="D">D. 对政府支出规模的法定授权</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：题干原话"反映和规定了政府在预算年度内的工作或活动范围、方向和重点"正是<strong>反映</strong>职能的定义表述。监督职能（B）的关键词是"人大审议的重要文件、监督政府收支运作的途径和窗口"；控制职能（C）的关键词是"法定授权"——D 只是控制职能的实质内容，不是独立的职能名称。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s1q4" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">政府预算的原则不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 固定性原则</button><button type="button" class="qopt" data-key="B">B. 统一性原则</button><button type="button" class="qopt" data-key="C">C. 年度性原则</button><button type="button" class="qopt" data-key="D">D. 完整性原则</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：政府预算六原则＝完整性、统一性、可靠性（谨慎性）、合法性、公开性、年度性。<strong>"固定性"是无中生有的干扰项</strong>，B、C、D 都在六原则之内。同类干扰还有"保密性""周期性""平衡性"，见到就排除。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s1q5" data-answer="D" data-type="single"><span class="q-tag">讲义例5·单选</span><div class="q-stem">关于政府预算的分类，按预算项目是否直接反映经济效益分类，不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 投入预算</button><button type="button" class="qopt" data-key="B">B. 绩效预算</button><button type="button" class="qopt" data-key="C">C. 规划-项目预算</button><button type="button" class="qopt" data-key="D">D. 产出预算</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：按预算项目是否直接反映经济效益，分为<strong>投入预算、绩效预算、规划-项目预算</strong>三类。"产出预算"不是该口径下的类型名称，属于张冠李戴。记法："投入管花销，绩效看量化，规划算效益"。
+:::</p></div></details></div><div class="quiz-item" data-qid="b15s1q6" data-answer="ABC" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">关于复式预算的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 复式预算便于政府灵活运用资本性投资和国债等手段，对宏观经济运行实施宏观调控</button><button type="button" class="qopt" data-key="B">B. 复式预算便于政府科学安排预算收支结构，突出重点，分类控制预算收支平衡</button><button type="button" class="qopt" data-key="C">C. 复式预算一般由经常预算和资本预算组成</button><button type="button" class="qopt" data-key="D">D. 复式预算没有区分各项财政收支的经济性质，但与单式预算相比，编制更加简单、易于操作</button><button type="button" class="qopt" data-key="E">E. 复式预算是将政府财政收支汇集编入一个总预算之内，形成一个收支项目的安排对照表</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：A、B 是复式预算的<strong>两大优点</strong>——区分了收支的经济性质和用途，便于科学安排结构、突出重点、分类控制收支平衡（B），便于灵活运用资本性投资和国债等手段实施宏观调控（A）；C 对，复式预算一般由<strong>经常预算＋资本预算</strong>组成。D 错——"没有区分经济性质、编制简单"是<strong>单式</strong>预算的特征，复式预算恰恰区分了经济性质，且编制实施<strong>比较复杂</strong>；E 错——"汇集编入一个总预算、形成一张对照表"是<strong>单式</strong>预算的定义。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础15_政府预算_第2节_我国政府预算职权划分.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 我国政府预算职权划分</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

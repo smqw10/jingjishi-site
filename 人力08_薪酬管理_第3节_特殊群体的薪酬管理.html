@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第8章 薪酬管理 · 特殊群体的薪酬管理 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第8章 薪酬管理 · 特殊群体的薪酬管理</h1><div class="subtitle">第 3 节 / 共 4 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:75%"></div></div><div class="progress-text">本章进度 3/4</div><div class="sec-badge none" id="sec-badge" data-sec="r08s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟<strong>年薪制</strong>：高风险薪酬制度、约束与激励互相制衡、三优一缺、一元／二元／三元三种模式 <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+<li>记住销售人员薪酬<strong>以结果为导向</strong>，四种薪酬形式与"高佣金／高基本薪酬"的搭配场景 <span class="hot">高频考点</span></li>
+<li>记住驻外人员薪酬三构成，驻外津贴 <strong>10%～30%</strong>、困难补助 <strong>10%～25%</strong> <span class="s3">★★★</span></li>
+<li>分清<strong>专业技术人员</strong>薪酬三块特色：基本薪酬看专业技术不看岗位、奖金占比小、福利重培训进修 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、经营者薪酬</h2>
+<h3>1. 年薪制 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>概念</strong>（★★★）：以<strong>企业会计年度</strong>为时间单位，根据<strong>经营者的业绩好坏</strong>而计发薪酬的一种薪酬制度。年薪制是一种<strong>高风险</strong>的薪酬制度，依靠的是<strong>约束和激励互相制衡</strong>的机制。（此外，上市公司经营者还可以实施股票期权激励，机制见第二节。）</p></div>
+<div class="section"><div class="keypoint"><strong>年薪制的两个定性题眼：</strong><p>概念题就考两句：<strong>年薪制是"高风险"的薪酬制度</strong>（不是"高稳定"），它依靠<strong>约束和激励互相制衡</strong>的机制。而"容易导致经营者短期行为、不利于公司长期发展"是它唯一的缺点——案例分析题让"指出年薪制的局限"就答这一句。</p></div></div>
+<div class="section"><table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①设置上比较<strong>灵活</strong>；②薪酬结构中<strong>加大了风险收入的比例</strong>，有利于在责任、风险和收入相对（对等）的基础上加大激励力度；③可把年薪收入的一部分直接<strong>转化为股权激励</strong>形式，把经营者薪酬与资产所有者利益及企业发展前景紧密结合</td>
+<td>容易导致经营者的<strong>短期行为</strong>，做出不利于公司<strong>长期发展</strong>的决策</td>
+</tr>
+</tbody>
+</table>
+<p><strong>我国经营者年薪制的三种模式</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>构成</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>一元结构</strong></td>
+<td>年薪＝<strong>风险收入</strong></td>
+<td>全部与业绩风险挂钩</td>
+</tr>
+<tr>
+<td><strong>二元结构</strong></td>
+<td>年薪＝<strong>基本年薪＋风险收入</strong></td>
+<td><strong>基本年薪与业绩没有直接联系</strong></td>
+</tr>
+<tr>
+<td><strong>三元结构</strong></td>
+<td>年薪＝<strong>基本年薪＋效益年薪＋奖励年薪</strong></td>
+<td><strong>效益年薪</strong>与企业绩效紧密联系；<strong>奖励年薪</strong>视超额完成指标情况而定</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 年薪制三模式</div><p><strong>"一元纯风险，二元基本加风险，三元效益再奖励"</strong>。数"收入块头"判模式：只有一块风险收入→一元；两块→二元；三块→三元。另记两句性质题眼：年薪制是<strong>高风险</strong>薪酬制度（不是高稳定的）、靠<strong>约束与激励互相制衡</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>董事会给王总包年薪：一元模式＝只发与利润挂钩的风险收入，利润黄了年薪也黄；二元模式＝先给 30 万保底基本年薪（与业绩无关）＋按利润提成的风险收入；三元模式＝30 万基本年薪＋完成预算拿效益年薪＋超额部分再按比例发奖励年薪。三种切法，块数越多、激励层次越细。</p></div></div>
+<div class="section"><h2>二、销售人员薪酬</h2>
+<h3>2. 销售人员薪酬的形式 <span class="hot">高频考点</span></h3>
+<p><strong>总纲</strong>（★）：销售人员的薪酬主要是以<strong>结果为导向</strong>的。</p>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>构成与特点</th>
+<th>优缺点／适用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>单纯佣金制</strong>（★）</td>
+<td><strong>没有基本薪酬</strong>，全部薪酬收入都来自佣金</td>
+<td>优：收入与绩效<strong>直接挂钩</strong>，薪酬<strong>管理成本较低</strong>；缺：<strong>缺乏稳定性</strong>，易受外部环境因素影响而大幅波动，可能造成上下级之间、新老员工之间较大薪酬差距，<strong>不利于培养归属感</strong></td>
+</tr>
+<tr>
+<td><strong>基本薪酬加佣金制</strong></td>
+<td>每月基本薪酬＋按销售业绩提取的佣金</td>
+<td><strong>佣金直接由绩效表现决定</strong></td>
+</tr>
+<tr>
+<td><strong>基本薪酬加奖金制</strong></td>
+<td>基本薪酬＋奖金</td>
+<td>奖金与业绩是<strong>间接</strong>的——通常业绩<strong>超过某一销售额</strong>才能获得一定数量的奖金</td>
+</tr>
+<tr>
+<td><strong>基本薪酬加佣金加奖金</strong>（★★★）</td>
+<td>三件套组合</td>
+<td>①保险、餐饮行业销售人员：<strong>"高佣金加低基本薪酬"</strong>；②技术含量较高、市场较狭窄、销售周期较长的产品，对销售人员素质及稳定性要求都高：<strong>"高基本薪酬加低佣金或奖金"</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 高低搭配一句话</div><p><strong>"保险餐饮高佣金，技术长销高基本"</strong>——来钱快、见单结算的行业敢用高佣金；产品难卖、周期长、吃专业知识的就得用高基本薪酬稳住队伍。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小陈卖保险：底薪很低，卖一单提一单，上不封顶——"高佣金加低基本薪酬"；老周卖大型机床：基本月薪很高，卖出一台再给点低佣金或奖金，因为一台设备要磨半年——"高基本薪酬加低佣金或奖金"。行业属性决定薪酬结构，考试给行业让你选结构。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 佣金与奖金的&quot;直接／间接&quot;之分</div><p><strong>佣金直接由绩效决定，奖金与业绩间接挂钩</strong>（超过某一销售额才有）。题目说"只要卖出就有提成"→佣金；说"超过××万才有奖"→奖金。再记一句：单纯佣金制"薪酬管理成本较低"是<strong>优点</strong>，别看成缺点。</p></div></div>
+<div class="section"><h2>三、驻外人员薪酬</h2>
+<h3>3. 驻外人员薪酬的构成 <span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>构成</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>基本薪酬</strong></td>
+<td>三种确定方法：<strong>基于本国</strong>薪酬方法、<strong>基于东道国</strong>方法、<strong>基于总部</strong>方法</td>
+</tr>
+<tr>
+<td><strong>激励薪酬</strong></td>
+<td>①<strong>驻外津贴</strong>：鼓励员工接受在海外的工作，按<strong>基本薪酬的百分比</strong>确定，一般 <strong>10%～30%</strong>，<strong>驻外时间越长，比例越高</strong>；②<strong>困难补助</strong>：只提供给在<strong>特别困难的地区</strong>工作的员工，为基本薪酬的 <strong>10%～25%</strong>；③<strong>流动津贴</strong>：员工<strong>变换工作地点</strong>的奖励</td>
+</tr>
+<tr>
+<td><strong>福利</strong></td>
+<td><strong>标准福利</strong>：保障计划和带薪休假；<strong>额外福利</strong>：搬家补助、驻外人员子女教育津贴、探亲假和差旅补助、带薪休假及津贴等</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>驻外薪酬先分三桶：</strong><p>拿到驻外薪酬题先分桶：<strong>基本薪酬桶</strong>（按本国／东道国／总部哪种标准定薪）、<strong>激励薪酬桶</strong>（驻外津贴、困难补助、流动津贴——管"肯去、肯吃苦、肯挪窝"）、<strong>福利桶</strong>（标准福利＋额外福利）。2025 年真题就是把"东道国薪酬""驻外津贴"混进"福利"的选项里——分桶不清就掉坑。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 驻外数字与三津贴</div><p><strong>"津贴三成（10%～30%）、补助两五（10%～25%），一津一助一流动"</strong>。驻外津贴管"肯去"，困难补助管"苦地方"，流动津贴管"肯挪窝"——三个激励薪酬各管一件事，多选别漏。</p></div></div>
+<div class="section"><h2>四、专业技术人员薪酬</h2>
+<h3>4. 专业技术人员薪酬的结构 {s}</h3>
+<p>专业技术人员主要从事<strong>脑力工作</strong>，薪酬结构分三块：</p>
+<table>
+<thead>
+<tr>
+<th>构成</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>基本薪酬与加薪</strong></td>
+<td>基本薪酬取决于<strong>专业知识与技术的广度、深度及熟练程度</strong>，而<strong>非岗位重要性</strong>；加薪主要取决于专业知识和技能的<strong>积累程度及熟练水平的提高</strong>。加薪三途径：①通过<strong>培训和学习</strong>提升知识能力（<strong>主要途径</strong>）；②<strong>工作年限延长</strong>（经验积累）；③<strong>绩效评价</strong>结果</td>
+</tr>
+<tr>
+<td><strong>奖金</strong></td>
+<td>奖金所占比重<strong>比较小</strong>；例外：<strong>技术或产品研发</strong>人员</td>
+</tr>
+<tr>
+<td><strong>福利与服务</strong></td>
+<td>专业技术人员看重<strong>继续教育和培训机会</strong>；企业应为其工作提供物质条件上的便利，并<strong>资助国内外进修深造及参加学术活动</strong>所需的费用与时间</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>专技薪酬的&quot;主要途径&quot;与&quot;例外&quot;：</strong><p>两个单点必背：加薪三途径里，<strong>通过培训和学习提升知识能力是主要途径</strong>；奖金占比小是常态，<strong>例外是技术或产品研发</strong>人员（教材仅注此一处例外，见"例外"二字就往研发上想）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 专技薪酬三句话</div><p><strong>"专技靠脑子不靠位子：基本薪酬看技术，加薪靠积累，奖金一小块，福利重培训"</strong>。与一般管理岗对比着记：管理岗薪酬随职位走，专技薪酬随<strong>专业水平</strong>走——所以"奖金比重通常较高"这类说法必错。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>年薪制</strong>：会计年度为单位、按经营者业绩计发；高风险、约束激励制衡；三优（灵活／风险收入比例大／可转股权）一缺（短期行为）；模式：一元＝风险收入，二元＝基本＋风险（基本与业绩无关），三元＝基本＋效益（随绩效）＋奖励（看超额）</li>
+<li><strong>销售人员</strong>：结果为导向；单纯佣金制（无基本薪酬，直接挂钩、成本低，但不稳定、伤归属感）；加佣金＝直接，加奖金＝间接（超定额才有）；保险餐饮＝高佣金低基本，技术高市场窄周期长＝高基本低佣金或奖金</li>
+<li><strong>驻外人员</strong>：基本薪酬（本国／东道国／总部）；激励薪酬＝驻外津贴 10%～30%（越久越高）＋困难补助 10%～25%（特困地区）＋流动津贴（换地点）；福利＝标准（保障计划＋带薪休假）＋额外（搬家、子女教育、探亲差旅等）</li>
+<li><strong>专业技术人员</strong>：基本薪酬看专业知识技术的广度深度熟练度、非岗位重要性；加薪三途径（培训学习＝主要途径、年限、绩效）；奖金占比小（研发例外）；福利重继续教育与进修</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r08s3q1" data-answer="BDE" data-type="multi"><span class="q-tag">2018·多选</span><div class="q-stem">关于销售人员薪酬的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 销售人员的薪酬应主要以行为为导向</button><button type="button" class="qopt" data-key="B">B. 单纯佣金制因将销售人员的薪酬收入与其工作业绩直接挂钩而使薪酬管理成本较低</button><button type="button" class="qopt" data-key="C">C. 产品具有较高技术含量的企业会对销售人员采用高佣金加低基本薪酬的薪酬制度</button><button type="button" class="qopt" data-key="D">D. 单纯佣金制会导致销售人员的薪酬缺乏稳定性</button><button type="button" class="qopt" data-key="E">E. 单纯佣金制不利于培养销售人员对企业的归属感</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BDE</div><div class="q-exp"><p>析：销售人员的薪酬以<strong>结果</strong>为导向，A 错误。B 对——单纯佣金制收入与绩效直接挂钩，薪酬管理成本较低；D、E 对——其缺点是缺乏稳定性、易受外部环境影响大幅波动，并可能造成较大薪酬差距、不利于培养归属感。C 反了——技术含量较高的产品应用<strong>"高基本薪酬加低佣金或奖金"</strong>，而非高佣金加低基本薪酬。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s3q2" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">对于技术含量较高、市场较为狭窄、销售周期较长的产品的销售人员，适宜采取的薪酬制度是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 低基本薪酬加高佣金</button><button type="button" class="qopt" data-key="B">B. 高基本薪酬加低佣金</button><button type="button" class="qopt" data-key="C">C. 单纯佣金制</button><button type="button" class="qopt" data-key="D">D. 低基本薪酬加高奖金</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：这类产品对销售人员的<strong>素质及稳定性要求都很高</strong>——培养一个能卖"高技术、窄市场、长周期"产品的销售不容易，必须用<strong>高基本薪酬</strong>稳住人，佣金或奖金只作辅助，B 正确。A、C、D 都把收入重心压在浮动部分上，队伍稳定性差，不符合此类产品的销售特点。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s3q3" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">适用于保险销售人员的薪酬制度是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 高基本薪酬加低佣金</button><button type="button" class="qopt" data-key="B">B. 单纯佣金制</button><button type="button" class="qopt" data-key="C">C. 低基本薪酬加高佣金</button><button type="button" class="qopt" data-key="D">D. 直接佣金加间接佣金制</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：保险销售人员业绩弹性大、以销售业绩为核心，适用<strong>"高佣金加低基本薪酬"</strong>的组合（基本薪酬兜底、佣金强激励），C 正确。A 激励不足；B 单纯佣金制没有基本薪酬兜底，不利于稳定队伍；D"直接佣金加间接佣金制"不是教材列出的销售人员薪酬形式。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s3q4" data-answer="AE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">驻外人员福利组成包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 标准福利</button><button type="button" class="qopt" data-key="B">B. 东道国薪酬</button><button type="button" class="qopt" data-key="C">C. 总部薪酬</button><button type="button" class="qopt" data-key="D">D. 驻外津贴</button><button type="button" class="qopt" data-key="E">E. 额外福利</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AE</div><div class="q-exp"><p>析：驻外人员薪酬三构成——基本薪酬（本国／<strong>东道国</strong>／<strong>总部</strong>方法，属基本薪酬而非福利，B、C 不符合题意）、激励薪酬（<strong>驻外津贴</strong>、困难补助、流动津贴，D 属激励薪酬）、福利（<strong>标准福利＋额外福利</strong>，A、E 正确）。审题先看清问的是哪一构成，再对号入座。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s3q5" data-answer="BCDE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">关于年薪制的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 年薪制在年薪结构中降低了风险收入的比例</button><button type="button" class="qopt" data-key="B">B. 年薪制依靠约束和激励互相制衡的机制</button><button type="button" class="qopt" data-key="C">C. 年薪制根据企业经济效益计发薪酬</button><button type="button" class="qopt" data-key="D">D. 年薪制的设计比较灵活</button><button type="button" class="qopt" data-key="E">E. 年薪制容易导致经营者的短期行为</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：年薪制以企业会计年度为单位、根据经营者业绩（经济效益）好坏计发薪酬，效益年薪与企业绩效紧密联系，C 正确；它是高风险的薪酬制度，依靠<strong>约束和激励互相制衡</strong>，B 正确；设置上比较<strong>灵活</strong>，D 正确；局限是容易导致经营者<strong>短期行为</strong>、不利于公司长期发展，E 正确。A 反了——年薪制恰恰是<strong>加大</strong>了风险收入的比例，以在责任、风险和收入对等的基础上加大激励力度。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s3q6" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于专业技术人员的薪酬的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 奖金所占的比重通常较高</button><button type="button" class="qopt" data-key="B">B. 工作经验有助于加薪</button><button type="button" class="qopt" data-key="C">C. 工作年限的延长有助于提高薪酬水平</button><button type="button" class="qopt" data-key="D">D. 专业知识和技能的累积有助于加薪</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：专业技术人员的<strong>奖金所占比重通常比较小</strong>（例外是技术或产品研发人员），A 错误。B、C、D 正确——加薪主要取决于专业知识和技能的积累程度及熟练水平的提高，加薪途径包括通过培训和学习提升知识能力（主要途径）、工作年限延长带来的经验积累以及绩效评价结果。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力08_薪酬管理_第2节_股权激励.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 股权激励</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力08_薪酬管理_第4节_薪酬成本预算与控制.html"><span class="nav-label">下一节</span><span class="nav-title">第4节 薪酬成本预算与控制</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

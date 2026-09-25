@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三章 生产和成本理论 · 生产函数和生产曲线 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第三章 生产和成本理论 · 生产函数和生产曲线</h1><div class="subtitle">第 2 节 / 共 3 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:66%"></div></div><div class="progress-text">本章进度 2/3</div><div class="sec-badge none" id="sec-badge" data-sec="b03s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>四种生产要素</strong>（劳动、资本、土地、企业家才能）与<strong>短期/长期</strong>的划分标准（能否调整一切投入） <span class="hot">高频考点</span></li>
+<li>背熟<strong>生产函数</strong>定义的两个关键词：<strong>技术不变</strong>、<strong>最大产量</strong> <span class="must">必考</span></li>
+<li>画清 <strong>TP、AP、MP 三条产量曲线</strong>：交点位置、最高点归属、边际产量递减规律 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>记住<strong>规模报酬</strong>三类的判断标准（产量增加比例与要素增加比例之比）及"小增中平大减" <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、生产、投入与生产函数</h2>
+<h3>1. 生产与产出</h3>
+<p><strong>生产</strong>：将<strong>投入</strong>转变成<strong>产出</strong>的过程。<strong>产出</strong>包括有形的物质和无形的服务，产出是企业获得<strong>销售收入</strong>的基础。</p>
+<h3>2. 四种生产要素</h3>
+<p><strong>生产要素</strong>：企业生产过程中所使用的各种投入，一般划分为四种：</p>
+<table>
+<thead>
+<tr>
+<th>生产要素</th>
+<th>内容</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>劳动</strong></td>
+<td>体力 和 智力 的总和</td>
+<td>人出的力，包括脑力</td>
+</tr>
+<tr>
+<td><strong>资本</strong></td>
+<td>实物形态 和 货币形态</td>
+<td>厂房机器＋资金</td>
+</tr>
+<tr>
+<td><strong>土地</strong></td>
+<td>土地本身及地上和地下的一切自然资源</td>
+<td>厂地、矿藏、山水</td>
+</tr>
+<tr>
+<td><strong>企业家才能</strong></td>
+<td>经营管理企业的各种能力</td>
+<td>老板会经营的本事</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四要素口诀</div><p><strong>"劳、资、地、才"</strong>——劳动（体＋智）、资本（实物＋货币）、土地（地上地下全算）、企业家才能（经营本领）。多选问"属于生产要素的有"，四个全选；把"技术""信息"单独列成一种要素的选项是干扰。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一家包子铺：伙计揉面捏馅是<strong>劳动</strong>，蒸笼门面和本钱是<strong>资本</strong>，那间临街铺面是<strong>土地</strong>，老板选址定价、张罗经营的本事是<strong>企业家才能</strong>。四样凑齐，投入变产出——一笼笼包子。</p></div></div>
+<div class="section"><h3>3. 可变投入与不变投入：短期与长期</h3>
+<p>投入可以分为<strong>可变投入</strong>与<strong>不变投入</strong>，由此划分出经济学的"短期"与"长期"：</p>
+<table>
+<thead>
+<tr>
+<th>时期</th>
+<th>投入特征</th>
+<th>研究对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>短期</strong></td>
+<td>部分（某种或几种）生产要素<strong>不可变</strong>——如厂房、设备等<strong>资本</strong>投入一般不能改变，其余可变</td>
+<td>企业的<strong>短期</strong>行为</td>
+</tr>
+<tr>
+<td><strong>长期</strong></td>
+<td>各项投入<strong>都可以改变</strong></td>
+<td>企业的<strong>长期</strong>行为</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>长短期的分界不是日历时间：</strong><p>经济学说的"短期/长期"不按天数算，只看<strong>是否一切投入都能调整</strong>：只要还有一种要素动不了，就是短期；全部要素都可变，才是长期。所以"研究各种要素都可变"＝长期行为，"某种或几种要素不可变"＝短期行为。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>想多卖奶茶，一周内可以多买原料、多排班（可变投入），但店面就一间、封口机就两台（厂房设备等资本短期动不了）——这是短期；给一年时间，可以再租铺面、再添机器，一切投入都能调——这才算长期。</p></div></div>
+<div class="section"><h3>4. 生产函数</h3>
+<p><strong>生产函数</strong>：表示在<strong>技术不变</strong>的情况下，生产中<strong>生产要素投入量</strong>与<strong>产品的最大产出量</strong>之间的关系。表达式：Q＝f（L，K）。</p>
+<p>三个要点：①前提条件是<strong>技术不变</strong>；②是<strong>最大产量</strong>与投入要素之间的函数关系；③<strong>所有企业</strong>都有生产函数。为简化分析，一般假设只有<strong>一种要素可变</strong>或<strong>两种要素可变</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>生产函数是&quot;上限&quot;不是&quot;成绩单&quot;：</strong><p>生产函数回答的是"这些投入<strong>最多</strong>能产多少"——它是要素被充分利用时的最大产出，不是实际产量。前提是技术不变：技术一旦进步，同一个生产函数就"作废"了，要换新函数。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>同样的设备、同样的手艺（技术不变），一斤面粉最多蒸 40 个馒头——"最多 40 个"就是面粉投入与馒头产出之间的生产函数。今天手滑只蒸出 36 个，那是实际产量，不改变"上限是 40"这个函数关系。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 生产函数三关键词</div><p><strong>"技术不变、产量最大、企业皆有"</strong>——见"平均产量／最小产量／实际产量"的表述直接排除；见"技术进步后生产函数不变"也知道错：技术水平变了，生产函数本身就变了。</p></div></div>
+<div class="section"><h2>二、一种可变要素的生产函数与产量曲线 <span class="s3">★★★</span> <span class="must">必考</span></h2>
+<h3>5. 三种产量：TP、AP、MP</h3>
+<p>一种可变要素的生产函数也称<strong>短期生产函数</strong>：假设其他投入固定不变（资本固定），总产量的变化只取决于<strong>劳动量 L</strong>，记作 Q＝f（L）。随着劳动量变化，会引起三种产量的变动：</p>
+<table>
+<thead>
+<tr>
+<th>产量</th>
+<th>名称</th>
+<th>算法</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TP</strong></td>
+<td>总产量</td>
+<td>一定数量劳动对应的最大产量</td>
+<td>一共生产了多少</td>
+</tr>
+<tr>
+<td><strong>AP</strong></td>
+<td>平均产量</td>
+<td>TP÷L（每单位劳动的平均产量）</td>
+<td>平均每人产多少</td>
+</tr>
+<tr>
+<td><strong>MP</strong></td>
+<td>边际产量</td>
+<td>ΔTP÷ΔL（增加一单位劳动使总产量增加的量）</td>
+<td>多雇一人多产多少</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分步演算</strong>（讲义例题）：资本投入不变，劳动从 4 个单位增加到 5 个单位，总产量从 3800 件增加到 3900 件，平均产量从 950 件减少到 780 件，求边际产量。
+- 第一步：锁定公式 MP＝ΔTP÷ΔL，只看<strong>总产量</strong>的增量：3900−3800＝100（件）；
+- 第二步：除以劳动增量 5−4＝1，得 MP＝100÷1＝<strong>100 件</strong>；
+- 验算：5 单位劳动时 AP＝3900÷5＝780（件），与题干吻合。
+- 易错提醒：别拿"950−780＝170"当边际产量——边际产量看的是<strong>总产量的增量</strong>，不是平均产量的差额。</p>
+<h3>6. 边际产量递减规律</h3>
+<p><strong>边际产量递减规律</strong>（也称<strong>边际报酬递减规律</strong>）：在<strong>技术水平和其他投入保持不变</strong>的条件下，连续追加一种生产要素的投入量，总是存在一个<strong>临界点 L1</strong>——在这点之前，边际产量<strong>递增</strong>；超过这一点，边际产量<strong>递减</strong>，直到出现<strong>负值</strong>。</p>
+<p>理解要注意三个方面（多选考点）：
+1. 以<strong>生产技术保持不变</strong>为前提——技术水平提高，边际报酬可能递增，边际产量曲线会向上移动；
+2. 以<strong>其他生产要素投入量保持不变</strong>为前提；
+3. 是在某种要素（如劳动）投入量<strong>增加到一定程度之后</strong>才出现的——不是一投入就递减。</p>
+<h3>7. MP 与 AP 的相对位置：谁大谁说了算</h3>
+<table>
+<thead>
+<tr>
+<th>位置关系</th>
+<th>平均产量走向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MP 曲线在 AP 曲线<strong>上方</strong>（MP＞AP）</td>
+<td>AP <strong>递增</strong></td>
+</tr>
+<tr>
+<td>MP 与 AP <strong>相交</strong>（MP＝AP，交于 L2）</td>
+<td>AP 达到<strong>最大值</strong></td>
+</tr>
+<tr>
+<td>MP 曲线在 AP 曲线<strong>下方</strong>（MP＜AP）</td>
+<td>AP <strong>递减</strong></td>
+</tr>
+</tbody>
+</table>
+<p>注意：过了 L1 之后 MP 虽开始递减，但只要 MP 仍<strong>大于</strong> AP，AP 就<strong>仍在递增</strong>；直到 L2 处 MP＝AP，AP 停止增长，L2 之后 AP 递减。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 边大均增、边小均减、相等最高</div><p><strong>"边大均增，边小均减，相等最高"</strong>——拿班级平均分类比：新转来的同学（边际）考分高于班级平均分（平均），平均分被拉高；低于平均分，平均分被拉低；恰好等于平均分，平均分不动（正处在最高点上）。</p></div></div>
+<div class="section"><h3>8. 总产量曲线的三段走势</h3>
+<table>
+<thead>
+<tr>
+<th>劳动投入区间</th>
+<th>边际产量</th>
+<th>总产量曲线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1 之前</td>
+<td>为正且<strong>递增</strong></td>
+<td>以<strong>递增</strong>的速度增加：向上倾斜、斜率递增，<strong>凸向</strong> L 轴</td>
+</tr>
+<tr>
+<td>L1 与 L3 之间</td>
+<td><strong>递减</strong>但仍为<strong>正</strong></td>
+<td>以<strong>递减</strong>的速度增加：向上倾斜、斜率递减，<strong>凹向</strong> L 轴</td>
+</tr>
+<tr>
+<td>L3 处</td>
+<td><strong>＝0</strong></td>
+<td>总产量达到<strong>最大值</strong></td>
+</tr>
+<tr>
+<td>超过 L3</td>
+<td>为<strong>负</strong></td>
+<td>总产量<strong>递减</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>奶茶店雇人：头几个店员分工协作，越加人产出涨得越快（MP 递增，TP 越涨越陡）；后来机器就那几台，新人仍添产量但添得越来越少（MP 递减但为正，TP 继续涨但变缓）；再雇一个挤在吧台帮倒忙，产量原地踏步（MP＝0，TP 到顶）；再往下雇纯碍事（MP＜0，TP 掉头向下）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易混三连（方向对照类错题高发区）</div><ul>
+<li><strong>只要总产量减少 → 边际产量一定为负</strong>；但"边际产量减少"时总产量未必减少——只要 MP 还是正数，TP 就在继续增加。把"增量在变小"和"总量在变小"分开。</li>
+<li>MP 与 AP 相交于 <strong>AP 的最高点</strong>（L2），不是 MP 自己的最高点（MP 最高在 L1）。</li>
+<li>TP 达到最大 ⇔ <strong>MP＝0</strong>，不是 MP 最大。</li>
+</ul></div></div>
+<div class="section"><h2>三、规模报酬</h2>
+<h3>9. 规模报酬的含义与三类</h3>
+<p><strong>规模报酬</strong>：在<strong>其他条件不变</strong>的情况下，企业内部<strong>各种生产要素按照相同比例变化</strong>时所带来的<strong>产量变化</strong>——也就是企业生产规模变化与所引起的产量变化之间的关系。它属于<strong>长期</strong>生产决策问题（只有长期才能改变全部要素投入）。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>产量增加比例 与 要素增加比例 的关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>规模报酬<strong>不变</strong></td>
+<td>产量增加比例 <strong>等于</strong> 要素增加比例</td>
+</tr>
+<tr>
+<td>规模报酬<strong>递增</strong></td>
+<td>产量增加比例 <strong>大于</strong> 要素增加比例</td>
+</tr>
+<tr>
+<td>规模报酬<strong>递减</strong></td>
+<td>产量增加比例 <strong>小于</strong> 要素增加比例</td>
+</tr>
+</tbody>
+</table>
+<p><strong>规模报酬规律</strong>：企业规模小，扩大规模→报酬<strong>递增</strong>；企业适度规模，扩大规模→报酬<strong>不变</strong>；企业规模大，扩大规模→报酬<strong>递减</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>三个限定词缺一不可：</strong><p>"<strong>其他条件不变</strong>＋<strong>各种</strong>生产要素＋<strong>相同比例</strong>变化"——不是只加劳动、不是改技术、也不是随便加：必须所有要素同比例动，才谈得上规模报酬。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 规模报酬三判</div><p><strong>"小增、中平、大减；产量跑赢要素是递增，跑输是递减，打平是不变"</strong>。当心"绝对变化当相对变化"的老毛病：要素翻一倍、产量从 100 涨到 180，产量确实"增加"了，但增加比例（80%）小于要素增加比例（100%），是<strong>递减</strong>，不是递增。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>夫妻小作坊扩大规模：设备和人力都用得更充分，产量翻的倍数超过投入翻的倍数——递增；中等规模的工厂按比例扩产，产量与投入同步翻番——不变；巨无霸企业管理层级臃肿、内耗上升，投入翻番产量却只涨八成——递减。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易混辨析：边际报酬递减 ≠ 规模报酬</div><p>两个"报酬"别搅在一起：<strong>边际报酬递减规律</strong>是<strong>短期</strong>问题——技术水平和其他投入不变，只<strong>连续追加一种</strong>可变要素，边际产量先增后减；<strong>规模报酬</strong>是<strong>长期</strong>生产决策问题——<strong>各种生产要素按相同比例</strong>变化时产量的变化。锚点一句话："<strong>短期加一种，长期全同比例</strong>"。多选爱设"规模报酬与边际产量递减规律是同一概念"的坑，见到直接判错。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>四要素</strong>：劳动（体＋智）、资本（实物＋货币）、土地（地上地下自然资源）、企业家才能（经营管理能力）</li>
+<li><strong>短期</strong>：部分要素不可变（厂房设备等资本）；<strong>长期</strong>：一切投入皆可变——看"能不能全变"，不看日历天数</li>
+<li><strong>生产函数</strong>：技术不变＋最大产量＋所有企业都有；一种可变要素＝短期生产函数 Q＝f（L）</li>
+<li><strong>TP／AP／MP</strong>：AP＝TP÷L，MP＝ΔTP÷ΔL；边大均增、边小均减、相等最高（AP 最大在 MP＝AP 处）；MP＝0 时 TP 最大，MP＜0 时 TP 递减</li>
+<li><strong>边际产量递减规律</strong>：技术、其他投入不变，过临界点 L1 后 MP 递减直至负值（三前提：技术不变、其他投入不变、投入增加到一定程度后）</li>
+<li><strong>规模报酬</strong>（长期）：产量增加比例等于／大于／小于要素增加比例＝不变／递增／递减；小增中平大减</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b03s2q1" data-answer="B" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">生产函数表示在一定时期内，在技术不变的情况下，生产中所使用的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 各种生产要素的数量与所能生产的平均产量之间的函数关系</button><button type="button" class="qopt" data-key="B">B. 各种生产要素的数量与所能生产的最大产量之间的函数关系</button><button type="button" class="qopt" data-key="C">C. 各种生产要素的数量与所能生产的最小产量之间的函数关系</button><button type="button" class="qopt" data-key="D">D. 不同生产要素之间相关性的函数关系</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：生产函数＝技术不变前提下，<strong>各种生产要素投入量与所能生产的最大产量</strong>之间的函数关系，抓两个关键词"技术不变""最大产量"。A 错在"平均产量"（平均产量是 TP÷L 的结果，不是生产函数的定义）、C 错在"最小产量"、D 错在"要素之间的相关性"——生产函数说的是投入与产出之间的关系。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s2q2" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于总产量、边际产量和平均产量的关系的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 只要总产量减少，边际产量一定为负数</button><button type="button" class="qopt" data-key="B">B. 只要边际产量减少，平均产量一定会减少</button><button type="button" class="qopt" data-key="C">C. 边际产量曲线必定在最高点与平均产量曲线相交</button><button type="button" class="qopt" data-key="D">D. 只要边际产量减少，总产量必然减少</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：总产量要减少，唯一可能是新增加的劳动带来<strong>负</strong>产出，即边际产量为负，A 正确。B、D 是"把增量当总量"的经典陷阱：边际产量<strong>减少</strong>只说明增量增速放慢，只要边际产量仍为<strong>正</strong>，总产量照样增加（D 错），平均产量也可能还在上升（B 错）。C 错误：边际产量曲线与平均产量曲线相交于<strong>平均产量曲线的最高点</strong>，不是边际产量曲线自己的最高点。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s2q3" data-answer="ABCE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于在坐标图上总产量、平均产量和边际产量曲线及其位置关系的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 总产量、平均产量和边际产量曲线及其位置关系反映的是短期生产函数的变动规律</button><button type="button" class="qopt" data-key="B">B. 只要边际产量曲线在平均产量曲线的上方，平均产量就是递增的</button><button type="button" class="qopt" data-key="C">C. 总产量、平均产量和边际产量曲线及其位置关系是基于技术不变的假设而提出的</button><button type="button" class="qopt" data-key="D">D. 总产量、平均产量和边际产量曲线及其位置关系反映了企业的生产规模变化与所引起的产量变化之间的关系</button><button type="button" class="qopt" data-key="E">E. 如果确定边际产量的图形，就可以得到总产量和平均产量的图形</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：三条产量曲线刻画的是<strong>一种可变要素的短期生产函数</strong>（A 对），且以技术不变为前提（C 对）；由 MP 的走势可直接推知 TP（MP 为正 TP 升、MP 为零 TP 最大、MP 为负 TP 降）和 AP（MP 与 AP 的相对位置决定 AP 升降），故 E 对；"MP 在 AP 上方则 AP 递增"正是两者的位置规律（B 对）。D 错误——"生产规模变化与产量变化的关系"说的是<strong>规模报酬</strong>，属于长期生产决策，与短期产量曲线是两码事。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s2q4" data-answer="ABCD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">一般来说，对于短期生产函数，总产量和平均产量、边际产量的关系是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 如果边际产量大于平均产量，则平均产量递增</button><button type="button" class="qopt" data-key="B">B. 如果边际产量等于平均产量，则平均产量达到最大点</button><button type="button" class="qopt" data-key="C">C. 如果边际产量为零，则总产量达到最大点</button><button type="button" class="qopt" data-key="D">D. 如果边际产量小于平均产量，则平均产量递减</button><button type="button" class="qopt" data-key="E">E. 如果平均产量递减，总产量必然递减</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：A 对——MP＞AP 时，新增量高于平均水平，把 AP 往上拉；B 对——MP＝AP 的交点正是 AP 由升转降的拐点，即 AP 最大点；C 对——MP 由正转 0，TP 停止增长、达到最大；D 对——MP＜AP 时 AP 被往下拉。E 错误——AP 递减只说明新增的边际产量低于平均水平，只要 MP 仍大于零，TP 就还在增加，TP 不必然递减。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s2q5" data-answer="AC" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">关于规模报酬的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 规模报酬是企业的生产规模与所引起的产量之间的关系</button><button type="button" class="qopt" data-key="B">B. 规模报酬可以分为两类</button><button type="button" class="qopt" data-key="C">C. 规模报酬研究的是长期生产决策问题</button><button type="button" class="qopt" data-key="D">D. 技术进步决定生产规模</button><button type="button" class="qopt" data-key="E">E. 规模报酬以成本不变为基础</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AC</div><div class="q-exp"><p>析：A 对——规模报酬就是其他条件不变时，各种要素按相同比例变化所带来的产量变化，即生产规模变化与产量变化之间的关系；C 对——只有长期才能改变全部生产要素投入，故规模报酬研究的是<strong>长期</strong>生产决策问题。B 错误——规模报酬分为<strong>三类</strong>（不变、递增、递减）；D 错误——规模报酬的前提恰恰是<strong>其他条件（含技术水平）不变</strong>；E 错误——规模报酬比较的是产量与要素投入的比例，与"成本不变"无关。
+:::</p></div></details></div><div class="quiz-item" data-qid="b03s2q6" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">某生产者在一定时期内：当劳动投入数量为 3 单位时，总产量为 3500 台；当劳动投入数量为 4 单位时，平均产量为 950 台，则其边际产量为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 300</button><button type="button" class="qopt" data-key="B">B. 400</button><button type="button" class="qopt" data-key="C">C. 200</button><button type="button" class="qopt" data-key="D">D. 500</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：边际产量 MP＝ΔTP÷ΔL，分两步走：第一步，先由平均产量<strong>还原总产量</strong>——L＝4 时 TP＝AP×L＝950×4＝3800（台）；第二步，MP＝（3800−3500）÷（4−3）＝300（台）。易错点：跳过"AP×L 还原 TP"直接拿 950 与 3500 作比，就会算错。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础03_生产和成本理论_第1节_生产者的组织形式和企业理论.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 生产者的组织形式和企业理论</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础03_生产和成本理论_第3节_成本函数和成本曲线.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 成本函数和成本曲线</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第13章 人力资本投资理论 · 人力资本投资的一般原理 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第三部分 人力资源经济分析</span><h1>第13章 人力资本投资理论 · 人力资本投资的一般原理</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="r13s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>人力资本投资</strong>的定义与五类形式，见到选项能秒判"算不算" <span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>记住<strong>未来导向性</strong>：成本产生在目前，收益产生在未来 <span class="hot">高频考点</span></li>
+<li>会写会算<strong>现值公式</strong>：未来的钱打折后与成本比较，r 越大现值越低 <span class="s3">★★★</span></li>
+<li>分清<strong>现值法</strong>与<strong>内部收益率法</strong>的思路与判断标准，会做分步演算 <span class="s3">★★★</span> <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、人力资本投资的概念与内容</h2>
+<h3>1. 什么是人力资本投资 <span class="hot">高频考点</span></h3>
+<p><strong>人力资本投资</strong>是指任何用来<strong>提高人的生产能力</strong>、从而<strong>提高人在劳动力市场上的收益能力</strong>的<strong>初始性投资</strong>。</p>
+<p>它要回答的现实问题是：<strong>并非所有的劳动者都是同质的</strong>——劳动力市场供求分析中"所有劳动者在技术和能力上无差别"的假定在现实中显然不真实，劳动者在能力上的差别及其带来的收入差别，正是人力资本投资理论研究的内容。早在经济学萌芽期，<strong>亚当·斯密</strong>就提出：<strong>一个国家的资本在一定程度上包括社会全体成员的能力</strong>——人的劳动能力储备应当被视为一种资本。</p></div>
+<div class="section"><div class="keypoint"><strong>定义抓三个词：</strong><p><strong>"提高生产能力"＋"劳动力市场收益能力"＋"初始性投资"</strong>。判断一笔支出算不算人力资本投资，就用这三条去套：能不能提高生产能力？提高的是不是在市场上挣钱的本事？是不是为未来收益先投进去的本钱？三条都满足才算。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<ul>
+<li>上大学、参加单位组织的培训 → 提高生产能力，<strong>算</strong>；</li>
+<li>业余时间炒股票 → 钱生钱，提高的不是"人"的生产能力，属金融投资，<strong>不算</strong>；</li>
+<li>交健身俱乐部会费改善体质 → 增进健康，<strong>算</strong>；</li>
+<li>为找更好的工作而搬家 → 寻找工作、工作流动，<strong>算</strong>；</li>
+<li>日常应酬请朋友吃饭 → 纯消费，<strong>不算</strong>。</li>
+</ul></div></div>
+<div class="section"><h3>2. 人力资本投资的内容（★★★）<span class="s3">★★★</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>内容</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td><strong>各级正规教育</strong></td>
+<td>上大学、上研究生</td>
+</tr>
+<tr>
+<td>②</td>
+<td><strong>在职培训</strong></td>
+<td>单位组织的培训、自费技能培训、学徒计划</td>
+</tr>
+<tr>
+<td>③</td>
+<td><strong>增进健康、加强学龄前儿童营养</strong></td>
+<td>健身、体检、儿童营养投入</td>
+</tr>
+<tr>
+<td>④</td>
+<td><strong>寻找工作</strong></td>
+<td>找工作花费的时间与费用</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td><strong>工作流动</strong></td>
+<td>为获得更高工资而换工作、搬家</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 五类形式</div><p><strong>"教育、培训、健康、寻职、流动"</strong>——两学（正规教育＋在职培训）、一健（健康与营养）、两找（找工作＋换工作）。见"炒股票、买理财、请客吃饭"这类金融投资或纯消费，直接排除。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 多选扫雷</div><p>问"下列属于人力资本投资活动的有"——先勾<strong>教育和培训</strong>（必选），再查<strong>健康/营养、寻找工作、工作流动</strong>（最容易漏选的三类）；炒股、买彩票、纯消费果断排除。</p></div></div>
+<div class="section"><h3>3. 未来导向性（★★★）<span class="s3">★★★</span></h3>
+<p><strong>人力资本投资的重点在于它的未来导向性，而其成本产生在目前。</strong>投资所产生的收益如同任何投资一样发生在<strong>未来</strong>，并且通常会在相当长一段时期内<strong>持续不断地</strong>出现。</p></div>
+<div class="section"><div class="keypoint"><strong>与物质资本投资的同与不同：</strong><ul>
+<li><strong>原理一样</strong>：人力资本投资与物质资本投资在基本原理上有<strong>相似之处</strong>——成本支出和收益取得分别发生在<strong>不同的时间</strong>里；</li>
+<li><strong>一样要算账</strong>：并不是支出越多越好，要看收益现值能否超过成本；</li>
+<li><strong>对象不同</strong>：投在"人"身上，收益跟着人走。</li>
+</ul></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小张花 3 万元读在职研究生：学费是<strong>现在</strong>掏的成本，涨薪和晋升是<strong>未来若干年</strong>持续流入的收益——先投入、后回报，这就是"未来导向性"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 成本与收益的时间差</div><p><strong>"成本在当下，收益在未来，一挣好多年"</strong>。</p></div></div>
+<div class="section"><h2>二、人力资本投资的基本模型</h2>
+<h3>4. 决策原理与现值公式 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p>人们在进行教育和培训选择时，都是以<strong>终身收入</strong>为依据，对<strong>近期的投资成本</strong>和<strong>未来的收益现值</strong>进行比较的（人力资本投资同物质资本投资一样，回报发生在不同时期）。当且仅当下式成立时，进行人力资本投资才是值得的：</p>
+<p><strong>B₁/(1+r) ＋ B₂/(1+r)² ＋ B₃/(1+r)³ ＋ … ＋ Bₙ/(1+r)ⁿ ＞ C</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B</td>
+<td>未来各年的收入（收益）</td>
+<td>必须<strong>贴现</strong>折成现值再相加</td>
+</tr>
+<tr>
+<td>r</td>
+<td>利息率（也称<strong>贴现率</strong>）</td>
+<td><strong>r 越大，未来收入的现值就越低</strong></td>
+</tr>
+<tr>
+<td>C</td>
+<td>现期人力资本投资总成本</td>
+<td>花在<strong>现在</strong>的钱</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>未来的钱要打折：</strong><p>一年后的 1 万元不等于今天的 1 万元——按利率打个折才是它"现在的价值"。贴现率 r 就是打折的力度：<strong>r 越大，折得越狠，未来收入越"不值钱"，投资越难回本</strong>。这就是"贴现率越高，上大学可能性越小"的计算根源。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小周现在自费 <strong>10 000 元</strong>参加技能培训，培训后第 1 年、第 2 年每年多挣 <strong>6 000 元</strong>，此后不再有增量收入。取贴现率 r＝10%：</p>
+<ol>
+<li>第 1 年收益的现值 ＝ 6 000 ÷ (1＋10%) ＝ 6 000 ÷ 1.1 ≈ <strong>5 454.5 元</strong></li>
+<li>第 2 年收益的现值 ＝ 6 000 ÷ (1＋10%)² ＝ 6 000 ÷ 1.21 ≈ <strong>4 958.7 元</strong></li>
+<li>现值合计 ＝ 5 454.5 ＋ 4 958.7 ＝ <strong>10 413.2 元</strong></li>
+<li>10 413.2 ＞ 10 000 → <strong>投资值得</strong>。</li>
+</ol>
+<p>若贴现率取 20%：6 000 ÷ 1.2 ＋ 6 000 ÷ 1.44 ＝ 5 000 ＋ 4 166.7 ＝ <strong>9 166.7 元</strong> ＜ 10 000 → 不值得。
+同一笔收益，r 从 10% 提到 20%，现值立刻缩水——<strong>r 越大，未来收入的现值越低</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 现值公式</div><p><strong>"未来钱，打完折，超成本，才值得"</strong>——先逐年打折（贴现），再加总，最后跟现在的成本 C 比。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易错警示：绝对变化 ≠ 相对变化</div><p>公式演算题最爱在"绝对/相对"之间埋雷，看两个例子：
+- r 从 10% 升到 20%：说"提高了 10 个<strong>百分点</strong>"是对的（绝对变化）；说"提高了 10%"就错了（相对变化是 20%÷10%−1＝100%）。
+- 上面小周的例子，r 从 10% 提到 20% 后现值从 10 413 元降到 9 167 元：<strong>绝对变化</strong>是"下降约 1 246 元"，<strong>相对变化</strong>是"下降约 12%"（1 246 ÷ 10 413 ≈ 12%）。题目问哪种就答哪种，别拿"下降 12%"去对应"下降 1 246 元"。</p></div></div>
+<div class="section"><h3>5. 衡量人力资本投资收益的两种方法（★★★）<span class="s3">★★★</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>别名</th>
+<th>思路</th>
+<th>判断标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>现值法</strong></td>
+<td>贴现率法</td>
+<td><strong>先规定</strong>利率或贴现率 r 的值，再比较等式两端的数值</td>
+<td>未来总收益的<strong>现值 ＞ 成本 C</strong> → 值得</td>
+</tr>
+<tr>
+<td><strong>内部收益率法</strong></td>
+<td>最高贴现率法</td>
+<td><strong>倒求</strong> r：使收益现值与成本 C <strong>相等</strong>，解出这个 r</td>
+<td>解出的 r ＞ 其他投资报酬率（如银行利息率）→ 可行，否则不可行</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一个&quot;先定率&quot;，一个&quot;倒求率&quot;：</strong><ul>
+<li>现值法：折现率是<strong>自己先给定</strong>的，算完比较"现值 vs 成本"；</li>
+<li>内部收益率法：折现率是<strong>解出来的</strong>（收益现值＝成本时的那个 r），它回答的是"这笔投资<strong>最高能承受多高的贴现率</strong>"——所以内部收益率是投资<strong>可以承受的最高贴现率</strong>，<strong>不是</strong>投资的"实际收益率"。</li>
+</ul></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小郑现在花 <strong>10 000 元</strong>参加培训，1 年后因此多挣 <strong>11 200 元</strong>（仅此一年）。求内部收益率并判断可行性：</p>
+<ol>
+<li>令收益现值 ＝ 成本：11 200 ÷ (1＋r) ＝ 10 000</li>
+<li>解得 1＋r ＝ 11 200 ÷ 10 000 ＝ 1.12</li>
+<li><strong>r ＝ 12%</strong>（内部收益率＝可承受的最高贴现率）</li>
+</ol>
+<p>判断：若银行存款利率为 5%，12% ＞ 5% → <strong>培训计划可行</strong>；若市场利率涨到 15%，15% ＞ 12%，钱存银行更划算 → <strong>不可行</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 两种方法</div><p><strong>"现值法：先定率、算现值、比成本；内部率：倒求率、找上限、比利率"</strong>。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>人力资本投资</strong>：提高生产能力→提高劳动力市场收益能力的初始性投资；否定"劳动者同质"假设；亚当·斯密"一个国家的资本在一定程度上包括社会全体成员的能力"</li>
+<li><strong>五类形式</strong>：各级正规教育、在职培训、增进健康（含学龄前儿童营养）、寻找工作、工作流动；炒股、纯消费不算</li>
+<li><strong>未来导向性</strong>：成本在目前，收益在未来且持续出现；与物质资本投资基本原理相似；并非支出越多越好</li>
+<li><strong>基本模型</strong>：B₁/(1+r)＋B₂/(1+r)²＋…＋Bₙ/(1+r)ⁿ ＞ C；r 越大未来收入现值越低</li>
+<li><strong>现值法</strong>（贴现率法）：先定 r，收益现值＞成本 → 值得</li>
+<li><strong>内部收益率法</strong>（最高贴现率）：令收益现值＝成本倒求 r，r＞其他投资报酬率（如银行利率）→ 可行；内部收益率＝可承受的最高贴现率，不是实际收益率</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r13s1q1" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于人力资本与人力资本投资的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 人力资本投资的收益产生在未来</button><button type="button" class="qopt" data-key="B">B. 人力资本投资的基本原理与物力资本投资完全不同</button><button type="button" class="qopt" data-key="C">C. 在一个国家的资本中应当包括全体社会成员的能力</button><button type="button" class="qopt" data-key="D">D. 人的劳动能力储备应当被视为一种资本</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：人力资本投资与物力资本投资在基本原理上<strong>有相似之处</strong>——与人力资本投资相联系的成本支出和收益取得也是分别发生在不同的时间里的，"完全不同"说法错误，B 当选。A 正确，人力资本投资的重点在于未来导向性，成本在目前、收益在未来；C、D 正确，亚当·斯密认为一个国家的资本在一定程度上包括社会全体成员的能力，人的劳动能力储备应当被视为一种资本。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s1q2" data-answer="BCDE" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">人力资本投资活动包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 业余时间炒股票</button><button type="button" class="qopt" data-key="B">B. 在毕业工作后参加单位组织的培训</button><button type="button" class="qopt" data-key="C">C. 上大学</button><button type="button" class="qopt" data-key="D">D. 在工作之余自费参加专业技能培训</button><button type="button" class="qopt" data-key="E">E. 为找到更好的工作而搬家到另一个地方</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：人力资本投资包括各级正规教育（C）和在职培训活动（B、D），也包括增进健康、加强学龄前儿童营养、寻找工作、工作流动（E 为找到更好的工作而搬家属寻找工作/工作流动）等活动。A 业余炒股是金融投资，不提高人的生产能力，不属于人力资本投资。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s1q3" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">人力资本投资理论否定的一个基本假设是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 所有企业都愿意支付相同的工资</button><button type="button" class="qopt" data-key="B">B. 所有企业的用工人数都是相同的</button><button type="button" class="qopt" data-key="C">C. 所有劳动者都是同质的</button><button type="button" class="qopt" data-key="D">D. 所有企业劳动者的工资都是相同的</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：在劳动力市场供求分析中，为便于分析基本原理，曾假定<strong>所有劳动者都是同质的</strong>（所具备的市场技术和能力无差别），这在现实中显然不真实——正是"劳动者同质"这一假设被人力资本投资理论否定，才引出对劳动者能力差别及其收入差别的研究。A、B、D 均不是该理论针对的基本假设。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s1q4" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于人力资本投资内部收益率的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 当它高于其他投资的收益率时，人力资本投资是有利可图的</button><button type="button" class="qopt" data-key="B">B. 它代表的是人力资本投资可以承受的最高贴现率</button><button type="button" class="qopt" data-key="C">C. 它是使人力资本投资收益现值与成本相等时的投资回报率</button><button type="button" class="qopt" data-key="D">D. 它代表的是人力资本投资实际收益率</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：内部收益率是通过<strong>使收益现值与成本相等</strong>求出的 r（C 正确），它回答"投资最高能承受多高的贴现率"（B 正确）；把它与其他投资报酬率（如银行利率）比较，高于则可行（A 正确）。它只是一个<strong>判断可行性的基准</strong>，并不代表投资的实际收益率，D 错误。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s1q5" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">人力资本投资的经济收益是指（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 人力资本投资带来的历年货币收益之和</button><button type="button" class="qopt" data-key="B">B. 人力资本投资的内部收益率</button><button type="button" class="qopt" data-key="C">C. 人力资本投资带来的历年货币收益的现值之和</button><button type="button" class="qopt" data-key="D">D. 人力资本投资的货币收益和心理收益之和</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：未来的钱必须<strong>先贴现</strong>再相加——将未来的货币收益折算为当前的价值，把历年收益<strong>现值</strong>相加，才是人力资本投资的经济收益。A 漏了贴现，把不同年份的钱按面值直接相加是错的；B 是回报率不是收益额；D 中心理收益不属于"经济收益"的口径。
+:::</p></div></details></div><div class="quiz-item" data-qid="r13s1q6" data-answer="ABCE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">下列支出中，属于人力资本投资支出的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 上大学交的学费</button><button type="button" class="qopt" data-key="B">B. 为换工作而支付的费用</button><button type="button" class="qopt" data-key="C">C. 为改善身体状况而交纳的健身俱乐部会费</button><button type="button" class="qopt" data-key="D">D. 日常应酬中请朋友吃饭的花费</button><button type="button" class="qopt" data-key="E">E. 为参加在职研究生班学习而支付的费用</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：对号五类形式：学费＝各级正规教育（A）；换工作费用＝工作流动（B）；健身会费＝增进健康（C）；在职研究生班＝正规教育/在职培训（E）。D 请客吃饭是纯消费支出，不能提高生产能力从而提高劳动力市场收益能力，不属于人力资本投资。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力13_人力资本投资理论_第2节_人力资本投资与高等教育.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 人力资本投资与高等教育</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

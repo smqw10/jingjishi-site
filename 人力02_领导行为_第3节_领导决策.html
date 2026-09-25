@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第2章 领导行为 · 领导决策 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第一部分 组织行为学</span><h1>第2章 领导行为 · 领导决策</h1><div class="subtitle">第 3 节 / 共 3 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 3/3</div><div class="sec-badge none" id="sec-badge" data-sec="r02s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟西蒙"智设选"与明茨伯格"认发选"两套决策三阶段 <span class="s3">★★★</span></li>
+<li>分清<strong>理性模型</strong>与<strong>有限理性模型</strong>的特征清单，记住两者"程度差异非质变" <span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>记住<strong>社会模型</strong>与"投入的增加"四大原因 <span class="hot">高频考点</span></li>
+<li>会用<strong>价值取向×模糊耐受性</strong> 2×2 秒判四种决策风格 <span class="s3">★★★</span> <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、决策过程</h2>
+<h3>1. 西蒙的三阶段</h3>
+<p>管理心理学家赫伯特·西蒙认为决策过程分为三个阶段：</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>智力活动阶段</strong></td>
+<td>对环境进行分析，确定决策的情境</td>
+</tr>
+<tr>
+<td><strong>设计活动阶段</strong></td>
+<td>探索、研究和分析可能发生的行为系列</td>
+</tr>
+<tr>
+<td><strong>选择活动阶段</strong></td>
+<td>在上一阶段可能发生的行为系列中选择一个行为</td>
+</tr>
+</tbody>
+</table>
+<h3>2. 明茨伯格的三阶段</h3>
+<p>明茨伯格及其同伴提出的决策三阶段：</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>确认阶段</strong></td>
+<td>认知到问题或机会的产生，进行诊断</td>
+</tr>
+<tr>
+<td><strong>发展阶段</strong></td>
+<td>个体搜寻现有的标准程序或者解决方案，或者设计全新的、量身定做的解决方案</td>
+</tr>
+<tr>
+<td><strong>选择阶段</strong></td>
+<td>确定最终的方案。三种选择方法：①经验或知觉判断；②逻辑系统分析；③决策成员之间相互权衡</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 两套三阶段</div><p><strong>"西蒙智设选，明茨认发选"</strong>——西蒙：智力、设计、选择；明茨伯格：确认、发展、选择。两套都有"选择"，区分抓手在前两个：<strong>智力/设计</strong> vs <strong>确认/发展</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 两套阶段互相当干扰项</div><p>2023 年真题考"西蒙不包括哪个阶段"，正确答案正是明茨伯格的"发展活动"。见"分析环境、确定情境"→西蒙·智力；见"探索分析行为系列"→西蒙·设计；见"诊断"→明茨伯格·确认；见"搜寻或设计方案"→明茨伯格·发展。</p></div></div>
+<div class="section"><h2>二、决策模型</h2>
+<h3>1. 理性决策模型 ★★★</h3>
+<p>决策者在任何方面都是<strong>完全理性</strong>的，决策者是完美的，有能力使组织<strong>目标最大化</strong>，使得<strong>边际成本等于边际收益</strong>。决策者具备以下特征：</p>
+<ol>
+<li>从目标意义上分析，决策<strong>完全理性</strong>；</li>
+<li>存在<strong>完整和一致的偏好系统</strong>，使决策者在不同的备选方案中进行选择；</li>
+<li>决策者<strong>可以知道所有备选方案</strong>；</li>
+<li>对<strong>计算复杂性无限制</strong>，可通过计算选择出<strong>最佳</strong>备选方案；</li>
+<li>对于<strong>概率的计算</strong>不存在任何困难。</li>
+</ol>
+<h3>2. 有限理性决策模型（西蒙）★★★</h3>
+<p>更加<strong>接近现实</strong>的模型，认为：</p>
+<ol>
+<li>选择备选方案时，决策者试图使<strong>自己满意</strong>，或寻找<strong>令人满意的结果</strong>——满意的标准可以是足够的利润、市场份额、合适的价格等；</li>
+<li>决策者在进行选择时<strong>不必知道所有的可能方案</strong>；</li>
+<li>决策者所认知的世界是真实世界的<strong>简化模型</strong>；</li>
+<li>决策者可以用相对简单的<strong>经验启发式原则</strong>或商业窍门及一些<strong>习惯</strong>来进行决策。</li>
+</ol>
+<p><strong>与理性模型的关系</strong>：差异主要体现在<strong>程度上</strong>，而<strong>非质的差异</strong>——都是理性的，只是有限理性的理性受到了限制。</p></div>
+<div class="section"><div class="keypoint"><strong>理性求&quot;最优&quot;，有限理性求&quot;满意&quot;：</strong><p>理性模型是"上帝视角"：全知道、全能算、选最优；有限理性是"凡人视角"：够用就好（满意原则）、不必全知、认知简化、靠经验窍门。考试抓关键词：见"最大化/最佳/所有方案/完整偏好系统"→理性模型；见"满意/简化模型/经验启发式/不必知道所有方案"→有限理性模型。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 理性 vs 有限理性</div><p><strong>"理性五件套：全偏好、全方案、全能算、概率不难、目标理性；有限四件套：要满意、可不知、简化界、凭窍门"</strong>。两套清单互为干扰项，答题先看题干问的是哪个模型。</p></div></div>
+<div class="section"><h3>3. 社会模型（来自心理学）</h3>
+<ol>
+<li>弗洛伊德：人类行为主要是由<strong>无意识的需求</strong>来驱动的，人类<strong>没办法进行有效的理性决策</strong>；</li>
+<li>（★★）人们有<strong>坚持错误决策</strong>的倾向，称为"<strong>投入的增加</strong>"，原因主要有四个：①<strong>项目的特点</strong>；②<strong>心理决定因素</strong>；③<strong>社会压力</strong>；④<strong>组织决定因素</strong>。</li>
+</ol></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某项目已经亏了 500 万，决策者想的不是止损，而是"都投这么多了，再加 200 万说不定就盘活了"——这就是"投入的增加"。项目本身不见起色（项目的特点）、不甘心认栽（心理决定因素）、怕被同行看笑话（社会压力）、组织里没人敢喊停（组织决定因素），四股力量一起把错误决策绑上了战车。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 投入的增加四原因</div><p><strong>"项、心、社、组"</strong>——项目特点、心理决定因素、社会压力、组织决定因素。多选里冒出"家庭因素""市场因素"都是编的。</p></div></div>
+<div class="section"><h2>三、决策风格 ★★★</h2>
+<p><strong>两个维度</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>价值取向</strong></td>
+<td>决策者关心的是<strong>任务和技术本身</strong>，还是<strong>人和社会</strong>的因素</td>
+</tr>
+<tr>
+<td><strong>模糊耐受性</strong></td>
+<td>决策者需要的<strong>结构和控制的程度</strong>，以及是否有能力在<strong>不确定的环境中工作</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>四种决策风格</strong>（价值取向×模糊耐受性）：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>价值取向</th>
+<th>模糊耐受性</th>
+<th>特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>指导型</strong></td>
+<td>任务和技术</td>
+<td>低</td>
+<td>解决问题一般是有效的、合乎逻辑的、程序化的和系统的；关注事实、迅速完成工作；行动取向、关注近期效果；喜欢使用权力，喜欢控制感【独裁的领导风格】</td>
+</tr>
+<tr>
+<td><strong>分析型</strong></td>
+<td>任务和技术</td>
+<td>高</td>
+<td>喜欢分析情境，倾向于过度分析事物；比指导型评估更多的信息和备选方案，使用更多时间进行决策，对新的、不确定的情境反应比较好【独裁的领导风格】</td>
+</tr>
+<tr>
+<td><strong>概念型</strong></td>
+<td>人和社会</td>
+<td>高</td>
+<td>视角开阔，喜欢考虑不同的选择以及将来的可能性；为了收集尽可能多的信息而与尽可能多的人进行讨论，然后根据直觉进行决策；喜欢冒险，擅长使用创新的办法解决问题；有时决策时会陷入空想和犹豫不决</td>
+</tr>
+<tr>
+<td><strong>行为型</strong></td>
+<td>人和社会</td>
+<td>低</td>
+<td>可以与他人进行很好的合作，喜欢公开交换意见的环境，乐于接受建议并提供支持和帮助，喜欢口头而非书面的信息；倾向于避免冲突，力争使每个人感到快乐；不喜欢困难的决策</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 决策风格 2×2</div><p><strong>"低耐任务指导型，高耐任务分析型；低耐人际行为型，高耐人际概念型"</strong>——先问"关注事还是关注人"，再问"怕不怕模糊"。其中<strong>指导型和分析型都是独裁的领导风格</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>同一个"要不要上新项目"的决策，四种人四种做法：指导型经理按流程列清单、快速拍板（低耐受＋任务）；分析型总监要求再补三份数据报告才签字（高耐受＋任务）；概念型产品负责人拉着所有相关部门头脑风暴一下午，凭直觉定方向（高耐受＋人）；行为型主管谁的意见都听、生怕团队闹矛盾，最怕拍板（低耐受＋人）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 秒杀关键词</div><p>题干见"独裁的领导风格"→只在<strong>指导型、分析型</strong>里挑（2024 年真题）；见"过度分析、更多信息、更多时间"→分析型；见"直觉、冒险、创新、空想"→概念型；见"避免冲突、口头信息、人人快乐"→行为型；见"程序化、迅速、控制感"→指导型。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>西蒙三阶段</strong>：智力（分析环境定情境）→设计（探索分析行为系列）→选择（选一个行为）</li>
+<li><strong>明茨伯格三阶段</strong>：确认（认知问题并诊断）→发展（搜寻或设计方案）→选择（定最终方案；经验判断/逻辑分析/相互权衡）</li>
+<li><strong>理性模型</strong>：完全理性、目标最大化、边际成本＝边际收益；完整偏好、知道所有方案、计算无限制、概率无困难</li>
+<li><strong>有限理性模型</strong>（西蒙）：满意原则、不必知道所有方案、简化模型、经验启发式；与理性模型是<strong>程度差异非质变</strong></li>
+<li><strong>社会模型</strong>：弗洛伊德无意识驱动；投入的增加＝坚持错误决策，四因"项心社组"</li>
+<li><strong>决策风格</strong>：价值取向（任务/人）×模糊耐受性（低/高）→指导、分析（均独裁）、概念、行为</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r02s3q1" data-answer="C" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">西蒙对决策过程划分的阶段不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 选择活动</button><button type="button" class="qopt" data-key="B">B. 设计活动</button><button type="button" class="qopt" data-key="C">C. 发展活动</button><button type="button" class="qopt" data-key="D">D. 智力活动</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：西蒙把决策过程分为三个阶段：①智力活动阶段（对环境进行分析，确定决策的情境）；②设计活动阶段（探索、研究和分析可能发生的行为系列）；③选择活动阶段（在可能发生的行为系列中选择一个行为）。"发展活动"是<strong>明茨伯格</strong>的决策阶段（确认—发展—选择），不是西蒙的。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s3q2" data-answer="B" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">按照西蒙决策理论，在分析、讨论可能发生的问题环节属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 选择活动阶段</button><button type="button" class="qopt" data-key="B">B. 设计活动阶段</button><button type="button" class="qopt" data-key="C">C. 开始活动阶段</button><button type="button" class="qopt" data-key="D">D. 结束活动阶段</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：<strong>设计活动阶段</strong>的决策工作包括<strong>探索、研究和分析可能发生的行为系列</strong>——"分析、讨论可能发生的问题"正对应这一环节。智力活动是分析环境、确定情境；选择活动是从行为系列中挑选一个行为；"开始/结束活动阶段"是编造的阶段名。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s3q3" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">按照明茨伯格决策过程，个体搜寻现有的标准程序或者解决方案，或者设计全新的、量身定做的解决方案的阶段属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 发展阶段</button><button type="button" class="qopt" data-key="B">B. 确认阶段</button><button type="button" class="qopt" data-key="C">C. 选择阶段</button><button type="button" class="qopt" data-key="D">D. 活动阶段</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：明茨伯格决策三阶段：①<strong>确认阶段</strong>——认知到问题或机会的产生，进行诊断；②<strong>发展阶段</strong>——搜寻现有的标准程序或解决方案，或者设计全新的、量身定做的解决方案；③<strong>选择阶段</strong>——确定最终的方案。题干正是发展阶段的定义。"活动阶段"是编造的干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s3q4" data-answer="CDE" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">关于决策的有限理性模型的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 通过计算选择出最佳备选方案</button><button type="button" class="qopt" data-key="B">B. 决策或决策时追求利益最大化</button><button type="button" class="qopt" data-key="C">C. 决策者在进行选择时不必知道所有可能方案</button><button type="button" class="qopt" data-key="D">D. 决策者认知的世界是真实世界的简化模型</button><button type="button" class="qopt" data-key="E">E. 在选择备选方案时，决策者试图寻找令人满意的结果</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CDE</div><div class="q-exp"><p>析：有限理性模型采用<strong>满意原则</strong>而非最大化原则：选择方案时试图使自己满意或寻找令人满意的结果（E 对）；正因为不求最优，选择时<strong>不必知道所有可能方案</strong>（C 对）；决策者认知的世界是真实世界的<strong>简化模型</strong>（D 对）。A"通过计算选出最佳方案"、B"追求利益最大化"都是<strong>理性模型</strong>的特征，属于串场干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s3q5" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">根据理性模型，决策者在任何方面都是完全理性的，下列哪项不是决策者具备的特征（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 存在完整和一致的偏好系统，使决策者在不同备选方案中进行选择</button><button type="button" class="qopt" data-key="B">B. 对计算复杂性无限制，可以通过计算选择出最佳备选方案</button><button type="button" class="qopt" data-key="C">C. 无须知道所有备选方案</button><button type="button" class="qopt" data-key="D">D. 从目标意义上分析，决策完全理性</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：理性模型的决策者<strong>可以知道所有备选方案</strong>——"无须知道所有备选方案"是<strong>有限理性模型</strong>的特征，C 当选。A、B、D 均为理性模型的特征：存在完整和一致的偏好系统、对计算复杂性无限制（可通过计算选出最佳方案）、从目标意义上分析决策完全理性。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s3q6" data-answer="ABCE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">有些决策者有坚持错误决策的倾向，原因有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 心理因素</button><button type="button" class="qopt" data-key="B">B. 组织因素</button><button type="button" class="qopt" data-key="C">C. 压力因素</button><button type="button" class="qopt" data-key="D">D. 家庭因素</button><button type="button" class="qopt" data-key="E">E. 项目特点</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：这种坚持错误决策的倾向称为"<strong>投入的增加</strong>"，产生原因主要有四个：①<strong>项目的特点</strong>（E）；②<strong>心理决定因素</strong>（A）；③<strong>社会压力</strong>（C 的"压力因素"即指此）；④<strong>组织决定因素</strong>（B）。"家庭因素"不在四因之列，是编造的干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s3q7" data-answer="C" data-type="single"><span class="q-tag">2019·单选</span><div class="q-stem">决策风格常常被分为指导型、分析型、概念型、行为型，其中具有分析型决策风格的决策者的特征是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 较低的模糊耐受性水平、倾向于关注人</button><button type="button" class="qopt" data-key="B">B. 较高的模糊耐受性水平、倾向于关注人</button><button type="button" class="qopt" data-key="C">C. 较高的模糊耐受性水平、倾向于关注任务</button><button type="button" class="qopt" data-key="D">D. 较低的模糊耐受性水平、倾向于关注任务</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：分析型＝<strong>较高的模糊耐受性＋倾向于关注任务（和技术）</strong>，喜欢分析情境、倾向于过度分析，评估更多信息、使用更多时间决策，对新的、不确定的情境反应比较好。对照记忆：指导型＝低耐受＋任务；概念型＝高耐受＋人；行为型＝低耐受＋人。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s3q8" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">决策者具有较高的模糊耐受性水平，倾向于关注人和社会，这种决策风格属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 行为型</button><button type="button" class="qopt" data-key="B">B. 分析型</button><button type="button" class="qopt" data-key="C">C. 概念型</button><button type="button" class="qopt" data-key="D">D. 指导型</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：<strong>概念型</strong>＝高模糊耐受性＋关注人和社会，视角开阔、喜欢考虑不同选择和将来可能性、凭直觉决策、喜欢冒险和创新。A 行为型是<strong>低</strong>耐受＋关注人；B 分析型是高耐受＋关注<strong>任务</strong>；D 指导型是低耐受＋关注任务——用 2×2 口诀逐项核对即可。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s3q9" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">一个独裁领导风格的人，其决策风格是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 指导型和分析型</button><button type="button" class="qopt" data-key="B">B. 指导型和概念型</button><button type="button" class="qopt" data-key="C">C. 概念型和行为型</button><button type="button" class="qopt" data-key="D">D. 分析型和行为型</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：<strong>指导型</strong>和<strong>分析型</strong>的决策者都倾向于使用独裁的领导风格——两者都关注任务和技术，只是模糊耐受性一低一高。概念型和行为型关注人和社会：概念型爱冒险创新、有时空想犹豫，行为型合作避冲突，都不是独裁风格。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力02_领导行为_第2节_领导风格与技能.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 领导风格与技能</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第七章 国民收入核算和简单的宏观经济模型 · 宏观经济均衡的基本模型 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第七章 国民收入核算和简单的宏观经济模型 · 宏观经济均衡的基本模型</h1><div class="subtitle">第 2 节 / 共 4 节 · 预计学习时长 30 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 2/4</div><div class="sec-badge none" id="sec-badge" data-sec="b07s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>储蓄–投资恒等式</strong>是宏观经济均衡基本模型中具有<strong>基础性作用</strong>的公式 <span class="hot">高频考点</span><span class="must">必考</span></li>
+<li>记住两个角度：支出角度 GDP=C+I+G+(X−M)，收入角度 Y=C+S+T（T 是<strong>净税收</strong>＝税收−转移支付） <span class="hot">高频考点</span></li>
+<li>会从两部门 <strong>I=S</strong> 推出三部门 <strong>I=S+(T−G)</strong>、四部门 <strong>I=S+(T−G)+(M−X)</strong> <span class="s3">★★★</span></li>
+<li>识破符号陷阱：恒等式里外贸项是（M−X），与支出法公式的（X−M）方向相反 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、两个角度数 GDP——总支出等于总收入</h2>
+<h3>1. 支出角度与收入角度 <span class="hot">高频考点</span></h3>
+<p><strong>支出角度</strong>：国内生产总值等于<strong>消费支出、投资支出、政府购买支出和净出口</strong>的总和，即 <strong>GDP=C+I+G+(X−M)</strong>。</p>
+<p><strong>收入角度</strong>：总收入除了用于<strong>消费 C</strong> 和<strong>储蓄 S</strong>，还要有一部分用来<strong>交纳税金 T</strong>。注意：居民、企业一方面交纳税金，另一方面又获得<strong>政府给予的转移支付</strong>，政府净收入要<strong>扣除</strong>这部分支出——所以收入角度的总收入 <strong>Y=C+S+T</strong>（T 为净税收）。</p>
+<p>由于<strong>总支出等于总收入</strong>：</p>
+<p><strong>C+I+G+(X−M)=C+S+T</strong>，两边消去 C 得 <strong>I+G+(X−M)=S+T</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>角度</th>
+<th>公式</th>
+<th>构成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支出角度</td>
+<td>GDP=C+I+G+(X−M)</td>
+<td>消费、投资、政府购买、净出口</td>
+</tr>
+<tr>
+<td>收入角度</td>
+<td>Y=C+S+T</td>
+<td>消费、储蓄、净税收（税收−转移支付）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>同一笔钱的两本账：</strong><p>一笔最终产品，买方数出来是"总支出"，卖方收进去是"总收入"，两边必然相等——这就是恒等式成立的根基。恒等式不是"碰巧相等"，而是<strong>定义上永远相等</strong>；做题时"从支出角度""从收入角度"就是这两本账的切换。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小李家一年挣 30 万（收入角度）：日常花 20 万（消费 C），存 8 万（储蓄 S），净交税 2 万（净税收 T）→ 20+8+2=30 万。而全社会看，这 30 万一定是被各家买东西、企业投资、政府采购花出去的（支出角度）。两本账记的是同一笔钱，所以能画等号。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 两个角度口诀</div><p><strong>"支四样：吃建官外；收三样：吃储税"</strong>——支出角度 C、I、G、(X−M) 四样；收入角度 C、S、T 三样，T 是扣过转移支付的<strong>净税收</strong>。</p></div></div>
+<div class="section"><h2>二、储蓄–投资恒等式：从两部门到四部门</h2>
+<p><strong>储蓄–投资恒等式</strong>是宏观经济均衡的基本模型中具有<strong>基础性作用</strong>的公式——两部门经济中 <strong>I=S</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>经济部门</th>
+<th>恒等式</th>
+<th>新增角色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>两部门</strong>（居民＋企业）</td>
+<td><strong>I=S</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>三部门</strong>（＋政府）</td>
+<td><strong>I=S+(T−G)</strong></td>
+<td>政府净收入（T−G）并入储蓄一侧</td>
+</tr>
+<tr>
+<td><strong>四部门</strong>（＋国外部门）</td>
+<td><strong>I=S+(T−G)+(M−X)</strong></td>
+<td>进出口净额（M−X）并入储蓄一侧</td>
+</tr>
+</tbody>
+</table>
+<p><strong>推导</strong>（承接 I+G+(X−M)=S+T）：两部门没有政府和国外部门，G、T、外贸项全为零，等式退化为 <strong>C+I=C+S</strong>，消去两边的 C 即得 <strong>I=S</strong>；三部门再去掉外贸项，I+G=S+T → <strong>I=S+(T−G)</strong>；四部门最后把外贸项移到右边：<strong>I=S+(T−G)+(M−X)</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>恒等式右边全是&quot;攒下的钱&quot;：</strong><p>S 是私人攒下的，(T−G) 是政府攒下的（税收减购买），(M−X) 是外国人净"攒下"的本国产品（进口减出口）；左边 I 是花出去形成投资的钱。恒等式说：<strong>投资花的钱＝各路攒下的钱</strong>——部门每多一个，右边就多一项"攒钱"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某年私人储蓄 S=100，政府税收 30、购买 40（T−G=−10，赤字），进口 25、出口 15（M−X=10）→ I=100−10+10=100。政府"攒"的是负数，能支撑的投资就得靠私人储蓄和外国净购买来凑——恒等式里的"此消彼长"一目了然。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 恒等式口诀</div><p><strong>"二打底（I=S），三加税减购（T−G），四再进减出（M−X）"</strong>——政府项是<strong>税收减购买</strong>，外贸项是<strong>进口减出口</strong>，方向别记反。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 符号陷阱：两处&quot;减法&quot;方向相反</div><ul>
+<li>恒等式右侧政府项是 <strong>(T−G)</strong>，不是 G−T；</li>
+<li>恒等式右侧外贸项是 <strong>(M−X)</strong>，而支出法公式 GDP=C+I+G+<strong>(X−M)</strong> 末项是出口减进口——同是"外贸"，一处在等式左边用（X−M）、一处在等式右边用（M−X），考试最爱在这里设坑。</li>
+<li>问"基础性作用的公式"，答<strong>储蓄–投资恒等式</strong>；"消费–储蓄恒等式""投资–消费恒等式"均为拼凑干扰项。</li>
+</ul></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li>支出角度 GDP=C+I+G+(X−M)；收入角度 Y=C+S+T（T＝税收−转移支付，<strong>净税收</strong>）</li>
+<li>总支出=总收入 → C+I+G+(X−M)=C+S+T → <strong>I+G+(X−M)=S+T</strong></li>
+<li><strong>两部门 I=S</strong>（基础性公式）；三部门 <strong>I=S+(T−G)</strong>；四部门 <strong>I=S+(T−G)+(M−X)</strong></li>
+<li>口诀："二打底，三加税减购，四再进减出"</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b07s2q1" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">在宏观经济均衡的基本模型中，具有基础性作用的公式是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 投资-消费-净出口恒等式</button><button type="button" class="qopt" data-key="B">B. 消费-储蓄恒等式</button><button type="button" class="qopt" data-key="C">C. 储蓄-投资恒等式</button><button type="button" class="qopt" data-key="D">D. 投资-消费恒等式</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：<strong>储蓄–投资恒等式</strong>是宏观经济均衡的基本模型中具有基础性作用的公式（两部门中 I=S）。消费、投资只是总支出或总收入的组成部分，不存在"投资–消费""消费–储蓄"之类的恒等式，A、B、D 都是拼凑的干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s2q2" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">如果用字母 I 表示投资，S 表示储蓄，T 表示政府税收，G 表示政府购买，M 表示进口，X 表示出口，那么在三部门经济模型中，投资-储蓄恒等式是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. I=S</button><button type="button" class="qopt" data-key="B">B. I=S+(T−G)</button><button type="button" class="qopt" data-key="C">C. I=S+(T−G)+(X−M)</button><button type="button" class="qopt" data-key="D">D. I=S+(T+G)+(X−M)</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：三部门在两部门 I=S 的基础上加入政府：政府净收入（T−G）并入储蓄一侧，故 <strong>I=S+(T−G)</strong>（B 对）。A 是两部门恒等式；C 是四部门的样子且外贸项写错——四部门应为 I=S+(T−G)+<strong>(M−X)</strong>（进口减出口）；D 的 T+G 无意义。
+:::</p></div></details></div><div class="quiz-item" data-qid="b07s2q3" data-answer="ABDE" data-type="multi"><span class="q-tag">自编·多选</span><div class="q-stem">关于储蓄–投资恒等式的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 两部门经济中，投资与储蓄相等，即 I=S</button><button type="button" class="qopt" data-key="B">B. 从收入角度看，三部门经济的总收入 Y=C+S+T，其中 T 为净税收</button><button type="button" class="qopt" data-key="C">C. 三部门经济中，I=S−(T−G)</button><button type="button" class="qopt" data-key="D">D. 四部门经济中，I=S+(T−G)+(M−X)</button><button type="button" class="qopt" data-key="E">E. 当 T＜G 时，三部门经济中 I＜S</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：两部门 I=S（A 对）；收入角度 Y=C+S+T，T 是扣除转移支付后的净税收（B 对）；三部门应为 <strong>I=S+(T−G)</strong>，C 把符号写反了；四部门 I=S+(T−G)+(M−X)（D 对）；T＜G 时 (T−G)＜0，由 I=S+(T−G) 可知 I＜S（E 对）。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础07_国民收入核算和简单的宏观经济模型_第1节_国民收入核算.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 国民收入核算</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础07_国民收入核算和简单的宏观经济模型_第3节_消费、储蓄和投资.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 消费、储蓄和投资</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

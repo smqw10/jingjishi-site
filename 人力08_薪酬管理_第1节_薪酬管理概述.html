@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第8章 薪酬管理 · 薪酬管理概述 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第8章 薪酬管理 · 薪酬管理概述</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="r08s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住三种<strong>发展战略</strong>（成长／稳定集中／收缩精简）与三种<strong>竞争战略</strong>（差异化／成本领先／市场集中）各自的薪酬打法，会看情景秒配 <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
+<li>背熟<strong>薪酬体系设计六步骤</strong>，分清"职位评价管内部公平、薪酬调查管外部竞争" <span class="hot">高频考点</span> <span class="must">必考</span></li>
+<li>掌握<strong>职位评价四方法</strong>（排序／分类／要素计点／因素比较）的定性定量、优缺点与适用企业，会画 2×2 定位表 <span class="s3">★★★</span></li>
+<li>记住职位评价六原则与"三个不是"（非任职者／非特殊业绩／非过去未来） <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、战略性薪酬管理</h2>
+<h3>1. 适用于不同发展战略下的薪酬管理 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>战略决定薪酬</strong>：企业选择什么样的发展战略，就配套什么样的薪酬方案。三种发展战略对照如下：</p>
+<table>
+<thead>
+<tr>
+<th>发展战略</th>
+<th>薪酬管理打法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>成长战略</strong></td>
+<td>①<strong>短期</strong>内提供<strong>相对低的基本薪酬</strong>；②<strong>长期</strong>实行<strong>奖金或股票选择权</strong>等计划（长期回报丰厚）</td>
+</tr>
+<tr>
+<td><strong>稳定战略或集中战略</strong></td>
+<td>①薪酬<strong>决策集中度</strong>比较高（取决于职位本身）；②薪酬结构：<strong>基本薪酬和福利占比较大</strong>；③薪酬水平：一般<strong>跟随或略高于市场水平</strong>，长期内不会有太大增长</td>
+</tr>
+<tr>
+<td><strong>收缩战略或精简战略</strong></td>
+<td><strong>基本薪酬占比较低</strong>；一些企业实行<strong>员工股份所有权计划</strong>，鼓励员工与企业<strong>共担风险</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一句话抓本质：</strong><p>成长战略＝"现在少发、将来补上"（先共苦后同甘）；稳定战略＝"底薪厚、涨幅小、求安稳"；收缩战略＝"降底薪、给股份、绑着一起扛"。判断题眼：见"股票选择权、长期回报"→成长；见"福利占比大、跟随市场"→稳定；见"股份所有权计划、共担风险"→收缩。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：三类战略对号</div><p><strong>发展看"成长、稳定、收缩"</strong>，竞争看"创新（差异化）、成本领先、客户中心"，全面薪酬记<strong>"战略性、激励性、灵活性、创新性、沟通性"</strong>五个"性"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某互联网公司处在高速扩张期，给基层的开价不高，但许诺"干满三年期权翻倍"——这就是典型的成长战略打法（短期低基本薪酬＋长期股票计划）；隔壁一家公用事业单位年年薪资稳中有升、福利从优——稳定战略；某濒临退市的制造企业给管理层发股份、砍掉现金工资——收缩战略。</p></div></div>
+<div class="section"><h3>2. 适用于不同竞争战略下的薪酬管理 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>竞争战略</th>
+<th>薪酬体系</th>
+<th>薪酬水平／结构</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>差异化战略</strong></td>
+<td>给予<strong>足够的报酬或奖励</strong></td>
+<td>基本薪酬以<strong>市场通行水平为准且略高于市场水平</strong></td>
+</tr>
+<tr>
+<td><strong>成本领先战略</strong></td>
+<td>—</td>
+<td>薪酬水平：<strong>比竞争对手相对较低</strong>；薪酬结构：<strong>奖金占比较大</strong></td>
+</tr>
+<tr>
+<td><strong>市场集中战略（客户中心战略）</strong></td>
+<td>根据员工向客户提供服务的<strong>数量、质量，或客户的评价</strong>来支付薪酬或奖金</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易混辨析：差异化 vs 成本领先</div><p>差异化战略"<strong>奖励创新</strong>、基本薪酬略高于市场"；成本领先战略"<strong>薪酬水平偏低、奖金占比大</strong>"（省下来的固定工资换成跟业绩浮动的奖金）。有的教材把差异化战略称为"<strong>创新战略</strong>"，题目见"产品创新、技术创新奖励"就往差异化上想。</p></div></div>
+<div class="section"><h3>3. 全面薪酬战略 {s}</h3>
+<p><strong>概念</strong>：摒弃了原有的<strong>科层体系和官僚结构</strong>，以<strong>客户满意度为中心</strong>，鼓励<strong>创新精神</strong>和<strong>可持续的绩效改进</strong>；对<strong>娴熟的专业技能</strong>提供奖励，在员工和企业之间营造<strong>双赢</strong>的工作环境的薪酬战略。</p>
+<p><strong>特点</strong>：强调<strong>战略性、激励性、灵活性、创新性和沟通性</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 全面薪酬五性</div><p><strong>"战激灵创沟"</strong>——战略、激励、灵活、创新、沟通，五个"性"多选题按这五个找，多出来的（如"系统性""官僚性"）都是干扰项。特别注意：全面薪酬战略恰恰是<strong>摒弃</strong>科层体系的，说它"基于传统科层体系建立"必错。</p></div></div>
+<div class="section"><h2>二、薪酬体系设计的基本步骤</h2>
+<p><strong>六步总览</strong>：①明确企业基本现状及战略目标（<strong>重要前提条件</strong>）→②工作分析及职位评价→③薪酬调查→④确定薪酬水平→⑤薪酬结构设计→⑥薪酬预算与控制。</p>
+<h3>4. 工作分析及职位评价 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>定位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>工作分析</strong></td>
+<td>确定<strong>薪酬体系的基础</strong></td>
+</tr>
+<tr>
+<td><strong>职位评价</strong></td>
+<td>在工作分析的基础上，系统地对各职位的<strong>价值</strong>进行评价，从而确定各职位在企业<strong>内部的相对价值及相互关系</strong>的过程；解决薪酬的<strong>内部公平性</strong>问题</td>
+</tr>
+</tbody>
+</table>
+<p><strong>职位评价的"三个不是"</strong>（判断题高频）：职位评价是——
+1. 对<strong>职位</strong>的评价而<strong>非对任职者</strong>的评价；
+2. 对<strong>正常或一般水平</strong>的评价而<strong>非特殊业绩</strong>的评价；
+3. 对<strong>目前</strong>而非<strong>过去或未来</strong>职位状况的评价。</p>
+<p><strong>职位评价的两个作用</strong>：①确定职位的相对价值，得出<strong>职位等级序列</strong>；②为薪酬调查建立<strong>统一的职位评估标准</strong>，使不同职位之间具有可比性，为确保薪酬的公平性奠定基础。</p></div>
+<div class="section"><div class="keypoint"><strong>内部公平 vs 外部竞争：</strong><p><strong>职位评价管"里子"（内部公平），薪酬调查管"面子"（外部竞争）</strong>。题目问"解决内部公平性问题的是"→职位评价；问"解决外部竞争性问题的是"→薪酬调查。这一对是每年必考的配对。</p></div></div>
+<div class="section"><h3>5. 薪酬调查 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>含义</strong>：通过各种途径，收集企业所关注的<strong>竞争对手或同行业类似企业</strong>的薪酬水平及相关信息，并根据<strong>薪酬曲线</strong>得出本企业各职位薪酬所处的位置；解决薪酬的<strong>外部竞争性</strong>问题。</p>
+<p><strong>调查五步骤</strong>：①确定<strong>调查目的</strong>→②确定<strong>调查范围</strong>（调查的企业、职位、内容、时间段等）→③选择<strong>调查方式</strong>→④<strong>统计分析</strong>调查数据→⑤提交<strong>薪酬调查分析报告</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>考点</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>调查目的（4 种）</td>
+<td><strong>整体薪酬水平</strong>的调整、<strong>薪酬差距</strong>的调整、<strong>薪酬晋升政策</strong>的调整、<strong>具体职位薪酬水平</strong>的调整</td>
+</tr>
+<tr>
+<td>调查方式（4 种）</td>
+<td><strong>企业之间相互调查</strong>、<strong>委托调查</strong>、<strong>收集公开的信息</strong>、<strong>问卷调查</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 薪酬调查五步</div><p><strong>"目的、范围、方式，统计、报告"</strong>——先想为什么查，再圈查谁查什么，然后定怎么查，最后算数据出报告。</p></div></div>
+<div class="section"><h3>6. 确定薪酬水平与薪酬结构设计</h3>
+<ul>
+<li><strong>确定薪酬水平</strong>：企业可选择<strong>领先策略、跟随策略、滞后策略、混合策略</strong>。</li>
+<li><strong>薪酬结构设计</strong>：是薪酬的<strong>内部一致性和外部竞争性进行平衡</strong>的一种结果；完整的薪酬结构包含<strong>薪酬等级、薪酬等级内部变动范围和相邻薪酬等级间的关系</strong>等。</li>
+</ul></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 多选陷阱：薪酬结构&quot;三件套&quot;</div><p>完整的薪酬结构＝<strong>薪酬等级＋等级内部变动范围＋相邻等级间的关系</strong>。选项只列前两件、漏掉"相邻薪酬等级间的关系"，或把"职位等级序列"混进来，都算错。另外记住：薪酬结构设计是"内部一致性"与"外部竞争性"<strong>平衡的结果</strong>，不是只顾一头。</p></div></div>
+<div class="section"><h2>三、职位评价</h2>
+<h3>7. 职位评价的原则 <span class="s3">★★★</span></h3>
+<p>六项原则：<strong>系统性原则；战略性原则；标准化原则；员工参与原则；结果公开原则；实用性原则</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：职位评价六原则</div><p><strong>"标准系统战略，实用员工结果"</strong>——标（标准化）准（系统性）系（战略性）统（系统性），实（实用性）用（员工参与）结（结果公开）果。六条之外冒出来的"竞争性、保密性、公平性"都是编的。</p></div></div>
+<div class="section"><h3>8. 职位评价的四种方法 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>定性／定量</th>
+<th>比较方式</th>
+<th>优点</th>
+<th>缺点</th>
+<th>适用企业</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>排序法</strong>（分类：直接排序法、交替排序法、配对比较法）</td>
+<td>定性</td>
+<td>直接职位比较</td>
+<td>简单易行、<strong>成本较低</strong>，易于与员工沟通</td>
+<td>①没有详细具体的评价标准，<strong>主观成分很大</strong>；②只能确定职位的<strong>序列</strong>，不能确定职位之间的<strong>相对价值</strong></td>
+<td>规模较小、结构简单、职位类型较少，且员工对本企业各项职位都较为熟悉的企业</td>
+</tr>
+<tr>
+<td><strong>分类法</strong></td>
+<td>定性</td>
+<td>职位尺度比较</td>
+<td>简单、容易解释、等级结构能<strong>真实反映企业的结构</strong></td>
+<td><strong>等级定义比较困难</strong>，存在较大的主观因素</td>
+<td>职位类别较为简单的<strong>小型企业</strong></td>
+</tr>
+<tr>
+<td><strong>要素计点法</strong></td>
+<td>定量</td>
+<td>职位尺度比较</td>
+<td>更为<strong>精确</strong>，评价结果<strong>更易被员工接受</strong>，允许对职位间的差异进行<strong>微调</strong></td>
+<td>设计与实施都比较<strong>复杂</strong>，对<strong>管理水平要求较高</strong></td>
+<td><strong>大规模企业中的管理类岗位</strong></td>
+</tr>
+<tr>
+<td><strong>因素比较法</strong></td>
+<td>定量</td>
+<td>直接职位比较</td>
+<td>较为完善、<strong>可靠性高</strong>，不同职位之间更具<strong>可比性</strong>，可由职位内容<strong>直接求得具体薪酬金额</strong>（省略"分数—薪酬"转换）</td>
+<td>设计复杂、难度较大、<strong>成本较高</strong>；<strong>不易理解</strong>，员工容易对其准确性和公平性产生质疑</td>
+<td>处在<strong>劳动力市场相对稳定</strong>环境下的<strong>规模较大</strong>的企业</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2×2 定位表</strong>（2020 年真题考点，必须会画）：</p>
+<table>
+<thead>
+<tr>
+<th>比较基础 × 比较范围</th>
+<th>定量方法</th>
+<th>定性方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>直接职位比较法</strong></td>
+<td>因素比较法</td>
+<td>排序法</td>
+</tr>
+<tr>
+<td><strong>职位尺度比较法</strong></td>
+<td>要素计点法</td>
+<td>分类法</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 四方法定位</div><p><strong>"排因直接，类点尺子；排类定性，因点定量"</strong>——排序法、因素比较法走"直接职位比较"这条路，分类法、要素计点法先立"尺子"（评级标准）再套；排序、分类是定性，因素比较、要素计点是定量。判断"报酬要素"：指不同职位中包含的<strong>对企业有价值的特征</strong>，是要素计点法的分解对象。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>5 个人的小作坊，老板心里把岗位从高到低一排队就定工资——排序法；几十人的小公司先定出"一至五级职位标准"再对号入座——分类法；几千人的集团用一套评分尺度给管理岗的"知识、责任、强度"打分——要素计点法；咨询公司直接拿标杆岗位的实发工资当参照折算——因素比较法。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 排序法三板斧</div><p>排序法三大命题点：<strong>①成本低易沟通（优点）→ ②主观成分大（缺点）→ ③只知先后、不知差多少（缺点）</strong>；适用"规模较小、结构简单、职位类型较少"。选项说它"适用于规模较大企业""不受主观影响""能精确确定相对价值"，全部反着选。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>发展战略</strong>：成长＝短期低基本薪酬＋长期奖金／股票选择权；稳定集中＝决策集中、基本薪酬福利占比大、跟随或略高于市场；收缩精简＝基本薪酬占比低、员工股份所有权计划共担风险</li>
+<li><strong>竞争战略</strong>：差异化＝足额奖励＋基本薪酬略高于市场；成本领先＝薪酬水平较低＋奖金占比大；市场集中（客户中心）＝按服务数量质量／客户评价付酬</li>
+<li><strong>全面薪酬战略</strong>：摒弃科层体系、以客户满意度为中心、双赢；五性＝战激灵创沟</li>
+<li><strong>设计六步</strong>：现状与战略目标（前提）→工作分析（薪酬体系的基础）及职位评价（内部公平）→薪酬调查（外部竞争）→定水平（领跟滞混）→结构设计（内外平衡；等级＋级内范围＋相邻等级关系）→预算与控制</li>
+<li><strong>职位评价三不是</strong>：对职位不对人、对正常水平不对特殊业绩、对目前不对过去未来</li>
+<li><strong>调查五步</strong>：目的（整体水平／差距／晋升政策／具体职位）→范围→方式（相互／委托／公开信息／问卷）→统计→报告</li>
+<li><strong>评价六原则</strong>：标准系统战略，实用员工结果</li>
+<li><strong>四方法</strong>：排因直接，类点尺子；排类定性，因点定量（2×2 表）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r08s1q1" data-answer="D" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">关于成长战略下的薪酬管理策略的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 基本薪酬在薪酬结构中所占的比重较大</button><button type="button" class="qopt" data-key="B">B. 一般采取跟随市场的薪酬水平</button><button type="button" class="qopt" data-key="C">C. 提供高水平的福利待遇</button><button type="button" class="qopt" data-key="D">D. 长期而言，力求使员工获得较为丰厚的回报</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：成长战略的薪酬方案是<strong>短期内提供相对低的基本薪酬</strong>，长期实行<strong>奖金或股票选择权</strong>等计划，使员工得到较为丰厚的回报，D 正确。基本薪酬比重大、跟随市场、高福利都是<strong>稳定战略</strong>的打法，A、B、C 错误。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s1q2" data-answer="ADE" data-type="multi"><span class="q-tag">2021·多选</span><div class="q-stem">下列关于薪酬设计的基本步骤的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 薪酬调查方式包括企业间相互调查、委托调查、收集公开的信息及问卷调查</button><button type="button" class="qopt" data-key="B">B. 职位评价是对任职者所做的评价</button><button type="button" class="qopt" data-key="C">C. 薪酬结构是由薪酬等级和薪酬等级内部变动范围构成</button><button type="button" class="qopt" data-key="D">D. 职位评价主要是为了解决薪酬的内部公平性问题</button><button type="button" class="qopt" data-key="E">E. 薪酬调查主要是为了解决薪酬的外部竞争性问题</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ADE</div><div class="q-exp"><p>析：A 对——调查方式就这四种；D 对——职位评价解决<strong>内部公平性</strong>；E 对——薪酬调查解决<strong>外部竞争性</strong>。B 错——职位评价是对<strong>职位</strong>的评价而非对任职者的评价（还有"两个不是"：非特殊业绩、非过去未来）；C 错——完整的薪酬结构除薪酬等级、等级内部变动范围外，还包括<strong>相邻薪酬等级间的关系</strong>。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s1q3" data-answer="A" data-type="single"><span class="q-tag">2020·单选</span><div class="q-stem">关于职位评价方法分类的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 职位尺度比较法包括要素计点法和分类法</button><button type="button" class="qopt" data-key="B">B. 定量方法包括要素计点法和排序法</button><button type="button" class="qopt" data-key="C">C. 直接职位比较法包括因素比较法和分类法</button><button type="button" class="qopt" data-key="D">D. 定性方法包括因素比较法和分类法</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：按"比较基础×比较范围"画 2×2 表：<strong>职位尺度比较法＝要素计点法＋分类法</strong>（A 对），<strong>直接职位比较法＝因素比较法＋排序法</strong>；<strong>定量＝因素比较法＋要素计点法</strong>，<strong>定性＝排序法＋分类法</strong>。B 把排序法（定性）塞进定量，C 把分类法（职位尺度）塞进直接比较，D 把因素比较法（定量）塞进定性，均错误。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s1q4" data-answer="B" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">关于职位评价方法中排序法的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 适用于规模较大的企业</button><button type="button" class="qopt" data-key="B">B. 操作成本较低</button><button type="button" class="qopt" data-key="C">C. 不易受到主观因素影响</button><button type="button" class="qopt" data-key="D">D. 能够精确确定各职位之间的相对价值</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：排序法最大的优点就是<strong>简单易行、成本较低、易于与员工沟通</strong>，B 正确。它没有详细具体的评价标准，<strong>主观成分很大</strong>（C 反了）；只能确定职位的<strong>序列</strong>，不能确定职位之间的相对价值（D 反了）；只适用于规模较小、结构简单、职位类型较少的企业（A 反了）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s1q5" data-answer="A" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">关于各类职位评价方法的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 因素比较法的设计难度低，易于理解</button><button type="button" class="qopt" data-key="B">B. 分类法需要设定一套供参考的职位等级标准</button><button type="button" class="qopt" data-key="C">C. 要素计点法是一种定量的职位评价方法</button><button type="button" class="qopt" data-key="D">D. 排序法不适用于规模较大、职位类型多的企业</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：因素比较法的缺点恰恰是<strong>设计复杂、难度较大、成本较高</strong>，且不易理解、员工易质疑其公平性，A 错误。B 对——分类法要预先制定"标尺"再套级；C 对——要素计点法与因素比较法同属定量方法；D 对——排序法只适用于规模小、职位类型少的企业。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s1q6" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于全面薪酬战略的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 它是基于传统的科层体系建立的</button><button type="button" class="qopt" data-key="B">B. 它更强调灵活</button><button type="button" class="qopt" data-key="C">C. 它更强调战略性</button><button type="button" class="qopt" data-key="D">D. 它以客户满意度为中心</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：全面薪酬战略是<strong>摒弃了</strong>原有的科层体系和官僚结构，以<strong>客户满意度为中心</strong>，鼓励创新精神和可持续的绩效改进，对娴熟的专业技能提供奖励，营造员工与企业<strong>双赢</strong>的工作环境——说它"基于传统科层体系建立"正好说反。B、C、D 都是它强调战略性、激励性、灵活性、创新性、沟通性的正确表述。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s1q7" data-answer="BC" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">采用差异化战略的薪酬管理，下列说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 与竞争对手相比，保持较低的薪酬水平</button><button type="button" class="qopt" data-key="B">B. 关注客户满意度和追求领袖地位，基本薪酬以劳动力市场通行水平为准且略高于市场水平</button><button type="button" class="qopt" data-key="C">C. 注重对产品创新、技术创新和新的生产方法给予足够的报酬或奖励</button><button type="button" class="qopt" data-key="D">D. 将企业经营业绩与员工收入挂钩</button><button type="button" class="qopt" data-key="E">E. 追求效率最大化、成本最小化</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BC</div><div class="q-exp"><p>析：差异化战略强调产品市场的<strong>领袖地位</strong>及<strong>客户满意度</strong>，薪酬体系注重对产品创新、技术创新和新的生产方法<strong>给予足够的报酬或奖励</strong>（C 对），基本薪酬以市场通行水平为准且<strong>略高于市场水平</strong>（B 对）。A、E 是<strong>成本领先战略</strong>的打法（薪酬水平较低、追求效率与成本最优）；D"业绩与收入挂钩"是绩效薪金制的思路，不属于差异化战略的薪酬特征。
+:::</p></div></details></div><div class="quiz-item" data-qid="r08s1q8" data-answer="BCD" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">职位评价遵循的原则有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 竞争性</button><button type="button" class="qopt" data-key="B">B. 标准化</button><button type="button" class="qopt" data-key="C">C. 实用性</button><button type="button" class="qopt" data-key="D">D. 系统性</button><button type="button" class="qopt" data-key="E">E. 保密性</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：职位评价六原则＝<strong>系统性、战略性、标准化、员工参与、结果公开、实用性</strong>（口诀"标准系统战略，实用员工结果"）。"竞争性""保密性"是编造的干扰项——注意职位评价恰恰要求<strong>结果公开</strong>，E 与原则精神相反。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力08_薪酬管理_第2节_股权激励.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 股权激励</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第2章 领导行为 · 领导理论 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第一部分 组织行为学</span><h1>第2章 领导行为 · 领导理论</h1><div class="subtitle">第 1 节 / 共 3 节 · 预计学习时长 55 分钟</div><div class="progress-bar"><div class="fill" style="width:33%"></div></div><div class="progress-text">本章进度 1/3</div><div class="sec-badge none" id="sec-badge" data-sec="r02s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住领导的两个基本特点：<strong>影响力</strong>＋<strong>指导和激励的能力</strong> <span class="hot">高频考点</span></li>
+<li>掌握<strong>特质理论</strong>的观点演变与四大不足 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>一张表分清<strong>交易型</strong>与<strong>变革型</strong>领导，背下<strong>魅力型领导</strong>道德/非道德对照 <span class="hot">高频考点</span></li>
+<li>记牢<strong>路径–目标理论</strong>四种领导行为与适用下属的匹配 <span class="s3">★★★</span></li>
+<li>会用<strong>权变理论</strong>三情境维度判断取向，抓住 <strong>LMX 理论</strong>"早期分圈"关键词 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、领导的基本特点与特质理论</h2>
+<h3>1. 领导的基本特点 ★</h3>
+<p>领导必须具备两个基本特点：</p>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>具有影响力</strong></td>
+<td>领导的基本角色是影响他人<strong>自愿</strong>追求确定的目标；影响力主要来源于<strong>组织的正式任命</strong>，也可以从其他方面获得（如具有与工作相关的<strong>专门技能或才能</strong>）</td>
+</tr>
+<tr>
+<td><strong>具有指导和激励的能力</strong></td>
+<td>领导在帮助个体或群体<strong>确认目标</strong>、并激励他们完成目标的过程中起着重要作用</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>影响力的来源不止&quot;任命&quot;：</strong><p>影响力主要来自组织的正式任命，但<strong>不是唯一来源</strong>——专门技能、才能一样能带来影响力。所以"没有正式职务就不是领导"不对；反过来，考题也爱把"影响力只能来自正式任命"当错误选项。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>部门里的技术大拿老王没有任何管理职务，但新员工遇到难题都找他、他说怎么做大家就怎么做——这就是靠"与工作相关的专门技能"获得的影响力，同样符合领导的第一特点。</p></div></div>
+<div class="section"><h3>2. 特质理论 ★★★</h3>
+<p><strong>传统特质理论</strong>：领导具有某些<strong>固有的特质</strong>，特质<strong>与生俱来</strong>；只有先天具备这些特质的人才有可能成为领导。</p>
+<p><strong>进一步发展</strong>：具备某些特质能<strong>提高</strong>领导成功的<strong>可能性</strong>，但<strong>并不存在</strong>某一种特质能够<strong>保证</strong>领导的成功。两位代表人物的特质清单：</p>
+<table>
+<thead>
+<tr>
+<th>人物</th>
+<th>特质内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>吉伯</strong></td>
+<td>①身强力壮；②聪明但不能过分聪明；③外向有支配欲；④有良好的调适能力；⑤自信</td>
+</tr>
+<tr>
+<td><strong>斯道格迪尔</strong></td>
+<td>①对所完成的工作具有责任感；②在追求目标的过程中热情并且能够持之以恒；③解决问题时勇于冒险并富有创新精神；④勇于实践；⑤自信；⑥能够很好地处理人际紧张并能忍受挫折等</td>
+</tr>
+</tbody>
+</table>
+<p><strong>特质理论的四大不足</strong>（★★★，多选高频）：</p>
+<table>
+<thead>
+<tr>
+<th>不足</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①<strong>忽视了下属的需要</strong></td>
+<td>某些领导特质仅对部分下属有效</td>
+</tr>
+<tr>
+<td>②<strong>没有指明各种特质之间的相对重要性</strong></td>
+<td>未明确哪些特质最关键</td>
+</tr>
+<tr>
+<td>③<strong>忽视了情境因素</strong></td>
+<td>未考虑工作结构、权力等因素，无法解释不同特质的领导在不同环境中均能成功</td>
+</tr>
+<tr>
+<td>④<strong>没有区分原因和结果</strong></td>
+<td>无法确定是特质带来成功，还是成功塑造了特质</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>长辈夸孩子"天生就是当领导的料"，这是传统特质论的民间版——认为领导特质天注定；而现代企业敢把基层员工培养成高管，靠的是"进一步发展"的立场：特质只提高可能性，不打包票。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 特质理论四不足</div><p><strong>"忽下属、无轻重、丢情境、混因果"</strong>——忽（视）下属需要、分不出轻重（相对重要性）、丢（了）情境、因果实分不清。多选里见到"关注了下属的需要""重视了情境因素"这类反着说的选项，直接排除。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 观点演变方向要记准</div><p>从"特质<strong>保证</strong>成功"退到"特质<strong>提高可能性</strong>"。凡说"具备某特质就一定能成为领导"都错；凡说"提高成功可能性、没有万能特质"都对。四大不足中"忽视情境因素"常与费德勒权变理论对照着考——后者正是补上了情境这块短板。</p></div></div>
+<div class="section"><h2>二、交易型与变革型领导（伯恩斯）<span class="hot">高频考点</span></h2>
+<p>伯恩斯把领导分为<strong>交易型</strong>和<strong>变革型</strong>两类，两者的特征清单是多选的常客。</p>
+<h3>1. 交易型领导 ★★★</h3>
+<p><strong>主要观点</strong>：①强调个人在组织中与<strong>位置相关的权威性和合法性</strong>；②强调<strong>任务明晰度、工作标准和产出</strong>；③关注<strong>任务的完成、员工的顺从</strong>；④依靠组织的<strong>奖励、惩罚</strong>来影响员工绩效。</p>
+<p><strong>四个特征</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>奖励</strong></td>
+<td>承诺为努力提供奖励，为高绩效提供奖励，赏识成就</td>
+</tr>
+<tr>
+<td><strong>差错管理（积极型）</strong></td>
+<td><strong>观察和寻找</strong>对于标准的背离，采取修正行动</td>
+</tr>
+<tr>
+<td><strong>差错管理（消极型）</strong></td>
+<td><strong>仅在背离标准时</strong>进行干涉</td>
+</tr>
+<tr>
+<td><strong>放任</strong></td>
+<td>放弃责任，避免做出决策</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>交易的本质是&quot;换&quot;：</strong><p>一手交钱一手交货：你努力、出绩效，我给奖励；你背离标准，我纠偏甚至惩罚。领导与员工之间是"奖惩换绩效"的买卖关系，所以叫"交易"——抓任务、抓标准、抓顺从，不谈理想。</p></div></div>
+<div class="section"><h3>2. 变革型领导 ★★★</h3>
+<p><strong>主要观点</strong>：①通过<strong>更高的理想和组织价值观</strong>来激励员工；②为组织制定<strong>明确的愿景</strong>；③通过自己的<strong>领导风格</strong>来影响员工和团队绩效。</p>
+<p><strong>四个特征</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>魅力</strong></td>
+<td>提供任务的愿景，潜移默化自豪感，获得尊敬和信任</td>
+</tr>
+<tr>
+<td><strong>激励</strong></td>
+<td>持续的高期望，鼓励努力，用简单的手段表达重要的意图</td>
+</tr>
+<tr>
+<td><strong>智慧型刺激</strong></td>
+<td>提升智慧，理性和谨慎地解决问题</td>
+</tr>
+<tr>
+<td><strong>个性化关怀</strong></td>
+<td>给予个人关怀，个性化地对待每位员工，对其进行培训和提出建议</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 交易四招 vs 变革四宝</div><p><strong>"交易靠奖惩：奖、查、放"</strong>（奖励＋差错管理积极/消极两型＋放任）；<strong>"变革靠理想：魅、激、智、关"</strong>（魅力、激励、智慧型刺激、个性化关怀）。见"奖励/差错管理/放任"→交易型；见"魅力/激励/智慧型刺激/个性化关怀"→变革型。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 易混辨析：这三个词是变革型，不是交易型</div><p>"激励、智慧型刺激、个性化关怀"都属于<strong>变革型</strong>特征，只有"奖励"是<strong>交易型</strong>的——2022 年真题就拿这三兄弟当干扰项。另外注意两对"差错管理"的区分：积极型是<strong>主动找</strong>背离，消极型是<strong>出了事才</strong>管。</p></div></div>
+<div class="section"><h2>三、魅力型领导理论（罗伯特·豪斯）★★★</h2>
+<p>豪斯在伯恩斯<strong>变革型领导理论</strong>的基础上提出了魅力型领导理论。</p>
+<ol>
+<li><strong>定义</strong>：魅力型领导指具有<strong>自信并且信任下属</strong>，对下属有<strong>高度的期望</strong>，有<strong>理想化的愿景</strong>和<strong>个性化风格</strong>的领导；</li>
+<li><strong>追随者特征</strong>：认同领导及其任务，表现出对领导的<strong>高度忠诚和信心</strong>，<strong>效法</strong>其价值观和行为，并且<strong>从自身与领导的关系中获得自尊</strong>；</li>
+<li><strong>效果</strong>：魅力型领导促使追随者产生<strong>高于期望的绩效</strong>，以及<strong>强烈的归属感</strong>；当追随者显示出高水平的<strong>自我意识和自我管理</strong>时，魅力型领导的效果会得到<strong>强化</strong>；</li>
+<li><strong>魅力本身是一个归因现象</strong>，会随着情境发生变化——能够促使魅力归因的领导特质包括<strong>自信、印象管理技能、社会敏感性和共情</strong>等；</li>
+<li><strong>提升魅力型领导影响力的情境</strong>：面临<strong>剧烈变革</strong>的组织环境；组织中对现状<strong>非常不满的追随者的激增</strong>。</li>
+</ol>
+<p><strong>道德特征与非道德特征对照</strong>（魅力型领导并不一定展现完美的"英雄"形象）：</p>
+<table>
+<thead>
+<tr>
+<th>道德特征</th>
+<th>非道德特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①使用权力<strong>为他人服务</strong></td>
+<td>①为<strong>个人利益</strong>使用权力</td>
+</tr>
+<tr>
+<td>②使<strong>下属的</strong>需要和志向与愿景结合</td>
+<td>②提升<strong>自己的</strong>个人愿景</td>
+</tr>
+<tr>
+<td>③从危机中思考和学习</td>
+<td>③指责或批评相反的观点</td>
+</tr>
+<tr>
+<td>④激励下属<strong>独立思考</strong></td>
+<td>④要求自己的决定被<strong>无条件接受</strong></td>
+</tr>
+<tr>
+<td>⑤<strong>双向</strong>沟通</td>
+<td>⑤<strong>单向</strong>沟通</td>
+</tr>
+<tr>
+<td>⑥培训、指导并支持下属，与他人分享</td>
+<td>⑥对下属的需要<strong>感觉迟钝</strong></td>
+</tr>
+<tr>
+<td>⑦用<strong>内在</strong>道德标准行事</td>
+<td>⑦遵循<strong>外在</strong>道德标准</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>创业公司的明星创始人：给团队画愿景、跟着他干大家都觉得自豪（魅力归因），公司转型压力越大他越有号召力（剧变情境放大魅力）。但如果他把功劳全揽给自己、只许下属无条件执行、只开"一言堂"，那就滑向了右列的非道德特征。</p></div></div>
+<div class="section"><div class="keypoint"><strong>魅力是&quot;归因&quot;出来的：</strong><p>下属眼里有没有魅力，不完全取决于领导者本人，而是追随者对领导者行为的一种<strong>归因</strong>——所以它会随情境变化：组织剧变、不满的人扎堆时，魅力型领导最有市场。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 道德与非道德</div><p><strong>"道德利他双向内，非道利己单向外"</strong>——为他人服务、结合下属志向、双向沟通、内在标准＝道德；为自己用权、提升个人愿景、单向沟通、外在标准＝非道德。配对记：服务↔利己、双向↔单向、内在↔外在、独立思考↔无条件接受。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 对照表是命题富矿</div><p>七对特征<strong>一一配对</strong>着记，多选往往左边给三个、右边混三个。抓三个"反向词"：<strong>外在标准、个人愿景、单向沟通</strong>——见到就归非道德；见到"为他人服务、内在标准、双向沟通"就归道德。</p></div></div>
+<div class="section"><h2>四、路径–目标理论（罗伯特·豪斯）★★★</h2>
+<p><strong>基本观点</strong>：</p>
+<ol>
+<li>领导的<strong>主要任务</strong>是<strong>帮助下属达到他们的目标</strong>，并提供必要的支持和指导，以确保下属的目标与群体或组织的目标相互配合；</li>
+<li>领导的行为要想被下属接受，就必须能够<strong>为员工提供满足感</strong>；</li>
+<li>豪斯假定领导具有<strong>变通性</strong>——根据不同的情况表现出各种不同的领导行为。</li>
+</ol>
+<p><strong>两个权变因素</strong>（领导行为与结果之间的中间变量）：</p>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>环境因素</strong>（下属控制范围之外）</td>
+<td>工作结构、正式权力系统、工作团队等</td>
+</tr>
+<tr>
+<td><strong>下属的个人特征</strong></td>
+<td>经验、能力、内外控等</td>
+</tr>
+</tbody>
+</table>
+<p><strong>四种领导行为与适用下属</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>内容</th>
+<th>适用下属</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>指导式</strong></td>
+<td>让员工明确别人对他的期望、成功绩效的标准和工作程序</td>
+<td><strong>外控型</strong>下属</td>
+</tr>
+<tr>
+<td><strong>支持型</strong></td>
+<td>努力建立舒适的工作环境，亲切友善，关心下属的要求</td>
+<td><strong>结构化工作</strong>的下属</td>
+</tr>
+<tr>
+<td><strong>参与式</strong></td>
+<td>主动征求并采纳下属的意见</td>
+<td><strong>内控型</strong>下属</td>
+</tr>
+<tr>
+<td><strong>成就取向式</strong></td>
+<td>设定挑战性目标、鼓励下属展现自己的最佳水平</td>
+<td><strong>能力强或经验丰富</strong>的下属</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>&quot;路径–目标&quot;白话版：</strong><p>领导是下属达成目标路上的"导航＋清障工"：告诉你路怎么走（指导）、给你递水加油（支持）、让你一起规划路线（参与）、鼓励你飙出最好成绩（成就取向）。导航得看路况换路线——所以领导必须有<strong>变通性</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 路径目标四匹配</div><p><strong>"外指内参，结构支持，能者成就"</strong>——外控型用指导式，内控型用参与式，结构化工作用支持型，能力强/经验丰富用成就取向式。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 2025 真题陷阱：能力强 ≠ 指导式</div><p>对<strong>能力强或经验丰富</strong>的下属，指导式反而被认为是<strong>多余的</strong>（人家都会，你还教？），该上的是<strong>成就取向式</strong>。别把"指导式＝万能"套上去；同理"关心下属要求"的是<strong>支持型</strong>，不是指导式。</p></div></div>
+<div class="section"><h2>五、权变理论（费德勒）</h2>
+<p><strong>主要观点</strong>：团队绩效的高低取决于<strong>领导风格与情境因素</strong>之间是否<strong>搭配</strong>。</p>
+<p><strong>两类领导风格</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>风格</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>关系取向型</strong></td>
+<td>对不喜欢的同事也用<strong>肯定性形容词</strong>描绘，乐于形成人际关系</td>
+</tr>
+<tr>
+<td><strong>工作取向型</strong></td>
+<td>主要关心<strong>生产</strong>，对人际关系不重视</td>
+</tr>
+</tbody>
+</table>
+<p><strong>三个情境性因素维度</strong>（★★★）：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>领导与下属的关系</strong></td>
+<td>下属对领导信任、信赖和尊重的程度</td>
+</tr>
+<tr>
+<td><strong>工作结构</strong></td>
+<td>工作程序化、规范化的程度</td>
+</tr>
+<tr>
+<td><strong>职权</strong></td>
+<td>甄选、培训、激励、处分等方面的影响力和权力</td>
+</tr>
+</tbody>
+</table>
+<p><strong>不同领导风格在不同情境下的效能</strong>（★★）——结论：</p>
+<ol>
+<li>采取<strong>工作取向</strong>、团队绩效高的情境：①上下级关系<strong>好</strong>，其他两个维度<strong>至少有一个是高或大</strong>；②上下级关系<strong>坏</strong>，其他两个维度是<strong>低和小</strong>；</li>
+<li>采取<strong>关系取向</strong>、团队绩效高的情境：①上下级关系<strong>好</strong>，则工作结构和职权都是<strong>低和小</strong>；②上下级关系<strong>坏</strong>，则工作结构和职权都是<strong>高和大</strong>。</li>
+</ol></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>新任总经理威望高（关系好）、手里握着考核权（职权大）——按结论这正是工作取向的主场，直接抓生产最见效；反过来，一位被架空的领导（职权小）面对松散的日常工作（结构低），哪怕上下级关系不错，也该多搞关系建设（关系取向）才能出绩效。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 权变结论口诀</div><p><strong>"工作取向：好加一高、坏低小；关系取向：好双低、坏双高"</strong>——"好/坏"指上下级关系。关系好时只要结构和职权有一项"高/大"就归工作取向，双低才轮到关系取向；关系坏时正好反过来。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三情境因素＝三根柱子</div><p>费德勒三情境因素＝<strong>关系、结构、职权</strong>——<strong>没有"工作环境"</strong>（2021 年真题考"不包括"）。记忆：人际的（关系）、任务的（结构）、权力的（职权）。</p></div></div>
+<div class="section"><h2>六、领导–成员交换理论（LMX）★★★</h2>
+<p>乔治·格雷恩及其同事提出，又称 <strong>LMX 理论</strong>：</p>
+<ol>
+<li>团体中领导与下属在确立关系和角色的<strong>早期</strong>，就把下属分出"<strong>圈里人</strong>"和"<strong>圈外人</strong>"；</li>
+<li>"圈里人"与领导打交道时<strong>困难少</strong>，能够感觉到领导对他们的关心；领导对"圈里人"投入更多的<strong>时间和感情</strong>，<strong>很少采用正式领导权威</strong>；"圈里人"比"圈外人"承担<strong>更高的工作责任感</strong>，对所在部门<strong>贡献更多</strong>，<strong>绩效评估更高</strong>；</li>
+<li>交换过程是一个<strong>互惠</strong>的过程：领导为了达到绩效目标和更持久的变化，应着手<strong>改变下属的自我概念</strong>；同时，下属通过他们的反应也在<strong>改变领导的自我图式</strong>；</li>
+<li>领导和下属两者都作为<strong>个体</strong>，通过<strong>团体</strong>进行反馈。</li>
+</ol></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>部门主管一上任就无形中把老部下划成了"自己人"：有好事先想着他们、有事直接商量不端架子；这些"圈里人"也确实扛事更多、考评更高——双方你敬我一尺、我敬你一丈，这就是 LMX 说的互惠交换。</p></div></div>
+<div class="section"><div class="keypoint"><strong>一&quot;早&quot;二&quot;圈&quot;三&quot;互惠&quot;：</strong><p>时间点（<strong>早期</strong>分圈）、分类（圈里/圈外）、性质（<strong>互惠</strong>交换）是本理论三处最常挖坑的地方：把"早期"改成"中晚期"就错（2022 年真题）；把"很少采用正式权威"改成"采用正式权威"也错。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 LMX 口诀</div><p><strong>"早期分圈里，圈里少权威，互惠改认知"</strong>——早期分类；圈里人待遇＝多时间感情、少正式权威、高责任高绩效；互惠过程＝领导改下属的自我概念、下属改领导的自我图式。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>领导两特点</strong>：有影响力（正式任命为主、专门技能也能获得）＋有指导和激励的能力</li>
+<li><strong>特质理论</strong>：传统＝特质与生俱来；发展＝特质只提高可能性、无万能特质；四不足"忽下属、无轻重、丢情境、混因果"（吉伯、斯道格迪尔列过特质清单）</li>
+<li><strong>交易型</strong>（伯恩斯）：位置权威合法性、任务明晰标准产出、关注完成与顺从、靠奖惩；四特征＝奖励＋差错管理（积极主动找背离/消极仅背离时干涉）＋放任</li>
+<li><strong>变革型</strong>：理想与价值观激励、明确愿景、以领导风格影响绩效；四特征＝魅力、激励、智慧型刺激、个性化关怀</li>
+<li><strong>魅力型</strong>（豪斯）：自信信任下属＋高期望＋理想化愿景＋个性化风格；追随者忠诚效法获自尊、高于期望的绩效＋强烈归属感；魅力＝归因现象；道德"利他双向内"、非道德"利己单向外"</li>
+<li><strong>路径–目标</strong>（豪斯）：帮下属达成目标＋变通性；两权变因素＝环境因素＋个人特征；"外指内参，结构支持，能者成就"</li>
+<li><strong>权变</strong>（费德勒）：绩效＝风格×情境搭配；风格分关系取向/工作取向；三情境＝关系、结构、职权；工作取向"好加一高、坏低小"，关系取向"好双低、坏双高"</li>
+<li><strong>LMX</strong>（格雷恩）：早期分圈里圈外；圈里人多投入、少正式权威、高责任高绩效；互惠过程</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r02s1q1" data-answer="ABE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">按照领导理论的观点，领导具备的基本特点包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 具有影响力</button><button type="button" class="qopt" data-key="B">B. 能激励员工</button><button type="button" class="qopt" data-key="C">C. 专业知识丰富</button><button type="button" class="qopt" data-key="D">D. 须有正式任命</button><button type="button" class="qopt" data-key="E">E. 具有指导能力</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABE</div><div class="q-exp"><p>析：领导有两个基本特点：①必须具有<strong>影响力</strong>——领导的基本角色是影响他人自愿追求确定的目标；②必须具有<strong>指导和激励的能力</strong>——在帮助个体或群体确认目标并激励其完成的过程中起重要作用。C"专业知识丰富"不是基本特点；D 过于绝对——影响力<strong>主要</strong>来源于组织的正式任命，但也可以来自与工作相关的专门技能或才能，"须有"二字错误。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s1q2" data-answer="ABD" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">领导理论中的特质理论存在的缺陷包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 忽视情境的因素</button><button type="button" class="qopt" data-key="B">B. 没有区分原因和结果</button><button type="button" class="qopt" data-key="C">C. 关注了下属的需要</button><button type="button" class="qopt" data-key="D">D. 没有指明各种特质之间的相对重要性</button><button type="button" class="qopt" data-key="E">E. 忽视了领导的能力</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABD</div><div class="q-exp"><p>析：特质理论的四大不足：①忽视了<strong>下属的需要</strong>；②没有指明各种特质之间的<strong>相对重要性</strong>；③忽视了<strong>情境因素</strong>；④没有区分<strong>原因和结果</strong>。A 对应③、B 对应④、D 对应②。C 说反了——是"忽视"而非"关注"下属的需要；E"忽视了领导的能力"不在四不足之列。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s1q3" data-answer="C" data-type="single"><span class="q-tag">2022·单选</span><div class="q-stem">交易型领导的特征是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 激励</button><button type="button" class="qopt" data-key="B">B. 智慧型刺激</button><button type="button" class="qopt" data-key="C">C. 奖励</button><button type="button" class="qopt" data-key="D">D. 个性化关怀</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：交易型领导更多依靠组织的<strong>奖励和惩罚</strong>来影响员工绩效，其特征包括：①奖励（承诺为努力提供奖励、为高绩效提供奖励、赏识成就）；②差错管理（积极型）；③差错管理（消极型）；④放任。A、B、D（激励、智慧型刺激、个性化关怀）都是<strong>变革型</strong>领导的特征。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s1q4" data-answer="D" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">关于魅力型领导及其追随者特征的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 魅力型领导促使追随者产生出高于期望的绩效</button><button type="button" class="qopt" data-key="B">B. 魅力型领导的追随者从自身与领导的关系中获得自尊</button><button type="button" class="qopt" data-key="C">C. 魅力型领导的追随者表现出对领导的高度忠诚和信心</button><button type="button" class="qopt" data-key="D">D. 魅力型领导会使追随者对组织的归属感降低</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：魅力型领导的追随者认同领导及其任务，表现出对领导的<strong>高度忠诚和信心</strong>，效法其价值观和行为，并从自身与领导的关系中<strong>获得自尊</strong>；魅力型领导将促使追随者产生<strong>高于期望的绩效</strong>以及<strong>强烈的归属感</strong>——D 说"归属感降低"，恰好说反。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s1q5" data-answer="CDE" data-type="multi"><span class="q-tag">2020·多选</span><div class="q-stem">魅力型领导的道德特征包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 遵循外在道德标准</button><button type="button" class="qopt" data-key="B">B. 提升自己的个人愿景</button><button type="button" class="qopt" data-key="C">C. 双向沟通</button><button type="button" class="qopt" data-key="D">D. 从危机中思考与学习</button><button type="button" class="qopt" data-key="E">E. 使用权力为他人服务</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CDE</div><div class="q-exp"><p>析：道德特征七条：使用权力为他人服务、使下属的需要和志向与愿景结合、从危机中思考和学习、激励下属独立思考、双向沟通、培训指导并支持下属、用<strong>内在</strong>道德标准行事——C、D、E 都在其中。A"遵循外在道德标准"、B"提升自己的个人愿景"都是<strong>非道德</strong>特征（外在标准、个人愿景是反向关键词）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s1q6" data-answer="B" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">作为公司领导，小明一直努力为员工建立舒适的工作环境，并且会根据员工的需求布置公司。依照豪斯领导理论的观点，小明属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 指导式领导</button><button type="button" class="qopt" data-key="B">B. 支持型领导</button><button type="button" class="qopt" data-key="C">C. 成就取向式领导</button><button type="button" class="qopt" data-key="D">D. 参与式领导</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：路径–目标理论中，<strong>支持型</strong>领导的领导行为是努力建立<strong>舒适的工作环境</strong>，亲切友善，<strong>关心下属的要求</strong>——与题干情景完全对应。指导式是明确期望、标准和工作程序；参与式是主动征求并采纳下属意见；成就取向式是设定挑战性目标、鼓励下属展现最佳水平。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s1q7" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于路径-目标理论中领导行为与环境因素、个人特征匹配的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 对能力强的员工采用指导式领导</button><button type="button" class="qopt" data-key="B">B. 对内控型员工采用参与式领导</button><button type="button" class="qopt" data-key="C">C. 对任务结构化程度高的员工采用支持型领导</button><button type="button" class="qopt" data-key="D">D. 对外控型员工采用指导式领导</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：对于<strong>能力强或经验丰富</strong>的下属，指导式的领导可能被认为是<strong>多余的</strong>——他们需要的是成就取向式（设定挑战性目标），A 错误。B、C、D 均为正确匹配：内控型→参与式，结构化工作→支持型，外控型→指导式。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s1q8" data-answer="ACE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">关于路径-目标理论的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 不同的领导行为适合于不同的环境因素和个人特征</button><button type="button" class="qopt" data-key="B">B. 该理论假定领导不具有变通性</button><button type="button" class="qopt" data-key="C">C. 参与式领导会主动征求并采纳下属的意见</button><button type="button" class="qopt" data-key="D">D. 指导式领导常常很关心下属的要求</button><button type="button" class="qopt" data-key="E">E. 该理论是豪斯提出来的</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACE</div><div class="q-exp"><p>析：豪斯假定领导<strong>具有</strong>变通性，能根据不同情况表现出不同的领导行为，B 错误；<strong>关心下属要求、建立舒适工作环境</strong>的是<strong>支持型</strong>领导，不是指导式，D 张冠李戴。A、C、E 正确：不同领导行为匹配不同的环境因素和个人特征；参与式＝主动征求并采纳下属意见；路径–目标理论与魅力型领导理论都是罗伯特·豪斯提出的。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s1q9" data-answer="D" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">费德勒提出的情境因素不包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 领导与下属的关系</button><button type="button" class="qopt" data-key="B">B. 工作结构</button><button type="button" class="qopt" data-key="C">C. 职权</button><button type="button" class="qopt" data-key="D">D. 工作环境</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：费德勒认为情境性因素分为三个维度：①<strong>领导与下属的关系</strong>；②<strong>工作结构</strong>；③<strong>职权</strong>。"工作环境"不在其中，是凑数的干扰项——三根柱子记牢即可秒杀。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s1q10" data-answer="ABD" data-type="multi"><span class="q-tag">2017·多选</span><div class="q-stem">依据领导权变理论的观点，能使工作取向型的绩效高的情境是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 上下级关系坏、工作结构低、领导职权小</button><button type="button" class="qopt" data-key="B">B. 上下级关系好、工作结构高、领导职权大</button><button type="button" class="qopt" data-key="C">C. 上下级关系坏、工作结构高、领导职权大</button><button type="button" class="qopt" data-key="D">D. 上下级关系好、工作结构低、领导职权大</button><button type="button" class="qopt" data-key="E">E. 上下级关系好、工作结构低、领导职权小</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABD</div><div class="q-exp"><p>析：工作取向型绩效高的情境：①上下级关系<strong>好</strong>，其他两个维度<strong>至少有一个是高或大</strong>（B"好高大"、D"好低大"均符合）；②上下级关系<strong>坏</strong>，其他两个维度是<strong>低和小</strong>（A）。C"坏、高、大"和 E"好、低、小"都属于<strong>关系取向</strong>绩效高的情境（坏双高、好双低）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r02s1q11" data-answer="A" data-type="single"><span class="q-tag">2022·单选</span><div class="q-stem">关于领导成员交换理论，说法错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 领导与下属在确立关系和角色的中晚期，就把下属分成&quot;圈里人&quot;和&quot;圈外人&quot;</button><button type="button" class="qopt" data-key="B">B. 这是一种互惠的交换过程</button><button type="button" class="qopt" data-key="C">C. 领导和下属都作为个体，通过团体进行反馈</button><button type="button" class="qopt" data-key="D">D. 领导对&quot;圈里人&quot;很少采用正式的领导权威</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：领导–成员交换理论认为，领导与下属在确立关系和角色的<strong>早期</strong>（而非"中晚期"）就把下属分成"圈里人"和"圈外人"，A 错误。B、C、D 均为正确表述：交换是互惠过程；领导和下属都作为个体、通过团体进行反馈；领导对"圈里人"投入更多时间感情、很少采用正式领导权威。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力02_领导行为_第2节_领导风格与技能.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 领导风格与技能</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

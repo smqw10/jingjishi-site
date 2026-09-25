@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二十四章 描述统计 · 集中趋势的测度 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十四章 描述统计 · 集中趋势的测度</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="b24s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>说清<strong>均值、中位数、众数</strong>的定义与算法，中位数会"先排序再找位"，奇偶两套都不慌 <span class="must">必考</span></li>
+<li>会分步计算均值、中位数、众数，计算题 2 分钟内拿满 <span class="s3">★★★</span></li>
+<li>一张表锁定三者优缺点与适用数据类型——本章最高频考点 <span class="hot">高频考点</span> <span class="s3">★★★</span></li>
+<li>记住极端值敏感度：均值怕、中位数众数不怕 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、集中趋势的三个测度值</h2>
+<h3>1. 均值 <span class="hot">高频考点</span></h3>
+<p><strong>均值</strong>也称平均数，就是数据组中<strong>所有数值的总和除以该组数值的个数</strong>。均值是集中趋势<strong>最主要</strong>的测度值，它是一组数据的<strong>重心</strong>所在，解释了一组数据的<strong>平均水平</strong>。</p>
+<p><strong>计算公式</strong>：X̄ ＝ (X₁＋X₂＋…＋Xₙ) ÷ n</p>
+<table>
+<thead>
+<tr>
+<th>拆解</th>
+<th>内容</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>怎么算</td>
+<td>所有数值加起来 ÷ 个数</td>
+<td>摊一摊，摊平了</td>
+</tr>
+<tr>
+<td>是什么</td>
+<td>一组数据的<strong>重心</strong></td>
+<td>数据都往它那儿坠</td>
+</tr>
+<tr>
+<td>干什么</td>
+<td>解释数据的<strong>平均水平</strong></td>
+<td>"平均工资多少钱"说的就是它</td>
+</tr>
+<tr>
+<td>地位</td>
+<td>集中趋势<strong>最主要</strong>的测度值</td>
+<td>三兄弟里的老大</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>均值是&quot;重心&quot;，也是&quot;软肋&quot;：</strong><p>均值把每个数值都用上了（<strong>充分利用数据的全部信息</strong>），所以最精确、最常用；但也正因为每个数都参与计算，<strong>一个极端值就能把它拉偏</strong>——极端值会使均值向极大值或极小值方向倾斜。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某小组 5 人的月工资为 4000、4000、4000、4000、30000 元，均值＝(4000×4＋30000)÷5＝9200 元。一说"人均 9200"，4 名员工都喊"被平均"——30000 这个极端值把重心拽向了高处。这正是均值"充分利用信息"与"易受极端值影响"的一体两面。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 均值口诀</div><p><strong>"总和÷个数＝重心"</strong>——见"平均水平""重心""最主要测度值"三个词，选均值。</p></div></div>
+<div class="section"><h3>2. 中位数 <span class="hot">高频考点</span> <span class="s3">★★★</span></h3>
+<p><strong>中位数</strong>：一组数据<strong>按从小到大或从大到小的顺序进行排列</strong>后，<strong>位置居中</strong>的数值，用 Me 表示。中位数把数据分成两半：<strong>一半小于它，一半大于它</strong>。</p>
+<p><strong>计算公式</strong>（n 为数据个数，先排序！）：</p>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>公式</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n 为<strong>奇数</strong></td>
+<td>Me ＝ X((n＋1)/2)</td>
+<td>正中间那一个</td>
+</tr>
+<tr>
+<td>n 为<strong>偶数</strong></td>
+<td>Me ＝ [X(n/2)＋X(n/2＋1)] ÷ 2</td>
+<td>正中间那俩的平均数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分步演算</strong>（2016 年真题数据）：8 个分公司销售额 10000、800、100、600、3000、2800、2200、5000 万元。第一步，从小到大排序：100、600、800、2200、2800、3000、5000、10000；第二步，n＝8 为偶数，取第 4、5 个数值：2200 和 2800；第三步，求平均：(2200＋2800)÷2＝<strong>2500</strong> 万元。</p></div>
+<div class="section"><div class="keypoint"><strong>中位数是&quot;位置代表值&quot;：</strong><p>中位数只看<strong>位置</strong>、不看数值大小，所以<strong>不受极端值的影响，抗干扰性强</strong>；但代价是没充分利用数据的全部信息，稳定性差于均值、优于众数。<strong>尤其适用于收入这类偏斜分布的数值型数据</strong>——少数暴富户拉不动中位数。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小区挂牌 7 套房：300 万、320 万、350 万、360 万、380 万、400 万、2000 万（顶奢大平层）。均值被 2000 万拉到约 587 万，明显不像"典型房价"；中位数＝正中间第 4 套＝360 万，稳稳代表"典型一套多少钱"。这就是"偏斜分布找中位"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 中位数算法口诀</div><p><strong>"先排队，再找位：奇取正中间，偶取中间俩平均"</strong>。计算题九成错误出在<strong>忘了排序</strong>——原顺序的"中间"不是中位数。</p></div></div>
+<div class="section"><h3>3. 众数</h3>
+<p><strong>众数</strong>：一组数据中<strong>出现次数（频数）最多</strong>的变量值。</p>
+<p><strong>特征</strong>：在<strong>定量数据</strong>中，可能出现<strong>多众数</strong>和<strong>无众数</strong>的情况，因此众数<strong>不适用于描述定量数据的集中位置</strong>；它真正的用武之地是<strong>分类数据</strong>（顺带可用于顺序数据）——分类数据算不了均值、排不了中位，只能"数哪类最多"。</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>众数表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分类数据（如性别）</td>
+<td>数哪一类频数最高，众数唯一、好用</td>
+</tr>
+<tr>
+<td>顺序数据（如满意度等级）</td>
+<td>同上，可用</td>
+</tr>
+<tr>
+<td>定量数据（如身高列表）</td>
+<td>可能<strong>两个值并列最多</strong>（多众数），也可能<strong>没有重复值</strong>（无众数），不适用</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>鞋店经理不看"平均脚长"，只问"哪个尺码卖得最多"——38 码卖出 60 双、其余码数都不到 20 双，38 码就是众数，照它进货。而问"本店顾客平均身高"这种定量问题，众数就帮不上忙了。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 众数口诀</div><p><strong>"谁出现得多谁是众数"</strong>——众数只数频数，跟数值大小、位置统统无关；定量数据可能多众数、无众数，所以"众数不适用于定量数据"是判断题常客。</p></div></div>
+<div class="section"><h3>4. 三测度值对比总表 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>测度指标</th>
+<th>优点</th>
+<th>缺点</th>
+<th>适用数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>均值</strong></td>
+<td>①集中趋势<strong>最主要</strong>的测度值，一组数据的<strong>重心</strong>，解释<strong>平均水平</strong>；②<strong>充分利用数据的全部信息</strong></td>
+<td><strong>易受极端值影响</strong>，极端值使均值向极大值或极小值方向倾斜</td>
+<td><strong>数值型数据</strong></td>
+</tr>
+<tr>
+<td><strong>中位数</strong></td>
+<td>①<strong>位置代表值</strong>，<strong>不受极端值影响</strong>，抗干扰性强；②<strong>尤其适用于收入这类偏斜分布</strong>的数值型数据</td>
+<td>没有充分利用数据的全部信息，缺乏稳定性（差于均值、优于众数）</td>
+<td><strong>数值型数据、顺序数据</strong></td>
+</tr>
+<tr>
+<td><strong>众数</strong></td>
+<td><strong>不受极端值的影响</strong></td>
+<td>没有充分利用数据的全部信息，缺乏稳定性，而且<strong>可能不唯一</strong></td>
+<td><strong>顺序数据、分类数据</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>适用范围的&quot;阶梯&quot;：</strong><p>均值要求最高，只认<strong>数值型</strong>；中位数降一档，数值型＋顺序型都行（顺序数据排得出"中间位置"）；众数门槛最低，分类、顺序都能用（分类数据连排序都不行，只能数频数）。反过来记稳定性：<strong>均值＞中位数＞众数</strong>；抗极端值：中位数、众数不怕，均值怕。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 考场选择决策树</div><p>题干问"适用于××数据/××场景的集中趋势测度"：见<strong>分类数据</strong>→众数；见<strong>顺序数据</strong>→中位数或众数；见<strong>偏斜分布（收入）</strong>→中位数；见<strong>数值型＋要充分利用信息</strong>→均值。再防两个暗坑：①选项里的"标准分数""离散系数""方差""偏态系数"根本不是集中趋势测度，直接排除；②"中位数适用于分类数据"是错的——分类数据无法排序。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>均值</strong>＝总和÷个数；最主要测度值、重心、平均水平；充分利用全部信息；怕极端值；只适用<strong>数值型</strong></li>
+<li><strong>中位数</strong>：排序后位置居中；奇取中间、偶取中间俩平均；位置代表值、不受极端值影响；适用<strong>数值型＋顺序型</strong>；偏斜分布（收入）首选</li>
+<li><strong>众数</strong>：出现次数最多的值；不受极端值影响；可能不唯一；适用<strong>顺序型＋分类型</strong>，不适用于定量数据</li>
+<li>稳定性：均值＞中位数＞众数；抗极端值：中位数＝众数＞均值</li>
+<li>适用阶梯：均值（数值）⊂ 中位数（数值＋顺序），众数专管（顺序＋分类）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b24s1q1" data-answer="C" data-type="single"><span class="q-tag">2016·单选</span><div class="q-stem">2016 年某企业集团下辖 8 个分公司的销售额分别为 10000 万元、800 万元、100 万元、600 万元、3000 万元、2800 万元、2200 万元、5000 万元，这组数据的中位数是（　）万元。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 2200</button><button type="button" class="qopt" data-key="B">B. 2800</button><button type="button" class="qopt" data-key="C">C. 2500</button><button type="button" class="qopt" data-key="D">D. 3000</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：中位数必须<strong>先排序再找位置</strong>：从小到大排为 100、600、800、2200、2800、3000、5000、10000。n＝8 为偶数，中位数＝第 4 个与第 5 个数值的平均数＝(2200＋2800)÷2＝2500。A、B 是第 4、第 5 个数值本身，D 是排序后第 6 个数——都错在没算"中间两个的平均"或没排序。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s1q2" data-answer="B" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">某连锁超市 6 个分店的职工人数由小到大排序后为 57 人、58 人、58 人、60 人、63 人、70 人，其算术平均数、众数分别为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 59、58</button><button type="button" class="qopt" data-key="B">B. 61、58</button><button type="button" class="qopt" data-key="C">C. 61、59</button><button type="button" class="qopt" data-key="D">D. 61、70</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：均值＝(57＋58＋58＋60＋63＋70)÷6＝366÷6＝61；众数＝出现次数最多的数值，58 出现 2 次、其余各 1 次，众数＝58。选 B。C 的均值虽对但 59 根本没出现过；D 的 70 只出现 1 次，不是众数；A 的均值算错（366÷6 是 61 不是 59）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s1q3" data-answer="A" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">下列统计量中，适用于描述分类数据和顺序数据集中趋势的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 众数</button><button type="button" class="qopt" data-key="B">B. 均值</button><button type="button" class="qopt" data-key="C">C. 标准分数</button><button type="button" class="qopt" data-key="D">D. 中位数</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：<strong>分类数据</strong>（如性别、行业）没有大小顺序，算不了均值、排不出中位数，唯一能用的集中趋势测度就是<strong>众数</strong>——数哪一类出现最多；顺序数据也可用众数。均值只适用数值型数据（B 错）；中位数适用数值型和顺序数据，但分类数据无法排序（D 错）；标准分数是标准化方法，压根不是集中趋势测度（C 错）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s1q4" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">下列数据特征测度中，适用于反映偏斜分布数值型数据集中趋势的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 离散系数</button><button type="button" class="qopt" data-key="B">B. 方差</button><button type="button" class="qopt" data-key="C">C. 中位数</button><button type="button" class="qopt" data-key="D">D. 标准差</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：偏斜分布（如收入）的数值型数据，均值会被极端值拉向极端方向，而<strong>中位数不受极端值影响</strong>，尤其适用于收入这类偏斜分布。离散系数、方差、标准差都是<strong>离散程度</strong>的测度，答非所问（A、B、D 错）——先审"集中还是离散"，再挑名字。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s1q5" data-answer="ABC" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">下列统计量中，用于测度数据分布集中趋势的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 中位数</button><button type="button" class="qopt" data-key="B">B. 众数</button><button type="button" class="qopt" data-key="C">C. 平均数</button><button type="button" class="qopt" data-key="D">D. 标准系数</button><button type="button" class="qopt" data-key="E">E. 偏态系数</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：集中趋势三测度＝<strong>均值（平均数）、中位数、众数</strong>，A、B、C 对。偏态系数测度的是<strong>分布形态</strong>（偏斜方向和程度），不是集中趋势（E 错）；"标准系数"也不是集中趋势测度（标准分数是标准化方法、用来比较相对位置），D 错。
+:::</p></div></details></div><div class="quiz-item" data-qid="b24s1q6" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">某超市某类商品价格数据的众数为 25 元，则可以判断出（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 该组价格数据为对称分布</button><button type="button" class="qopt" data-key="B">B. 该组价格数据中位数为 25 元</button><button type="button" class="qopt" data-key="C">C. 该类商品平均价格为 25 元</button><button type="button" class="qopt" data-key="D">D. 该组数据中 25 元这一价格出现的次数最多</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：众数的定义就是<strong>出现次数（频数）最多的变量值</strong>，D 正确。均值、中位数、众数是三个独立的测度，知道众数是 25 元，推不出均值 25 元（C 错）、推不出中位数 25 元（B 错），更推不出分布对称与否——对称不对称要看偏态系数（A 错）。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础24_描述统计_第2节_离散程度的测度.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 离散程度的测度</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

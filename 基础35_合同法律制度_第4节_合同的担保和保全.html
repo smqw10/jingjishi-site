@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三十五章 合同法律制度 · 合同的担保和保全 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第六部分 法律</span><h1>第三十五章 合同法律制度 · 合同的担保和保全</h1><div class="subtitle">第 4 节 / 共 6 节 · 预计学习时长 50 分钟</div><div class="progress-bar"><div class="fill" style="width:66%"></div></div><div class="progress-text">本章进度 4/6</div><div class="sec-badge none" id="sec-badge" data-sec="b35s4">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>担保的目的</strong>（督促债务人履行合同义务）与两大约定担保：<strong>保证、定金</strong> <span class="hot">高频考点</span></li>
+<li>分清<strong>一般保证与连带责任保证</strong>：先诉抗辩权归谁、"没约定按一般"，方向不反 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>背死定金规则：<strong>实践合同、交付生效、上限 20%、双倍返还、与违约金二选一</strong> <span class="s3">★★★</span></li>
+<li>分清<strong>保全两权</strong>：代位权（替他催收）与撤销权（撤销贱卖），以及"诉讼、自己名义、债权为限、费用债务人担" <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、合同的担保</h2>
+<h3>1. 合同的担保与保证 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>合同的担保</strong>：根据法律规定或当事人约定的担保措施<strong>保证合同义务人履行义务</strong>的一项法律制度。<strong>目的正是督促债务人履行合同义务</strong>。担保物权（抵押、质押、留置）都是合同担保的形式，除此之外还包括<strong>保证</strong>与<strong>定金</strong>。</p>
+<p><strong>保证</strong>：保证人和债权人约定，当债务人不履行债务时，保证人<strong>按约定履行债务或承担责任</strong>的行为——是合同当事人<strong>以外的第三人</strong>担保一方当事人履行义务的担保方式，一般通过保证人与主合同的债权人订立<strong>保证合同</strong>实现。</p>
+<p><strong>保证人资格</strong>：必须是<strong>具有代为清偿债务能力</strong>的法人、其他组织或公民。<strong>不得作为保证人</strong>：国家机关；学校、幼儿园、医院等<strong>以公益为目的</strong>的事业单位、社会团体；企业法人的<strong>分支机构、职能部门</strong>。</p>
+<p><strong>保证的两种方式</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>一般保证</th>
+<th>连带责任保证</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义</td>
+<td>保证人只对债务人不履行债务承担<strong>补充责任</strong></td>
+<td>债务人不履行债务时，保证人与债务人承担<strong>连带责任</strong></td>
+</tr>
+<tr>
+<td>先诉抗辩权</td>
+<td><strong>享有</strong>——主合同纠纷未经审判或仲裁，并就债务人财产依法强制执行仍不能履行债务前，可以拒绝承担保证责任</td>
+<td><strong>不享有</strong>——债权人可以直接找保证人要钱</td>
+</tr>
+<tr>
+<td>未约定/约定不明时</td>
+<td>按照一般保证承担保证责任</td>
+<td>↑（同一规则）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>方向图：该赔的赔完了才找我 vs 没赔都能来找我：</strong><p><strong>一般保证</strong>＝"先找债务人，该赔的赔完了还差一截才轮到我"（补充责任＋先诉抗辩权）；<strong>连带责任保证</strong>＝"没赔完你也能直接来找我"（责任更重）。<strong>合同里没写清楚用哪种 → 按一般保证</strong>——默认对保证人更温和。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老刘借款 50 万：让开公司的弟弟签保证合同——可以（有代为清偿能力的企业法人）；让区财政局作保——不行（国家机关）；让私立医院？也不行——医院属于<strong>以公益为目的</strong>的事业单位；注意即使是企业，其<strong>分支机构、职能部门</strong>也不能作保证人。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 保证方式口诀</div><p><strong>"该赔的赔完了才找我＝一般；没赔都能来找我＝连带；没说一般就一般"</strong>。再记禁入名单：<strong>"官面（国家机关）、公益（学校幼儿园医院等）、内设（企业分支、职能部门）不担保"</strong>。</p></div></div>
+<div class="section"><h3>2. 定金 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p><strong>定义</strong>：合同当事人一方为保证合同的履行，在<strong>合同订立时或履行前</strong>给付对方<strong>一定数额金钱</strong>的担保方式。债务人履行债务后，定金应当<strong>抵作价款或收回</strong>。定金的担保作用通过<strong>定金罚则</strong>体现。</p>
+<p><strong>定金罚则</strong>：给付定金的一方不履行约定债务的，<strong>无权要求返还定金</strong>；收受定金的一方不履行约定债务的，应当<strong>双倍返还定金</strong>。</p>
+<p><strong>定金的规则要点</strong>：
+1. 定金合同是<strong>实践合同</strong>，从<strong>实际交付定金之日起生效</strong>；
+2. 定金数额由当事人约定，但<strong>不得超过主合同标的额的 20%</strong>；约定的数额高于最高限额的，只认定<strong>未超过 20% 部分</strong>的效力，<strong>超出部分无效</strong>。</p>
+<p><strong>定金与违约金</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>定金</th>
+<th>违约金</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>联系</td>
+<td>都使违约一方丧失一定金钱利益，都有督促履行的作用</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>交付时间</td>
+<td><strong>合同履行前</strong>交付</td>
+<td>只能在<strong>违约行为发生后</strong>交付</td>
+</tr>
+<tr>
+<td>效力</td>
+<td>具有证明合同成立和<strong>预先给付</strong>的效力</td>
+<td>没有</td>
+</tr>
+<tr>
+<td>性质</td>
+<td>主要起<strong>合同担保</strong>作用</td>
+<td>是<strong>违约责任</strong>的一种形式</td>
+</tr>
+<tr>
+<td>能否并用</td>
+<td><strong>不能并用，只能择一适用</strong></td>
+<td>↑</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>定金罚则的方向：</strong><p>定金是<strong>双向押金</strong>：谁违约谁吃亏——付定金的一方违约，钱<strong>白给</strong>；收定金的一方违约，<strong>双倍吐出来</strong>；履行顺利，定金要么抵价款要么退回。它是唯一<strong>预先交付</strong>的担保——这笔钱先压在桌上，让谁都不敢轻易反悔。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>主合同标的额 100 万元：
+1. <strong>上限</strong>：100 × 20% ＝ 20 万元。若约定定金 30 万——只有 20 万的部分有效，超出的 10 万不产生定金效力（应退还），<strong>不适用双倍罚则</strong>；
+2. <strong>付定金方（买方）违约</strong>不买了：20 万定金<strong>无权要求返还</strong>，等于白送；
+3. <strong>收定金方（卖方）违约</strong>不卖了：返还定金 20 万 ＋ 额外赔 20 万 ＝ <strong>双倍返还 40 万</strong>。
+方向锚：<strong>罚的永远是违约的那一方</strong>——付定金的违约"白给"，收定金的违约"吐双倍"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 定金口诀</div><p><strong>"付定不履要不回，收定不履还双倍；上限两成超出无效；定金违约金二选一"</strong>。注意 20% 是<strong>相对数</strong>——是主合同标的额的两成，不是拍脑袋一个绝对数；算定金题第一步永远是"标的额 × 20%"卡上限。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 定金三个易错点</div><ul>
+<li>定金合同是<strong>实践合同</strong>——只签字没交钱，定金合同<strong>不生效</strong>（从实际交付之日起生效）；</li>
+<li>定金<strong>履行前</strong>交付、违约金<strong>违约后</strong>交付，别把交付时间对调；</li>
+<li>"既约定定金又约定违约金，可以一起要"必错——<strong>只能择一</strong>，选对自己更有利的那个。</li>
+</ul></div></div>
+<div class="section"><h2>二、合同的保全</h2>
+<h3>3. 债权人的代位权 <span class="s3">★★★</span></h3>
+<p><strong>定义</strong>：当债务人<strong>怠于行使其债权</strong>对债权人造成损害时，债权人为保全其债权，<strong>以自己的名义</strong>行使债务人权利的权利。</p>
+<p><strong>行使条件</strong>（四个"须"）：
+1. 须债务人对<strong>第三人</strong>享有权利；
+2. 须债务人<strong>怠于行使权利</strong>且因此可能危及债权人的债权；
+3. 须债权人对债务人的债权<strong>已届清偿期</strong>而未获清偿；
+4. 须债务人对第三人的权利为<strong>非专属性</strong>权利和<strong>可以强制执行</strong>的权利。</p>
+<p><strong>行使规则</strong>：必须通过<strong>诉讼</strong>方式行使；行使范围<strong>以债权人的债权为限</strong>；债权人行使代位权的<strong>必要费用由债务人负担</strong>。代位权诉讼成立的，由第三人（次债务人）向<strong>债权人</strong>履行清偿义务，债权人与债务人、债务人与第三人之间相应的债权债务关系消灭。</p></div>
+<div class="section"><div class="keypoint"><strong>代位权三个身份词：</strong><p><strong>"以自己的名义、走诉讼、以债权为限"</strong>——不是以债务人的名义、不需要债务人同意、费用也不用债权人自己掏（债务人负担）。三个词任何一个被偷换，该选项必错。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老赵欠老孙 30 万到期未还，同时小李欠老赵 20 万早到期，老赵却躺平不催。老孙可以<strong>以自己的名义</strong>起诉小李（代位权诉讼），法院认定成立的，小李直接向老孙清偿——老孙、老赵之间的债和小赵、小李之间的债相应消灭。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 代位权口诀</div><p><strong>"欠我钱的躺平，我替他去催收"</strong>——债务人怠于行使到期债权、危及我的债权，我就以<strong>自己名义</strong>告他的债务人（次债务人），范围不超过<strong>我的债权</strong>，费用<strong>他负担</strong>。</p></div></div>
+<div class="section"><h3>4. 债权人的撤销权 <span class="s3">★★★</span></h3>
+<p><strong>定义</strong>：当债务人所为的<strong>减少其财产</strong>的行为危害债权人的债权实现时，债权人为保全其债权而请求<strong>人民法院撤销</strong>债务人该行为的权利。</p>
+<p><strong>行使情形</strong>（两种）：
+1. 债务人以<strong>放弃其债权、放弃债权担保、无偿转让财产</strong>等方式<strong>无偿处分</strong>财产权益，或者<strong>恶意延长</strong>其到期债权的履行期限，影响债权人的债权实现的；
+2. 债务人以<strong>明显不合理的低价转让</strong>财产、以<strong>明显不合理的高价受让</strong>他人财产或<strong>为他人的债务提供担保</strong>，影响债权人的债权实现，债务人的<strong>相对人知道或者应当知道</strong>该情形的。</p>
+<p><strong>行使限制</strong>：行使范围<strong>以债权人的债权为限</strong>；必要费用<strong>由债务人负担</strong>；撤销权自债权人<strong>知道或者应当知道撤销事由之日起 1 年内</strong>行使；自<strong>债务人的行为发生之日起 5 年内</strong>没有行使的，撤销权消灭。被撤销的行为<strong>自始没有法律约束力</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>代位权</th>
+<th>撤销权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>针对</td>
+<td>债务人<strong>怠于行使</strong>权利（不动）</td>
+<td>债务人<strong>不当减少财产</strong>（乱动：无偿处分、贱买贵卖、恶意延期限）</td>
+</tr>
+<tr>
+<td>方式</td>
+<td>必须诉讼、<strong>以自己名义</strong></td>
+<td>请求<strong>人民法院</strong>撤销</td>
+</tr>
+<tr>
+<td>范围与费用</td>
+<td>以债权为限；费用债务人负担</td>
+<td>以债权为限；费用债务人负担</td>
+</tr>
+<tr>
+<td>期限</td>
+<td>↑（同样受"1 年/5 年"式限制的是撤销权）</td>
+<td>自知道或应当知道撤销事由起 <strong>1 年</strong>；行为发生起 <strong>5 年</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>撤销权盯的是&quot;财产溜走&quot;：</strong><p>债务人可以穷，但不能<strong>装穷</strong>——把财产白送、贱卖、低价甩给知情的自己人，等于掏空还钱的底气。撤销权让法院把这类"掏家底"的行为撤回到原点；注意武器是<strong>请求人民法院撤销</strong>，不是债权人自己宣布作废。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老赖欠着老孙 50 万不还，转头把市价 60 万的豪车 10 万"大甩卖"给知情的表弟——无偿/明显不合理低价处分财产且相对人知情，老孙可请求法院撤销该买卖，被撤销的行为自始没有约束力；老孙要在<strong>知道撤销事由起 1 年内</strong>动手，最迟不超过<strong>行为发生起 5 年</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 保全两权口诀</div><p><strong>"躺平不催债 → 代位替他催；贱卖大甩卖 → 撤销他的行为"</strong>。共同规则：<strong>"必须打官司、范围以债权为限、费用债务人担"</strong>；撤销权期限：<strong>"知道一年，行为五年"</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 担保 vs 保全，别混战场</div><p><strong>担保是"未雨绸缪"</strong>（保证、定金等，事先留住还钱的抓手，多与第三人/金钱挂钩）；<strong>保全是"亡羊补牢"</strong>（代位权、撤销权，事后抢救债务人的责任财产，两权都是债权人的权利）。题目问"属于合同保全制度的是"，只选代位权、撤销权——抵押、质押、留置是担保物权，属于担保不是保全。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>担保的目的</strong>＝督促债务人履行合同义务；担保物权＋<strong>保证</strong>＋<strong>定金</strong></li>
+<li><strong>保证人资格</strong>：有代为清偿能力的法人、其他组织、公民；<strong>国家机关、公益事业单位社会团体、企业法人分支机构职能部门不得作保证人</strong></li>
+<li><strong>一般保证</strong>：补充责任＋<strong>先诉抗辩权</strong>；<strong>连带责任保证</strong>：连带责任、无先诉抗辩权；<strong>没约定或约定不明→按一般保证</strong></li>
+<li><strong>定金</strong>：履行前交付的金钱担保；<strong>实践合同、实际交付生效</strong>；罚则＝付定违约要不回、收定违约<strong>双倍返还</strong>；上限＝主合同标的额 <strong>20%</strong>，超出部分无效；与违约金<strong>不能并用、择一适用</strong></li>
+<li><strong>代位权</strong>：债务人怠于行使债权危及我债权 → <strong>以自己名义</strong>、<strong>诉讼</strong>方式、<strong>以债权为限</strong>、费用<strong>债务人</strong>负担；条件：对第三人享有权利、怠于行使、已届清偿期未获清偿、非专属性可强制执行</li>
+<li><strong>撤销权</strong>：无偿处分（放弃债权/担保、无偿转让、恶意延长期限）或明显不合理低价转让/高价受让/为他人担保且相对人知情 → 请求法院撤销；范围以债权为限、费用债务人负担；<strong>知道起 1 年、行为发生起 5 年</strong>；被撤销的自始无约束力</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b35s4q1" data-answer="B" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">下列单位，可以作为合同的保证人的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 公立学校</button><button type="button" class="qopt" data-key="B">B. 国有企业</button><button type="button" class="qopt" data-key="C">C. 公立医院</button><button type="button" class="qopt" data-key="D">D. 公立幼儿园</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：<strong>国家机关</strong>和<strong>学校、幼儿园、医院等以公益为目的</strong>的事业单位、社会团体不得作为保证人（A、C、D 错）。国有企业是以营利为目的的企业法人，只要具有<strong>代为清偿债务的能力</strong>，就可以作保证人（B 对）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b35s4q2" data-answer="A" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于一般保证和连带责任保证的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 保证合同中保证人在债务人不能履行债务时才承担保证责任的，按照连带责任保证承担责任</button><button type="button" class="qopt" data-key="B">B. 债务人不履行到期债务时，债权人可以请求债务人履行债务，也可以请求连带责任保证人承担保证责任</button><button type="button" class="qopt" data-key="C">C. 一般保证人享有先诉抗辩权</button><button type="button" class="qopt" data-key="D">D. 连带责任保证人不享有先诉抗辩权</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析："债务人<strong>不能履行债务时才</strong>承担保证责任"是<strong>一般保证</strong>的定义——A 把一般保证的话安在连带责任保证头上，错误（当选）。连带责任保证下，债权人可以直接请求保证人承担保证责任，不必先起诉债务人（B 对）；一般保证人享有<strong>先诉抗辩权</strong>——主合同纠纷未经审判或仲裁并就债务人财产依法强制执行仍不能履行前，可拒绝承担保证责任（C 对）；连带责任保证人没有这道防线（D 对）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b35s4q3" data-answer="ABCD" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">一般保证人的先诉抗辩权，不能主张的情形包括（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 债务人下落不明且无财产可供执行</button><button type="button" class="qopt" data-key="B">B. 人民法院已经受理债务人破产案件</button><button type="button" class="qopt" data-key="C">C. 保证人书面表示放弃本权利</button><button type="button" class="qopt" data-key="D">D. 债权人有证据证明债务人丧失履行债务的能力</button><button type="button" class="qopt" data-key="E">E. 债务人地址变更</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCD</div><div class="q-exp"><p>析：一般保证人的先诉抗辩权在四种情形下不得主张：债务人<strong>下落不明且无财产可供执行</strong>（A）；<strong>法院已受理债务人破产案件</strong>（B）；保证人<strong>书面放弃</strong>该权利（C）；债权人有证据证明债务人<strong>丧失履行债务能力</strong>（D）。债务人地址变更只是普通变动，不构成例外，先诉抗辩权照常可用（E 错）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b35s4q4" data-answer="ABC" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">关于合同定金的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 定金具有担保效力</button><button type="button" class="qopt" data-key="B">B. 收受定金的一方不履行约定债务的，应当双倍返还定金</button><button type="button" class="qopt" data-key="C">C. 定金合同从实际交付定金之日起生效</button><button type="button" class="qopt" data-key="D">D. 定金的数额由当事人约定，但不得超过主合同标的额的 50%</button><button type="button" class="qopt" data-key="E">E. 当事人既约定定金又约定违约金的，未违约一方可以同时要求赔偿定金和违约金</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABC</div><div class="q-exp"><p>析：定金通过<strong>定金罚则</strong>起担保作用（A 对）；收定金方违约<strong>双倍返还</strong>（B 对）；定金合同是<strong>实践合同</strong>，从<strong>实际交付定金之日</strong>起生效（C 对）。定金上限是主合同标的额的 <strong>20%</strong>，不是 50%（D 错）；定金与违约金<strong>只能择一适用</strong>，不能同时主张（E 错）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b35s4q5" data-answer="AE" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">下列权利中，属于合同保全制度的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 债权人代位权制度</button><button type="button" class="qopt" data-key="B">B. 质权</button><button type="button" class="qopt" data-key="C">C. 留置权</button><button type="button" class="qopt" data-key="D">D. 抵押权</button><button type="button" class="qopt" data-key="E">E. 债权人撤销权制度</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AE</div><div class="q-exp"><p>析：合同保全就两件兵器——<strong>代位权</strong>（替债务人向"躺平"不催的次债务人催收）和<strong>撤销权</strong>（撤销债务人不当减少财产的行为）（A、E 对）。质权、留置权、抵押权是<strong>担保物权</strong>，属于合同的<strong>担保</strong>制度，不是保全制度（B、C、D 错）——担保防患于未然，保全事后抢救责任财产。
+:::</p></div></details></div><div class="quiz-item" data-qid="b35s4q6" data-answer="A" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">关于债权人代位权的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 债权人代位权的行使必须通过诉讼程序，而且代位权范围以其债权为限</button><button type="button" class="qopt" data-key="B">B. 债权人必须以债务人的名义行使代位权</button><button type="button" class="qopt" data-key="C">C. 债权人代位权的行使必须取得债务人的同意</button><button type="button" class="qopt" data-key="D">D. 代位权行使的费用必须由债权人自己承担</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：代位权必须<strong>通过诉讼方式</strong>行使，且范围<strong>以债权人的债权为限</strong>（A 对）。行使时以<strong>债权人自己的名义</strong>——"自己的名义"三个字是考点，B 反了；不需要债务人同意（C 错）；行使代位权的<strong>必要费用由债务人负担</strong>，不用债权人自掏腰包（D 错）。
+:::</p></div></details></div><div class="quiz-item" data-qid="b35s4q7" data-answer="BCDE" data-type="multi"><span class="q-tag">2023·多选</span><div class="q-stem">根据《民法典》，债权人提起代位权诉讼，应当符合的条件有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 债权人须以债务人的名义起诉</button><button type="button" class="qopt" data-key="B">B. 债务人怠于行使其债权，对债权人造成损害</button><button type="button" class="qopt" data-key="C">C. 债权人的债权已届清偿期</button><button type="button" class="qopt" data-key="D">D. 债权人的债权不是专属于债务人自身的债权</button><button type="button" class="qopt" data-key="E">E. 债权人对债务人的债权合法</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：代位权的行使条件——债务人对第三人享有权利且<strong>怠于行使</strong>、可能危及债权人的债权（B）；债权人对债务人的债权<strong>已届清偿期而未获清偿</strong>（C）；该权利为<strong>非专属性</strong>、可强制执行的权利（D）；债权合法有效（E）。代位权必须由债权人<strong>以自己的名义</strong>通过诉讼行使——A 说"以债务人的名义起诉"，方向正好说反（A 错）。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础35_合同法律制度_第3节_合同的订立、履行和终止.html"><span class="nav-label">上一节</span><span class="nav-title">第3节 合同的订立、履行和终止</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础35_合同法律制度_第5节_合同的转让、变更和解除.html"><span class="nav-label">下一节</span><span class="nav-title">第5节 合同的转让、变更和解除</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

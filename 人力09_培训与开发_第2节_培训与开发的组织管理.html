@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第9章 培训与开发 · 培训与开发的组织管理 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第二部分 人力资源管理</span><h1>第9章 培训与开发 · 培训与开发的组织管理</h1><div class="subtitle">第 2 节 / 共 3 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:66%"></div></div><div class="progress-text">本章进度 2/3</div><div class="sec-badge none" id="sec-badge" data-sec="r09s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住不同规模组织的培训机构设置：中小型<strong>不设</strong>专门机构、大型<strong>两模式</strong>、分权化办<strong>企业大学</strong> <span class="hot">高频考点</span></li>
+<li>背熟<strong>层次评估模型五层次</strong>（反应/学习/工作行为/结果/投资收益），各自"评什么＋方法＋谁最关心"一勺烩 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>分清评估方法两分类：<strong>控制实验法最规范</strong>、<strong>问卷调查法最常用</strong> <span class="hot">高频考点</span></li>
+<li>记住两大评估时机，并牢牢抓住"<strong>回任工作评估更重要</strong>"这句话 <span class="s3">★★★</span></li>
+</ul></div></div>
+<div class="section"><h2>一、培训与开发的组织体系</h2>
+<h3>1. 不同类别组织的培训开发机构 <span class="hot">高频考点</span></h3>
+<p>培训与开发机构的设置，与组织的<strong>规模</strong>及管理方式直接相关：</p>
+<table>
+<thead>
+<tr>
+<th>组织类型</th>
+<th>机构设置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>中小型组织</strong></td>
+<td>一般<strong>不需要</strong>设置专门的培训与开发机构——培训与开发工作是<strong>某个人力资源管理岗位的一项职责</strong></td>
+</tr>
+<tr>
+<td><strong>大型组织</strong></td>
+<td>一般设置<strong>专门的</strong>培训与开发机构，分两种模式：<strong>隶属模式 / 并列模式</strong></td>
+</tr>
+<tr>
+<td><strong>大型、分权化管理的组织</strong></td>
+<td>组建<strong>企业大学</strong>——独立培训开发机构的<strong>扩大发展模式</strong></td>
+</tr>
+</tbody>
+</table>
+<p>大型组织两种模式的优缺点对比（★★）：</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>隶属模式（挂在人力资源部之下）</th>
+<th>并列模式（与人力资源部并列的独立部门）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优点</td>
+<td>便于形成<strong>协调、统一</strong>的培训计划</td>
+<td>能<strong>体现战略位置</strong>；<strong>不受其他工作影响</strong>；保证<strong>力度和连续性</strong></td>
+</tr>
+<tr>
+<td>缺点</td>
+<td><strong>无法体现</strong>战略位置；<strong>易受其他工作影响</strong>；难以保证<strong>力度和连续性</strong></td>
+<td><strong>不便于</strong>形成协调、统一的计划；可能发生<strong>冲突</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>一句话记住两模式：</strong><p><strong>隶属＝统而不显</strong>：计划好统一，但没地位、容易被别的工作挤占；<strong>并列＝显而不统</strong>：有战略地位、力度有保障，但各干各的、可能打架。两列优缺点恰好互为镜像，记一列推一列。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>200 人的公司让 HR 专员顺带管培训（中小型，不设专门机构）；5000 人的集团在人力资源部下设培训部（隶属）；另一集团把培训中心设成与人力资源部平级的独立部门（并列）；某分权化经营的巨头干脆办起自己的企业大学（扩大发展模式）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 机构设置口诀</div><p><strong>"小不设、大专设、分权办大学；隶属统而不显，并列显而不统"</strong>。看到"企业大学"就找两个关键词：<strong>大型＋分权化</strong>、独立培训开发机构的<strong>扩大发展</strong>模式。</p></div></div>
+<div class="section"><h2>二、培训与开发效果的评估</h2>
+<h3>1. 定位与层次评估模型五层次 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p><strong>培训与开发效果评估</strong>是培训与开发体系中<strong>最难实现</strong>的一个环节；评估中应用最广的是<strong>层次评估模型</strong>。五个层次从浅到深：</p>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>评什么</th>
+<th>常用方法</th>
+<th>关键地位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① <strong>反应评估</strong></td>
+<td>受训人员对培训与开发的<strong>主观感受和看法</strong>：对内容、方法、形式、培训师、设施的满意度等</td>
+<td><strong>访谈</strong>、<strong>问卷调查</strong>（应用最普遍）</td>
+<td><strong>最基本、最常用</strong>的评估方式，<strong>易于进行</strong></td>
+</tr>
+<tr>
+<td>② <strong>学习评估</strong></td>
+<td>受训人员"<strong>学到了什么</strong>"：知识、技能、<strong>态度</strong>三方面</td>
+<td>知识—<strong>笔试</strong>；技能—<strong>实际操作</strong>；态度—<strong>自我评价的态度量表</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>③ <strong>工作行为评估</strong></td>
+<td>培训是否带来受训人员<strong>行为上的改变</strong>（培训与开发<strong>最直接的目的</strong>），以及把所学运用到工作上的程度</td>
+<td>面谈、直接观察、绩效监测、<strong>行为评价量表（最常用）</strong></td>
+<td>组织<strong>高管层和直接主管</strong>特别关心</td>
+</tr>
+<tr>
+<td>④ <strong>结果评估</strong></td>
+<td>受训人员行为改变对其所服务的<strong>组织或部门绩效的影响</strong>作用</td>
+<td>硬指标＋软指标（见下表）</td>
+<td>效果评估的<strong>最重要内容</strong>、<strong>最具说服力</strong>的指标，<strong>高管层最关心</strong></td>
+</tr>
+<tr>
+<td>⑤ <strong>投资收益评估</strong></td>
+<td>确定或比较培训与开发的<strong>成本收益</strong>，通常表示成一个<strong>百分数</strong>或<strong>成本与收益的比率</strong></td>
+<td>—</td>
+<td><strong>困难且昂贵</strong>，组织<strong>很少进行</strong></td>
+</tr>
+</tbody>
+</table>
+<p>结果评估的指标分两类（★★）：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>具体指标</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>硬指标</strong></td>
+<td><strong>产出、质量、成本、时间</strong>四大类</td>
+<td>易被衡量和量化，易被<strong>转化为货币价值</strong>，评价更为<strong>客观</strong></td>
+</tr>
+<tr>
+<td><strong>软指标</strong></td>
+<td>工作习惯、工作满意度、主动性、顾客服务等</td>
+<td>难以衡量和量化，难以转化为货币价值，评价比较<strong>主观</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>五层次一条线：</strong><p>培训的效果链：<strong>当场感觉好不好（反应）→ 真学没学到（学习）→ 回岗位变没变（行为）→ 组织绩效动没动（结果）→ 这笔账算不算得过来（投资收益）</strong>。层次由浅入深：越往后越<strong>难做</strong>、越<strong>有说服力</strong>——所以"最重要、最具说服力"给结果评估，"最容易、最常用"给反应评估，"最难做还贵"给投资收益评估。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>叉车培训结束后先发问卷："老师讲得咋样、设备够不够用"（反应评估）；接着笔试＋实地操作考核（学习评估）；一个月后班组长观察他操作是否更规范（工作行为评估）；季度末统计事故率、装卸量（结果评估·硬指标）；最后财务算"这三万块培训费从省下的成本里赚回来没有"（投资收益评估）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 层次评估口诀</div><p><strong>"感、学、行、果、账"</strong>——反应看感受、学习看三样（知识/技能/态度）、行为看改变、结果看绩效、投资收益算比率。三个"最"字定位：反应＝<strong>最基本最常用</strong>；结果＝<strong>最重要、最具说服力、高管最关心</strong>；投资收益＝<strong>困难昂贵很少做</strong>。两个"最常用方法"：反应评估用<strong>问卷</strong>，行为评估用<strong>行为评价量表</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三个&quot;关心&quot;别张冠李戴</div><ul>
+<li><strong>高管层＋直接主管</strong>特别关心 → <strong>工作行为评估</strong>；</li>
+<li><strong>高管层最</strong>关心 → <strong>结果评估</strong>；</li>
+<li>说"反应评估是管理层特别关注的"——错（2024 年多选 A 项就是这么挖坑的），反应评估评的是<strong>学员的主观感受</strong>，管理层哪有工夫天天看满意度。</li>
+</ul></div></div>
+<div class="section"><h3>2. 评估方法的分类 <span class="hot">高频考点</span></h3>
+<p>评估方法分为<strong>控制实验法</strong>和<strong>问卷调查法</strong>两大类：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>地位</th>
+<th>优点</th>
+<th>缺点</th>
+<th>适用性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>控制实验法</strong></td>
+<td><strong>最规范化</strong>的评估方法</td>
+<td>可以提高评估的<strong>准确性和有效性</strong>——用培训组与控制组（非培训组）对比，能确定绩效提高确实由<strong>培训</strong>引起，而非企业其他方面变化</td>
+<td>操作<strong>比较复杂</strong>、<strong>费用高</strong></td>
+<td><strong>不适用</strong>于难以找到量化绩效指标的项目，如<strong>管理技能培训与开发</strong></td>
+</tr>
+<tr>
+<td><strong>问卷调查法</strong></td>
+<td><strong>常用</strong>的评估方法</td>
+<td>简便易行</td>
+<td>—</td>
+<td>实际工作中的应用更普遍</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>最规范 ≠ 最常用：</strong><p><strong>"最规范"是学术意义上的科学严谨（设控制组对照），不是实际中的首选</strong>——它又复杂又贵，还得能找到量化的绩效指标。实际干活最常用的是<strong>问卷调查法</strong>。考试把"最规范""最常用"两条标签对调，就是标准坑。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>评估"流水线包装操作培训"：设培训组和对照组，比产量、比差错率——能量化，控制实验法用得上。评估"中层管理技能培训"：领导力没法量化成指标，硬上控制实验法不适用，实际中发问卷收集学员和管理者的反馈更现实。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 方法分类口诀</div><p><strong>"实验最规范，问卷最常用；规范有代价——复杂、贵、还得能量化"</strong>。看到"管理技能培训"配控制实验法，直接判错。</p></div></div>
+<div class="section"><h3>3. 评估时机与具体评估方法 <span class="s3">★★★</span></h3>
+<p>评估按时机分两类，<strong>回任工作评估比培训与开发结束时的评估更为重要</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>时机</th>
+<th>评估内容</th>
+<th>具体方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>培训与开发结束时</strong></td>
+<td>知识、技能、工作效果、工作态度等<strong>有无变化</strong></td>
+<td>①知识或技能测验；②相关工作态度调查问卷；③调查表征询受训人的改进建议；④记录培训期间<strong>出席情况</strong>；⑤根据责任人、协助人员的<strong>报告</strong>评估；⑥根据结业<strong>成绩</strong>评估</td>
+</tr>
+<tr>
+<td><strong>培训后的回任工作评估</strong></td>
+<td>工作态度是否改变及程度、维持时间多久、工作效率有无提高及程度、培训开发目标是否达成</td>
+<td>①结束后一段时期，书面或实地访问调查受训人<strong>工作绩效改善</strong>情况；②实地<strong>观察</strong>工作实况；③调查或访问其<strong>上级主管或下属</strong>的反馈；④分析受训人的<strong>人事记录</strong>资料；⑤比较<strong>受训与未受训人员</strong>的工作效率；⑥是否达到<strong>工作标准</strong>；⑦对照培训与开发<strong>目标</strong>评估</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>为什么回任评估更重要：</strong><p>结束时的高分只说明"学会了"，不说明"用上了"。回任工作评估看的是<strong>回到岗位之后</strong>的态度改变、效率提高和目标达成——这才是组织花钱培训的最终目的，所以它<strong>比结束时的评估更重要</strong>。这句话本身就是真题考点，直接背。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>课程一结束：组织考试、发问卷、记考勤（结束时评估的手段）；三个月后：到车间实地看小李有没有把新工艺用起来、找他班组长和下属打听变化、翻人事记录比较他和没受训同事的效率（回任工作评估的手段）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 时机口诀</div><p><strong>"结束看当场，回任看后效；当场好考，后效更重"</strong>——结束时评估围绕"测验、问卷、出席、报告、成绩"；回任评估围绕"观察、问上下级、查记录、比未训、对标准、对目标"。判断题出现"结束时的评估更重要"，直接判错。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li>机构设置：中小型→<strong>不设</strong>专门机构（某人力岗位的职责）；大型→<strong>专门机构</strong>（隶属/并列）；大型分权化→<strong>企业大学</strong>（独立机构的<strong>扩大发展</strong>模式）</li>
+<li>隶属模式：<strong>统一但显位/易受干扰</strong>；并列模式：<strong>显位但不统一/可能冲突</strong></li>
+<li>效果评估＝培训与开发体系中<strong>最难实现</strong>的环节；应用最广的是<strong>层次评估模型</strong></li>
+<li>五层次：反应（最基本最常用；访谈/问卷）→学习（知识笔试/技能操作/态度量表）→工作行为（最直接目的；行为量表最常用；高管+直接主管关心）→结果（最重要最具说服力；高管最关心）→投资收益（困难昂贵很少做）</li>
+<li>硬指标＝产出、质量、成本、时间；软指标＝工作习惯、工作满意度、主动性、顾客服务</li>
+<li>方法：<strong>控制实验法最规范</strong>（准确有效但复杂昂贵，不适用管理技能类）；<strong>问卷调查法常用</strong></li>
+<li>时机：结束时评估＋<strong>回任工作评估（更重要）</strong></li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r09s2q1" data-answer="C" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于培训与开发评估方法的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 回任工作评估比培训结束时的评估更为重要</button><button type="button" class="qopt" data-key="B">B. 问卷调查法是常用的培训与开发效果的评估方法</button><button type="button" class="qopt" data-key="C">C. 控制实验法不具备可操作性</button><button type="button" class="qopt" data-key="D">D. 控制实验法能够确定员工绩效的提高是否确实是由培训、而不是企业其他方面变化引起的</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：控制实验法是<strong>最规范化</strong>的评估方法——将培训组与控制组对比，可以确定绩效提高确实由培训引起（D 正确），它并非"不具备可操作性"，只是操作复杂、费用高，C 错误。A 正确，回任工作评估比结束时的评估更重要；B 正确，问卷调查法是常用方法。
+:::</p></div></details></div><div class="quiz-item" data-qid="r09s2q2" data-answer="C" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">关于培训与开发组织体系的陈述，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 大型组织通常会设置专门的培训与开发部门</button><button type="button" class="qopt" data-key="B">B. 培训与开发机构隶属于人力资源部的优点是有利于形成协调统一的培训开发计划</button><button type="button" class="qopt" data-key="C">C. 培训与开发机构作为独立部门的缺点是容易受其他工作干扰</button><button type="button" class="qopt" data-key="D">D. 企业大学是独立的培训与开发机构的一种扩展模式</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：<strong>并列（独立）模式</strong>的优点恰恰是<strong>不受其他工作影响</strong>、能体现战略位置、保证力度和连续性；"易受其他工作干扰"是<strong>隶属模式</strong>的缺点，C 张冠李戴。A 正确，大型组织一般设专门机构；B 正确，便于形成协调统一的计划正是隶属模式的优点；D 正确，企业大学是独立培训开发机构的扩大发展模式。
+:::</p></div></details></div><div class="quiz-item" data-qid="r09s2q3" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">培训与开发效果评估的内容表述，不正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 反应评估重点是评估受训人员对培训与开发的主观感受和看法</button><button type="button" class="qopt" data-key="B">B. 学习评估是评估受训人员学到了什么</button><button type="button" class="qopt" data-key="C">C. 工作行为评估是评价培训与开发是否带来了受训人员行为上的改变，以及受训人员把所学的运用到工作上的程度</button><button type="button" class="qopt" data-key="D">D. 结果评估是确定或比较组织进行培训开发的成本收益情况</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析："确定或比较组织进行培训与开发的成本收益"是<strong>投资收益评估</strong>的内容；<strong>结果评估</strong>评的是受训人员行为改变对其所服务的<strong>组织或部门绩效的影响作用</strong>，D 混淆了两个层次。A、B、C 分别是反应、学习、工作行为评估的标准表述。
+:::</p></div></details></div><div class="quiz-item" data-qid="r09s2q4" data-answer="BCDE" data-type="multi"><span class="q-tag">2024·多选</span><div class="q-stem">关于培训与开发效果评估中的反应评估，说法正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 是管理层特别关注的</button><button type="button" class="qopt" data-key="B">B. 采用调查问卷、访谈的方式开展</button><button type="button" class="qopt" data-key="C">C. 评估内容包括对培训的满意度</button><button type="button" class="qopt" data-key="D">D. 评估受训人员对培训与开发的主观感受和看法</button><button type="button" class="qopt" data-key="E">E. 反应评估易于进行</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCDE</div><div class="q-exp"><p>析：反应评估评的是受训人员对培训与开发的<strong>主观感受和看法</strong>（D 对），包括对内容、方法、形式、培训师、设施的满意程度（C 对）；通常采用<strong>访谈、问卷调查</strong>等方法，其中问卷调查应用最普遍（B 对）；它<strong>易于进行</strong>，是最基本、最常用的评估方式（E 对）。<strong>管理层特别关心的是工作行为评估</strong>（高管层最关心的是结果评估），不是反应评估，A 错误。
+:::</p></div></details></div><div class="quiz-item" data-qid="r09s2q5" data-answer="D" data-type="single"><span class="q-tag">2022·单选</span><div class="q-stem">关于控制实验法的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 可以提高评估的准确性</button><button type="button" class="qopt" data-key="B">B. 操作比较复杂</button><button type="button" class="qopt" data-key="C">C. 开发成本高</button><button type="button" class="qopt" data-key="D">D. 适用于管理技能等难以量化的评估</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：控制实验法可提高评估的<strong>准确性和有效性</strong>（A 对），但操作较为复杂（B 对）、费用也高（C 对）。它<strong>不适用</strong>于那些<strong>难以找到量化绩效指标</strong>的培训与开发项目——管理技能培训正是典型，D 说"适用于"，错误。
+:::</p></div></details></div><div class="quiz-item" data-qid="r09s2q6" data-answer="ABCE" data-type="multi"><span class="q-tag">2014·多选</span><div class="q-stem">关于培训与开发效果评估的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 效果评估是培训与开发体系中最难实现的一个环节</button><button type="button" class="qopt" data-key="B">B. 效果评估中应用最广的是层次评估模型</button><button type="button" class="qopt" data-key="C">C. 反应评估是效果评估中最基本、最常用的评估方法</button><button type="button" class="qopt" data-key="D">D. 结果评估中的硬指标包括产出、质量、工作满意度等</button><button type="button" class="qopt" data-key="E">E. 学习评估的内容包括知识、技能、态度三个方面</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABCE</div><div class="q-exp"><p>析：效果评估是体系中最难实现的环节（A 对），应用最广的是层次评估模型（B 对），反应评估最基本、最常用（C 对），学习评估评知识、技能、态度三方面（E 对）。硬指标只有<strong>产出、质量、成本、时间</strong>四大类，<strong>工作满意度属于软指标</strong>，D 错误。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力09_培训与开发_第1节_培训与开发决策分析.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 培训与开发决策分析</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力09_培训与开发_第3节_职业生涯管理.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 职业生涯管理</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

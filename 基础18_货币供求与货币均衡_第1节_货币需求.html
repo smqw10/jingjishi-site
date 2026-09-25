@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十八章 货币供求与货币均衡 · 货币需求 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第三部分 货币与金融</span><h1>第十八章 货币供求与货币均衡 · 货币需求</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="b18s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>记住<strong>货币需求</strong>与<strong>货币需求量</strong>的定义：有效需求＝<strong>能力＋愿望</strong>，派生于对商品的需求 <span class="hot">高频考点</span></li>
+<li>掌握<strong>费雪方程式 MV＝PT</strong> 与<strong>剑桥方程式 M＝KπY</strong>，共用结论"物价与货币量成正比、货币价值与货币量成反比" <span class="must">必考</span> <span class="s3">★★★</span></li>
+<li>背熟<strong>凯恩斯三动机</strong>与货币需求函数 L＝L1(Y)＋L2(i)，会判增函数/减函数，会说清<strong>流动性陷阱</strong> <span class="hot">高频考点</span> <span class="s3">★★★</span></li>
+<li>记住<strong>弗里德曼</strong>现代货币数量说的定位与四大影响因素的方向（同向/反向） <span class="hot">高频考点</span></li>
+<li>能识破"理论串场"陷阱：恒久性收入是弗里德曼的、流动性陷阱是凯恩斯的、MV＝PT 是费雪的 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、货币需求与货币需求量</h2>
+<h3>1. 什么是货币需求 <span class="hot">高频考点</span></h3>
+<p><strong>货币需求</strong>指经济主体在<strong>既定的收入和财富范围内能够并愿意持有货币</strong>的行为。货币需求作为一种经济需求，是由<strong>货币需求能力</strong>和<strong>货币需求愿望</strong>共同决定的<strong>有效需求</strong>；同时它是一种<strong>派生需求</strong>，派生于人们对<strong>商品</strong>的需求——因为货币具有<strong>流通手段、支付手段和贮藏手段</strong>等职能，能够满足商品生产和交换的需要，以及以货币形式持有财富的需要。</p>
+<p><strong>货币需求量</strong>：在<strong>特定的时间和空间范围内</strong>，经济中各个部门需要持有的货币数量，是一定时期内经济对货币的<strong>客观需求量</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>货币需求</th>
+<th>货币需求量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>是什么</td>
+<td>一种持有货币的<strong>行为</strong></td>
+<td>各部门需要持有货币的<strong>数量</strong></td>
+</tr>
+<tr>
+<td>关键限定</td>
+<td>既定收入财富范围内<strong>能够＋愿意</strong></td>
+<td>特定时间、空间范围内</td>
+</tr>
+<tr>
+<td>性质</td>
+<td>有效需求（能力＋愿望）</td>
+<td>一定时期内的<strong>客观需求量</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>有效需求＝&quot;要得起＋想要&quot;：</strong><p>经济学意义上的需求不是心理上的"想要"：在既定收入和财富范围内<strong>能够</strong>持有（能力）＋<strong>愿意</strong>持有（愿望），两个都满足才是货币需求。多选问"货币需求由什么共同决定"，答<strong>能力和愿望</strong>；"派生需求"派生于<strong>商品需求</strong>，别选成"派生于收入"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>月光族小张发誓"要囤 100 万现金"——只有愿望没有能力，不构成货币需求；某企业账上趴着 500 万元、也有留现金备用的意愿——能力＋愿望齐了，才是货币需求。就像"想买房"不等于住房需求，<strong>买得起且愿意买</strong>才算数。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 货币需求口诀</div><p><strong>"能愿合一才有效，派生源头是商品"</strong>——有效需求＝能力＋愿望；货币为商品交换和财富贮藏服务，所以货币需求派生于商品需求。</p></div></div>
+<div class="section"><h2>二、传统货币数量说</h2>
+<h3>1. 费雪的现金交易数量说（交易方程式）<span class="must">必考</span> <span class="s3">★★★</span></h3>
+<p>传统货币数量说主要有<strong>现金交易数量说</strong>和<strong>现金余额数量说</strong>两支。费雪提出<strong>交易方程式</strong>：</p>
+<p><strong>MV＝PT，即 P＝MV/T</strong>（M 货币量，V 货币流通速度，P 物价水平，T 商品和劳务的交易量）</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>费雪的判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M</td>
+<td>货币量</td>
+<td><strong>最活跃</strong>的因素，经常主动变动，物价是被动因素——货币量一变，马上反映到物价上</td>
+</tr>
+<tr>
+<td>V</td>
+<td>货币流通速度</td>
+<td>由<strong>制度因素</strong>决定，短期内难以改变，可视为<strong>常数</strong></td>
+</tr>
+<tr>
+<td>P</td>
+<td>物价水平</td>
+<td>与货币量直接相关的被决定项</td>
+</tr>
+<tr>
+<td>T</td>
+<td>商品和劳务的交易量</td>
+<td>取决于资本、劳动、自然资源和生产技术等<strong>非货币因素</strong>，大体稳定</td>
+</tr>
+</tbody>
+</table>
+<p>交易方程式反映的是<strong>货币量决定物价水平</strong>的理论；假定其他因素不变，<strong>物价水平与货币量成正比</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>一眼定方向：</strong><p>P＝MV/T：M、V 在<strong>分子</strong>（物价与它们<strong>成正比</strong>），T 在<strong>分母</strong>（成反比）。判断题给"物价水平与货币流通速度成反比"——错，V 在分子，是正比。费雪核心结论一句话：<strong>货币量决定物价水平</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>市场上有 1000 亿元货币流通（M），每 1 元一年转手 5 次（V），全年支撑的交易总额 MV＝5000 亿元；若当年商品和劳务交易量 T 恰为 5000 亿元，则物价水平 P＝1。第二年货币量翻倍到 2000 亿元、V 和 T 不变 → P＝2，物价翻倍——"货币量决定物价水平"就是这么直接。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 费雪口诀</div><p><strong>"费雪看交易，MV 抬物价"</strong>——交易方程式 MV＝PT 盯的是货币<strong>完成交易</strong>的职能；P 与 M、V 正比，与 T 反比，主动权在货币量手里。</p></div></div>
+<div class="section"><h3>2. 剑桥学派的现金余额数量说（剑桥方程式）<span class="hot">高频考点</span></h3>
+<p>剑桥学派的主要代表人物是<strong>庇古</strong>。剑桥方程式：</p>
+<p><strong>M＝KπY</strong></p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>含义</th>
+<th>记忆点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M</td>
+<td>名义货币供给</td>
+<td>—</td>
+</tr>
+<tr>
+<td>π</td>
+<td><strong>货币价值</strong>（即货币购买力，为<strong>物价指数的倒数</strong>）</td>
+<td>与物价反着来</td>
+</tr>
+<tr>
+<td>K</td>
+<td>总资源中<strong>愿意以货币形式持有的比重</strong></td>
+<td>相当于交易方程式中<strong>货币流通速度的倒数</strong></td>
+</tr>
+<tr>
+<td>Y</td>
+<td>总资源（总收入）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>结论：庇古认为<strong>货币价值由货币供求的数量关系决定</strong>，<strong>货币价值与名义货币供给量成反比</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>剑桥盯&quot;手持现金&quot;：</strong><p>剑桥学说把货币需求落在人们<strong>手持的现金余额</strong>上——K 就是"总资源里愿意以货币形态攥在手里的比重"。K 与费雪的 V 互为<strong>倒数</strong>：V 是"1 元钱一年转几圈"，K 是"总收入里留几分之几在手上"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>老王一年经手的支出总量 50 万元（费雪的交易视角：货币在流转），他平时平均留 5 万元现金在身上（剑桥的余额视角：货币被持有）。5 万÷50 万＝10%，这个比重就是 K 的思想——同一枚硬币，一个数流量、一个数存量。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 剑桥口诀</div><p><strong>"剑桥看手持，M＝KπY；K 是 V 倒数，币值与量反"</strong>——持有比重 K 对上流通速度 V 的倒数，货币价值 π 与货币量 M 成反比。</p></div></div>
+<div class="section"><h3>3. 两说的异同与共同结论 <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>现金交易数量说（费雪）</th>
+<th>现金余额数量说（庇古／剑桥）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方程式</td>
+<td>MV＝PT</td>
+<td>M＝KπY</td>
+</tr>
+<tr>
+<td>货币需求怎么表示</td>
+<td>从货币的<strong>交易媒介</strong>职能出发，数的是"转起来的钱"</td>
+<td>以人们<strong>手持现金</strong>表示——不仅是交易媒介，<strong>也包括贮藏货币</strong></td>
+</tr>
+<tr>
+<td>关键差异</td>
+<td>—</td>
+<td>K 集中反映"持币量与支出总量的比例"，这是剑桥方程式<strong>区别于</strong>交易方程式的<strong>关键所在</strong></td>
+</tr>
+<tr>
+<td>共同结论</td>
+<td>物价和货币价值的升降取决于<strong>货币量的变化</strong>：物价水平与货币量<strong>成正比</strong>，货币价值与货币量<strong>成反比</strong></td>
+<td>同左</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>共同结论就一对方向：</strong><p>两说本质一致，方向只记一对：<strong>"物价正、币值反"</strong>——物价水平与货币量成正比；货币价值（购买力）与货币量成反比。四个选项里两个方向一排列，找"一正一反"的那项。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>问"物价水平和货币量成正比、货币价值和货币量成反比"对不对？对——这就是共同结论；说反任何一个（物价反比、币值正比）都错。钱印得越多：东西越贵（物价正），每块钱能买的东西越少（币值反）。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 数量说总口诀</div><p><strong>"费雪交易 M 领衔，剑桥余额 K 掌盘；物价正、币值反，结论两家一般宽"</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 两处高频挖空</div><p>①考"剑桥方程式区别于交易方程式的关键"→ 现金余额说以<strong>手持现金</strong>表示货币需求，<strong>把贮藏货币也包括进来</strong>，K 集中反映这一思想；②考"K 与 V 的关系"→ <strong>K 相当于 V 的倒数</strong>。方向题防反：货币<strong>价值</strong>与货币量成<strong>反比</strong>——货币越多，每块钱的购买力越低。</p></div></div>
+<div class="section"><h2>三、凯恩斯的货币需求理论</h2>
+<h3>1. 流动性偏好与三种动机 <span class="must">必考</span> <span class="s3">★★★</span></h3>
+<p>凯恩斯货币需求理论又称<strong>流动性偏好理论</strong>。经济主体之所以需要货币，是因为存在"<strong>流动性偏好</strong>"这一心理：<strong>愿意持有具有完全流动性的货币</strong>，而不是其他缺乏流动性的资产，以应付<strong>日常的、临时的或投机的</strong>需要，从而产生货币需求。</p>
+<table>
+<thead>
+<tr>
+<th>动机</th>
+<th>产生原因</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>交易动机</strong></td>
+<td>由于<strong>收入和支出的时间不一致</strong>，为进行日常交易而产生的持币愿望</td>
+<td>钱还没到账，账单先来</td>
+</tr>
+<tr>
+<td><strong>预防动机</strong></td>
+<td>为应付各种<strong>紧急情况</strong>（如失业、疾病等）而产生的持币愿望</td>
+<td>留点钱以防万一</td>
+</tr>
+<tr>
+<td><strong>投机动机</strong></td>
+<td>由于<strong>利率的不确定性</strong>，根据市场利率变化的预期持有货币以便从中获利</td>
+<td>攥着现金等机会</td>
+</tr>
+</tbody>
+</table>
+<h3>2. 货币需求函数与流动性陷阱 <span class="must">必考</span></h3>
+<p>三个动机合成两部分需求，凯恩斯的货币需求函数为：</p>
+<p><strong>L＝L1(Y)＋L2(i)</strong></p>
+<table>
+<thead>
+<tr>
+<th>需求部分</th>
+<th>对应动机</th>
+<th>由什么决定</th>
+<th>函数性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>交易性需求</strong> L1</td>
+<td>交易动机＋预防动机</td>
+<td>由<strong>获得的收入的多少</strong>决定</td>
+<td>国民收入的<strong>增函数</strong></td>
+</tr>
+<tr>
+<td><strong>投机需求</strong> L2</td>
+<td>投机动机</td>
+<td>由<strong>利率的高低</strong>决定</td>
+<td>利率的<strong>减函数</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>流动性陷阱</strong>：当利率降到<strong>某一低点</strong>时，货币需求会<strong>无限增大</strong>，此时<strong>无人愿意持有债券，都愿意持有货币</strong>，流动性偏好具有<strong>绝对性</strong>——这就是著名的流动性陷阱。</p>
+<p><strong>基本假定</strong>：凯恩斯的货币需求函数建立在"<strong>未来的不确定性</strong>"和"<strong>收入是短期资产</strong>"两个基本假定之上。</p></div>
+<div class="section"><div class="keypoint"><strong>增减函数对号入座：</strong><p>交易性需求（交易＋预防动机）→ 收入的<strong>增函数</strong>：收入越多，日常周转的钱越多；投机需求 → 利率的<strong>减函数</strong>：利率越高，持币的机会成本越大，大家越愿意买债券、少持币。单选问"交易性货币需求是国民收入的什么函数"→ <strong>增函数</strong>，答案唯一。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>利率跌到 0.5% 还在往下走：债券价格已被推上天花板，再涨空间小、一回头就亏，买了等于白忙 → 干脆全部拿现金趴在账户上，央行再怎么放水也"劝"不动大家买债券。<strong>无人愿意持有债券，都愿意持有货币</strong>——货币需求无限大，这就是利率降到底后的"流动性陷阱"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 凯恩斯口诀</div><p><strong>"交预随收入，投机反利率；利率一到底，货币无限吸"</strong>——交易＋预防动机构成交易性需求（收入增函数）；投机动机构成投机需求（利率减函数）；利率降到低点 → 流动性陷阱。</p></div></div>
+<div class="section"><h2>四、弗里德曼的现代货币数量说</h2>
+<h3>1. 理论定位与货币需求函数 <span class="hot">高频考点</span></h3>
+<p>弗里德曼<strong>接受了剑桥学派的观点</strong>：人们持有货币不仅因为交换，也因为<strong>货币是财富</strong>。但他又认为，货币数量说<strong>不是</strong>产出、货币收入或物价水平的理论，而是<strong>货币需求理论</strong>——这是他给传统货币数量说"重新定位"的关键一句。</p>
+<p>货币需求函数：<strong>M/P＝f(Yp；W；rm，rb，re；(1/P)·(dP/dt)；μ)</strong>（Yp 恒久性收入，W 非人力财富的比例，rm/rb/re 存款、债券和股票的预期名义收益率，(1/P)·(dP/dt) 物价水平的预期变动率，μ 随机因素的影响）。函数式不要求死背，重点背下面这张"因素＋方向"表：</p>
+<table>
+<thead>
+<tr>
+<th>影响因素</th>
+<th>内容</th>
+<th>方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>财富总额</strong></td>
+<td>个人所能持有的货币以其财富总额为上限；财富难以计量，故提出"<strong>恒久性收入</strong>"概念——恒久性收入越高，所需货币越多</td>
+<td><strong>同向</strong></td>
+</tr>
+<tr>
+<td><strong>财富构成</strong></td>
+<td><strong>人力财富比例越高</strong>，所需准备的货币就越多</td>
+<td><strong>同向</strong></td>
+</tr>
+<tr>
+<td><strong>金融资产的预期收益和机会成本</strong></td>
+<td>其他金融资产（股票、债券、定期存单）收益率越高 → 持币机会成本越大 → 持币越少；物价上涨、通货膨胀时持币意味着损失 → 减少货币持有量</td>
+<td><strong>反向</strong></td>
+</tr>
+<tr>
+<td><strong>其他因素</strong></td>
+<td>影响货币需求的各种随机因素</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>两个&quot;越多&quot;和两个&quot;越少&quot;：</strong><p>弗里德曼两句话必背：①<strong>恒久性收入越高，所需货币越多</strong>（财富总额的代理变量）；②<strong>人力财富比例越高，所需准备的货币越多</strong>（靠人挣钱变数大，得多备现金）。反过来：其他金融资产<strong>收益率越高持币越少</strong>、<strong>物价上涨持币越少</strong>——同向两条、反向两条，方向别串。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>靠手艺吃饭的个体户老王（人力财富占比高、收入不稳）→ 平时多备现金，对应"财富构成同向"；白领小李买了债券基金，债券收益率一涨就把活期转过去 → 持币减少，对应"其他资产收益反向"；通胀一来存款缩水，大家都不愿多拿现金 → 持币减少，对应"物价上涨反向"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 弗里德曼口诀</div><p><strong>"财富两条同向走，资产收益反向流"</strong>——财富总额（恒久性收入）、人力财富比例，越高货币需求越多（同向）；股票债券等收益率、物价上涨，越强持币越少（反向）。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三大理论&quot;对号入座&quot;防串场</div><p>见"恒久性收入""人力财富比例"→ <strong>弗里德曼</strong>；见"流动性偏好""三动机""流动性陷阱"→ <strong>凯恩斯</strong>；见"MV＝PT""货币量决定物价水平"→ <strong>费雪</strong>；见"手持现金（含贮藏货币）""M＝KπY"→ <strong>剑桥（庇古）</strong>。多选"货币需求理论包括"→ 传统货币数量说（费雪＋剑桥）、凯恩斯货币需求理论、弗里德曼现代货币数量说，三大家齐上；"有效市场理论""金融不稳定假说"不在其列。还有一句定位题眼：弗里德曼说货币数量说是<strong>货币需求理论</strong>，不是产出、货币收入或物价水平的理论。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 弗里德曼的&quot;压轴结论&quot;：货币需求函数是稳定的</div><p>弗里德曼理论还有一句高频考点（高顿讲义正文未展开，属官方教材体系的标准结论）：<strong>货币需求函数是相对稳定的</strong>——因为影响货币需求的主要因素是恒久性收入（受长期收入预期决定，不随短期波动剧烈变化），而非利率等易变因素（货币需求对利率<strong>不敏感</strong>）。由此推出货币流通速度也相对稳定，进而主张<strong>单一规则</strong>货币政策（货币供给按固定比率增长，不搞相机抉择）。这正是货币主义与凯恩斯主义的核心分野：凯恩斯认为货币需求随利率波动而不稳定，弗里德曼认为需求函数稳定、所以"管住货币量"就够了。判断题见"货币需求函数是稳定的——弗里德曼"，选对；把这句安到凯恩斯头上，选错。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>货币需求</strong>：既定收入财富范围内能够并愿意持有货币的行为；有效需求＝能力＋愿望；派生于商品需求（货币有流通、支付、贮藏手段职能）</li>
+<li><strong>货币需求量</strong>：特定时间空间范围内各部门需要持有的货币数量＝一定时期经济的客观需求量</li>
+<li><strong>费雪</strong>：MV＝PT（P＝MV/T）；货币量决定物价水平；物价与货币量成正比（V 常数、T 稳定）</li>
+<li><strong>剑桥（庇古）</strong>：M＝KπY；以手持现金表示（含贮藏货币，K 是关键、与 V 互为倒数）；货币价值与货币量成反比</li>
+<li><strong>两说共同结论</strong>：物价水平与货币量成正比、货币价值与货币量成反比（物价正、币值反）</li>
+<li><strong>凯恩斯</strong>：流动性偏好；三动机＝交易（收支时间不一致）＋预防（紧急情况）＋投机（利率不确定）；L＝L1(Y)＋L2(i)；交易性需求是收入增函数、投机需求是利率减函数；利率降到低点→流动性陷阱（无人愿持债券、偏好绝对性）；假定＝未来不确定＋收入是短期资产</li>
+<li><strong>弗里德曼</strong>：货币数量说是货币需求理论（非产出/收入/物价理论）；财富总额（恒久性收入）、人力财富比例→同向；其他资产收益率、物价上涨→反向；μ＝随机因素</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="b18s1q1" data-answer="CD" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">费雪的现金交易数量说认为，假定其他因素不变，物价水平与（　）成正比。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 劳务的交易量</button><button type="button" class="qopt" data-key="B">B. 资产总量</button><button type="button" class="qopt" data-key="C">C. 货币量</button><button type="button" class="qopt" data-key="D">D. 货币流通速度</button><button type="button" class="qopt" data-key="E">E. 商品交易量</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CD</div><div class="q-exp"><p>析：由 P＝MV/T 看，物价水平与<strong>货币量（C）</strong>、<strong>货币流通速度（D）</strong>同在分子、成正比。劳务的交易量（A）和商品交易量（E）同属 T，在分母，与物价成<strong>反比</strong>；资产总量（B）与交易方程式无关。费雪的核心命题是"货币量决定物价水平"，但就"成正比"的对象而言，M 与 V 都在列。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s1q2" data-answer="D" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">传统货币数量说中，费雪的现金交易数量说和剑桥学派的现金余额数量说得到的共同结论是：假设其他因素不变，则（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 物价水平和货币量成反比，货币价值与货币量成正比</button><button type="button" class="qopt" data-key="B">B. 物价水平和货币量成正比，货币价值与货币量成正比</button><button type="button" class="qopt" data-key="C">C. 物价水平和货币量成反比，货币价值与货币量成反比</button><button type="button" class="qopt" data-key="D">D. 物价水平和货币量成正比，货币价值与货币量成反比</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：两说本质一致——都试图说明物价和货币价值的升降取决于货币量的变化：<strong>物价水平与货币量成正比，货币价值与货币量成反比</strong>（D）。A、C 把"物价"的方向说反了；B 把"货币价值"的方向说反了。记住口诀"物价正、币值反"，四个选项里挑一正一反的那项。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s1q3" data-answer="AC" data-type="multi"><span class="q-tag">讲义·多选</span><div class="q-stem">经济学家凯恩斯提出的货币需求理论认为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 货币需求由交易动机、预防动机、投机动机决定</button><button type="button" class="qopt" data-key="B">B. 恒久性收入越高，所需货币越多</button><button type="button" class="qopt" data-key="C">C. 当利率降到某一低点时，货币需求会无限增大，此时无人愿意持有债券，都愿意持有货币</button><button type="button" class="qopt" data-key="D">D. 货币供求的数量决定物价水平</button><button type="button" class="qopt" data-key="E">E. 人力财富比例越高，所需准备的货币越多</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：AC</div><div class="q-exp"><p>析：A 对——凯恩斯以三动机（交易、预防、投机）解释货币需求；C 对——这正是<strong>流动性陷阱</strong>的标准表述。B、E 错——"恒久性收入""人力财富比例"是<strong>弗里德曼</strong>现代货币数量说里的因素，不是凯恩斯的；D 错——"货币供求的数量决定物价水平"是<strong>传统货币数量说</strong>（费雪、剑桥）的观点。本题是典型的"三派观点混一锅"陷阱题，先分清各派招牌词再作答。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s1q4" data-answer="A" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">经济学家弗里德曼认为，恒久性收入和货币数量之间的关系是恒久性收入越高，个人（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 所需的货币数量越多</button><button type="button" class="qopt" data-key="B">B. 持有的货币数量越多</button><button type="button" class="qopt" data-key="C">C. 所需的货币数量越少</button><button type="button" class="qopt" data-key="D">D. 持有的货币数量越少</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：弗里德曼认为个人所能持有的货币以财富总额为上限，财富难以计量，故用<strong>恒久性收入</strong>作代理变量——恒久性收入越高，<strong>所需的货币数量越多</strong>（A）。注意题眼在"所需"：货币需求说的是愿意并能够持有的数量，不等于实际"持有"的数量（B、D 偷换概念）；C 把同向关系说成了反向。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s1q5" data-answer="BCD" data-type="multi"><span class="q-tag">2025·多选</span><div class="q-stem">下列理论中，属于货币需求理论的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 有效市场理论</button><button type="button" class="qopt" data-key="B">B. 弗里德曼的货币数量说</button><button type="button" class="qopt" data-key="C">C. 凯恩斯的货币需求理论</button><button type="button" class="qopt" data-key="D">D. 剑桥学派的现金余额数量说</button><button type="button" class="qopt" data-key="E">E. 金融不稳定假说</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：BCD</div><div class="q-exp"><p>析：货币需求理论三大块——传统货币数量说（费雪的现金交易数量说＋<strong>剑桥学派的现金余额数量说</strong>，D）、<strong>凯恩斯的货币需求理论</strong>（流动性偏好理论，C）、<strong>弗里德曼的现代货币数量说</strong>（B）。A"有效市场理论"讲的是证券价格对信息的反映，E"金融不稳定假说"讲的是金融体系的内在不稳定，均不属于货币需求理论。
+:::</p></div></details></div><div class="quiz-item" data-qid="b18s1q6" data-answer="D" data-type="single"><span class="q-tag">2025·单选</span><div class="q-stem">当利率低到某一低点时，货币需求会无限增大，此时无人愿意持有债券，都宁愿持有货币，这就是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 货币危机</button><button type="button" class="qopt" data-key="B">B. 通货膨胀</button><button type="button" class="qopt" data-key="C">C. 流动性危机</button><button type="button" class="qopt" data-key="D">D. 流动性陷阱</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：这就是凯恩斯理论中的<strong>流动性陷阱</strong>（D）——利率降到某一低点时货币需求无限增大，<strong>流动性偏好具有绝对性</strong>。A"货币危机"指货币大幅贬值之类的危机现象，B"通货膨胀"是物价总水平持续上涨，C"流动性危机"是机构或市场缺钱引发的危机——三个都与"利率低点＋货币需求无限大"的定义对不上。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础18_货币供求与货币均衡_第2节_货币供给.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 货币供给</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第12章 工资与就业理论 · 工资水平与工资差别 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第三部分 人力资源经济分析</span><h1>第12章 工资与就业理论 · 工资水平与工资差别</h1><div class="subtitle">第 1 节 / 共 2 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:50%"></div></div><div class="progress-text">本章进度 1/2</div><div class="sec-badge none" id="sec-badge" data-sec="r12s1">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>分清<strong>货币工资</strong>与<strong>实际工资</strong>，背下"实际工资＝货币工资÷物价指数"，知道劳动者、企业、政府三方为什么都盯实际工资 <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>掌握工资谈判的上下限三要素和确定工资水平的三大现实因素，特别是<strong>同工同酬</strong>的准确表述与贯彻障碍 <span class="hot">高频考点</span></li>
+<li>记住<strong>效率工资</strong>"高工资→高生产率"的三点理由、大企业高工资的四点理由 <span class="s3">★★★</span></li>
+<li>一刀切分清职业间工资差别三大类型：<strong>补偿性 / 竞争性（技能性）/ 垄断性</strong> <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li>会判<strong>工资歧视 vs 职业歧视</strong>、三种歧视来源，记住差异指数 0 和 100 的含义 <span class="must">必考</span></li>
+</ul></div></div>
+<div class="section"><h2>一、工资水平</h2>
+<h3>1. 货币工资与实际工资 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>概念</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>货币工资</strong>（又称名义工资）</td>
+<td>雇主以<strong>货币形式</strong>支付给员工的劳动报酬</td>
+</tr>
+<tr>
+<td><strong>实际工资</strong></td>
+<td>货币工资所能买到的<strong>商品和服务量</strong>（说明货币工资的<strong>购买能力</strong>）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心公式</strong>：<strong>实际工资 ＝ 货币工资 ÷ 物价指数</strong>（物价指数一般用消费品价格指数表示）。</p>
+<p>两个基本判断：①两者之间的差别取决于<strong>物价水平</strong>；②现实中，货币工资水平<strong>总是高于</strong>实际工资水平。</p>
+<p><strong>三方都要看实际工资</strong>：
+1. <strong>劳动者</strong>：劳动力供给决策是根据<strong>实际工资</strong>的变动做出的；
+2. <strong>企业</strong>：制定工资制度、确定工资水平时，必须正确了解实际工资水平；
+3. <strong>政府</strong>：制定宏观经济政策时，更重要的是了解市场<strong>实际</strong>工资水平。</p></div>
+<div class="section"><div class="keypoint"><strong>谁在关心实际工资：</strong><p>差别全在物价上：货币工资是"票面数字"，实际工资是"数字能买多少东西"。劳动者拿钱买东西、企业定价留人、政府观察民生的真实购买力——所以三方的决策依据都是<strong>实际工资</strong>，而不是账面上的货币工资。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>小张 2024 年月薪 8000 元，2025 年涨到 8800 元（货币工资↑）；但物价涨得更快，8800 元能买到的东西还不如去年 8000 元——实际工资反而下降。这就是"货币工资上涨时，实际工资有可能是下降的"。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 实际工资口诀</div><p><strong>"名义是票面，实际是购买；实际＝货币÷物价"</strong>。判断题眼：货币工资上涨，实际工资<strong>未必</strong>上涨（物价涨得更快时就下降）；现实中货币工资<strong>总是高于</strong>实际工资。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 公式反转陷阱</div><p>实际工资＝货币工资÷物价指数，反过来是货币工资＝实际工资<strong>×</strong>物价指数。选项写"货币工资＝实际工资÷物价指数"就是错的——除和乘一颠倒，整个公式全错，2019 年多选和多次模拟都在这个坑上设过选项。</p></div></div>
+<div class="section"><h3>2. 确定工资水平的实际因素 <span class="hot">高频考点</span></h3>
+<p><strong>（1）工资谈判存在上限和下限</strong>，谈判中的三个要素（★）：</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>反映什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>雇主对劳动力需要的<strong>迫切程度</strong></td>
+<td>劳动力<strong>需求</strong></td>
+</tr>
+<tr>
+<td>劳动者需要通过就业挣取工资来满足生活需要的<strong>迫切程度</strong></td>
+<td>劳动力<strong>供给</strong></td>
+</tr>
+<tr>
+<td>谈判双方的<strong>力量对比</strong></td>
+<td>供求关系</td>
+</tr>
+</tbody>
+</table>
+<p><strong>（2）现实实践中，影响工资水平的三个因素</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>劳动者个人及家庭所需的<strong>生活费用</strong></td>
+<td>工资首先要能养家糊口</td>
+</tr>
+<tr>
+<td><strong>同工同酬原则</strong>（★★★）</td>
+<td>见下方专点</td>
+</tr>
+<tr>
+<td>部门或企业的<strong>工资支付能力</strong>（★）</td>
+<td>竞争性经济中，如果产品需求稳定，决定企业支付能力的<strong>最主要因素是该部门或企业的生产率</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>同工同酬原则</strong>（★★★）：
+- 概念：对于<strong>完成同等价值工作</strong>的劳动者，应支付<strong>同等水平</strong>的工资；
+- 贯彻范围：应贯彻于<strong>不同行业、部门、职业</strong>，不同民族、种族、性别的劳动者——处于不同行业、部门或职业中的劳动者的工资水平的对比关系，都要符合同工同酬的原则；
+- 现实局限：这一原则往往只能在<strong>同一部门或单位内部</strong>得到较好的贯彻；
+- 贯彻障碍：①不同部门的<strong>利润水平或工资支付能力</strong>不同；②存在<strong>流动壁垒</strong>，缺人部门与冗员部门之间难以同酬。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 同工同酬口诀</div><p><strong>"同值同酬跨行业，单位内部好贯彻"</strong>——原则管到不同行业、部门、职业、民族、种族、性别之间；真要落实却难跨出单位大门，拦路的是"利润不一样"和"人流动不了"。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 原则要求 ≠ 贯彻现状</div><p>2024 年真题考的是"原则的要求"——同工同酬不只是企业内部的事，<strong>跨行业、部门、职业的工资对比关系也要符合</strong>。而"往往只能在同一部门或单位内部得到较好贯彻"说的是<strong>贯彻现状/障碍</strong>，两句话考的是两个问题，别混。</p></div></div>
+<div class="section"><h3>3. 工资水平与生产率：效率工资 <span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<p><strong>效率工资</strong>：企业支付的一种<strong>高于市场均衡水平</strong>的工资。基本假设——<strong>高工资带来高生产率</strong>。支持这一假设的三点理由：</p>
+<table>
+<thead>
+<tr>
+<th>理由</th>
+<th>白话版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①较高的工资能够<strong>吸引较好的员工</strong></td>
+<td>高薪先筛出高效率的人</td>
+</tr>
+<tr>
+<td>②大都与员工对企业的<strong>认同感</strong>有很大关系（<strong>削弱员工的偷懒动机</strong>）</td>
+<td>舍不得这份工资，就不敢偷懒</td>
+</tr>
+<tr>
+<td>③员工十分关注自己是否受到<strong>公平的对待</strong></td>
+<td>觉得被善待，就更愿意好好干</td>
+</tr>
+</tbody>
+</table>
+<p><strong>发挥作用的前提</strong>：劳动者期望与企业保持<strong>长期雇佣关系</strong>——打算长干，高工资才买得来效率；都打算干半年就走，高薪换不来生产率。</p></div>
+<div class="section"><div class="keypoint"><strong>因果方向别搞反：</strong><p>效率工资的逻辑是"<strong>先给高工资 → 换来高生产率</strong>"，不是"生产率高才配拿高工资"。考试问"为什么高工资能带来高生产率"，就往"吸引好员工、降低离职率、产生公平感"三条上靠。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>某制造企业把一线工资定在同行均值之上：招工时收到的简历质量明显变好（①吸引好员工）；老员工怕丢饭碗、磨洋工的少了（②认同感、削弱偷懒）；员工觉得"厂里待我不薄"（③公平感）。前提是员工打算在这里长期干下去。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 效率工资口诀</div><p><strong>"高薪买效率：吸人才、留人心、给公平"</strong>——吸引好员工、降低离职率、催生公平感，三条都指向更高的生产率。</p></div></div>
+<div class="section"><h3>4. 工资水平与企业规模 <span class="hot">高频考点</span></h3>
+<p><strong>规模越大，工资随经验增加而增长速度越快</strong>。大企业愿意支付较高工资的四点原因：</p>
+<table>
+<thead>
+<tr>
+<th>原因</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①<strong>特殊培训</strong>机会增多</td>
+<td>有利于培训员工并建立<strong>长期雇佣关系</strong></td>
+</tr>
+<tr>
+<td>②生产<strong>相互依赖性</strong>强、约束大</td>
+<td>高工资被看成是一种<strong>补偿性工资</strong></td>
+</tr>
+<tr>
+<td>③<strong>晋升机会</strong>多</td>
+<td>富有吸引力</td>
+</tr>
+<tr>
+<td>④<strong>岗位空缺成本</strong>很高</td>
+<td>为降低辞职率，会支付较高的工资</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 企业规模口诀</div><p><strong>"培训多、依赖强、阶梯长、空缺贵"</strong>——大企业高工资的四个来路，其中第②条常与"补偿性工资差别"结合出题。</p></div></div>
+<div class="section"><h2>二、工资差别</h2>
+<h3>1. 工资差别的界定 <span class="hot">高频考点</span></h3>
+<ol>
+<li><strong>工资差别</strong>：指<strong>各类人员的工资在水平上的差异</strong>；</li>
+<li>人们不仅关心工资水平，而且关心工资差别，并且<strong>对后者的重视往往高于前者</strong>；</li>
+<li>工资差别的存在必然是<strong>长期的</strong>：只要劳动者的素质和技能不能完全相同、劳动条件的差别无法消除，工资差别就不可能消除；</li>
+<li>工资差别具有<strong>重新配置资源</strong>的功能，对社会经济的发展具有<strong>积极</strong>的作用。</li>
+</ol></div>
+<div class="section"><div class="keypoint"><strong>别把&quot;差别&quot;当坏事：</strong><p>工资差别是劳动力市场的"价格信号"：哪个职业工资高，资源和人就往哪里流——所以它有重新配置资源的<strong>积极功能</strong>，而且只要素质技能有差异、劳动条件有差别，它就<strong>消除不了</strong>。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>程序员工资明显高于普通文员 → 家长鼓励孩子学计算机、培训机构开编程班 → 高技能劳动力供给增加。工资差别就像指挥棒，指挥着人和资源往稀缺方向流动。</p></div></div>
+<div class="section"><h3>2. 不同产业部门间工资差别的成因 <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>主要内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>熟练劳动力所占比重</strong></td>
+<td>建筑业报酬较高（熟练电工、木工、砌筑工、管道工占比大）；零售业报酬较低（对货物管理员、售货员技能要求不高）</td>
+</tr>
+<tr>
+<td><strong>技术经济特点</strong></td>
+<td>规模大、人均资本投资高的产业人均工资高、人工成本占总成本比重小（资本密集型）；资本要求低、易进入、竞争性强的行业人工成本占比高，属低工资产业（服装加工、纺织品、皮革制品）</td>
+</tr>
+<tr>
+<td><strong>发展阶段</strong></td>
+<td>兴盛期工资增长幅度高于其他部门；衰退期产品积压、工资难增长</td>
+</tr>
+<tr>
+<td><strong>工会化程度</strong></td>
+<td>传统的高工资产业一般也具有较高的工会化程度（但<strong>不宜绝对化</strong>）</td>
+</tr>
+<tr>
+<td><strong>地理位置</strong></td>
+<td>制造业通常集中在工资水平高的地区；低工资行业（如纺织业）更多集中在工资较低的地区</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 产业部门五成因</div><p><strong>"熟练、技术、阶段、工会、地理"</strong>——五个因素一条不能少，多选题问"不包括"就往这五个之外找（如"劳动力规模"就不是成因）。</p></div></div>
+<div class="section"><h3>3. 不同职业间工资差别：三大类型 <span class="s3">★★★</span> <span class="must">必考</span></h3>
+<p><strong>古典经济学家（亚当·斯密）的观点</strong>——不同职业间工资差别源于五个方面：①劳动强度和劳动条件上的差别；②职业引起的愉快或不愉快程度的差别；③从业能力获得的难易程度的差别；④社会安全程度（工作保障和职业稳定程度）的差别；⑤所承担的责任程度的差别。</p>
+<p><strong>现代经济学家的观点</strong>（★★★）——职业间工资差别分为三大类型：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>前提</th>
+<th>含义</th>
+<th>典型例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>补偿性工资差别</strong></td>
+<td>劳动者知识技能上<strong>无质的差别</strong></td>
+<td>因从事职业的<strong>工作条件和社会环境</strong>不同而产生的工资差别（劳动强度和劳动条件、从业时的不愉快程度、工作保障和职业稳定程度、承担的责任程度）</td>
+<td>井下矿工比地面同类工种工资高</td>
+</tr>
+<tr>
+<td><strong>竞争性（技能性）工资差别</strong></td>
+<td>劳动者<strong>存在质的差异</strong></td>
+<td>质量较高的劳动力通常有高的劳动效率，工资也较高；质量较低的劳动力劳动效率低，通常只有较低的工资</td>
+<td>研究生与本科生的工资差别</td>
+</tr>
+<tr>
+<td><strong>垄断性工资差别</strong></td>
+<td>不同质劳动者之间的<strong>流动受到自然的或非自然的力量限制</strong></td>
+<td>流动受限使原有从业者保持垄断地位，获得垄断性工资收入</td>
+<td>见下两种细分</td>
+</tr>
+</tbody>
+</table>
+<p>垄断性工资差别的两种细分：</p>
+<table>
+<thead>
+<tr>
+<th>细分</th>
+<th>限制来源</th>
+<th>要点</th>
+<th>典型例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>非自然性垄断</strong></td>
+<td><strong>外力限制</strong>（国家行政权力或社会经济体制，可称为<strong>制度性原因</strong>）</td>
+<td>其他劳动者无法转入该职业就业</td>
+<td>城乡分隔的就业政策</td>
+</tr>
+<tr>
+<td><strong>自然性垄断</strong></td>
+<td>从事某职业的劳动力<strong>非常稀缺或较为稀缺</strong>，短时间很难补充</td>
+<td>使用这种劳动力付出的价格取决于<strong>社会需求</strong>，而不是他们本身的劳动价值</td>
+<td>文体影视明星们的收入</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="keypoint"><strong>三类型的判断入口：</strong><p>先看劳动力<strong>质同不同</strong>：质相同、只是条件环境不同 → <strong>补偿性</strong>；质不同 → 再看<strong>流动是否受限</strong>：能自由流动（纯拼效率）→ <strong>竞争性</strong>；流动被锁死 → <strong>垄断性</strong>。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 工资差别三类型口诀</div><p><strong>"质同补条件，质异竞效率，垄断靠限制——制度锁（非自然）、稀缺贵（自然）"</strong>。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 三步判定法＋典型例题锚点</div><ol>
+<li><strong>大企业生产相互依赖、约束多的高工资</strong> → 补偿性工资差别（2024 真题）；</li>
+<li><strong>文体明星高收入</strong> → 垄断性（<strong>自然性</strong>垄断）工资差别，不是竞争性（2018 真题的坑就在这）；</li>
+<li><strong>城乡分隔就业政策</strong> → 垄断性（<strong>非自然性/制度性</strong>）工资差别；</li>
+<li><strong>劳动能力和劳动效率不同</strong> → 竞争性（技能性）工资差别；</li>
+<li><strong>工作条件不同</strong> → 补偿性工资差别。</li>
+</ol></div></div>
+<div class="section"><h2>三、工资性报酬差别与劳动力市场歧视</h2>
+<h3>1. 不同群体间的工资性报酬差别 <span class="hot">高频考点</span></h3>
+<p>以<strong>男性和女性之间的工资性报酬差别</strong>为例，可以从四方面解释：①<strong>年龄和受教育程度</strong>；②<strong>职业</strong>；③<strong>工时和工作经验</strong>。</p></div>
+<div class="section"><div class="keypoint"><strong>差别 ≠ 歧视：</strong><p>男女工资性报酬差别可以由教育、职业、工时、经验这些<strong>生产率相关因素</strong>解释——只有排除了这些因素、生产率特征完全相同却仍然报酬不同，才谈得上"歧视"。</p></div></div>
+<div class="section"><h3>2. 劳动力市场歧视的界定 <span class="must">必考</span></h3>
+<p><strong>劳动力市场歧视</strong>：指具有<strong>相同生产率特征</strong>的劳动者，<strong>仅仅因为所属的人口群体不同</strong>而受到区别对待。</p></div>
+<div class="section"><div class="keypoint"><strong>歧视的判定前提：</strong><p>只有<strong>具有相同生产率特征的两类人却获得了不同报酬</strong>，才属于劳动力市场歧视。生产率不同而报酬不同，是正常的按劳付酬——"生产率相同"这五个字是所有歧视题的第一道门槛。</p></div></div>
+<div class="section"><h3>3. 歧视的类型：工资歧视 vs 职业歧视 <span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>概念</th>
+<th>题眼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>工资歧视</strong></td>
+<td>雇主针对<strong>既定的生产率特征</strong>支付的<strong>价格</strong>，因劳动者所属的人口群体不同而呈现<strong>系统性的差别</strong></td>
+<td>同样的活、同样的生产率，就因为性别/群体不同而<strong>给钱不一样</strong></td>
+</tr>
+<tr>
+<td><strong>职业歧视</strong></td>
+<td>对具有<strong>相同的受教育水平和其他生产率特征</strong>的不同类型的劳动者加以区别对待，将一类劳动者<strong>有意安排到低工资的职业</strong>中，或让其承担<strong>工作责任要求较低</strong>的岗位，把高工资岗位留给特定类型的劳动者</td>
+<td>活一样，但<strong>被赶到差岗位</strong>上</td>
+</tr>
+</tbody>
+</table>
+<p><strong>职业隔离与差异指数</strong>：职业隔离指<strong>一个人口群体内部的职业分布与其他人口群体存在很大差异</strong>的情况。衡量指标是<strong>差异指数</strong>——两种性别的劳动力在各种职业中的分布完全相同，差异指数为 <strong>0</strong>；所有职业都完全隔离，指数值等于 <strong>100</strong>。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 歧视类型口诀</div><p><strong>"同产率不同薪＝工资歧视；同产率被踩到低岗＝职业歧视；零混百隔看指数"</strong>——差异指数 0 是分布完全一样（无隔离），100 是完全隔离。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 歧视题的第一道门槛</div><p>2020 年真题 A 项"对<strong>生产率存在差异</strong>的劳动者支付不同工资"不是歧视——生产率不同，工资不同天经地义；C 项"把女性安排到低工资岗位"是<strong>职业歧视</strong>不是工资歧视；D 项"相同工作、不同地理位置工资不同"是地区差别，不属于歧视。另外注意：现实中男女职业分布差异里，有多少源于就业前的职业准备、教育培训，有多少源于歧视，<strong>很难衡量</strong>——所以"对职业歧视进行衡量比较困难"是正确说法（2018 真题）。</p></div></div>
+<div class="section"><h3>4. 歧视的来源：三大市场歧视理论 <span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>概念</th>
+<th>题眼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>个人歧视</strong></td>
+<td>雇主、客户<strong>或员工</strong>当中至少有一方对员工存有偏见，即具有不与某一特定人口群体中的人打交道的偏好</td>
+<td>偏见可以来自雇主、客户、同事任何一方</td>
+</tr>
+<tr>
+<td><strong>统计性歧视</strong></td>
+<td>与雇主的<strong>招募和甄选过程</strong>有关；企业经常用<strong>历史经验</strong>（求职者所属群体的群体特征）来预测求职者未来的生产率状况</td>
+<td>用"群体平均像"代替对个人的考察</td>
+</tr>
+<tr>
+<td><strong>非竞争性歧视</strong></td>
+<td>劳动力市场处于<strong>非竞争状态</strong>下产生的歧视；歧视依据是"<strong>人脉</strong>"等独特因素</td>
+<td>企业具有某种<strong>垄断力量</strong>时，会<strong>同时产生</strong>职业歧视和工资歧视</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>雇主认为"应届生平均留不住"，于是对一位其实非常稳定的应届毕业生连面试机会都不给——用群体的一般特征预测个人的生产率，而群体特征并不能对个人提供完善的预测，让个人替所属群体的"平均像"买单。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 歧视来源口诀</div><p><strong>"个人偏、统计推、非竞争靠垄断"</strong>——个人歧视是偏见（谁有偏见都算：雇主/客户/员工）；统计性歧视是用群体特征"推"个人（发生在招募甄选环节）；非竞争性歧视是垄断市场里靠"人脉"等独特因素，且<strong>同时</strong>产生职业歧视＋工资歧视。</p></div></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 类型 vs 来源是两套标签</div><p>"工资歧视/职业歧视"是歧视的<strong>类型</strong>（表现形式），"个人/统计性/非竞争性"是歧视的<strong>来源</strong>（成因）——说"职业歧视属于一种统计性歧视"就把两套标签搅在一起了，2018 真题专门考过这个错法。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>货币工资</strong>（名义工资）＝以货币支付的劳动报酬；<strong>实际工资</strong>＝货币工资÷物价指数（购买能力）；差别取决于物价水平；现实货币工资总是高于实际工资；劳动者供给决策、企业定薪、政府宏调都看实际工资</li>
+<li>工资谈判三要素：雇主迫切程度（需求）、劳动者迫切程度（供给）、力量对比（供求关系）→ 工资存在上下限</li>
+<li>确定工资水平三现实因素：生活费用、<strong>同工同酬</strong>（同值同酬、跨行业部门职业；单位内部好贯彻；障碍＝利润/支付能力差异＋流动壁垒）、<strong>支付能力</strong>（产品需求稳定时最主要看生产率）</li>
+<li><strong>效率工资</strong>：高于市场均衡水平的工资；高工资→高生产率＝吸引好员工＋认同感/削弱偷懒＋公平感；前提＝预期长期雇佣</li>
+<li>大企业工资随经验增长更快：培训多、依赖强（高工资＝补偿性）、晋升多、空缺贵</li>
+<li><strong>工资差别</strong>：各类人员工资水平差异；比对工资水平本身更受重视；长期存在；有重新配置资源的积极功能</li>
+<li>产业部门间差别五成因：熟练劳动力比重、技术经济特点、发展阶段、工会化程度、地理位置</li>
+<li>职业间差别三类型：<strong>补偿性</strong>（质同、条件环境不同）／<strong>竞争性（技能性）</strong>（质异、效率不同）／<strong>垄断性</strong>（流动受限：非自然性＝制度锁死如城乡分隔；自然性＝稀缺难补如文体明星）</li>
+<li><strong>歧视</strong>＝相同生产率特征＋人口群体不同＋区别对待；<strong>工资歧视</strong>（同岗不同薪）vs <strong>职业歧视</strong>（被赶到低工资岗位）；职业隔离用<strong>差异指数</strong>衡量（0＝分布全同，100＝完全隔离）</li>
+<li>歧视三来源：<strong>个人歧视</strong>（雇主/客户/员工的偏见）、<strong>统计性歧视</strong>（群体特征预测个人，招募甄选环节）、<strong>非竞争性歧视</strong>（垄断状态、人脉因素，同时产生两种歧视）</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r12s1q1" data-answer="C" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">相对于货币工资而言，实际工资是指（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 劳动者获得的税前工资</button><button type="button" class="qopt" data-key="B">B. 劳动者的税后工资和社会保险缴费之和</button><button type="button" class="qopt" data-key="C">C. 劳动者获得的货币工资能够购买到的商品和服务数量</button><button type="button" class="qopt" data-key="D">D. 劳动者实际获得的税后工资</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析：实际工资是货币工资所能购买到的<strong>商品和服务量</strong>，说明货币工资的<strong>购买能力</strong>，不过是经过某种价格调整之后的货币工资（C 对）。它跟税前税后、扣不扣社保毫无关系——那是发放环节的概念，A、B、D 都是干扰项。
+:::</p></div></details></div><div class="quiz-item" data-qid="r12s1q2" data-answer="CDE" data-type="multi"><span class="q-tag">2019·多选</span><div class="q-stem">关于工资水平的说法，正确的有（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 实际工资就是指员工实际拿到手的货币工资</button><button type="button" class="qopt" data-key="B">B. 实际工资就是指名义工资</button><button type="button" class="qopt" data-key="C">C. 企业在确定工资水平时必须了解实际工资水平</button><button type="button" class="qopt" data-key="D">D. 货币工资上涨时，实际工资有可能是下降的</button><button type="button" class="qopt" data-key="E">E. 物价指数越高，相同的货币工资代表的实际工资水平越低</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：CDE</div><div class="q-exp"><p>析：实际工资是货币工资所能<strong>购买到</strong>的商品和服务量，不是"拿到手的货币工资"，A 错误；货币工资才又称名义工资，两者不是一回事，B 错误。企业确定工资水平必须了解实际工资水平，C 正确。实际工资＝货币工资÷物价指数，货币工资上涨幅度赶不上物价时实际工资会下降，D 正确；物价指数越高，同样的货币工资买到的东西越少，实际工资水平越低，E 正确。
+:::</p></div></details></div><div class="quiz-item" data-qid="r12s1q3" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于工资水平，以下说法错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 现实中的货币工资水平总是高于实际工资水平</button><button type="button" class="qopt" data-key="B">B. 货币工资＝实际工资÷物价指数</button><button type="button" class="qopt" data-key="C">C. 实际工资可用来说明货币工资的购买能力</button><button type="button" class="qopt" data-key="D">D. 名义工资是指雇主以货币形式支付给员工的劳动报酬</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：正确公式是<strong>实际工资＝货币工资÷物价指数</strong>，反过来是货币工资＝实际工资<strong>×</strong>物价指数，B 把除法写反了，当选。物价上涨时货币工资通常高于实际工资（A 对）；实际工资反映货币工资的购买力（C 对）；名义工资即雇主以货币形式支付的劳动报酬（D 对）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r12s1q4" data-answer="B" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">对于同工同酬原则，以下描述正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 同一家企业中的同一工种的劳动者拿大体相同的工资</button><button type="button" class="qopt" data-key="B">B. 在不同企业中完成价值相同工作的劳动者拿大体相同的工资</button><button type="button" class="qopt" data-key="C">C. 所有的劳动者拿大体相同的工资</button><button type="button" class="qopt" data-key="D">D. 在同一家企业中完成价值相同工作的劳动者拿大体相同的工资</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：教材强调"处于不同行业、部门或职业中的劳动者的工资水平的对比关系要符合同工同酬的原则"——对完成同等价值工作的劳动者支付同等水平的工资，应贯彻于<strong>不同行业、部门、职业</strong>乃至不同民族、种族、性别的劳动者之间，B 正确。C 错在"所有劳动者"——同工同酬的前提是"完成同等价值工作"，不同工不同酬；A、D 把范围缩到同一家企业内部，没有体现跨行业、部门、职业对比关系这一原则要求。
+:::</p></div></details></div><div class="quiz-item" data-qid="r12s1q5" data-answer="A" data-type="single"><span class="q-tag">2023·单选</span><div class="q-stem">关于效率工资的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 效率工资是与员工个人的生产率挂钩的工资</button><button type="button" class="qopt" data-key="B">B. 效率工资有利于降低员工离职率</button><button type="button" class="qopt" data-key="C">C. 效率工资高于市场均衡工资水平</button><button type="button" class="qopt" data-key="D">D. 效率工资有利于提高员工生产率</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：效率工资是企业支付的<strong>高于市场均衡水平</strong>的工资（C 正确），并不是与员工个人生产率挂钩的工资，A 错误当选。企业愿意支付高工资的基本假设就是高工资带来高生产率：①吸引更优秀的员工；②降低离职率（B 正确）；③让人产生公平感——三条最终都指向提高生产率（D 正确）。
+:::</p></div></details></div><div class="quiz-item" data-qid="r12s1q6" data-answer="B" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">大企业中生产环境高度相互依赖，对员工遵守纪律的要求更高、约束更多，很多大企业支付的工资高于中小企业，这种工资差别可以视为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 竞争性工资差别</button><button type="button" class="qopt" data-key="B">B. 补偿性工资差别</button><button type="button" class="qopt" data-key="C">C. 技术性工资差别</button><button type="button" class="qopt" data-key="D">D. 垄断性工资差别</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：补偿性工资差别是知识技能上<strong>无质的差别</strong>的劳动者，因工作条件和社会环境不同而产生的工资差别。大企业生产高度相互依赖、纪律约束严，员工用"受约束、放弃自由"换来高工资，这种高工资正是对"约束"的补偿（B 对）。竞争性（技能性）差别源于劳动力质的差异（A、C）；垄断性差别源于流动受限（D），均不符合题意。
+:::</p></div></details></div><div class="quiz-item" data-qid="r12s1q7" data-answer="B" data-type="single"><span class="q-tag">2018·单选</span><div class="q-stem">关于工资差别的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 因劳动能力和劳动效率不同形成的工资差别属于技能性工资差别</button><button type="button" class="qopt" data-key="B">B. 高收入文体明星与一般劳动者之间的工资差别属于竞争性工资差别</button><button type="button" class="qopt" data-key="C">C. 因工作条件不同引起的工资差别属于补偿性工资差别</button><button type="button" class="qopt" data-key="D">D. 因城乡分割就业政策造成的工资差别属于垄断性工资差别</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：文体影视明星的劳动力极其稀缺、短期难以补充，其收入取决于<strong>社会需求</strong>而非本身的劳动价值，属于<strong>垄断性</strong>（自然性垄断）工资差别，不是竞争性工资差别，B 错误当选。A 对：质的差异→竞争性（技能性）差别；C 对：工作条件不同→补偿性差别；D 对：城乡分隔就业政策是制度性（非自然性）垄断。
+:::</p></div></details></div><div class="quiz-item" data-qid="r12s1q8" data-answer="C" data-type="single"><span class="q-tag">2018·单选</span><div class="q-stem">关于不同产业部门间工资差别的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 熟练劳动力所占比重高的产业通常工资水平更高</button><button type="button" class="qopt" data-key="B">B. 人均资本投资比例高的产业部门，人均工资水平通常也高</button><button type="button" class="qopt" data-key="C">C. 产业的工会化程度越高，则工资水平一定越高</button><button type="button" class="qopt" data-key="D">D. 工资水平较低的产业更多的集中在低工资地区</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>析："工会化程度越高工资水平<strong>一定</strong>越高"过于绝对：传统高工资产业一般工会化程度较高，但其作用不宜夸大或绝对化——纺织业和服装业都是低工资行业，纺织业工会化程度很低，服装业却完全工会化，可见工会化程度不同并不必然引起产业间工资水平差别，C 错误当选。A、B、D 分别对应熟练劳动力比重、技术经济特点、地理位置三个成因，均正确。
+:::</p></div></details></div><div class="quiz-item" data-qid="r12s1q9" data-answer="B" data-type="single"><span class="q-tag">2020·单选</span><div class="q-stem">下列做法中，属于工资歧视的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 对于生产率存在差异的劳动者支付不同水平的工资</button><button type="button" class="qopt" data-key="B">B. 对于其他条件均相同且从事相同工作的不同性别劳动者支付不同的工资</button><button type="button" class="qopt" data-key="C">C. 故意将女性劳动者安排到低工资的职业或岗位上去</button><button type="button" class="qopt" data-key="D">D. 对于从事相同工作但所处地理位置不同的劳动者支付不同水平的工资</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：工资歧视是雇主针对<strong>既定的生产率特征</strong>支付的<strong>价格</strong>因人口群体不同而呈现系统性差别——"其他条件均相同、从事相同工作、仅性别不同而工资不同"正是典型（B 对）。A 是按生产率付酬，不是歧视；C 是把人赶到低工资岗位，属于<strong>职业歧视</strong>；D 是地区间工资差别，不属于歧视。
+:::</p></div></details></div><div class="quiz-item" data-qid="r12s1q10" data-answer="D" data-type="single"><span class="q-tag">2018·单选</span><div class="q-stem">关于职业歧视的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 职业歧视属于一种统计性歧视</button><button type="button" class="qopt" data-key="B">B. 不同性别劳动者之间的工资差别是职业歧视造成的</button><button type="button" class="qopt" data-key="C">C. 职业歧视是指针对具有不同生产率特征的不同劳动者群体支付不同的工资</button><button type="button" class="qopt" data-key="D">D. 对职业歧视进行衡量比较困难</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：现实中男女职业分布存在很多差别，其中多少源于进入劳动力市场前的职业准备、正规教育、职业培训，多少源于职业歧视，<strong>很难衡量</strong>，D 正确。A 把两套标签混了：职业歧视是歧视的<strong>类型</strong>，统计性歧视是歧视的<strong>来源</strong>；B 错：工资差别不能一概归因于职业歧视；C 错：职业歧视针对的是具有<strong>相同</strong>受教育水平和其他生产率特征的劳动者。
+:::</p></div></details></div></div><div class="footer-nav"><span class="prev nav-cell disabled"><span class="nav-label">上一节</span><span class="nav-title">已是第一节</span></span><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力12_工资与就业理论_第2节_就业与失业.html"><span class="nav-label">下一节</span><span class="nav-title">第2节 就业与失业</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>

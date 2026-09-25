@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第3章 组织设计与组织文化 · 组织文化 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">人力资源管理专业知识和实务 · 第一部分 组织行为学</span><h1>第3章 组织设计与组织文化 · 组织文化</h1><div class="subtitle">第 2 节 / 共 3 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:66%"></div></div><div class="progress-text">本章进度 2/3</div><div class="sec-badge none" id="sec-badge" data-sec="r03s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<li>背熟组织文化的<strong>定义</strong>与形成关键——"一把手文化"（取决于最高管理层的行为方式和管理风格） <span class="hot">高频考点</span></li>
+<li><strong>六大作用</strong>（导向/规范/凝聚/激励/创新/辐射）一字不落，分清"物质纽带 vs 情感思想纽带" <span class="s3">★★★</span></li>
+<li><strong>三层结构</strong>（物质层/制度层/精神层）逐层说清"是什么、什么地位"，抓死"有没有精神层是衡量标志" <span class="s3">★★★</span> <span class="must">必考</span></li>
+<li><strong>四种文化类型</strong>（学院/俱乐部/棒球队/堡垒）关键词秒配对；理解组织设计七个方面如何影响组织文化 <span class="hot">高频考点</span></li>
+</ul></div></div>
+<div class="section"><h2>一、组织文化的概念与作用</h2>
+<h3>1. 概念与影响因素（★★）<span class="hot">高频考点</span></h3>
+<p><strong>组织文化</strong>是指<strong>控制组织内行为、工作态度、价值观以及关系设定的规范</strong>，是组织成员的<strong>共同价值观体系</strong>，它使组织独具特色、区别于其他组织。</p>
+<p><strong>影响因素</strong>：组织文化<strong>取决于最高管理层的行为方式和管理风格</strong>；同时，工作群体的特征、管理者和基层主管的领导模式、组织特征和管理过程、外部环境等，也促成组织文化的形成。</p></div>
+<div class="section"><div class="keypoint"><strong>一把手文化：</strong><p>组织文化的"总设计师"是<strong>最高管理层</strong>——考题最爱把"取决于基层员工的行为方式"当错误选项。工作群体特征、领导模式、组织特征和管理过程、外部环境这四个因素只是"促成"形成，题干问"在很大程度上取决于"时只认最高管理层。</p></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 概念抓两头</div><p><strong>"对内是一套规范，对外是一面旗帜"</strong>——对内控制组织内行为、工作态度、价值观以及关系设定（规范）；对外让组织独具特色、区别于其他组织（共同价值观体系）。两个身份都要答全。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>两家相邻的奶茶店：一家老板凡事讲数据，开例会先看报表，员工开口闭口"转化率""复购"；另一家老板口头禅是"客人像朋友"，员工自然会在小票上手写祝福。老板的行为方式和管理风格，就是这两家店文化的底色。</p></div></div>
+<div class="section"><h3>2. 组织文化的六大作用（★★）<span class="s3">★★★</span></h3>
+<table>
+<thead>
+<tr>
+<th>作用</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>导向作用</strong></td>
+<td>把组织整体及组织成员个人的<strong>价值取向及行为取向</strong>引导到组织所确定的<strong>目标</strong>上来</td>
+</tr>
+<tr>
+<td><strong>规范作用</strong></td>
+<td>无形的、思想上的约束力量，是一种<strong>软规范</strong>，弥补规章制度的不足</td>
+</tr>
+<tr>
+<td><strong>凝聚作用</strong></td>
+<td><strong>薪酬和福利</strong>是凝聚员工的<strong>物质纽带</strong>，组织文化则是凝聚员工的<strong>情感纽带和思想纽带</strong></td>
+</tr>
+<tr>
+<td><strong>激励作用</strong></td>
+<td>创造<strong>人人受到重视、受到尊重</strong>的文化氛围，激励员工</td>
+</tr>
+<tr>
+<td><strong>创新作用</strong></td>
+<td>建立具有鲜明特色的组织文化是组织<strong>创新的重要基础</strong>，是激发员工创新精神的<strong>源泉和动力</strong></td>
+</tr>
+<tr>
+<td><strong>辐射作用</strong></td>
+<td>组织文化会对<strong>社会公众、组织所在地区乃至国内外组织</strong>产生影响</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：六作用</div><p><strong>"导规聚激创辐射"</strong>——导向、规范、凝聚、激励、创新、辐射，六作用各取一字连成串（像"规矩"一样把人"聚"起来，"创"出新气象再向内外"辐射"）。多选干扰项常冒出"制约作用、教育作用"这类编外词，口诀里没有的都是假的。</p></div></div>
+<div class="section"><div class="keypoint"><strong>纽带配对（判断题点）：</strong><p>凝聚员工的<strong>物质纽带</strong>＝薪酬和福利；<strong>情感纽带和思想纽带</strong>＝组织文化。判断题把两者对调就是坑；另外规范作用的关键词是"<strong>软规范</strong>、弥补规章制度不足"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一家公司搬去新城区，员工不愿跟着走。光靠调薪酬（物质纽带）只能留人一时；而"我们是一家人"的文化让老员工自发约新同事拼车、认门（情感纽带），人留住了，心也留下了——这就是凝聚作用，跟规章制度的硬约束（规范作用）不是一回事。</p></div></div>
+<div class="section"><h2>二、组织文化的结构与类型</h2>
+<h3>3. 组织文化的三层结构（★★★）<span class="s3">★★★</span> <span class="must">必考</span></h3>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>含义</th>
+<th>作用/地位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>物质层</strong>（表层）</td>
+<td>企业名称、产品外观及包装、建筑风格、纪念物等<strong>外显标识</strong></td>
+<td>往往<strong>折射组织的经营思想、工作作风和审美意识</strong>；是组织文化的<strong>外在表现、物质基础</strong></td>
+</tr>
+<tr>
+<td><strong>制度层</strong>（中间层、里层）</td>
+<td>组织中的各种<strong>行动准则或规章制度</strong></td>
+<td><strong>制约和规范着物质层及精神层的建设</strong>；没有严格的规章制度，组织文化建设就无从谈起</td>
+</tr>
+<tr>
+<td><strong>精神层</strong>（深层）</td>
+<td>组织的领导和员工<strong>共同信守</strong>的基本信念、价值标准、职业道德及精神风貌</td>
+<td>是形成物质层及制度层的<strong>思想基础</strong>，是组织文化的<strong>核心和灵魂</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>★★★ 标志性考点</strong>：有没有<strong>精神层</strong>，是衡量一个组织<strong>是否形成了自己的组织文化</strong>的主要标志和标准。</p></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 三层结构</div><p><strong>"表物、中制、深精神"</strong>——表层是物质（看得见的厂徽厂服），中间是制度（翻得到的规章），深处是精神（看不见的信念）。由外到内越挖越深，精神层是核心和灵魂。</p></div></div>
+<div class="section"><div class="keypoint"><strong>衡量标志是&quot;精神层&quot;，不是&quot;制度层&quot;：</strong><p>2016 年多选专门把"有无制度层是衡量一个组织是否形成了自身组织文化的主要标志"设成错误项——错！<strong>有没有精神层</strong>才是主要标志和标准。这一句话有三种考法：单选直问"标志是什么"、多选把"制度层"埋成雷、判断题反转主语。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一家工厂：门口的厂徽、产品包装、厂房风格（物质层）；考勤办法、质量手册、奖惩条例（制度层）；"质量是饭碗"这条全员真信的信念（精神层）。前两样别的厂都能照抄，唯独第三样抄不走——所以有没有精神层才算有没有"自己的"文化。</p></div></div>
+<div class="section"><h3>4. 组织文化的类型（★★★）<span class="s3">★★★</span> <span class="hot">高频考点</span></h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>内容</th>
+<th>关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>学院型</strong></td>
+<td>为那些<strong>想全面掌握每一种新工作</strong>的人准备的地方；喜欢雇用<strong>年轻的大学毕业生</strong>，提供<strong>大量的专门培训</strong>，指导其在<strong>特定的职能领域</strong>从事各种专业化工作</td>
+<td>培养专才</td>
+</tr>
+<tr>
+<td><strong>俱乐部型</strong></td>
+<td>非常重视<strong>适应、忠诚感和承诺</strong>；<strong>资历</strong>是关键因素，<strong>年龄和经验</strong>至关重要；把管理者培养成<strong>通才</strong></td>
+<td>忠诚＋通才</td>
+</tr>
+<tr>
+<td><strong>棒球队型</strong></td>
+<td>鼓励<strong>冒险和革新</strong>；招聘时寻求<strong>有才能的人</strong>；薪酬制度<strong>以员工绩效水平为标准</strong>；对出色员工给予<strong>巨额奖励和较大自由度</strong>，员工一般都拼命工作</td>
+<td>冒险＋绩效</td>
+</tr>
+<tr>
+<td><strong>堡垒型</strong></td>
+<td>着眼于公司的<strong>生存</strong>；<strong>工作安全保障不足</strong>，吸引喜欢<strong>流动性、挑战性</strong>的人</td>
+<td>生存＋保障差</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 上岸熊口诀：四类型</div><p><strong>"专业学院，俱乐通才，棒球水平，堡垒不保"</strong>——学院型培养专才、俱乐部型培养通才、棒球队型按绩效水平给钱、堡垒型不保障工作安全。四句话十二个字，考场上对号入座。</p></div></div>
+<div class="section"><div class="keypoint"><strong>两个易混点：</strong><p>①学院型 vs 俱乐部型：都重视培养人，学院型出<strong>专才</strong>（特定职能领域的专业化），俱乐部型出<strong>通才</strong>（多岗位历练出的管理者，重资历）。②堡垒型着眼于"<strong>生存</strong>"而非"发展"，且<strong>工作安全保障不足</strong>——别想当然写成"稳定安全"。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>会计师事务所像学院型：招应届毕业生、一门门考证培训、在审计条线上深耕成专才；老牌制造企业像俱乐部型：论资排辈、忠诚第一、干部多岗位历练成通才；头部投行像棒球队型：挖现成高手、按业绩拿天价奖金；现金流告急的转型企业像堡垒型：先活下去，保障有限，适合敢闯、敢挪窝的人。</p></div></div>
+<div class="section"><h2>三、组织文化与组织设计</h2>
+<h3>5. 组织设计影响组织文化（★）</h3>
+<p>组织设计影响组织文化的形成，七个方面（★）：</p>
+<table>
+<thead>
+<tr>
+<th>设计要素</th>
+<th>对组织文化的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>制度化</strong></td>
+<td>制度化程度越高，组织文化越趋于<strong>严谨</strong>，不利于形成鼓励<strong>创新、开放</strong>的组织文化</td>
+</tr>
+<tr>
+<td><strong>规范化</strong></td>
+<td>高度规范化<strong>不利于</strong>形成<strong>多样化、革新性</strong>文化</td>
+</tr>
+<tr>
+<td><strong>管理层次</strong></td>
+<td>管理层次多、结构复杂，不利于培养员工<strong>自主性和参与决策的主动性</strong></td>
+</tr>
+<tr>
+<td><strong>集权程度</strong></td>
+<td>集权程度越高，越不利于形成<strong>民主、参与</strong>的组织文化</td>
+</tr>
+<tr>
+<td><strong>招聘制度</strong></td>
+<td><strong>内部招聘</strong>为主→倾向于强调<strong>稳定和连续性</strong>的文化；<strong>外部招聘</strong>为主→重视<strong>灵活性和创新</strong>的价值</td>
+</tr>
+<tr>
+<td><strong>绩效评估体系</strong></td>
+<td><strong>合作</strong>型组织文化，不适宜强调<strong>个人绩效</strong>的评估体系；<strong>冒险性、创新性</strong>组织文化，评估重点应放在<strong>评价创新的努力</strong>上</td>
+</tr>
+<tr>
+<td><strong>薪酬制度</strong></td>
+<td>级别间<strong>薪酬差异很大</strong>的体系适合<strong>强调等级</strong>的组织文化；<strong>整齐划一</strong>的文化中很难靠奖金和荣誉激发员工创造力；想培养<strong>合作氛围</strong>的组织不应过分强调薪酬的功能性意义</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 七个开关</div><p><strong>"制度规范层次集权，越高越死板；招聘内稳外活；评估看合作创新；薪酬级差配等级"</strong>——前四个"程度/层次"类开关都朝"严谨稳定"方向拧，想要创新开放就得反向拧；后三个是"制度与文化要配套"的配对题。</p></div></div>
+<div class="section"><div class="keypoint"><strong>方向感一句话：</strong><p>前四个（制度化、规范化、管理层次、集权程度）都是"<strong>越高越多，越不利于创新、开放、民主、参与</strong>"；后三个（招聘、绩效评估、薪酬）讲的是"<strong>什么样的制度配什么样的文化</strong>"。2024 年单选就考"规范化程度越高越有利于形成创新性文化"——方向完全拧反的错误项。</p></div></div>
+<div class="section"><div class="example"><strong>例子</strong>　<p>一家想押注创新的公司：把审批从七级砍到三级（减管理层次）、一线团队可以自己定技术方案（降集权）、从中大厂挖人（外部招聘）、考核看"试了多少新打法"（评创新努力）——每个设计开关都在往"灵活创新"的方向拧，文化自然跟着变。</p></div></div>
+<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
+<li><strong>概念</strong>：控制组织内行为、工作态度、价值观及关系设定的规范；组织成员的共同价值观体系、使组织独具特色；<strong>取决于最高管理层的行为方式和管理风格</strong></li>
+<li><strong>六作用</strong>："导规聚激创辐射"（导向、规范、凝聚、激励、创新、辐射）；物质纽带＝薪酬福利，情感思想纽带＝组织文化；规范作用＝软规范</li>
+<li><strong>三层结构</strong>：物质层（表层，折射经营思想/工作作风/审美意识，外在表现、物质基础）/制度层（中间层里层，制约规范两层建设，无制度则文化建设无从谈起）/精神层（深层，思想基础、核心和灵魂）；<strong>有没有精神层是衡量是否形成组织文化的主要标志</strong></li>
+<li><strong>四类型</strong>："专业学院，俱乐通才，棒球水平，堡垒不保"；堡垒型着眼"生存"、保障不足</li>
+<li><strong>组织设计→组织文化</strong>：制度化、规范化、管理层次、集权程度越高越严谨死板；招聘内稳外活；合作文化忌个人绩效评估；薪酬级差大配等级文化</li>
+</ul></div></div>
+<div class="section"><div class="quiz-item" data-qid="r03s2q1" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于组织文化的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 它的结构包括物质层、制度层和精神层三个层次</button><button type="button" class="qopt" data-key="B">B. 它具有凝聚作用</button><button type="button" class="qopt" data-key="C">C. 它是指组织成员的共同价值观体系</button><button type="button" class="qopt" data-key="D">D. 它的形成在很大程度上取决于基层员工的行为方式</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：组织文化是从最高管理层树立的典范发展而来，在很大程度上取决于<strong>最高管理层</strong>的行为方式和管理风格，而不是基层员工，D 错误。A、B、C 均为标准表述：结构分三层（物质层、制度层、精神层），有凝聚作用，是组织成员的共同价值观体系。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s2q2" data-answer="A" data-type="single"><span class="q-tag">2022·单选</span><div class="q-stem">能折射出组织的经营思想，工作作风和审美意识的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 物质层</button><button type="button" class="qopt" data-key="B">B. 精神层</button><button type="button" class="qopt" data-key="C">C. 制度层</button><button type="button" class="qopt" data-key="D">D. 中间层</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：<strong>物质层</strong>（表层）指企业名称、产品外观及包装、建筑风格、纪念物等外显标识，往往能折射出组织的经营思想、工作作风和审美意识。精神层是深层核心（B）；制度层即中间层（C、D 是同一层），是各种行动准则或规章制度。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s2q3" data-answer="ABDE" data-type="multi"><span class="q-tag">2016·多选</span><div class="q-stem">下列关于组织文化结构的说法中，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 组织文化分为物质层、制度层和精神层三个层次</button><button type="button" class="qopt" data-key="B">B. 制度层制约和规范着物质层及精神层的建设</button><button type="button" class="qopt" data-key="C">C. 有无制度层是衡量一个组织是否形成了自身组织文化的主要标志</button><button type="button" class="qopt" data-key="D">D. 物质层是制度层和精神层的物质基础</button><button type="button" class="qopt" data-key="E">E. 精神层是形成物质层及制度层的思想基础</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ABDE</div><div class="q-exp"><p>析：衡量一个组织是否形成了自身组织文化的主要标志是有没有<strong>精神层</strong>，不是制度层，C 错误。A、B、D、E 均为标准表述：三层结构；制度层制约规范物质层及精神层的建设；物质层是外在表现、物质基础；精神层是思想基础、核心和灵魂。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s2q4" data-answer="ACDE" data-type="multi"><span class="q-tag">题库·多选</span><div class="q-stem">关于组织文化结构的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 物质层是组织文化的外在表现</button><button type="button" class="qopt" data-key="B">B. 物质层制约和规范了制度层及精神层的建设</button><button type="button" class="qopt" data-key="C">C. 没有严格的规章制度，组织文化就无从谈起</button><button type="button" class="qopt" data-key="D">D. 精神层是形成物质层及制度层的思想基础</button><button type="button" class="qopt" data-key="E">E. 组织文化中有没有精神层是衡量一个组织是否形成了组织文化的主要标准</button><button type="button" class="qsubmit">提交答案</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：ACDE</div><div class="q-exp"><p>析：B 把关系颠倒了——<strong>制约和规范</strong>物质层及精神层建设的是<strong>制度层</strong>，物质层只是外在表现和物质基础。C 对：没有严格的规章制度，组织文化建设就无从谈起。A、D、E 均正确：物质层是外在表现；精神层是思想基础（核心和灵魂）；有没有精神层是衡量的主要标志和标准。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s2q5" data-answer="D" data-type="single"><span class="q-tag">2021·单选</span><div class="q-stem">有一种组织文化通过大量培训让员工在特定的职能领域内从事专业化工作，并让员工不断成长进步，这种组织文化的类型属于（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 堡垒型组织</button><button type="button" class="qopt" data-key="B">B. 棒球队型组织</button><button type="button" class="qopt" data-key="C">C. 俱乐部型组织</button><button type="button" class="qopt" data-key="D">D. 学院型组织</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：<strong>学院型</strong>（培养专才）是为那些想全面掌握每一种新工作的人准备的地方，喜欢雇用年轻的大学毕业生，提供大量专门培训，指导其在特定职能领域从事专业化工作。题眼是"大量培训＋特定职能领域＋专业化"——注意与俱乐部型（培养<strong>通才</strong>、重资历）区分。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s2q6" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">按照桑南菲尔德的组织文化分类，堡垒型组织的主要特征是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 非常重视适应、忠诚感和承诺</button><button type="button" class="qopt" data-key="B">B. 着眼于公司的生存</button><button type="button" class="qopt" data-key="C">C. 鼓励冒险和革新</button><button type="button" class="qopt" data-key="D">D. 喜欢雇用年轻的大学毕业生，并为其提供专门的培训</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>析：<strong>堡垒型</strong>着眼于公司的<strong>生存</strong>，工作安全保障不足，吸引喜欢流动性、挑战性的人。A 是俱乐部型（重视适应、忠诚感和承诺），C 是棒球队型（鼓励冒险和革新），D 是学院型。陷阱提示：堡垒型着眼"生存"而非"发展"。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s2q7" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">一个企业形成了有特色的组织文化，还对本地其他企业和社会公众产生了一定影响，这主要体现了组织文化的（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 凝聚作用</button><button type="button" class="qopt" data-key="B">B. 规范作用</button><button type="button" class="qopt" data-key="C">C. 制约作用</button><button type="button" class="qopt" data-key="D">D. 辐射作用</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>析：<strong>辐射作用</strong>指组织文化对社会公众、组织所在地区乃至国内外组织产生的影响——"对外部的影响"就是辐射。凝聚是对内粘合员工（情感纽带和思想纽带），规范是对内的无形软约束，"制约作用"根本不在组织文化六大作用之列。
+:::</p></div></details></div><div class="quiz-item" data-qid="r03s2q8" data-answer="A" data-type="single"><span class="q-tag">2024·单选</span><div class="q-stem">关于组织设计和组织文化之间关系的说法，错误的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 组织的规范化程度越高，越有利于形成创新性的组织文化</button><button type="button" class="qopt" data-key="B">B. 级差大的薪酬体系设计更适合于强调等级的组织文化</button><button type="button" class="qopt" data-key="C">C. 组织设计影响组织文化</button><button type="button" class="qopt" data-key="D">D. 组织的制度化程度越高，组织文化越倾向于严谨</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>析：高度规范化<strong>不利于</strong>形成多样化、创新性的组织文化，A 方向完全说反了。制度化程度越高文化越严谨（D 对）；级差大的薪酬体系适合强调等级的文化（B 对）；组织设计影响组织文化的形成（C 对）。
+:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="人力03_组织设计与组织文化_第1节_组织设计.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 组织设计</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="人力03_组织设计与组织文化_第3节_组织变革与发展.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 组织变革与发展</span></a></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0;
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  window.ghPush = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
+      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
+    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    .then(function(res){
+      syncing = false;
+      if(res.status===200 || res.status===201){
+        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(res.status===409){
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else {
+        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+      }
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    setSyncStatus('☁ 正在检查云端进度…');
+    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
+      if(r.status===304) return null;
+      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      var remote = JSON.parse(b64decode(res.j.content));
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha; saveSyncCfg(cfg);
+      if(localChanged){
+        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        if(typeof renderProgress === 'function') renderProgress();
+        if(typeof refreshBadge === 'function') refreshBadge();
+      }
+      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      else setSyncStatus('✓ 已与云端同步', 'ok');
+    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+  };
+  var syncTimer = null, lastSavedStr = null;
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var KEY='rljpk_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
+  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
+  var badge=document.getElementById('sec-badge');
+  if(!badge)return;
+  var secid=badge.getAttribute('data-sec');
+  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
+
+  function refreshBadge(){
+    var d=load(),total=items.length,right=0;
+    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
+    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
+    badge.textContent=total&&right===total
+      ?'✅ 本节已学会：全部 '+total+' 题答对'
+      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
+               :'本节未测：共 '+total+' 题，全部答对即学会');
+    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
+    save(d);
+  }
+  function record(it,ok,first){
+    var d=load(),qid=it.getAttribute('data-qid');
+    var prev=d.q[qid]||{first:0};
+    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
+    save(d);refreshBadge();
+  }
+  items.forEach(function(it){
+    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
+    var opts=[].slice.call(it.querySelectorAll('.qopt'));
+    var fb=it.querySelector('.q-feedback');
+    var det=it.querySelector('details');
+    var sub=it.querySelector('.qsubmit');
+    function feedback(okFlag,msg){
+      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
+      if(okFlag&&det)det.open=true;
+    }
+    if(it.getAttribute('data-type')==='single'){
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          if(o.getAttribute('data-key')===ans){
+            it.setAttribute('data-solved','1');
+            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
+            feedback(true,'✅ 回答正确');
+            record(it,true,!it.getAttribute('data-tried'));
+          }else{
+            o.classList.add('wrong');o.disabled=true;
+            it.setAttribute('data-tried','1');
+            feedback(false,'✗ 回答错误，可继续选其他选项');
+            record(it,false,false);
+          }
+        });
+      });
+    }else{
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(it.getAttribute('data-solved'))return;
+          o.classList.toggle('picked');
+        });
+      });
+      if(sub)sub.addEventListener('click',function(){
+        if(it.getAttribute('data-solved'))return;
+        var picked=opts.filter(function(o){return o.classList.contains('picked')})
+                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
+        if(picked===ans){
+          it.setAttribute('data-solved','1');
+          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
+            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
+          sub.hidden=true;
+          feedback(true,'✅ 回答完全正确');
+          record(it,true,!it.getAttribute('data-tried'));
+        }else{
+          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
+            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
+            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
+          it.setAttribute('data-tried','1');
+          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
+          record(it,false,false);
+        }
+      });
+    }
+  });
+  refreshBadge();
+  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
+  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
+  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
+  window.addEventListener('focus', function(){ refreshBadge(); });
+})();
+</script>
+</body>
+</html>
