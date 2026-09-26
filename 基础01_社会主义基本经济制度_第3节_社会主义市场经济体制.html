@@ -331,15 +331,22 @@
     .then(function(res){
       syncing = false;
       if(res.status===200 || res.status===201){
-        cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        cfg.sha = (res.j.content && res.j.content.sha) || (res.j.commit && res.j.commit.sha) || res.j.sha || cfg.sha;
+        cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        if(!cfg.sha){ setSyncStatus('⚠ 已上传但未取到文件指纹，下次同步将自动核对', ''); }
         saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
       } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400)){
         // 云端已被其他设备更新（sha 过期）→ 重新拉取合并
         cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else if(res.status===401 || res.status===403){
+        var tip = backendOf(cfg)==='gitee'
+          ? '✗ 上传被拒绝（HTTP '+res.status+'）：Gitee 私人令牌可能未勾选 projects 权限或已过期——去 设置→私人令牌 重新生成一枚'
+          : '✗ 上传被拒绝（HTTP '+res.status+'）：token 无效或权限不足，请重新配置';
+        setSyncStatus(tip, 'err');
       } else {
         setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
       }
-    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message, 'err'); });
+    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message+'（网络不通时稍后自动重试）', 'err'); });
   };
   window.ghPull = function(force){
     var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
@@ -351,8 +358,8 @@
     .then(function(r){
       if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
       if(r.status===304) return null;
-      if(r.status===401) throw new Error('token 无效或已过期，请重新配置');
-      if(r.status===403) throw new Error('API 限速或 token 权限不足');
+      if(r.status===401) throw new Error('令牌无效或已过期，请在下方重新配置（Gitee 用户需勾选 projects 权限）');
+      if(r.status===403) throw new Error('API 限速或令牌权限不足');
       if(!r.ok) throw new Error('HTTP '+r.status);
       return r.json().then(function(j){ return {status:200, j:j}; });
     })
