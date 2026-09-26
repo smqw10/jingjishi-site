@@ -301,9 +301,9 @@
     });
     return out;
   };
-  var syncing = false, lastPullAt = 0, failCount = 0, pausedUntil = 0;
+  var syncing = false, lastPullAt = 0, failCount = 0, pausedUntil = 0, conflictCount = 0;
   // 换绑/重绑后由配置界面调用：重置内部锁与失败状态，避免历史状态延续
-  window.resetSyncState = function(){ syncing=false; failCount=0; pausedUntil=0; lastPullAt=0; };
+  window.resetSyncState = function(){ syncing=false; failCount=0; pausedUntil=0; lastPullAt=0; conflictCount=0; };
   function apiHeaders(cfg){
     return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
   }
@@ -322,7 +322,16 @@
     }
     if(backendOf(cfg) === 'gitee'){
       o.headers = {'Accept':'application/json'};
-      if(method === 'PUT'){ bodyObj.access_token = cfg.token; o.headers['Content-Type']='application/json'; o.body = JSON.stringify(bodyObj); }
+      if(method === 'PUT'){
+        // Gitee 官方要求 form 表单提交（JSON 体不被解析会报 400）；令牌放 body，不与 URL 重复
+        var params = new URLSearchParams();
+        params.set('access_token', cfg.token);
+        params.set('content', bodyObj.content);
+        params.set('message', bodyObj.message || 'progress sync');
+        if(bodyObj.sha) params.set('sha', bodyObj.sha);
+        o.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+        o.body = params.toString();
+      }
     } else {
       o.headers = apiHeaders(cfg);
       if(method === 'PUT') o.body = JSON.stringify(bodyObj);
@@ -359,11 +368,14 @@
     .then(function(res){
       syncing = false;
       if(res.status===200 || res.status===201){
-        failCount = 0; pausedUntil = 0;
+        failCount = 0; pausedUntil = 0; conflictCount = 0;
         cfg.sha = (res.j.content && res.j.content.sha) || (res.j.commit && res.j.commit.sha) || res.j.sha || cfg.sha;
         cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
         saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
-      } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400)){
+      } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400 && String(res.j.message||'').indexOf('sha')>=0)){
+        // 只有 sha 冲突才重拉合并；连续冲突超 3 次停止，杜绝死循环
+        conflictCount++;
+        if(conflictCount > 3){ setSyncStatus('✗ 上传反复冲突已停止：点"立即同步"重试，仍失败请反馈此提示', 'err'); return; }
         cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
       } else if(res.status===401 || res.status===403){
         noteFail(cfg, backendOf(cfg)==='gitee'
