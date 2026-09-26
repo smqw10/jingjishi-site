@@ -381,7 +381,7 @@
     });
     return out;
   };
-  var syncing = false, lastPullAt = 0;
+  var syncing = false, lastPullAt = 0, failCount = 0, pausedUntil = 0;
   function apiHeaders(cfg){
     return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
   }
@@ -393,21 +393,40 @@
     return 'https://api.github.com/repos/'+cfg.repo+'/contents/progress.json';
   }
   function fetchOpts(cfg, method, bodyObj){
-    if(backendOf(cfg) === 'gitee'){
-      var o = {method: method, headers: {'Accept':'application/json'}};
-      if(method === 'PUT'){
-        bodyObj.access_token = cfg.token;
-        o.headers['Content-Type'] = 'application/json';
-        o.body = JSON.stringify(bodyObj);
-      }
-      return o;
+    var o = {method: method}, signal = null;
+    if(typeof AbortController !== 'undefined'){
+      var ac = new AbortController(); setTimeout(function(){ ac.abort(); }, 9000);
+      signal = ac.signal; o.signal = signal;
     }
-    var o = {method: method, headers: apiHeaders(cfg)};
-    if(method === 'PUT') o.body = JSON.stringify(bodyObj);
+    if(backendOf(cfg) === 'gitee'){
+      o.headers = {'Accept':'application/json'};
+      if(method === 'PUT'){ bodyObj.access_token = cfg.token; o.headers['Content-Type']='application/json'; o.body = JSON.stringify(bodyObj); }
+    } else {
+      o.headers = apiHeaders(cfg);
+      if(method === 'PUT') o.body = JSON.stringify(bodyObj);
+    }
     return o;
+  }
+  function netErrMsg(e, cfg){
+    var m = e && e.message ? e.message : String(e);
+    if(m.indexOf('abort') >= 0 || m.indexOf('Abort') >= 0)
+      return '网络超时（9 秒无响应）' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议在上方切换为 Gitee 后端' : '，稍后重试');
+    if(m.indexOf('fetch') >= 0 || m.indexOf('NetworkError') >= 0 || m.indexOf('network') >= 0)
+      return '网络无法连通' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议切换为 Gitee 后端' : '，请检查网络');
+    return m;
+  }
+  function noteFail(cfg, prefix){
+    failCount++;
+    if(failCount >= 3){
+      pausedUntil = Date.now() + 5*60*1000; failCount = 0;
+      setSyncStatus(prefix + '；自动同步已暂停 5 分钟，可点"立即同步"重试', 'err');
+    } else {
+      setSyncStatus(prefix, 'err');
+    }
   }
   window.ghPush = function(force){
     var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    if(Date.now() < (pausedUntil||0)) return;
     var localStr = localStorage.getItem(KEY) || '{}';
     if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
     syncing = true; setSyncStatus('☁ 正在上传进度…');
@@ -418,34 +437,34 @@
     .then(function(res){
       syncing = false;
       if(res.status===200 || res.status===201){
+        failCount = 0; pausedUntil = 0;
         cfg.sha = (res.j.content && res.j.content.sha) || (res.j.commit && res.j.commit.sha) || res.j.sha || cfg.sha;
         cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
-        if(!cfg.sha){ setSyncStatus('⚠ 已上传但未取到文件指纹，下次同步将自动核对', ''); }
         saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
       } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400)){
-        // 云端已被其他设备更新（sha 过期）→ 重新拉取合并
         cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
       } else if(res.status===401 || res.status===403){
-        var tip = backendOf(cfg)==='gitee'
-          ? '✗ 上传被拒绝（HTTP '+res.status+'）：Gitee 私人令牌可能未勾选 projects 权限或已过期——去 设置→私人令牌 重新生成一枚'
-          : '✗ 上传被拒绝（HTTP '+res.status+'）：token 无效或权限不足，请重新配置';
-        setSyncStatus(tip, 'err');
+        noteFail(cfg, backendOf(cfg)==='gitee'
+          ? '✗ 上传被拒绝（'+res.status+'）：Gitee 私人令牌可能未勾选 projects 权限或已过期——请重新生成一枚'
+          : '✗ 上传被拒绝（'+res.status+'）：token 无效或权限不足，请重新配置');
       } else {
-        setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
+        noteFail(cfg, '✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''));
       }
-    }).catch(function(e){ syncing=false; setSyncStatus('✗ 上传失败：'+e.message+'（网络不通时稍后自动重试）', 'err'); });
+    }).catch(function(e){ syncing=false; noteFail(cfg, '✗ 上传失败：'+netErrMsg(e, cfg)); });
   };
   window.ghPull = function(force){
     var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(Date.now() < (pausedUntil||0)){ setSyncStatus('⏸ 自动同步已暂停（此前连续失败），点"立即同步"重试'); return; }
+    if(syncing) return;
     var now = Date.now();
     if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
     lastPullAt = now;
-    setSyncStatus('☁ 正在检查云端进度…');
+    syncing = true; setSyncStatus('☁ 正在检查云端进度…');
     fetch(fileUrl(cfg), fetchOpts(cfg, 'GET'))
     .then(function(r){
-      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
-      if(r.status===304) return null;
-      if(r.status===401) throw new Error('令牌无效或已过期，请在下方重新配置（Gitee 用户需勾选 projects 权限）');
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); syncing=false; ghPush(); return null; }
+      if(r.status===304){ syncing=false; return null; }
+      if(r.status===401) throw new Error('令牌无效或已过期，请重新配置');
       if(r.status===403) throw new Error('API 限速或令牌权限不足');
       if(!r.ok) throw new Error('HTTP '+r.status);
       return r.json().then(function(j){ return {status:200, j:j}; });
@@ -454,26 +473,28 @@
       if(!res) return;
       // Gitee 对不存在的文件返回 200+[]（GitHub 是 404）——都视为"云端还没有进度文件"，自动上传本地
       var missing = !res.j || Array.isArray(res.j) || typeof res.j.content !== 'string' || !res.j.content;
-      if(missing){
-        cfg.sha = null; saveSyncCfg(cfg); ghPush();
-        return;
-      }
+      if(missing){ syncing=false; cfg.sha=null; saveSyncCfg(cfg); ghPush(); return; }
       var remote = JSON.parse(b64decode(res.j.content));
-      if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
       if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
       var local = loadProgress();
       var merged = mergeProgress(local, remote);
       var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
       cfg.sha = res.j.sha; saveSyncCfg(cfg);
       if(localChanged){
-        saveProgress(merged); lastSavedStr = JSON.stringify(merged);
+        saveProgress(merged);
         if(typeof renderProgress === 'function') renderProgress();
         if(typeof refreshBadge === 'function') refreshBadge();
       }
       if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
-      else setSyncStatus('✓ 已与云端同步', 'ok');
-    }).catch(function(e){ setSyncStatus('✗ 拉取失败：'+e.message, 'err'); });
+      else { syncing=false; failCount=0; pausedUntil=0; setSyncStatus('✓ 已与云端同步', 'ok'); }
+    }).catch(function(e){
+      syncing=false;
+      var m = e && e.message ? e.message : '';
+      if(m.indexOf('令牌') >= 0 || m.indexOf('限速') >= 0 || m.indexOf('格式异常') >= 0) noteFail(cfg, '✗ 拉取失败：'+m);
+      else noteFail(cfg, '✗ 拉取失败：'+netErrMsg(e, cfg));
+    });
   };
+  var syncTimer = null;
   var syncTimer = null, lastSavedStr = null;
   window.scheduleSync = function(savedStr){
     if(savedStr != null) lastSavedStr = savedStr;
