@@ -202,6 +202,8 @@
     return out;
   };
   var syncing = false, lastPullAt = 0, failCount = 0, pausedUntil = 0;
+  // 换绑/重绑后由配置界面调用：重置内部锁与失败状态，避免历史状态延续
+  window.resetSyncState = function(){ syncing=false; failCount=0; pausedUntil=0; lastPullAt=0; };
   function apiHeaders(cfg){
     return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
   }
@@ -305,7 +307,7 @@
         if(typeof renderProgress === 'function') renderProgress();
         if(typeof refreshBadge === 'function') refreshBadge();
       }
-      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }
       else { syncing=false; failCount=0; pausedUntil=0; setSyncStatus('✓ 已与云端同步', 'ok'); }
     }).catch(function(e){
       syncing=false;

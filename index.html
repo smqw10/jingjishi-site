@@ -250,6 +250,8 @@
     return out;
   };
   var syncing = false, lastPullAt = 0, failCount = 0, pausedUntil = 0;
+  // 换绑/重绑后由配置界面调用：重置内部锁与失败状态，避免历史状态延续
+  window.resetSyncState = function(){ syncing=false; failCount=0; pausedUntil=0; lastPullAt=0; };
   function apiHeaders(cfg){
     return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
   }
@@ -353,7 +355,7 @@
         if(typeof renderProgress === 'function') renderProgress();
         if(typeof refreshBadge === 'function') refreshBadge();
       }
-      if(JSON.stringify(merged) !== JSON.stringify(remote)) ghPush();
+      if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }
       else { syncing=false; failCount=0; pausedUntil=0; setSyncStatus('✓ 已与云端同步', 'ok'); }
     }).catch(function(e){
       syncing=false;
@@ -418,6 +420,7 @@
       }
       if(backend==='github' && (!res.j.permissions || !res.j.permissions.push)){ setSyncStatus('✗ token 对此仓库没有写权限（需 Contents: Read and write）', 'err'); return; }
       var cfg = loadSyncCfg(); cfg.repo = repo; cfg.token = token; cfg.backend = backend; delete cfg.sha; delete cfg.lastPushedHash;
+      if(typeof resetSyncState === 'function') resetSyncState();  // 换绑后清掉历史锁/失败计数，防止旧状态拦截首次同步
       saveSyncCfg(cfg); renderSyncCard(); setSyncStatus('✓ 连接成功（'+(backend==='gitee'?'Gitee':'GitHub')+'），正在首次同步…', 'ok');
       ghPull(true);
     }).catch(function(e){ setSyncStatus('✗ 连接失败：'+e.message+'（若网络不通，换一个网络环境或稍后再试）', 'err'); });
