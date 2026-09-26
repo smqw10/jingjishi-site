@@ -496,6 +496,27 @@
   function apiHeaders(cfg){
     return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
   }
+  // 双后端分派：cfg.backend = 'github'（默认）| 'gitee'
+  function backendOf(cfg){ return cfg.backend === 'gitee' ? 'gitee' : 'github'; }
+  function fileUrl(cfg){
+    if(backendOf(cfg) === 'gitee')
+      return 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json?access_token='+encodeURIComponent(cfg.token);
+    return 'https://api.github.com/repos/'+cfg.repo+'/contents/progress.json';
+  }
+  function fetchOpts(cfg, method, bodyObj){
+    if(backendOf(cfg) === 'gitee'){
+      var o = {method: method, headers: {'Accept':'application/json'}};
+      if(method === 'PUT'){
+        bodyObj.access_token = cfg.token;
+        o.headers['Content-Type'] = 'application/json';
+        o.body = JSON.stringify(bodyObj);
+      }
+      return o;
+    }
+    var o = {method: method, headers: apiHeaders(cfg)};
+    if(method === 'PUT') o.body = JSON.stringify(bodyObj);
+    return o;
+  }
   window.ghPush = function(force){
     var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
     var localStr = localStorage.getItem(KEY) || '{}';
@@ -503,15 +524,15 @@
     syncing = true; setSyncStatus('☁ 正在上传进度…');
     var body = {message:'进度同步', content: b64encode(localStr)};
     if(cfg.sha) body.sha = cfg.sha;
-    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', {
-      method:'PUT', headers: apiHeaders(cfg), body: JSON.stringify(body)
-    }).then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    fetch(fileUrl(cfg), fetchOpts(cfg, 'PUT', body))
+    .then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
     .then(function(res){
       syncing = false;
       if(res.status===200 || res.status===201){
         cfg.sha = res.j.content.sha; cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
         saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
-      } else if(res.status===409){
+      } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400)){
+        // 云端已被其他设备更新（sha 过期）→ 重新拉取合并
         cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
       } else {
         setSyncStatus('✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''), 'err');
@@ -524,7 +545,7 @@
     if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
     lastPullAt = now;
     setSyncStatus('☁ 正在检查云端进度…');
-    fetch('https://api.github.com/repos/'+cfg.repo+'/contents/progress.json', { headers: apiHeaders(cfg) })
+    fetch(fileUrl(cfg), fetchOpts(cfg, 'GET'))
     .then(function(r){
       if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); ghPush(); return null; }
       if(r.status===304) return null;
