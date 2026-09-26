@@ -181,7 +181,13 @@
     return btoa(bin);
   }
   function b64decode(b64){
-    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length);
+    if(typeof b64 !== 'string' || !b64)
+      throw new Error('云端返回内容缺失（content=' + (b64 === null ? 'null' : typeof b64) + '）——请点"立即同步"重试，若反复出现请把此提示反馈');
+    var clean = String(b64).replace(/\s/g,'');
+    var bin;
+    try { bin = atob(clean); }
+    catch(e){ throw new Error('云端返回了无法解码的内容（前 20 字符：' + clean.slice(0,20) + '）——请点"立即同步"重试，若反复出现请反馈'); }
+    var bytes = new Uint8Array(bin.length);
     for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
     return new TextDecoder().decode(bytes);
   }
@@ -264,7 +270,10 @@
     })
     .then(function(res){
       if(!res) return;
+      if(!res.j || typeof res.j.content !== 'string' || !res.j.content)
       var remote = JSON.parse(b64decode(res.j.content));
+      if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
+      if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
       var local = loadProgress();
       var merged = mergeProgress(local, remote);
       var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
