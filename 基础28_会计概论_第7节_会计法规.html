@@ -214,12 +214,14 @@
   }
   // 双后端分派：cfg.backend = 'github'（默认）| 'gitee'
   function backendOf(cfg){ return cfg.backend === 'gitee' ? 'gitee' : 'github'; }
-  function fileUrl(cfg){
+  function fileUrl(cfg, method){
     if(backendOf(cfg) === 'gitee')
-      return 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json?access_token='+encodeURIComponent(cfg.token);
+      return method === 'PUT'
+        ? 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json'   // PUT 时令牌放请求体，不与 URL 重复
+        : 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json?access_token='+encodeURIComponent(cfg.token);
     return 'https://api.github.com/repos/'+cfg.repo+'/contents/progress.json';
   }
-  function fetchOpts(cfg, method, bodyObj){
+  function fetchOpts(cfg, method, bodyObj, useJson){
     var o = {method: method}, signal = null;
     if(typeof AbortController !== 'undefined'){
       var ac = new AbortController(); setTimeout(function(){ ac.abort(); }, 9000);
@@ -228,14 +230,21 @@
     if(backendOf(cfg) === 'gitee'){
       o.headers = {'Accept':'application/json'};
       if(method === 'PUT'){
-        // Gitee 官方要求 form 表单提交（JSON 体不被解析会报 400）；令牌放 body，不与 URL 重复
-        var params = new URLSearchParams();
-        params.set('access_token', cfg.token);
-        params.set('content', bodyObj.content);
-        params.set('message', bodyObj.message || 'progress sync');
-        if(bodyObj.sha) params.set('sha', bodyObj.sha);
-        o.headers['Content-Type'] = 'application/x-www-form-urlencoded';
-        o.body = params.toString();
+        if(useJson){
+          // Gitee JSON 姿势（社区实践中成功率高）：token/content/message 均入 JSON 体
+          var j = {access_token: cfg.token, content: bodyObj.content, message: bodyObj.message || 'progress sync'};
+          if(bodyObj.sha) j.sha = bodyObj.sha;
+          o.headers['Content-Type'] = 'application/json;charset=UTF-8';
+          o.body = JSON.stringify(j);
+        } else {
+          var params = new URLSearchParams();
+          params.set('access_token', cfg.token);
+          params.set('content', bodyObj.content);
+          params.set('message', bodyObj.message || 'progress sync');
+          if(bodyObj.sha) params.set('sha', bodyObj.sha);
+          o.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+          o.body = params.toString();
+        }
       }
     } else {
       o.headers = apiHeaders(cfg);
@@ -260,7 +269,7 @@
       setSyncStatus(prefix, 'err');
     }
   }
-  window.ghPush = function(force){
+  window.ghPush = function(force, useJson){
     var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
     if(Date.now() < (pausedUntil||0)) return;
     var localStr = localStorage.getItem(KEY) || '{}';
@@ -268,17 +277,21 @@
     syncing = true; setSyncStatus('☁ 正在上传进度…');
     var body = {message:'进度同步', content: b64encode(localStr)};
     if(cfg.sha) body.sha = cfg.sha;
-    fetch(fileUrl(cfg), fetchOpts(cfg, 'PUT', body))
-    .then(function(r){ return r.json().then(function(j){ return {status:r.status, j:j}; }); })
+    var tryJson = useJson !== false;  // 默认先 JSON（社区实践成功率高的姿势），失败自动换 form 再试一次
+    fetch(fileUrl(cfg, 'PUT'), fetchOpts(cfg, 'PUT', body, tryJson))
+    .then(function(r){ return r.text().then(function(t){ var j = null; try{ j = JSON.parse(t); }catch(e){} return {status:r.status, j:j, raw:t}; }); })
     .then(function(res){
       syncing = false;
+      var errMsg = (res.j && res.j.message) || (res.raw ? res.raw.slice(0, 100) : '') || '';
       if(res.status===200 || res.status===201){
         failCount = 0; pausedUntil = 0; conflictCount = 0;
         cfg.sha = (res.j.content && res.j.content.sha) || (res.j.commit && res.j.commit.sha) || res.j.sha || cfg.sha;
         cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
         saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
-      } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400 && String(res.j.message||'').indexOf('sha')>=0)){
-        // 只有 sha 冲突才重拉合并；连续冲突超 3 次停止，杜绝死循环
+      } else if(backendOf(cfg)==='gitee' && res.status===400 && !tryJson && errMsg.indexOf('sha') < 0){
+        // JSON 被 400 且非 sha 冲突 → 自动换 form 格式重试一次（Gitee 两代接口格式兼容）
+        ghPush(true, false);
+      } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400 && errMsg.indexOf('sha')>=0)){
         conflictCount++;
         if(conflictCount > 3){ setSyncStatus('✗ 上传反复冲突已停止：点"立即同步"重试，仍失败请反馈此提示', 'err'); return; }
         cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
@@ -287,7 +300,7 @@
           ? '✗ 上传被拒绝（'+res.status+'）：Gitee 私人令牌可能未勾选 projects 权限或已过期——请重新生成一枚'
           : '✗ 上传被拒绝（'+res.status+'）：token 无效或权限不足，请重新配置');
       } else {
-        noteFail(cfg, '✗ 上传失败：HTTP '+res.status+' '+(res.j.message||''));
+        noteFail(cfg, '✗ 上传失败：HTTP '+res.status+' '+errMsg);
       }
     }).catch(function(e){ syncing=false; noteFail(cfg, '✗ 上传失败：'+netErrMsg(e, cfg)); });
   };
@@ -299,7 +312,7 @@
     if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
     lastPullAt = now;
     syncing = true; setSyncStatus('☁ 正在检查云端进度…');
-    fetch(fileUrl(cfg), fetchOpts(cfg, 'GET'))
+    fetch(fileUrl(cfg, 'GET'), fetchOpts(cfg, 'GET'))
     .then(function(r){
       if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); syncing=false; ghPush(); return null; }
       if(r.status===304){ syncing=false; return null; }
@@ -312,7 +325,21 @@
       if(!res) return;
       // Gitee 对不存在的文件返回 200+[]（GitHub 是 404）——都视为"云端还没有进度文件"，自动上传本地
       var missing = !res.j || Array.isArray(res.j) || typeof res.j.content !== 'string' || !res.j.content;
-      if(missing){ syncing=false; cfg.sha=null; saveSyncCfg(cfg); ghPush(); return; }
+      if(missing){
+        syncing = false; cfg.sha = null; saveSyncCfg(cfg);
+        if(backendOf(cfg) === 'gitee'){
+          // 空仓库（无任何分支/提交）无法通过 API 建文件——先查分支，空则给初始化指引
+          var bqs = new URLSearchParams({access_token: cfg.token}).toString();
+          fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/branches?'+bqs, {headers: {'Accept':'application/json'}})
+          .then(function(r){ return r.json(); })
+          .then(function(brs){
+            if(Array.isArray(brs) && brs.length === 0)
+              setSyncStatus('✗ 仓库是空的：请到 Gitee 打开该仓库 → 文件 → 新建 → 随便建一个 README.md 提交（初始化仓库），然后回来点"立即同步"', 'err');
+            else ghPush();
+          }).catch(function(){ ghPush(); });
+        } else ghPush();
+        return;
+      }
       var remote = JSON.parse(b64decode(res.j.content));
       if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
       var local = loadProgress();
