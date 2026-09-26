@@ -417,7 +417,6 @@
         return;
       }
       if(backend==='github' && (!res.j.permissions || !res.j.permissions.push)){ setSyncStatus('✗ token 对此仓库没有写权限（需 Contents: Read and write）', 'err'); return; }
-      if(backend==='gitee' && res.j.permission && res.j.permission !== 'push' && res.j.permission !== 'admin'){ setSyncStatus('✗ 该令牌对仓库只有读取权限，重新生成令牌时请勾选 projects', 'err'); return; }
       var cfg = loadSyncCfg(); cfg.repo = repo; cfg.token = token; cfg.backend = backend; delete cfg.sha; delete cfg.lastPushedHash;
       saveSyncCfg(cfg); renderSyncCard(); setSyncStatus('✓ 连接成功（'+(backend==='gitee'?'Gitee':'GitHub')+'），正在首次同步…', 'ok');
       ghPull(true);
