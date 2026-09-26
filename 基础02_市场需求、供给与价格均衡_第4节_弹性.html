@@ -530,7 +530,7 @@
     .then(function(r){ return r.text().then(function(t){ var j = null; try{ j = JSON.parse(t); }catch(e){} return {status:r.status, j:j, raw:t}; }); })
     .then(function(res){
       syncing = false;
-      var errMsg = (res.j && res.j.message) || (res.raw ? res.raw.slice(0, 100) : '') || '';
+      var errMsg = (res.j && (res.j.message || (res.j.messages && res.j.messages.join('; ')))) || (res.raw ? res.raw.slice(0, 100) : '') || '';
       if(res.status===200 || res.status===201){
         failCount = 0; pausedUntil = 0; conflictCount = 0;
         cfg.sha = (res.j.content && res.j.content.sha) || (res.j.commit && res.j.commit.sha) || res.j.sha || cfg.sha;
@@ -593,14 +593,33 @@
       var local = loadProgress();
       var merged = mergeProgress(local, remote);
       var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
-      cfg.sha = res.j.sha; saveSyncCfg(cfg);
-      if(localChanged){
-        saveProgress(merged);
-        if(typeof renderProgress === 'function') renderProgress();
-        if(typeof refreshBadge === 'function') refreshBadge();
-      }
-      if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }
-      else { syncing=false; failCount=0; pausedUntil=0; setSyncStatus('✓ 已与云端同步', 'ok'); }
+      cfg.sha = res.j.sha || null; saveSyncCfg(cfg);
+      var afterSha = function(){
+        saveSyncCfg(cfg);
+        if(localChanged){
+          saveProgress(merged);
+          if(typeof renderProgress === 'function') renderProgress();
+          if(typeof refreshBadge === 'function') refreshBadge();
+        }
+        if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }
+        else { syncing=false; failCount=0; pausedUntil=0; setSyncStatus('✓ 已与云端同步', 'ok'); }
+      };
+      if(!cfg.sha && backendOf(cfg)==='gitee'){
+        // Gitee 读文件响应可能不带 sha（API 创建的文件尤其如此）→ 更新必带 sha，否则报"sha is missing"。
+        // 通过 仓库信息(default_branch) → 文件树(blob sha) 两步补取。
+        var tq = new URLSearchParams({access_token: cfg.token}).toString();
+        fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'?'+tq, {headers: {'Accept':'application/json'}})
+        .then(function(r){ return r.json(); })
+        .then(function(ri){
+          var br = (ri && ri.default_branch) || 'master';
+          return fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/git/trees/'+br+'?'+tq, {headers: {'Accept':'application/json'}}).then(function(r2){ return r2.json(); });
+        })
+        .then(function(t){
+          if(t && t.tree) for(var i=0;i<t.tree.length;i++) if(t.tree[i].path === 'progress.json'){ cfg.sha = t.tree[i].sha; break; }
+          afterSha();
+        })
+        .catch(function(){ afterSha(); });  // 补取失败不阻塞主流程
+      } else afterSha();
     }).catch(function(e){
       syncing=false;
       var m = e && e.message ? e.message : '';
