@@ -674,7 +674,12 @@
     })
     .then(function(res){
       if(!res) return;
-      if(!res.j || typeof res.j.content !== 'string' || !res.j.content)
+      // Gitee 对不存在的文件返回 200+[]（GitHub 是 404）——都视为"云端还没有进度文件"，自动上传本地
+      var missing = !res.j || Array.isArray(res.j) || typeof res.j.content !== 'string' || !res.j.content;
+      if(missing){
+        cfg.sha = null; saveSyncCfg(cfg); ghPush();
+        return;
+      }
       var remote = JSON.parse(b64decode(res.j.content));
       if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
       if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
