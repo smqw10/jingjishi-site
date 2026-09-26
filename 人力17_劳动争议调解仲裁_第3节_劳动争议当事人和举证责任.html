@@ -411,7 +411,7 @@
       setSyncStatus(prefix, 'err');
     }
   }
-  window.ghPush = function(force, useJson){
+  window.ghPush = function(force, useJson, isFallback){
     var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
     if(Date.now() < (pausedUntil||0)) return;
     var localStr = localStorage.getItem(KEY) || '{}';
@@ -430,12 +430,12 @@
         cfg.sha = (res.j.content && res.j.content.sha) || (res.j.commit && res.j.commit.sha) || res.j.sha || cfg.sha;
         cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
         saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
-      } else if(backendOf(cfg)==='gitee' && res.status===400 && !tryJson && errMsg.indexOf('sha') < 0){
-        // JSON 被 400 且非 sha 冲突 → 自动换 form 格式重试一次（Gitee 两代接口格式兼容）
-        ghPush(true, false);
+      } else if(backendOf(cfg)==='gitee' && res.status===400 && !isFallback){
+        // 任何 400（含 sha 类错误）→ 先换另一种提交格式重试；两种格式都败才进入冲突/报错分支
+        ghPush(true, !tryJson, true);
       } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400 && errMsg.indexOf('sha')>=0)){
         conflictCount++;
-        if(conflictCount > 3){ setSyncStatus('✗ 上传反复冲突已停止：点"立即同步"重试，仍失败请反馈此提示', 'err'); return; }
+        if(conflictCount > 3){ setSyncStatus('✗ 上传反复冲突已停止（最后错误：'+errMsg+'）——请反馈此完整提示', 'err'); return; }
         cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
       } else if(res.status===401 || res.status===403){
         noteFail(cfg, backendOf(cfg)==='gitee'
