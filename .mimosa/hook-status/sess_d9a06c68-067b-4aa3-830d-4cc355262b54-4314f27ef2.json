@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "mimosa-hook-status/v1",
+  "recordedAt": "2026-10-02T13:06:20.280Z",
+  "sessionId": "sess_d9a06c68-067b-4aa3-830d-4cc355262b54",
+  "event": "PostToolUse",
+  "toolName": "Edit",
+  "file": "D:\\Code\\中级经济师2026备考\\人力精品课\\figs.py",
+  "outcome": "inconclusive",
+  "coverage": "partial",
+  "findingCount": 0,
+  "durationMs": 8,
+  "hostState": "hook_complete",
+  "reportHint": ".mimosa/reports/"
+}
