@@ -1,14 +1,14 @@
 {
   "schemaVersion": "mimosa-hook-status/v1",
-  "recordedAt": "2026-10-02T13:06:20.280Z",
+  "recordedAt": "2026-10-02T14:00:43.518Z",
   "sessionId": "sess_d9a06c68-067b-4aa3-830d-4cc355262b54",
   "event": "PostToolUse",
   "toolName": "Edit",
-  "file": "D:\\Code\\中级经济师2026备考\\人力精品课\\figs.py",
-  "outcome": "inconclusive",
-  "coverage": "partial",
+  "file": "D:\\Code\\中级经济师2026备考\\人力精品课\\src\\基础\\基础05_生产要素市场理论.md",
+  "outcome": "clear",
+  "coverage": "complete",
   "findingCount": 0,
-  "durationMs": 8,
+  "durationMs": 5,
   "hostState": "hook_complete",
   "reportHint": ".mimosa/reports/"
 }
