@@ -1,14 +1,14 @@
 {
   "schemaVersion": "mimosa-hook-status/v1",
-  "recordedAt": "2026-10-03T02:53:03.703Z",
+  "recordedAt": "2026-10-03T03:02:13.301Z",
   "sessionId": "sess_d9a06c68-067b-4aa3-830d-4cc355262b54",
   "event": "PostToolUse",
   "toolName": "Edit",
-  "file": "D:\\Code\\中级经济师2026备考\\人力精品课\\build_site.py",
-  "outcome": "inconclusive",
-  "coverage": "partial",
+  "file": "C:/Users/smqw1/.zcode/cli/memories/projects/2026-57e0dbb3a42a97c1/memory/renli-jingpinke.md",
+  "outcome": "clear",
+  "coverage": "complete",
   "findingCount": 0,
-  "durationMs": 12,
+  "durationMs": 5,
   "hostState": "hook_complete",
   "reportHint": ".mimosa/reports/"
 }
