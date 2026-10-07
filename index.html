@@ -180,11 +180,14 @@
   .sync-sum-state.ok { color: #2C5E3C; font-weight: 500; }
   #sync-card[open] .sync-sum-state { display: none; }
   .sync-inner { padding: 0 20px 20px; border-top: 1px solid #f0f0ed; padding-top: 14px; }
+  /* 题库卡的刷题统计行 */
+  .eq-stat { display: block; font-size: 12.5px; color: #A09A8A; margin-top: 6px; }
+  .eq-stat.has { color: #2C5E3C; font-weight: 600; }
 </style>
 </head>
 <body>
 <div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="mulu-b.html"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="mulu-r.html"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
-<div class="header"><span class="label">中级经济师 2026</span><h1>📚 中级经济师精品课 · 学习总览</h1><div class="subtitle">讲义细学、考前速记、刷题三大板块。讲义每节含学习目标、细讲、速记卡、随堂练习，<b>一节内全部题目答对才算"已学会"</b>。</div><div class="progress-bar"><div class="fill" id="overall-fill" style="width:0%"></div></div><div class="progress-text" id="overall-text">学习进度统计中…</div></div><div class="continue-card"><div class="cont-title">▶ 继续学习</div><div id="continue-body"></div></div><div class="dash-grid"><a class="dash-card" data-subj="b" data-total="145" href="mulu-b.html"><span class="dc-icon">📖</span><span class="dc-title">经济基础</span><span class="dc-meta">37 章 · 145 节</span><div class="progress-bar" style="margin-top:10px"><div class="fill dc-fill" style="width:0%"></div></div><div class="dc-prog"></div></a><a class="dash-card" data-subj="r" data-total="67" href="mulu-r.html"><span class="dc-icon">📖</span><span class="dc-title">人力资源</span><span class="dc-meta">19 章 · 67 节</span><div class="progress-bar" style="margin-top:10px"><div class="fill dc-fill" style="width:0%"></div></div><div class="dc-prog"></div></a><div class="dash-card wide"><span class="dc-icon">⚡</span><span class="dc-title">考前速记</span><span class="dc-meta">知识点汇总速查：人物理论 · 曲线图形 · 易混对比 · 概念要点 · 口诀联想，背下就能拿分</span><span class="dc-links"><a href="memo-person.html">👤 人物与理论</a> <a href="memo-curve.html">📈 曲线与图形</a> <a href="memo-confuse.html">⚖️ 易混对比</a> <a href="memo-concept.html">🧩 概念要点</a> <a href="memo-mn.html">🧠 口诀联想</a></span></div></div><a class="entry-card" href="quiz.html"><span class="ec-icon">📝</span><span class="ec-body"><span class="ec-title">刷题题库</span><span class="ec-desc">混合 / 真题（按年份+整卷模拟）/ 随机（选项打乱）· 错题本 · 共 4396 题 57 卷</span></span><span class="ec-btn">进入刷题 →</span></a><details class="section" id="sync-card">
+<div class="header"><span class="label">中级经济师 2026</span><h1>📚 中级经济师精品课 · 学习总览</h1><div class="subtitle">讲义细学、考前速记、刷题三大板块。讲义每节含学习目标、细讲、速记卡、随堂练习，<b>一节内全部题目答对才算"已学会"</b>。</div><div class="progress-bar"><div class="fill" id="overall-fill" style="width:0%"></div></div><div class="progress-text" id="overall-text">学习进度统计中…</div></div><div class="continue-card"><div class="cont-title">▶ 继续学习</div><div id="continue-body"></div></div><div class="dash-grid"><a class="dash-card" data-subj="b" data-total="145" href="mulu-b.html"><span class="dc-icon">📖</span><span class="dc-title">经济基础</span><span class="dc-meta">37 章 · 145 节</span><div class="progress-bar" style="margin-top:10px"><div class="fill dc-fill" style="width:0%"></div></div><div class="dc-prog"></div></a><a class="dash-card" data-subj="r" data-total="67" href="mulu-r.html"><span class="dc-icon">📖</span><span class="dc-title">人力资源</span><span class="dc-meta">19 章 · 67 节</span><div class="progress-bar" style="margin-top:10px"><div class="fill dc-fill" style="width:0%"></div></div><div class="dc-prog"></div></a><div class="dash-card wide"><span class="dc-icon">⚡</span><span class="dc-title">考前速记</span><span class="dc-meta">知识点汇总速查：人物理论 · 曲线图形 · 易混对比 · 概念要点 · 口诀联想，背下就能拿分</span><span class="dc-links"><a href="memo-person.html">👤 人物与理论</a> <a href="memo-curve.html">📈 曲线与图形</a> <a href="memo-confuse.html">⚖️ 易混对比</a> <a href="memo-concept.html">🧩 概念要点</a> <a href="memo-mn.html">🧠 口诀联想</a></span></div></div><a class="entry-card" href="quiz.html"><span class="ec-icon">📝</span><span class="ec-body"><span class="ec-title">刷题题库</span><span class="ec-desc">混合 / 真题（按年份+整卷模拟）/ 随机（选项打乱）· 错题本 · 共 4396 题 57 卷</span><span class="eq-stat" id="quiz-dash-stat"></span></span><span class="ec-btn">进入刷题 →</span></a><details class="section" id="sync-card">
   <summary><span class="sync-sum-title">☁️ 跨设备云同步</span><span id="sync-sum" class="sync-sum-state">未配置</span></summary>
   <div class="sync-inner">
   <div class="sync-meta">绑定一个私有仓库后，答题进度自动在所有设备间同步（每台设备配置一次，之后免操作）。配置保存在本设备的浏览器中，令牌仅授权这一个仓库。</div>
@@ -632,6 +635,15 @@
       }else{
         cc.innerHTML='<span class="cont-meta">尚无学习记录——从上方任选一个板块开始，每学完一节这里会记住位置。</span>';
       }
+    }
+    // 刷题统计：已做题数与正确率（每题按最近一次作答口径）
+    var qs=document.getElementById('quiz-dash-stat');
+    if(qs){
+      var qd=null;try{qd=JSON.parse(localStorage.getItem('rljpk_quiz_v1'))}catch(e){}
+      var done=0,right=0;
+      if(qd&&qd.a){Object.keys(qd.a).forEach(function(k){done++;if(qd.a[k].ok===1)right++;});}
+      qs.textContent=done>0?('✍ 已做 '+done+' 题 · 正确率 '+Math.round(100*right/done)+'%'):'尚未开始刷题';
+      qs.className='eq-stat'+(done>0?' has':'');
     }
   }
   renderDash();
