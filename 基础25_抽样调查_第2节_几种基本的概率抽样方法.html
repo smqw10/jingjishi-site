@@ -141,8 +141,13 @@
   .toc a { background: #fff; border: 1px solid #e8e8e5; border-radius: 16px; padding: 6px 14px; font-size: 12.5px; color: #55554f; }
   .toc a:hover { border-color: #185FA5; color: #185FA5; }
   .toc .sb-badge { margin-left: 6px; }
-  .sec-quiz-btn { display: inline-block; margin-top: 12px; background: #185FA5; color: #fff !important; border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 500; }
-  .sec-quiz-btn:hover { background: #0C447C; }
+  .quiz-cta { display: flex; align-items: center; gap: 14px; background: #E6F1FB; border: 1px solid #cfe2f3; border-radius: 12px; padding: 14px 18px; margin-top: 28px; flex-wrap: wrap; }
+  .quiz-cta .qc-icon { font-size: 24px; line-height: 1; }
+  .quiz-cta .qc-text { flex: 1; min-width: 200px; }
+  .quiz-cta .qc-text b { display: block; font-size: 14.5px; color: #0C447C; }
+  .quiz-cta .qc-text span { font-size: 12.5px; color: #5F7A96; }
+  .quiz-cta .qc-btn { background: #185FA5; color: #fff !important; border-radius: 8px; padding: 9px 20px; font-size: 13.5px; font-weight: 600; white-space: nowrap; }
+  .quiz-cta .qc-btn:hover { background: #0C447C; }
   .entry-card { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 18px 20px; margin-bottom: 16px; }
   .entry-card .ec-icon { font-size: 30px; }
   .entry-card .ec-body { flex: 1; }
@@ -187,7 +192,7 @@
 </head>
 <body>
 <div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item active" href="mulu-b.html"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="mulu-r.html"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
-<div class="header"><div class="crumb"><a href="mulu-b.html">← 经济基础知识目录</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十五章 抽样调查 · 几种基本的概率抽样方法</h1><div class="subtitle">第 2 节 / 共 3 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:66%"></div></div><div class="progress-text">本章进度 2/3</div><div class="sec-badge none" id="sec-badge" data-sec="b25s2">本节掌握：加载中…</div><a class="sec-quiz-btn" href="quiz.html?ch=基础-25">📝 本章随堂练习</a></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<div class="header"><div class="crumb"><a href="mulu-b.html">← 经济基础知识目录</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十五章 抽样调查 · 几种基本的概率抽样方法</h1><div class="subtitle">第 2 节 / 共 3 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:66%"></div></div><div class="progress-text">本章进度 2/3</div><div class="sec-badge none" id="sec-badge" data-sec="b25s2">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
 <li>掌握<strong>简单随机抽样</strong>：放回／不放回之分、优缺点与"不多不广不大"的适用条件 <span class="hot">高频考点</span></li>
 <li>背熟<strong>分层抽样</strong>的定义、三大优点与"<strong>层内小、层间大</strong>"的要求 <span class="must">必考</span> <span class="s3">★★★</span></li>
 <li>会识别<strong>系统抽样</strong>（等距抽样）："先抽头、等距走"，间隔＝总体规模÷样本量 <span class="hot">高频考点</span></li>
@@ -362,7 +367,7 @@
 :::</p></div></details></div><div class="quiz-item" data-qid="b25s2q5" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">某省通过对农户进行抽样调查来了解乡村振兴建设推进情况，先从全省随机抽取 n 个县级行政单位，然后从每个被抽中的县级行政单位中随机抽取 m 个村，再从每个被抽中的村中随机抽取 k 个农户，该调查采用的抽样方法是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 分层抽样</button><button type="button" class="qopt" data-key="B">B. 整群抽样</button><button type="button" class="qopt" data-key="C">C. 系统抽样</button><button type="button" class="qopt" data-key="D">D. 多阶段抽样</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>"省→县→村→户"<strong>层层往下抽、经过三个阶段</strong>才到最终样本单位（农户），是典型的多阶段抽样（D 对）。若是整群抽样，抽中村后就该把村内<strong>全部农户</strong>都调查，而本题最后还要再抽 k 个（B 错）；分层要求先按标准把总体分层、再层内抽样，本题是分步抽取而不是分层（A 错）；全程没有"排序＋等距"的动作（C 错）。题眼：<strong>抽中之后还继续再抽</strong>→多阶段；抽中之后<strong>全查</strong>→整群。
 :::</p></div></details></div><div class="quiz-item" data-qid="b25s2q6" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">关于整群抽样的说法，正确的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 如果群内的差异小，则整群抽样的误差较小</button><button type="button" class="qopt" data-key="B">B. 整群抽样的调查不方便</button><button type="button" class="qopt" data-key="C">C. 整群抽样的抽样复杂</button><button type="button" class="qopt" data-key="D">D. 如果群间的差异小，则整群抽样的误差较小</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>整群抽样的适用条件是"<strong>群内差异大、群间差异小</strong>"——群间差异小，抽中少数几个群就能代表总体，误差较小（D 对）。A 拧反了方向：恰恰是群内差异<strong>小</strong>（群内相似）使得整群抽样<strong>误差比较大</strong>；B 反了，实施调查<strong>方便</strong>、节省费用和时间是整群抽样的优点；C 混淆对象，整群抽样<strong>抽样框编制简化</strong>（只需群的抽样框），"抽样设计与误差计算复杂"是<strong>多阶段抽样</strong>的缺点。本题考的就是"分层与整群要求正好相反"这个易混点。
 :::</p></div></details></div></div>
-<div class="section"><p>:::</p></div><div class="footer-nav"><a class="prev" href="基础25_抽样调查_第1节_抽样调查的基本概念.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 抽样调查的基本概念</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础25_抽样调查_第3节_估计量和样本量.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 估计量和样本量</span></a></div>
+<div class="section"><p>:::</p></div><div class="quiz-cta"><span class="qc-icon">📝</span><div class="qc-text"><b>本章随堂练习</b><span>学完本节，做题检验一下掌握程度——一节内全部题目答对才算"已学会"</span></div><a class="qc-btn" href="quiz.html?ch=基础-25">开始练习 →</a></div><div class="footer-nav"><a class="prev" href="基础25_抽样调查_第1节_抽样调查的基本概念.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 抽样调查的基本概念</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础25_抽样调查_第3节_估计量和样本量.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 估计量和样本量</span></a></div>
 <script>
 (function(){
   var KEY='rljpk_v1';

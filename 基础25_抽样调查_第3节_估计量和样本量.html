@@ -141,8 +141,13 @@
   .toc a { background: #fff; border: 1px solid #e8e8e5; border-radius: 16px; padding: 6px 14px; font-size: 12.5px; color: #55554f; }
   .toc a:hover { border-color: #185FA5; color: #185FA5; }
   .toc .sb-badge { margin-left: 6px; }
-  .sec-quiz-btn { display: inline-block; margin-top: 12px; background: #185FA5; color: #fff !important; border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 500; }
-  .sec-quiz-btn:hover { background: #0C447C; }
+  .quiz-cta { display: flex; align-items: center; gap: 14px; background: #E6F1FB; border: 1px solid #cfe2f3; border-radius: 12px; padding: 14px 18px; margin-top: 28px; flex-wrap: wrap; }
+  .quiz-cta .qc-icon { font-size: 24px; line-height: 1; }
+  .quiz-cta .qc-text { flex: 1; min-width: 200px; }
+  .quiz-cta .qc-text b { display: block; font-size: 14.5px; color: #0C447C; }
+  .quiz-cta .qc-text span { font-size: 12.5px; color: #5F7A96; }
+  .quiz-cta .qc-btn { background: #185FA5; color: #fff !important; border-radius: 8px; padding: 9px 20px; font-size: 13.5px; font-weight: 600; white-space: nowrap; }
+  .quiz-cta .qc-btn:hover { background: #0C447C; }
   .entry-card { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 18px 20px; margin-bottom: 16px; }
   .entry-card .ec-icon { font-size: 30px; }
   .entry-card .ec-body { flex: 1; }
@@ -187,7 +192,7 @@
 </head>
 <body>
 <div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item active" href="mulu-b.html"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="mulu-r.html"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
-<div class="header"><div class="crumb"><a href="mulu-b.html">← 经济基础知识目录</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十五章 抽样调查 · 估计量和样本量</h1><div class="subtitle">第 3 节 / 共 3 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 3/3</div><div class="sec-badge none" id="sec-badge" data-sec="b25s3">本节掌握：加载中…</div><a class="sec-quiz-btn" href="quiz.html?ch=基础-25">📝 本章随堂练习</a></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<div class="header"><div class="crumb"><a href="mulu-b.html">← 经济基础知识目录</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十五章 抽样调查 · 估计量和样本量</h1><div class="subtitle">第 3 节 / 共 3 节 · 预计学习时长 40 分钟</div><div class="progress-bar"><div class="fill" style="width:100%"></div></div><div class="progress-text">本章进度 3/3</div><div class="sec-badge none" id="sec-badge" data-sec="b25s3">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
 <li>背熟估计量三性质：<strong>无偏（均等）、有效（靠近）、一致（稳定）</strong>，见关键词秒选 <span class="s3">★★★</span> <span class="must">必考</span></li>
 <li>会用公式 <strong>V(ȳ)＝(1−n/N)×S²/n</strong> 分步计算估计量方差，警惕漏乘修正系数 <span class="hot">高频考点</span></li>
 <li>记住<strong>抽样误差的四个影响因素</strong>及方向："差大误大、样大误小、分层小于简单随机" <span class="hot">高频考点</span></li>
@@ -347,7 +352,7 @@
 :::</p></div></details></div><div class="quiz-item" data-qid="b25s3q5" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">在不放回简单随机抽样中，估计量的无偏性是指（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 所有可能样本估计值的平均值等于总体参数</button><button type="button" class="qopt" data-key="B">B. 所有可能样本估计值都等于总体参数</button><button type="button" class="qopt" data-key="C">C. 所有可能样本估计值集中在总体参数附近</button><button type="button" class="qopt" data-key="D">D. 随着样本量的增大，样本估计值趋向总体参数</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>无偏性＝对于不放回简单随机抽样，<strong>所有可能的样本均值取值的平均值</strong>总是等于总体均值（A 对）——是"平均起来等于"，不是"个个都等于"（B 错）。C"集中在总体参数附近"是<strong>有效性</strong>的关键词（密集在真值附近）；D"随样本量增大趋向总体参数"是<strong>一致性</strong>的关键词。口诀："无偏均等、有效靠近、一致稳定"，三个关键词互为干扰项。
 :::</p></div></details></div><div class="quiz-item" data-qid="b25s3q6" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">抽样调查中，如在其他条件不变的条件下减小允许误差，所需要的样本量会（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 增加</button><button type="button" class="qopt" data-key="B">B. 减少</button><button type="button" class="qopt" data-key="C">C. 不变</button><button type="button" class="qopt" data-key="D">D. 无法确定增减</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>调查的精度越高（允许的误差越小），需要的样本量<strong>越大</strong>——减小允许误差就是提高精度要求，故样本量增加（A 对，B 方向反了）。方向锚：<strong>精度与样本量同向，误差与样本量反向</strong>（样大误小，反过来压误差就得加样本）；C"不变"、D"无法确定"与教材"调查精度越高（误差越小），需要的样本量越大"不符。
 :::</p></div></details></div></div>
-<div class="section"><p>:::</p></div><div class="footer-nav"><a class="prev" href="基础25_抽样调查_第2节_几种基本的概率抽样方法.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 几种基本的概率抽样方法</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
+<div class="section"><p>:::</p></div><div class="quiz-cta"><span class="qc-icon">📝</span><div class="qc-text"><b>本章随堂练习</b><span>学完本节，做题检验一下掌握程度——一节内全部题目答对才算"已学会"</span></div><a class="qc-btn" href="quiz.html?ch=基础-25">开始练习 →</a></div><div class="footer-nav"><a class="prev" href="基础25_抽样调查_第2节_几种基本的概率抽样方法.html"><span class="nav-label">上一节</span><span class="nav-title">第2节 几种基本的概率抽样方法</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><span class="next nav-cell disabled"><span class="nav-label">下一节</span><span class="nav-title">已是最后一节</span></span></div>
 <script>
 (function(){
   var KEY='rljpk_v1';
