@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 章节目录 | 中级经济师精品课</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .mn-topic { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: 1px; font-weight: 700; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .fig-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 18px 16px 14px; margin: 12px 0; }
+  .fig-title { font-size: 14.5px; font-weight: 600; color: #1a1a1a; text-align: center; }
+  .fig-sub { font-size: 12px; color: #888780; text-align: center; margin-top: 3px; margin-bottom: 4px; }
+  .fig-card svg { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+  .fig-note { font-size: 13px; line-height: 1.7; border-radius: 8px; padding: 9px 12px; margin-top: 8px; }
+  .fig-note.ok { background: #EAF6EC; color: #2C5E3C; }
+  .fig-note.blue { background: #E6F1FB; color: #0C447C; }
+  .fig-note.red { background: #FBE9E7; color: #A12622; }
+  .fig-note.green { background: #EAF6EC; color: #2C5E3C; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 220px; background: #fff; border-right: 1px solid #e8e8e5; padding: 16px 12px 24px; overflow-y: auto; z-index: 50; transform: translateX(-105%); transition: transform .2s ease; }
+  body.sb-open .sidebar { transform: none; }
+  .sb-mask { position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 40; display: none; }
+  body.sb-open .sb-mask { display: block; }
+  button.sb-btn { display: none; position: fixed; top: 12px; left: 12px; z-index: 60; width: 38px; height: 38px; border-radius: 50%; border: 1px solid #e8e8e5; background: #fff; font-size: 17px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  .sb-brand { font-size: 15px; font-weight: 700; color: #1a1a1a; padding: 6px 10px 14px; border-bottom: 1px solid #f0f0ed; margin-bottom: 10px; }
+  .sb-brand span { display: block; font-size: 11px; color: #888780; font-weight: 400; margin-top: 2px; }
+  .sb-group { font-size: 11px; color: #b0aea5; padding: 12px 10px 4px; font-weight: 600; letter-spacing: 1px; }
+  .sb-item { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 8px; font-size: 13.5px; color: #55554f; margin-bottom: 2px; }
+  .sb-item:hover { background: #f5f6f8; color: #185FA5; }
+  .sb-item.active { background: #E6F1FB; color: #0C447C; font-weight: 600; }
+  .sb-item.disabled { color: #b5b3aa; cursor: default; }
+  .sb-item.disabled:hover { background: none; color: #b5b3aa; }
+  .sb-badge { margin-left: auto; font-size: 10px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 6px; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .toc a { background: #fff; border: 1px solid #e8e8e5; border-radius: 16px; padding: 6px 14px; font-size: 12.5px; color: #55554f; }
+  .toc a:hover { border-color: #185FA5; color: #185FA5; }
+  .toc .sb-badge { margin-left: 6px; }
+  .sec-quiz-btn { display: inline-block; margin-top: 12px; background: #185FA5; color: #fff !important; border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 500; }
+  .sec-quiz-btn:hover { background: #0C447C; }
+  .entry-card { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 18px 20px; margin-bottom: 16px; }
+  .entry-card .ec-icon { font-size: 30px; }
+  .entry-card .ec-body { flex: 1; }
+  .entry-card .ec-title { display: block; font-size: 15.5px; font-weight: 700; color: #1a1a1a; }
+  .entry-card .ec-desc { display: block; font-size: 12.5px; color: #888780; margin-top: 2px; }
+  .entry-card .ec-btn { background: #185FA5; color: #fff; border-radius: 8px; padding: 8px 16px; font-size: 13px; white-space: nowrap; }
+  @media (min-width: 1060px) {
+    .sidebar { transform: none; }
+    body { margin-left: max(240px, calc((100vw - 800px) / 2 + 110px)); }
+  }
+  @media (max-width: 1059.9px) { button.sb-btn { display: block; } }
+  /* 总览仪表盘板块卡 */
+  .dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+  @media (max-width: 640px) { .dash-grid { grid-template-columns: 1fr; } }
+  .dash-card { display: block; background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; }
+  .dash-card:hover { border-color: #185FA5; }
+  .dash-card .dc-icon { font-size: 26px; }
+  .dash-card .dc-title { font-size: 17px; font-weight: 700; color: #1a1a1a; margin: 8px 0 4px; }
+  .dash-card .dc-meta { font-size: 12.5px; color: #888780; margin-bottom: 12px; }
+  .dash-card .dc-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-top: 6px; }
+  .dash-card.wide { grid-column: 1 / -1; }
+  .dash-card .dc-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .dash-card .dc-links a { background: #f5f6f8; border: 1px solid #e8e8e5; border-radius: 16px; padding: 5px 13px; font-size: 12.5px; color: #55554f; }
+  .dash-card .dc-links a:hover { border-color: #185FA5; color: #185FA5; }
+  .continue-card { background: #FDF9EF; border: 1px solid #F0E4C3; border-radius: 14px; padding: 16px 20px; margin-bottom: 16px; }
+  .continue-card .cont-title { font-size: 13px; color: #A9720A; font-weight: 600; margin-bottom: 6px; }
+  .continue-card .cont-link { font-size: 15px; font-weight: 600; color: #185FA5; display: inline-block; margin-right: 10px; }
+  .continue-card .cont-meta { font-size: 12px; color: #A09A8A; }
+  /* 云同步折叠卡 */
+  details.section#sync-card { padding: 0; }
+  #sync-card summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 16px 20px; }
+  #sync-card summary::-webkit-details-marker { display: none; }
+  .sync-sum-title { font-size: 15.5px; font-weight: 600; color: #1a1a1a; }
+  .sync-sum-state { font-size: 12.5px; color: #888780; text-align: right; }
+  .sync-sum-state.ok { color: #2C5E3C; font-weight: 500; }
+  #sync-card[open] .sync-sum-state { display: none; }
+  .sync-inner { padding: 0 20px 20px; border-top: 1px solid #f0f0ed; padding-top: 14px; }
+</style>
+</head>
+<body>
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item active" href="mulu-b.html"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="mulu-r.html"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
+<div class="header"><div class="crumb"><a href="index.html">← 学习总览</a></div><span class="label">讲义 · 经济基础知识</span><h1>📖 经济基础知识 · 章节目录</h1><div class="subtitle">共 37 章 145 节。每节含学习目标、细讲、速记卡、随堂练习，<b>一节内全部题目答对即记"已学会"</b>；进度圆点实时更新。</div><div class="progress-bar"><div class="fill" id="overall-fill" style="width:0%"></div></div><div class="progress-text" id="overall-text">进度统计中…</div></div><div class="toc"><a href="#part1">经济学基础</a><a href="#part2">财政</a><a href="#part3">货币与金融</a><a href="#part4">统计</a><a href="#part5">会计</a><a href="#part6">法律</a></div><div class="group" data-subject="基础" id="part1"><div class="group-head"><span class="g-title">第一部分 经济学基础</span><span class="g-meta">34 节</span><span class="g-prog" id="prog-基础"></span></div><div class="chapter-card" data-ch="01"><div class="c-title"><a href="基础01_社会主义基本经济制度_第1节_社会主义基本经济制度的内涵.html">第一章 社会主义基本经济制度</a></div><div class="c-meta">3 节 · 约 120 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b01s1" href="基础01_社会主义基本经济制度_第1节_社会主义基本经济制度的内涵.html">第1节 社会主义基本经济制度的内涵</a> <a data-sec="b01s2" href="基础01_社会主义基本经济制度_第2节_社会主义所有制结构.html">第2节 社会主义所有制结构</a> <a data-sec="b01s3" href="基础01_社会主义基本经济制度_第3节_社会主义市场经济体制.html">第3节 社会主义市场经济体制</a></div></div>
+<div class="chapter-card" data-ch="02"><div class="c-title"><a href="基础02_市场需求、供给与价格均衡_第1节_市场需求.html">第二章 市场需求、供给与价格均衡</a></div><div class="c-meta">4 节 · 约 170 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b02s1" href="基础02_市场需求、供给与价格均衡_第1节_市场需求.html">第1节 市场需求</a> <a data-sec="b02s2" href="基础02_市场需求、供给与价格均衡_第2节_市场供给.html">第2节 市场供给</a> <a data-sec="b02s3" href="基础02_市场需求、供给与价格均衡_第3节_均衡价格.html">第3节 均衡价格</a> <a data-sec="b02s4" href="基础02_市场需求、供给与价格均衡_第4节_弹性.html">第4节 弹性</a></div></div>
+<div class="chapter-card" data-ch="03"><div class="c-title"><a href="基础03_生产和成本理论_第1节_生产者的组织形式和企业理论.html">第三章 生产和成本理论</a></div><div class="c-meta">3 节 · 约 125 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b03s1" href="基础03_生产和成本理论_第1节_生产者的组织形式和企业理论.html">第1节 生产者的组织形式和企业理论</a> <a data-sec="b03s2" href="基础03_生产和成本理论_第2节_生产函数和生产曲线.html">第2节 生产函数和生产曲线</a> <a data-sec="b03s3" href="基础03_生产和成本理论_第3节_成本函数和成本曲线.html">第3节 成本函数和成本曲线</a></div></div>
+<div class="chapter-card" data-ch="04"><div class="c-title"><a href="基础04_市场结构理论_第1节_市场结构的类型.html">第四章 市场结构理论</a></div><div class="c-meta">4 节 · 约 180 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b04s1" href="基础04_市场结构理论_第1节_市场结构的类型.html">第1节 市场结构的类型</a> <a data-sec="b04s2" href="基础04_市场结构理论_第2节_完全竞争市场上生产者的行为.html">第2节 完全竞争市场上生产者的行为</a> <a data-sec="b04s3" href="基础04_市场结构理论_第3节_完全垄断市场上生产者的行为.html">第3节 完全垄断市场上生产者的行为</a> <a data-sec="b04s4" href="基础04_市场结构理论_第4节_垄断竞争和寡头垄断市场上生产者的行为.html">第4节 垄断竞争和寡头垄断市场上生产者的行为</a></div></div>
+<div class="chapter-card" data-ch="05"><div class="c-title"><a href="基础05_生产要素市场理论_第1节_生产者使用生产要素的原则.html">第五章 生产要素市场理论</a></div><div class="c-meta">3 节 · 约 115 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b05s1" href="基础05_生产要素市场理论_第1节_生产者使用生产要素的原则.html">第1节 生产者使用生产要素的原则</a> <a data-sec="b05s2" href="基础05_生产要素市场理论_第2节_完全竞争生产者对生产要素的需求.html">第2节 完全竞争生产者对生产要素的需求</a> <a data-sec="b05s3" href="基础05_生产要素市场理论_第3节_劳动供给曲线和均衡工资的决定.html">第3节 劳动供给曲线和均衡工资的决定</a></div></div>
+<div class="chapter-card" data-ch="06"><div class="c-title"><a href="基础06_市场失灵和政府的干预_第1节_市场失灵的含义.html">第六章 市场失灵和政府的干预</a></div><div class="c-meta">2 节 · 约 85 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b06s1" href="基础06_市场失灵和政府的干预_第1节_市场失灵的含义.html">第1节 市场失灵的含义</a> <a data-sec="b06s2" href="基础06_市场失灵和政府的干预_第2节_市场失灵的原因及政府对市场的干预.html">第2节 市场失灵的原因及政府对市场的干预</a></div></div>
+<div class="chapter-card" data-ch="07"><div class="c-title"><a href="基础07_国民收入核算和简单的宏观经济模型_第1节_国民收入核算.html">第七章 国民收入核算和简单的宏观经济模型</a></div><div class="c-meta">4 节 · 约 165 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b07s1" href="基础07_国民收入核算和简单的宏观经济模型_第1节_国民收入核算.html">第1节 国民收入核算</a> <a data-sec="b07s2" href="基础07_国民收入核算和简单的宏观经济模型_第2节_宏观经济均衡的基本模型.html">第2节 宏观经济均衡的基本模型</a> <a data-sec="b07s3" href="基础07_国民收入核算和简单的宏观经济模型_第3节_消费、储蓄和投资.html">第3节 消费、储蓄和投资</a> <a data-sec="b07s4" href="基础07_国民收入核算和简单的宏观经济模型_第4节_总需求和总供给.html">第4节 总需求和总供给</a></div></div>
+<div class="chapter-card" data-ch="08"><div class="c-title"><a href="b08s1.html">第八章 经济增长和经济发展理论</a></div><div class="c-meta">3 节 · 约 125 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b08s1" href="b08s1.html">第1节 经济增长</a> <a data-sec="b08s2" href="b08s2.html">第2节 经济周期和经济波动</a> <a data-sec="b08s3" href="b08s3.html">第3节 经济发展</a></div></div>
+<div class="chapter-card" data-ch="09"><div class="c-title"><a href="基础09_价格总水平和就业、失业_第1节_价格总水平.html">第九章 价格总水平和就业、失业</a></div><div class="c-meta">4 节 · 约 135 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b09s1" href="基础09_价格总水平和就业、失业_第1节_价格总水平.html">第1节 价格总水平</a> <a data-sec="b09s2" href="基础09_价格总水平和就业、失业_第2节_就业与失业.html">第2节 就业与失业</a> <a data-sec="b09s3" href="基础09_价格总水平和就业、失业_第3节_失业和经济增长及价格总水平的关系.html">第3节 失业和经济增长及价格总水平的关系</a> <a data-sec="b09s4" href="基础09_价格总水平和就业、失业_第4节_宏观经济治理的内涵与特征.html">第4节 宏观经济治理的内涵与特征</a></div></div>
+<div class="chapter-card" data-ch="10"><div class="c-title"><a href="基础10_国际贸易理论_第1节_国际贸易理论.html">第十章 国际贸易理论</a></div><div class="c-meta">4 节 · 约 145 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b10s1" href="基础10_国际贸易理论_第1节_国际贸易理论.html">第1节 国际贸易理论</a> <a data-sec="b10s2" href="基础10_国际贸易理论_第2节_国际贸易政策.html">第2节 国际贸易政策</a> <a data-sec="b10s3" href="基础10_国际贸易理论_第3节_建设更高水平对外开放新体制.html">第3节 建设更高水平对外开放新体制</a> <a data-sec="b10s4" href="基础10_国际贸易理论_第4节_建设更高水平对外开放的实现路径.html">第4节 建设更高水平对外开放的实现路径</a></div></div></div>
+<div class="group" data-subject="基础" id="part2"><div class="group-head"><span class="g-title">第二部分 财政</span><span class="g-meta">29 节</span><span class="g-prog" id="prog-基础"></span></div><div class="chapter-card" data-ch="11"><div class="c-title"><a href="基础11_公共物品与财政职能_第1节_公共物品的定义及其融资与生产.html">第十一章 公共物品与财政职能</a></div><div class="c-meta">3 节 · 约 105 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b11s1" href="基础11_公共物品与财政职能_第1节_公共物品的定义及其融资与生产.html">第1节 公共物品的定义及其融资与生产</a> <a data-sec="b11s2" href="基础11_公共物品与财政职能_第2节_市场与政府的经济活动范围.html">第2节 市场与政府的经济活动范围</a> <a data-sec="b11s3" href="基础11_公共物品与财政职能_第3节_财政的基本职能.html">第3节 财政的基本职能</a></div></div>
+<div class="chapter-card" data-ch="12"><div class="c-title"><a href="基础12_财政支出_第1节_财政支出及其分类.html">第十二章 财政支出</a></div><div class="c-meta">5 节 · 约 195 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b12s1" href="基础12_财政支出_第1节_财政支出及其分类.html">第1节 财政支出及其分类</a> <a data-sec="b12s2" href="基础12_财政支出_第2节_财政支出规模及其增长趋势.html">第2节 财政支出规模及其增长趋势</a> <a data-sec="b12s3" href="基础12_财政支出_第3节_财政支出效益分析.html">第3节 财政支出效益分析</a> <a data-sec="b12s4" href="基础12_财政支出_第4节_购买性支出.html">第4节 购买性支出</a> <a data-sec="b12s5" href="基础12_财政支出_第5节_转移性支出.html">第5节 转移性支出</a></div></div>
+<div class="chapter-card" data-ch="13"><div class="c-title"><a href="基础13_财政收入_第1节_财政收入的含义与分类.html">第十三章 财政收入</a></div><div class="c-meta">4 节 · 约 160 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b13s1" href="基础13_财政收入_第1节_财政收入的含义与分类.html">第1节 财政收入的含义与分类</a> <a data-sec="b13s2" href="基础13_财政收入_第2节_税收.html">第2节 税收</a> <a data-sec="b13s3" href="基础13_财政收入_第3节_税负转嫁.html">第3节 税负转嫁</a> <a data-sec="b13s4" href="基础13_财政收入_第4节_国债.html">第4节 国债</a></div></div>
+<div class="chapter-card" data-ch="14"><div class="c-title"><a href="基础14_税收制度_第1节_税制要素和税收分类.html">第十四章 税收制度</a></div><div class="c-meta">4 节 · 约 200 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b14s1" href="基础14_税收制度_第1节_税制要素和税收分类.html">第1节 税制要素和税收分类</a> <a data-sec="b14s2" href="基础14_税收制度_第2节_货物和劳务税类.html">第2节 货物和劳务税类</a> <a data-sec="b14s3" href="基础14_税收制度_第3节_所得税类.html">第3节 所得税类</a> <a data-sec="b14s4" href="基础14_税收制度_第4节_财产税类.html">第4节 财产税类</a></div></div>
+<div class="chapter-card" data-ch="15"><div class="c-title"><a href="基础15_政府预算_第1节_政府预算的职能与原则.html">第十五章 政府预算</a></div><div class="c-meta">5 节 · 约 195 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b15s1" href="基础15_政府预算_第1节_政府预算的职能与原则.html">第1节 政府预算的职能与原则</a> <a data-sec="b15s2" href="基础15_政府预算_第2节_我国政府预算职权划分.html">第2节 我国政府预算职权划分</a> <a data-sec="b15s3" href="基础15_政府预算_第3节_我国政府预算体系.html">第3节 我国政府预算体系</a> <a data-sec="b15s4" href="基础15_政府预算_第4节_我国政府预算编制和执行制度.html">第4节 我国政府预算编制和执行制度</a> <a data-sec="b15s5" href="基础15_政府预算_第5节_深化预算管理制度改革.html">第5节 深化预算管理制度改革</a></div></div>
+<div class="chapter-card" data-ch="16"><div class="c-title"><a href="基础16_财政管理体制_第1节_财政管理体制内容与类型.html">第十六章 财政管理体制</a></div><div class="c-meta">5 节 · 约 190 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b16s1" href="基础16_财政管理体制_第1节_财政管理体制内容与类型.html">第1节 财政管理体制内容与类型</a> <a data-sec="b16s2" href="基础16_财政管理体制_第2节_分税制财政管理体制.html">第2节 分税制财政管理体制</a> <a data-sec="b16s3" href="基础16_财政管理体制_第3节_财政转移支付制度.html">第3节 财政转移支付制度</a> <a data-sec="b16s4" href="基础16_财政管理体制_第4节_合理划分中央与地方财政事权和支出责任.html">第4节 合理划分中央与地方财政事权和支出责任</a> <a data-sec="b16s5" href="基础16_财政管理体制_第5节_建立现代财政制度.html">第5节 建立现代财政制度</a></div></div>
+<div class="chapter-card" data-ch="17"><div class="c-title"><a href="基础17_财政政策_第1节_财政政策功能与目标.html">第十七章 财政政策</a></div><div class="c-meta">3 节 · 约 125 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b17s1" href="基础17_财政政策_第1节_财政政策功能与目标.html">第1节 财政政策功能与目标</a> <a data-sec="b17s2" href="基础17_财政政策_第2节_财政政策的工具与类型.html">第2节 财政政策的工具与类型</a> <a data-sec="b17s3" href="基础17_财政政策_第3节_财政政策乘数与时滞.html">第3节 财政政策乘数与时滞</a></div></div></div>
+<div class="group" data-subject="基础" id="part3"><div class="group-head"><span class="g-title">第三部分 货币与金融</span><span class="g-meta">17 节</span><span class="g-prog" id="prog-基础"></span></div><div class="chapter-card" data-ch="18"><div class="c-title"><a href="基础18_货币供求与货币均衡_第1节_货币需求.html">第十八章 货币供求与货币均衡</a></div><div class="c-meta">4 节 · 约 175 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b18s1" href="基础18_货币供求与货币均衡_第1节_货币需求.html">第1节 货币需求</a> <a data-sec="b18s2" href="基础18_货币供求与货币均衡_第2节_货币供给.html">第2节 货币供给</a> <a data-sec="b18s3" href="基础18_货币供求与货币均衡_第3节_货币均衡.html">第3节 货币均衡</a> <a data-sec="b18s4" href="基础18_货币供求与货币均衡_第4节_通货膨胀.html">第4节 通货膨胀</a></div></div>
+<div class="chapter-card" data-ch="19"><div class="c-title"><a href="基础19_中央银行和货币政策_第1节_中央银行.html">第十九章 中央银行和货币政策</a></div><div class="c-meta">2 节 · 约 105 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b19s1" href="基础19_中央银行和货币政策_第1节_中央银行.html">第1节 中央银行</a> <a data-sec="b19s2" href="基础19_中央银行和货币政策_第2节_货币政策.html">第2节 货币政策</a></div></div>
+<div class="chapter-card" data-ch="20"><div class="c-title"><a href="基础20_商业银行与金融市场_第1节_商业银行的运营与管理.html">第二十章 商业银行与金融市场</a></div><div class="c-meta">2 节 · 约 85 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b20s1" href="基础20_商业银行与金融市场_第1节_商业银行的运营与管理.html">第1节 商业银行的运营与管理</a> <a data-sec="b20s2" href="基础20_商业银行与金融市场_第2节_金融市场.html">第2节 金融市场</a></div></div>
+<div class="chapter-card" data-ch="21"><div class="c-title"><a href="基础21_金融风险和金融监管_第1节_金融风险.html">第二十一章 金融风险和金融监管</a></div><div class="c-meta">5 节 · 约 190 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b21s1" href="基础21_金融风险和金融监管_第1节_金融风险.html">第1节 金融风险</a> <a data-sec="b21s2" href="基础21_金融风险和金融监管_第2节_金融危机.html">第2节 金融危机</a> <a data-sec="b21s3" href="基础21_金融风险和金融监管_第3节_金融监管理论.html">第3节 金融监管理论</a> <a data-sec="b21s4" href="基础21_金融风险和金融监管_第4节_金融监管体制.html">第4节 金融监管体制</a> <a data-sec="b21s5" href="基础21_金融风险和金融监管_第5节_国际金融监管协调.html">第5节 国际金融监管协调</a></div></div>
+<div class="chapter-card" data-ch="22"><div class="c-title"><a href="基础22_对外金融关系与政策_第1节_汇率制度.html">第二十二章 对外金融关系与政策</a></div><div class="c-meta">4 节 · 约 150 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b22s1" href="基础22_对外金融关系与政策_第1节_汇率制度.html">第1节 汇率制度</a> <a data-sec="b22s2" href="基础22_对外金融关系与政策_第2节_国际储备.html">第2节 国际储备</a> <a data-sec="b22s3" href="基础22_对外金融关系与政策_第3节_国际货币体系.html">第3节 国际货币体系</a> <a data-sec="b22s4" href="基础22_对外金融关系与政策_第4节_人民币跨境使用.html">第4节 人民币跨境使用</a></div></div></div>
+<div class="group" data-subject="基础" id="part4"><div class="group-head"><span class="g-title">第四部分 统计</span><span class="g-meta">20 节</span><span class="g-prog" id="prog-基础"></span></div><div class="chapter-card" data-ch="23"><div class="c-title"><a href="基础23_统计与数据科学_第1节_统计学.html">第二十三章 统计与数据科学</a></div><div class="c-meta">5 节 · 约 185 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b23s1" href="基础23_统计与数据科学_第1节_统计学.html">第1节 统计学</a> <a data-sec="b23s2" href="基础23_统计与数据科学_第2节_变量和数据.html">第2节 变量和数据</a> <a data-sec="b23s3" href="基础23_统计与数据科学_第3节_数据的来源.html">第3节 数据的来源</a> <a data-sec="b23s4" href="基础23_统计与数据科学_第4节_统计调查.html">第4节 统计调查</a> <a data-sec="b23s5" href="基础23_统计与数据科学_第5节_数据科学与大数据.html">第5节 数据科学与大数据</a></div></div>
+<div class="chapter-card" data-ch="24"><div class="c-title"><a href="基础24_描述统计_第1节_集中趋势的测度.html">第二十四章 描述统计</a></div><div class="c-meta">4 节 · 约 180 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b24s1" href="基础24_描述统计_第1节_集中趋势的测度.html">第1节 集中趋势的测度</a> <a data-sec="b24s2" href="基础24_描述统计_第2节_离散程度的测度.html">第2节 离散程度的测度</a> <a data-sec="b24s3" href="基础24_描述统计_第3节_分布形态的测度.html">第3节 分布形态的测度</a> <a data-sec="b24s4" href="基础24_描述统计_第4节_变量间的相关分析.html">第4节 变量间的相关分析</a></div></div>
+<div class="chapter-card" data-ch="25"><div class="c-title"><a href="基础25_抽样调查_第1节_抽样调查的基本概念.html">第二十五章 抽样调查</a></div><div class="c-meta">3 节 · 约 125 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b25s1" href="基础25_抽样调查_第1节_抽样调查的基本概念.html">第1节 抽样调查的基本概念</a> <a data-sec="b25s2" href="基础25_抽样调查_第2节_几种基本的概率抽样方法.html">第2节 几种基本的概率抽样方法</a> <a data-sec="b25s3" href="基础25_抽样调查_第3节_估计量和样本量.html">第3节 估计量和样本量</a></div></div>
+<div class="chapter-card" data-ch="26"><div class="c-title"><a href="基础26_回归分析_第1节_回归分析.html">第二十六章 回归分析</a></div><div class="c-meta">3 节 · 约 115 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b26s1" href="基础26_回归分析_第1节_回归分析.html">第1节 回归分析</a> <a data-sec="b26s2" href="基础26_回归分析_第2节_最小二乘法.html">第2节 最小二乘法</a> <a data-sec="b26s3" href="基础26_回归分析_第3节_模型的检验和预测.html">第3节 模型的检验和预测</a></div></div>
+<div class="chapter-card" data-ch="27"><div class="c-title"><a href="基础27_时间序列分析_第1节_时间序列及其分类.html">第二十七章 时间序列分析</a></div><div class="c-meta">5 节 · 约 215 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b27s1" href="基础27_时间序列分析_第1节_时间序列及其分类.html">第1节 时间序列及其分类</a> <a data-sec="b27s2" href="基础27_时间序列分析_第2节_时间序列的水平分析.html">第2节 时间序列的水平分析</a> <a data-sec="b27s3" href="基础27_时间序列分析_第3节_时间序列的速度分析.html">第3节 时间序列的速度分析</a> <a data-sec="b27s4" href="基础27_时间序列分析_第4节_时间序列的分解和预测程序.html">第4节 时间序列的分解和预测程序</a> <a data-sec="b27s5" href="基础27_时间序列分析_第5节_平滑预测法.html">第5节 平滑预测法</a></div></div></div>
+<div class="group" data-subject="基础" id="part5"><div class="group-head"><span class="g-title">第五部分 会计</span><span class="g-meta">22 节</span><span class="g-prog" id="prog-基础"></span></div><div class="chapter-card" data-ch="28"><div class="c-title"><a href="基础28_会计概论_第1节_会计的基本概念.html">第二十八章 会计概论</a></div><div class="c-meta">7 节 · 约 275 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b28s1" href="基础28_会计概论_第1节_会计的基本概念.html">第1节 会计的基本概念</a> <a data-sec="b28s2" href="基础28_会计概论_第2节_会计目标.html">第2节 会计目标</a> <a data-sec="b28s3" href="基础28_会计概论_第3节_会计要素.html">第3节 会计要素</a> <a data-sec="b28s4" href="基础28_会计概论_第4节_会计要素确认和计量的基本原则.html">第4节 会计要素确认和计量的基本原则</a> <a data-sec="b28s5" href="基础28_会计概论_第5节_会计基本前提.html">第5节 会计基本前提</a> <a data-sec="b28s6" href="基础28_会计概论_第6节_会计信息质量要求.html">第6节 会计信息质量要求</a> <a data-sec="b28s7" href="基础28_会计概论_第7节_会计法规.html">第7节 会计法规</a></div></div>
+<div class="chapter-card" data-ch="29"><div class="c-title"><a href="基础29_会计循环_第1节_会计确认.html">第二十九章 会计循环</a></div><div class="c-meta">4 节 · 约 165 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b29s1" href="基础29_会计循环_第1节_会计确认.html">第1节 会计确认</a> <a data-sec="b29s2" href="基础29_会计循环_第2节_会计计量.html">第2节 会计计量</a> <a data-sec="b29s3" href="基础29_会计循环_第3节_会计记录.html">第3节 会计记录</a> <a data-sec="b29s4" href="基础29_会计循环_第4节_财务会计报告.html">第4节 财务会计报告</a></div></div>
+<div class="chapter-card" data-ch="30"><div class="c-title"><a href="基础30_会计报表_第1节_会计报表的概念.html">第三十章 会计报表</a></div><div class="c-meta">5 节 · 约 200 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b30s1" href="基础30_会计报表_第1节_会计报表的概念.html">第1节 会计报表的概念</a> <a data-sec="b30s2" href="基础30_会计报表_第2节_资产负债表.html">第2节 资产负债表</a> <a data-sec="b30s3" href="基础30_会计报表_第3节_利润表.html">第3节 利润表</a> <a data-sec="b30s4" href="基础30_会计报表_第4节_现金流量表.html">第4节 现金流量表</a> <a data-sec="b30s5" href="基础30_会计报表_第5节_会计报表附注.html">第5节 会计报表附注</a></div></div>
+<div class="chapter-card" data-ch="31"><div class="c-title"><a href="基础31_财务报表分析_第1节_财务报表分析的意义和内容.html">第三十一章 财务报表分析</a></div><div class="c-meta">3 节 · 约 130 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b31s1" href="基础31_财务报表分析_第1节_财务报表分析的意义和内容.html">第1节 财务报表分析的意义和内容</a> <a data-sec="b31s2" href="基础31_财务报表分析_第2节_财务报表分析的基本方法.html">第2节 财务报表分析的基本方法</a> <a data-sec="b31s3" href="基础31_财务报表分析_第3节_财务报表分析的基本指标.html">第3节 财务报表分析的基本指标</a></div></div>
+<div class="chapter-card" data-ch="32"><div class="c-title"><a href="基础32_政府会计_第1节_政府会计的概念.html">第三十二章 政府会计</a></div><div class="c-meta">3 节 · 约 110 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b32s1" href="基础32_政府会计_第1节_政府会计的概念.html">第1节 政府会计的概念</a> <a data-sec="b32s2" href="基础32_政府会计_第2节_政府会计要素.html">第2节 政府会计要素</a> <a data-sec="b32s3" href="基础32_政府会计_第3节_政府会计报告.html">第3节 政府会计报告</a></div></div></div>
+<div class="group" data-subject="基础" id="part6"><div class="group-head"><span class="g-title">第六部分 法律</span><span class="g-meta">23 节</span><span class="g-prog" id="prog-基础"></span></div><div class="chapter-card" data-ch="33"><div class="c-title"><a href="基础33_法律对经济关系的调整_第1节_调整经济的法和经济法.html">第三十三章 法律对经济关系的调整</a></div><div class="c-meta">2 节 · 约 75 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b33s1" href="基础33_法律对经济关系的调整_第1节_调整经济的法和经济法.html">第1节 调整经济的法和经济法</a> <a data-sec="b33s2" href="基础33_法律对经济关系的调整_第2节_调整社会主义市场经济的法律体系.html">第2节 调整社会主义市场经济的法律体系</a></div></div>
+<div class="chapter-card" data-ch="34"><div class="c-title"><a href="基础34_物权法律制度_第1节_物权概述.html">第三十四章 物权法律制度</a></div><div class="c-meta">4 节 · 约 200 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b34s1" href="基础34_物权法律制度_第1节_物权概述.html">第1节 物权概述</a> <a data-sec="b34s2" href="基础34_物权法律制度_第2节_所有权.html">第2节 所有权</a> <a data-sec="b34s3" href="基础34_物权法律制度_第3节_用益物权.html">第3节 用益物权</a> <a data-sec="b34s4" href="基础34_物权法律制度_第4节_担保物权.html">第4节 担保物权</a></div></div>
+<div class="chapter-card" data-ch="35"><div class="c-title"><a href="基础35_合同法律制度_第1节_合同概述.html">第三十五章 合同法律制度</a></div><div class="c-meta">6 节 · 约 260 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b35s1" href="基础35_合同法律制度_第1节_合同概述.html">第1节 合同概述</a> <a data-sec="b35s2" href="基础35_合同法律制度_第2节_合同的效力.html">第2节 合同的效力</a> <a data-sec="b35s3" href="基础35_合同法律制度_第3节_合同的订立、履行和终止.html">第3节 合同的订立、履行和终止</a> <a data-sec="b35s4" href="基础35_合同法律制度_第4节_合同的担保和保全.html">第4节 合同的担保和保全</a> <a data-sec="b35s5" href="基础35_合同法律制度_第5节_合同的转让、变更和解除.html">第5节 合同的转让、变更和解除</a> <a data-sec="b35s6" href="基础35_合同法律制度_第6节_违约责任.html">第6节 违约责任</a></div></div>
+<div class="chapter-card" data-ch="36"><div class="c-title"><a href="基础36_公司法律制度_第1节_公司和公司法概述.html">第三十六章 公司法律制度</a></div><div class="c-meta">8 节 · 约 360 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b36s1" href="基础36_公司法律制度_第1节_公司和公司法概述.html">第1节 公司和公司法概述</a> <a data-sec="b36s2" href="基础36_公司法律制度_第2节_公司登记与企业信用信息公示.html">第2节 公司登记与企业信用信息公示</a> <a data-sec="b36s3" href="基础36_公司法律制度_第3节_公司的设立.html">第3节 公司的设立</a> <a data-sec="b36s4" href="基础36_公司法律制度_第4节_公司的组织机构.html">第4节 公司的组织机构</a> <a data-sec="b36s5" href="基础36_公司法律制度_第5节_股东资格和股东权利.html">第5节 股东资格和股东权利</a> <a data-sec="b36s6" href="基础36_公司法律制度_第6节_董事、监事和高级管理人员的任职资格和法定义务.html">第6节 董事、监事和高级管理人员的任职资格和法定义务</a> <a data-sec="b36s7" href="基础36_公司法律制度_第7节_股份有限公司的股份发行和转让.html">第7节 股份有限公司的股份发行和转让</a> <a data-sec="b36s8" href="基础36_公司法律制度_第8节_公司的合并、分立、增资、减资、解散和清算.html">第8节 公司的合并、分立、增资、减资、解散和清算</a></div></div>
+<div class="chapter-card" data-ch="37"><div class="c-title"><a href="基础37_其他法律制度_第1节_劳动合同法律制度.html">第三十七章 其他法律制度</a></div><div class="c-meta">3 节 · 约 135 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="b37s1" href="基础37_其他法律制度_第1节_劳动合同法律制度.html">第1节 劳动合同法律制度</a> <a data-sec="b37s2" href="基础37_其他法律制度_第2节_消费者权益保护法律制度.html">第2节 消费者权益保护法律制度</a> <a data-sec="b37s3" href="基础37_其他法律制度_第3节_反不正当竞争法律制度.html">第3节 反不正当竞争法律制度</a></div></div></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    if(typeof b64 !== 'string' || !b64)
+      throw new Error('云端返回内容缺失（content=' + (b64 === null ? 'null' : typeof b64) + '）——请点"立即同步"重试，若反复出现请把此提示反馈');
+    var clean = String(b64).replace(/\s/g,'');
+    var bin;
+    try { bin = atob(clean); }
+    catch(e){ throw new Error('云端返回了无法解码的内容（前 20 字符：' + clean.slice(0,20) + '）——请点"立即同步"重试，若反复出现请反馈'); }
+    var bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0, failCount = 0, pausedUntil = 0, conflictCount = 0;
+  // 换绑/重绑后由配置界面调用：重置内部锁与失败状态，避免历史状态延续
+  window.resetSyncState = function(){ syncing=false; failCount=0; pausedUntil=0; lastPullAt=0; conflictCount=0; };
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  // 双后端分派：cfg.backend = 'github'（默认）| 'gitee'
+  function backendOf(cfg){ return cfg.backend === 'gitee' ? 'gitee' : 'github'; }
+  function fileUrl(cfg, method){
+    if(backendOf(cfg) === 'gitee')
+      return method === 'PUT'
+        ? 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json'   // PUT 时令牌放请求体，不与 URL 重复
+        : 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json?access_token='+encodeURIComponent(cfg.token);
+    return 'https://api.github.com/repos/'+cfg.repo+'/contents/progress.json';
+  }
+  function fetchOpts(cfg, method, bodyObj, useJson){
+    var o = {method: method}, signal = null;
+    if(typeof AbortController !== 'undefined'){
+      var ac = new AbortController(); setTimeout(function(){ ac.abort(); }, 9000);
+      signal = ac.signal; o.signal = signal;
+    }
+    if(backendOf(cfg) === 'gitee'){
+      o.headers = {'Accept':'application/json'};
+      if(method === 'PUT'){
+        if(useJson){
+          // Gitee JSON 姿势（社区实践中成功率高）：token/content/message 均入 JSON 体
+          var j = {access_token: cfg.token, content: bodyObj.content, message: bodyObj.message || 'progress sync'};
+          if(bodyObj.sha) j.sha = bodyObj.sha;
+          o.headers['Content-Type'] = 'application/json;charset=UTF-8';
+          o.body = JSON.stringify(j);
+        } else {
+          var params = new URLSearchParams();
+          params.set('access_token', cfg.token);
+          params.set('content', bodyObj.content);
+          params.set('message', bodyObj.message || 'progress sync');
+          if(bodyObj.sha) params.set('sha', bodyObj.sha);
+          o.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+          o.body = params.toString();
+        }
+      }
+    } else {
+      o.headers = apiHeaders(cfg);
+      if(method === 'PUT') o.body = JSON.stringify(bodyObj);
+    }
+    return o;
+  }
+  function netErrMsg(e, cfg){
+    var m = e && e.message ? e.message : String(e);
+    if(m.indexOf('abort') >= 0 || m.indexOf('Abort') >= 0)
+      return '网络超时（9 秒无响应）' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议在上方切换为 Gitee 后端' : '，稍后重试');
+    if(m.indexOf('fetch') >= 0 || m.indexOf('NetworkError') >= 0 || m.indexOf('network') >= 0)
+      return '网络无法连通' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议切换为 Gitee 后端' : '，请检查网络');
+    return m;
+  }
+  function noteFail(cfg, prefix){
+    failCount++;
+    if(failCount >= 3){
+      pausedUntil = Date.now() + 5*60*1000; failCount = 0;
+      setSyncStatus(prefix + '；自动同步已暂停 5 分钟，可点"立即同步"重试', 'err');
+    } else {
+      setSyncStatus(prefix, 'err');
+    }
+  }
+  window.ghPush = function(force, useJson, isFallback){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    if(Date.now() < (pausedUntil||0)) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    var tryJson = useJson !== false;  // 默认先 JSON（社区实践成功率高的姿势），失败自动换 form 再试一次
+    fetch(fileUrl(cfg, 'PUT'), fetchOpts(cfg, 'PUT', body, tryJson))
+    .then(function(r){ return r.text().then(function(t){ var j = null; try{ j = JSON.parse(t); }catch(e){} return {status:r.status, j:j, raw:t}; }); })
+    .then(function(res){
+      syncing = false;
+      var errMsg = (res.j && (res.j.message || (res.j.messages && res.j.messages.join('; ')))) || (res.raw ? res.raw.slice(0, 100) : '') || '';
+      if(res.status===200 || res.status===201){
+        failCount = 0; pausedUntil = 0; conflictCount = 0;
+        cfg.sha = (res.j.content && res.j.content.sha) || (res.j.commit && res.j.commit.sha) || res.j.sha || cfg.sha;
+        cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(backendOf(cfg)==='gitee' && res.status===400 && !isFallback){
+        // 任何 400（含 sha 类错误）→ 先换另一种提交格式重试；两种格式都败才进入冲突/报错分支
+        ghPush(true, !tryJson, true);
+      } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400 && errMsg.indexOf('sha')>=0)){
+        conflictCount++;
+        if(conflictCount > 3){ setSyncStatus('✗ 上传反复冲突已停止（最后错误：'+errMsg+'）——请反馈此完整提示', 'err'); return; }
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else if(res.status===401 || res.status===403){
+        noteFail(cfg, backendOf(cfg)==='gitee'
+          ? '✗ 上传被拒绝（'+res.status+'）：Gitee 私人令牌可能未勾选 projects 权限或已过期——请重新生成一枚'
+          : '✗ 上传被拒绝（'+res.status+'）：token 无效或权限不足，请重新配置');
+      } else {
+        noteFail(cfg, '✗ 上传失败：HTTP '+res.status+' '+errMsg);
+      }
+    }).catch(function(e){ syncing=false; noteFail(cfg, '✗ 上传失败：'+netErrMsg(e, cfg)); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(Date.now() < (pausedUntil||0)){ setSyncStatus('⏸ 自动同步已暂停（此前连续失败），点"立即同步"重试'); return; }
+    if(syncing) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    syncing = true; setSyncStatus('☁ 正在检查云端进度…');
+    fetch(fileUrl(cfg, 'GET'), fetchOpts(cfg, 'GET'))
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); syncing=false; ghPush(); return null; }
+      if(r.status===304){ syncing=false; return null; }
+      if(r.status===401) throw new Error('令牌无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或令牌权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      // Gitee 对不存在的文件返回 200+[]（GitHub 是 404）——都视为"云端还没有进度文件"，自动上传本地
+      var missing = !res.j || Array.isArray(res.j) || typeof res.j.content !== 'string' || !res.j.content;
+      if(missing){
+        syncing = false; cfg.sha = null; saveSyncCfg(cfg);
+        if(backendOf(cfg) === 'gitee'){
+          // 空仓库（无任何分支/提交）无法通过 API 建文件——先查分支，空则给初始化指引
+          var bqs = new URLSearchParams({access_token: cfg.token}).toString();
+          fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/branches?'+bqs, {headers: {'Accept':'application/json'}})
+          .then(function(r){ return r.json(); })
+          .then(function(brs){
+            if(Array.isArray(brs) && brs.length === 0)
+              setSyncStatus('✗ 仓库是空的：请到 Gitee 打开该仓库 → 文件 → 新建 → 随便建一个 README.md 提交（初始化仓库），然后回来点"立即同步"', 'err');
+            else ghPush();
+          }).catch(function(){ ghPush(); });
+        } else ghPush();
+        return;
+      }
+      var remote = JSON.parse(b64decode(res.j.content));
+      if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha || null; saveSyncCfg(cfg);
+      var afterSha = function(diag){
+        saveSyncCfg(cfg);
+        if(!cfg.sha && backendOf(cfg)==='gitee'){
+          // 有文件却拿不到版本号——推送必然报 sha missing，不推，直接给诊断摘要
+          syncing = false;
+          setSyncStatus('✗ 无法获取云端文件版本号[' + (diag || 'GET响应无sha且文件树补取失败') + ']——点"诊断"按钮并把结果反馈', 'err');
+          return;
+        }
+        if(localChanged){
+          saveProgress(merged);
+          if(typeof renderProgress === 'function') renderProgress();
+          if(typeof renderDash === 'function') renderDash();
+          if(typeof refreshBadge === 'function') refreshBadge();
+        }
+        if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }
+        else { syncing=false; failCount=0; pausedUntil=0; setSyncStatus('✓ 已与云端同步', 'ok'); }
+      };
+      if(!cfg.sha && backendOf(cfg)==='gitee'){
+        // Gitee 读文件响应可能不带 sha（API 创建的文件尤其如此）→ 更新必带 sha，否则报"sha is missing"。
+        // 通过 仓库信息(default_branch) → 文件树(blob sha) 两步补取。
+        var tq = new URLSearchParams({access_token: cfg.token}).toString();
+        fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'?'+tq, {headers: {'Accept':'application/json'}})
+        .then(function(r){ return r.json(); })
+        .then(function(ri){
+          var br = (ri && ri.default_branch) || 'master';
+          return fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/git/trees/'+br+'?'+tq, {headers: {'Accept':'application/json'}}).then(function(r2){ return r2.json(); })
+            .then(function(t){
+              var hit = null;
+              if(t && t.tree) for(var i=0;i<t.tree.length;i++) if(t.tree[i].path === 'progress.json'){ hit = t.tree[i].sha; break; }
+              return {branch: br, hit: hit, treeLen: (t && t.tree) ? t.tree.length : 0, paths: (t && t.tree) ? t.tree.slice(0,8).map(function(x){return x.path;}).join(',') : ''};
+            });
+        })
+        .then(function(d){
+          if(d.hit) cfg.sha = d.hit;
+          afterSha('分支=' + d.branch + ';树内项数=' + d.treeLen + ';找到progress.json=' + (d.hit ? '是' : '否') + ';树内前8项=' + d.paths);
+        })
+        .catch(function(e){ afterSha('补取异常:' + (e && e.message || e)); });  // 补取失败不推
+      } else afterSha('GET响应自带sha');
+    }).catch(function(e){
+      syncing=false;
+      var m = e && e.message ? e.message : '';
+      if(m.indexOf('令牌') >= 0 || m.indexOf('限速') >= 0 || m.indexOf('格式异常') >= 0) noteFail(cfg, '✗ 拉取失败：'+m);
+      else noteFail(cfg, '✗ 拉取失败：'+netErrMsg(e, cfg));
+    });
+  };
+  var syncTimer = null;
+  var syncTimer = null, lastSavedStr = null;
+  // 一键诊断：三个只读请求（读文件/仓库信息/文件树），输出摘要并尝试复制到剪贴板
+  window.runSyncDiag = function(){
+    var cfg = loadSyncCfg();
+    if(!cfg.repo || !cfg.token){ setSyncStatus('请先配置并连接云同步', 'err'); return; }
+    setSyncStatus('正在诊断…');
+    var tq = new URLSearchParams({access_token: cfg.token}).toString();
+    var base = backendOf(cfg)==='gitee' ? 'https://gitee.com/api/v5' : 'https://api.github.com';
+    var out = ['后端=' + backendOf(cfg), '仓库=' + cfg.repo];
+    var req = function(url, hdrs){
+      return fetch(url, {headers: hdrs || {'Accept':'application/json'}})
+        .then(function(r){ return r.text().then(function(t){ return {s: r.status, t: t}; }); });
+    };
+    var hdrs = backendOf(cfg)==='gitee' ? {'Accept':'application/json'} : {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json'};
+    Promise.all([
+      req(base + '/repos/' + cfg.repo + '/contents/progress.json' + (backendOf(cfg)==='gitee' ? '?' + tq : ''), hdrs),
+      backendOf(cfg)==='gitee'
+        ? req(base + '/repos/' + cfg.repo + '?' + tq).then(function(ri){
+            var br = 'master'; try { br = JSON.parse(ri.t).default_branch || 'master'; } catch(e){}
+            return req(base + '/repos/' + cfg.repo + '/git/trees/' + br + '?' + tq).then(function(tr){
+              return {branch: br, tr: tr};
+            });
+          })
+        : Promise.resolve(null)
+    ]).then(function(r){
+      var c = r[0], tree = r[1];
+      out.push('读文件HTTP=' + c.s, '读文件响应前160字符=' + c.t.slice(0, 160));
+      if(tree){
+        out.push('默认分支=' + tree.branch, '文件树HTTP=' + tree.tr.s);
+        var items = []; try { items = JSON.parse(tree.tr.t).tree || []; } catch(e){}
+        var pj = items.filter(function(x){ return x.path === 'progress.json'; })[0];
+        out.push('树内文件数=' + items.length, '树内progress.json=' + (pj ? ('找到,sha=' + pj.sha) : '未找到'), '树内全部路径=' + items.map(function(x){return x.path;}).join('|'));
+      }
+      var msg = out.join('\n');
+      setSyncStatus('诊断完成，结果已复制（粘贴发给老师）', 'ok');
+      if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(msg).catch(function(){});
+      window.__syncDiag = msg;
+      console.log(msg);
+    }).catch(function(e){
+      setSyncStatus('诊断失败：' + (e && e.message || e), 'err');
+    });
+  };
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+</script>
+<script>
+(function(){
+  // 事件委托版：绑定挂在 document 上，任何时刻点汉堡都有效（按钮重渲染/监听丢失不影响）
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if (t.closest && t.closest('.sb-btn')) { document.body.classList.toggle('sb-open'); return; }
+    if (t.closest && t.closest('.sb-mask')) { document.body.classList.remove('sb-open'); return; }
+    if (t.closest && t.closest('.sidebar a')) { document.body.classList.remove('sb-open'); }
+  });
+})();
+
+
+(function(){
+  function renderProgress(){
+    var d;try{d=JSON.parse(localStorage.getItem('rljpk_v1'))||{q:{},s:{}}}catch(e){d={q:{},s:{}}}
+    var S=d.s||{};
+    var totalAll=0,doneAll=0;
+    [].slice.call(document.querySelectorAll('.chapter-card[data-ch]')).forEach(function(card){
+      var secs=[].slice.call(card.querySelectorAll('a[data-sec]'));
+      var group=card.closest('.group');
+      var done=0;
+      secs.forEach(function(a){
+        var sid=a.getAttribute('data-sec');
+        var st=S[sid];totalAll++;
+        var dot=a.querySelector('.sec-dot');
+        if(!dot){dot=document.createElement('span');dot.className='sec-dot';a.insertBefore(dot,a.firstChild);}
+        dot.className='sec-dot';
+        if(st&&st.ok){dot.textContent='●';dot.classList.add('g');done++;doneAll++;}
+        else if(st&&st.right>0){dot.textContent='◐';dot.classList.add('y');}
+        else{dot.textContent='○';dot.classList.add('n');}
+      });
+      var el=card.querySelector('.c-status'),total=secs.length;
+      if(el){
+        if(total&&done===total){el.textContent='✅ 已学会 '+done+'/'+total+' 节';el.className='c-status g';}
+        else if(done>0){el.textContent='学习中 '+done+'/'+total+' 节';el.className='c-status y';}
+        else{el.textContent='未开始 · '+total+' 节';el.className='c-status n';}
+      }
+      if(group){
+        group._pt=(group._pt||{t:0,r:0});group._pt.t+=total;group._pt.r+=done;
+      }
+    });
+    // 每个"部分"分组独立显示本组进度
+    [].slice.call(document.querySelectorAll('.group')).forEach(function(g){
+      var el=g.querySelector('.g-prog'),p=g._pt;
+      if(el&&p)el.textContent=p.r>0?('已学会 '+p.r+'/'+p.t+' 节'):('未开始 · '+p.t+' 节');
+    });
+    var fill=document.getElementById('overall-fill'),txt=document.getElementById('overall-text');
+    if(fill&&txt){
+      var pct=totalAll?Math.round(100*doneAll/totalAll):0;
+      fill.style.width=pct+'%';
+      txt.textContent=doneAll>0?('本科目进度：已学会 '+doneAll+' / '+totalAll+' 节（'+pct+'%）'):'本科目共 '+totalAll+' 节，从任意一章开始';
+    }
+  }
+  renderProgress();
+  window.renderProgress = renderProgress;
+  window.addEventListener('focus', renderProgress);
+  window.addEventListener('pageshow', function(e){ if(e.persisted) renderProgress(); });
+  window.addEventListener('storage', function(e){ if(!e.key||e.key==='rljpk_v1') renderProgress(); });
+})();
+</script>
+</body>
+</html>

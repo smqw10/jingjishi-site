@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>第二十三章 统计与数据科学 · 变量和数据 | 中级经济师精品课</title>
+<title>人力资源管理专业知识和实务 · 章节目录 | 中级经济师精品课</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
@@ -183,98 +183,26 @@
 </style>
 </head>
 <body>
-<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item active" href="mulu-b.html"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="mulu-r.html"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
-<div class="header"><div class="crumb"><a href="mulu-b.html">← 经济基础知识目录</a></div><span class="label">经济基础知识 · 第四部分 统计</span><h1>第二十三章 统计与数据科学 · 变量和数据</h1><div class="subtitle">第 2 节 / 共 5 节 · 预计学习时长 35 分钟</div><div class="progress-bar"><div class="fill" style="width:40%"></div></div><div class="progress-text">本章进度 2/5</div><div class="sec-badge none" id="sec-badge" data-sec="b23s2">本节掌握：加载中…</div><a class="sec-quiz-btn" href="quiz.html?ch=基础-23">📝 本章随堂练习</a></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
-<li>背下<strong>变量</strong>的定义：研究对象的属性或特征，有两个或更多个可能的取值（相对常数而言） <span class="hot">高频考点</span></li>
-<li>变量三分法一次到位：<strong>定量变量 / 分类变量 / 顺序变量</strong>，判据"是数？是类？类里有序？" <span class="s3">★★★</span> <span class="must">必考</span></li>
-<li>数据三分法与变量一一对应：<strong>数值型（定量）数据 / 分类数据 / 顺序数据</strong> <span class="s3">★★★</span> <span class="hot">高频考点</span></li>
-</ul></div></div>
-<div class="section"><h2>一、变量——研究对象的属性或特征</h2>
-<h3>1. 变量的定义 <span class="hot">高频考点</span></h3>
-<p><strong>变量</strong>是研究对象的<strong>属性或特征</strong>，它是相对于<strong>常数</strong>而言的：常数只有一个固定取值，而<strong>变量可以有两个或更多个可能的取值</strong>。例如受教育水平、性别等。</p></div>
-<div class="section"><div class="keypoint"><strong>变量 vs 常数：</strong><p>一句话分辨："性别"可能取男、也可能取女→变量；"圆周率 π"永远只有一个值→常数。研究对象身上<strong>会变的属性特征</strong>才叫变量。</p></div></div>
-<div class="section"><div class="example"><strong>例子</strong>　<p>"本班同学的性别"可能是男也可能是女——两个可能取值，是变量；"本班人数 45 人"在统计那一刻是固定的——充当常数角色。考察对象一换（全校、全市），取值就可能变，这正是"变量"的含义。</p></div></div>
-<div class="section"><h3>2. 变量的分类 <span class="s3">★★★</span> <span class="must">必考</span></h3>
-<table>
-<thead>
-<tr>
-<th>分类</th>
-<th>取值特点</th>
-<th>举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>定量变量</strong>（数量变量）</td>
-<td>变量的取值是<strong>数量</strong></td>
-<td>企业销售额、员工人数</td>
-</tr>
-<tr>
-<td><strong>定性变量</strong>（类别）——<strong>分类变量</strong></td>
-<td>变量的取值是<strong>类别，没有顺序</strong></td>
-<td>企业所属行业、员工性别</td>
-</tr>
-<tr>
-<td><strong>定性变量</strong>（类别）——<strong>顺序变量</strong></td>
-<td>变量的取值是<strong>类别且有顺序</strong></td>
-<td>员工受教育水平</td>
-</tr>
-</tbody>
-</table></div>
-<div class="section"><div class="keypoint"><strong>两步一刀切：</strong><p>第一步问"取值是<strong>数</strong>还是<strong>类</strong>"：是数→定量变量；是类→定性变量。第二步只对"类"再问一句"<strong>有没有顺序</strong>"：有→顺序变量，没有→分类变量。</p></div></div>
-<div class="section"><div class="example"><strong>例子</strong>　<p>全班花名册三列："月生活费"是一串数字→定量变量；"性别"只有男 / 女，谈不上谁高谁低→分类变量；"学历"从大专、本科到硕士有高低次序→顺序变量。</p></div></div>
-<div class="section"><div class="mnemonic"><div class="mn-title">🧠 变量三兄弟</div><p><strong>"定量是数，定性是类；类里再看有没有序——无序是分类，有序是顺序"</strong>。考试给一串变量让你挑"顺序变量 / 分类变量 / 定量变量"，就用这两步筛。</p></div></div>
-<div class="section"><h2>二、数据——对变量测量、观测的结果</h2>
-<h3>1. 数据的含义 <span class="hot">高频考点</span></h3>
-<p><strong>数据</strong>是对变量进行<strong>测量、观测的结果</strong>。根据需要，数据可以是<strong>数值、文字或者图像</strong>等形式。</p></div>
-<div class="section"><div class="keypoint"><strong>数据跟变量一一对应：</strong><p>有什么样的变量，就有什么样的数据：给定量变量观测得到数值型数据，给分类变量观测得到分类数据，给顺序变量观测得到顺序数据。做题永远先问一句"这是对<strong>什么变量</strong>观测的"。</p></div></div>
-<div class="section"><div class="example"><strong>例子</strong>　<p>问卷上"性别：1＝男，2＝女"——虽然写的是数字，但 1、2 只是类别的<strong>代号</strong>，它是对分类变量观测的结果，仍是分类数据；"月生活费 1500 元"是对定量变量观测的结果，是数值型数据。</p></div></div>
-<div class="section"><h3>2. 数据的分类 <span class="s3">★★★</span></h3>
-<table>
-<thead>
-<tr>
-<th>分类</th>
-<th>对什么变量观测</th>
-<th>表现形式</th>
-<th>举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>定量数据</strong>（数值型数据）</td>
-<td>定量变量</td>
-<td>表现为具体的数，表示<strong>大小或多少</strong>，可以<strong>进行数学运算</strong></td>
-<td>企业的销售额是 200 万，员工人数是 1000 人</td>
-</tr>
-<tr>
-<td><strong>分类数据</strong></td>
-<td>分类变量</td>
-<td>表现为<strong>类别</strong></td>
-<td>用 1 表示"男性"，用 2 表示"女性"</td>
-</tr>
-<tr>
-<td><strong>顺序数据</strong></td>
-<td>顺序变量</td>
-<td>表现为<strong>类别</strong>（且有次序）</td>
-<td>用 1 表示"硕士及以上"，用 2 表示"本科"，用 3 表示"大专及以下"</td>
-</tr>
-</tbody>
-</table></div>
-<div class="section"><div class="mnemonic"><div class="mn-title">🧠 数据跟着变量走</div><p><strong>"定量变量→数值型数据；分类变量→分类数据；顺序变量→顺序数据"</strong>——变量是爹，数据是娃，认爹再喊娃。</p></div></div>
-<div class="section"><div class="tip"><div class="tip-title">💡 两个高频陷阱</div><p>①"受教育水平 / 产品质量等级 / 外语水平等级"都是<strong>顺序变量</strong>，别因为"等级"二字当成定量变量；②"1＝男，2＝女"里的数字是<strong>类别代号</strong>，做加减没有意义，它不是数值型数据。数字类题干先问"这数能运算吗、比较大小有意义吗"。</p></div></div>
-<div class="section"><div class="recite"><div class="recite-title">📌 本节速记卡</div><ul>
-<li><strong>变量</strong>：研究对象的属性或特征，相对于常数而言，有两个或更多个可能的取值（如受教育水平、性别）</li>
-<li><strong>变量分类</strong>：定量变量（取值是数量，如销售额、人数）／分类变量（取值是类别无顺序，如行业、性别）／顺序变量（取值是类别且有顺序，如受教育水平）；后两者统称定性变量</li>
-<li><strong>数据</strong>：对变量进行测量、观测的结果，可以是数值、文字或图像形式</li>
-<li><strong>数据分类</strong>：定量数据（数值型数据，可数学运算）／分类数据／顺序数据——与三类变量一一对应</li>
-</ul></div></div>
-<div class="section"><div class="quiz-item" data-qid="b23s2q1" data-answer="C" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">下列变量中，属于顺序变量的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 行业类别</button><button type="button" class="qopt" data-key="B">B. 可支配收入</button><button type="button" class="qopt" data-key="C">C. 受教育水平</button><button type="button" class="qopt" data-key="D">D. 性别</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>顺序变量＝取值是<strong>类别且有顺序</strong>。受教育水平从小学到硕士有高低次序（C 对）。行业类别（A）、性别（D）是只有类别、没有顺序的<strong>分类变量</strong>；可支配收入（B）取值是数量，是<strong>定量变量</strong>。
-:::</p></div></details></div><div class="quiz-item" data-qid="b23s2q2" data-answer="A" data-type="single"><span class="q-tag">讲义·单选</span><div class="q-stem">对顺序变量观测的结果称为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 顺序数据</button><button type="button" class="qopt" data-key="B">B. 定量数据</button><button type="button" class="qopt" data-key="C">C. 分类数据</button><button type="button" class="qopt" data-key="D">D. 数值型数据</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>数据跟变量一一对应——对<strong>顺序变量</strong>观测的结果就是<strong>顺序数据</strong>（A）。对定量变量观测的结果是定量数据（数值型数据，B、D），对分类变量观测的结果是分类数据（C）。
-:::</p></div></details></div><div class="quiz-item" data-qid="b23s2q3" data-answer="D" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">下列统计变量中，属于分类变量的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 原煤产量</button><button type="button" class="qopt" data-key="B">B. 网上零售额</button><button type="button" class="qopt" data-key="C">C. 发电量</button><button type="button" class="qopt" data-key="D">D. 行业类别</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：D</div><div class="q-exp"><p>取值表现为<strong>类别</strong>的是分类变量，行业类别（D）只有类别的划分、没有顺序。原煤产量（A）、网上零售额（B）、发电量（C）的取值都是数量，均为定量变量。
-:::</p></div></details></div><div class="quiz-item" data-qid="b23s2q4" data-answer="B" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">下列统计变量中，属于定量变量的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 产品类别</button><button type="button" class="qopt" data-key="B">B. 天然气产量</button><button type="button" class="qopt" data-key="C">C. 产品质量等级</button><button type="button" class="qopt" data-key="D">D. 外语水平等级</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：B</div><div class="q-exp"><p>取值是<strong>数量</strong>、可进行数学运算的变量是定量变量，天然气产量（B）以具体数量计量。产品类别（A）是分类变量；产品质量等级（C）、外语水平等级（D）是类别且有次序，属顺序变量——A、C、D 都是定性变量。
-:::</p></div></details></div><div class="quiz-item" data-qid="b23s2q5" data-answer="C" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">下列统计变量中，属于顺序变量的是（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 工业增加值</button><button type="button" class="qopt" data-key="B">B. 基础设施投资</button><button type="button" class="qopt" data-key="C">C. 受教育程度</button><button type="button" class="qopt" data-key="D">D. 房屋竣工面积</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：C</div><div class="q-exp"><p>受教育程度（C）的取值是类别且有高低次序，属顺序变量。工业增加值（A）、基础设施投资（B）、房屋竣工面积（D）取值都是数量，均属定量变量。
-:::</p></div></details></div><div class="quiz-item" data-qid="b23s2q6" data-answer="A" data-type="single"><span class="q-tag">题库·单选</span><div class="q-stem">对定量变量观测的结果称为（　）。</div><div class="q-opts"><button type="button" class="qopt" data-key="A">A. 数值型数据</button><button type="button" class="qopt" data-key="B">B. 分类数据</button><button type="button" class="qopt" data-key="C">C. 定性数据</button><button type="button" class="qopt" data-key="D">D. 顺序数据</button></div><div class="q-feedback" hidden></div><details><summary>查看答案与解析</summary><div class="q-ans">✅ 参考答案：A</div><div class="q-exp"><p>对<strong>定量变量</strong>观测的结果是<strong>数值型数据</strong>（定量数据），A 对；分类变量的观测结果为分类数据，顺序变量的观测结果为顺序数据——分类数据和顺序数据统称定性数据，均与"定量变量"对不上号。
-:::</p></div></details></div></div><div class="footer-nav"><a class="prev" href="基础23_统计与数据科学_第1节_统计学.html"><span class="nav-label">上一节</span><span class="nav-title">第1节 统计学</span></a><a class="home" href="index.html"><span class="nav-label">目录</span><span class="nav-title">返回目录</span></a><a class="next" href="基础23_统计与数据科学_第3节_数据的来源.html"><span class="nav-label">下一节</span><span class="nav-title">第3节 数据的来源</span></a></div>
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="mulu-b.html"><span>📖</span><span>经济基础</span></a><a class="sb-item active" href="mulu-r.html"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
+<div class="header"><div class="crumb"><a href="index.html">← 学习总览</a></div><span class="label">讲义 · 人力资源管理专业知识和实务</span><h1>📖 人力资源管理专业知识和实务 · 章节目录</h1><div class="subtitle">共 19 章 67 节。每节含学习目标、细讲、速记卡、随堂练习，<b>一节内全部题目答对即记"已学会"</b>；进度圆点实时更新。</div><div class="progress-bar"><div class="fill" id="overall-fill" style="width:0%"></div></div><div class="progress-text" id="overall-text">进度统计中…</div></div><div class="toc"><a href="#part1">组织行为学</a><a href="#part2">人力资源管理</a><a href="#part3">人力资源经济分析</a><a href="#part4">人力资源与社会保险政策</a></div><div class="group" data-subject="人力" id="part1"><div class="group-head"><span class="g-title">第一部分 组织行为学</span><span class="g-meta">9 节</span><span class="g-prog" id="prog-人力"></span></div><div class="chapter-card" data-ch="01"><div class="c-title"><a href="人力01_组织激励_第1节_需要、动机与激励.html">第1章 组织激励</a></div><div class="c-meta">3 节 · 约 155 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r01s1" href="人力01_组织激励_第1节_需要、动机与激励.html">第1节 需要、动机与激励</a> <a data-sec="r01s2" href="人力01_组织激励_第2节_激励理论.html">第2节 激励理论</a> <a data-sec="r01s3" href="人力01_组织激励_第3节_激励理论的应用.html">第3节 激励理论的应用</a></div></div>
+<div class="chapter-card" data-ch="02"><div class="c-title"><a href="人力02_领导行为_第1节_领导理论.html">第2章 领导行为</a></div><div class="c-meta">3 节 · 约 140 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r02s1" href="人力02_领导行为_第1节_领导理论.html">第1节 领导理论</a> <a data-sec="r02s2" href="人力02_领导行为_第2节_领导风格与技能.html">第2节 领导风格与技能</a> <a data-sec="r02s3" href="人力02_领导行为_第3节_领导决策.html">第3节 领导决策</a></div></div>
+<div class="chapter-card" data-ch="03"><div class="c-title"><a href="人力03_组织设计与组织文化_第1节_组织设计.html">第3章 组织设计与组织文化</a></div><div class="c-meta">3 节 · 约 135 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r03s1" href="人力03_组织设计与组织文化_第1节_组织设计.html">第1节 组织设计</a> <a data-sec="r03s2" href="人力03_组织设计与组织文化_第2节_组织文化.html">第2节 组织文化</a> <a data-sec="r03s3" href="人力03_组织设计与组织文化_第3节_组织变革与发展.html">第3节 组织变革与发展</a></div></div></div>
+<div class="group" data-subject="人力" id="part2"><div class="group-head"><span class="g-title">第二部分 人力资源管理</span><span class="g-meta">22 节</span><span class="g-prog" id="prog-人力"></span></div><div class="chapter-card" data-ch="04"><div class="c-title"><a href="人力04_战略性人力资源管理_第1节_战略性人力资源管理及其实施过程.html">第4章 战略性人力资源管理</a></div><div class="c-meta">2 节 · 约 105 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r04s1" href="人力04_战略性人力资源管理_第1节_战略性人力资源管理及其实施过程.html">第1节 战略性人力资源管理及其实施过程</a> <a data-sec="r04s2" href="人力04_战略性人力资源管理_第2节_战略性人力资源管理的具体内容.html">第2节 战略性人力资源管理的具体内容</a></div></div>
+<div class="chapter-card" data-ch="05"><div class="c-title"><a href="人力05_人力资源规划_第1节_人力资源规划及其供求预测.html">第5章 人力资源规划</a></div><div class="c-meta">2 节 · 约 100 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r05s1" href="人力05_人力资源规划_第1节_人力资源规划及其供求预测.html">第1节 人力资源规划及其供求预测</a> <a data-sec="r05s2" href="人力05_人力资源规划_第2节_人力资源供求平衡的基本对策与方法.html">第2节 人力资源供求平衡的基本对策与方法</a></div></div>
+<div class="chapter-card" data-ch="06"><div class="c-title"><a href="人力06_甄选_第1节_甄选及其有效性.html">第6章 甄选</a></div><div class="c-meta">2 节 · 约 100 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r06s1" href="人力06_甄选_第1节_甄选及其有效性.html">第1节 甄选及其有效性</a> <a data-sec="r06s2" href="人力06_甄选_第2节_甄选的主要方法.html">第2节 甄选的主要方法</a></div></div>
+<div class="chapter-card" data-ch="07"><div class="c-title"><a href="人力07_绩效管理_第1节_绩效管理概述.html">第7章 绩效管理</a></div><div class="c-meta">5 节 · 约 220 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r07s1" href="人力07_绩效管理_第1节_绩效管理概述.html">第1节 绩效管理概述</a> <a data-sec="r07s2" href="人力07_绩效管理_第2节_绩效计划与绩效监控及辅导.html">第2节 绩效计划与绩效监控及辅导</a> <a data-sec="r07s3" href="人力07_绩效管理_第3节_绩效评价与绩效管理工具.html">第3节 绩效评价与绩效管理工具</a> <a data-sec="r07s4" href="人力07_绩效管理_第4节_绩效反馈面谈、绩效改进和绩效考核结果的分析与应用.html">第4节 绩效反馈面谈、绩效改进和绩效考核结果的分析与应用</a> <a data-sec="r07s5" href="人力07_绩效管理_第5节_特殊群体的绩效管理.html">第5节 特殊群体的绩效管理</a></div></div>
+<div class="chapter-card" data-ch="08"><div class="c-title"><a href="r08s1.html">第8章 薪酬管理</a></div><div class="c-meta">4 节 · 约 175 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r08s1" href="r08s1.html">第1节 薪酬管理概述</a> <a data-sec="r08s2" href="r08s2.html">第2节 股权激励</a> <a data-sec="r08s3" href="r08s3.html">第3节 特殊群体的薪酬管理</a> <a data-sec="r08s4" href="r08s4.html">第4节 薪酬成本预算与控制</a></div></div>
+<div class="chapter-card" data-ch="09"><div class="c-title"><a href="人力09_培训与开发_第1节_培训与开发决策分析.html">第9章 培训与开发</a></div><div class="c-meta">3 节 · 约 125 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r09s1" href="人力09_培训与开发_第1节_培训与开发决策分析.html">第1节 培训与开发决策分析</a> <a data-sec="r09s2" href="人力09_培训与开发_第2节_培训与开发的组织管理.html">第2节 培训与开发的组织管理</a> <a data-sec="r09s3" href="人力09_培训与开发_第3节_职业生涯管理.html">第3节 职业生涯管理</a></div></div>
+<div class="chapter-card" data-ch="10"><div class="c-title"><a href="人力10_劳动关系_第1节_劳动关系概述.html">第10章 劳动关系</a></div><div class="c-meta">4 节 · 约 165 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r10s1" href="人力10_劳动关系_第1节_劳动关系概述.html">第1节 劳动关系概述</a> <a data-sec="r10s2" href="人力10_劳动关系_第2节_我国劳动关系调整机制.html">第2节 我国劳动关系调整机制</a> <a data-sec="r10s3" href="人力10_劳动关系_第3节_构建和谐劳动关系.html">第3节 构建和谐劳动关系</a> <a data-sec="r10s4" href="人力10_劳动关系_第4节_企业解决劳动争议的制度和方法.html">第4节 企业解决劳动争议的制度和方法</a></div></div></div>
+<div class="group" data-subject="人力" id="part3"><div class="group-head"><span class="g-title">第三部分 人力资源经济分析</span><span class="g-meta">10 节</span><span class="g-prog" id="prog-人力"></span></div><div class="chapter-card" data-ch="11"><div class="c-title"><a href="人力11_劳动力市场理论_第1节_劳动力市场概论.html">第11章 劳动力市场理论</a></div><div class="c-meta">4 节 · 约 195 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r11s1" href="人力11_劳动力市场理论_第1节_劳动力市场概论.html">第1节 劳动力市场概论</a> <a data-sec="r11s2" href="人力11_劳动力市场理论_第2节_劳动力供给.html">第2节 劳动力供给</a> <a data-sec="r11s3" href="人力11_劳动力市场理论_第3节_劳动力需求.html">第3节 劳动力需求</a> <a data-sec="r11s4" href="人力11_劳动力市场理论_第4节_劳动力市场均衡与非均衡.html">第4节 劳动力市场均衡与非均衡</a></div></div>
+<div class="chapter-card" data-ch="12"><div class="c-title"><a href="人力12_工资与就业理论_第1节_工资水平与工资差别.html">第12章 工资与就业理论</a></div><div class="c-meta">2 节 · 约 95 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r12s1" href="人力12_工资与就业理论_第1节_工资水平与工资差别.html">第1节 工资水平与工资差别</a> <a data-sec="r12s2" href="人力12_工资与就业理论_第2节_就业与失业.html">第2节 就业与失业</a></div></div>
+<div class="chapter-card" data-ch="13"><div class="c-title"><a href="人力13_人力资本投资理论_第1节_人力资本投资的一般原理.html">第13章 人力资本投资理论</a></div><div class="c-meta">4 节 · 约 185 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r13s1" href="人力13_人力资本投资理论_第1节_人力资本投资的一般原理.html">第1节 人力资本投资的一般原理</a> <a data-sec="r13s2" href="人力13_人力资本投资理论_第2节_人力资本投资与高等教育.html">第2节 人力资本投资与高等教育</a> <a data-sec="r13s3" href="人力13_人力资本投资理论_第3节_人力资本投资与在职培训.html">第3节 人力资本投资与在职培训</a> <a data-sec="r13s4" href="人力13_人力资本投资理论_第4节_劳动力流动.html">第4节 劳动力流动</a></div></div></div>
+<div class="group" data-subject="人力" id="part4"><div class="group-head"><span class="g-title">第四部分 人力资源与社会保险政策</span><span class="g-meta">26 节</span><span class="g-prog" id="prog-人力"></span></div><div class="chapter-card" data-ch="14"><div class="c-title"><a href="人力14_劳动合同管理与特殊用工_第1节_劳动合同履行与变更.html">第14章 劳动合同管理与特殊用工</a></div><div class="c-meta">4 节 · 约 175 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r14s1" href="人力14_劳动合同管理与特殊用工_第1节_劳动合同履行与变更.html">第1节 劳动合同履行与变更</a> <a data-sec="r14s2" href="人力14_劳动合同管理与特殊用工_第2节_劳动合同解除与终止.html">第2节 劳动合同解除与终止</a> <a data-sec="r14s3" href="人力14_劳动合同管理与特殊用工_第3节_用人单位劳动规章制度.html">第3节 用人单位劳动规章制度</a> <a data-sec="r14s4" href="人力14_劳动合同管理与特殊用工_第4节_特殊用工.html">第4节 特殊用工</a></div></div>
+<div class="chapter-card" data-ch="15"><div class="c-title"><a href="人力15_社会保险法律_第1节_社会保险法律关系.html">第15章 社会保险法律</a></div><div class="c-meta">3 节 · 约 32 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r15s1" href="人力15_社会保险法律_第1节_社会保险法律关系.html">第1节 社会保险法律关系</a> <a data-sec="r15s2" href="人力15_社会保险法律_第2节_社会保险法律适用.html">第2节 社会保险法律适用</a> <a data-sec="r15s3" href="人力15_社会保险法律_第3节_《中华人民共和国社会保险法》的基本内容.html">第3节 《中华人民共和国社会保险法》的基本内容</a></div></div>
+<div class="chapter-card" data-ch="16"><div class="c-title"><a href="人力16_社会保险体系_第1节_基本养老保险.html">第16章 社会保险体系</a></div><div class="c-meta">6 节 · 约 260 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r16s1" href="人力16_社会保险体系_第1节_基本养老保险.html">第1节 基本养老保险</a> <a data-sec="r16s2" href="人力16_社会保险体系_第2节_基本医疗保险.html">第2节 基本医疗保险</a> <a data-sec="r16s3" href="人力16_社会保险体系_第3节_工伤保险.html">第3节 工伤保险</a> <a data-sec="r16s4" href="人力16_社会保险体系_第4节_失业保险.html">第4节 失业保险</a> <a data-sec="r16s5" href="人力16_社会保险体系_第5节_生育保险.html">第5节 生育保险</a> <a data-sec="r16s6" href="人力16_社会保险体系_第6节_补充保险.html">第6节 补充保险</a></div></div>
+<div class="chapter-card" data-ch="17"><div class="c-title"><a href="人力17_劳动争议调解仲裁_第1节_劳动争议概述.html">第17章 劳动争议调解仲裁</a></div><div class="c-meta">4 节 · 约 165 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r17s1" href="人力17_劳动争议调解仲裁_第1节_劳动争议概述.html">第1节 劳动争议概述</a> <a data-sec="r17s2" href="人力17_劳动争议调解仲裁_第2节_劳动争议处理的基本程序.html">第2节 劳动争议处理的基本程序</a> <a data-sec="r17s3" href="人力17_劳动争议调解仲裁_第3节_劳动争议当事人和举证责任.html">第3节 劳动争议当事人和举证责任</a> <a data-sec="r17s4" href="人力17_劳动争议调解仲裁_第4节_劳动争议诉讼.html">第4节 劳动争议诉讼</a></div></div>
+<div class="chapter-card" data-ch="18"><div class="c-title"><a href="人力18_法律责任与行政执法_第1节_劳动法律责任.html">第18章 法律责任与行政执法</a></div><div class="c-meta">4 节 · 约 125 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r18s1" href="人力18_法律责任与行政执法_第1节_劳动法律责任.html">第1节 劳动法律责任</a> <a data-sec="r18s2" href="人力18_法律责任与行政执法_第2节_社会保险法律责任.html">第2节 社会保险法律责任</a> <a data-sec="r18s3" href="人力18_法律责任与行政执法_第3节_劳动保障监察.html">第3节 劳动保障监察</a> <a data-sec="r18s4" href="人力18_法律责任与行政执法_第4节_行政争议处理.html">第4节 行政争议处理</a></div></div>
+<div class="chapter-card" data-ch="19"><div class="c-title"><a href="人力19_宏观人力资源开发_第1节_人才评价.html">第19章 宏观人力资源开发</a></div><div class="c-meta">5 节 · 约 240 分钟 · <span class="c-status n">未开始</span></div><div class="sec-list"><a data-sec="r19s1" href="人力19_宏观人力资源开发_第1节_人才评价.html">第1节 人才评价</a> <a data-sec="r19s2" href="人力19_宏观人力资源开发_第2节_激励保障.html">第2节 激励保障</a> <a data-sec="r19s3" href="人力19_宏观人力资源开发_第3节_管理使用.html">第3节 管理使用</a> <a data-sec="r19s4" href="人力19_宏观人力资源开发_第4节_教育培训.html">第4节 教育培训</a> <a data-sec="r19s5" href="人力19_宏观人力资源开发_第5节_流动配置.html">第5节 流动配置</a></div></div></div>
 <script>
 (function(){
   var KEY='rljpk_v1';
@@ -569,99 +497,51 @@
 
 
 (function(){
-  var KEY='rljpk_v1';
-  // 记录"继续学习"位置：进入节页即写入章名·节名与文件名（总览仪表盘读取渲染）
-  try{
-    var d0=JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}};
-    var h10=document.querySelector('.header h1');
-    if(h10){d0.last={f:location.pathname.split('/').pop(), t:h10.textContent.trim(), ts:Date.now()};
-    localStorage.setItem(KEY,JSON.stringify(d0));}
-  }catch(e){}
-  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
-  function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
-  var badge=document.getElementById('sec-badge');
-  if(!badge)return;
-  var secid=badge.getAttribute('data-sec');
-  var items=[].slice.call(document.querySelectorAll('.quiz-item[data-qid]'));
-
-  function refreshBadge(){
-    var d=load(),total=items.length,right=0;
-    items.forEach(function(it){var st=d.q[it.getAttribute('data-qid')];if(st&&st.ok)right++;});
-    badge.className='sec-badge '+(total&&right===total?'ok':(right>0?'part':'none'));
-    badge.textContent=total&&right===total
-      ?'✅ 本节已学会：全部 '+total+' 题答对'
-      :(right>0?'本节掌握中：已答对 '+right+' / '+total+' 题（全部答对才算学会）'
-               :'本节未测：共 '+total+' 题，全部答对即学会');
-    d.s[secid]={total:total,right:right,ok:total>0&&right===total,t:Date.now()};
-    save(d);
-  }
-  function record(it,ok,first){
-    var d=load(),qid=it.getAttribute('data-qid');
-    var prev=d.q[qid]||{first:0};
-    d.q[qid]={ok:ok?1:0,first:prev.first||(first?1:0),t:Date.now()};
-    save(d);refreshBadge();
-  }
-  items.forEach(function(it){
-    var ans=(it.getAttribute('data-answer')||'').split('').sort().join('');
-    var opts=[].slice.call(it.querySelectorAll('.qopt'));
-    var fb=it.querySelector('.q-feedback');
-    var det=it.querySelector('details');
-    var sub=it.querySelector('.qsubmit');
-    function feedback(okFlag,msg){
-      fb.hidden=false;fb.className='q-feedback '+(okFlag?'ok':'no');fb.textContent=msg;
-      if(okFlag&&det)det.open=true;
+  function renderProgress(){
+    var d;try{d=JSON.parse(localStorage.getItem('rljpk_v1'))||{q:{},s:{}}}catch(e){d={q:{},s:{}}}
+    var S=d.s||{};
+    var totalAll=0,doneAll=0;
+    [].slice.call(document.querySelectorAll('.chapter-card[data-ch]')).forEach(function(card){
+      var secs=[].slice.call(card.querySelectorAll('a[data-sec]'));
+      var group=card.closest('.group');
+      var done=0;
+      secs.forEach(function(a){
+        var sid=a.getAttribute('data-sec');
+        var st=S[sid];totalAll++;
+        var dot=a.querySelector('.sec-dot');
+        if(!dot){dot=document.createElement('span');dot.className='sec-dot';a.insertBefore(dot,a.firstChild);}
+        dot.className='sec-dot';
+        if(st&&st.ok){dot.textContent='●';dot.classList.add('g');done++;doneAll++;}
+        else if(st&&st.right>0){dot.textContent='◐';dot.classList.add('y');}
+        else{dot.textContent='○';dot.classList.add('n');}
+      });
+      var el=card.querySelector('.c-status'),total=secs.length;
+      if(el){
+        if(total&&done===total){el.textContent='✅ 已学会 '+done+'/'+total+' 节';el.className='c-status g';}
+        else if(done>0){el.textContent='学习中 '+done+'/'+total+' 节';el.className='c-status y';}
+        else{el.textContent='未开始 · '+total+' 节';el.className='c-status n';}
+      }
+      if(group){
+        group._pt=(group._pt||{t:0,r:0});group._pt.t+=total;group._pt.r+=done;
+      }
+    });
+    // 每个"部分"分组独立显示本组进度
+    [].slice.call(document.querySelectorAll('.group')).forEach(function(g){
+      var el=g.querySelector('.g-prog'),p=g._pt;
+      if(el&&p)el.textContent=p.r>0?('已学会 '+p.r+'/'+p.t+' 节'):('未开始 · '+p.t+' 节');
+    });
+    var fill=document.getElementById('overall-fill'),txt=document.getElementById('overall-text');
+    if(fill&&txt){
+      var pct=totalAll?Math.round(100*doneAll/totalAll):0;
+      fill.style.width=pct+'%';
+      txt.textContent=doneAll>0?('本科目进度：已学会 '+doneAll+' / '+totalAll+' 节（'+pct+'%）'):'本科目共 '+totalAll+' 节，从任意一章开始';
     }
-    if(it.getAttribute('data-type')==='single'){
-      opts.forEach(function(o){
-        o.addEventListener('click',function(){
-          if(it.getAttribute('data-solved'))return;
-          if(o.getAttribute('data-key')===ans){
-            it.setAttribute('data-solved','1');
-            opts.forEach(function(x){x.disabled=true;if(x.getAttribute('data-key')===ans)x.classList.add('correct');});
-            feedback(true,'✅ 回答正确');
-            record(it,true,!it.getAttribute('data-tried'));
-          }else{
-            o.classList.add('wrong');o.disabled=true;
-            it.setAttribute('data-tried','1');
-            feedback(false,'✗ 回答错误，可继续选其他选项');
-            record(it,false,false);
-          }
-        });
-      });
-    }else{
-      opts.forEach(function(o){
-        o.addEventListener('click',function(){
-          if(it.getAttribute('data-solved'))return;
-          o.classList.toggle('picked');
-        });
-      });
-      if(sub)sub.addEventListener('click',function(){
-        if(it.getAttribute('data-solved'))return;
-        var picked=opts.filter(function(o){return o.classList.contains('picked')})
-                       .map(function(o){return o.getAttribute('data-key')}).sort().join('');
-        if(picked===ans){
-          it.setAttribute('data-solved','1');
-          opts.forEach(function(x){x.disabled=true;x.classList.remove('wrong','miss');
-            if(ans.indexOf(x.getAttribute('data-key'))>=0)x.classList.add('correct');});
-          sub.hidden=true;
-          feedback(true,'✅ 回答完全正确');
-          record(it,true,!it.getAttribute('data-tried'));
-        }else{
-          opts.forEach(function(x){var k=x.getAttribute('data-key');x.classList.remove('wrong','miss');
-            if(x.classList.contains('picked')&&ans.indexOf(k)<0)x.classList.add('wrong');
-            if(!x.classList.contains('picked')&&ans.indexOf(k)>=0)x.classList.add('miss');});
-          it.setAttribute('data-tried','1');
-          feedback(false,'✗ 不完全正确：红色=多选，黄色=漏选。调整勾选后重新提交');
-          record(it,false,false);
-        }
-      });
-    }
-  });
-  refreshBadge();
-  window.refreshBadge = refreshBadge;  // 供云同步合并后刷新徽章
-  // bfcache 返回/切回标签页时重算徽章（防显示旧状态）
-  window.addEventListener('pageshow', function(e){ if(e.persisted) refreshBadge(); });
-  window.addEventListener('focus', function(){ refreshBadge(); });
+  }
+  renderProgress();
+  window.renderProgress = renderProgress;
+  window.addEventListener('focus', renderProgress);
+  window.addEventListener('pageshow', function(e){ if(e.persisted) renderProgress(); });
+  window.addEventListener('storage', function(e){ if(!e.key||e.key==='rljpk_v1') renderProgress(); });
 })();
 </script>
 </body>

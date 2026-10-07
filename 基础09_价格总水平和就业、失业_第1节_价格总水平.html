@@ -154,11 +154,37 @@
     body { margin-left: max(240px, calc((100vw - 800px) / 2 + 110px)); }
   }
   @media (max-width: 1059.9px) { button.sb-btn { display: block; } }
+  /* 总览仪表盘板块卡 */
+  .dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+  @media (max-width: 640px) { .dash-grid { grid-template-columns: 1fr; } }
+  .dash-card { display: block; background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; }
+  .dash-card:hover { border-color: #185FA5; }
+  .dash-card .dc-icon { font-size: 26px; }
+  .dash-card .dc-title { font-size: 17px; font-weight: 700; color: #1a1a1a; margin: 8px 0 4px; }
+  .dash-card .dc-meta { font-size: 12.5px; color: #888780; margin-bottom: 12px; }
+  .dash-card .dc-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-top: 6px; }
+  .dash-card.wide { grid-column: 1 / -1; }
+  .dash-card .dc-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .dash-card .dc-links a { background: #f5f6f8; border: 1px solid #e8e8e5; border-radius: 16px; padding: 5px 13px; font-size: 12.5px; color: #55554f; }
+  .dash-card .dc-links a:hover { border-color: #185FA5; color: #185FA5; }
+  .continue-card { background: #FDF9EF; border: 1px solid #F0E4C3; border-radius: 14px; padding: 16px 20px; margin-bottom: 16px; }
+  .continue-card .cont-title { font-size: 13px; color: #A9720A; font-weight: 600; margin-bottom: 6px; }
+  .continue-card .cont-link { font-size: 15px; font-weight: 600; color: #185FA5; display: inline-block; margin-right: 10px; }
+  .continue-card .cont-meta { font-size: 12px; color: #A09A8A; }
+  /* 云同步折叠卡 */
+  details.section#sync-card { padding: 0; }
+  #sync-card summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 16px 20px; }
+  #sync-card summary::-webkit-details-marker { display: none; }
+  .sync-sum-title { font-size: 15.5px; font-weight: 600; color: #1a1a1a; }
+  .sync-sum-state { font-size: 12.5px; color: #888780; text-align: right; }
+  .sync-sum-state.ok { color: #2C5E3C; font-weight: 500; }
+  #sync-card[open] .sync-sum-state { display: none; }
+  .sync-inner { padding: 0 20px 20px; border-top: 1px solid #f0f0ed; padding-top: 14px; }
 </style>
 </head>
 <body>
-<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item active" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
-<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第九章 价格总水平和就业、失业 · 价格总水平</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 35 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="b09s1">本节掌握：加载中…</div><a class="sec-quiz-btn" href="quiz.html?ch=基础-9">📝 本章随堂练习</a></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item active" href="mulu-b.html"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="mulu-r.html"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
+<div class="header"><div class="crumb"><a href="mulu-b.html">← 经济基础知识目录</a></div><span class="label">经济基础知识 · 第一部分 经济学基础</span><h1>第九章 价格总水平和就业、失业 · 价格总水平</h1><div class="subtitle">第 1 节 / 共 4 节 · 预计学习时长 35 分钟</div><div class="progress-bar"><div class="fill" style="width:25%"></div></div><div class="progress-text">本章进度 1/4</div><div class="sec-badge none" id="sec-badge" data-sec="b09s1">本节掌握：加载中…</div><a class="sec-quiz-btn" href="quiz.html?ch=基础-9">📝 本章随堂练习</a></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
 <li>记住<strong>价格总水平</strong>的定义与度量：只算商品和服务价格、度量只认 <strong>CPI</strong> <span class="hot">高频考点</span></li>
 <li>会用<strong>费雪方程式</strong>判断货币供给量、货币流通速度、总产出与价格总水平的同向反向，分清总需求的"长期看需求、短期看供需" <span class="must">必考</span> <span class="s3">★★★</span></li>
 <li>背熟三大公式：<strong>π＝m＋v−y</strong>、<strong>实际工资≈名义工资−物价</strong>、<strong>i＝r−π</strong>，会用购买力平价说汇率 <span class="hot">高频考点</span></li>
@@ -542,6 +568,7 @@
         if(localChanged){
           saveProgress(merged);
           if(typeof renderProgress === 'function') renderProgress();
+          if(typeof renderDash === 'function') renderDash();
           if(typeof refreshBadge === 'function') refreshBadge();
         }
         if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }
@@ -643,6 +670,13 @@
 
 (function(){
   var KEY='rljpk_v1';
+  // 记录"继续学习"位置：进入节页即写入章名·节名与文件名（总览仪表盘读取渲染）
+  try{
+    var d0=JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}};
+    var h10=document.querySelector('.header h1');
+    if(h10){d0.last={f:location.pathname.split('/').pop(), t:h10.textContent.trim(), ts:Date.now()};
+    localStorage.setItem(KEY,JSON.stringify(d0));}
+  }catch(e){}
   function load(){try{return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}}}catch(e){return{q:{},s:{}}}}
   function save(d){try{localStorage.setItem(KEY,JSON.stringify(d));if(typeof scheduleSync==='function')scheduleSync();}catch(e){}}
   var badge=document.getElementById('sec-badge');

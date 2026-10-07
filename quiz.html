@@ -154,6 +154,32 @@
     body { margin-left: max(240px, calc((100vw - 800px) / 2 + 110px)); }
   }
   @media (max-width: 1059.9px) { button.sb-btn { display: block; } }
+  /* 总览仪表盘板块卡 */
+  .dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+  @media (max-width: 640px) { .dash-grid { grid-template-columns: 1fr; } }
+  .dash-card { display: block; background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; }
+  .dash-card:hover { border-color: #185FA5; }
+  .dash-card .dc-icon { font-size: 26px; }
+  .dash-card .dc-title { font-size: 17px; font-weight: 700; color: #1a1a1a; margin: 8px 0 4px; }
+  .dash-card .dc-meta { font-size: 12.5px; color: #888780; margin-bottom: 12px; }
+  .dash-card .dc-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-top: 6px; }
+  .dash-card.wide { grid-column: 1 / -1; }
+  .dash-card .dc-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .dash-card .dc-links a { background: #f5f6f8; border: 1px solid #e8e8e5; border-radius: 16px; padding: 5px 13px; font-size: 12.5px; color: #55554f; }
+  .dash-card .dc-links a:hover { border-color: #185FA5; color: #185FA5; }
+  .continue-card { background: #FDF9EF; border: 1px solid #F0E4C3; border-radius: 14px; padding: 16px 20px; margin-bottom: 16px; }
+  .continue-card .cont-title { font-size: 13px; color: #A9720A; font-weight: 600; margin-bottom: 6px; }
+  .continue-card .cont-link { font-size: 15px; font-weight: 600; color: #185FA5; display: inline-block; margin-right: 10px; }
+  .continue-card .cont-meta { font-size: 12px; color: #A09A8A; }
+  /* 云同步折叠卡 */
+  details.section#sync-card { padding: 0; }
+  #sync-card summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 16px 20px; }
+  #sync-card summary::-webkit-details-marker { display: none; }
+  .sync-sum-title { font-size: 15.5px; font-weight: 600; color: #1a1a1a; }
+  .sync-sum-state { font-size: 12.5px; color: #888780; text-align: right; }
+  .sync-sum-state.ok { color: #2C5E3C; font-weight: 500; }
+  #sync-card[open] .sync-sum-state { display: none; }
+  .sync-inner { padding: 0 20px 20px; border-top: 1px solid #f0f0ed; padding-top: 14px; }
 
   .qt { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 16px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; margin: 0 6px 8px 0; }
   .qt.active { background: #185FA5; border-color: #185FA5; color: #fff; font-weight: 600; }
@@ -224,7 +250,7 @@
 </style>
 </head>
 <body>
-<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item active" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="mulu-b.html"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="mulu-r.html"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item active" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
 <div class="header"><span class="label">中级经济师 2026</span><h1>📝 刷题题库</h1><div class="subtitle">共 4396 题 · 混合题库 / 真题按年份与整卷模拟 / 随机抽题与选项打乱 · 错题本间隔重复 · 统计看板</div></div><div id="quiz-tabs"></div><div id="quiz-main"><div class="section"><p class="qhint">题库加载中…</p></div></div>
 <script>window.QUIZ_CHAPTERS={"人力-1": "组织激励", "人力-2": "领导行为", "人力-3": "组织设计与组织文化", "人力-4": "战略性人力资源管理", "人力-5": "人力资源规划", "人力-6": "甄选", "人力-7": "绩效管理", "人力-8": "薪酬管理", "人力-9": "培训与开发", "人力-10": "劳动关系", "人力-11": "劳动力市场理论", "人力-12": "工资与就业理论", "人力-13": "人力资本投资理论", "人力-14": "劳动合同管理与特殊用工", "人力-15": "社会保险法律", "人力-16": "社会保险体系", "人力-17": "劳动争议调解仲裁", "人力-18": "法律责任与行政执法", "人力-19": "宏观人力资源开发", "基础-1": "社会主义基本经济制度", "基础-2": "市场需求、供给与价格均衡", "基础-3": "生产和成本理论", "基础-4": "市场结构理论", "基础-5": "生产要素市场理论", "基础-6": "市场失灵和政府的干预", "基础-7": "国民收入核算和简单的宏观经济模型", "基础-8": "经济增长和经济发展理论", "基础-9": "价格总水平和就业、失业", "基础-10": "国际贸易理论", "基础-11": "公共物品与财政职能", "基础-12": "财政支出", "基础-13": "财政收入", "基础-14": "税收制度", "基础-15": "政府预算", "基础-16": "财政管理体制", "基础-17": "财政政策", "基础-18": "货币供求与货币均衡", "基础-19": "中央银行和货币政策", "基础-20": "商业银行与金融市场", "基础-21": "金融风险和金融监管", "基础-22": "对外金融关系与政策", "基础-23": "统计与数据科学", "基础-24": "描述统计", "基础-25": "抽样调查", "基础-26": "回归分析", "基础-27": "时间序列分析", "基础-28": "会计概论", "基础-29": "会计循环", "基础-30": "会计报表", "基础-31": "财务报表分析", "基础-32": "政府会计", "基础-33": "法律对经济关系的调整", "基础-34": "物权法律制度", "基础-35": "合同法律制度", "基础-36": "公司法律制度", "基础-37": "其他法律制度"};</script>
 <script>
@@ -420,6 +446,7 @@
         if(localChanged){
           saveProgress(merged);
           if(typeof renderProgress === 'function') renderProgress();
+          if(typeof renderDash === 'function') renderDash();
           if(typeof refreshBadge === 'function') refreshBadge();
         }
         if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }

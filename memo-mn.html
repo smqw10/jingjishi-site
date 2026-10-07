@@ -154,10 +154,36 @@
     body { margin-left: max(240px, calc((100vw - 800px) / 2 + 110px)); }
   }
   @media (max-width: 1059.9px) { button.sb-btn { display: block; } }
+  /* 总览仪表盘板块卡 */
+  .dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+  @media (max-width: 640px) { .dash-grid { grid-template-columns: 1fr; } }
+  .dash-card { display: block; background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; }
+  .dash-card:hover { border-color: #185FA5; }
+  .dash-card .dc-icon { font-size: 26px; }
+  .dash-card .dc-title { font-size: 17px; font-weight: 700; color: #1a1a1a; margin: 8px 0 4px; }
+  .dash-card .dc-meta { font-size: 12.5px; color: #888780; margin-bottom: 12px; }
+  .dash-card .dc-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-top: 6px; }
+  .dash-card.wide { grid-column: 1 / -1; }
+  .dash-card .dc-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .dash-card .dc-links a { background: #f5f6f8; border: 1px solid #e8e8e5; border-radius: 16px; padding: 5px 13px; font-size: 12.5px; color: #55554f; }
+  .dash-card .dc-links a:hover { border-color: #185FA5; color: #185FA5; }
+  .continue-card { background: #FDF9EF; border: 1px solid #F0E4C3; border-radius: 14px; padding: 16px 20px; margin-bottom: 16px; }
+  .continue-card .cont-title { font-size: 13px; color: #A9720A; font-weight: 600; margin-bottom: 6px; }
+  .continue-card .cont-link { font-size: 15px; font-weight: 600; color: #185FA5; display: inline-block; margin-right: 10px; }
+  .continue-card .cont-meta { font-size: 12px; color: #A09A8A; }
+  /* 云同步折叠卡 */
+  details.section#sync-card { padding: 0; }
+  #sync-card summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 16px 20px; }
+  #sync-card summary::-webkit-details-marker { display: none; }
+  .sync-sum-title { font-size: 15.5px; font-weight: 600; color: #1a1a1a; }
+  .sync-sum-state { font-size: 12.5px; color: #888780; text-align: right; }
+  .sync-sum-state.ok { color: #2C5E3C; font-weight: 500; }
+  #sync-card[open] .sync-sum-state { display: none; }
+  .sync-inner { padding: 0 20px 20px; border-top: 1px solid #f0f0ed; padding-top: 14px; }
 </style>
 </head>
 <body>
-<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item active" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="mulu-b.html"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="mulu-r.html"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item active" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
 <div class="header"><div class="crumb"><a href="index.html">← 学习总览</a></div><span class="label">考前速记</span><h1>🧠 口诀与联想速记</h1><div class="subtitle">按**经济基础、人力资源**两大科目分类，每科内按顺口型、画面联想型、因果链条型三档组织，表格形式便于快速翻查；首字简写型一律不收（那类内容放在《概念要点》按列表记）。先看&quot;考点&quot;列定位知识点，再背&quot;口诀&quot;列。</div></div><div class="section"><div class="tip"><div class="tip-title">💡 使用说明</div><p>本页共约 85 条，口诀全部精选自各章精讲页的"🧠 记忆口诀"框并经筛选改写——遇到讲义里只有首字缩写的口诀，跳过它，改用《概念要点》页按条对照。哪条难记、希望某考点补一条口诀，直接告诉老师。</p></div></div><div class="toc"><a href="#g1">经济基础</a><a href="#g2">人力资源</a></div><h2 id="g1">🧠 经济基础</h2>
 <div class="section"><h3>顺口型（读一遍就懂）</h3>
 <table>
@@ -851,6 +877,7 @@
         if(localChanged){
           saveProgress(merged);
           if(typeof renderProgress === 'function') renderProgress();
+          if(typeof renderDash === 'function') renderDash();
           if(typeof refreshBadge === 'function') refreshBadge();
         }
         if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }
