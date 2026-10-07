@@ -58,7 +58,9 @@
     var set = {};
     var db = window.QUIZ_DB && window.QUIZ_DB[subj];
     if (db) db.questions.forEach(function (q) { if (q.ch) set[q.ch] = 1; });
-    return Object.keys(set);
+    return Object.keys(set).sort(function (a, b) {
+      return (+a.split('-')[1] || 0) - (+b.split('-')[1] || 0);   // 按章号升序
+    });
   }
 
   /* ---------- 视图状态 ---------- */
