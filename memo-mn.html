@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>口诀联想 | 中级经济师速记</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .mn-topic { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: 1px; font-weight: 700; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .fig-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 18px 16px 14px; margin: 12px 0; }
+  .fig-title { font-size: 14.5px; font-weight: 600; color: #1a1a1a; text-align: center; }
+  .fig-sub { font-size: 12px; color: #888780; text-align: center; margin-top: 3px; margin-bottom: 4px; }
+  .fig-card svg { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+  .fig-note { font-size: 13px; line-height: 1.7; border-radius: 8px; padding: 9px 12px; margin-top: 8px; }
+  .fig-note.ok { background: #EAF6EC; color: #2C5E3C; }
+  .fig-note.blue { background: #E6F1FB; color: #0C447C; }
+  .fig-note.red { background: #FBE9E7; color: #A12622; }
+  .fig-note.green { background: #EAF6EC; color: #2C5E3C; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 220px; background: #fff; border-right: 1px solid #e8e8e5; padding: 16px 12px 24px; overflow-y: auto; z-index: 50; transform: translateX(-105%); transition: transform .2s ease; }
+  body.sb-open .sidebar { transform: none; }
+  .sb-mask { position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 40; display: none; }
+  body.sb-open .sb-mask { display: block; }
+  button.sb-btn { display: none; position: fixed; top: 12px; left: 12px; z-index: 60; width: 38px; height: 38px; border-radius: 50%; border: 1px solid #e8e8e5; background: #fff; font-size: 17px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  .sb-brand { font-size: 15px; font-weight: 700; color: #1a1a1a; padding: 6px 10px 14px; border-bottom: 1px solid #f0f0ed; margin-bottom: 10px; }
+  .sb-brand span { display: block; font-size: 11px; color: #888780; font-weight: 400; margin-top: 2px; }
+  .sb-group { font-size: 11px; color: #b0aea5; padding: 12px 10px 4px; font-weight: 600; letter-spacing: 1px; }
+  .sb-item { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 8px; font-size: 13.5px; color: #55554f; margin-bottom: 2px; }
+  .sb-item:hover { background: #f5f6f8; color: #185FA5; }
+  .sb-item.active { background: #E6F1FB; color: #0C447C; font-weight: 600; }
+  .sb-item.disabled { color: #b5b3aa; cursor: default; }
+  .sb-item.disabled:hover { background: none; color: #b5b3aa; }
+  .sb-badge { margin-left: auto; font-size: 10px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 6px; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .toc a { background: #fff; border: 1px solid #e8e8e5; border-radius: 16px; padding: 6px 14px; font-size: 12.5px; color: #55554f; }
+  .toc a:hover { border-color: #185FA5; color: #185FA5; }
+  .toc .sb-badge { margin-left: 6px; }
+  @media (min-width: 1060px) {
+    .sidebar { transform: none; }
+    body { margin-left: max(240px, calc((100vw - 800px) / 2 + 110px)); }
+  }
+  @media (max-width: 1059.9px) { button.sb-btn { display: block; } }
+</style>
+</head>
+<body>
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item active" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><span class="sb-item disabled"><span>📝</span><span>刷题题库</span><span class="sb-badge wip">筹备中</span></span></nav>
+<div class="header"><div class="crumb"><a href="index.html">← 学习总览</a></div><span class="label">考前速记</span><h1>🧠 口诀与联想速记</h1><div class="subtitle">按**经济基础、人力资源**两大科目分类，每科内按顺口型、画面联想型、因果链条型三档组织，表格形式便于快速翻查；首字简写型一律不收（那类内容放在《概念要点》按列表记）。先看&quot;考点&quot;列定位知识点，再背&quot;口诀&quot;列。</div></div><div class="section"><div class="tip"><div class="tip-title">💡 使用说明</div><p>本页共约 85 条，口诀全部精选自各章精讲页的"🧠 记忆口诀"框并经筛选改写——遇到讲义里只有首字缩写的口诀，跳过它，改用《概念要点》页按条对照。哪条难记、希望某考点补一条口诀，直接告诉老师。</p></div></div><div class="toc"><a href="#g1">经济基础</a><a href="#g2">人力资源</a></div><h2 id="g1">🧠 经济基础</h2>
+<div class="section"><h3>顺口型（读一遍就懂）</h3>
+<table>
+<thead>
+<tr>
+<th>考点</th>
+<th>口诀</th>
+<th>记忆要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最高限价与保护价格</td>
+<td><strong>限高必低，保低必高；限价短缺，保护过剩</strong></td>
+<td>限价低于均衡价必短缺；保护价高于均衡价必过剩。方向题、后果题十二个字全包</td>
+</tr>
+<tr>
+<td>需求量变动与需求变动</td>
+<td><strong>自己价格走点，别的因素走线</strong></td>
+<td>自身价格变化=沿曲线点移动；收入偏好成本技术等=整条曲线平移。需求供给通用</td>
+</tr>
+<tr>
+<td>替代品、互补品与交叉弹性</td>
+<td><strong>替涨记正，补涨记负</strong></td>
+<td>替代品涨价→本品需求增（弹性为正）；互补品涨价→需求减（为负）。判系数符号先想这句</td>
+</tr>
+<tr>
+<td>需求价格弹性与总收入</td>
+<td><strong>富有弹性敢降价，缺乏弹性才敢涨</strong></td>
+<td>Ed&gt;1 降价薄利多销；Ed&lt;1 提价增收。说反了的选项都是错的</td>
+</tr>
+<tr>
+<td>国际贸易理论人物配对</td>
+<td><strong>绝对斯密比嘉图，禀赋俄林规克氏，保护贸易找李斯特</strong></td>
+<td>绝对优势=斯密（英）；比较优势=李嘉图（英）；要素禀赋=赫克歇尔-俄林（瑞典）；规模经济=克鲁格曼（美）；保护幼稚工业=李斯特（德）</td>
+</tr>
+<tr>
+<td>要素禀赋理论</td>
+<td><strong>家底厚卖家底，充裕出、稀缺进</strong></td>
+<td>密集使用本国充裕要素的产品出口，稀缺要素产品进口。"家底"就是禀赋</td>
+</tr>
+<tr>
+<td>三大消费理论人物对号</td>
+<td><strong>凯恩斯看眼前，莫迪利安尼管一生，弗里德曼认持久</strong></td>
+<td>凯恩斯=当期收入；莫迪利安尼=生命周期；弗里德曼=恒久收入</td>
+</tr>
+<tr>
+<td>边际产量与平均产量</td>
+<td><strong>边大均增，边小均减，相等最高</strong></td>
+<td>边际高于平均拉高平均，低于拉低，相等处平均最高。MC 与 AC 关系同理</td>
+</tr>
+<tr>
+<td>帕累托改进与最优</td>
+<td><strong>还能改进叫改进，改不动了叫最优</strong></td>
+<td>有人变好且无人变差=改进；连这最后一点可能都没有=最优</td>
+</tr>
+<tr>
+<td>劳动力供给曲线后弯</td>
+<td><strong>没钱加班（替代），有钱度假（收入）</strong></td>
+<td>工资低时替代效应赢，工资高后收入效应赢→曲线向后弯</td>
+</tr>
+<tr>
+<td>失业的统计三条件</td>
+<td><strong>没工作、能工作、找工作</strong></td>
+<td>三条件同时满足才算失业人口</td>
+</tr>
+<tr>
+<td>失业类型的自愿划分</td>
+<td><strong>摩擦结构算自愿，周期（需求不足）不自愿</strong></td>
+<td>摩擦性+结构性=自愿失业；需求不足型=周期性=非自愿失业，宏观调控重点</td>
+</tr>
+<tr>
+<td>居民收入三类</td>
+<td><strong>打工看老板（要素），生钱看资产（财产），白给看政府（转移）</strong></td>
+<td>按"钱从哪来"分：劳动报酬、财产性收入、转移性收入</td>
+</tr>
+<tr>
+<td>税负转嫁与归宿</td>
+<td><strong>缴税的不一定扛税，最后谁扛看归宿</strong></td>
+<td>法定纳税人是"过手"，归宿看弹性——需求弹性小（必需品）买方扛大头</td>
+</tr>
+<tr>
+<td>纳税人、负税人、扣缴义务人</td>
+<td><strong>交钱的是纳税人，掏钱的是负税人，代扣的是扣缴义务人</strong></td>
+<td>三个"人"按"谁交、谁扛、谁代扣"分清，单选高频偷换</td>
+</tr>
+<tr>
+<td>增量预算与零基预算</td>
+<td><strong>增量看基数添一添，零基放下旧账重新审</strong></td>
+<td>分水岭=是否考虑以前年度支出基础；零基=一切从零重新审核</td>
+</tr>
+<tr>
+<td>财政政策三种方向</td>
+<td><strong>供大于求踩油门，求大于供踩刹车，不快不慢挂空挡</strong></td>
+<td>经济冷→扩张性；过热→紧缩性；基本平衡→中性</td>
+</tr>
+<tr>
+<td>中央银行三大身份</td>
+<td><strong>发票子、管同行、伺候政府</strong></td>
+<td>发行的银行、银行的银行、政府的银行，对应三大类业务</td>
+</tr>
+<tr>
+<td>有效市场三档</td>
+<td><strong>弱看历史，半强看公开，强到内幕全失效</strong></td>
+<td>按信息集递进：历史价格→公开信息→连内幕都无利可图</td>
+</tr>
+<tr>
+<td>三代国际货币体系</td>
+<td><strong>英国黄金自发定，美国森林人为调，牙买加多元漂</strong></td>
+<td>金本位=自发固定；布雷顿森林=人为可调；牙买加=多元浮动</td>
+</tr>
+<tr>
+<td>中位数算法</td>
+<td><strong>先排队，再找位：奇取正中间，偶取中间俩平均</strong></td>
+<td>先排序是命门</td>
+</tr>
+<tr>
+<td>分层抽样与整群抽样</td>
+<td><strong>层内抱团、层间拉开；群内开花、群间相似</strong></td>
+<td>分层=层内同质层间异质；整群相反。同精度下分层好于整群</td>
+</tr>
+<tr>
+<td>相关分析与回归分析</td>
+<td><strong>相关测强弱，回归定形式；相关是地基，回归盖房子</strong></td>
+<td>相关只管程度方向，回归给出具体方程</td>
+</tr>
+<tr>
+<td>时期数列与时点数列</td>
+<td><strong>能加总是时期，加了白加是时点</strong></td>
+<td>相加有意义=时期（GDP）；无意义=时点（年末人口）</td>
+</tr>
+<tr>
+<td>会计六要素</td>
+<td><strong>占用的是资产，来源是负债+权益；流入是收入，流出是费用，净剩是利润</strong></td>
+<td>前三项管家底（资产负债表），后三项管成绩（利润表）</td>
+</tr>
+<tr>
+<td>借贷记账规则</td>
+<td><strong>资产费用借增贷减，负债权益收入贷增借减</strong></td>
+<td>有借必有贷、借贷必相等；先看科目属于哪类要素</td>
+</tr>
+<tr>
+<td>政府会计双基础</td>
+<td><strong>预算收付，财务权责</strong></td>
+<td>预算会计用收付实现制，财务会计用权责发生制</td>
+</tr>
+<tr>
+<td>三大偿债比率</td>
+<td><strong>流动含存货，速动去存货，现金只剩钱</strong></td>
+<td>分子依次变纯：流动比率≈2 → 速动比率≈1 → 现金比率</td>
+</tr>
+<tr>
+<td>抵押权设立规则</td>
+<td><strong>不动产登记才设立，动产合同生效即设立</strong></td>
+<td>动产抵押未登记不得对抗善意第三人</td>
+</tr>
+<tr>
+<td>定金罚则</td>
+<td><strong>付定不履要不回，收定不履还双倍；上限两成</strong></td>
+<td>定金≤主合同标的额20%；定金与违约金二选一</td>
+</tr>
+<tr>
+<td>一般保证与连带保证</td>
+<td><strong>该赔的赔完了才找我＝一般；没赔都能来找我＝连带</strong></td>
+<td>一般保证有先诉抗辩权；没约定的推定一般保证</td>
+</tr>
+<tr>
+<td>试用期上限</td>
+<td><strong>不满一年押一个月，不满三年押两个月，三年以上封顶六个月</strong></td>
+<td>3个月-1年≤1个月；1-3年≤2个月；3年以上及无固定≤6个月；同一单位只约一次</td>
+</tr>
+</tbody>
+</table>
+<h3>画面联想型（用熟悉场景记抽象规律）</h3>
+<table>
+<thead>
+<tr>
+<th>考点</th>
+<th>口诀</th>
+<th>记忆要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>税收的基本特征</td>
+<td><strong>税收三性 = 法律 + 送礼 + 时刻表</strong></td>
+<td>强制性像法律（不交不行）；无偿性像送礼（不返还对价）；固定性像时刻表（事先定好）</td>
+</tr>
+<tr>
+<td>公共物品的两个特征</td>
+<td><strong>公共物品 = 国防</strong></td>
+<td>非竞争性：多一人不增成本（人多不挤）；非排他性：排不掉</td>
+</tr>
+<tr>
+<td>边际成本与平均成本曲线</td>
+<td><strong>边际线 = 新同学的分数</strong></td>
+<td>低于平均拉低、高于拉高、相等在最低点——MC 交 AC、AVC 于最低点且最先触底</td>
+</tr>
+<tr>
+<td>菲利普斯曲线</td>
+<td><strong>菲利普斯曲线 = 跷跷板</strong></td>
+<td>失业与通胀此消彼长</td>
+</tr>
+<tr>
+<td>拉弗曲线</td>
+<td><strong>拉弗曲线 = 翻山</strong></td>
+<td>税率过最优税率后税收反降，整条曲线是倒 U 一座山</td>
+</tr>
+<tr>
+<td>凯恩斯货币需求三动机</td>
+<td><strong>花钱三兄弟</strong></td>
+<td>交易（日常花）→ 预防（防身）→ 投机（搏一把），按序排</td>
+</tr>
+<tr>
+<td>经济增长与经济发展</td>
+<td><strong>增长是长胖，发展是变健康</strong></td>
+<td>增长只看量（GDP），发展还看质（结构、福利）；增长是发展的基础但不等于发展</td>
+</tr>
+<tr>
+<td>三大报表的时态</td>
+<td><strong>资产负债拍照片，利润现金录录像</strong></td>
+<td>资产负债表=时点数；利润表、现金流量表=时期数</td>
+</tr>
+<tr>
+<td>收益性支出与资本性支出</td>
+<td><strong>买肉的钱记当期，买店的钱记资产摊以后</strong></td>
+<td>受益当期计费用；受益多期先记资产分期摊</td>
+</tr>
+<tr>
+<td>法人人格否认</td>
+<td><strong>把公司当提款机，有限责任就到头</strong></td>
+<td>滥用独立地位逃债害人→刺破面纱，股东连带责任</td>
+</tr>
+<tr>
+<td>经济法与调整经济的法</td>
+<td><strong>经济法是抽屉，调整经济的法是柜子</strong></td>
+<td>柜子（总称）装抽屉（一个部门法），别混同</td>
+</tr>
+<tr>
+<td>金融风险四类</td>
+<td><strong>牛市信曹操</strong></td>
+<td>牛=流动性（谐音）、市=市场、信=信用、操=操作；"规模风险""外溢风险"是干扰项</td>
+</tr>
+</tbody>
+</table>
+<h3>因果链条型（按逻辑顺下来）</h3>
+<table>
+<thead>
+<tr>
+<th>考点</th>
+<th>口诀</th>
+<th>记忆要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投资（支出）乘数</td>
+<td><strong>乘数 = 越敢花，涟漪越大</strong></td>
+<td>乘数=1/(1−MPC)，边际消费倾向越大乘数越大</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="g2">🧠 人力资源</h2>
+<div class="section"><h3>顺口型（读一遍就懂）</h3>
+<table>
+<thead>
+<tr>
+<th>考点</th>
+<th>口诀</th>
+<th>记忆要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>马斯洛与 ERG 对比</td>
+<td><strong>马斯洛爬楼梯，ERG 能跳级还能倒退</strong></td>
+<td>马斯洛逐级上升；ERG 可同时起作用+受挫回归。见"逐级"选马斯洛，见"同时/退化"选 ERG</td>
+</tr>
+<tr>
+<td>双因素理论</td>
+<td><strong>保健消不满，激励出满意</strong></td>
+<td>保健因素（工资条件政策）只消除不满；激励因素（成就认可成长）才带来满意</td>
+</tr>
+<tr>
+<td>内源与外源动机</td>
+<td><strong>内看事本身，外看给多少</strong></td>
+<td>内源=成就、意义感；外源=工资、奖金、地位</td>
+</tr>
+<tr>
+<td>情境领导四风格</td>
+<td><strong>指导听命办事，推销知心大姐，参与共同决策，授权自力更生</strong></td>
+<td>按下属成熟度低到高：命令式→说服式→参与式→授权式</td>
+</tr>
+<tr>
+<td>管理者技能三层级</td>
+<td><strong>技术管事，人际管人，概念管思想；官越大越靠概念</strong></td>
+<td>技术技能基层最需要；概念技能高层最需要；人际各层都要</td>
+</tr>
+<tr>
+<td>勒温领导作风</td>
+<td><strong>独裁两极端，放任最攻击，民主居中间</strong></td>
+<td>反直觉：攻击行为最多的是放任型群体</td>
+</tr>
+<tr>
+<td>行政层级式组织（韦伯）</td>
+<td><strong>权力分等立规章，照章办事不认人</strong></td>
+<td>科层制：权力等级、规章制度、非人格化、技术能力</td>
+</tr>
+<tr>
+<td>组织文化四类型</td>
+<td><strong>专业学院，俱乐通才，棒球水平，堡垒不保</strong></td>
+<td>学院型育专才；俱乐部型育通才；棒球队型按绩效给钱；堡垒型不保障安全</td>
+</tr>
+<tr>
+<td>战略的三个层次</td>
+<td><strong>组织去哪里，竞争怎么打，职能凭什么</strong></td>
+<td>组织战略定方向、竞争战略定打法、职能战略定支撑</td>
+</tr>
+<tr>
+<td>战略人力资源三大工具</td>
+<td><strong>地图画路径，计分卡定指标，仪表盘看进度</strong></td>
+<td>战略地图、平衡计分卡、数字仪表盘各管一件事</td>
+</tr>
+<tr>
+<td>人力资源供给预测两法</td>
+<td><strong>替换盯一个位，马尔可夫看全局</strong></td>
+<td>管理人员替换法管接班；马尔可夫转移矩阵管全局流动</td>
+</tr>
+<tr>
+<td>信度四种类型</td>
+<td><strong>重测比时间，复本比卷子，一致比题目，评价者比考官</strong></td>
+<td>重测跨时间、复本跨版本、内部一致性跨题目、评价者跨考官</td>
+</tr>
+<tr>
+<td>效度三种类型</td>
+<td><strong>内容对目标，效标对绩效，构想对理论</strong></td>
+<td>内容效度测目标内容；效标效度预测绩效；构想效度验证理论</td>
+</tr>
+<tr>
+<td>霍兰德职业兴趣六型</td>
+<td><strong>动手找现实，动脑找研究，带人教书找社会，掌权说服找企业，天马行空找艺术，整理档案找常规</strong></td>
+<td>现实、研究、社会、企业、艺术、常规，各配一个动作画面</td>
+</tr>
+<tr>
+<td>绩效考核与绩效管理</td>
+<td><strong>考核一环节，管理一全程；考核重在判，管理重在通</strong></td>
+<td>说"绩效管理是绩效考核的组成部分"必错——反了</td>
+</tr>
+<tr>
+<td>量表法三种</td>
+<td><strong>图尺最便宜但模糊，锚定最准确但最贵，观察信度好但量大</strong></td>
+<td>图尺度法、行为锚定法、行为观察法优缺点对照</td>
+</tr>
+<tr>
+<td>比较法三种</td>
+<td><strong>排序简单压力大，配对科学翻倍忙，强制分布防趋中</strong></td>
+<td>见"避免趋中/宽严"选强制分布法</td>
+</tr>
+<tr>
+<td>销售人员薪酬</td>
+<td><strong>保险餐饮高佣金，技术长销高基本</strong></td>
+<td>见单快收用高佣金；难卖长周期用高基本工资</td>
+</tr>
+<tr>
+<td>劳动关系的四个层次含义</td>
+<td><strong>结合是目的，经济是本质，从属是特点，两利是目标</strong></td>
+<td>问目的答结合、问本质答经济利益、问特点答从属性、问目标答合作双赢</td>
+</tr>
+<tr>
+<td>劳动力供给的收入与替代效应</td>
+<td><strong>收入的躺平，替代的加班</strong></td>
+<td>收入效应与供给反向，替代效应同向，锚点"收反替同"</td>
+</tr>
+<tr>
+<td>失业四种类型</td>
+<td><strong>摩擦信息堵，结构技能错，季节随淡旺，周期怪总需</strong></td>
+<td>摩擦=信息不畅；结构=技能错配；季节=淡旺；周期=总需求不足</td>
+</tr>
+<tr>
+<td>货币工资与实际工资</td>
+<td><strong>名义是票面，实际是购买；实际＝货币÷物价</strong></td>
+<td>货币工资涨，实际工资未必涨——还要看物价</td>
+</tr>
+<tr>
+<td>高等教育信号模型</td>
+<td><strong>文凭不练功，只当筛子用</strong></td>
+<td>文凭不提升生产率，只是筛选信号（与人力资本论对照）</td>
+</tr>
+<tr>
+<td>在职培训两种类型</td>
+<td><strong>通用走天下，专用守一厂</strong></td>
+<td>通用技能职工承担成本；特殊培训企业分担成本</td>
+</tr>
+<tr>
+<td>人力资本投资决策</td>
+<td><strong>未来钱，打完折，超成本，才值得</strong></td>
+<td>未来收益贴现与成本比较，净现值为正才投</td>
+</tr>
+<tr>
+<td>劳动合同履行地规则</td>
+<td><strong>人在哪儿干活，标准跟哪儿走</strong></td>
+<td>履行地标准优先；注册地更高且有约定才按注册地</td>
+</tr>
+<tr>
+<td>经济补偿计算</td>
+<td><strong>一年一个月，半年算一年，不到半年给半月；高薪 3 倍封顶再加 12 年帽</strong></td>
+<td>每满一年一个月；超社平 3 倍按 3 倍付、年限最高 12 年</td>
+</tr>
+<tr>
+<td>劳务派遣义务划分</td>
+<td><strong>钱、社保、证明派遣出；条件、加班、福利用工付</strong></td>
+<td>派遣单位管钱和人；用工单位管现场待遇；再派遣和收费两禁止</td>
+</tr>
+<tr>
+<td>基本养老保险缴费记账</td>
+<td><strong>单位十六进统筹，个人八块进个账</strong></td>
+<td>单位 16% 进统筹基金；个人 8% 进个人账户</td>
+</tr>
+<tr>
+<td>医保基金四不管</td>
+<td><strong>工伤找工伤，第三人找第三人，公共卫生归公家，境外就医不算账</strong></td>
+<td>四类不纳入基本医保；第三人拒付时医保先行支付再追偿</td>
+</tr>
+<tr>
+<td>视同工伤三情形</td>
+<td><strong>岗位暴病四十八，抢险救灾国家事，军人旧伤算工伤</strong></td>
+<td>岗位突发疾病 48 小时内抢救无效死亡等三种</td>
+</tr>
+<tr>
+<td>劳动争议仲裁时效</td>
+<td><strong>在职讨薪不设限，离职一年须办完</strong></td>
+<td>时效 1 年；劳动关系存续期间拖欠劳动报酬不受限，终止后 1 年内提出</td>
+</tr>
+<tr>
+<td>终局裁决</td>
+<td><strong>小额追薪加国标，作出之日就生效</strong></td>
+<td>≤当地月最低工资 12 个月的追薪争议+执行国家劳动标准争议一裁终局；劳动者可起诉、单位可申请撤销</td>
+</tr>
+<tr>
+<td>女职工禁忌劳动</td>
+<td><strong>井下四级经三冷，孕期七月夜班停，产假九八哺乳岁</strong></td>
+<td>禁矿山井下四级体力；经期禁高处低温冷水；孕 7 月禁夜班加班；产假 98 天；哺乳不满 1 岁禁夜班加班</td>
+</tr>
+</tbody>
+</table>
+<h3>画面联想型（用熟悉场景记抽象规律）</h3>
+<table>
+<thead>
+<tr>
+<th>考点</th>
+<th>口诀</th>
+<th>记忆要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>马斯洛需要层次理论</td>
+<td><strong>马斯洛 = 人生路线图</strong></td>
+<td>吃饱→安全→找伙伴→要面子→追理想，顺人生走一遍</td>
+</tr>
+<tr>
+<td>管理方格理论</td>
+<td><strong>管理方格 = 横活纵人，9.9 双高</strong></td>
+<td>横轴任务纵轴人；(9,9)团队型最好；(1,1)贫乏型最差</td>
+</tr>
+<tr>
+<td>精简人员方法的代价</td>
+<td><strong>省钱的刀见血快，长期的伤好得慢</strong></td>
+<td>裁员省钱立竿见影，人才士气声誉的长期账在亏</td>
+</tr>
+</tbody>
+</table>
+<h3>因果链条型（按逻辑顺下来）</h3>
+<table>
+<thead>
+<tr>
+<th>考点</th>
+<th>口诀</th>
+<th>记忆要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>弗罗姆期望理论</td>
+<td><strong>期望理论：值不值 × 行不行</strong></td>
+<td>M=V×E 乘法关系：奖励不稀罕（V=0）或觉得做不成（E=0），激励都是零</td>
+</tr>
+<tr>
+<td>平衡计分卡（BSC）四维度</td>
+<td><strong>平衡计分卡：一条赚钱的因果链</strong></td>
+<td>赚钱（财务）←客户买单←流程顺畅←学习成长，从右往左推</td>
+</tr>
+<tr>
+<td>亚当斯公平理论</td>
+<td><strong>不公平了怎么办：改投入、改产出、改认知、换东家</strong></td>
+<td>少干活、要加薪、心理重解释、离职——恢复公平的四条路</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 如何使用本页</div><p>遇到讲义里只有首字缩写的口诀（如"公外竞分稳"），跳过它，改用《概念要点》页按条对照。本页哪条难记、希望哪个考点补口诀，直接告诉老师随时增补。</p></div></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    if(typeof b64 !== 'string' || !b64)
+      throw new Error('云端返回内容缺失（content=' + (b64 === null ? 'null' : typeof b64) + '）——请点"立即同步"重试，若反复出现请把此提示反馈');
+    var clean = String(b64).replace(/\s/g,'');
+    var bin;
+    try { bin = atob(clean); }
+    catch(e){ throw new Error('云端返回了无法解码的内容（前 20 字符：' + clean.slice(0,20) + '）——请点"立即同步"重试，若反复出现请反馈'); }
+    var bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0, failCount = 0, pausedUntil = 0, conflictCount = 0;
+  // 换绑/重绑后由配置界面调用：重置内部锁与失败状态，避免历史状态延续
+  window.resetSyncState = function(){ syncing=false; failCount=0; pausedUntil=0; lastPullAt=0; conflictCount=0; };
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  // 双后端分派：cfg.backend = 'github'（默认）| 'gitee'
+  function backendOf(cfg){ return cfg.backend === 'gitee' ? 'gitee' : 'github'; }
+  function fileUrl(cfg, method){
+    if(backendOf(cfg) === 'gitee')
+      return method === 'PUT'
+        ? 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json'   // PUT 时令牌放请求体，不与 URL 重复
+        : 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json?access_token='+encodeURIComponent(cfg.token);
+    return 'https://api.github.com/repos/'+cfg.repo+'/contents/progress.json';
+  }
+  function fetchOpts(cfg, method, bodyObj, useJson){
+    var o = {method: method}, signal = null;
+    if(typeof AbortController !== 'undefined'){
+      var ac = new AbortController(); setTimeout(function(){ ac.abort(); }, 9000);
+      signal = ac.signal; o.signal = signal;
+    }
+    if(backendOf(cfg) === 'gitee'){
+      o.headers = {'Accept':'application/json'};
+      if(method === 'PUT'){
+        if(useJson){
+          // Gitee JSON 姿势（社区实践中成功率高）：token/content/message 均入 JSON 体
+          var j = {access_token: cfg.token, content: bodyObj.content, message: bodyObj.message || 'progress sync'};
+          if(bodyObj.sha) j.sha = bodyObj.sha;
+          o.headers['Content-Type'] = 'application/json;charset=UTF-8';
+          o.body = JSON.stringify(j);
+        } else {
+          var params = new URLSearchParams();
+          params.set('access_token', cfg.token);
+          params.set('content', bodyObj.content);
+          params.set('message', bodyObj.message || 'progress sync');
+          if(bodyObj.sha) params.set('sha', bodyObj.sha);
+          o.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+          o.body = params.toString();
+        }
+      }
+    } else {
+      o.headers = apiHeaders(cfg);
+      if(method === 'PUT') o.body = JSON.stringify(bodyObj);
+    }
+    return o;
+  }
+  function netErrMsg(e, cfg){
+    var m = e && e.message ? e.message : String(e);
+    if(m.indexOf('abort') >= 0 || m.indexOf('Abort') >= 0)
+      return '网络超时（9 秒无响应）' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议在上方切换为 Gitee 后端' : '，稍后重试');
+    if(m.indexOf('fetch') >= 0 || m.indexOf('NetworkError') >= 0 || m.indexOf('network') >= 0)
+      return '网络无法连通' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议切换为 Gitee 后端' : '，请检查网络');
+    return m;
+  }
+  function noteFail(cfg, prefix){
+    failCount++;
+    if(failCount >= 3){
+      pausedUntil = Date.now() + 5*60*1000; failCount = 0;
+      setSyncStatus(prefix + '；自动同步已暂停 5 分钟，可点"立即同步"重试', 'err');
+    } else {
+      setSyncStatus(prefix, 'err');
+    }
+  }
+  window.ghPush = function(force, useJson, isFallback){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    if(Date.now() < (pausedUntil||0)) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    var tryJson = useJson !== false;  // 默认先 JSON（社区实践成功率高的姿势），失败自动换 form 再试一次
+    fetch(fileUrl(cfg, 'PUT'), fetchOpts(cfg, 'PUT', body, tryJson))
+    .then(function(r){ return r.text().then(function(t){ var j = null; try{ j = JSON.parse(t); }catch(e){} return {status:r.status, j:j, raw:t}; }); })
+    .then(function(res){
+      syncing = false;
+      var errMsg = (res.j && (res.j.message || (res.j.messages && res.j.messages.join('; ')))) || (res.raw ? res.raw.slice(0, 100) : '') || '';
+      if(res.status===200 || res.status===201){
+        failCount = 0; pausedUntil = 0; conflictCount = 0;
+        cfg.sha = (res.j.content && res.j.content.sha) || (res.j.commit && res.j.commit.sha) || res.j.sha || cfg.sha;
+        cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(backendOf(cfg)==='gitee' && res.status===400 && !isFallback){
+        // 任何 400（含 sha 类错误）→ 先换另一种提交格式重试；两种格式都败才进入冲突/报错分支
+        ghPush(true, !tryJson, true);
+      } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400 && errMsg.indexOf('sha')>=0)){
+        conflictCount++;
+        if(conflictCount > 3){ setSyncStatus('✗ 上传反复冲突已停止（最后错误：'+errMsg+'）——请反馈此完整提示', 'err'); return; }
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else if(res.status===401 || res.status===403){
+        noteFail(cfg, backendOf(cfg)==='gitee'
+          ? '✗ 上传被拒绝（'+res.status+'）：Gitee 私人令牌可能未勾选 projects 权限或已过期——请重新生成一枚'
+          : '✗ 上传被拒绝（'+res.status+'）：token 无效或权限不足，请重新配置');
+      } else {
+        noteFail(cfg, '✗ 上传失败：HTTP '+res.status+' '+errMsg);
+      }
+    }).catch(function(e){ syncing=false; noteFail(cfg, '✗ 上传失败：'+netErrMsg(e, cfg)); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(Date.now() < (pausedUntil||0)){ setSyncStatus('⏸ 自动同步已暂停（此前连续失败），点"立即同步"重试'); return; }
+    if(syncing) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    syncing = true; setSyncStatus('☁ 正在检查云端进度…');
+    fetch(fileUrl(cfg, 'GET'), fetchOpts(cfg, 'GET'))
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); syncing=false; ghPush(); return null; }
+      if(r.status===304){ syncing=false; return null; }
+      if(r.status===401) throw new Error('令牌无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或令牌权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      // Gitee 对不存在的文件返回 200+[]（GitHub 是 404）——都视为"云端还没有进度文件"，自动上传本地
+      var missing = !res.j || Array.isArray(res.j) || typeof res.j.content !== 'string' || !res.j.content;
+      if(missing){
+        syncing = false; cfg.sha = null; saveSyncCfg(cfg);
+        if(backendOf(cfg) === 'gitee'){
+          // 空仓库（无任何分支/提交）无法通过 API 建文件——先查分支，空则给初始化指引
+          var bqs = new URLSearchParams({access_token: cfg.token}).toString();
+          fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/branches?'+bqs, {headers: {'Accept':'application/json'}})
+          .then(function(r){ return r.json(); })
+          .then(function(brs){
+            if(Array.isArray(brs) && brs.length === 0)
+              setSyncStatus('✗ 仓库是空的：请到 Gitee 打开该仓库 → 文件 → 新建 → 随便建一个 README.md 提交（初始化仓库），然后回来点"立即同步"', 'err');
+            else ghPush();
+          }).catch(function(){ ghPush(); });
+        } else ghPush();
+        return;
+      }
+      var remote = JSON.parse(b64decode(res.j.content));
+      if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha || null; saveSyncCfg(cfg);
+      var afterSha = function(diag){
+        saveSyncCfg(cfg);
+        if(!cfg.sha && backendOf(cfg)==='gitee'){
+          // 有文件却拿不到版本号——推送必然报 sha missing，不推，直接给诊断摘要
+          syncing = false;
+          setSyncStatus('✗ 无法获取云端文件版本号[' + (diag || 'GET响应无sha且文件树补取失败') + ']——点"诊断"按钮并把结果反馈', 'err');
+          return;
+        }
+        if(localChanged){
+          saveProgress(merged);
+          if(typeof renderProgress === 'function') renderProgress();
+          if(typeof refreshBadge === 'function') refreshBadge();
+        }
+        if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }
+        else { syncing=false; failCount=0; pausedUntil=0; setSyncStatus('✓ 已与云端同步', 'ok'); }
+      };
+      if(!cfg.sha && backendOf(cfg)==='gitee'){
+        // Gitee 读文件响应可能不带 sha（API 创建的文件尤其如此）→ 更新必带 sha，否则报"sha is missing"。
+        // 通过 仓库信息(default_branch) → 文件树(blob sha) 两步补取。
+        var tq = new URLSearchParams({access_token: cfg.token}).toString();
+        fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'?'+tq, {headers: {'Accept':'application/json'}})
+        .then(function(r){ return r.json(); })
+        .then(function(ri){
+          var br = (ri && ri.default_branch) || 'master';
+          return fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/git/trees/'+br+'?'+tq, {headers: {'Accept':'application/json'}}).then(function(r2){ return r2.json(); })
+            .then(function(t){
+              var hit = null;
+              if(t && t.tree) for(var i=0;i<t.tree.length;i++) if(t.tree[i].path === 'progress.json'){ hit = t.tree[i].sha; break; }
+              return {branch: br, hit: hit, treeLen: (t && t.tree) ? t.tree.length : 0, paths: (t && t.tree) ? t.tree.slice(0,8).map(function(x){return x.path;}).join(',') : ''};
+            });
+        })
+        .then(function(d){
+          if(d.hit) cfg.sha = d.hit;
+          afterSha('分支=' + d.branch + ';树内项数=' + d.treeLen + ';找到progress.json=' + (d.hit ? '是' : '否') + ';树内前8项=' + d.paths);
+        })
+        .catch(function(e){ afterSha('补取异常:' + (e && e.message || e)); });  // 补取失败不推
+      } else afterSha('GET响应自带sha');
+    }).catch(function(e){
+      syncing=false;
+      var m = e && e.message ? e.message : '';
+      if(m.indexOf('令牌') >= 0 || m.indexOf('限速') >= 0 || m.indexOf('格式异常') >= 0) noteFail(cfg, '✗ 拉取失败：'+m);
+      else noteFail(cfg, '✗ 拉取失败：'+netErrMsg(e, cfg));
+    });
+  };
+  var syncTimer = null;
+  var syncTimer = null, lastSavedStr = null;
+  // 一键诊断：三个只读请求（读文件/仓库信息/文件树），输出摘要并尝试复制到剪贴板
+  window.runSyncDiag = function(){
+    var cfg = loadSyncCfg();
+    if(!cfg.repo || !cfg.token){ setSyncStatus('请先配置并连接云同步', 'err'); return; }
+    setSyncStatus('正在诊断…');
+    var tq = new URLSearchParams({access_token: cfg.token}).toString();
+    var base = backendOf(cfg)==='gitee' ? 'https://gitee.com/api/v5' : 'https://api.github.com';
+    var out = ['后端=' + backendOf(cfg), '仓库=' + cfg.repo];
+    var req = function(url, hdrs){
+      return fetch(url, {headers: hdrs || {'Accept':'application/json'}})
+        .then(function(r){ return r.text().then(function(t){ return {s: r.status, t: t}; }); });
+    };
+    var hdrs = backendOf(cfg)==='gitee' ? {'Accept':'application/json'} : {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json'};
+    Promise.all([
+      req(base + '/repos/' + cfg.repo + '/contents/progress.json' + (backendOf(cfg)==='gitee' ? '?' + tq : ''), hdrs),
+      backendOf(cfg)==='gitee'
+        ? req(base + '/repos/' + cfg.repo + '?' + tq).then(function(ri){
+            var br = 'master'; try { br = JSON.parse(ri.t).default_branch || 'master'; } catch(e){}
+            return req(base + '/repos/' + cfg.repo + '/git/trees/' + br + '?' + tq).then(function(tr){
+              return {branch: br, tr: tr};
+            });
+          })
+        : Promise.resolve(null)
+    ]).then(function(r){
+      var c = r[0], tree = r[1];
+      out.push('读文件HTTP=' + c.s, '读文件响应前160字符=' + c.t.slice(0, 160));
+      if(tree){
+        out.push('默认分支=' + tree.branch, '文件树HTTP=' + tree.tr.s);
+        var items = []; try { items = JSON.parse(tree.tr.t).tree || []; } catch(e){}
+        var pj = items.filter(function(x){ return x.path === 'progress.json'; })[0];
+        out.push('树内文件数=' + items.length, '树内progress.json=' + (pj ? ('找到,sha=' + pj.sha) : '未找到'), '树内全部路径=' + items.map(function(x){return x.path;}).join('|'));
+      }
+      var msg = out.join('\n');
+      setSyncStatus('诊断完成，结果已复制（粘贴发给老师）', 'ok');
+      if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(msg).catch(function(){});
+      window.__syncDiag = msg;
+      console.log(msg);
+    }).catch(function(e){
+      setSyncStatus('诊断失败：' + (e && e.message || e), 'err');
+    });
+  };
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var btn=document.querySelector('.sb-btn');
+  if(btn)btn.addEventListener('click',function(){document.body.classList.toggle('sb-open');});
+  var mask=document.querySelector('.sb-mask');
+  if(mask)mask.addEventListener('click',function(){document.body.classList.remove('sb-open');});
+  document.querySelectorAll('.sidebar a').forEach(function(a){
+    a.addEventListener('click',function(){document.body.classList.remove('sb-open');});
+  });
+})();
+</script>
+</body>
+</html>

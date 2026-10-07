@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>易混对比 | 中级经济师速记</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .mn-topic { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: 1px; font-weight: 700; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .fig-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 18px 16px 14px; margin: 12px 0; }
+  .fig-title { font-size: 14.5px; font-weight: 600; color: #1a1a1a; text-align: center; }
+  .fig-sub { font-size: 12px; color: #888780; text-align: center; margin-top: 3px; margin-bottom: 4px; }
+  .fig-card svg { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+  .fig-note { font-size: 13px; line-height: 1.7; border-radius: 8px; padding: 9px 12px; margin-top: 8px; }
+  .fig-note.ok { background: #EAF6EC; color: #2C5E3C; }
+  .fig-note.blue { background: #E6F1FB; color: #0C447C; }
+  .fig-note.red { background: #FBE9E7; color: #A12622; }
+  .fig-note.green { background: #EAF6EC; color: #2C5E3C; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 220px; background: #fff; border-right: 1px solid #e8e8e5; padding: 16px 12px 24px; overflow-y: auto; z-index: 50; transform: translateX(-105%); transition: transform .2s ease; }
+  body.sb-open .sidebar { transform: none; }
+  .sb-mask { position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 40; display: none; }
+  body.sb-open .sb-mask { display: block; }
+  button.sb-btn { display: none; position: fixed; top: 12px; left: 12px; z-index: 60; width: 38px; height: 38px; border-radius: 50%; border: 1px solid #e8e8e5; background: #fff; font-size: 17px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  .sb-brand { font-size: 15px; font-weight: 700; color: #1a1a1a; padding: 6px 10px 14px; border-bottom: 1px solid #f0f0ed; margin-bottom: 10px; }
+  .sb-brand span { display: block; font-size: 11px; color: #888780; font-weight: 400; margin-top: 2px; }
+  .sb-group { font-size: 11px; color: #b0aea5; padding: 12px 10px 4px; font-weight: 600; letter-spacing: 1px; }
+  .sb-item { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 8px; font-size: 13.5px; color: #55554f; margin-bottom: 2px; }
+  .sb-item:hover { background: #f5f6f8; color: #185FA5; }
+  .sb-item.active { background: #E6F1FB; color: #0C447C; font-weight: 600; }
+  .sb-item.disabled { color: #b5b3aa; cursor: default; }
+  .sb-item.disabled:hover { background: none; color: #b5b3aa; }
+  .sb-badge { margin-left: auto; font-size: 10px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 6px; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .toc a { background: #fff; border: 1px solid #e8e8e5; border-radius: 16px; padding: 6px 14px; font-size: 12.5px; color: #55554f; }
+  .toc a:hover { border-color: #185FA5; color: #185FA5; }
+  .toc .sb-badge { margin-left: 6px; }
+  @media (min-width: 1060px) {
+    .sidebar { transform: none; }
+    body { margin-left: max(240px, calc((100vw - 800px) / 2 + 110px)); }
+  }
+  @media (max-width: 1059.9px) { button.sb-btn { display: block; } }
+</style>
+</head>
+<body>
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item active" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><span class="sb-item disabled"><span>📝</span><span>刷题题库</span><span class="sb-badge wip">筹备中</span></span></nav>
+<div class="header"><div class="crumb"><a href="index.html">← 学习总览</a></div><span class="label">考前速记</span><h1>⚖️ 易混概念对比速记</h1><div class="subtitle">相近、易混淆的考点成对放一起，红色提示标出&quot;别混&quot;处。考前把&quot;提示&quot;行过一遍即可。</div></div><div class="toc"><a href="#g1">经济学基础</a><a href="#g2">财政与货币</a><a href="#g3">统计</a><a href="#g4">会计</a><a href="#g5">法律</a><a href="#g6">人力资源</a></div><h2 id="g1">⚖️ 经济学基础</h2>
+<div class="section"><h3>需求量变动 vs 需求变动</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>需求量变动</th>
+<th>需求变动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原因</td>
+<td>商品<strong>自身价格</strong>变化</td>
+<td>收入、偏好、预期、相关品价格等<strong>非价格因素</strong></td>
+</tr>
+<tr>
+<td>图形</td>
+<td>沿同一条曲线<strong>点移动</strong></td>
+<td>整条曲线<strong>平移</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>口诀"自己价格走点，别的因素走线"。题目问"价格下降导致需求量增加"是点移动，不是需求曲线移动。</p></div></div>
+<div class="section"><h3>最高限价 vs 保护价格</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>最高限价</th>
+<th>保护价格（最低限价）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与均衡价格比</td>
+<td><strong>低于</strong></td>
+<td><strong>高于</strong></td>
+</tr>
+<tr>
+<td>后果</td>
+<td><strong>短缺</strong>（排队、黑市）</td>
+<td><strong>过剩</strong>（政府收购）</td>
+</tr>
+<tr>
+<td>典型</td>
+<td>水电气、药品限价</td>
+<td>最低工资、农产品保护价</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>"限高必低，保低必高；限价短缺，保护过剩"。最低工资属于保护价格，不是最高限价。</p></div></div>
+<div class="section"><h3>替代品 vs 互补品</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>替代品</th>
+<th>互补品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关系</td>
+<td>可以互相代替（地铁 vs 公交）</td>
+<td>必须一起消费（汽车与汽油）</td>
+</tr>
+<tr>
+<td>对方涨价，本品需求</td>
+<td><strong>增加</strong>（同向）</td>
+<td><strong>减少</strong>（反向）</td>
+</tr>
+<tr>
+<td>交叉弹性系数</td>
+<td><strong>正</strong></td>
+<td><strong>负</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>"替同补反"（需求方向）、"正替负补"（弹性符号）——两句话同一逻辑：同向即正、反向即负。</p></div></div>
+<div class="section"><h3>正外部性 vs 负外部性</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>正外部性</th>
+<th>负外部性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>例子</td>
+<td>种花、接种疫苗</td>
+<td>排污、噪音</td>
+</tr>
+<tr>
+<td>市场产出 vs 社会最优</td>
+<td><strong>低于</strong>（生产太少）</td>
+<td><strong>高于</strong>（生产太多）</td>
+</tr>
+<tr>
+<td>政府手段</td>
+<td>财政<strong>补贴</strong></td>
+<td><strong>征税</strong>（庇古税）</td>
+</tr>
+</tbody>
+</table>
+<h3>正常利润 vs 经济利润</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>正常利润</th>
+<th>经济利润</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本质</td>
+<td>企业家才能的报酬</td>
+<td>总收益 − 显成本 − 隐成本</td>
+</tr>
+<tr>
+<td>归属</td>
+<td>计入<strong>隐成本</strong></td>
+<td>超过正常利润的部分才是</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>算经济利润时正常利润已被扣掉——"经济利润为零"≠亏本，只是赚了正常利润。</p></div></div>
+<div class="section"><h3>完全竞争 vs 完全垄断（需求曲线）</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>完全竞争</th>
+<th>完全垄断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>厂商需求线</td>
+<td><strong>水平线</strong>（价格接受者）</td>
+<td>向右下方倾斜（价格制定者）</td>
+</tr>
+<tr>
+<td>关系式</td>
+<td>AR = MR = P</td>
+<td><strong>MR &lt; AR</strong>（MR 在 AR 下方）</td>
+</tr>
+<tr>
+<td>长期利润</td>
+<td>零</td>
+<td>可为正（垄断利润）</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="g2">⚖️ 财政与货币</h2>
+<div class="section"><h3>购买性支出 vs 转移性支出</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>购买性支出</th>
+<th>转移性支出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内容</td>
+<td>政府购买商品劳务（行政、国防、基建）</td>
+<td>补贴、养老金、救济等<strong>无偿单方</strong>转移</td>
+</tr>
+<tr>
+<td>对分配的影响</td>
+<td>直接影响<strong>资源配置</strong></td>
+<td>直接影响<strong>收入分配</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>中央税 / 地方税 / 共享税</h3>
+<table>
+<thead>
+<tr>
+<th>中央税</th>
+<th>地方税</th>
+<th>共享税</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>消费税、关税</td>
+<td>房产税、契税、城镇土地使用税</td>
+<td><strong>增值税、所得税</strong>（企业所得税、个人所得税）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>消费税、关税归中央；增值税、所得税是共享——见"大税种"多为共享。具体分成比例以 2026 新教材为准。</p></div></div>
+<div class="section"><h3>货币市场 vs 资本市场</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>货币市场</th>
+<th>资本市场</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期限</td>
+<td><strong>1 年以内</strong></td>
+<td><strong>1 年以上</strong></td>
+</tr>
+<tr>
+<td>工具</td>
+<td>同业拆借、票据、短期国债、回购</td>
+<td>股票、中长期债券</td>
+</tr>
+</tbody>
+</table>
+<h3>M0 / M1 / M2</h3>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>构成</th>
+<th>口径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M0</td>
+<td>流通中现金</td>
+<td>最窄</td>
+</tr>
+<tr>
+<td>M1</td>
+<td>M0 + 单位活期存款</td>
+<td>"随时能花的钱"</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>M1 + 储蓄存款 + 单位定期存款等</td>
+<td>最宽（准货币并入）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>M1 = 现金 + 活期；M2 = M1 + 定期与储蓄。题问"准货币"= M2 − M1。</p></div></div>
+<h2 id="g3">⚖️ 统计</h2>
+<div class="section"><h3>拉氏指数 vs 帕氏指数</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>拉氏指数</th>
+<th>帕氏指数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>加权期</td>
+<td><strong>基期</strong></td>
+<td><strong>报告期</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>"拉基帕报"——拉氏用基期加权，帕氏用报告期加权。</p></div></div>
+<div class="section"><h3>分层抽样 vs 整群抽样</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>分层抽样</th>
+<th>整群抽样</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>组内</td>
+<td>层内<strong>同质</strong></td>
+<td>群内<strong>异质</strong></td>
+</tr>
+<tr>
+<td>组间</td>
+<td>层间<strong>异质</strong></td>
+<td>群间<strong>同质</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>"分层好于整群"（同精度下）。分层是"层内像、层间不像"；整群相反。</p></div></div>
+<div class="section"><h3>抽样误差 vs 非抽样误差</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>抽样误差</th>
+<th>非抽样误差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>来源</td>
+<td>抽样的随机性</td>
+<td>抽样框误差、无回答、调查员误差等</td>
+</tr>
+<tr>
+<td>能否靠加大样本消除</td>
+<td><strong>能减小</strong></td>
+<td><strong>不能</strong>（加大样本照样在）</td>
+</tr>
+</tbody>
+</table>
+<h3>时期数列 vs 时点数列</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>时期数列</th>
+<th>时点数列</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>反映</td>
+<td>一段<strong>时期内</strong>累计（GDP、销售额）</td>
+<td>某一<strong>时点</strong>上的存量（年末人口、库存）</td>
+</tr>
+<tr>
+<td>可加性</td>
+<td>各期<strong>可以相加</strong></td>
+<td>相加<strong>无意义</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="g4">⚖️ 会计</h2>
+<div class="section"><h3>权责发生制 vs 收付实现制</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>权责发生制</th>
+<th>收付实现制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>确认标准</td>
+<td>按<strong>权利义务发生</strong>（企业会计用）</td>
+<td>按<strong>款项收付</strong>（行政事业单位预算会计用）</td>
+</tr>
+<tr>
+<td>例子</td>
+<td>赊销也确认收入</td>
+<td>收到钱才算收入</td>
+</tr>
+</tbody>
+</table>
+<h3>会计主体 vs 法律主体</h3></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>法人必然是会计主体；会计主体<strong>不一定是法人</strong>（如企业集团、车间、合伙企业都可单独作为会计主体）。</p></div></div>
+<div class="section"><h3>三大报表对比</h3>
+<table>
+<thead>
+<tr>
+<th>报表</th>
+<th>反映</th>
+<th>时态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>资产负债表</td>
+<td>财务状况</td>
+<td><strong>时点数</strong>（存量）</td>
+</tr>
+<tr>
+<td>利润表</td>
+<td>经营成果</td>
+<td><strong>时期数</strong>（流量）</td>
+</tr>
+<tr>
+<td>现金流量表</td>
+<td>现金收支：经营 / 投资 / 筹资三类活动</td>
+<td>时期数</td>
+</tr>
+</tbody>
+</table>
+<h3>流动比率 vs 速动比率</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>流动比率</th>
+<th>速动比率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公式</td>
+<td>流动资产 ÷ 流动负债</td>
+<td>（流动资产 − 存货）÷ 流动负债</td>
+</tr>
+<tr>
+<td>经验值</td>
+<td><strong>≈ 2</strong></td>
+<td><strong>≈ 1</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>速动剔除了变现最慢的存货，标准更低（1 &lt; 2）。</p></div></div>
+<h2 id="g5">⚖️ 法律</h2>
+<div class="section"><h3>用益物权 vs 担保物权</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>用益物权</th>
+<th>担保物权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目的</td>
+<td><strong>使用、收益</strong></td>
+<td>担保债务清偿</td>
+</tr>
+<tr>
+<td>种类</td>
+<td>建设用地使用权、土地承包经营权、宅基地使用权、居住权、地役权</td>
+<td><strong>抵押权、质权、留置权</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>抵押 vs 质押 vs 留置</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>抵押</th>
+<th>质押</th>
+<th>留置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标的</td>
+<td>不动产、动产均可</td>
+<td>动产、权利</td>
+<td>仅限<strong>动产</strong></td>
+</tr>
+<tr>
+<td>是否转移占有</td>
+<td><strong>不转移</strong></td>
+<td><strong>转移</strong></td>
+<td>债权人已合法占有</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>口诀"抵不转、质要转"。留置是法定担保（如修车费未付扣车），抵押质押是约定担保。</p></div></div>
+<div class="section"><h3>无效合同 vs 可撤销合同</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>无效合同</th>
+<th>可撤销合同</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>情形</td>
+<td>违法、恶意串通损害他人、违背公序良俗等</td>
+<td>重大误解、欺诈、胁迫、显失公平</td>
+</tr>
+<tr>
+<td>效力</td>
+<td>自始无效</td>
+<td>撤销前有效，撤销后自始无效；撤销权有期限</td>
+</tr>
+</tbody>
+</table>
+<h3>要约 vs 要约邀请</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>要约</th>
+<th>要约邀请</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内容</td>
+<td>内容<strong>具体确定</strong>，经承诺即成立合同</td>
+<td>希望他人向自己发出要约</td>
+</tr>
+<tr>
+<td>例子</td>
+<td>投标（要约）、中标通知书（承诺）</td>
+<td>招标公告、拍卖公告、招股说明书、商业广告（一般）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>记忆：招标是邀请，<strong>投标是要约</strong>，中标是承诺。</p></div></div>
+<h2 id="g6">⚖️ 人力资源</h2>
+<div class="section"><h3>信度 vs 效度</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>信度</th>
+<th>效度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>问的是</td>
+<td>测得<strong>稳不稳</strong>（一致性、可重复）</td>
+<td>测得<strong>准不准</strong>（测到想测的东西）</td>
+</tr>
+<tr>
+<td>关系</td>
+<td>信度是效度的<strong>必要非充分</strong>条件</td>
+<td>效度高则信度必然高</td>
+</tr>
+</tbody>
+</table>
+<h3>四种行为塑造方式（斯金纳）</h3>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>做法</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正强化</td>
+<td>给予愉快结果</td>
+<td>达标发奖金</td>
+</tr>
+<tr>
+<td>负强化</td>
+<td><strong>撤销</strong>不愉快结果</td>
+<td>连续达标免于检查</td>
+</tr>
+<tr>
+<td>惩罚</td>
+<td>给予不愉快结果</td>
+<td>违规罚款</td>
+</tr>
+<tr>
+<td>消退</td>
+<td>不再强化，行为自然减少</td>
+<td>对邀功不再回应</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>"负强化"不是惩罚——负强化是<strong>撤走坏东西鼓励好行为</strong>；惩罚是<strong>加坏东西制止坏行为</strong>。高频陷阱。</p></div></div>
+<div class="section"><h3>三大需要理论的对应关系</h3>
+<table>
+<thead>
+<tr>
+<th>马斯洛</th>
+<th>奥尔德弗（ERG）</th>
+<th>赫茨伯格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>生理、安全</td>
+<td>生存</td>
+<td>保健因素相关</td>
+</tr>
+<tr>
+<td>归属（社交）</td>
+<td>关系</td>
+<td>—</td>
+</tr>
+<tr>
+<td>尊重、自我实现</td>
+<td>成长</td>
+<td>激励因素相关</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>ERG 三需要可<strong>同时</strong>起作用，且有"受挫—回归"；马斯洛是<strong>由低到高逐级</strong>上升——"是否逐级"是两者最大的区分点。</p></div></div>
+<div class="section"><h3>内部招聘 vs 外部招聘</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>内部招聘</th>
+<th>外部招聘</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优点</td>
+<td>激励员工、成本低、适应快</td>
+<td>带来<strong>新观念新方法</strong>、选择面广</td>
+</tr>
+<tr>
+<td>缺点</td>
+<td><strong>近亲繁殖</strong>、选项少</td>
+<td>融入慢、成本高、打击内部士气</td>
+</tr>
+</tbody>
+</table>
+<h3>经济补偿 N / N+1 / 2N</h3>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>协商解除、无过失性辞退、裁员等</td>
+<td><strong>N</strong>（每满一年支付一个月工资）</td>
+</tr>
+<tr>
+<td>上述情形但<strong>未提前 30 日书面通知</strong></td>
+<td><strong>N + 1</strong>（代通知金）</td>
+</tr>
+<tr>
+<td><strong>违法</strong>解除或终止劳动合同</td>
+<td><strong>2N</strong>（赔偿金）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>N+1 只多在"没提前 30 日通知"；2N 针对的是"违法解除"。三者适用情形完全不同，案例题先判断解除是否合法。</p></div></div>
+<div class="section"><h3>仲裁 vs 诉讼（劳动争议）</h3></div>
+<div class="section"><div class="tip"><div class="tip-title">💡 别混</div><p>劳动争议实行"<strong>仲裁前置</strong>"：不经仲裁<strong>不能</strong>直接起诉。程序记"协商 → 调解 → 仲裁 → 诉讼"；仲裁时效 <strong>1 年</strong>。</p></div></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    if(typeof b64 !== 'string' || !b64)
+      throw new Error('云端返回内容缺失（content=' + (b64 === null ? 'null' : typeof b64) + '）——请点"立即同步"重试，若反复出现请把此提示反馈');
+    var clean = String(b64).replace(/\s/g,'');
+    var bin;
+    try { bin = atob(clean); }
+    catch(e){ throw new Error('云端返回了无法解码的内容（前 20 字符：' + clean.slice(0,20) + '）——请点"立即同步"重试，若反复出现请反馈'); }
+    var bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0, failCount = 0, pausedUntil = 0, conflictCount = 0;
+  // 换绑/重绑后由配置界面调用：重置内部锁与失败状态，避免历史状态延续
+  window.resetSyncState = function(){ syncing=false; failCount=0; pausedUntil=0; lastPullAt=0; conflictCount=0; };
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  // 双后端分派：cfg.backend = 'github'（默认）| 'gitee'
+  function backendOf(cfg){ return cfg.backend === 'gitee' ? 'gitee' : 'github'; }
+  function fileUrl(cfg, method){
+    if(backendOf(cfg) === 'gitee')
+      return method === 'PUT'
+        ? 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json'   // PUT 时令牌放请求体，不与 URL 重复
+        : 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json?access_token='+encodeURIComponent(cfg.token);
+    return 'https://api.github.com/repos/'+cfg.repo+'/contents/progress.json';
+  }
+  function fetchOpts(cfg, method, bodyObj, useJson){
+    var o = {method: method}, signal = null;
+    if(typeof AbortController !== 'undefined'){
+      var ac = new AbortController(); setTimeout(function(){ ac.abort(); }, 9000);
+      signal = ac.signal; o.signal = signal;
+    }
+    if(backendOf(cfg) === 'gitee'){
+      o.headers = {'Accept':'application/json'};
+      if(method === 'PUT'){
+        if(useJson){
+          // Gitee JSON 姿势（社区实践中成功率高）：token/content/message 均入 JSON 体
+          var j = {access_token: cfg.token, content: bodyObj.content, message: bodyObj.message || 'progress sync'};
+          if(bodyObj.sha) j.sha = bodyObj.sha;
+          o.headers['Content-Type'] = 'application/json;charset=UTF-8';
+          o.body = JSON.stringify(j);
+        } else {
+          var params = new URLSearchParams();
+          params.set('access_token', cfg.token);
+          params.set('content', bodyObj.content);
+          params.set('message', bodyObj.message || 'progress sync');
+          if(bodyObj.sha) params.set('sha', bodyObj.sha);
+          o.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+          o.body = params.toString();
+        }
+      }
+    } else {
+      o.headers = apiHeaders(cfg);
+      if(method === 'PUT') o.body = JSON.stringify(bodyObj);
+    }
+    return o;
+  }
+  function netErrMsg(e, cfg){
+    var m = e && e.message ? e.message : String(e);
+    if(m.indexOf('abort') >= 0 || m.indexOf('Abort') >= 0)
+      return '网络超时（9 秒无响应）' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议在上方切换为 Gitee 后端' : '，稍后重试');
+    if(m.indexOf('fetch') >= 0 || m.indexOf('NetworkError') >= 0 || m.indexOf('network') >= 0)
+      return '网络无法连通' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议切换为 Gitee 后端' : '，请检查网络');
+    return m;
+  }
+  function noteFail(cfg, prefix){
+    failCount++;
+    if(failCount >= 3){
+      pausedUntil = Date.now() + 5*60*1000; failCount = 0;
+      setSyncStatus(prefix + '；自动同步已暂停 5 分钟，可点"立即同步"重试', 'err');
+    } else {
+      setSyncStatus(prefix, 'err');
+    }
+  }
+  window.ghPush = function(force, useJson, isFallback){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    if(Date.now() < (pausedUntil||0)) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    var tryJson = useJson !== false;  // 默认先 JSON（社区实践成功率高的姿势），失败自动换 form 再试一次
+    fetch(fileUrl(cfg, 'PUT'), fetchOpts(cfg, 'PUT', body, tryJson))
+    .then(function(r){ return r.text().then(function(t){ var j = null; try{ j = JSON.parse(t); }catch(e){} return {status:r.status, j:j, raw:t}; }); })
+    .then(function(res){
+      syncing = false;
+      var errMsg = (res.j && (res.j.message || (res.j.messages && res.j.messages.join('; ')))) || (res.raw ? res.raw.slice(0, 100) : '') || '';
+      if(res.status===200 || res.status===201){
+        failCount = 0; pausedUntil = 0; conflictCount = 0;
+        cfg.sha = (res.j.content && res.j.content.sha) || (res.j.commit && res.j.commit.sha) || res.j.sha || cfg.sha;
+        cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(backendOf(cfg)==='gitee' && res.status===400 && !isFallback){
+        // 任何 400（含 sha 类错误）→ 先换另一种提交格式重试；两种格式都败才进入冲突/报错分支
+        ghPush(true, !tryJson, true);
+      } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400 && errMsg.indexOf('sha')>=0)){
+        conflictCount++;
+        if(conflictCount > 3){ setSyncStatus('✗ 上传反复冲突已停止（最后错误：'+errMsg+'）——请反馈此完整提示', 'err'); return; }
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else if(res.status===401 || res.status===403){
+        noteFail(cfg, backendOf(cfg)==='gitee'
+          ? '✗ 上传被拒绝（'+res.status+'）：Gitee 私人令牌可能未勾选 projects 权限或已过期——请重新生成一枚'
+          : '✗ 上传被拒绝（'+res.status+'）：token 无效或权限不足，请重新配置');
+      } else {
+        noteFail(cfg, '✗ 上传失败：HTTP '+res.status+' '+errMsg);
+      }
+    }).catch(function(e){ syncing=false; noteFail(cfg, '✗ 上传失败：'+netErrMsg(e, cfg)); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(Date.now() < (pausedUntil||0)){ setSyncStatus('⏸ 自动同步已暂停（此前连续失败），点"立即同步"重试'); return; }
+    if(syncing) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    syncing = true; setSyncStatus('☁ 正在检查云端进度…');
+    fetch(fileUrl(cfg, 'GET'), fetchOpts(cfg, 'GET'))
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); syncing=false; ghPush(); return null; }
+      if(r.status===304){ syncing=false; return null; }
+      if(r.status===401) throw new Error('令牌无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或令牌权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      // Gitee 对不存在的文件返回 200+[]（GitHub 是 404）——都视为"云端还没有进度文件"，自动上传本地
+      var missing = !res.j || Array.isArray(res.j) || typeof res.j.content !== 'string' || !res.j.content;
+      if(missing){
+        syncing = false; cfg.sha = null; saveSyncCfg(cfg);
+        if(backendOf(cfg) === 'gitee'){
+          // 空仓库（无任何分支/提交）无法通过 API 建文件——先查分支，空则给初始化指引
+          var bqs = new URLSearchParams({access_token: cfg.token}).toString();
+          fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/branches?'+bqs, {headers: {'Accept':'application/json'}})
+          .then(function(r){ return r.json(); })
+          .then(function(brs){
+            if(Array.isArray(brs) && brs.length === 0)
+              setSyncStatus('✗ 仓库是空的：请到 Gitee 打开该仓库 → 文件 → 新建 → 随便建一个 README.md 提交（初始化仓库），然后回来点"立即同步"', 'err');
+            else ghPush();
+          }).catch(function(){ ghPush(); });
+        } else ghPush();
+        return;
+      }
+      var remote = JSON.parse(b64decode(res.j.content));
+      if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha || null; saveSyncCfg(cfg);
+      var afterSha = function(diag){
+        saveSyncCfg(cfg);
+        if(!cfg.sha && backendOf(cfg)==='gitee'){
+          // 有文件却拿不到版本号——推送必然报 sha missing，不推，直接给诊断摘要
+          syncing = false;
+          setSyncStatus('✗ 无法获取云端文件版本号[' + (diag || 'GET响应无sha且文件树补取失败') + ']——点"诊断"按钮并把结果反馈', 'err');
+          return;
+        }
+        if(localChanged){
+          saveProgress(merged);
+          if(typeof renderProgress === 'function') renderProgress();
+          if(typeof refreshBadge === 'function') refreshBadge();
+        }
+        if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }
+        else { syncing=false; failCount=0; pausedUntil=0; setSyncStatus('✓ 已与云端同步', 'ok'); }
+      };
+      if(!cfg.sha && backendOf(cfg)==='gitee'){
+        // Gitee 读文件响应可能不带 sha（API 创建的文件尤其如此）→ 更新必带 sha，否则报"sha is missing"。
+        // 通过 仓库信息(default_branch) → 文件树(blob sha) 两步补取。
+        var tq = new URLSearchParams({access_token: cfg.token}).toString();
+        fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'?'+tq, {headers: {'Accept':'application/json'}})
+        .then(function(r){ return r.json(); })
+        .then(function(ri){
+          var br = (ri && ri.default_branch) || 'master';
+          return fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/git/trees/'+br+'?'+tq, {headers: {'Accept':'application/json'}}).then(function(r2){ return r2.json(); })
+            .then(function(t){
+              var hit = null;
+              if(t && t.tree) for(var i=0;i<t.tree.length;i++) if(t.tree[i].path === 'progress.json'){ hit = t.tree[i].sha; break; }
+              return {branch: br, hit: hit, treeLen: (t && t.tree) ? t.tree.length : 0, paths: (t && t.tree) ? t.tree.slice(0,8).map(function(x){return x.path;}).join(',') : ''};
+            });
+        })
+        .then(function(d){
+          if(d.hit) cfg.sha = d.hit;
+          afterSha('分支=' + d.branch + ';树内项数=' + d.treeLen + ';找到progress.json=' + (d.hit ? '是' : '否') + ';树内前8项=' + d.paths);
+        })
+        .catch(function(e){ afterSha('补取异常:' + (e && e.message || e)); });  // 补取失败不推
+      } else afterSha('GET响应自带sha');
+    }).catch(function(e){
+      syncing=false;
+      var m = e && e.message ? e.message : '';
+      if(m.indexOf('令牌') >= 0 || m.indexOf('限速') >= 0 || m.indexOf('格式异常') >= 0) noteFail(cfg, '✗ 拉取失败：'+m);
+      else noteFail(cfg, '✗ 拉取失败：'+netErrMsg(e, cfg));
+    });
+  };
+  var syncTimer = null;
+  var syncTimer = null, lastSavedStr = null;
+  // 一键诊断：三个只读请求（读文件/仓库信息/文件树），输出摘要并尝试复制到剪贴板
+  window.runSyncDiag = function(){
+    var cfg = loadSyncCfg();
+    if(!cfg.repo || !cfg.token){ setSyncStatus('请先配置并连接云同步', 'err'); return; }
+    setSyncStatus('正在诊断…');
+    var tq = new URLSearchParams({access_token: cfg.token}).toString();
+    var base = backendOf(cfg)==='gitee' ? 'https://gitee.com/api/v5' : 'https://api.github.com';
+    var out = ['后端=' + backendOf(cfg), '仓库=' + cfg.repo];
+    var req = function(url, hdrs){
+      return fetch(url, {headers: hdrs || {'Accept':'application/json'}})
+        .then(function(r){ return r.text().then(function(t){ return {s: r.status, t: t}; }); });
+    };
+    var hdrs = backendOf(cfg)==='gitee' ? {'Accept':'application/json'} : {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json'};
+    Promise.all([
+      req(base + '/repos/' + cfg.repo + '/contents/progress.json' + (backendOf(cfg)==='gitee' ? '?' + tq : ''), hdrs),
+      backendOf(cfg)==='gitee'
+        ? req(base + '/repos/' + cfg.repo + '?' + tq).then(function(ri){
+            var br = 'master'; try { br = JSON.parse(ri.t).default_branch || 'master'; } catch(e){}
+            return req(base + '/repos/' + cfg.repo + '/git/trees/' + br + '?' + tq).then(function(tr){
+              return {branch: br, tr: tr};
+            });
+          })
+        : Promise.resolve(null)
+    ]).then(function(r){
+      var c = r[0], tree = r[1];
+      out.push('读文件HTTP=' + c.s, '读文件响应前160字符=' + c.t.slice(0, 160));
+      if(tree){
+        out.push('默认分支=' + tree.branch, '文件树HTTP=' + tree.tr.s);
+        var items = []; try { items = JSON.parse(tree.tr.t).tree || []; } catch(e){}
+        var pj = items.filter(function(x){ return x.path === 'progress.json'; })[0];
+        out.push('树内文件数=' + items.length, '树内progress.json=' + (pj ? ('找到,sha=' + pj.sha) : '未找到'), '树内全部路径=' + items.map(function(x){return x.path;}).join('|'));
+      }
+      var msg = out.join('\n');
+      setSyncStatus('诊断完成，结果已复制（粘贴发给老师）', 'ok');
+      if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(msg).catch(function(){});
+      window.__syncDiag = msg;
+      console.log(msg);
+    }).catch(function(e){
+      setSyncStatus('诊断失败：' + (e && e.message || e), 'err');
+    });
+  };
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var btn=document.querySelector('.sb-btn');
+  if(btn)btn.addEventListener('click',function(){document.body.classList.toggle('sb-open');});
+  var mask=document.querySelector('.sb-mask');
+  if(mask)mask.addEventListener('click',function(){document.body.classList.remove('sb-open');});
+  document.querySelectorAll('.sidebar a').forEach(function(a){
+    a.addEventListener('click',function(){document.body.classList.remove('sb-open');});
+  });
+})();
+</script>
+</body>
+</html>

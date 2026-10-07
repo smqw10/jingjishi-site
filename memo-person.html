@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人物与理论 | 中级经济师速记</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .mn-topic { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: 1px; font-weight: 700; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .fig-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 18px 16px 14px; margin: 12px 0; }
+  .fig-title { font-size: 14.5px; font-weight: 600; color: #1a1a1a; text-align: center; }
+  .fig-sub { font-size: 12px; color: #888780; text-align: center; margin-top: 3px; margin-bottom: 4px; }
+  .fig-card svg { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+  .fig-note { font-size: 13px; line-height: 1.7; border-radius: 8px; padding: 9px 12px; margin-top: 8px; }
+  .fig-note.ok { background: #EAF6EC; color: #2C5E3C; }
+  .fig-note.blue { background: #E6F1FB; color: #0C447C; }
+  .fig-note.red { background: #FBE9E7; color: #A12622; }
+  .fig-note.green { background: #EAF6EC; color: #2C5E3C; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 220px; background: #fff; border-right: 1px solid #e8e8e5; padding: 16px 12px 24px; overflow-y: auto; z-index: 50; transform: translateX(-105%); transition: transform .2s ease; }
+  body.sb-open .sidebar { transform: none; }
+  .sb-mask { position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 40; display: none; }
+  body.sb-open .sb-mask { display: block; }
+  button.sb-btn { display: none; position: fixed; top: 12px; left: 12px; z-index: 60; width: 38px; height: 38px; border-radius: 50%; border: 1px solid #e8e8e5; background: #fff; font-size: 17px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  .sb-brand { font-size: 15px; font-weight: 700; color: #1a1a1a; padding: 6px 10px 14px; border-bottom: 1px solid #f0f0ed; margin-bottom: 10px; }
+  .sb-brand span { display: block; font-size: 11px; color: #888780; font-weight: 400; margin-top: 2px; }
+  .sb-group { font-size: 11px; color: #b0aea5; padding: 12px 10px 4px; font-weight: 600; letter-spacing: 1px; }
+  .sb-item { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 8px; font-size: 13.5px; color: #55554f; margin-bottom: 2px; }
+  .sb-item:hover { background: #f5f6f8; color: #185FA5; }
+  .sb-item.active { background: #E6F1FB; color: #0C447C; font-weight: 600; }
+  .sb-item.disabled { color: #b5b3aa; cursor: default; }
+  .sb-item.disabled:hover { background: none; color: #b5b3aa; }
+  .sb-badge { margin-left: auto; font-size: 10px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 6px; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .toc a { background: #fff; border: 1px solid #e8e8e5; border-radius: 16px; padding: 6px 14px; font-size: 12.5px; color: #55554f; }
+  .toc a:hover { border-color: #185FA5; color: #185FA5; }
+  .toc .sb-badge { margin-left: 6px; }
+  @media (min-width: 1060px) {
+    .sidebar { transform: none; }
+    body { margin-left: max(240px, calc((100vw - 800px) / 2 + 110px)); }
+  }
+  @media (max-width: 1059.9px) { button.sb-btn { display: block; } }
+
+  .section table td:nth-child(3), .section table th:nth-child(3) { white-space: nowrap; }</style>
+</head>
+<body>
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item active" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><span class="sb-item disabled"><span>📝</span><span>刷题题库</span><span class="sb-badge wip">筹备中</span></span></nav>
+<div class="header"><div class="crumb"><a href="index.html">← 学习总览</a></div><span class="label">考前速记</span><h1>👤 人物与理论速记</h1><div class="subtitle">按理论大类归类的&quot;知识点 → 人物 → 国家&quot;总表，配对题、单选题看人名/国家即可秒选。只收 2026 教材明确出现的人物；每条理论一句话说完，需要展开时回精讲对应章。</div></div><div class="toc"><a href="#g1">经济基础 · 国际贸易理论（第10章）</a><a href="#g2">经济基础 · 微观经济理论（第1–6章）</a><a href="#g3">经济基础 · 宏观经济理论（第6–9章）</a><a href="#g4">经济基础 · 财政支出增长理论（第12章）</a><a href="#g5">经济基础 · 货币数量论与经济周期（第9、15章）</a><a href="#g6">经济基础 · 统计指数（第27章）</a><a href="#g7">人力资源 · 需要与激励理论（第1章）</a><a href="#g8">人力资源 · 领导与组织理论（第2–4章）</a><a href="#g9">人力资源 · 绩效与培训理论（第7–10章）</a></div><h2 id="g1">👤 经济基础 · 国际贸易理论（第10章）</h2>
+<div class="section"><table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>人物</th>
+<th>国家</th>
+<th>必背要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>绝对优势理论</td>
+<td>亚当·斯密</td>
+<td>英国</td>
+<td>各国生产自己<strong>绝对成本低</strong>的产品再交换；"看不见的手"主张自由放任</td>
+</tr>
+<tr>
+<td>比较优势理论</td>
+<td>大卫·李嘉图</td>
+<td>英国</td>
+<td><strong>不看绝对看相对</strong>，"两害相权取其轻"；完全劣势的国家也能参与贸易</td>
+</tr>
+<tr>
+<td>要素禀赋理论</td>
+<td>赫克歇尔、俄林</td>
+<td>瑞典</td>
+<td>"家底厚卖家底"：密集使用本国<strong>充裕</strong>要素的产品出口，稀缺要素产品进口</td>
+</tr>
+<tr>
+<td>规模经济贸易理论</td>
+<td>克鲁格曼</td>
+<td>美国</td>
+<td>当代贸易理论：解释<strong>发达国家之间、同类工业品的双向贸易</strong></td>
+</tr>
+<tr>
+<td>保护贸易理论（保护幼稚工业论）</td>
+<td>李斯特</td>
+<td>德国</td>
+<td>三核心观点：<strong>经济发展阶段论、生产力论、国家干预论</strong>；经济落后国家保护<strong>幼稚工业</strong>的理论依据</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="g2">👤 经济基础 · 微观经济理论（第1–6章）</h2>
+<div class="section"><table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>人物</th>
+<th>国家</th>
+<th>必背要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>企业性质理论</td>
+<td>科斯</td>
+<td>美国</td>
+<td>企业是市场（价格机制）的<strong>替代物</strong>，因<strong>节约交易费用</strong>而产生；根本原因是交易成本的节约</td>
+</tr>
+<tr>
+<td>外部性理论（庇古税）</td>
+<td>庇古</td>
+<td>英国</td>
+<td>负外部性→<strong>征税</strong>（庇古税），正外部性→<strong>财政补贴</strong>，把外部影响内部化</td>
+</tr>
+<tr>
+<td>帕累托最优 / 改进</td>
+<td>帕累托</td>
+<td>意大利</td>
+<td>最优：不使任何人境况变差就无法再改善；改进：有人变好且<strong>无人变差</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="g3">👤 经济基础 · 宏观经济理论（第6–9章）</h2>
+<div class="section"><table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>人物</th>
+<th>国家</th>
+<th>必背要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>消费理论（边际消费倾向递减）</td>
+<td>凯恩斯</td>
+<td>英国</td>
+<td>边际消费倾向<strong>递减</strong>；主张国家干预</td>
+</tr>
+<tr>
+<td>流动性偏好理论（货币需求三动机）</td>
+<td>凯恩斯</td>
+<td>英国</td>
+<td>交易、预防、投机三大动机</td>
+</tr>
+<tr>
+<td>恒久收入假说</td>
+<td>弗里德曼</td>
+<td>美国</td>
+<td>消费取决于<strong>恒久收入</strong>（长期平均收入），消费函数稳定</td>
+</tr>
+<tr>
+<td>增长因素分解（索洛余值）</td>
+<td>索洛</td>
+<td>美国</td>
+<td>全要素生产率 = 经济增长率 − 劳动、资本两大要素的贡献</td>
+</tr>
+<tr>
+<td>奥肯定律</td>
+<td>奥肯</td>
+<td>美国</td>
+<td>GDP 缺口与失业率<strong>负相关</strong>：失业率每高 1 个百分点，GDP 缺口扩大约 2 个百分点</td>
+</tr>
+<tr>
+<td>菲利普斯曲线</td>
+<td>菲利普斯</td>
+<td>英国</td>
+<td>失业率与通货膨胀率之间存在<strong>替代关系</strong>（此消彼长）</td>
+</tr>
+<tr>
+<td>菲利普斯曲线改进</td>
+<td>萨缪尔森、索洛</td>
+<td>美国</td>
+<td>用<strong>通货膨胀率</strong>替换工资增长率，得到通胀—失业替代关系</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="g4">👤 经济基础 · 财政支出增长理论（第12章）</h2>
+<div class="section"><table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>人物</th>
+<th>国家</th>
+<th>必背要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>政府活动扩张法则</td>
+<td>瓦格纳</td>
+<td>德国</td>
+<td>财政支出随人均收入增长而<strong>不断扩张</strong></td>
+</tr>
+<tr>
+<td>梯度渐进增长理论</td>
+<td>皮考克、魏斯曼</td>
+<td>英国</td>
+<td>财政支出"台阶式"跃升：<strong>外在因素</strong>（战争、危机）+ 内在因素（"检查效应"）</td>
+</tr>
+<tr>
+<td>经济发展阶段论</td>
+<td>马斯格雷夫</td>
+<td>美国</td>
+<td>财政支出结构随经济发展阶段变化：早期重基础设施，成熟期重民生福利</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="g5">👤 经济基础 · 货币数量论与经济周期（第9、15章）</h2>
+<div class="section"><table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>人物</th>
+<th>国家</th>
+<th>必背要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交易方程式（MV = PT）</td>
+<td>费雪</td>
+<td>美国</td>
+<td>货币数量论：物价水平与货币数量成正比</td>
+</tr>
+<tr>
+<td>现金余额数量说（M = kPY）</td>
+<td>剑桥学派（马歇尔、庇古）</td>
+<td>英国</td>
+<td>人们以货币形式持有财产的"现金余额"</td>
+</tr>
+<tr>
+<td>现代货币数量论</td>
+<td>弗里德曼</td>
+<td>美国</td>
+<td>货币需求函数<strong>稳定</strong>；单一流通速度</td>
+</tr>
+<tr>
+<td>恩格尔定律</td>
+<td>恩格尔</td>
+<td>德国</td>
+<td>随家庭收入增加，<strong>食品支出占比（恩格尔系数）下降</strong>；系数越低越富裕</td>
+</tr>
+<tr>
+<td>长周期（50–60 年）</td>
+<td>康德拉季耶夫</td>
+<td>苏联</td>
+<td>长波周期</td>
+</tr>
+<tr>
+<td>中周期（8–10 年）</td>
+<td>朱格拉</td>
+<td>法国</td>
+<td>以设备投资波动为标志</td>
+</tr>
+<tr>
+<td>短周期（3–5 年）</td>
+<td>基钦</td>
+<td>英国</td>
+<td>以库存变动为标志</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="g6">👤 经济基础 · 统计指数（第27章）</h2>
+<div class="section"><table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>人物</th>
+<th>国家</th>
+<th>必背要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>拉氏指数（基期加权）</td>
+<td>拉斯贝尔</td>
+<td>德国</td>
+<td>用<strong>基期</strong>变量值加权计算的质量/数量指数</td>
+</tr>
+<tr>
+<td>帕氏指数（报告期加权）</td>
+<td>帕舍</td>
+<td>德国</td>
+<td>用<strong>报告期</strong>变量值加权；"帕氏报告"</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="g7">👤 人力资源 · 需要与激励理论（第1章）</h2>
+<div class="section"><table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>人物</th>
+<th>国家</th>
+<th>必背要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>需要层次理论</td>
+<td>马斯洛</td>
+<td>美国</td>
+<td>五层次由低到高：生理 → 安全 → 归属 → 尊重 → 自我实现</td>
+</tr>
+<tr>
+<td>ERG 理论</td>
+<td>奥尔德弗</td>
+<td>美国</td>
+<td>生存、关系、成长三需要；可<strong>同时</strong>存在，有"<strong>受挫—回归</strong>"</td>
+</tr>
+<tr>
+<td>双因素理论</td>
+<td>赫茨伯格</td>
+<td>美国</td>
+<td>激励因素带来<strong>满意</strong>；保健因素只能<strong>消除不满</strong></td>
+</tr>
+<tr>
+<td>三重需要理论</td>
+<td>麦克利兰</td>
+<td>美国</td>
+<td>成就、权力、亲和；高成就需要者：担<strong>中度风险</strong>、要<strong>即时反馈</strong></td>
+</tr>
+<tr>
+<td>期望理论</td>
+<td>弗罗姆</td>
+<td>美国</td>
+<td>激励力 M = 效价 V × 期望值 E；两者缺一，激励为零</td>
+</tr>
+<tr>
+<td>公平理论</td>
+<td>亚当斯</td>
+<td>美国</td>
+<td>比较自己的<strong>产出/投入比</strong>与他人的比值；不公平时通过改变投入、产出、认知甚至离职来恢复</td>
+</tr>
+<tr>
+<td>强化理论</td>
+<td>斯金纳</td>
+<td>美国</td>
+<td>正强化、负强化、惩罚、消退四种方式塑造行为</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="g8">👤 人力资源 · 领导与组织理论（第2–4章）</h2>
+<div class="section"><table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>人物</th>
+<th>国家</th>
+<th>必背要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>官僚组织理论（科层制）</td>
+<td>韦伯</td>
+<td>德国</td>
+<td>理想的行政组织体系：层级、规则、非人格化、专业分工</td>
+</tr>
+<tr>
+<td>管理方格理论</td>
+<td>布莱克、默顿</td>
+<td>美国</td>
+<td>横轴关心任务、纵轴关心人；<strong>9.9 团队型</strong>最有效</td>
+</tr>
+<tr>
+<td>权变理论</td>
+<td>费德勒</td>
+<td>美国</td>
+<td>领导风格稳定，只能<strong>改变情境去匹配风格</strong>；LPC 量表测量</td>
+</tr>
+<tr>
+<td>路径—目标理论</td>
+<td>豪斯</td>
+<td>美国</td>
+<td>四种领导行为：指导式、支持式、参与式、成就导向式</td>
+</tr>
+<tr>
+<td>情境领导理论</td>
+<td>赫塞、布兰查德</td>
+<td>美国</td>
+<td>按下属<strong>成熟度</strong>（意愿×能力）调整：命令 → 说服 → 参与 → 授权</td>
+</tr>
+<tr>
+<td>变革型 / 交易型领导</td>
+<td>伯恩斯、巴斯</td>
+<td>美国</td>
+<td>变革型四要素：<strong>魅力、感召、智力刺激、个性化关怀</strong></td>
+</tr>
+<tr>
+<td>管理者角色理论（3 类 10 种）</td>
+<td>明茨伯格</td>
+<td>加拿大</td>
+<td><strong>人际</strong>、<strong>信息</strong>、<strong>决策</strong>三大类角色</td>
+</tr>
+<tr>
+<td>组织变革三阶段</td>
+<td>勒温</td>
+<td>德裔美籍</td>
+<td>解冻 → 变革（改变）→ 再冻结</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="g9">👤 人力资源 · 绩效与培训理论（第7–10章）</h2>
+<div class="section"><table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>人物</th>
+<th>国家</th>
+<th>必背要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平衡计分卡（BSC）</td>
+<td>卡普兰、诺顿</td>
+<td>美国</td>
+<td>四维度：<strong>财务、客户、内部流程、学习与成长</strong>（"财客流学"）</td>
+</tr>
+<tr>
+<td>目标管理法（MBO）</td>
+<td>德鲁克</td>
+<td>美国</td>
+<td>目标由上下级共同制定、自我控制；目标须符合 SMART 原则</td>
+</tr>
+<tr>
+<td>培训效果评估四层次</td>
+<td>柯克帕特里克</td>
+<td>美国</td>
+<td>反应 → 学习 → 行为 → 结果；层次越高越难评估</td>
+</tr>
+</tbody>
+</table></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    if(typeof b64 !== 'string' || !b64)
+      throw new Error('云端返回内容缺失（content=' + (b64 === null ? 'null' : typeof b64) + '）——请点"立即同步"重试，若反复出现请把此提示反馈');
+    var clean = String(b64).replace(/\s/g,'');
+    var bin;
+    try { bin = atob(clean); }
+    catch(e){ throw new Error('云端返回了无法解码的内容（前 20 字符：' + clean.slice(0,20) + '）——请点"立即同步"重试，若反复出现请反馈'); }
+    var bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0, failCount = 0, pausedUntil = 0, conflictCount = 0;
+  // 换绑/重绑后由配置界面调用：重置内部锁与失败状态，避免历史状态延续
+  window.resetSyncState = function(){ syncing=false; failCount=0; pausedUntil=0; lastPullAt=0; conflictCount=0; };
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  // 双后端分派：cfg.backend = 'github'（默认）| 'gitee'
+  function backendOf(cfg){ return cfg.backend === 'gitee' ? 'gitee' : 'github'; }
+  function fileUrl(cfg, method){
+    if(backendOf(cfg) === 'gitee')
+      return method === 'PUT'
+        ? 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json'   // PUT 时令牌放请求体，不与 URL 重复
+        : 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json?access_token='+encodeURIComponent(cfg.token);
+    return 'https://api.github.com/repos/'+cfg.repo+'/contents/progress.json';
+  }
+  function fetchOpts(cfg, method, bodyObj, useJson){
+    var o = {method: method}, signal = null;
+    if(typeof AbortController !== 'undefined'){
+      var ac = new AbortController(); setTimeout(function(){ ac.abort(); }, 9000);
+      signal = ac.signal; o.signal = signal;
+    }
+    if(backendOf(cfg) === 'gitee'){
+      o.headers = {'Accept':'application/json'};
+      if(method === 'PUT'){
+        if(useJson){
+          // Gitee JSON 姿势（社区实践中成功率高）：token/content/message 均入 JSON 体
+          var j = {access_token: cfg.token, content: bodyObj.content, message: bodyObj.message || 'progress sync'};
+          if(bodyObj.sha) j.sha = bodyObj.sha;
+          o.headers['Content-Type'] = 'application/json;charset=UTF-8';
+          o.body = JSON.stringify(j);
+        } else {
+          var params = new URLSearchParams();
+          params.set('access_token', cfg.token);
+          params.set('content', bodyObj.content);
+          params.set('message', bodyObj.message || 'progress sync');
+          if(bodyObj.sha) params.set('sha', bodyObj.sha);
+          o.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+          o.body = params.toString();
+        }
+      }
+    } else {
+      o.headers = apiHeaders(cfg);
+      if(method === 'PUT') o.body = JSON.stringify(bodyObj);
+    }
+    return o;
+  }
+  function netErrMsg(e, cfg){
+    var m = e && e.message ? e.message : String(e);
+    if(m.indexOf('abort') >= 0 || m.indexOf('Abort') >= 0)
+      return '网络超时（9 秒无响应）' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议在上方切换为 Gitee 后端' : '，稍后重试');
+    if(m.indexOf('fetch') >= 0 || m.indexOf('NetworkError') >= 0 || m.indexOf('network') >= 0)
+      return '网络无法连通' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议切换为 Gitee 后端' : '，请检查网络');
+    return m;
+  }
+  function noteFail(cfg, prefix){
+    failCount++;
+    if(failCount >= 3){
+      pausedUntil = Date.now() + 5*60*1000; failCount = 0;
+      setSyncStatus(prefix + '；自动同步已暂停 5 分钟，可点"立即同步"重试', 'err');
+    } else {
+      setSyncStatus(prefix, 'err');
+    }
+  }
+  window.ghPush = function(force, useJson, isFallback){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    if(Date.now() < (pausedUntil||0)) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    var tryJson = useJson !== false;  // 默认先 JSON（社区实践成功率高的姿势），失败自动换 form 再试一次
+    fetch(fileUrl(cfg, 'PUT'), fetchOpts(cfg, 'PUT', body, tryJson))
+    .then(function(r){ return r.text().then(function(t){ var j = null; try{ j = JSON.parse(t); }catch(e){} return {status:r.status, j:j, raw:t}; }); })
+    .then(function(res){
+      syncing = false;
+      var errMsg = (res.j && (res.j.message || (res.j.messages && res.j.messages.join('; ')))) || (res.raw ? res.raw.slice(0, 100) : '') || '';
+      if(res.status===200 || res.status===201){
+        failCount = 0; pausedUntil = 0; conflictCount = 0;
+        cfg.sha = (res.j.content && res.j.content.sha) || (res.j.commit && res.j.commit.sha) || res.j.sha || cfg.sha;
+        cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(backendOf(cfg)==='gitee' && res.status===400 && !isFallback){
+        // 任何 400（含 sha 类错误）→ 先换另一种提交格式重试；两种格式都败才进入冲突/报错分支
+        ghPush(true, !tryJson, true);
+      } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400 && errMsg.indexOf('sha')>=0)){
+        conflictCount++;
+        if(conflictCount > 3){ setSyncStatus('✗ 上传反复冲突已停止（最后错误：'+errMsg+'）——请反馈此完整提示', 'err'); return; }
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else if(res.status===401 || res.status===403){
+        noteFail(cfg, backendOf(cfg)==='gitee'
+          ? '✗ 上传被拒绝（'+res.status+'）：Gitee 私人令牌可能未勾选 projects 权限或已过期——请重新生成一枚'
+          : '✗ 上传被拒绝（'+res.status+'）：token 无效或权限不足，请重新配置');
+      } else {
+        noteFail(cfg, '✗ 上传失败：HTTP '+res.status+' '+errMsg);
+      }
+    }).catch(function(e){ syncing=false; noteFail(cfg, '✗ 上传失败：'+netErrMsg(e, cfg)); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(Date.now() < (pausedUntil||0)){ setSyncStatus('⏸ 自动同步已暂停（此前连续失败），点"立即同步"重试'); return; }
+    if(syncing) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    syncing = true; setSyncStatus('☁ 正在检查云端进度…');
+    fetch(fileUrl(cfg, 'GET'), fetchOpts(cfg, 'GET'))
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); syncing=false; ghPush(); return null; }
+      if(r.status===304){ syncing=false; return null; }
+      if(r.status===401) throw new Error('令牌无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或令牌权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      // Gitee 对不存在的文件返回 200+[]（GitHub 是 404）——都视为"云端还没有进度文件"，自动上传本地
+      var missing = !res.j || Array.isArray(res.j) || typeof res.j.content !== 'string' || !res.j.content;
+      if(missing){
+        syncing = false; cfg.sha = null; saveSyncCfg(cfg);
+        if(backendOf(cfg) === 'gitee'){
+          // 空仓库（无任何分支/提交）无法通过 API 建文件——先查分支，空则给初始化指引
+          var bqs = new URLSearchParams({access_token: cfg.token}).toString();
+          fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/branches?'+bqs, {headers: {'Accept':'application/json'}})
+          .then(function(r){ return r.json(); })
+          .then(function(brs){
+            if(Array.isArray(brs) && brs.length === 0)
+              setSyncStatus('✗ 仓库是空的：请到 Gitee 打开该仓库 → 文件 → 新建 → 随便建一个 README.md 提交（初始化仓库），然后回来点"立即同步"', 'err');
+            else ghPush();
+          }).catch(function(){ ghPush(); });
+        } else ghPush();
+        return;
+      }
+      var remote = JSON.parse(b64decode(res.j.content));
+      if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha || null; saveSyncCfg(cfg);
+      var afterSha = function(diag){
+        saveSyncCfg(cfg);
+        if(!cfg.sha && backendOf(cfg)==='gitee'){
+          // 有文件却拿不到版本号——推送必然报 sha missing，不推，直接给诊断摘要
+          syncing = false;
+          setSyncStatus('✗ 无法获取云端文件版本号[' + (diag || 'GET响应无sha且文件树补取失败') + ']——点"诊断"按钮并把结果反馈', 'err');
+          return;
+        }
+        if(localChanged){
+          saveProgress(merged);
+          if(typeof renderProgress === 'function') renderProgress();
+          if(typeof refreshBadge === 'function') refreshBadge();
+        }
+        if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }
+        else { syncing=false; failCount=0; pausedUntil=0; setSyncStatus('✓ 已与云端同步', 'ok'); }
+      };
+      if(!cfg.sha && backendOf(cfg)==='gitee'){
+        // Gitee 读文件响应可能不带 sha（API 创建的文件尤其如此）→ 更新必带 sha，否则报"sha is missing"。
+        // 通过 仓库信息(default_branch) → 文件树(blob sha) 两步补取。
+        var tq = new URLSearchParams({access_token: cfg.token}).toString();
+        fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'?'+tq, {headers: {'Accept':'application/json'}})
+        .then(function(r){ return r.json(); })
+        .then(function(ri){
+          var br = (ri && ri.default_branch) || 'master';
+          return fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/git/trees/'+br+'?'+tq, {headers: {'Accept':'application/json'}}).then(function(r2){ return r2.json(); })
+            .then(function(t){
+              var hit = null;
+              if(t && t.tree) for(var i=0;i<t.tree.length;i++) if(t.tree[i].path === 'progress.json'){ hit = t.tree[i].sha; break; }
+              return {branch: br, hit: hit, treeLen: (t && t.tree) ? t.tree.length : 0, paths: (t && t.tree) ? t.tree.slice(0,8).map(function(x){return x.path;}).join(',') : ''};
+            });
+        })
+        .then(function(d){
+          if(d.hit) cfg.sha = d.hit;
+          afterSha('分支=' + d.branch + ';树内项数=' + d.treeLen + ';找到progress.json=' + (d.hit ? '是' : '否') + ';树内前8项=' + d.paths);
+        })
+        .catch(function(e){ afterSha('补取异常:' + (e && e.message || e)); });  // 补取失败不推
+      } else afterSha('GET响应自带sha');
+    }).catch(function(e){
+      syncing=false;
+      var m = e && e.message ? e.message : '';
+      if(m.indexOf('令牌') >= 0 || m.indexOf('限速') >= 0 || m.indexOf('格式异常') >= 0) noteFail(cfg, '✗ 拉取失败：'+m);
+      else noteFail(cfg, '✗ 拉取失败：'+netErrMsg(e, cfg));
+    });
+  };
+  var syncTimer = null;
+  var syncTimer = null, lastSavedStr = null;
+  // 一键诊断：三个只读请求（读文件/仓库信息/文件树），输出摘要并尝试复制到剪贴板
+  window.runSyncDiag = function(){
+    var cfg = loadSyncCfg();
+    if(!cfg.repo || !cfg.token){ setSyncStatus('请先配置并连接云同步', 'err'); return; }
+    setSyncStatus('正在诊断…');
+    var tq = new URLSearchParams({access_token: cfg.token}).toString();
+    var base = backendOf(cfg)==='gitee' ? 'https://gitee.com/api/v5' : 'https://api.github.com';
+    var out = ['后端=' + backendOf(cfg), '仓库=' + cfg.repo];
+    var req = function(url, hdrs){
+      return fetch(url, {headers: hdrs || {'Accept':'application/json'}})
+        .then(function(r){ return r.text().then(function(t){ return {s: r.status, t: t}; }); });
+    };
+    var hdrs = backendOf(cfg)==='gitee' ? {'Accept':'application/json'} : {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json'};
+    Promise.all([
+      req(base + '/repos/' + cfg.repo + '/contents/progress.json' + (backendOf(cfg)==='gitee' ? '?' + tq : ''), hdrs),
+      backendOf(cfg)==='gitee'
+        ? req(base + '/repos/' + cfg.repo + '?' + tq).then(function(ri){
+            var br = 'master'; try { br = JSON.parse(ri.t).default_branch || 'master'; } catch(e){}
+            return req(base + '/repos/' + cfg.repo + '/git/trees/' + br + '?' + tq).then(function(tr){
+              return {branch: br, tr: tr};
+            });
+          })
+        : Promise.resolve(null)
+    ]).then(function(r){
+      var c = r[0], tree = r[1];
+      out.push('读文件HTTP=' + c.s, '读文件响应前160字符=' + c.t.slice(0, 160));
+      if(tree){
+        out.push('默认分支=' + tree.branch, '文件树HTTP=' + tree.tr.s);
+        var items = []; try { items = JSON.parse(tree.tr.t).tree || []; } catch(e){}
+        var pj = items.filter(function(x){ return x.path === 'progress.json'; })[0];
+        out.push('树内文件数=' + items.length, '树内progress.json=' + (pj ? ('找到,sha=' + pj.sha) : '未找到'), '树内全部路径=' + items.map(function(x){return x.path;}).join('|'));
+      }
+      var msg = out.join('\n');
+      setSyncStatus('诊断完成，结果已复制（粘贴发给老师）', 'ok');
+      if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(msg).catch(function(){});
+      window.__syncDiag = msg;
+      console.log(msg);
+    }).catch(function(e){
+      setSyncStatus('诊断失败：' + (e && e.message || e), 'err');
+    });
+  };
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var btn=document.querySelector('.sb-btn');
+  if(btn)btn.addEventListener('click',function(){document.body.classList.toggle('sb-open');});
+  var mask=document.querySelector('.sb-mask');
+  if(mask)mask.addEventListener('click',function(){document.body.classList.remove('sb-open');});
+  document.querySelectorAll('.sidebar a').forEach(function(a){
+    a.addEventListener('click',function(){document.body.classList.remove('sb-open');});
+  });
+})();
+</script>
+</body>
+</html>

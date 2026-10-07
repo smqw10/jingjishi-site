@@ -34,6 +34,7 @@
   .keypoint strong { color: #185FA5; }
   .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
   .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .mn-topic { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: 1px; font-weight: 700; }
   .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
   .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
   .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
@@ -122,10 +123,34 @@
   .sec-list a { margin-right: 14px; }
   .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
   .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 220px; background: #fff; border-right: 1px solid #e8e8e5; padding: 16px 12px 24px; overflow-y: auto; z-index: 50; transform: translateX(-105%); transition: transform .2s ease; }
+  body.sb-open .sidebar { transform: none; }
+  .sb-mask { position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 40; display: none; }
+  body.sb-open .sb-mask { display: block; }
+  button.sb-btn { display: none; position: fixed; top: 12px; left: 12px; z-index: 60; width: 38px; height: 38px; border-radius: 50%; border: 1px solid #e8e8e5; background: #fff; font-size: 17px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  .sb-brand { font-size: 15px; font-weight: 700; color: #1a1a1a; padding: 6px 10px 14px; border-bottom: 1px solid #f0f0ed; margin-bottom: 10px; }
+  .sb-brand span { display: block; font-size: 11px; color: #888780; font-weight: 400; margin-top: 2px; }
+  .sb-group { font-size: 11px; color: #b0aea5; padding: 12px 10px 4px; font-weight: 600; letter-spacing: 1px; }
+  .sb-item { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 8px; font-size: 13.5px; color: #55554f; margin-bottom: 2px; }
+  .sb-item:hover { background: #f5f6f8; color: #185FA5; }
+  .sb-item.active { background: #E6F1FB; color: #0C447C; font-weight: 600; }
+  .sb-item.disabled { color: #b5b3aa; cursor: default; }
+  .sb-item.disabled:hover { background: none; color: #b5b3aa; }
+  .sb-badge { margin-left: auto; font-size: 10px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 6px; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .toc a { background: #fff; border: 1px solid #e8e8e5; border-radius: 16px; padding: 6px 14px; font-size: 12.5px; color: #55554f; }
+  .toc a:hover { border-color: #185FA5; color: #185FA5; }
+  .toc .sb-badge { margin-left: 6px; }
+  @media (min-width: 1060px) {
+    .sidebar { transform: none; }
+    body { margin-left: max(240px, calc((100vw - 800px) / 2 + 110px)); }
+  }
+  @media (max-width: 1059.9px) { button.sb-btn { display: block; } }
 </style>
 </head>
 <body>
-<div class="header"><span class="label">中级经济师 2026</span><h1>📚 中级经济师精品课 · 学习总览</h1><div class="subtitle">每节含学习目标、细讲（定义+关键点+例子+对比表+口诀+考试技巧）、速记卡、真题练习。做题时点击选项即可判对错，<b>一节内全部题目答对才算"已学会"</b>。</div><div class="progress-bar"><div class="fill" id="overall-fill" style="width:0%"></div></div><div class="progress-text" id="overall-text">学习进度统计中…</div></div><div class="section" id="sync-card">
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><span class="sb-item disabled"><span>📝</span><span>刷题题库</span><span class="sb-badge wip">筹备中</span></span></nav>
+<div class="header"><span class="label">中级经济师 2026</span><h1>📚 中级经济师精品课 · 学习总览</h1><div class="subtitle">每节含学习目标、细讲（定义+关键点+例子+对比表+口诀+考试技巧）、速记卡、真题练习。做题时点击选项即可判对错，<b>一节内全部题目答对才算"已学会"</b>。考前突击用左侧"速记"板块：人物理论、曲线图形、易混对比、概念要点、口诀联想。</div><div class="progress-bar"><div class="fill" id="overall-fill" style="width:0%"></div></div><div class="progress-text" id="overall-text">学习进度统计中…</div></div><div class="section"><h2>⚡ 考前速记板块</h2><p>知识点汇总速查：相近易混的放一起并提示，背下就能拿分。配合左侧边栏随时切换板块。</p><div class="toc"><a href="memo-person.html">👤 人物与理论</a> <a href="memo-curve.html">📈 曲线与图形</a> <a href="memo-confuse.html">⚖️ 易混对比</a> <a href="memo-concept.html">🧩 概念要点</a> <a href="memo-mn.html">🧠 口诀联想</a></div></div><div class="section" id="sync-card">
   <h2>☁️ 云同步（跨设备）</h2>
   <div class="sync-meta">绑定一个私有仓库后，答题进度自动在所有设备间同步（每台设备配置一次，之后免操作）。配置保存在本设备的浏览器中，令牌仅授权这一个仓库。</div>
   <div id="sync-state"></div>
@@ -626,6 +651,15 @@
       });
     });
   });
+  // 侧栏"讲义·科目"经 index.html#科目 直达对应标签（中文 hash 浏览器会百分号编码）
+  function activateTabFromHash(){
+    var h='';
+    try { h=decodeURIComponent((location.hash||'').replace('#','')); } catch(e) {}
+    if(!h) return;
+    tabs.forEach(function(t){ if(t.getAttribute('data-tab')===h) t.click(); });
+  }
+  activateTabFromHash();
+  window.addEventListener('hashchange', activateTabFromHash);
 })();
 </script>
 </body>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>曲线与图形 | 中级经济师速记</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85; padding: 20px 16px 60px; max-width: 800px; margin: 0 auto; }
+  a { color: #185FA5; text-decoration: none; }
+  .header { background: #fff; border-radius: 14px; padding: 28px 24px; margin-bottom: 20px; border: 1px solid #e8e8e5; }
+  .header .crumb { font-size: 13px; margin-bottom: 12px; }
+  .header .label { display: inline-block; font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; font-weight: 500; }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .progress-bar { margin-top: 16px; height: 6px; background: #f0f0ed; border-radius: 3px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: #185FA5; border-radius: 3px; }
+  .progress-text { font-size: 12px; color: #888780; margin-top: 6px; }
+  .section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E6F1FB; }
+  .section h3 { font-size: 15px; font-weight: 600; color: #0C447C; margin-top: 18px; margin-bottom: 8px; }
+  .section h4 { font-size: 14px; font-weight: 600; color: #444; margin-top: 14px; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #444441; margin-bottom: 10px; }
+  .section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+  .section li { font-size: 14px; color: #444441; margin-bottom: 6px; }
+  .section strong { color: #1a1a1a; }
+  .hot { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .must { display: inline-block; font-size: 11px; color: #A12622; background: #FBE9E7; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .s3 { display: inline-block; font-size: 11px; color: #fff; background: #185FA5; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+  .example { background: #f9f9f6; border-left: 3px solid #B4B2A9; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #5F5E5A; }
+  .example strong { color: #444441; }
+  .keypoint { background: #E6F1FB; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #0C447C; }
+  .keypoint strong { color: #185FA5; }
+  .mnemonic { background: #EAF6EC; border-left: 3px solid #3E8E5A; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #2C5E3C; }
+  .mnemonic .mn-title { font-weight: 600; margin-bottom: 4px; color: #3E8E5A; }
+  .mn-topic { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: 1px; font-weight: 700; }
+  .tip { background: #FDF3E3; border-left: 3px solid #D9930D; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; color: #7A5A10; }
+  .tip .tip-title { font-weight: 600; margin-bottom: 4px; color: #A9720A; }
+  .recite { background: #F4F0FA; border: 1px solid #E0D6F0; border-radius: 10px; padding: 16px 18px; margin: 12px 0; font-size: 13.5px; color: #4A3B63; }
+  .recite .recite-title { font-weight: 700; font-size: 15px; color: #5E3F94; margin-bottom: 8px; }
+  .recite ul { margin-left: 20px; }
+  .recite li { color: #4A3B63; margin-bottom: 5px; font-size: 13.5px; }
+  .fig-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 18px 16px 14px; margin: 12px 0; }
+  .fig-title { font-size: 14.5px; font-weight: 600; color: #1a1a1a; text-align: center; }
+  .fig-sub { font-size: 12px; color: #888780; text-align: center; margin-top: 3px; margin-bottom: 4px; }
+  .fig-card svg { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+  .fig-note { font-size: 13px; line-height: 1.7; border-radius: 8px; padding: 9px 12px; margin-top: 8px; }
+  .fig-note.ok { background: #EAF6EC; color: #2C5E3C; }
+  .fig-note.blue { background: #E6F1FB; color: #0C447C; }
+  .fig-note.red { background: #FBE9E7; color: #A12622; }
+  .fig-note.green { background: #EAF6EC; color: #2C5E3C; }
+  .section table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .section table th { background: #E6F1FB; color: #0C447C; font-weight: 600; padding: 10px 12px; text-align: left; border: 1px solid #dfe9f3; }
+  .section table td { padding: 9px 12px; border: 1px solid #eeece6; color: #444441; vertical-align: top; }
+  .section table tr:nth-child(even) td { background: #fbfbf9; }
+  .quiz-item { border: 1px solid #e8e8e5; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; background: #fdfdfb; }
+  .quiz-item .q-tag { display: inline-block; font-size: 11px; color: #6B6B66; background: #f0f0ed; border-radius: 4px; padding: 1px 8px; margin-right: 6px; vertical-align: middle; }
+  .quiz-item .q-stem { font-size: 14px; color: #2c2c2a; margin: 8px 0 10px; font-weight: 500; }
+  .quiz-item .q-opts { font-size: 13.5px; color: #55554f; margin-bottom: 10px; }
+  .quiz-item .q-opts div { margin-bottom: 3px; }
+  button.qopt { display: block; width: 100%; text-align: left; background: #fafaf7; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 13px; margin-bottom: 7px; font-size: 13.5px; color: #444441; cursor: pointer; font-family: inherit; line-height: 1.6; transition: border-color .15s, background .15s; }
+  button.qopt:hover:not(:disabled) { border-color: #185FA5; }
+  button.qopt.picked { border-color: #185FA5; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+  button.qopt.correct { border-color: #3E8E5A; background: #EAF6EC; color: #2C5E3C; font-weight: 600; }
+  button.qopt.wrong { border-color: #C0504D; background: #FBE9E7; color: #A12622; }
+  button.qopt.miss { border-color: #D9930D; background: #FDF3E3; color: #7A5A10; }
+  button.qopt:disabled { cursor: default; opacity: .85; }
+  button.qsubmit { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-family: inherit; cursor: pointer; margin-bottom: 10px; }
+  button.qsubmit:hover { background: #0C447C; }
+  .q-feedback { font-size: 13.5px; margin: 6px 0 10px; font-weight: 600; }
+  .q-feedback.ok { color: #2C5E3C; }
+  .q-feedback.no { color: #A12622; }
+  .quiz-item details summary { cursor: pointer; font-size: 13px; color: #185FA5; user-select: none; }
+  .quiz-item .q-ans { margin-top: 10px; font-size: 13.5px; color: #2C5E3C; font-weight: 600; }
+  .quiz-item .q-exp { margin-top: 6px; font-size: 13px; color: #5F5E5A; background: #f6f8f4; border-radius: 6px; padding: 10px 12px; }
+  .sec-badge { display: inline-block; font-size: 12.5px; border-radius: 6px; padding: 4px 12px; margin-top: 12px; font-weight: 600; }
+  .sec-badge.ok { background: #EAF6EC; color: #2C5E3C; }
+  .sec-badge.part { background: #FDF3E3; color: #7A5A10; }
+  .sec-badge.none { background: #f0f0ed; color: #6B6B66; font-weight: 500; }
+  .footer-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .footer-nav a, .footer-nav .nav-cell { flex: 1; background: #fff; border: 1px solid #e8e8e5; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
+  .footer-nav .next { text-align: right; }
+  .footer-nav .home { flex: 0 0 110px; text-align: center; }
+  .footer-nav .disabled { opacity: .45; }
+  .footer-nav .nav-label { font-size: 11px; color: #888780; display: block; }
+  .footer-nav .nav-title { color: #185FA5; font-weight: 500; }
+  .chapter-card { background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .chapter-card:hover { border-color: #185FA5; }
+  .chapter-card .c-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .chapter-card .c-title a { color: #1a1a1a; }
+  .chapter-card .c-meta { font-size: 12.5px; color: #888780; margin-bottom: 6px; }
+  .c-status { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .c-status.g { color: #2C5E3C; background: #EAF6EC; }
+  .c-status.y { color: #854F0B; background: #FAEEDA; }
+  .c-status.n { color: #6B6B66; background: #f0f0ed; }
+  .sec-dot { margin-right: 6px; font-size: 12px; }
+  .sec-dot.g { color: #3E8E5A; }
+  .sec-dot.y { color: #D9930D; }
+  .sec-dot.n { color: #b5b3aa; }
+  .chapter-card .c-desc { font-size: 13px; color: #66655f; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #e8e8e5; border-radius: 20px; padding: 8px 18px; font-size: 13.5px; color: #55554f; cursor: pointer; font-family: inherit; font-weight: 500; }
+  .tab:hover { border-color: #185FA5; color: #185FA5; }
+  .tab.active { background: #185FA5; border-color: #185FA5; color: #fff; }
+  .tab .t-n { font-size: 11px; opacity: .75; margin-left: 2px; }
+  .group { margin-bottom: 8px; }
+  .group[hidden] { display: none; }
+  .group-head { display: flex; align-items: baseline; gap: 10px; padding: 14px 6px 10px; }
+  .group-head .g-title { font-size: 17px; font-weight: 700; color: #1a1a1a; }
+  .group-head .g-meta { font-size: 12.5px; color: #888780; }
+  .group-head .g-prog { font-size: 12.5px; color: #185FA5; font-weight: 600; margin-left: auto; }
+  .sync-row { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  .sync-row input { flex: 1; min-width: 220px; border: 1px solid #e8e8e5; border-radius: 8px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; }
+  .sync-row input:focus { outline: none; border-color: #185FA5; }
+  button.sync-btn { background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button.sync-btn:hover { background: #0C447C; }
+  button.sync-btn.ghost { background: #f0f0ed; color: #55554f; }
+  #sync-state { font-size: 13px; color: #55554f; margin: 6px 0; min-height: 20px; font-weight: 500; }
+  .sync-ok { color: #2C5E3C; } .sync-err { color: #A12622; }
+  .sync-meta { font-size: 12.5px; color: #888780; }
+  .sec-list { margin-top: 10px; font-size: 13px; }
+  .sec-list a { margin-right: 14px; }
+  .done { display: inline-block; font-size: 11px; color: #2C5E3C; background: #EAF6EC; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .wip { display: inline-block; font-size: 11px; color: #854F0B; background: #FAEEDA; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+  .sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 220px; background: #fff; border-right: 1px solid #e8e8e5; padding: 16px 12px 24px; overflow-y: auto; z-index: 50; transform: translateX(-105%); transition: transform .2s ease; }
+  body.sb-open .sidebar { transform: none; }
+  .sb-mask { position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 40; display: none; }
+  body.sb-open .sb-mask { display: block; }
+  button.sb-btn { display: none; position: fixed; top: 12px; left: 12px; z-index: 60; width: 38px; height: 38px; border-radius: 50%; border: 1px solid #e8e8e5; background: #fff; font-size: 17px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  .sb-brand { font-size: 15px; font-weight: 700; color: #1a1a1a; padding: 6px 10px 14px; border-bottom: 1px solid #f0f0ed; margin-bottom: 10px; }
+  .sb-brand span { display: block; font-size: 11px; color: #888780; font-weight: 400; margin-top: 2px; }
+  .sb-group { font-size: 11px; color: #b0aea5; padding: 12px 10px 4px; font-weight: 600; letter-spacing: 1px; }
+  .sb-item { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 8px; font-size: 13.5px; color: #55554f; margin-bottom: 2px; }
+  .sb-item:hover { background: #f5f6f8; color: #185FA5; }
+  .sb-item.active { background: #E6F1FB; color: #0C447C; font-weight: 600; }
+  .sb-item.disabled { color: #b5b3aa; cursor: default; }
+  .sb-item.disabled:hover { background: none; color: #b5b3aa; }
+  .sb-badge { margin-left: auto; font-size: 10px; color: #854F0B; background: #FAEEDA; border-radius: 4px; padding: 1px 6px; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .toc a { background: #fff; border: 1px solid #e8e8e5; border-radius: 16px; padding: 6px 14px; font-size: 12.5px; color: #55554f; }
+  .toc a:hover { border-color: #185FA5; color: #185FA5; }
+  .toc .sb-badge { margin-left: 6px; }
+  @media (min-width: 1060px) {
+    .sidebar { transform: none; }
+    body { margin-left: max(240px, calc((100vw - 800px) / 2 + 110px)); }
+  }
+  @media (max-width: 1059.9px) { button.sb-btn { display: block; } }
+</style>
+</head>
+<body>
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item active" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><span class="sb-item disabled"><span>📝</span><span>刷题题库</span><span class="sb-badge wip">筹备中</span></span></nav>
+<div class="header"><div class="crumb"><a href="index.html">← 学习总览</a></div><span class="label">考前速记</span><h1>📈 曲线与图形速记</h1><div class="subtitle">全部曲线图集中总复习：先看形状，再记要点。每张图后接&quot;考点框&quot;，考前只过要点即可。</div></div><div class="toc"><a href="#g1">供求与价格（第1–2章）</a><a href="#g2">消费者与生产者理论（第2–3章）</a><a href="#g3">市场结构与要素（第4–5章）</a><a href="#g4">宏观经济（第6–9章）</a><a href="#g5">市场失灵与财政（第6、13章）</a><a href="#g6">统计（第23–27章）</a><a href="#g7">人力资源（第2–3章）</a></div><h2 id="g1">📈 供求与价格（第1–2章）</h2>
+<div class="section"><h3>均衡价格的形成</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">均衡价格的形成：供求拔河</div><div class="fig-sub">D 向右下：价高买得少；S 向右上：价高卖得多</div><svg viewBox="0 0 640 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="均衡价格的形成：供求拔河"><defs><pattern id="f3g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f3a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="40" width="460" height="350" fill="url(#f3g)"/><line x1="70" y1="390" x2="70" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f3a)"/><line x1="70" y1="390" x2="530" y2="390" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f3a)"/><text x="536" y="395" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Q（数量）</text><text x="80" y="50" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">P（价格）</text><line x1="100" y1="70" x2="420" y2="320" stroke="#185FA5" stroke-width="2.5"/><line x1="110" y1="360" x2="440" y2="60" stroke="#3E8E5A" stroke-width="2.5"/><text x="428" y="338" font-size="13" fill="#185FA5" text-anchor="start" font-weight="bold">D（需求）</text><text x="446" y="56" font-size="13" fill="#3E8E5A" text-anchor="start" font-weight="bold">S（供给）</text><line x1="253" y1="140" x2="253" y2="170" stroke="#9AA7B5" stroke-width="1.8" marker-end="url(#f3a)"/><text x="253" y="128" font-size="12.5" fill="#6B6B66" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">供过于求 → 价格趋降</text><line x1="241" y1="300" x2="241" y2="270" stroke="#9AA7B5" stroke-width="1.8" marker-end="url(#f3a)"/><text x="241" y="318" font-size="12.5" fill="#6B6B66" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">供不应求 → 价格趋升</text><line x1="70" y1="214" x2="271" y2="214" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="271" y1="214" x2="271" y2="390" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><text x="76" y="206" font-size="12.5" fill="#185FA5" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">均衡价格 P0</text><text x="271" y="408" font-size="12.5" fill="#6B6B66" text-anchor="middle" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">均衡数量 Q0</text><circle cx="271" cy="214" r="8" fill="none" stroke="#185FA5" stroke-width="2" opacity="0.25"/><circle cx="271" cy="214" r="5" fill="#185FA5" stroke="#fff" stroke-width="1.5"/><line x1="278" y1="212" x2="326" y2="206" stroke="#B9C4D0" stroke-width="1"/><text x="330" y="210" font-size="12.5" fill="#185FA5" text-anchor="start" font-weight="bold">E（均衡点）</text></svg><div class="fig-note blue"><strong>供过于求 → 价格下降；供不应求 → 价格上升。</strong>两股力量在 E 点相互抵消，形成均衡价格 P0 与均衡数量 Q0——均衡是动态调整的结果，偶然、暂时、相对。</div></div></div>
+<div class="section"><div class="keypoint"><strong>均衡价格：</strong><ul>
+<li>均衡价格 = 需求曲线与供给曲线<strong>交点</strong>对应的价格，此时需求量 = 供给量</li>
+<li>供大于求 → 价格下跌；供小于求 → 价格上涨，都会自动回到均衡</li>
+</ul></div></div>
+<div class="section"><h3>供求变动（比较静态）</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">需求变动 → 均衡点怎么走</div><div class="fig-sub">场景：收入增加（正常品）→ 需求增加，需求线 D0 右移到 D1</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="需求变动 → 均衡点怎么走"><defs><pattern id="f1g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f1a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="40" width="460" height="310" fill="url(#f1g)"/><line x1="70" y1="350" x2="70" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f1a)"/><line x1="70" y1="350" x2="530" y2="350" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f1a)"/><text x="536" y="355" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Q（数量）</text><text x="80" y="50" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">P（价格）</text><line x1="130" y1="110" x2="200" y2="110" stroke="#9AA7B5" stroke-width="1.8" marker-end="url(#f1a)"/><text x="165" y="98" font-size="12.5" fill="#6B6B66" text-anchor="middle" font-weight="bold">需求增加</text><line x1="100" y1="90" x2="400" y2="300" stroke="#185FA5" stroke-width="2.5"/><line x1="170" y1="90" x2="470" y2="300" stroke="#185FA5" stroke-width="2.5" stroke-dasharray="7 4"/><line x1="110" y1="330" x2="430" y2="70" stroke="#3E8E5A" stroke-width="2.5"/><text x="406" y="314" font-size="13.5" fill="#185FA5" text-anchor="start" font-weight="bold">D0</text><text x="476" y="314" font-size="13.5" fill="#185FA5" text-anchor="start" font-weight="bold">D1</text><text x="438" y="64" font-size="13.5" fill="#3E8E5A" text-anchor="start" font-weight="bold">S</text><line x1="70" y1="205" x2="264" y2="205" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="70" y1="179" x2="296" y2="179" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="264" y1="205" x2="264" y2="350" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="296" y1="179" x2="296" y2="350" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><text x="64" y="209" font-size="12.5" fill="#6B6B66" text-anchor="end" font-weight="normal">P0</text><text x="64" y="175" font-size="12.5" fill="#185FA5" text-anchor="end" font-weight="bold">P1</text><text x="264" y="368" font-size="12.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">Q0</text><text x="296" y="368" font-size="12.5" fill="#185FA5" text-anchor="middle" font-weight="bold">Q1</text><circle cx="264" cy="205" r="4.5" fill="#fff" stroke="#6B6B66" stroke-width="2"/><circle cx="296" cy="179" r="8" fill="none" stroke="#185FA5" stroke-width="2" opacity="0.25"/><circle cx="296" cy="179" r="4.5" fill="#185FA5" stroke="#fff" stroke-width="1.5"/><text x="240" y="226" font-size="12.5" fill="#6B6B66" text-anchor="start" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">E0</text><text x="306" y="168" font-size="13" fill="#185FA5" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">E1</text></svg><div class="fig-note ok"><strong>需求增加 → D 右移 → 价格 P0→P1（↑）、数量 Q0→Q1（↑）</strong>：需求与均衡价格、均衡数量<strong>同方向</strong>变动。需求减少则 D 左移，P↓Q↓ 同理。</div></div></div>
+<div class="section"><div class="keypoint"><strong>曲线怎么动：</strong><ul>
+<li><strong>自己价格变化 → 沿着曲线"点移动"；其他因素变化 → 整条曲线"线移动"</strong></li>
+<li>需求右移四件事：收入增、偏好强、替代品涨、互补品跌</li>
+<li>供给：成本降、技术进 → 右移；成本升 → 左移</li>
+<li>需求增 + 供给不变 → 均衡价格、数量同升；供给增 + 需求不变 → 价格降、数量升</li>
+</ul></div></div>
+<div class="section"><h3>最高限价与保护价格</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">最高限价 vs 保护价格</div><div class="fig-sub">同一个均衡：管制线画在哪一侧，后果就落在哪一侧</div><svg viewBox="0 0 640 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="最高限价 vs 保护价格"><defs><pattern id="f2g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f2a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="40" width="460" height="350" fill="url(#f2g)"/><line x1="70" y1="390" x2="70" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f2a)"/><line x1="70" y1="390" x2="530" y2="390" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f2a)"/><text x="536" y="395" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Q（数量）</text><text x="80" y="50" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">P（价格）</text><line x1="100" y1="80" x2="420" y2="330" stroke="#185FA5" stroke-width="2.5"/><line x1="110" y1="360" x2="440" y2="60" stroke="#3E8E5A" stroke-width="2.5"/><text x="426" y="340" font-size="13.5" fill="#185FA5" text-anchor="start" font-weight="bold">D</text><text x="446" y="56" font-size="13.5" fill="#3E8E5A" text-anchor="start" font-weight="bold">S</text><line x1="70" y1="214" x2="271" y2="214" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="271" y1="214" x2="271" y2="390" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><text x="76" y="206" font-size="12.5" fill="#185FA5" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">均衡价格 P0</text><text x="271" y="408" font-size="12.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">Q0</text><circle cx="271" cy="214" r="5" fill="#185FA5" stroke="#fff" stroke-width="1.5"/><line x1="70" y1="130" x2="400" y2="130" stroke="#3E8E5A" stroke-width="2" stroke-dasharray="7 4"/><text x="76" y="122" font-size="12.5" fill="#3E8E5A" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">保护价格＞P0</text><line x1="164" y1="150" x2="363" y2="150" stroke="#3E8E5A" stroke-width="2"/><polygon points="171,144.5 164,150 171,155.5" fill="#3E8E5A"/><polygon points="356,144.5 363,150 356,155.5" fill="#3E8E5A"/><text x="150" y="168" font-size="11.5" fill="#3E8E5A" text-anchor="middle" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Qd′</text><text x="374" y="170" font-size="11.5" fill="#3E8E5A" text-anchor="middle" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Qs′</text><text x="263" y="190" font-size="13" fill="#3E8E5A" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">过剩（供过于求）</text><line x1="70" y1="300" x2="400" y2="300" stroke="#C0504D" stroke-width="2" stroke-dasharray="7 4"/><text x="76" y="292" font-size="12.5" fill="#C0504D" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">最高限价＜P0</text><line x1="176" y1="286" x2="382" y2="286" stroke="#C0504D" stroke-width="2"/><polygon points="183,280.5 176,286 183,291.5" fill="#C0504D"/><polygon points="375,280.5 382,286 375,291.5" fill="#C0504D"/><text x="170" y="318" font-size="11.5" fill="#C0504D" text-anchor="middle" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Qs</text><text x="382" y="318" font-size="11.5" fill="#C0504D" text-anchor="middle" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Qd</text><text x="279" y="266" font-size="13" fill="#C0504D" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">短缺（供不应求）</text><circle cx="164" cy="130" r="3.5" fill="#fff" stroke="#3E8E5A" stroke-width="1.8"/><circle cx="363" cy="130" r="3.5" fill="#fff" stroke="#3E8E5A" stroke-width="1.8"/><circle cx="176" cy="300" r="3.5" fill="#fff" stroke="#C0504D" stroke-width="1.8"/><circle cx="382" cy="300" r="3.5" fill="#fff" stroke="#C0504D" stroke-width="1.8"/></svg><div class="fig-note red"><strong>最高限价（＜P0）</strong>：价低 → 刺激消费、限制生产 → <strong>短缺</strong>——排队抢购、黑市。通常只作应急手段。</div><div class="fig-note green"><strong>保护价格（＞P0）</strong>：价高 → 刺激生产、抑制消费 → <strong>过剩</strong>——政府须收购兜底，多用于支持农业。</div></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 限高必低，保低必高</div><p>名字带"高"的（最高限价）必<strong>低于</strong>均衡价格 → 短缺（排队、黑市）；保护价格（最低限价）必<strong>高于</strong>均衡价格 → 过剩（政府收购）。</p></div></div>
+<h2 id="g2">📈 消费者与生产者理论（第2–3章）</h2>
+<div class="section"><h3>无差异曲线与预算线（无图，记特征）</h3></div>
+<div class="section"><div class="keypoint"><strong>无差异曲线三特征：</strong><ol>
+<li>任一点效用相同；<strong>负斜率、凸向原点</strong>（边际替代率递减）</li>
+<li>任意两条<strong>不相交</strong></li>
+<li>离原点越远，效用水平越高</li>
+</ol></div></div>
+<div class="section"><div class="keypoint"><strong>预算线怎么动：</strong><ul>
+<li>收入变动 → <strong>整条平移</strong>（收入增 → 右移）</li>
+<li>某一种商品价格变动 → 预算线<strong>绕点旋转</strong></li>
+<li>消费者均衡：无差异曲线与预算线<strong>相切</strong>，切点处 MRS = 价格之比 P₁/P₂</li>
+</ul></div></div>
+<div class="section"><h3>短期成本曲线</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">短期成本曲线族：一条 U 形线穿过两条 U 形线</div><div class="fig-sub">上升的 MC 先后穿过 AVC、ATC 的最低点——交前边小、交后边大</div><svg viewBox="0 0 640 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="短期成本曲线族：一条 U 形线穿过两条 U 形线"><defs><pattern id="f4g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f4a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="40" width="460" height="350" fill="url(#f4g)"/><line x1="70" y1="390" x2="70" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f4a)"/><line x1="70" y1="390" x2="530" y2="390" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f4a)"/><text x="536" y="395" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Q（产量）</text><text x="80" y="50" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">C（成本）</text><path d="M 92,165 C 180,240 320,320 470,352" fill="none" stroke="#9AA7B5" stroke-width="2"/><text x="478" y="356" font-size="13" fill="#6B6B66" text-anchor="start" font-weight="bold">AFC</text><path d="M 92,210 C 130,262 180,295 240,300 C 285,304 370,235 450,150" fill="none" stroke="#3E8E5A" stroke-width="2.5"/><text x="456" y="146" font-size="13" fill="#3E8E5A" text-anchor="start" font-weight="bold">AVC</text><path d="M 95,140 C 150,200 240,232 330,240 C 372,230 420,168 465,98" fill="none" stroke="#D9930D" stroke-width="2.5"/><text x="471" y="92" font-size="13" fill="#D9930D" text-anchor="start" font-weight="bold">ATC</text><path d="M 105,375 C 135,355 155,335 175,335 C 195,328 218,306 240,300 C 272,293 302,270 330,240 C 356,214 382,150 450,70" fill="none" stroke="#C0504D" stroke-width="2.5"/><text x="456" y="64" font-size="13" fill="#C0504D" text-anchor="start" font-weight="bold">MC</text><circle cx="175" cy="335" r="4" fill="#C0504D" stroke="#fff" stroke-width="1.5"/><text x="150" y="366" font-size="12" fill="#C0504D" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">MC 最低点</text><circle cx="240" cy="300" r="4.5" fill="#fff" stroke="#3E8E5A" stroke-width="2"/><text x="240" y="330" font-size="12" fill="#3E8E5A" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">M′（AVC 最低点）</text><circle cx="330" cy="240" r="4.5" fill="#fff" stroke="#D9930D" stroke-width="2"/><text x="350" y="270" font-size="12" fill="#D9930D" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">M（ATC 最低点）</text></svg><div class="fig-note blue"><strong>触底顺序：MC 最早 → 其次 AVC（M′）→ 最后 ATC（M）</strong>；M′、M 是两条平均线由降转升的转折点。ATC−AVC 的垂直距离＝AFC，随产量增大而缩小，两线永不相交；AFC 一路递减趋近横轴。</div></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 边际穿过平均的最低点</div><p>MC 交 AVC、AC 于其<strong>最低点</strong>；交点之前 MC &lt; 平均（拉低平均），之后 MC &gt; 平均（拉高平均）；三条 U 形线里 <strong>MC 最先触底</strong>。类比：新同学成绩（边际）拉高/拉低班级平均分。</p></div></div>
+<div class="section"><h3>短期产量曲线（TP、AP、MP）</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">产量曲线：三条线、三个临界点</div><div class="fig-sub">TP 的斜率由 MP 决定：MP 递增段 TP 凸向 L 轴，MP 递减段 TP 凹向 L 轴</div><svg viewBox="0 0 640 620" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="产量曲线：三条线、三个临界点" style="max-width:500px"><defs><pattern id="f5g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f5a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="90" y="50" width="440" height="210" fill="url(#f5g)"/><rect x="90" y="330" width="440" height="210" fill="url(#f5g)"/><line x1="90" y1="260" x2="90" y2="50" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f5a)"/><text x="98" y="58" font-size="13" fill="#2C2C2A" text-anchor="start" font-weight="bold">TP</text><line x1="90" y1="540" x2="90" y2="320" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f5a)"/><line x1="90" y1="540" x2="530" y2="540" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f5a)"/><text x="536" y="545" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">L（劳动）</text><text x="98" y="328" font-size="12" fill="#2C2C2A" text-anchor="start" font-weight="bold">AP·MP</text><line x1="230" y1="90" x2="230" y2="360" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="320" y1="90" x2="320" y2="400" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="390" y1="90" x2="390" y2="540" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><text x="230" y="82" font-size="12.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">L1</text><text x="320" y="82" font-size="12.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">L2</text><text x="390" y="82" font-size="12.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">L3</text><path d="M 100,242 C 150,235 195,183 230,150 C 268,115 320,104 390,105 C 420,106 445,110 470,118" fill="none" stroke="#185FA5" stroke-width="2.5"/><text x="478" y="122" font-size="13" fill="#185FA5" text-anchor="start" font-weight="bold">TP</text><path d="M 100,470 C 150,428 240,402 320,400 C 370,402 420,435 455,470" fill="none" stroke="#3E8E5A" stroke-width="2.5"/><text x="462" y="460" font-size="13" fill="#3E8E5A" text-anchor="start" font-weight="bold">AP</text><path d="M 100,525 C 140,470 195,362 230,360 C 255,362 292,385 320,400 C 345,425 368,480 390,540 C 412,548 432,554 455,558" fill="none" stroke="#C0504D" stroke-width="2.5"/><text x="462" y="554" font-size="13" fill="#C0504D" text-anchor="start" font-weight="bold">MP</text><circle cx="230" cy="360" r="4" fill="#C0504D" stroke="#fff" stroke-width="1.5"/><text x="222" y="345" font-size="11.5" fill="#C0504D" text-anchor="end" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">MP 最高（L1）</text><circle cx="320" cy="400" r="4.5" fill="#fff" stroke="#3E8E5A" stroke-width="2"/><text x="330" y="424" font-size="11.5" fill="#3E8E5A" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">MP＝AP（L2·AP 最高）</text><circle cx="390" cy="540" r="4" fill="#C0504D" stroke="#fff" stroke-width="1.5"/><text x="398" y="528" font-size="11.5" fill="#C0504D" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">MP＝0（L3）</text><circle cx="230" cy="150" r="4" fill="#185FA5" stroke="#fff" stroke-width="1.5"/><circle cx="390" cy="105" r="4" fill="#185FA5" stroke="#fff" stroke-width="1.5"/><text x="398" y="98" font-size="11.5" fill="#185FA5" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">TP 最大</text></svg><div class="fig-note blue"><strong>L1：MP 最高（TP 拐点）→ L2：MP＝AP，AP 最高 → L3：MP＝0，TP 最大</strong>；超过 L3 后 MP 为负、TP 递减。口诀：边大均增、边小均减、相等最高。</div></div></div>
+<div class="section"><div class="keypoint"><strong>产量三线：</strong><ul>
+<li>MP 与 AP 交于 AP <strong>最高点</strong>；<strong>MP = 0 时 TP 最大</strong></li>
+<li>边际产量递减发生在 MP 曲线开始下降之后（边际报酬递减规律）</li>
+</ul></div></div>
+<h2 id="g3">📈 市场结构与要素（第4–5章）</h2>
+<div class="section"><h3>完全竞争市场</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">完全竞争：行业定价，企业接受</div><div class="fig-sub">左：整个行业的供求交点定出均衡价格 P0；右：个别企业按 P0 面对一条水平需求线</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="完全竞争：行业定价，企业接受"><defs><pattern id="f6g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f6a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="50" width="210" height="280" fill="url(#f6g)"/><rect x="360" y="50" width="210" height="280" fill="url(#f6g)"/><line x1="70" y1="330" x2="70" y2="50" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f6a)"/><line x1="70" y1="330" x2="285" y2="330" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f6a)"/><text x="291" y="335" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Q</text><text x="78" y="52" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">P</text><line x1="85" y1="90" x2="255" y2="280" stroke="#185FA5" stroke-width="2.5"/><line x1="90" y1="300" x2="260" y2="85" stroke="#3E8E5A" stroke-width="2.5"/><text x="259" y="292" font-size="13" fill="#185FA5" text-anchor="start" font-weight="bold">D</text><text x="264" y="80" font-size="13" fill="#3E8E5A" text-anchor="start" font-weight="bold">S</text><line x1="70" y1="192" x2="176" y2="192" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><text x="64" y="196" font-size="12.5" fill="#185FA5" text-anchor="end" font-weight="bold">P0</text><circle cx="176" cy="192" r="4.5" fill="#185FA5" stroke="#fff" stroke-width="1.5"/><text x="186" y="212" font-size="12.5" fill="#185FA5" text-anchor="start" font-weight="bold">E</text><text x="175" y="356" font-size="12.5" fill="#6B6B66" text-anchor="middle" font-weight="bold">整个行业</text><line x1="176" y1="192" x2="360" y2="192" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="360" y1="330" x2="360" y2="50" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f6a)"/><line x1="360" y1="330" x2="575" y2="330" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f6a)"/><text x="581" y="335" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Q</text><text x="368" y="52" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">P</text><line x1="360" y1="192" x2="550" y2="192" stroke="#185FA5" stroke-width="2.5"/><text x="455" y="180" font-size="12.5" fill="#185FA5" text-anchor="middle" font-weight="bold">d＝AR＝MR（三线合一）</text><circle cx="440" cy="192" r="4" fill="#fff" stroke="#185FA5" stroke-width="2"/><text x="465" y="356" font-size="12.5" fill="#6B6B66" text-anchor="middle" font-weight="bold">个别企业</text></svg><div class="fig-note blue"><strong>个别企业的需求曲线＝平均收益线＝边际收益线（三线合一的水平线）</strong>，与行业需求曲线不是同一条线。总收益 TR＝P×Q 随销量上升，是条上升的线、不是水平线。</div></div></div>
+<div class="section"><div class="keypoint"><strong>完全竞争：</strong><ul>
+<li>厂商需求曲线是<strong>水平线</strong>：AR = MR = P（价格接受者）</li>
+<li>短期均衡条件 MR = MC；长期均衡时利润为零</li>
+</ul></div></div>
+<div class="section"><h3>完全垄断市场</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">完全垄断：两线重合、边下更陡</div><div class="fig-sub">需求曲线＝行业需求曲线；平均收益线与之重合，边际收益线在其下方且更陡峭</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="完全垄断：两线重合、边下更陡"><defs><pattern id="f7g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f7a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="40" width="460" height="310" fill="url(#f7g)"/><line x1="70" y1="350" x2="70" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f7a)"/><line x1="70" y1="350" x2="530" y2="350" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f7a)"/><text x="536" y="355" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Q（数量）</text><text x="80" y="50" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">P（价格）</text><line x1="110" y1="80" x2="480" y2="270" stroke="#185FA5" stroke-width="2.5"/><text x="486" y="276" font-size="13" fill="#185FA5" text-anchor="start" font-weight="bold">D＝AR</text><line x1="110" y1="80" x2="385" y2="362" stroke="#C0504D" stroke-width="2.5"/><text x="391" y="368" font-size="13" fill="#C0504D" text-anchor="start" font-weight="bold">MR</text><line x1="300" y1="184" x2="300" y2="268" stroke="#9AA7B5" stroke-width="1.6"/><polygon points="295.5,190 300,184 304.5,190" fill="#9AA7B5"/><polygon points="295.5,262 300,268 304.5,262" fill="#9AA7B5"/><text x="310" y="232" font-size="12.5" fill="#6B6B66" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">MR＜AR</text></svg><div class="fig-note blue"><strong>需求曲线＝AR（两线重合），MR 在 AR 下方且更陡</strong>（多卖就要降价，MR＜AR）。注意对比：三线合一（需＝均＝边）只属于完全竞争，完全垄断必错。</div></div></div>
+<div class="section"><div class="keypoint"><strong>完全垄断：</strong><ul>
+<li>需求曲线<strong>向右下方倾斜</strong>，MR &lt; AR（MR 线在下方、斜率更陡）</li>
+<li>可实行<strong>价格歧视</strong>：一级（完全）、二级（按购买量）、三级（按人群/市场分割）</li>
+</ul></div></div>
+<div class="section"><h3>劳动力供给曲线（向后弯曲）</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">个人劳动供给曲线：向后弯曲</div><div class="fig-sub">两股力量同时存在，强弱随贫富变化：穷时替代赢、富时收入赢</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="个人劳动供给曲线：向后弯曲"><defs><pattern id="f8g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f8a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="40" width="460" height="310" fill="url(#f8g)"/><line x1="70" y1="350" x2="70" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f8a)"/><line x1="70" y1="350" x2="530" y2="350" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f8a)"/><text x="536" y="355" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">L（劳动时间）</text><text x="80" y="50" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">W（工资）</text><path d="M 95,320 C 180,190 260,125 300,120 C 285,116 250,95 215,62" fill="none" stroke="#185FA5" stroke-width="2.5"/><text x="226" y="66" font-size="12.5" fill="#185FA5" text-anchor="start" font-weight="bold">S（劳动供给）</text><line x1="70" y1="120" x2="300" y2="120" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><text x="64" y="124" font-size="12.5" fill="#6B6B66" text-anchor="end" font-weight="normal">W0</text><circle cx="300" cy="120" r="4.5" fill="#C0504D" stroke="#fff" stroke-width="1.5"/><text x="308" y="116" font-size="11.5" fill="#C0504D" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">转折点</text><text x="230" y="232" font-size="12" fill="#6B6B66" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">工资低（穷）：替代效应＞收入效应</text><text x="242" y="250" font-size="12" fill="#6B6B66" text-anchor="start" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">→ 供给随工资增加</text><text x="210" y="100" font-size="12" fill="#6B6B66" text-anchor="end" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">工资高：收入效应＞替代效应</text><text x="200" y="82" font-size="12" fill="#6B6B66" text-anchor="end" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">→ 供给随工资减少</text></svg><div class="fig-note blue"><strong>上升段：替代效应＞收入效应，供给随工资增加；后弯段：收入效应＞替代效应，供给随工资减少</strong>。向后弯曲的解释＝工资增加的替代效应与收入效应的相互关系。注意：个人的后弯，整个市场的劳动供给曲线仍向右上方倾斜。</div></div></div>
+<div class="section"><div class="keypoint"><strong>向后弯曲的原因：</strong><p>工资率较低时，替代效应占上风（工资涨 → 多劳动）；工资高到一定程度后，<strong>收入效应 &gt; 替代效应</strong>（富了想多休闲）→ 曲线向后弯。经济基础第 5 章与人力第 11 章同源考点。</p></div></div>
+<h2 id="g4">📈 宏观经济（第6–9章）</h2>
+<div class="section"><h3>消费函数与储蓄函数</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">消费函数与储蓄函数：互为补数</div><div class="fig-sub">左：C＝α＋βY 与 45°线交于收支相抵点 B；右：S＝Y−C，在 B′ 处 S＝0</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="消费函数与储蓄函数：互为补数"><defs><pattern id="f9g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f9a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="40" width="230" height="270" fill="url(#f9g)"/><rect x="360" y="40" width="220" height="270" fill="url(#f9g)"/><line x1="70" y1="310" x2="70" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f9a)"/><line x1="70" y1="310" x2="300" y2="310" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f9a)"/><text x="306" y="315" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Y（收入）</text><text x="78" y="52" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">C（消费）</text><line x1="70" y1="310" x2="300" y2="98" stroke="#6B6B66" stroke-width="1.6" stroke-dasharray="6 4"/><text x="206" y="128" font-size="11.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">45°线（C＝Y）</text><line x1="70" y1="250" x2="300" y2="160" stroke="#185FA5" stroke-width="2.5"/><text x="306" y="158" font-size="12.5" fill="#185FA5" text-anchor="start" font-weight="bold">C＝α＋βY</text><text x="62" y="254" font-size="12.5" fill="#185FA5" text-anchor="end" font-weight="bold">α</text><circle cx="183" cy="206" r="4.5" fill="#fff" stroke="#185FA5" stroke-width="2"/><text x="183" y="232" font-size="11.5" fill="#185FA5" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">B（收支相抵）</text><text x="100" y="262" font-size="11" fill="#C0504D" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">C＞Y</text><text x="272" y="142" font-size="11" fill="#3E8E5A" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">C＜Y</text><text x="185" y="352" font-size="12" fill="#6B6B66" text-anchor="middle" font-weight="bold">消费函数</text><line x1="360" y1="310" x2="360" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f9a)"/><line x1="360" y1="310" x2="580" y2="310" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f9a)"/><text x="586" y="315" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Y（收入）</text><text x="368" y="52" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">S（储蓄）</text><line x1="360" y1="370" x2="560" y2="240" stroke="#3E8E5A" stroke-width="2.5"/><text x="470" y="258" font-size="12.5" fill="#3E8E5A" text-anchor="middle" font-weight="bold">S＝−α＋(1−β)Y</text><text x="352" y="374" font-size="12" fill="#3E8E5A" text-anchor="end" font-weight="bold">−α</text><circle cx="466" cy="310" r="4.5" fill="#fff" stroke="#3E8E5A" stroke-width="2"/><text x="474" y="330" font-size="11.5" fill="#3E8E5A" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">B′（S＝0）</text><text x="398" y="330" font-size="11" fill="#C0504D" text-anchor="middle" font-weight="normal">S＜0</text><text x="525" y="288" font-size="11" fill="#3E8E5A" text-anchor="middle" font-weight="normal">S＞0</text><text x="470" y="352" font-size="12" fill="#6B6B66" text-anchor="middle" font-weight="bold">储蓄函数</text></svg><div class="fig-note blue"><strong>APC＋APS＝1，MPC（β）＋MPS（s）＝1——同平同边才凑 1</strong>；B 左侧 C＞Y（入不敷出），右侧 C＜Y（有储蓄）。MPC＜APC：平均里有自发消费 α 垫底。</div></div></div>
+<div class="section"><div class="keypoint"><strong>消费与储蓄：</strong><ul>
+<li>消费函数 C = α + βY（β = 边际消费倾向 MPC）</li>
+<li><strong>MPC + MPS = 1</strong>；乘数 = 1/(1−MPC)，越敢花钱乘数越大</li>
+</ul></div></div>
+<div class="section"><h3>总需求与总供给（AD-AS）</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">总供求模型：需求拉动型通货膨胀</div><div class="fig-sub">短期：AD 右移 → 产量↑、价格↑；长期：AS 垂直，AD 右移只推高价格</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="总供求模型：需求拉动型通货膨胀"><defs><pattern id="f10g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f10a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="40" width="460" height="310" fill="url(#f10g)"/><line x1="70" y1="350" x2="70" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f10a)"/><line x1="70" y1="350" x2="530" y2="350" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f10a)"/><text x="536" y="355" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Y（总产出）</text><text x="80" y="50" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">P（价格总水平）</text><line x1="380" y1="80" x2="380" y2="350" stroke="#6B6B66" stroke-width="2"/><text x="386" y="92" font-size="12" fill="#6B6B66" text-anchor="start" font-weight="bold">LRAS（长期）</text><text x="380" y="368" font-size="11.5" fill="#6B6B66" text-anchor="middle" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Y*（潜在产出）</text><path d="M 120,300 C 200,268 320,205 450,120" fill="none" stroke="#3E8E5A" stroke-width="2.5"/><text x="456" y="116" font-size="12.5" fill="#3E8E5A" text-anchor="start" font-weight="bold">SRAS（短期）</text><line x1="110" y1="130" x2="380" y2="260" stroke="#185FA5" stroke-width="2.2"/><line x1="170" y1="130" x2="440" y2="260" stroke="#185FA5" stroke-width="2.2" stroke-dasharray="7 4"/><text x="96" y="126" font-size="12.5" fill="#185FA5" text-anchor="end" font-weight="bold">AD0</text><text x="446" y="266" font-size="12.5" fill="#185FA5" text-anchor="start" font-weight="bold">AD1</text><line x1="205" y1="142" x2="258" y2="142" stroke="#9AA7B5" stroke-width="1.8" marker-end="url(#f10a)"/><text x="232" y="132" font-size="12" fill="#6B6B66" text-anchor="middle" font-weight="bold">总需求增长</text><line x1="70" y1="232" x2="285" y2="232" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="70" y1="206" x2="326" y2="206" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="285" y1="232" x2="285" y2="350" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="326" y1="206" x2="326" y2="350" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><text x="64" y="236" font-size="12" fill="#6B6B66" text-anchor="end" font-weight="normal">P0</text><text x="64" y="202" font-size="12" fill="#C0504D" text-anchor="end" font-weight="bold">P1</text><text x="285" y="364" font-size="11.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">Y0</text><text x="326" y="364" font-size="11.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">Y1</text><circle cx="285" cy="232" r="4.5" fill="#fff" stroke="#185FA5" stroke-width="2"/><circle cx="326" cy="206" r="4.5" fill="#C0504D" stroke="#fff" stroke-width="1.5"/><text x="336" y="196" font-size="11.5" fill="#C0504D" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">E1（价格↑）</text></svg><div class="fig-note blue"><strong>短期 AS 向右上（价格影响供给）；长期 AS 垂直——只取决于劳动、资本、技术与经济体制</strong>，与价格总水平无关。长期里总供给定产量、总需求定价格。决定总供给的基本因素＝价格和成本。</div></div></div>
+<div class="section"><div class="keypoint"><strong>AD-AS 三段：</strong><ul>
+<li>AD 曲线向右下方倾斜（财富效应、利率效应、出口效应）</li>
+<li>AS 曲线三段：<strong>水平</strong>（凯恩斯区域，资源大量闲置）→ <strong>向右上方</strong>（常规区域）→ <strong>垂直</strong>（长期，充分就业，产出不随价格变）</li>
+</ul></div></div>
+<div class="section"><h3>菲利普斯曲线</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">菲利普斯曲线：短期有得换，长期一条竖线</div><div class="fig-sub">最初版：失业率↔货币工资率（菲利普斯）；简单版：通胀率↔失业率</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="菲利普斯曲线：短期有得换，长期一条竖线"><defs><pattern id="f11g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f11a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="40" width="460" height="310" fill="url(#f11g)"/><line x1="70" y1="350" x2="70" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f11a)"/><line x1="70" y1="350" x2="530" y2="350" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f11a)"/><text x="536" y="355" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">u（失业率）</text><text x="80" y="50" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">π（通货膨胀率）</text><line x1="290" y1="80" x2="290" y2="350" stroke="#6B6B66" stroke-width="2" stroke-dasharray="7 4"/><text x="298" y="96" font-size="11.5" fill="#6B6B66" text-anchor="start" font-weight="bold">长期（弗里德曼）：</text><text x="298" y="112" font-size="11.5" fill="#6B6B66" text-anchor="start" font-weight="normal">替代关系不存在</text><text x="290" y="368" font-size="11.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">u*（自然失业率）</text><path d="M 110,80 C 200,180 300,255 450,320" fill="none" stroke="#C0504D" stroke-width="2.5"/><text x="456" y="326" font-size="12" fill="#C0504D" text-anchor="start" font-weight="bold">短期（萨缪尔森、索洛）</text><circle cx="290" cy="248" r="4.5" fill="#fff" stroke="#C0504D" stroke-width="2"/><text x="176" y="116" font-size="12" fill="#C0504D" text-anchor="end" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">替代关系：</text><text x="176" y="132" font-size="12" fill="#C0504D" text-anchor="end" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">高通胀 ⇄ 低失业</text></svg><div class="fig-note blue"><strong>短期：通胀与失业存在替代关系</strong>——用高通胀换低失业，或用高失业换低通胀；<strong>长期（弗里德曼）：替代关系不存在</strong>，曲线垂直于横轴——通胀"骗"不出低失业。版本口诀：最初工资、简单通胀。</div></div></div>
+<div class="section"><div class="keypoint"><strong>菲利普斯：</strong><p>失业率与通货膨胀率<strong>此消彼长</strong>（跷跷板）：压失业 → 通胀升；压通胀 → 失业升。</p></div></div>
+<div class="section"><h3>拉弗曲线</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">拉弗曲线：税率与税收收入</div><div class="fig-sub">先增后减有拐点——保持适度的宏观税负水平</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="拉弗曲线：税率与税收收入"><defs><pattern id="f12g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f12a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="40" width="460" height="310" fill="url(#f12g)"/><line x1="70" y1="350" x2="70" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f12a)"/><line x1="70" y1="350" x2="530" y2="350" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f12a)"/><text x="536" y="355" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">t（税率）</text><text x="80" y="50" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">T（税收收入）</text><text x="80" y="368" font-size="11" fill="#6B6B66" text-anchor="middle" font-weight="normal">0</text><text x="520" y="368" font-size="11" fill="#6B6B66" text-anchor="middle" font-weight="normal">100%</text><path d="M 80,345 C 150,180 220,95 300,90" fill="none" stroke="#185FA5" stroke-width="2.5"/><path d="M 300,90 C 380,85 460,180 520,345" fill="none" stroke="#C0504D" stroke-width="2.5"/><circle cx="300" cy="90" r="4.5" fill="#185FA5" stroke="#fff" stroke-width="1.5"/><text x="308" y="82" font-size="12" fill="#185FA5" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">拐点 t*：税收最大</text><text x="400" y="168" font-size="12.5" fill="#C0504D" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">禁区：税率过高</text><text x="424" y="186" font-size="11.5" fill="#C0504D" text-anchor="start" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">税源萎缩、税收反降</text><text x="150" y="176" font-size="12" fill="#185FA5" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">税率↑ 税收↑</text></svg><div class="fig-note blue"><strong>税率从 0 提高，税收先增加；越过拐点后再提高，税收反而减少</strong>——"税率越高、税收越多"必错。政策提示：征税有禁区、注意涵养税源（税源＝国民收入/GDP）；理论来源：供应学派（20 世纪 70 年代，回应凯恩斯主义需求管理失效）。</div></div></div>
+<div class="section"><div class="keypoint"><strong>拉弗：</strong><p>税率与税收收入<strong>倒 U 形</strong>：税率过高 → 抑制劳动与投资 → 税收反而减少。</p></div></div>
+<div class="section"><h3>经济周期波动</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">经济周期：围绕趋势的扩张与收缩</div><div class="fig-sub">总体经济活动沿增长的总体趋势有规律地波动，由一组经济总量指标共同反映</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="经济周期：围绕趋势的扩张与收缩"><defs><pattern id="f13g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f13a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="90" y="40" width="440" height="310" fill="url(#f13g)"/><line x1="90" y1="350" x2="90" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f13a)"/><line x1="90" y1="350" x2="530" y2="350" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f13a)"/><text x="536" y="355" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">t（时间）</text><text x="98" y="50" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Y（总体经济活动）</text><line x1="90" y1="300" x2="510" y2="110" stroke="#6B6B66" stroke-width="1.8" stroke-dasharray="7 4"/><text x="516" y="106" font-size="11.5" fill="#6B6B66" text-anchor="start" font-weight="normal">增长的总体趋势</text><path d="M 90,300 C 113,290 138,233 160,233 C 182,233 208,272 230,272 C 252,272 278,170 300,170 C 322,170 348,208 370,208 C 392,208 418,107 440,107 C 462,107 488,110 510,110" fill="none" stroke="#185FA5" stroke-width="2.5"/><text x="516" y="122" font-size="11.5" fill="#185FA5" text-anchor="start" font-weight="bold">实际波动</text><circle cx="160" cy="233" r="4.5" fill="#C0504D" stroke="#fff" stroke-width="1.5"/><text x="160" y="222" font-size="11.5" fill="#C0504D" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">顶峰</text><circle cx="230" cy="272" r="4.5" fill="#fff" stroke="#3E8E5A" stroke-width="2"/><text x="240" y="276" font-size="11.5" fill="#3E8E5A" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">谷底</text><text x="160" y="300" font-size="12" fill="#6B6B66" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">收缩（衰退）</text><text x="285" y="318" font-size="12" fill="#3E8E5A" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">扩张（复苏→繁荣）</text></svg><div class="fig-note blue"><strong>扩张阶段（复苏→繁荣）：增长持续提高、常伴通货膨胀；收缩（衰退）阶段：增长下滑、失业率提高</strong>。类型判断看低谷年增长率：为负＝古典型（总量绝对减少），为正＝增长型（我国改革开放以来属增长型）。</div></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 复苏→繁荣→衰退→萧条</div><p>四阶段顺序记"复繁衰萧"；顶峰与谷底是转折点。长（康德拉季耶夫 50–60 年）、中（朱格拉 8–10 年）、短（基钦 3–5 年）。</p></div></div>
+<h2 id="g5">📈 市场失灵与财政（第6、13章）</h2>
+<div class="section"><h3>外部性</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">外部性与资源配置失当</div><div class="fig-sub">私人账本与社会账本错位，市场自己算不出最优产量</div><svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="外部性与资源配置失当"><defs><pattern id="f19g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f19a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="50" width="230" height="280" fill="url(#f19g)"/><rect x="360" y="50" width="230" height="280" fill="url(#f19g)"/><line x1="70" y1="330" x2="70" y2="50" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f19a)"/><line x1="70" y1="330" x2="300" y2="330" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f19a)"/><text x="306" y="335" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Q</text><text x="78" y="58" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">P</text><line x1="85" y1="310" x2="290" y2="120" stroke="#3E8E5A" stroke-width="2.2"/><line x1="85" y1="120" x2="290" y2="280" stroke="#185FA5" stroke-width="2.2"/><line x1="85" y1="60" x2="290" y2="220" stroke="#185FA5" stroke-width="2.2" stroke-dasharray="7 4"/><text x="296" y="288" font-size="11.5" fill="#185FA5" text-anchor="start" font-weight="bold">私人收益</text><text x="296" y="226" font-size="11.5" fill="#3E8E5A" text-anchor="start" font-weight="bold">社会收益</text><text x="296" y="114" font-size="11.5" fill="#3E8E5A" text-anchor="start" font-weight="bold">S（成本）</text><circle cx="199" cy="207" r="4.5" fill="#fff" stroke="#185FA5" stroke-width="2"/><circle cx="235" cy="174" r="4.5" fill="#3E8E5A" stroke="#fff" stroke-width="1.5"/><line x1="199" y1="207" x2="199" y2="330" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="235" y1="174" x2="235" y2="330" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><text x="193" y="348" font-size="11.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">Q1</text><text x="240" y="348" font-size="11.5" fill="#3E8E5A" text-anchor="middle" font-weight="bold">Q2</text><text x="185" y="44" font-size="12.5" fill="#185FA5" text-anchor="middle" font-weight="bold">外部经济（正外部性）</text><text x="217" y="92" font-size="11.5" fill="#C0504D" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">产出偏低</text><line x1="360" y1="330" x2="360" y2="50" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f19a)"/><line x1="360" y1="330" x2="590" y2="330" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f19a)"/><text x="596" y="335" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Q</text><text x="368" y="58" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">P</text><line x1="375" y1="120" x2="580" y2="280" stroke="#185FA5" stroke-width="2.2"/><line x1="375" y1="310" x2="580" y2="120" stroke="#3E8E5A" stroke-width="2.2"/><line x1="375" y1="250" x2="580" y2="60" stroke="#3E8E5A" stroke-width="2.2" stroke-dasharray="7 4"/><text x="586" y="288" font-size="11.5" fill="#185FA5" text-anchor="start" font-weight="bold">需求</text><text x="586" y="114" font-size="11.5" fill="#3E8E5A" text-anchor="start" font-weight="bold">私人成本</text><text x="586" y="56" font-size="11.5" fill="#C0504D" text-anchor="start" font-weight="bold">社会成本</text><circle cx="487" cy="208" r="4.5" fill="#fff" stroke="#185FA5" stroke-width="2"/><circle cx="452" cy="180" r="4.5" fill="#C0504D" stroke="#fff" stroke-width="1.5"/><line x1="487" y1="208" x2="487" y2="330" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="452" y1="180" x2="452" y2="330" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><text x="481" y="348" font-size="11.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">Q1</text><text x="446" y="348" font-size="11.5" fill="#C0504D" text-anchor="middle" font-weight="bold">Q2</text><text x="475" y="44" font-size="12.5" fill="#C0504D" text-anchor="middle" font-weight="bold">外部不经济（负外部性）</text><text x="469" y="92" font-size="11.5" fill="#C0504D" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">产出偏高</text></svg><div class="fig-note blue"><strong>外部经济：私人收益＜社会收益 → 产出偏低（Q1＜Q2）；外部不经济：私人成本＜社会成本 → 产出偏高（Q1＞Q2）</strong>。口诀：正外低、负外高——拿不全收益就少干，甩不掉成本就多干。</div></div></div>
+<div class="section"><div class="keypoint"><strong>外部性判方向：</strong><ul>
+<li>负外部性：私人成本 &lt; 社会成本 → 产出<strong>高于</strong>社会最优 → 征税</li>
+<li>正外部性：私人收益 &lt; 社会收益 → 产出<strong>低于</strong>社会最优 → 补贴</li>
+</ul></div></div>
+<div class="section"><h3>税负转嫁（弹性决定谁买单）</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">税负归宿：供需弹性决定谁扛税</div><div class="fig-sub">征税使 S0 上移到 S1（税额 t）：涨价部分买方扛、少收部分卖方扛</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="税负归宿：供需弹性决定谁扛税"><defs><pattern id="f20g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f20a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="50" width="230" height="280" fill="url(#f20g)"/><rect x="360" y="50" width="230" height="280" fill="url(#f20g)"/><line x1="70" y1="330" x2="70" y2="50" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f20a)"/><line x1="70" y1="330" x2="300" y2="330" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f20a)"/><text x="306" y="335" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Q</text><text x="78" y="58" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">P</text><line x1="130" y1="70" x2="230" y2="310" stroke="#185FA5" stroke-width="2.2"/><line x1="100" y1="290" x2="280" y2="110" stroke="#3E8E5A" stroke-width="2.2"/><line x1="100" y1="230" x2="280" y2="50" stroke="#3E8E5A" stroke-width="2.2" stroke-dasharray="7 4"/><text x="236" y="316" font-size="11.5" fill="#185FA5" text-anchor="start" font-weight="bold">D（陡）</text><text x="286" y="106" font-size="11.5" fill="#3E8E5A" text-anchor="start" font-weight="bold">S0</text><text x="286" y="46" font-size="11.5" fill="#3E8E5A" text-anchor="start" font-weight="bold">S1（＋税）</text><line x1="70" y1="204" x2="186" y2="204" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="70" y1="162" x2="168" y2="162" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><text x="64" y="208" font-size="11.5" fill="#6B6B66" text-anchor="end" font-weight="normal">P0</text><text x="64" y="158" font-size="11.5" fill="#C0504D" text-anchor="end" font-weight="bold">P1</text><line x1="168" y1="166" x2="168" y2="218" stroke="#C0504D" stroke-width="1.6"/><polygon points="163.5,172 168,166 172.5,172" fill="#C0504D"/><polygon points="163.5,212 168,218 172.5,212" fill="#C0504D"/><line x1="120" y1="204" x2="168" y2="204" stroke="#9AA7B5" stroke-width="1.2" stroke-dasharray="3 3"/><text x="243" y="178" font-size="11.5" fill="#C0504D" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">买方承担大头</text><text x="174" y="240" font-size="11" fill="#6B6B66" text-anchor="start" font-weight="normal" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">卖方承担小头</text><text x="185" y="42" font-size="12.5" fill="#185FA5" text-anchor="middle" font-weight="bold">需求弹性小（必需品）</text><text x="185" y="388" font-size="12" fill="#C0504D" text-anchor="middle" font-weight="bold">税负容易转嫁</text><line x1="360" y1="330" x2="360" y2="50" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f20a)"/><line x1="360" y1="330" x2="590" y2="330" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f20a)"/><text x="596" y="335" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Q</text><text x="368" y="58" font-size="12.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">P</text><line x1="375" y1="150" x2="580" y2="230" stroke="#185FA5" stroke-width="2.2"/><line x1="390" y1="300" x2="570" y2="120" stroke="#3E8E5A" stroke-width="2.2"/><line x1="390" y1="240" x2="570" y2="60" stroke="#3E8E5A" stroke-width="2.2" stroke-dasharray="7 4"/><text x="586" y="238" font-size="11.5" fill="#185FA5" text-anchor="start" font-weight="bold">D（平）</text><text x="576" y="116" font-size="11.5" fill="#3E8E5A" text-anchor="start" font-weight="bold">S0</text><text x="576" y="56" font-size="11.5" fill="#3E8E5A" text-anchor="start" font-weight="bold">S1（＋税）</text><line x1="360" y1="195" x2="495" y2="195" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="360" y1="179" x2="451" y2="179" stroke="#B9C4D0" stroke-width="1.2" stroke-dasharray="4 4"/><text x="354" y="199" font-size="11.5" fill="#6B6B66" text-anchor="end" font-weight="normal">P0</text><text x="354" y="175" font-size="11.5" fill="#C0504D" text-anchor="end" font-weight="bold">P1</text><line x1="451" y1="183" x2="451" y2="235" stroke="#C0504D" stroke-width="1.6"/><polygon points="446.5,189 451,183 455.5,189" fill="#C0504D"/><polygon points="446.5,229 451,235 455.5,229" fill="#C0504D"/><line x1="451" y1="195" x2="520" y2="195" stroke="#9AA7B5" stroke-width="1.2" stroke-dasharray="3 3"/><text x="524" y="190" font-size="11.5" fill="#185FA5" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">买方承担小头</text><text x="458" y="244" font-size="11" fill="#C0504D" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">卖方承担大头</text><text x="475" y="42" font-size="12.5" fill="#185FA5" text-anchor="middle" font-weight="bold">需求弹性大（非必需品）</text><text x="475" y="388" font-size="12" fill="#C0504D" text-anchor="middle" font-weight="bold">税负难转嫁</text></svg><div class="fig-note blue"><strong>需求弹性小（必需品）、供给弹性大 → 买方承担大头，税负容易转嫁；需求弹性大（非必需品）→ 卖方承担大头，税负难转嫁</strong>。口诀：求小供大易，必需间接范围宽。</div></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 求小供大易转嫁</div><p>需求弹性小（必需品）+ 供给弹性大 → <strong>买方承担大头</strong>，税负容易转嫁；反之卖方承担。</p></div></div>
+<h2 id="g6">📈 统计（第23–27章）</h2>
+<div class="section"><h3>相关关系散点图</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">散点图：相关方向一眼判</div><div class="fig-sub">点自左下走向右上＝正相关；左上走向右下＝负相关；杂乱无规律＝不相关</div><svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="散点图：相关方向一眼判"><defs><pattern id="f16g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f16a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><line x1="70" y1="320" x2="70" y2="60" stroke="#3d3d3a" stroke-width="1.6"/><line x1="70" y1="320" x2="220" y2="320" stroke="#3d3d3a" stroke-width="1.6"/><circle cx="80" cy="295" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="90" cy="282" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="100" cy="290" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="112" cy="268" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="120" cy="275" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="132" cy="252" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="142" cy="260" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="152" cy="242" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="165" cy="246" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="175" cy="225" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="188" cy="232" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="200" cy="210" r="3.5" fill="#185FA5" opacity="0.85"/><line x1="75" y1="305" x2="215" y2="205" stroke="#9AA7B5" stroke-width="1.4" stroke-dasharray="5 4"/><line x1="250" y1="320" x2="250" y2="60" stroke="#3d3d3a" stroke-width="1.6"/><line x1="250" y1="320" x2="400" y2="320" stroke="#3d3d3a" stroke-width="1.6"/><circle cx="260" cy="215" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="270" cy="230" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="280" cy="222" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="292" cy="248" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="300" cy="240" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="312" cy="262" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="322" cy="255" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="332" cy="272" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="345" cy="268" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="355" cy="290" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="368" cy="282" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="380" cy="300" r="3.5" fill="#185FA5" opacity="0.85"/><line x1="255" y1="205" x2="395" y2="305" stroke="#9AA7B5" stroke-width="1.4" stroke-dasharray="5 4"/><line x1="430" y1="320" x2="430" y2="60" stroke="#3d3d3a" stroke-width="1.6"/><line x1="430" y1="320" x2="580" y2="320" stroke="#3d3d3a" stroke-width="1.6"/><circle cx="445" cy="250" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="455" cy="300" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="465" cy="225" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="475" cy="285" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="485" cy="200" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="500" cy="310" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="510" cy="240" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="520" cy="290" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="530" cy="215" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="540" cy="260" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="555" cy="230" r="3.5" fill="#185FA5" opacity="0.85"/><circle cx="565" cy="300" r="3.5" fill="#185FA5" opacity="0.85"/><text x="145" y="348" font-size="13" fill="#185FA5" text-anchor="middle" font-weight="bold">正相关（同向）</text><text x="325" y="348" font-size="13" fill="#C0504D" text-anchor="middle" font-weight="bold">负相关（反向）</text><text x="505" y="348" font-size="13" fill="#6B6B66" text-anchor="middle" font-weight="bold">不相关（无规律）</text><text x="60" y="55" font-size="12" fill="#2C2C2A" text-anchor="end" font-weight="bold">Y</text><text x="230" y="332" font-size="12" fill="#2C2C2A" text-anchor="start" font-weight="bold">X</text><text x="240" y="55" font-size="12" fill="#2C2C2A" text-anchor="end" font-weight="bold">Y</text><text x="410" y="332" font-size="12" fill="#2C2C2A" text-anchor="start" font-weight="bold">X</text><text x="420" y="55" font-size="12" fill="#2C2C2A" text-anchor="end" font-weight="bold">Y</text><text x="590" y="332" font-size="12" fill="#2C2C2A" text-anchor="start" font-weight="bold">X</text></svg><div class="fig-note blue"><strong>三个维度各管一件事</strong>：程度（完全相关／不完全相关／不相关——大部分现象属不完全相关）、方向（正／负）、形式（线性／非线性），三者可自由组合。</div></div></div>
+<div class="section"><div class="keypoint"><strong>相关方向：</strong><p>散点从左下到右上 = <strong>正相关</strong>；左上到右下 = <strong>负相关</strong>；一团乱 = 不相关。相关系数 r ∈ [−1, 1]，|r| 越大线性关系越强。</p></div></div>
+<div class="section"><h3>一元线性回归</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">最小二乘法：让残差的平方和最小</div><div class="fig-sub">竖直虚线＝每个观测点的残差（观测值 yi − 估计值 ŷi），直线选得让全部残差的平方和最小</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="最小二乘法：让残差的平方和最小"><defs><pattern id="f17g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f17a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="70" y="40" width="460" height="310" fill="url(#f17g)"/><line x1="70" y1="350" x2="70" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f17a)"/><line x1="70" y1="350" x2="530" y2="350" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f17a)"/><text x="536" y="355" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">X（自变量）</text><text x="80" y="50" font-size="13.5" fill="#2C2C2A" text-anchor="start" font-weight="bold">Y（因变量）</text><line x1="90" y1="300" x2="510" y2="110" stroke="#3E8E5A" stroke-width="2.2"/><line x1="110" y1="285" x2="110" y2="291" stroke="#C0504D" stroke-width="1.4" stroke-dasharray="3 3"/><line x1="150" y1="258" x2="150" y2="273" stroke="#C0504D" stroke-width="1.4" stroke-dasharray="3 3"/><line x1="190" y1="240" x2="190" y2="255" stroke="#C0504D" stroke-width="1.4" stroke-dasharray="3 3"/><line x1="230" y1="255" x2="230" y2="237" stroke="#C0504D" stroke-width="1.4" stroke-dasharray="3 3"/><line x1="270" y1="200" x2="270" y2="219" stroke="#C0504D" stroke-width="1.4" stroke-dasharray="3 3"/><line x1="310" y1="215" x2="310" y2="201" stroke="#C0504D" stroke-width="1.4" stroke-dasharray="3 3"/><line x1="350" y1="165" x2="350" y2="182" stroke="#C0504D" stroke-width="1.4" stroke-dasharray="3 3"/><line x1="390" y1="180" x2="390" y2="164" stroke="#C0504D" stroke-width="1.4" stroke-dasharray="3 3"/><line x1="430" y1="130" x2="430" y2="146" stroke="#C0504D" stroke-width="1.4" stroke-dasharray="3 3"/><line x1="470" y1="145" x2="470" y2="128" stroke="#C0504D" stroke-width="1.4" stroke-dasharray="3 3"/><circle cx="110" cy="285" r="4" fill="#185FA5"/><circle cx="150" cy="258" r="4" fill="#185FA5"/><circle cx="190" cy="240" r="4" fill="#185FA5"/><circle cx="230" cy="255" r="4" fill="#185FA5"/><circle cx="270" cy="200" r="4" fill="#185FA5"/><circle cx="310" cy="215" r="4" fill="#185FA5"/><circle cx="350" cy="165" r="4" fill="#185FA5"/><circle cx="390" cy="180" r="4" fill="#185FA5"/><circle cx="430" cy="130" r="4" fill="#185FA5"/><circle cx="470" cy="145" r="4" fill="#185FA5"/><text x="400" y="148" font-size="12.5" fill="#3E8E5A" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">拟合直线 ŷ＝β0＋β1X</text><text x="163" y="262" font-size="11.5" fill="#C0504D" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">残差</text><text x="310" y="88" font-size="12.5" fill="#C0504D" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">最小二乘法：Σ(yi−ŷi)² 最小</text></svg><div class="fig-note blue"><strong>使因变量的观测值与估计值之间的离差（误差项 ε）平方和最小</strong>。三个偷换陷阱：不是与均值比、不是乘积最小、不是标准差最小。</div></div></div>
+<div class="section"><div class="keypoint"><strong>回归线：</strong><p>最小二乘法拟合直线；r²（决定系数）越接近 1，拟合越好。</p></div></div>
+<h2 id="g7">📈 人力资源（第2–3章）</h2>
+<div class="section"><h3>管理方格图</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">管理方格图：先横后纵（横＝关心任务，纵＝关心人）</div><div class="fig-sub">布莱克和默顿：两个维度均高（9,9）效果最好</div><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="管理方格图：先横后纵（横＝关心任务，纵＝关心人）"><defs><pattern id="f15g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f15a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><line x1="90.0" y1="350" x2="90.0" y2="50" stroke="#EDF2F8" stroke-width="1"/><line x1="90" y1="350.0" x2="510" y2="350.0" stroke="#EDF2F8" stroke-width="1"/><line x1="142.5" y1="350" x2="142.5" y2="50" stroke="#EDF2F8" stroke-width="1"/><line x1="90" y1="312.5" x2="510" y2="312.5" stroke="#EDF2F8" stroke-width="1"/><line x1="195.0" y1="350" x2="195.0" y2="50" stroke="#EDF2F8" stroke-width="1"/><line x1="90" y1="275.0" x2="510" y2="275.0" stroke="#EDF2F8" stroke-width="1"/><line x1="247.5" y1="350" x2="247.5" y2="50" stroke="#EDF2F8" stroke-width="1"/><line x1="90" y1="237.5" x2="510" y2="237.5" stroke="#EDF2F8" stroke-width="1"/><line x1="300.0" y1="350" x2="300.0" y2="50" stroke="#EDF2F8" stroke-width="1"/><line x1="90" y1="200.0" x2="510" y2="200.0" stroke="#EDF2F8" stroke-width="1"/><line x1="352.5" y1="350" x2="352.5" y2="50" stroke="#EDF2F8" stroke-width="1"/><line x1="90" y1="162.5" x2="510" y2="162.5" stroke="#EDF2F8" stroke-width="1"/><line x1="405.0" y1="350" x2="405.0" y2="50" stroke="#EDF2F8" stroke-width="1"/><line x1="90" y1="125.0" x2="510" y2="125.0" stroke="#EDF2F8" stroke-width="1"/><line x1="457.5" y1="350" x2="457.5" y2="50" stroke="#EDF2F8" stroke-width="1"/><line x1="90" y1="87.5" x2="510" y2="87.5" stroke="#EDF2F8" stroke-width="1"/><line x1="510.0" y1="350" x2="510.0" y2="50" stroke="#EDF2F8" stroke-width="1"/><line x1="90" y1="50.0" x2="510" y2="50.0" stroke="#EDF2F8" stroke-width="1"/><line x1="90" y1="350" x2="90" y2="40" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f15a)"/><line x1="90" y1="350" x2="530" y2="350" stroke="#3d3d3a" stroke-width="1.8" marker-end="url(#f15a)"/><text x="536" y="355" font-size="13" fill="#2C2C2A" text-anchor="start" font-weight="bold">关心任务（横）</text><text x="98" y="50" font-size="13" fill="#2C2C2A" text-anchor="start" font-weight="bold">关心人（纵）</text><text x="86" y="368" font-size="11.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">1</text><text x="300" y="368" font-size="11.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">5</text><text x="514" y="368" font-size="11.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">9</text><text x="80" y="354" font-size="11.5" fill="#6B6B66" text-anchor="end" font-weight="normal">1</text><text x="80" y="204" font-size="11.5" fill="#6B6B66" text-anchor="end" font-weight="normal">5</text><text x="80" y="54" font-size="11.5" fill="#6B6B66" text-anchor="end" font-weight="normal">9</text><circle cx="90" cy="350" r="5.5" fill="#6B6B66" stroke="#fff" stroke-width="1.5"/><text x="104" y="342" font-size="12" fill="#6B6B66" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">(1,1) 无为而治</text><circle cx="510" cy="350" r="5.5" fill="#C0504D" stroke="#fff" stroke-width="1.5"/><text x="496" y="336" font-size="12" fill="#C0504D" text-anchor="end" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">(9,1) 任务</text><circle cx="90" cy="50" r="5.5" fill="#3E8E5A" stroke="#fff" stroke-width="1.5"/><text x="104" y="62" font-size="12" fill="#3E8E5A" text-anchor="start" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">(1,9) 乡村俱乐部</text><circle cx="510" cy="50" r="9" fill="none" stroke="#D9930D" stroke-width="2" opacity="0.35"/><circle cx="510" cy="50" r="6" fill="#D9930D" stroke="#fff" stroke-width="1.5"/><text x="492" y="56" font-size="12.5" fill="#D9930D" text-anchor="end" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">(9,9) 最理想</text><circle cx="300" cy="200" r="5.5" fill="#185FA5" stroke="#fff" stroke-width="1.5"/><text x="300" y="184" font-size="12" fill="#185FA5" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">(5,5) 中庸式</text></svg><div class="fig-note blue"><strong>五个特殊坐标：(9,9) 最理想、(1,1) 无为而治、(5,5) 中庸式、(1,9) 乡村俱乐部、(9,1) 任务</strong>。口诀：先横后纵——横 9 纵 1 是任务狂，横 1 纵 9 是乡村俱乐部。</div></div></div>
+<div class="section"><div class="mnemonic"><div class="mn-title">🧠 横任务纵人，9.9 最优</div><p>横轴关心<strong>任务</strong>、纵轴关心<strong>人</strong>；(9,9) 团队型最有效；(1,9) 乡村俱乐部型只顾人；(9,1) 任务型只顾活；(1,1) 贫乏型最差。</p></div></div>
+<div class="section"><h3>矩阵制组织结构</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">矩阵组织形式：纵向与横向管理系统相结合</div><div class="fig-sub">职能分工（纵向）＋ 产品／项目分工（横向）＝ 双重指挥的网格结构</div><svg viewBox="0 0 640 410" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="矩阵组织形式：纵向与横向管理系统相结合"><defs><pattern id="f14g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f14a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="60" y="60" width="480" height="300" fill="url(#f14g)"/><line x1="170" y1="164" x2="530" y2="164" stroke="#185FA5" stroke-width="1.6"/><line x1="170" y1="239" x2="530" y2="239" stroke="#185FA5" stroke-width="1.6"/><line x1="170" y1="314" x2="530" y2="314" stroke="#185FA5" stroke-width="1.6"/><line x1="250" y1="98" x2="250" y2="352" stroke="#3E8E5A" stroke-width="1.6"/><line x1="370" y1="98" x2="370" y2="352" stroke="#3E8E5A" stroke-width="1.6"/><line x1="490" y1="98" x2="490" y2="352" stroke="#3E8E5A" stroke-width="1.6"/><circle cx="250" cy="164" r="5" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><circle cx="250" cy="239" r="5" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><circle cx="250" cy="314" r="5" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><circle cx="370" cy="164" r="5" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><circle cx="370" cy="239" r="5" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><circle cx="370" cy="314" r="5" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><circle cx="490" cy="164" r="5" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><circle cx="490" cy="239" r="5" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><circle cx="490" cy="314" r="5" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><rect x="210" y="70" width="80" height="28" rx="6" fill="#fff" stroke="#3E8E5A" stroke-width="1.8"/><text x="250.0" y="88.68" font-size="13" fill="#3E8E5A" text-anchor="middle" font-weight="bold">项目A</text><rect x="330" y="70" width="80" height="28" rx="6" fill="#fff" stroke="#3E8E5A" stroke-width="1.8"/><text x="370.0" y="88.68" font-size="13" fill="#3E8E5A" text-anchor="middle" font-weight="bold">项目B</text><rect x="450" y="70" width="80" height="28" rx="6" fill="#fff" stroke="#3E8E5A" stroke-width="1.8"/><text x="490.0" y="88.68" font-size="13" fill="#3E8E5A" text-anchor="middle" font-weight="bold">项目C</text><rect x="70" y="150" width="100" height="28" rx="6" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><text x="120.0" y="168.68" font-size="13" fill="#185FA5" text-anchor="middle" font-weight="bold">研发部</text><rect x="70" y="225" width="100" height="28" rx="6" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><text x="120.0" y="243.68" font-size="13" fill="#185FA5" text-anchor="middle" font-weight="bold">测试部</text><rect x="70" y="300" width="100" height="28" rx="6" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><text x="120.0" y="318.68" font-size="13" fill="#185FA5" text-anchor="middle" font-weight="bold">市场部</text><circle cx="250" cy="164" r="7" fill="#D9930D" stroke="#fff" stroke-width="2"/><text x="120" y="120" font-size="12.5" fill="#185FA5" text-anchor="middle" font-weight="bold">职能线（纵向管理）</text><text x="370" y="52" font-size="12.5" fill="#3E8E5A" text-anchor="middle" font-weight="bold">项目／产品线（横向管理）</text><text x="108" y="372" font-size="12" fill="#185FA5" text-anchor="start" font-weight="bold">─ 职能指挥线（纵向）</text><text x="330" y="372" font-size="12" fill="#3E8E5A" text-anchor="start" font-weight="bold">─ 项目指挥线（横向）</text><text x="300" y="392" font-size="12" fill="#6B6B66" text-anchor="middle" font-weight="bold" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">交叉点＝员工：高亮的老王（研发部 × 项目A）同时接受两位领导指挥——一仆二主</text></svg><div class="fig-note blue"><strong>特点：一名员工有两位领导、两个层次的协调、横向联系灵活多样</strong>；优点：协作配合、适应性、减轻高层负担、相互制约；缺点：稳定性较差、多头指挥责任不清。适用环境：复杂／动态（口诀：矩复动）。</div></div></div>
+<div class="section"><div class="keypoint"><strong>矩阵制：</strong><p>双重领导（职能 + 项目）；优点：灵活、跨部门协作；缺点：<strong>多头领导</strong>、权责不清。案例题常考"为什么推诿扯皮"。</p></div></div>
+<div class="section"><h3>事业部制</h3></div>
+<div class="section"><div class="fig-card"><div class="fig-title">事业部制：集中决策，分散经营</div><div class="fig-sub">按产品或地区设事业部，每部都是基本经营单位（斯隆提出）</div><svg viewBox="0 0 640 290" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Microsoft YaHei','PingFang SC',sans-serif" role="img" aria-label="事业部制：集中决策，分散经营"><defs><pattern id="f18g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#EDF2F8" stroke-width="1"/></pattern><marker id="f18a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0L8,3.5L0,7Z" fill="#3d3d3a"/></marker></defs><rect x="60" y="40" width="520" height="240" fill="url(#f18g)"/><line x1="320" y1="86" x2="140" y2="150" stroke="#3d3d3a" stroke-width="1.6"/><line x1="320" y1="86" x2="320" y2="150" stroke="#3d3d3a" stroke-width="1.6"/><line x1="320" y1="86" x2="500" y2="150" stroke="#3d3d3a" stroke-width="1.6"/><line x1="140" y1="186" x2="140" y2="230" stroke="#3d3d3a" stroke-width="1.4"/><line x1="320" y1="186" x2="320" y2="230" stroke="#3d3d3a" stroke-width="1.4"/><line x1="500" y1="186" x2="500" y2="230" stroke="#3d3d3a" stroke-width="1.4"/><rect x="82" y="230" width="116" height="30" rx="6" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><text x="140.0" y="249.14" font-size="11.5" fill="#185FA5" text-anchor="middle" font-weight="bold">研发·生产·销售</text><rect x="262" y="230" width="116" height="30" rx="6" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><text x="320.0" y="249.14" font-size="11.5" fill="#185FA5" text-anchor="middle" font-weight="bold">研发·生产·销售</text><rect x="442" y="230" width="116" height="30" rx="6" fill="#fff" stroke="#185FA5" stroke-width="1.8"/><text x="500.0" y="249.14" font-size="11.5" fill="#185FA5" text-anchor="middle" font-weight="bold">研发·生产·销售</text><rect x="250" y="50" width="140" height="36" rx="6" fill="#185FA5" stroke="#185FA5"/><text x="320" y="72" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">总部（集中决策）</text><text x="320" y="106" font-size="11.5" fill="#6B6B66" text-anchor="middle" font-weight="normal">战略决策 · 长远规划 · 投资配置</text><rect x="80" y="150" width="120" height="36" rx="6" fill="#fff" stroke="#3E8E5A" stroke-width="1.8"/><text x="140.0" y="172.32" font-size="12" fill="#3E8E5A" text-anchor="middle" font-weight="bold">事业部A（冰箱）</text><rect x="260" y="150" width="120" height="36" rx="6" fill="#fff" stroke="#3E8E5A" stroke-width="1.8"/><text x="320.0" y="172.32" font-size="12" fill="#3E8E5A" text-anchor="middle" font-weight="bold">事业部B（空调）</text><rect x="440" y="150" width="120" height="36" rx="6" fill="#fff" stroke="#3E8E5A" stroke-width="1.8"/><text x="500.0" y="172.32" font-size="12" fill="#3E8E5A" text-anchor="middle" font-weight="bold">事业部C（洗衣机）</text><text x="140" y="205" font-size="11" fill="#6B6B66" text-anchor="middle" font-weight="normal">分散经营 · 单独核算</text><text x="320" y="205" font-size="11" fill="#6B6B66" text-anchor="middle" font-weight="normal">分散经营 · 单独核算</text><text x="500" y="205" font-size="11" fill="#6B6B66" text-anchor="middle" font-weight="normal">分散经营 · 单独核算</text></svg><div class="fig-note blue"><strong>总部管战略（集中决策），事业部一条龙自己打仗（分散经营、单独核算、自负盈亏）</strong>。优点：高层摆脱事务、增强活力、联合化＋专业化；缺点：本位主义、机构重复成本增。适用：产品种类多且工艺差别大、市场广且变化快的大型联合企业。</div></div></div>
+<div class="section"><div class="keypoint"><strong>事业部制：</strong><p>"集中决策、分散经营"；按产品/地区/客户划分事业部，独立核算。优点：总部战略、事业部灵活；缺点：机构重复、管理成本高。</p></div></div>
+<script>
+(function(){
+  var KEY='rljpk_v1';
+  window.loadProgress = function(){ try{ return JSON.parse(localStorage.getItem(KEY))||{q:{},s:{}} }catch(e){ return {q:{},s:{}} } };
+  window.saveProgress = function(d){ localStorage.setItem(KEY, JSON.stringify(d)); };
+  window.loadSyncCfg = function(){ try{ return JSON.parse(localStorage.getItem('rljpk_sync'))||{} }catch(e){ return {} } };
+  window.saveSyncCfg = function(c){ localStorage.setItem('rljpk_sync', JSON.stringify(c)); };
+  window.setSyncStatus = function(msg, cls){
+    var el = document.getElementById('sync-state'); if(!el) return;
+    el.textContent = msg; el.className = cls ? 'sync-'+cls : '';
+  };
+  function b64encode(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for(var i=0;i<bytes.length;i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64decode(b64){
+    if(typeof b64 !== 'string' || !b64)
+      throw new Error('云端返回内容缺失（content=' + (b64 === null ? 'null' : typeof b64) + '）——请点"立即同步"重试，若反复出现请把此提示反馈');
+    var clean = String(b64).replace(/\s/g,'');
+    var bin;
+    try { bin = atob(clean); }
+    catch(e){ throw new Error('云端返回了无法解码的内容（前 20 字符：' + clean.slice(0,20) + '）——请点"立即同步"重试，若反复出现请反馈'); }
+    var bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  window.mergeProgress = function(local, remote){
+    var out = {q: Object.assign({}, local.q||{}), s: Object.assign({}, local.s||{})};
+    Object.keys(remote.q||{}).forEach(function(k){
+      var a = out.q[k], b = remote.q[k];
+      if(!a){ out.q[k] = b; return; }
+      out.q[k] = { ok: Math.max(a.ok||0, b.ok||0), first: Math.max(a.first||0, b.first||0), t: Math.max(a.t||0, b.t||0) };
+    });
+    Object.keys(remote.s||{}).forEach(function(k){
+      var a = out.s[k], b = remote.s[k];
+      if(!a){ out.s[k] = b; return; }
+      var newer = (b.t||0) > (a.t||0) ? b : a;
+      out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
+    });
+    return out;
+  };
+  var syncing = false, lastPullAt = 0, failCount = 0, pausedUntil = 0, conflictCount = 0;
+  // 换绑/重绑后由配置界面调用：重置内部锁与失败状态，避免历史状态延续
+  window.resetSyncState = function(){ syncing=false; failCount=0; pausedUntil=0; lastPullAt=0; conflictCount=0; };
+  function apiHeaders(cfg){
+    return {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json', 'Content-Type':'application/json'};
+  }
+  // 双后端分派：cfg.backend = 'github'（默认）| 'gitee'
+  function backendOf(cfg){ return cfg.backend === 'gitee' ? 'gitee' : 'github'; }
+  function fileUrl(cfg, method){
+    if(backendOf(cfg) === 'gitee')
+      return method === 'PUT'
+        ? 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json'   // PUT 时令牌放请求体，不与 URL 重复
+        : 'https://gitee.com/api/v5/repos/'+cfg.repo+'/contents/progress.json?access_token='+encodeURIComponent(cfg.token);
+    return 'https://api.github.com/repos/'+cfg.repo+'/contents/progress.json';
+  }
+  function fetchOpts(cfg, method, bodyObj, useJson){
+    var o = {method: method}, signal = null;
+    if(typeof AbortController !== 'undefined'){
+      var ac = new AbortController(); setTimeout(function(){ ac.abort(); }, 9000);
+      signal = ac.signal; o.signal = signal;
+    }
+    if(backendOf(cfg) === 'gitee'){
+      o.headers = {'Accept':'application/json'};
+      if(method === 'PUT'){
+        if(useJson){
+          // Gitee JSON 姿势（社区实践中成功率高）：token/content/message 均入 JSON 体
+          var j = {access_token: cfg.token, content: bodyObj.content, message: bodyObj.message || 'progress sync'};
+          if(bodyObj.sha) j.sha = bodyObj.sha;
+          o.headers['Content-Type'] = 'application/json;charset=UTF-8';
+          o.body = JSON.stringify(j);
+        } else {
+          var params = new URLSearchParams();
+          params.set('access_token', cfg.token);
+          params.set('content', bodyObj.content);
+          params.set('message', bodyObj.message || 'progress sync');
+          if(bodyObj.sha) params.set('sha', bodyObj.sha);
+          o.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+          o.body = params.toString();
+        }
+      }
+    } else {
+      o.headers = apiHeaders(cfg);
+      if(method === 'PUT') o.body = JSON.stringify(bodyObj);
+    }
+    return o;
+  }
+  function netErrMsg(e, cfg){
+    var m = e && e.message ? e.message : String(e);
+    if(m.indexOf('abort') >= 0 || m.indexOf('Abort') >= 0)
+      return '网络超时（9 秒无响应）' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议在上方切换为 Gitee 后端' : '，稍后重试');
+    if(m.indexOf('fetch') >= 0 || m.indexOf('NetworkError') >= 0 || m.indexOf('network') >= 0)
+      return '网络无法连通' + (backendOf(cfg)==='github' ? '——GitHub 国内常无法直连，建议切换为 Gitee 后端' : '，请检查网络');
+    return m;
+  }
+  function noteFail(cfg, prefix){
+    failCount++;
+    if(failCount >= 3){
+      pausedUntil = Date.now() + 5*60*1000; failCount = 0;
+      setSyncStatus(prefix + '；自动同步已暂停 5 分钟，可点"立即同步"重试', 'err');
+    } else {
+      setSyncStatus(prefix, 'err');
+    }
+  }
+  window.ghPush = function(force, useJson, isFallback){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token || syncing) return;
+    if(Date.now() < (pausedUntil||0)) return;
+    var localStr = localStorage.getItem(KEY) || '{}';
+    if(cfg.lastPushedHash === localStr && !force){ setSyncStatus('✓ 已与云端同步'); return; }
+    syncing = true; setSyncStatus('☁ 正在上传进度…');
+    var body = {message:'进度同步', content: b64encode(localStr)};
+    if(cfg.sha) body.sha = cfg.sha;
+    var tryJson = useJson !== false;  // 默认先 JSON（社区实践成功率高的姿势），失败自动换 form 再试一次
+    fetch(fileUrl(cfg, 'PUT'), fetchOpts(cfg, 'PUT', body, tryJson))
+    .then(function(r){ return r.text().then(function(t){ var j = null; try{ j = JSON.parse(t); }catch(e){} return {status:r.status, j:j, raw:t}; }); })
+    .then(function(res){
+      syncing = false;
+      var errMsg = (res.j && (res.j.message || (res.j.messages && res.j.messages.join('; ')))) || (res.raw ? res.raw.slice(0, 100) : '') || '';
+      if(res.status===200 || res.status===201){
+        failCount = 0; pausedUntil = 0; conflictCount = 0;
+        cfg.sha = (res.j.content && res.j.content.sha) || (res.j.commit && res.j.commit.sha) || res.j.sha || cfg.sha;
+        cfg.lastPushedHash = localStr; cfg.lastSync = Date.now();
+        saveSyncCfg(cfg); setSyncStatus('✓ 已同步到云端 '+new Date().toLocaleTimeString(), 'ok');
+      } else if(backendOf(cfg)==='gitee' && res.status===400 && !isFallback){
+        // 任何 400（含 sha 类错误）→ 先换另一种提交格式重试；两种格式都败才进入冲突/报错分支
+        ghPush(true, !tryJson, true);
+      } else if(res.status===409 || (backendOf(cfg)==='gitee' && res.status===400 && errMsg.indexOf('sha')>=0)){
+        conflictCount++;
+        if(conflictCount > 3){ setSyncStatus('✗ 上传反复冲突已停止（最后错误：'+errMsg+'）——请反馈此完整提示', 'err'); return; }
+        cfg.sha = null; saveSyncCfg(cfg); ghPull(true);
+      } else if(res.status===401 || res.status===403){
+        noteFail(cfg, backendOf(cfg)==='gitee'
+          ? '✗ 上传被拒绝（'+res.status+'）：Gitee 私人令牌可能未勾选 projects 权限或已过期——请重新生成一枚'
+          : '✗ 上传被拒绝（'+res.status+'）：token 无效或权限不足，请重新配置');
+      } else {
+        noteFail(cfg, '✗ 上传失败：HTTP '+res.status+' '+errMsg);
+      }
+    }).catch(function(e){ syncing=false; noteFail(cfg, '✗ 上传失败：'+netErrMsg(e, cfg)); });
+  };
+  window.ghPull = function(force){
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(Date.now() < (pausedUntil||0)){ setSyncStatus('⏸ 自动同步已暂停（此前连续失败），点"立即同步"重试'); return; }
+    if(syncing) return;
+    var now = Date.now();
+    if(!force && now - (lastPullAt||0) < 30000) { ghPush(); return; }
+    lastPullAt = now;
+    syncing = true; setSyncStatus('☁ 正在检查云端进度…');
+    fetch(fileUrl(cfg, 'GET'), fetchOpts(cfg, 'GET'))
+    .then(function(r){
+      if(r.status===404){ cfg.sha=null; saveSyncCfg(cfg); syncing=false; ghPush(); return null; }
+      if(r.status===304){ syncing=false; return null; }
+      if(r.status===401) throw new Error('令牌无效或已过期，请重新配置');
+      if(r.status===403) throw new Error('API 限速或令牌权限不足');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ return {status:200, j:j}; });
+    })
+    .then(function(res){
+      if(!res) return;
+      // Gitee 对不存在的文件返回 200+[]（GitHub 是 404）——都视为"云端还没有进度文件"，自动上传本地
+      var missing = !res.j || Array.isArray(res.j) || typeof res.j.content !== 'string' || !res.j.content;
+      if(missing){
+        syncing = false; cfg.sha = null; saveSyncCfg(cfg);
+        if(backendOf(cfg) === 'gitee'){
+          // 空仓库（无任何分支/提交）无法通过 API 建文件——先查分支，空则给初始化指引
+          var bqs = new URLSearchParams({access_token: cfg.token}).toString();
+          fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/branches?'+bqs, {headers: {'Accept':'application/json'}})
+          .then(function(r){ return r.json(); })
+          .then(function(brs){
+            if(Array.isArray(brs) && brs.length === 0)
+              setSyncStatus('✗ 仓库是空的：请到 Gitee 打开该仓库 → 文件 → 新建 → 随便建一个 README.md 提交（初始化仓库），然后回来点"立即同步"', 'err');
+            else ghPush();
+          }).catch(function(){ ghPush(); });
+        } else ghPush();
+        return;
+      }
+      var remote = JSON.parse(b64decode(res.j.content));
+      if(!remote || typeof remote !== 'object') throw new Error('云端进度数据格式异常，已忽略本次合并');
+      var local = loadProgress();
+      var merged = mergeProgress(local, remote);
+      var localChanged = JSON.stringify(merged) !== JSON.stringify(local);
+      cfg.sha = res.j.sha || null; saveSyncCfg(cfg);
+      var afterSha = function(diag){
+        saveSyncCfg(cfg);
+        if(!cfg.sha && backendOf(cfg)==='gitee'){
+          // 有文件却拿不到版本号——推送必然报 sha missing，不推，直接给诊断摘要
+          syncing = false;
+          setSyncStatus('✗ 无法获取云端文件版本号[' + (diag || 'GET响应无sha且文件树补取失败') + ']——点"诊断"按钮并把结果反馈', 'err');
+          return;
+        }
+        if(localChanged){
+          saveProgress(merged);
+          if(typeof renderProgress === 'function') renderProgress();
+          if(typeof refreshBadge === 'function') refreshBadge();
+        }
+        if(JSON.stringify(merged) !== JSON.stringify(remote)){ syncing=false; ghPush(); }
+        else { syncing=false; failCount=0; pausedUntil=0; setSyncStatus('✓ 已与云端同步', 'ok'); }
+      };
+      if(!cfg.sha && backendOf(cfg)==='gitee'){
+        // Gitee 读文件响应可能不带 sha（API 创建的文件尤其如此）→ 更新必带 sha，否则报"sha is missing"。
+        // 通过 仓库信息(default_branch) → 文件树(blob sha) 两步补取。
+        var tq = new URLSearchParams({access_token: cfg.token}).toString();
+        fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'?'+tq, {headers: {'Accept':'application/json'}})
+        .then(function(r){ return r.json(); })
+        .then(function(ri){
+          var br = (ri && ri.default_branch) || 'master';
+          return fetch('https://gitee.com/api/v5/repos/'+cfg.repo+'/git/trees/'+br+'?'+tq, {headers: {'Accept':'application/json'}}).then(function(r2){ return r2.json(); })
+            .then(function(t){
+              var hit = null;
+              if(t && t.tree) for(var i=0;i<t.tree.length;i++) if(t.tree[i].path === 'progress.json'){ hit = t.tree[i].sha; break; }
+              return {branch: br, hit: hit, treeLen: (t && t.tree) ? t.tree.length : 0, paths: (t && t.tree) ? t.tree.slice(0,8).map(function(x){return x.path;}).join(',') : ''};
+            });
+        })
+        .then(function(d){
+          if(d.hit) cfg.sha = d.hit;
+          afterSha('分支=' + d.branch + ';树内项数=' + d.treeLen + ';找到progress.json=' + (d.hit ? '是' : '否') + ';树内前8项=' + d.paths);
+        })
+        .catch(function(e){ afterSha('补取异常:' + (e && e.message || e)); });  // 补取失败不推
+      } else afterSha('GET响应自带sha');
+    }).catch(function(e){
+      syncing=false;
+      var m = e && e.message ? e.message : '';
+      if(m.indexOf('令牌') >= 0 || m.indexOf('限速') >= 0 || m.indexOf('格式异常') >= 0) noteFail(cfg, '✗ 拉取失败：'+m);
+      else noteFail(cfg, '✗ 拉取失败：'+netErrMsg(e, cfg));
+    });
+  };
+  var syncTimer = null;
+  var syncTimer = null, lastSavedStr = null;
+  // 一键诊断：三个只读请求（读文件/仓库信息/文件树），输出摘要并尝试复制到剪贴板
+  window.runSyncDiag = function(){
+    var cfg = loadSyncCfg();
+    if(!cfg.repo || !cfg.token){ setSyncStatus('请先配置并连接云同步', 'err'); return; }
+    setSyncStatus('正在诊断…');
+    var tq = new URLSearchParams({access_token: cfg.token}).toString();
+    var base = backendOf(cfg)==='gitee' ? 'https://gitee.com/api/v5' : 'https://api.github.com';
+    var out = ['后端=' + backendOf(cfg), '仓库=' + cfg.repo];
+    var req = function(url, hdrs){
+      return fetch(url, {headers: hdrs || {'Accept':'application/json'}})
+        .then(function(r){ return r.text().then(function(t){ return {s: r.status, t: t}; }); });
+    };
+    var hdrs = backendOf(cfg)==='gitee' ? {'Accept':'application/json'} : {'Authorization':'Bearer '+cfg.token, 'Accept':'application/vnd.github+json'};
+    Promise.all([
+      req(base + '/repos/' + cfg.repo + '/contents/progress.json' + (backendOf(cfg)==='gitee' ? '?' + tq : ''), hdrs),
+      backendOf(cfg)==='gitee'
+        ? req(base + '/repos/' + cfg.repo + '?' + tq).then(function(ri){
+            var br = 'master'; try { br = JSON.parse(ri.t).default_branch || 'master'; } catch(e){}
+            return req(base + '/repos/' + cfg.repo + '/git/trees/' + br + '?' + tq).then(function(tr){
+              return {branch: br, tr: tr};
+            });
+          })
+        : Promise.resolve(null)
+    ]).then(function(r){
+      var c = r[0], tree = r[1];
+      out.push('读文件HTTP=' + c.s, '读文件响应前160字符=' + c.t.slice(0, 160));
+      if(tree){
+        out.push('默认分支=' + tree.branch, '文件树HTTP=' + tree.tr.s);
+        var items = []; try { items = JSON.parse(tree.tr.t).tree || []; } catch(e){}
+        var pj = items.filter(function(x){ return x.path === 'progress.json'; })[0];
+        out.push('树内文件数=' + items.length, '树内progress.json=' + (pj ? ('找到,sha=' + pj.sha) : '未找到'), '树内全部路径=' + items.map(function(x){return x.path;}).join('|'));
+      }
+      var msg = out.join('\n');
+      setSyncStatus('诊断完成，结果已复制（粘贴发给老师）', 'ok');
+      if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(msg).catch(function(){});
+      window.__syncDiag = msg;
+      console.log(msg);
+    }).catch(function(e){
+      setSyncStatus('诊断失败：' + (e && e.message || e), 'err');
+    });
+  };
+  window.scheduleSync = function(savedStr){
+    if(savedStr != null) lastSavedStr = savedStr;
+    var cfg = loadSyncCfg(); if(!cfg.repo || !cfg.token) return;
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(function(){ syncTimer=null; ghPull(true); }, 3000);
+  };
+  window.addEventListener('focus', function(){ ghPull(); });
+  window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
+  ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
+})();
+
+
+(function(){
+  var btn=document.querySelector('.sb-btn');
+  if(btn)btn.addEventListener('click',function(){document.body.classList.toggle('sb-open');});
+  var mask=document.querySelector('.sb-mask');
+  if(mask)mask.addEventListener('click',function(){document.body.classList.remove('sb-open');});
+  document.querySelectorAll('.sidebar a').forEach(function(a){
+    a.addEventListener('click',function(){document.body.classList.remove('sb-open');});
+  });
+})();
+</script>
+</body>
+</html>
