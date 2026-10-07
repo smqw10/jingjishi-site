@@ -141,6 +141,14 @@
   .toc a { background: #fff; border: 1px solid #e8e8e5; border-radius: 16px; padding: 6px 14px; font-size: 12.5px; color: #55554f; }
   .toc a:hover { border-color: #185FA5; color: #185FA5; }
   .toc .sb-badge { margin-left: 6px; }
+  .sec-quiz-btn { display: inline-block; margin-top: 12px; background: #185FA5; color: #fff !important; border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 500; }
+  .sec-quiz-btn:hover { background: #0C447C; }
+  .entry-card { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 18px 20px; margin-bottom: 16px; }
+  .entry-card .ec-icon { font-size: 30px; }
+  .entry-card .ec-body { flex: 1; }
+  .entry-card .ec-title { display: block; font-size: 15.5px; font-weight: 700; color: #1a1a1a; }
+  .entry-card .ec-desc { display: block; font-size: 12.5px; color: #888780; margin-top: 2px; }
+  .entry-card .ec-btn { background: #185FA5; color: #fff; border-radius: 8px; padding: 8px 16px; font-size: 13px; white-space: nowrap; }
   @media (min-width: 1060px) {
     .sidebar { transform: none; }
     body { margin-left: max(240px, calc((100vw - 800px) / 2 + 110px)); }
@@ -149,8 +157,8 @@
 </style>
 </head>
 <body>
-<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item active" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><span class="sb-item disabled"><span>📝</span><span>刷题题库</span><span class="sb-badge wip">筹备中</span></span></nav>
-<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第六部分 法律</span><h1>第三十六章 公司法律制度 · 股份有限公司的股份发行和转让</h1><div class="subtitle">第 7 节 / 共 8 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:87%"></div></div><div class="progress-text">本章进度 7/8</div><div class="sec-badge none" id="sec-badge" data-sec="b36s7">本节掌握：加载中…</div></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item active" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
+<div class="header"><div class="crumb"><a href="index.html">← 目录总览</a></div><span class="label">经济基础知识 · 第六部分 法律</span><h1>第三十六章 公司法律制度 · 股份有限公司的股份发行和转让</h1><div class="subtitle">第 7 节 / 共 8 节 · 预计学习时长 45 分钟</div><div class="progress-bar"><div class="fill" style="width:87%"></div></div><div class="progress-text">本章进度 7/8</div><div class="sec-badge none" id="sec-badge" data-sec="b36s7">本节掌握：加载中…</div><a class="sec-quiz-btn" href="quiz.html?ch=基础-36">📝 本章随堂练习</a></div><div class="section"><div class="section"><h2>🎯 本节学习目标</h2><ul>
 <li>记住股份发行的<strong>同股同权、公平公正</strong>原则与"股票应当为<strong>记名股票</strong>" <span class="hot">高频考点</span></li>
 <li>分清<strong>面额股/无面额股</strong>：择一采用、可全部转换，无面额股股款 <strong>1/2 以上</strong>计入注册资本；面额股发行价<strong>不得低于</strong>票面金额 <span class="must">必考</span></li>
 <li>记住<strong>授权资本制</strong>：3 年内、不超过已发行股份 50%、董事会决议须全体董事 2/3 通过 <span class="s3">★★★</span> <span class="must">必考</span></li>

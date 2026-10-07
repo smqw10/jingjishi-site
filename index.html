@@ -141,6 +141,14 @@
   .toc a { background: #fff; border: 1px solid #e8e8e5; border-radius: 16px; padding: 6px 14px; font-size: 12.5px; color: #55554f; }
   .toc a:hover { border-color: #185FA5; color: #185FA5; }
   .toc .sb-badge { margin-left: 6px; }
+  .sec-quiz-btn { display: inline-block; margin-top: 12px; background: #185FA5; color: #fff !important; border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 500; }
+  .sec-quiz-btn:hover { background: #0C447C; }
+  .entry-card { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid #e8e8e5; border-radius: 14px; padding: 18px 20px; margin-bottom: 16px; }
+  .entry-card .ec-icon { font-size: 30px; }
+  .entry-card .ec-body { flex: 1; }
+  .entry-card .ec-title { display: block; font-size: 15.5px; font-weight: 700; color: #1a1a1a; }
+  .entry-card .ec-desc { display: block; font-size: 12.5px; color: #888780; margin-top: 2px; }
+  .entry-card .ec-btn { background: #185FA5; color: #fff; border-radius: 8px; padding: 8px 16px; font-size: 13px; white-space: nowrap; }
   @media (min-width: 1060px) {
     .sidebar { transform: none; }
     body { margin-left: max(240px, calc((100vw - 800px) / 2 + 110px)); }
@@ -149,20 +157,20 @@
 </style>
 </head>
 <body>
-<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><span class="sb-item disabled"><span>📝</span><span>刷题题库</span><span class="sb-badge wip">筹备中</span></span></nav>
-<div class="header"><span class="label">中级经济师 2026</span><h1>📚 中级经济师精品课 · 学习总览</h1><div class="subtitle">每节含学习目标、细讲（定义+关键点+例子+对比表+口诀+考试技巧）、速记卡、真题练习。做题时点击选项即可判对错，<b>一节内全部题目答对才算"已学会"</b>。考前突击用左侧"速记"板块：人物理论、曲线图形、易混对比、概念要点、口诀联想。</div><div class="progress-bar"><div class="fill" id="overall-fill" style="width:0%"></div></div><div class="progress-text" id="overall-text">学习进度统计中…</div></div><div class="section"><h2>⚡ 考前速记板块</h2><p>知识点汇总速查：相近易混的放一起并提示，背下就能拿分。配合左侧边栏随时切换板块。</p><div class="toc"><a href="memo-person.html">👤 人物与理论</a> <a href="memo-curve.html">📈 曲线与图形</a> <a href="memo-confuse.html">⚖️ 易混对比</a> <a href="memo-concept.html">🧩 概念要点</a> <a href="memo-mn.html">🧠 口诀联想</a></div></div><div class="section" id="sync-card">
+<div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="index.html#基础"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="index.html#人力"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
+<div class="header"><span class="label">中级经济师 2026</span><h1>📚 中级经济师精品课 · 学习总览</h1><div class="subtitle">每节含学习目标、细讲（定义+关键点+例子+对比表+口诀+考试技巧）、速记卡、真题练习。做题时点击选项即可判对错，<b>一节内全部题目答对才算"已学会"</b>。考前突击用左侧"速记"板块：人物理论、曲线图形、易混对比、概念要点、口诀联想。</div><div class="progress-bar"><div class="fill" id="overall-fill" style="width:0%"></div></div><div class="progress-text" id="overall-text">学习进度统计中…</div></div><a class="entry-card" href="quiz.html"><span class="ec-icon">📝</span><span class="ec-body"><span class="ec-title">刷题题库</span><span class="ec-desc">混合 / 真题（按年份+整卷模拟）/ 随机（选项打乱）· 错题本 · 共 4396 题 57 卷</span></span><span class="ec-btn">进入刷题 →</span></a><div class="section"><h2>⚡ 考前速记板块</h2><p>知识点汇总速查：相近易混的放一起并提示，背下就能拿分。配合左侧边栏随时切换板块。</p><div class="toc"><a href="memo-person.html">👤 人物与理论</a> <a href="memo-curve.html">📈 曲线与图形</a> <a href="memo-confuse.html">⚖️ 易混对比</a> <a href="memo-concept.html">🧩 概念要点</a> <a href="memo-mn.html">🧠 口诀联想</a></div></div><div class="section" id="sync-card">
   <h2>☁️ 云同步（跨设备）</h2>
   <div class="sync-meta">绑定一个私有仓库后，答题进度自动在所有设备间同步（每台设备配置一次，之后免操作）。配置保存在本设备的浏览器中，令牌仅授权这一个仓库。</div>
   <div id="sync-state"></div>
   <div id="sync-form" hidden>
     <div class="sync-row">
-      <label style="display:flex;align-items:center;gap:4px;font-size:13.5px;color:#444"><input type="radio" name="sync-backend" value="gitee" checked onchange="syncBackendChanged()"> Gitee（国内推荐）</label>
-      <label style="display:flex;align-items:center;gap:4px;font-size:13.5px;color:#444"><input type="radio" name="sync-backend" value="github" onchange="syncBackendChanged()"> GitHub</label>
+      <label style="display:flex;align-items:center;gap:4px;font-size:13.5px;color:#444"><input type="radio" name="sync-backend" value="gitee" onchange="syncBackendChanged()"> Gitee</label>
+      <label style="display:flex;align-items:center;gap:4px;font-size:13.5px;color:#444"><input type="radio" name="sync-backend" value="github" checked onchange="syncBackendChanged()"> GitHub（当前使用）</label>
     </div>
     <div class="sync-row"><input id="sync-repo-in" placeholder="仓库全名，如 yourname/jingjishi-progress" autocomplete="off"></div>
-    <div class="sync-row"><input id="sync-token-in" type="password" placeholder="Gitee 私人令牌（32 位字符串）" autocomplete="off"></div>
+    <div class="sync-row"><input id="sync-token-in" type="password" placeholder="GitHub fine-grained token" autocomplete="off"></div>
     <div class="sync-row"><button type="button" class="sync-btn" id="sync-save">保存并连接</button></div>
-    <details id="sync-how-gitee" open><summary>如何创建 Gitee 私有仓库和私人令牌？（约 2 分钟，一次即可）</summary>
+    <details id="sync-how-gitee"><summary>如何创建 Gitee 私有仓库和私人令牌？（约 2 分钟，一次即可）</summary>
       <ol>
         <li>打开 <b>gitee.com</b> 注册/登录（手机号即可，国内直连）。</li>
         <li>右上角 <b>+</b> → 新建仓库 → 名称填 <b>jingjishi-progress</b> → 勾选<b>私有</b> → 勾选"使用 Readme 文件初始化" → 创建。</li>
@@ -170,7 +178,7 @@
         <li>回到本页，仓库填 <b>你的用户名/jingjishi-progress</b>，粘贴令牌，点"保存并连接"。</li>
       </ol>
     </details>
-    <details id="sync-how-github" hidden><summary>如何创建 GitHub 私有仓库和 token？（需能访问 GitHub）</summary>
+    <details id="sync-how-github" open><summary>如何创建 GitHub 私有仓库和 token？（需能访问 GitHub）</summary>
       <ol>
         <li>登录 GitHub → 右上角 + → New repository → 名称填 <b>jingjishi-progress</b>，选 <b>Private</b>，勾选 Add a README → Create。</li>
         <li>GitHub → 头像 → Settings → 最底部 Developer settings → Personal access tokens → <b>Fine-grained tokens</b> → Generate new token。</li>
