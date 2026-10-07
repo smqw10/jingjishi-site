@@ -462,12 +462,10 @@
     var submitted = false;
     var omap = v.omap, map = v.map;
     var optsEl = $('q-opts');
-    q.o.forEach(function (text, oldPos) {
-      var newPos = omap.indexOf(oldPos);
+    omap.forEach(function (oldPos, newPos) {
       var btn = document.createElement('button');
       btn.className = 'qopt';
-      btn.innerHTML = '<b>' + LETTERS[newPos] + '.</b> ' + esc(text)
-        + (S.shuffleOpts && q.o.length > 2 ? ' <span class="orig-letter">（原' + LETTERS[oldPos] + '）</span>' : '');
+      btn.innerHTML = '<b>' + LETTERS[newPos] + '.</b> ' + esc(q.o[oldPos]);
       btn.setAttribute('data-new', LETTERS[newPos]);
       btn.addEventListener('click', function () {
         if (submitted || recite) return;
@@ -595,13 +593,11 @@
     });
     var omap = v.omap;
     var optsEl = $('q-opts');
-    q.o.forEach(function (text, oldPos) {
-      var newPos = omap.indexOf(oldPos);
+    omap.forEach(function (oldPos, newPos) {
       var L = LETTERS[newPos];
       var btn = document.createElement('button');
       btn.className = 'qopt' + (ex.answers[q.id] && ex.answers[q.id].indexOf(L) >= 0 ? ' picked' : '');
-      btn.innerHTML = '<b>' + L + '.</b> ' + esc(text)
-        + (S.shuffleOpts && q.o.length > 2 ? ' <span class="orig-letter">（原' + LETTERS[oldPos] + '）</span>' : '');
+      btn.innerHTML = '<b>' + L + '.</b> ' + esc(q.o[oldPos]);
       btn.addEventListener('click', function () {
         var cur = (ex.answers[q.id] || '').split('');
         var at = cur.indexOf(L);
