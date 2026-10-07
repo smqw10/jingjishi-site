@@ -679,6 +679,17 @@
   window.addEventListener('pageshow', function(e){ if(e.persisted) ghPull(); });
   ghPull();  // 页面加载时即与云端对账（新设备在此恢复进度）
 })();
+</script>
+<script>
+(function(){
+  // 事件委托版：绑定挂在 document 上，任何时刻点汉堡都有效（按钮重渲染/监听丢失不影响）
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if (t.closest && t.closest('.sb-btn')) { document.body.classList.toggle('sb-open'); return; }
+    if (t.closest && t.closest('.sb-mask')) { document.body.classList.remove('sb-open'); return; }
+    if (t.closest && t.closest('.sidebar a')) { document.body.classList.remove('sb-open'); }
+  });
+})();
 
 
 (function(){

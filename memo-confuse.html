@@ -1075,12 +1075,12 @@
 
 
 (function(){
-  var btn=document.querySelector('.sb-btn');
-  if(btn)btn.addEventListener('click',function(){document.body.classList.toggle('sb-open');});
-  var mask=document.querySelector('.sb-mask');
-  if(mask)mask.addEventListener('click',function(){document.body.classList.remove('sb-open');});
-  document.querySelectorAll('.sidebar a').forEach(function(a){
-    a.addEventListener('click',function(){document.body.classList.remove('sb-open');});
+  // 事件委托版：绑定挂在 document 上，任何时刻点汉堡都有效（按钮重渲染/监听丢失不影响）
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if (t.closest && t.closest('.sb-btn')) { document.body.classList.toggle('sb-open'); return; }
+    if (t.closest && t.closest('.sb-mask')) { document.body.classList.remove('sb-open'); return; }
+    if (t.closest && t.closest('.sidebar a')) { document.body.classList.remove('sb-open'); }
   });
 })();
 </script>
