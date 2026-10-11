@@ -504,6 +504,10 @@
       var newer = (b.t||0) > (a.t||0) ? b : a;
       out.s[k] = { total: newer.total, right: Math.max(a.right||0, b.right||0), ok: !!(a.ok||b.ok), t: Math.max(a.t||0, b.t||0) };
     });
+    // last（继续学习位置）不在 q/s 里，必须单独合并——否则合并结果丢 last，节页写入的位置被 ghPull 清空
+    var ll = local.last, rl = remote.last;
+    if(ll && (!rl || (ll.ts||0) >= (rl.ts||0))) out.last = ll;
+    else if(rl) out.last = rl;
     return out;
   };
   var syncing = false, lastPullAt = 0, failCount = 0, pausedUntil = 0, conflictCount = 0;
