@@ -134,6 +134,7 @@
     if (S.n > 0 && S.mode !== 'exam') S.pool = S.pool.slice(0, Math.min(S.n, S.pool.length));
     S.pos = 0;
     S.maps = {};                       // qid → 固定选项映射（会话内不变）
+    S._reviewWrong = null;             // 新会话清空"做错题"标记（仅模拟考回顾使用）
     renderQuiz();
   }
 
@@ -324,6 +325,45 @@
     $('btn-start').addEventListener('click', function () { startSession(filteredQuestions()); });
   }
 
+  /* --- 错题解析清单（浏览式复习：看题干/答案/解析，无需重做） --- */
+  function stemBrief(t, n) {
+    t = String(t || '').replace(/\s+/g, ' ');
+    return t.length > n ? t.slice(0, n) + '…' : t;
+  }
+  function wrongCount(id) {
+    var a = store.a[id];
+    return (a && a.c > a.r) ? (a.c - a.r) : 1;
+  }
+  function browseQBody(q) {
+    var opts = q.o.map(function (o, i) {
+      var isAns = q.a.indexOf(LETTERS[i]) >= 0;
+      return '<div class="wq-opt' + (isAns ? ' ans' : '') + '"><b>' + LETTERS[i] + '.</b> ' + esc(o) + (isAns ? ' ✓' : '') + '</div>';
+    }).join('');
+    return '<div class="wq-stem-full">' + esc(q.q) + '</div>'
+      + '<div class="wq-opts">' + opts + '</div>'
+      + '<div class="q-feedback ok">正确答案：' + esc(q.a) + '</div>'
+      + (q.e ? '<details open><summary>解析</summary><div class="q-exp-body">' + esc(q.e) + '</div></details>'
+        : '<div class="q-exp-body muted">暂无解析</div>');
+  }
+  function wrongListHtml(ids) {
+    var groups = {};
+    ids.forEach(function (id) {
+      var q = qById(id); if (!q) return;
+      var k = (q.ch) ? q.ch : '未分类';
+      (groups[k] = groups[k] || []).push(q);
+    });
+    var out = '';
+    Object.keys(groups).sort(function (a, b) { return groups[b].length - groups[a].length; }).forEach(function (k) {
+      out += '<div class="wq-ch">' + esc(k === '未分类' ? '未分类' : chLabel(k)) + '（' + groups[k].length + '）</div>';
+      groups[k].forEach(function (q) {
+        out += '<details class="wq-item"><summary>'
+          + '<span class="wq-stem">' + esc(stemBrief(q.q, 44)) + '</span>'
+          + '<span class="wq-meta">累计错 ' + wrongCount(q.id) + ' 次</span></summary>'
+          + '<div class="wq-body">' + browseQBody(q) + '</div></details>';
+      });
+    });
+    return out;
+  }
   /* --- 错题本 --- */
   function renderTabWrong(main) {
     var now = Date.now();
@@ -346,7 +386,8 @@
       + '<p class="qhint">间隔重复：今日待复习 ' + dueIds.length + ' 题 · 错题总数 ' + allIds.length + '。答对升盒（0→1→3→7 天），连续答对 ' + STREAK_GRAD + ' 次毕业移出。</p>'
       + '<div class="qstart"><button class="qbtn primary" id="btn-due"' + (dueIds.length ? '' : ' disabled') + '>复习今日到期（' + dueIds.length + '）</button>'
       + '<button class="qbtn" id="btn-all"' + (allIds.length ? '' : ' disabled') + '>全部错题重刷（' + allIds.length + '）</button></div></div>'
-      + (allIds.length ? '<div class="section"><h2>薄弱章节（错题最多的章）</h2>' + chRows + '</div>' : '');
+      + (allIds.length ? '<div class="section"><h2>薄弱章节（错题最多的章）</h2>' + chRows + '</div>' : '')
+      + (allIds.length ? '<div class="section"><h2>📖 错题解析（点击展开：看答案与解析，不重做）</h2><div class="wq-list">' + wrongListHtml(allIds) + '</div></div>' : '');
     $('btn-due') && $('btn-due').addEventListener('click', function () { startSession(dueIds.map(qById).filter(Boolean)); });
     $('btn-all') && $('btn-all').addEventListener('click', function () { startSession(allIds.map(qById).filter(Boolean)); });
   }
@@ -432,7 +473,7 @@
     $('btn-home').addEventListener('click', function () { S.tab = 'mix'; renderTabs(); renderHome(); });
   }
   function exitSession() {
-    S.pool = []; S.exam = null;
+    S.pool = []; S.exam = null; S._reviewWrong = null;
     renderTabs(); renderHome();
   }
 
@@ -507,14 +548,16 @@
       recordAnswer(q, correct);
     }
     if (recite) {
-      // 背题模式：直接展示正确选项与解析
+      // 背题/回顾模式：直接展示正确选项与解析；模拟考回顾时标出当时做错的题
+      var wasWrong = !!(S._reviewWrong && S._reviewWrong.indexOf(q.id) >= 0);
       optsEl.querySelectorAll('.qopt').forEach(function (b) {
         var L = b.getAttribute('data-new');
         if (origAnsText.indexOf(L) >= 0) b.classList.add('correct');
         b.disabled = true;
       });
       var expHtml2 = remapLetters(q.e, map);
-      $('q-exp').innerHTML = '<div class="q-feedback ok">答案：' + origAnsText + '</div>'
+      $('q-exp').innerHTML = '<div class="q-feedback ' + (wasWrong ? 'no' : 'ok') + '">'
+        + (wasWrong ? '✗ 本题你答错了 · 正确答案：' + origAnsText : '答案：' + origAnsText) + '</div>'
         + (expHtml2 ? '<details open><summary>解析</summary><div class="q-exp-body">' + esc(expHtml2) + '</div></details>'
           : '<div class="q-exp-body muted">暂无解析</div>');
     } else if (q.t === 's') {
@@ -658,7 +701,12 @@
     if (store.e.length > 50) store.e = store.e.slice(-50);
     saveStore();
     S.exam = null;
-    // 结果页
+    // 结果页：错题清单（点击直达该题回顾）+ 只看错题
+    var wrongItems = wrongIds.map(function (id) { var q = qById(id); return q ? { id: id, idx: ex.qs.indexOf(q), q: q } : null; }).filter(Boolean);
+    var wrongJumps = wrongItems.map(function (x) {
+      return '<div class="wr-jump" data-idx="' + x.idx + '"><span class="wr-no">第 ' + (x.idx + 1) + ' 题</span>'
+        + '<span class="wr-stem">' + esc(stemBrief(x.q.q, 40)) + '</span></div>';
+    }).join('');
     $('quiz-main').innerHTML = '<div class="section result"><h2>' + (score >= 84 ? '🎉 恭喜，达到合格线！' : '📚 继续加油！') + '</h2>'
       + '<div class="stat-cards">'
       + '<div class="stat"><b>' + Math.round(score * 10) / 10 + '</b><small>得分 / 满分140</small></div>'
@@ -666,9 +714,22 @@
       + '<div class="stat"><b>' + right + '/' + ex.qs.length + '</b><small>全对题数</small></div>'
       + '<div class="stat"><b>' + wrongIds.length + '</b><small>错题（已入错题本）</small></div>'
       + '</div><div class="qstart"><button class="qbtn primary" id="btn-review">逐题回顾</button>'
-      + '<button class="qbtn" id="btn-home2">返回题库</button></div></div>';
+      + (wrongItems.length ? '<button class="qbtn" id="btn-wrong-only">只看错题（' + wrongItems.length + '）</button>' : '')
+      + '<button class="qbtn" id="btn-home2">返回题库</button></div></div>'
+      + (wrongItems.length ? '<div class="section"><h2>❌ 错题清单（点击直达解析）</h2><div class="wq-jumps">' + wrongJumps + '</div></div>' : '');
     S.pool = ex.qs; S._reviewWrong = wrongIds;
     $('btn-review').addEventListener('click', function () { S.mode = 'recite'; S.pos = 0; renderQuiz(); });
+    if (wrongItems.length) {
+      $('btn-wrong-only').addEventListener('click', function () {
+        S.pool = wrongItems.map(function (x) { return x.q; }).filter(Boolean);
+        S.mode = 'recite'; S.pos = 0; renderQuiz();
+      });
+      $('quiz-main').querySelectorAll('.wr-jump').forEach(function (el) {
+        el.addEventListener('click', function () {
+          S.mode = 'recite'; S.pos = +el.getAttribute('data-idx'); renderQuiz();
+        });
+      });
+    }
     $('btn-home2').addEventListener('click', exitSession);
   }
 
@@ -759,6 +820,13 @@
   }
 
   /* ================= 启动 ================= */
+  // 模式按钮（练习/背题/考试）事件委托：按钮随 renderHome 重绘，统一在 document 级接管
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest ? ev.target.closest('.qmode button[data-mode]') : null;
+    if (!b) return;
+    var m = b.getAttribute('data-mode');
+    if (S.mode !== m) { S.mode = m; renderHome(); }
+  });
   function initFromUrl() {
     var params = new URLSearchParams(location.search);
     if (params.get('tab')) S.tab = params.get('tab');
