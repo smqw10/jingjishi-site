@@ -29,7 +29,7 @@
     if (loaded[subj]) return;          // 加载中
     loaded[subj] = true;
     var s = document.createElement('script');
-    s.src = 'data/quiz-' + (subj === '基础' ? 'basic' : 'hr') + '.js';
+    s.src = 'data/quiz-' + (subj === '基础' ? 'basic' : 'hr') + '.js?v=20261107b';
     s.onload = function () { loaded[subj] = true; cb(); };
     s.onerror = function () { loaded[subj] = false; cb(); };
     document.body.appendChild(s);
