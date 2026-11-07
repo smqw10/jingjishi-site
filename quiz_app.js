@@ -15,13 +15,13 @@
     return { a: {}, w: {}, f: {}, e: [] };
   }
   var store = loadStore();
+  purgeGhostWrong();                   // 清理旧版"考试未作答也入册"的污染错题
   var saveTimer = null;
   function saveStore() {
     localStorage.setItem(QKEY, JSON.stringify(store));
     clearTimeout(saveTimer);
     saveTimer = setTimeout(function () { quizPush(); }, 3000);
   }
-
   /* ---------- 数据层 ---------- */
   var loaded = {};
   function ensureSubject(subj, cb) {
@@ -29,7 +29,7 @@
     if (loaded[subj]) return;          // 加载中
     loaded[subj] = true;
     var s = document.createElement('script');
-    s.src = 'data/quiz-' + (subj === '基础' ? 'basic' : 'hr') + '.js?v=20261107b';
+    s.src = 'data/quiz-' + (subj === '基础' ? 'basic' : 'hr') + '.js?v=20261107c';
     s.onload = function () { loaded[subj] = true; cb(); };
     s.onerror = function () { loaded[subj] = false; cb(); };
     document.body.appendChild(s);
@@ -139,7 +139,7 @@
   }
 
   /* ---------- 记录作答 ---------- */
-  function recordAnswer(q, correct) {
+  function recordAnswer(q, correct, pickedNew) {
     var now = Date.now();
     var a = store.a[q.id] || { ok: 0, t: 0, c: 0, r: 0 };
     a.c++; a.t = now; a.ok = correct ? 1 : 0;
@@ -147,7 +147,12 @@
     store.a[q.id] = a;
     var w = store.w[q.id];
     if (!correct) {
-      store.w[q.id] = { box: 0, streak: 0, t: now, due: now };
+      // 记录错选的原卷字母（打乱视图 → 原字母），供错题清单/回顾标红
+      var lastPick = '';
+      var v = S.maps && S.maps[q.id];
+      if (pickedNew && v && v.map) lastPick = pickedNew.split('').map(function (L) { return v.map[L] || L; }).sort().join('');
+      else if (pickedNew) lastPick = pickedNew.split('').sort().join('');
+      store.w[q.id] = { box: 0, streak: 0, t: now, due: now, lastPick: lastPick };
     } else if (w) {
       w.streak = (w.streak || 0) + 1;
       if (w.streak >= STREAK_GRAD) {
@@ -159,6 +164,16 @@
       }
     }
     saveStore();
+  }
+
+  /* 污染错题清理：错题本中没有任何作答记录的条目 = 旧版"考试未作答也入册"的残留，启动/合并时清除 */
+  function purgeGhostWrong() {
+    var n = 0;
+    Object.keys(store.w).forEach(function (id) {
+      if (!store.a[id]) { delete store.w[id]; n++; }
+    });
+    if (n) { saveStore(); console.log('已清理未作答污染错题', n, '条'); }
+    return n;
   }
 
   /* ================= 渲染：首页 ================= */
@@ -335,13 +350,16 @@
     return (a && a.c > a.r) ? (a.c - a.r) : 1;
   }
   function browseQBody(q) {
+    var lp = (store.w[q.id] && store.w[q.id].lastPick) || '';
     var opts = q.o.map(function (o, i) {
       var isAns = q.a.indexOf(LETTERS[i]) >= 0;
-      return '<div class="wq-opt' + (isAns ? ' ans' : '') + '"><b>' + LETTERS[i] + '.</b> ' + esc(o) + (isAns ? ' ✓' : '') + '</div>';
+      var isMine = lp.indexOf(LETTERS[i]) >= 0;
+      return '<div class="wq-opt' + (isAns ? ' ans' : '') + (isMine ? ' mine' : '') + '"><b>' + LETTERS[i] + '.</b> ' + esc(o)
+        + (isAns ? ' ✓' : '') + (isMine ? ' <span class="wq-mine-tag">✗ 我上次错选</span>' : '') + '</div>';
     }).join('');
     return '<div class="wq-stem-full">' + esc(q.q) + '</div>'
       + '<div class="wq-opts">' + opts + '</div>'
-      + '<div class="q-feedback ok">正确答案：' + esc(q.a) + '</div>'
+      + '<div class="q-feedback ok">正确答案：' + esc(q.a) + (lp ? '　<span class="wq-mine-tag">我上次选：' + esc(lp) + '</span>' : '') + '</div>'
       + (q.e ? '<details open><summary>解析</summary><div class="q-exp-body">' + esc(q.e) + '</div></details>'
         : '<div class="q-exp-body muted">暂无解析</div>');
   }
@@ -420,8 +438,13 @@
           + '<div class="wr-bar"><div class="fill" style="width:' + pct + '%"></div></div>'
           + '<span class="wr-n">' + pct + '% · ' + g.c + ' 次</span></div>';
       }).join('');
-    var examRows = store.e.slice(-10).reverse().map(function (x) {
-      return '<div class="wr-row"><span>' + esc(x.title || '整卷') + '</span><span class="wr-n">' + x.score + ' 分 / ' + (x.right || 0) + '/' + (x.total || 0) + ' 对</span></div>';
+    var examRows = store.e.slice(-10).reverse().map(function (x, i) {
+      var idx = store.e.length - 1 - i;
+      return '<div class="wr-row"><span>' + esc(x.title || '整卷') + '</span>'
+        + '<span class="wr-n">' + x.score + ' 分 / ' + (x.right || 0) + '/' + (x.total || 0) + ' 对'
+        + (x.secs ? ' · 用时 ' + fmtSecs(x.secs) : '') + '</span>'
+        + (x.picks ? '<button class="qbtn small" data-report="' + idx + '">报告</button>' : '')
+        + '</div>';
     }).join('');
     main.innerHTML = '<div class="section"><h2>📊 刷题统计</h2>'
       + '<div class="stat-cards">'
@@ -436,6 +459,70 @@
       + '<div class="section"><h2>⭐ 收藏夹</h2>'
       + '<div class="qstart"><button class="qbtn" id="btn-fav"' + (favIds.length ? '' : ' disabled') + '>刷收藏题（' + favIds.length + '）</button></div></div>';
     $('btn-fav') && $('btn-fav').addEventListener('click', function () { startSession(favIds.map(qById).filter(Boolean)); });
+    main.querySelectorAll('button[data-report]').forEach(function (b) {
+      b.addEventListener('click', function () { renderExamReport(store.e[+b.getAttribute('data-report')]); });
+    });
+  }
+
+  /* --- 整卷模考报告：逐题对错/我的答案/用时 + 解析展开 --- */
+  function fmtSecs(s) {
+    s = Math.max(0, Math.round(s || 0));
+    if (s < 60) return s + '秒';
+    return Math.floor(s / 60) + '分' + (s % 60 ? (s % 60) + '秒' : '');
+  }
+  function renderExamReport(rec) {
+    if (!rec || !rec.picks) return;
+    var totalSec = 0, nOk = 0, nPart = 0, nWrong = 0, nSkip = 0;
+    Object.keys(rec.picks).forEach(function (id) {
+      var it = rec.picks[id];
+      totalSec += (it.sec || 0);
+      if (it.ok === 1) nOk++;
+      else if (it.ok === 2) nPart++;
+      else if (it.p) nWrong++;
+      else nSkip++;
+    });
+    var rows = Object.keys(rec.picks).map(function (id, i) {
+      var q = qById(id), it = rec.picks[id];
+      if (!q) return '';
+      var badge = it.ok === 1 ? '<span class="erp-badge ok">✓</span>'
+        : it.ok === 2 ? '<span class="erp-badge part">◐</span>'
+        : it.p ? '<span class="erp-badge no">✗</span>'
+        : '<span class="erp-badge skip">—</span>';
+      var mine = it.p ? it.p : '未作答';
+      return '<details class="wq-item"><summary>'
+        + '<span class="erp-no">' + badge + '<b>' + (i + 1) + '</b></span>'
+        + '<span class="wq-stem">' + esc(stemBrief(q.q, 38)) + '</span>'
+        + '<span class="wq-meta">' + esc(mine) + (it.ok !== 1 ? ' / 答:' + esc(q.a) : '') + ' · ' + fmtSecs(it.sec) + '</span></summary>'
+        + '<div class="wq-body">' + reportQBody(q, it) + '</div></details>';
+    }).join('');
+    $('quiz-main').innerHTML = '<div class="quiz-session-head"><button class="qbtn ghost small" id="btn-erp-back">← 返回统计</button>'
+      + '<span class="q-pos">' + esc(rec.title || '整卷') + '</span></div>'
+      + '<div class="section result"><h2>' + (rec.score >= 84 ? '🎉 达到合格线' : '📊 考试报告') + '</h2>'
+      + '<div class="stat-cards">'
+      + '<div class="stat"><b>' + rec.score + '</b><small>得分 / 满分140</small></div>'
+      + '<div class="stat"><b>' + fmtSecs(totalSec) + '</b><small>做题用时</small></div>'
+      + '<div class="stat"><b>' + nOk + '</b><small>全对</small></div>'
+      + '<div class="stat"><b>' + nPart + '</b><small>少选得分</small></div>'
+      + '<div class="stat"><b>' + nWrong + '</b><small>答错</small></div>'
+      + (nSkip ? '<div class="stat"><b>' + nSkip + '</b><small>未作答</small></div>' : '')
+      + '</div></div>'
+      + '<div class="section"><h2>逐题情况（点击展开解析）</h2><p class="qhint">✓ 全对 · ◐ 少选得部分分 · ✗ 答错 · — 未作答；用时为该题停留时间累计。</p>'
+      + '<div class="wq-list">' + rows + '</div></div>';
+    $('btn-erp-back').addEventListener('click', function () { S.tab = 'stats'; renderTabs(); renderHome(); });
+  }
+  function reportQBody(q, it) {
+    var opts = q.o.map(function (o, i) {
+      var isAns = q.a.indexOf(LETTERS[i]) >= 0;
+      var isMine = it.p ? it.p.indexOf(LETTERS[i]) >= 0 : false;
+      return '<div class="wq-opt' + (isAns ? ' ans' : '') + (isMine && !isAns ? ' mine' : '') + '"><b>' + LETTERS[i] + '.</b> ' + esc(o)
+        + (isAns ? ' ✓' : '') + (isMine && !isAns ? ' <span class="wq-mine-tag">✗ 我选的</span>' : '') + '</div>';
+    }).join('');
+    return '<div class="wq-stem-full">' + esc(q.q) + '</div>'
+      + '<div class="wq-opts">' + opts + '</div>'
+      + '<div class="q-feedback ' + (it.ok === 1 ? 'ok' : 'no') + '">'
+      + (it.ok === 1 ? '✓ 回答正确：' : (it.p ? '✗ 我的答案：' + esc(it.p) : '✗ 未作答 · ') + '正确答案：') + esc(q.a) + '</div>'
+      + (q.e ? '<details open><summary>解析</summary><div class="q-exp-body">' + esc(q.e) + '</div></details>'
+        : '<div class="q-exp-body muted">暂无解析</div>');
   }
 
   /* ================= 渲染：做题视图 ================= */
@@ -545,14 +632,16 @@
       if (!pickedStr) return;
       submitted = true;
       var correct = showExplanation(pickedStr);
-      recordAnswer(q, correct);
+      recordAnswer(q, correct, pickedStr);
     }
     if (recite) {
-      // 背题/回顾模式：直接展示正确选项与解析；模拟考回顾时标出当时做错的题
+      // 背题/回顾模式：直接展示正确选项与解析；模拟考回顾时标出当时做错的题与错选项
       var wasWrong = !!(S._reviewWrong && S._reviewWrong.indexOf(q.id) >= 0);
+      var myPick = (S._reviewPick && S._reviewPick[q.id] && S._reviewPick[q.id].p) || '';   // 原卷字母
       optsEl.querySelectorAll('.qopt').forEach(function (b) {
         var L = b.getAttribute('data-new');
         if (origAnsText.indexOf(L) >= 0) b.classList.add('correct');
+        else if (myPick && myPick.indexOf(map[L]) >= 0) b.classList.add('wrong');           // 当时错选的选项
         b.disabled = true;
       });
       var expHtml2 = remapLetters(q.e, map);
@@ -585,12 +674,12 @@
       var db = window.QUIZ_DB[subj];
       var qs = db.questions.filter(function (q) { return q.p === pid; }).sort(function (a, b) { return (a.n || 0) - (b.n || 0); });
       if (!qs.length) { alert('该卷暂无可刷题目'); return; }
-      S.exam = { pid: pid, title: p.t, subj: subj, qs: qs, answers: {}, started: Date.now(), end: Date.now() + 90 * 60000, cur: 0 };
+      S.exam = { pid: pid, title: p.t, subj: subj, qs: qs, answers: {}, started: Date.now(), end: Date.now() + 90 * 60000, cur: 0, secs: {}, curQ: null, qStart: 0 };
       renderExam();
     });
   }
   function startExamFromPool() {
-    S.exam = { pid: null, title: '自由组卷', subj: 'all', qs: S.pool, answers: {}, started: Date.now(), end: Date.now() + Math.max(30, S.pool.length) * 60000, cur: 0 };
+    S.exam = { pid: null, title: '自由组卷', subj: 'all', qs: S.pool, answers: {}, started: Date.now(), end: Date.now() + Math.max(30, S.pool.length) * 60000, cur: 0, secs: {}, curQ: null, qStart: 0 };
     renderExam();
   }
   function renderExam() {
@@ -620,6 +709,9 @@
     var ex = S.exam, q = ex.qs[ex.cur];
     ex.maps = ex.maps || {};
     var v = ex.maps[q.id] || (ex.maps[q.id] = shuffleView(q));
+    // 逐题用时：结算上一题停留段，开始计时当前题（答题卡跳回同一题的时间段累加）
+    if (ex.qStart && ex.curQ) ex.secs[ex.curQ] = (ex.secs[ex.curQ] || 0) + Math.max(0, Math.round((Date.now() - ex.qStart) / 1000));
+    ex.curQ = q.id; ex.qStart = Date.now();
     var sheet = $('exam-sheet'); sheet.innerHTML = '';
     $('q-pos') && ($('q-pos').textContent = '');
     $('q-fill').style.width = Math.round((ex.cur + 1) * 100 / ex.qs.length) + '%';
@@ -674,32 +766,48 @@
   }
   function handIn() {
     var ex = S.exam;
-    var score = 0, right = 0, wrongIds = [];
+    // 结算最后一题用时
+    if (ex.qStart && ex.curQ) ex.secs[ex.curQ] = (ex.secs[ex.curQ] || 0) + Math.max(0, Math.round((Date.now() - ex.qStart) / 1000));
+    var now = Date.now();
+    var score = 0, right = 0, wrongIds = [], unanswered = 0, picks = {};
     ex.qs.forEach(function (q) {
       var picked = ex.answers[q.id] || '';
-      if (!picked) { wrongIds.push(q.id); return; }
-      var origAns = ex.maps[q.id].ans;
+      var v = ex.maps[q.id] || { map: null, ans: q.a };
+      var origPicked = picked ? picked.split('').map(function (L) { return (v.map && v.map[L]) || L; }).sort().join('') : '';
+      var sec = ex.secs[q.id] || 0;
+      if (!picked) {
+        unanswered++;
+        picks[q.id] = { p: '', ok: 0, sec: sec };      // 未作答：只进报告，不入错题本
+        return;
+      }
+      var origAns = v.ans;
       var full = picked === origAns, part = false;
+      var st = 0;
       if (q.t === 's') {
-        if (full) { score += 1; right++; } else wrongIds.push(q.id);
+        if (full) { score += 1; right++; st = 1; } else wrongIds.push(q.id);
       } else {
         var ok = true, miss = false;
         for (var i = 0; i < picked.length; i++) if (origAns.indexOf(picked[i]) < 0) { ok = false; break; }
-        if (ok && picked.length < origAns.length) { miss = true; score += picked.length * 0.5; }
-        else if (ok) { score += 2; right++; }
+        if (ok && picked.length < origAns.length) { miss = true; st = 2; score += picked.length * 0.5; }
+        else if (ok) { score += 2; right++; st = 1; }
         else { ok = false; }
         if (!ok || miss) wrongIds.push(q.id);
       }
+      picks[q.id] = { p: origPicked, ok: st, sec: sec };
+      if (st !== 1) {
+        // 答错/少选：入错题本（带作答明细，与练习模式同构；旧版考试不写 a 记录导致污染，现补齐）
+        var a = store.a[q.id] || { ok: 0, t: 0, c: 0, r: 0 };
+        a.c++; a.t = now; a.ok = 0;
+        store.a[q.id] = a;
+        store.w[q.id] = { box: 0, streak: 0, t: now, due: now, lastPick: origPicked };
+      }
     });
     // 记录
-    var now = Date.now();
-    wrongIds.forEach(function (id) {
-      var q = qById(id);
-      if (q) { store.w[id] = { box: 0, streak: 0, t: now, due: now }; }
-    });
-    store.e.push({ t: now, pid: ex.pid, title: ex.title, score: Math.round(score * 10) / 10, total: ex.qs.length, right: right });
+    store.e.push({ t: now, pid: ex.pid, title: ex.title, score: Math.round(score * 10) / 10, total: ex.qs.length, right: right,
+      unanswered: unanswered, secs: Math.round((now - ex.started) / 1000), picks: picks });
     if (store.e.length > 50) store.e = store.e.slice(-50);
     saveStore();
+    purgeGhostWrong();
     S.exam = null;
     // 结果页：错题清单（点击直达该题回顾）+ 只看错题
     var wrongItems = wrongIds.map(function (id) { var q = qById(id); return q ? { id: id, idx: ex.qs.indexOf(q), q: q } : null; }).filter(Boolean);
@@ -712,12 +820,14 @@
       + '<div class="stat"><b>' + Math.round(score * 10) / 10 + '</b><small>得分 / 满分140</small></div>'
       + '<div class="stat"><b>' + (score >= 84 ? '通过' : '未过') + '</b><small>合格线 84</small></div>'
       + '<div class="stat"><b>' + right + '/' + ex.qs.length + '</b><small>全对题数</small></div>'
-      + '<div class="stat"><b>' + wrongIds.length + '</b><small>错题（已入错题本）</small></div>'
+      + '<div class="stat"><b>' + wrongIds.length + '</b><small>答错（已入错题本）</small></div>'
+      + (unanswered ? '<div class="stat"><b>' + unanswered + '</b><small>未作答（不入错题本）</small></div>' : '')
       + '</div><div class="qstart"><button class="qbtn primary" id="btn-review">逐题回顾</button>'
       + (wrongItems.length ? '<button class="qbtn" id="btn-wrong-only">只看错题（' + wrongItems.length + '）</button>' : '')
       + '<button class="qbtn" id="btn-home2">返回题库</button></div></div>'
       + (wrongItems.length ? '<div class="section"><h2>❌ 错题清单（点击直达解析）</h2><div class="wq-jumps">' + wrongJumps + '</div></div>' : '');
     S.pool = ex.qs; S._reviewWrong = wrongIds;
+    S._reviewPick = picks;
     $('btn-review').addEventListener('click', function () { S.mode = 'recite'; S.pos = 0; renderQuiz(); });
     if (wrongItems.length) {
       $('btn-wrong-only').addEventListener('click', function () {
@@ -762,7 +872,7 @@
       if (!a) store.w[id] = b;
       else {
         var best = (b.streak || 0) > (a.streak || 0) ? b : a;
-        store.w[id] = { box: best.box, streak: best.streak, t: Math.max(a.t || 0, b.t || 0), due: best.due };
+        store.w[id] = { box: best.box, streak: best.streak, t: Math.max(a.t || 0, b.t || 0), due: best.due, lastPick: best.lastPick || a.lastPick || b.lastPick || '' };
       }
     });
     Object.keys(remote.f || {}).forEach(function (id) {

@@ -258,6 +258,16 @@
   .wq-stem-full { margin: 12px 0 8px; font-size: 14px; color: #22221f; }
   .wq-opt { padding: 4px 8px; border-radius: 6px; margin: 2px 0; font-size: 13.5px; color: #444441; }
   .wq-opt.ans { background: #EAF4EC; color: #2C5E3C; font-weight: 600; }
+  .wq-opt.mine { background: #FBEDEC; color: #A12622; }
+  .wq-mine-tag { font-size: 11px; font-weight: 700; color: #A12622; white-space: nowrap; }
+  /* 考试报告 */
+  .erp-no { display: inline-flex; align-items: center; gap: 6px; flex: none; }
+  .erp-no b { min-width: 26px; text-align: right; }
+  .erp-badge { display: inline-flex; width: 20px; height: 20px; align-items: center; justify-content: center; border-radius: 50%; font-size: 12px; font-weight: 700; color: #fff; }
+  .erp-badge.ok { background: #3E8E5A; }
+  .erp-badge.part { background: #C98A1B; }
+  .erp-badge.no { background: #A12622; }
+  .erp-badge.skip { background: #B0AFA8; }
   /* 模拟考结果页：错题跳转清单 */
   .wq-jumps .wr-jump { display: flex; gap: 10px; padding: 8px 10px; border-bottom: 1px dashed #f0f0ed; cursor: pointer; align-items: baseline; font-size: 13px; }
   .wq-jumps .wr-jump:last-child { border-bottom: none; }
@@ -578,6 +588,6 @@
   });
 })();
 </script>
-<script src="quiz_app.js?v=20261107b"></script>
+<script src="quiz_app.js?v=20261107c"></script>
 </body>
 </html>
