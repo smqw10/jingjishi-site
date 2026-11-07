@@ -192,21 +192,29 @@
   .eq-stat { display: block; font-size: 12.5px; color: #A09A8A; margin-top: 6px; }
   .eq-stat.has { color: #2C5E3C; font-weight: 600; }
 
-  .ch-card{background:#fff;border:1px solid #e5eaf1;border-radius:12px;padding:13px 16px;margin-bottom:12px}
-  .ch-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .tabs{display:flex;gap:8px}
+  .tab-btn{border:1px solid #cfdcea;background:#f4f8fc;color:#3a5a7a;border-radius:20px;padding:6px 18px;font-size:14px;font-weight:600;cursor:pointer}
+  .tab-btn.on{background:#1a5a9a;border-color:#1a5a9a;color:#fff}
+  .ch-group h2{margin:18px 0 12px}
+  details.ch-card{background:#fff;border:1px solid #e5eaf1;border-radius:12px;padding:10px 16px;margin-bottom:10px}
+  details.ch-card>summary{display:flex;align-items:center;gap:8px;flex-wrap:wrap;cursor:pointer;list-style:none}
+  details.ch-card>summary::-webkit-details-marker{display:none}
+  details.ch-card>summary::after{content:"▸";color:#9ab0c5;margin-left:auto;font-size:13px}
+  details.ch-card[open]>summary::after{content:"▾"}
   .ch-rank{min-width:26px;height:26px;border-radius:50%;background:#eef3f9;color:#4a6a8a;font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center}
   .ch-rank.top{background:#FAEEDA;color:#854F0B}
   .ch-score{background:#FAEEDA;color:#854F0B;font-weight:700;font-size:12.5px;border-radius:6px;padding:2px 8px}
-  .ch-title{font-weight:700;color:#1a4b7c;text-decoration:none;font-size:15px}
-  .ch-title:hover{text-decoration:underline}
-  .ch-qing{color:#8494a8;font-size:12.5px;margin:7px 0 0;line-height:1.6}
+  .ch-name{font-weight:700;color:#1a4b7c;font-size:15px}
+  .ch-meta{color:#9ab0c5;font-size:12px}
+  .ch-qing{color:#8494a8;font-size:12.5px;margin:8px 0 0;line-height:1.6}
+  .ch-link{font-size:12.5px;color:#4a7ab0;text-decoration:none;margin-left:4px}
   .ch-card .recite{margin:10px 0 2px}
   .ch-sechead{font-size:12.5px;color:#7a8aa0;margin:14px 0 4px;font-weight:600}
 </style>
 </head>
 <body>
 <div class="sb-mask"></div><button type="button" class="sb-btn" aria-label="打开菜单">☰</button><nav class="sidebar"><div class="sb-brand">📚 中级经济师<span>2026 备考学习站</span></div><a class="sb-item" href="index.html"><span>🏠</span><span>学习总览</span></a><div class="sb-group">讲义</div><a class="sb-item" href="mulu-b.html"><span>📖</span><span>经济基础</span></a><a class="sb-item" href="mulu-r.html"><span>📖</span><span>人力资源</span></a><div class="sb-group">速记</div><a class="sb-item" href="memo-person.html"><span>👤</span><span>人物与理论</span></a><a class="sb-item" href="memo-curve.html"><span>📈</span><span>曲线与图形</span></a><a class="sb-item" href="memo-confuse.html"><span>⚖️</span><span>易混对比</span></a><a class="sb-item" href="memo-concept.html"><span>🧩</span><span>概念要点</span></a><a class="sb-item" href="memo-mn.html"><span>🧠</span><span>口诀联想</span></a><a class="sb-item" href="memo-formula.html"><span>🧮</span><span>公式计算</span></a><a class="sb-item active" href="memo-chapter.html"><span>🃏</span><span>章节速记</span></a><div class="sb-group">题库</div><a class="sb-item" href="quiz.html"><span>📝</span><span>刷题题库</span></a></nav>
-<div class="header"><div class="crumb"><a href="index.html">← 学习总览</a></div><span class="label">考前速记</span><h1>🃏 章节速记卡</h1><div class="subtitle">与各章讲义末尾的「📌 本节速记卡」同源 · 分科目按考情分值倒序，直接看不用点开</div></div><div class="toc"><a href="#g-基础">经济基础</a><a href="#g-人力">人力资源</a></div><h2 id="g-基础">📖 经济基础（37 章，按考情分值倒序）</h2><article class="ch-card" id="b14"><div class="ch-head"><span class="ch-rank top">1</span><span class="ch-score">近年约 9 分</span><a class="ch-title" href="基础14_税收制度_第1节_税制要素和税收分类.html">第十四章 税收制度</a></div><div class="ch-qing">考情：重点章节，知识点较多、重点突出，增值税、消费税、个人所得税、房产税是重难点；近年一般考核 5–9 分，题量 2–3 道单选题、2 道多选题。</div><div class="ch-sechead">📍 第1节 税制要素和税收分类</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+<div class="header"><div class="crumb"><a href="index.html">← 学习总览</a></div><span class="label">考前速记</span><h1>🃏 章节速记卡</h1><div class="subtitle">与各章讲义末尾的「📌 本节速记卡」同源 · 点科目切换，点章名展开该章速记卡</div></div><div class="toc tabs"><button type="button" class="tab-btn on" data-k="基础">📖 经济基础</button><button type="button" class="tab-btn" data-k="人力">📖 人力资源</button></div><div class="ch-group" id="g-基础"><h2>📖 经济基础（37 章，按考情分值倒序）</h2><details class="ch-card" id="b14"><summary><span class="ch-rank top">1</span><span class="ch-score">近年约 9 分</span><span class="ch-name">第十四章 税收制度</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：重点章节，知识点较多、重点突出，增值税、消费税、个人所得税、房产税是重难点；近年一般考核 5–9 分，题量 2–3 道单选题、2 道多选题。<a class="ch-link" href="基础14_税收制度_第1节_税制要素和税收分类.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 税制要素和税收分类</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>税制要素</strong>：纳税人、课税对象、税率、纳税环节、纳税期限、减税和免税、违章处理、纳税地点；<strong>基本要素只有前三个</strong></li>
 <li><strong>三要素定位</strong>：对谁收＝纳税人；对什么收＝课税对象（税种区分标志）；收多少＝税率（税收制度的中心环节，体现深度）</li>
 <li><strong>三个"人"</strong>：纳税人＝直接负纳税义务；负税人＝最终负担税款（个税企税一致、增消分离）；扣缴义务人＝代扣代缴、代收代缴</li>
@@ -219,30 +227,48 @@
 <li><strong>增值税</strong>：以增值额为课征对象，收入居各税种之首；特点＝逐环节＋不重复（中性）＋税基广；优点＝平衡、退税、稳定、制约</li>
 <li><strong>三类型</strong>：消费型（扣固定资产）、收入型（扣折旧）、生产型（不扣）；我国实行消费型</li>
 <li><strong>范围与纳税人</strong>：生产批发零售进口＋服务无形不动产，覆盖一二三产业；超标应认定、不超标可申请、认定后不得转回小规模；不办理认定的＝其他个人、非企业性单位、不经常发生应税行为的企业</li>
-<li><strong>税率</strong>：13%（货物＋有形动产租赁＋加工修理修配）；9%（民生实物＋交通运输邮政基础电信建筑不动产租赁销售不动产转让土地使用权）；6%（增值电信金融现代服务＋销售无形资产，转让土地使用权除外）；0（出口）；征收率 3%、5%（简易计税）</li>
+<li><strong>税率 13%</strong>：货物＋有形动产租赁＋加工修理修配</li>
+<li><strong>税率 9%</strong>：民生实物＋交通运输邮政基础电信建筑不动产租赁销售不动产转让土地使用权</li>
+<li><strong>税率 6%</strong>：增值电信金融现代服务＋销售无形资产，转让土地使用权除外</li>
+<li><strong>零税率与征收率</strong>：0（出口）；征收率 3%、5%（简易计税）</li>
 <li><strong>计税</strong>：一般纳税人＝销项（不含税销售额×税率）−进项（发票注明允许扣除）；小规模＝不含税销售额×征收率；进口＝组成计税价格×税率</li>
 <li><strong>消费税</strong>：特定消费品，间接税，消费者实际负担；特点＝选择、单一（生产销售进口环节）、高差异（小汽车 1%~40%）、灵活；列举征税、未列不征；纳税人＝生产、委托加工、进口应税消费品的单位和个人</li>
 <li><strong>税目</strong>：高档（化妆品、手表、高尔夫球及球具、贵重首饰和珠宝玉石）＋两车两油（摩托车、小汽车、成品油、游艇）＋烟酒＋筷子地板鞭炮电池涂料</li>
 <li><strong>计税</strong>：从价定率（1%~56%）、从量定额（啤酒黄酒成品油）、复合计税（卷烟白酒）</li>
-<li><strong>关税</strong>：关境≠国境（自由港、自由贸易区、关税同盟）；对象＝货物（贸易性商品）＋物品（行李、邮递等）；纳税人＝收货人、发货人、所有人（有推定规则）；税率＝最惠国、协定、特惠、普通＋暂定＋配额；完税价格以成交价格为基础、不能确定由海关估定；主从价，油啤卷从量</li>
+<li><strong>关境与国境</strong>：关境≠国境（自由港、自由贸易区、关税同盟）</li>
+<li><strong>关税对象与纳税人</strong>：对象＝货物（贸易性商品）＋物品（行李、邮递等）；纳税人＝收货人、发货人、所有人（有推定规则）</li>
+<li><strong>关税税率</strong>：最惠国、协定、特惠、普通＋暂定＋配额</li>
+<li><strong>关税完税价格</strong>：以成交价格为基础、不能确定由海关估定；主从价，油啤卷从量</li>
 </ul></div><div class="ch-sechead">📍 第3节 所得税类</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>所得税特点</strong>：税负公平（量能负担，有起征点、免征额和扣除项目）、不重复不易转嫁（单环节）、税源可靠有弹性（累进税率、内在稳定器）</li>
-<li><strong>企业所得税</strong>：个独、合伙不适用；居民企业 25%；非居民企业（境内未设机构场所或所得无实际联系）就境内所得 20%；应纳税所得额＝年度收入−不征税收入−免税收入−各项扣除−允许弥补的以前年度亏损；纳税地点＝登记注册地（境外看实际管理机构所在地）；不具法人资格分支机构汇总缴；按年计算（公历 1 月 1 日至 12 月 31 日）</li>
+<li><strong>企业所得税纳税人</strong>：个独、合伙不适用</li>
+<li><strong>企业所得税税率</strong>：居民企业 25%；非居民企业（境内未设机构场所或所得无实际联系）就境内所得 20%</li>
+<li><strong>企业所得税计税</strong>：应纳税所得额＝年度收入−不征税收入−免税收入−各项扣除−允许弥补的以前年度亏损</li>
+<li><strong>企业所得税征管</strong>：纳税地点＝登记注册地（境外看实际管理机构所在地）；不具法人资格分支机构汇总缴；按年计算（公历 1 月 1 日至 12 月 31 日）</li>
 <li><strong>个税纳税人</strong>：居民（有住所，或无住所且住满 183 天）就境内外所得纳税；非居民（无住所又不居住，或无住所且住不满 183 天）就境内所得纳税；以所得人为纳税人、支付所得方为扣缴义务人</li>
 <li><strong>个税税率</strong>：综合所得（工资薪金＋劳务报酬＋稿酬＋特许权使用费）按年合并 3%~45%；经营所得 5%~35%；利股红、财租、财转、偶然 20% 比例</li>
-<li><strong>应纳税所得额</strong>：居民综合所得年收入−60000−专项扣除−专项附加扣除−其他扣除；劳、特每次收入减 20%、稿酬收入额减按 70%（56 折）；非居民工资每月减 5000、劳特按次收入额；财产租赁≤4000 减 800、＞4000 减 20%；财产转让减原值和合理费用；利股红偶然按次收入额</li>
+<li><strong>居民综合所得</strong>：年收入−60000−专项扣除−专项附加扣除−其他扣除</li>
+<li><strong>劳务特许与稿酬</strong>：劳、特每次收入减 20%、稿酬收入额减按 70%（56 折）</li>
+<li><strong>非居民与财产租赁</strong>：非居民工资每月减 5000、劳特按次收入额；财产租赁≤4000 减 800、＞4000 减 20%</li>
+<li><strong>财产转让与偶然所得</strong>：财产转让减原值和合理费用；利股红偶然按次收入额</li>
 <li><strong>专项扣除</strong>＝三险一金；<strong>专项附加扣除</strong>＝婴幼儿照护、子女教育、继续教育、大病医疗、住房贷款利息或住房租金、赡养老人</li>
-<li><strong>优惠</strong>：免征＝国家（补贴津贴、安家费退职费退休费、国债和金融债券利息、省级以上单位奖金）、国际（外交代表领事官员、公约协议）、人身（福利费抚恤金救济金、保险赔款、军人转业费复员费退役金）；减征＝残疾孤老烈属所得、自然灾害重大损失（省级政府定幅度期限）</li>
+<li><strong>免征·国家</strong>：补贴津贴、安家费退职费退休费、国债和金融债券利息、省级以上单位奖金</li>
+<li><strong>免征·国际与人身</strong>：国际（外交代表领事官员、公约协议）、人身（福利费抚恤金救济金、保险赔款、军人转业费复员费退役金）</li>
+<li><strong>减征</strong>：残疾孤老烈属所得、自然灾害重大损失（省级政府定幅度期限）</li>
 </ul></div><div class="ch-sechead">📍 第4节 财产税类</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>财产税优点</strong>：纳税能力原则；税源充分稳定（课税对象是财产价值）；收入分配功能（有财产者纳税、多者多纳）；直接税不易转嫁</li>
 <li><strong>财产税缺点</strong>：负担有一定不公平（财富主要看收入不只看财产）；收入弹性较小；经济不发达时期减少资本收益、对资本形成可能带来障碍</li>
 <li><strong>房产税</strong>：以房屋为征税对象，按计税价值或租金收入向产权所有人征收；纳税人＝城市、县城、建制镇、工矿区内拥有房屋产权的产权所有人、承典人、房产代管人或使用人；农村不征；围墙、烟囱、水塔、菜窖、室外游泳池等独立建筑物不征</li>
 <li><strong>房产税税率</strong>：从价 1.2%（房产余值＝原值一次减除 10%~30%）；从租 12%（租金收入不含增值税）</li>
-<li><strong>契税</strong>：境内转移土地房屋权属，向<strong>承受方</strong>征收；范围＝国有土地使用权出让＋土地使用权转让（出售赠与互换，不含土地承包经营权和土地经营权转移）＋房屋买卖赠与互换；非法定继承人遗嘱承受＝赠与征；获奖取得＝征；<strong>法定继承不征</strong>；典当、分拆、抵押、出租不征</li>
+<li><strong>契税</strong>：境内转移土地房屋权属，向<strong>承受方</strong>征收</li>
+<li><strong>契税范围</strong>：国有土地使用权出让＋土地使用权转让（出售赠与互换，不含土地承包经营权和土地经营权转移）＋房屋买卖赠与互换</li>
+<li><strong>契税征免</strong>：非法定继承人遗嘱承受＝赠与征；获奖取得＝征；<strong>法定继承不征</strong>；典当、分拆、抵押、出租不征</li>
 <li><strong>契税税率</strong>：3%~5% 幅度税率；2024 年 12 月 1 日起家庭唯一住房 140 ㎡及以下减按 1%、以上减按 1.5%；计税依据不含增值税；应纳税额＝计税依据×税率</li>
-<li><strong>车船税</strong>：所有人或管理人纳税，交强险保险机构为扣缴义务人；六大税目（乘用车、商用车、挂车、其他车辆、摩托车、船舶，无拖拉机）；计税单位＝每辆/整备质量每吨/净吨位每吨/艇身长度每米；租入外国籍船不征、出租境外征；2024 年 7 月 1 日起节能（商用）车减半、新能源车船免征</li>
-</ul></div></article>
-<article class="ch-card" id="b13"><div class="ch-head"><span class="ch-rank top">2</span><span class="ch-score">近年约 8 分</span><a class="ch-title" href="基础13_财政收入_第1节_财政收入的含义与分类.html">第十三章 财政收入</a></div><div class="ch-qing">考情：重点章节，知识点较多、重点突出，其中税负转嫁与国债是重难点；近年考试一般考核 3–8 分，题量 1–4 道单选题、1–2 道多选题。</div><div class="ch-sechead">📍 第1节 财政收入的含义与分类</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+<li><strong>车船税</strong>：所有人或管理人纳税，交强险保险机构为扣缴义务人</li>
+<li><strong>车船税税目与计税单位</strong>：六大税目（乘用车、商用车、挂车、其他车辆、摩托车、船舶，无拖拉机）；计税单位＝每辆/整备质量每吨/净吨位每吨/艇身长度每米</li>
+<li><strong>车船税征免</strong>：租入外国籍船不征、出租境外征；2024 年 7 月 1 日起节能（商用）车减半、新能源车船免征</li>
+</ul></div></details>
+<details class="ch-card" id="b13"><summary><span class="ch-rank top">2</span><span class="ch-score">近年约 8 分</span><span class="ch-name">第十三章 财政收入</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：重点章节，知识点较多、重点突出，其中税负转嫁与国债是重难点；近年考试一般考核 3–8 分，题量 1–4 道单选题、1–2 道多选题。<a class="ch-link" href="基础13_财政收入_第1节_财政收入的含义与分类.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 财政收入的含义与分类</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>财政收入</strong>＝政府为履行职能、提供公共物品与服务筹集的一切资金总和；表现为一定时期内取得的货币收入</li>
 <li>国际四渠道：税收、社会缴款、赠与、其他收入（<strong>缴税赠其他</strong>）</li>
 <li>我国一般公共预算收入<strong>四类</strong>：税收收入、非税收入、债务收入、转移性收入；非税收入<strong>八款</strong>（"其他收入"只是其中一款）</li>
@@ -256,20 +282,29 @@
 <li><strong>拉弗曲线</strong>：税率与税收收入或经济增长的关系；<strong>先增后减</strong>有拐点；保持<strong>适度</strong>宏观税负；征税有<strong>禁区</strong>、涵养<strong>税源</strong>（＝GDP）；<strong>供应学派</strong>、20 世纪 70 年代、回应凯恩斯主义需求管理失效</li>
 </ul></div><div class="ch-sechead">📍 第3节 税负转嫁</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>税负转嫁</strong>＝缴税后把负担全部或部分转移给他人；<strong>法定纳税人≠最后负担者</strong>；最终结果＝<strong>税负归宿</strong>（全部负担最后由谁承担）</li>
-<li><strong>六方式</strong>：前转（顺转，提价向前，<strong>最典型最普遍</strong>，多在货物劳务税）、后转（逆转，压价向后）、混转（散转，前后混合、实践中常见）、消转（降成本抵税，<strong>没转嫁自己扛</strong>）、旁转（侧转给购买者/供应者以外的人）、税收资本化（<strong>后转的特殊形式</strong>，购价预先扣除未来税款；土地、政府债券；<strong>现在承担未来的税收</strong>）</li>
+<li><strong>六方式·前转与后转</strong>：前转（顺转，提价向前，<strong>最典型最普遍</strong>，多在货物劳务税）、后转（逆转，压价向后）</li>
+<li><strong>六方式·混转消转旁转</strong>：混转（散转，前后混合、实践中常见）、消转（降成本抵税，<strong>没转嫁自己扛</strong>）、旁转（侧转给购买者/供应者以外的人）</li>
+<li><strong>六方式·税收资本化</strong>：<strong>后转的特殊形式</strong>，购价预先扣除未来税款；土地、政府债券；<strong>现在承担未来的税收</strong></li>
 <li><strong>资本化 vs 后转</strong>：资本品 vs 消费品；交易后"预期历次累计税款"一次性转 vs 交易时"一次性税款"一次性转</li>
 <li><strong>影响因素</strong>（关键＝供求弹性）：需求弹性小＋供给弹性大→易转嫁；必需品易、非必需品难；间接税（增值税、消费税）易、直接对人税（所得税）难；范围广易、范围窄难</li>
 </ul></div><div class="ch-sechead">📍 第4节 国债</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>国债</strong>＝中央政府依据<strong>有借有还的信用原则</strong>取得的资金来源；<strong>有偿、非经常性</strong>财政收入；特征＝<strong>自愿、有偿、灵活</strong>；政府信用担保、风险小＝<strong>"金边债券"</strong></li>
-<li><strong>五种分类</strong>：内债外债；短期 1 年内（<strong>国库券</strong>）/中期 1～10 年/长期 10 年以上；固定/浮动利率（随物价指数或市场利息率调整）；上市（多为中短期）/非上市（多为长期）；货币/实物国债（防货币贬值、高通胀时用，<strong>1950 人民胜利折实公债</strong>）</li>
+<li><strong>国债分类·期限</strong>：内债外债；短期 1 年内（<strong>国库券</strong>）/中期 1～10 年/长期 10 年以上</li>
+<li><strong>国债分类·利率与上市</strong>：固定/浮动利率（随物价指数或市场利息率调整）；上市（多为中短期）/非上市（多为长期）</li>
+<li><strong>国债分类·币形</strong>：货币/实物国债（防货币贬值、高通胀时用，<strong>1950 人民胜利折实公债</strong>）</li>
 <li><strong>四大政策功能（赤币建宏）</strong>：弥补财政赤字、调节货币供应量和利率、筹集建设资金、调控宏观经济；弥补赤字三方式中<strong>发债副作用最小</strong>（闲置资金、一般不通胀）</li>
-<li><strong>负担四主体</strong>：认购者（应债能力）、债务人（偿债能力）、纳税人（税收还债）、代际（净债务）；<strong>绝对规模三指标</strong>＝余额/当年发行总额/当年还本付息总额；<strong>相对规模两指标</strong>＝负担率（余额/GDP，发达 <strong>60%</strong>、发展 <strong>45%</strong>）＋依存度（当年债务收入/当年财政支出，<strong>15%~20%</strong>）</li>
+<li><strong>负担四主体</strong>：认购者（应债能力）、债务人（偿债能力）、纳税人（税收还债）、代际（净债务）</li>
+<li><strong>国债绝对规模</strong>：三指标＝余额/当年发行总额/当年还本付息总额</li>
+<li><strong>国债相对规模</strong>：两指标＝负担率（余额/GDP，发达 <strong>60%</strong>、发展 <strong>45%</strong>）＋依存度（当年债务收入/当年财政支出，<strong>15%~20%</strong>）</li>
 <li><strong>李嘉图等价</strong>：债券与税收筹资效果相同或等价；国债助长浪费心理、有害、反对发债</li>
-<li><strong>国债制度</strong>：发行四方式"招包直随"（决定发行条件的关键＝发行方式；演变：行政摊派→承购包销→招标发行）；偿还五法（抽签分次、到期一次、转期、提前、市场购销）；市场＝一级发行＋二级流通（转让变现）；交易四方式＝现货（最古老最常用）、回购（约买回）、期货（保证金杠杆、保值投机套利）、期权（可放弃）</li>
+<li><strong>国债发行</strong>：四方式"招包直随"（决定发行条件的关键＝发行方式；演变：行政摊派→承购包销→招标发行）</li>
+<li><strong>国债偿还</strong>：五法（抽签分次、到期一次、转期、提前、市场购销）</li>
+<li><strong>国债市场</strong>：一级发行＋二级流通（转让变现）</li>
+<li><strong>国债交易四方式</strong>：现货（最古老最常用）、回购（约买回）、期货（保证金杠杆、保值投机套利）、期权（可放弃）</li>
 <li><strong>市场功能</strong>：实现国债的发行和偿还（固定收益出售、公募拍卖）、调节社会资金的运行</li>
 <li><strong>政府债务</strong>：偿还责任（财政资金还）＋或有债务（担保连带＋救助看情况）；<strong>中央余额管理</strong>；<strong>地方限额管理</strong>，一般（一般公共预算）专项（政府性基金预算），市场化原则、不得用于经常性支出、<strong>中央不救助</strong>、主要负责人第一责任人</li>
-</ul></div></article>
-<article class="ch-card" id="b28"><div class="ch-head"><span class="ch-rank top">3</span><span class="ch-score">近年约 7 分</span><a class="ch-title" href="基础28_会计概论_第1节_会计的基本概念.html">第二十八章 会计概论</a></div><div class="ch-qing">考情：全书重点章节，知识点多、分值高，近年考核 5–7 分（2025 年平均考查 5.75 分）。会计的对象、会计核算的具体内容、反映财务状况的会计要素、会计要素确认和计量的基本原则（整小节）、会计基本前提（整小节）、会计信息…</div><div class="ch-sechead">📍 第1节 会计的基本概念</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b28"><summary><span class="ch-rank top">3</span><span class="ch-score">近年约 7 分</span><span class="ch-name">第二十八章 会计概论</span><span class="ch-meta">7 张速记卡</span></summary><div class="ch-qing">考情：全书重点章节，知识点多、分值高，近年考核 5–7 分（2025 年平均考查 5.75 分）。会计的对象、会计核算的具体内容、反映财务状况的会计要素、会计要素确认和计量的基本原则（整小节）、会计基本前提（整小节）、会计信息…<a class="ch-link" href="基础28_会计概论_第1节_会计的基本概念.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 会计的基本概念</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>会计定义</strong>：货币为主要计量单位＋专门技术方法＋全部资金运动＋核算和监督＋经济管理活动（通过确认、计量、报告为管理者提供决策信息）</li>
 <li><strong>两大分支</strong>：对外财务会计（会计准则为据，报表报告，评价偿债/营运/获利能力）；对内管理会计（预测分析、决策分析、全面预算、成本控制、责任会计）——<strong>管理会计是现代会计形成的标志</strong></li>
 <li><strong>两大职能</strong>：核算（确认、计量、记录、报告；完整、连续、系统；<strong>最基本</strong>）＋监督（事前事中事后；真实性、完整性、合规性、有效性）；核算是监督的前提，辩证统一、不可分割</li>
@@ -281,17 +316,23 @@
 <li><strong>使用者</strong>：内部＝企业内部管理人员；外部＝投资者、债权人、政府及其有关部门、社会公众、其他（监管部门、企业职工等）</li>
 </ul></div><div class="ch-sechead">📍 第3节 会计要素</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>六要素两等式</strong>：资产（资金占用形态）＝负债＋所有者权益（取得途径），资产负债表；利润＝收入－费用，利润表；会计等式是设置会计科目、复式记账、编制会计报表的理论依据</li>
-<li><strong>资产</strong>：过去交易形成＋拥有或控制＋预期能带来经济利益；确认＝很可能流入＋能可靠计量；流动资产＝一年内（含）变现——货币资金、交易性金融资产、应收票据及应收账款、预付款项、其他应收款、存货；非流动＝长期股权投资、固定资产、在建工程、无形资产、开发支出</li>
+<li><strong>资产</strong>：过去交易形成＋拥有或控制＋预期能带来经济利益；确认＝很可能流入＋能可靠计量</li>
+<li><strong>流动资产</strong>：一年内（含）变现——货币资金、交易性金融资产、应收票据及应收账款、预付款项、其他应收款、存货</li>
+<li><strong>非流动资产</strong>：长期股权投资、固定资产、在建工程、无形资产、开发支出</li>
 <li><strong>负债</strong>：过去形成＋预期导致经济利益流出＋现时义务；确认＝很可能流出＋金额可靠计量；流动负债一年内清偿——短期借款、应付票据、应付账款、预收账款、应付职工工资、应交税费、应付利息、应付股利、其他应付款；非流动＝长期借款、应付债券</li>
 <li><strong>所有者权益</strong>＝资产－负债（剩余收益、股东权益）；四构成：实收资本、资本公积、盈余公积、未分配利润（"两公喂食"）；留存收益＝盈余公积＋未分配利润</li>
-<li><strong>收入</strong>：日常活动、导致所有者权益增加、与投入资本无关的总流入（代收款不算）；<strong>费用</strong>：日常活动、导致所有者权益减少、与分配利润无关的总流出（期间费用＝管理、研发、财务、销售）；<strong>利润</strong>：一定期间收入扣费用的盈余、反映经营成果的最终要素</li>
+<li><strong>收入</strong>：日常活动、导致所有者权益增加、与投入资本无关的总流入（代收款不算）</li>
+<li><strong>费用</strong>：日常活动、导致所有者权益减少、与分配利润无关的总流出（期间费用＝管理、研发、财务、销售）</li>
+<li><strong>利润</strong>：一定期间收入扣费用的盈余、反映经营成果的最终要素</li>
 <li><strong>九种变动</strong>：两边同增同减（1-4）；资产内部（5）；负债内部（6）；权益内部（9）；负债与权益交叉（7-8）；恒等式始终成立</li>
 </ul></div><div class="ch-sechead">📍 第4节 会计要素确认和计量的基本原则</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>四大基本原则</strong>："权配历划"——权责发生制、配比、历史成本、划分收益性支出与资本性支出（持续经营、会计分期是基本前提，别混入）</li>
 <li><strong>权责发生制（应计制）</strong>：当期已实现收入、已发生或应负担费用，无论款项是否收付都记当期；适用企业会计、行政事业单位财务会计。<strong>收付实现制</strong>：实际收付款项为基础；适用行政事业单位预算会计。口诀"权责看受益，收付看掏钱"</li>
 <li><strong>配比</strong>：收入与相关成本费用同一期间确认、计量、记录，不能提前或延后；因果配比（主营收入配直接成本）、时间配比（广告费、办公费配同期收入）</li>
 <li><strong>历史成本</strong>（实际成本/原始成本原则）：取得时按实际成本计量，减值按规定计提，不得自行调整账面价值；四优点＝容易客观、便于查证、防止随意更改、手续简化；以<strong>币值稳定</strong>为前提，价值大变时不能提供正确会计信息</li>
-<li><strong>收益性支出</strong>：效益仅惠本期→计入当期损益、利润表（营业费用、管理费用）；<strong>资本性支出</strong>：效益惠及几期→列入资产、资产负债表、分摊以后各期（购固定资产、无形资产支出）；目的＝正确确认当期损益；划错方向：收益性按资本性→虚增，资本性按收益性→虚减</li>
+<li><strong>收益性支出</strong>：效益仅惠本期→计入当期损益、利润表（营业费用、管理费用）</li>
+<li><strong>资本性支出</strong>：效益惠及几期→列入资产、资产负债表、分摊以后各期（购固定资产、无形资产支出）</li>
+<li><strong>划分目的</strong>：正确确认当期损益；划错方向：收益性按资本性→虚增，资本性按收益性→虚减</li>
 </ul></div><div class="ch-sechead">📍 第5节 会计基本前提</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>四大前提</strong>："主分持币"——会计主体、会计分期、持续经营、货币计量（历史成本、权责发生制不是前提）</li>
 <li><strong>会计主体</strong>：确认计量报告的空间范围、所服务的特定单位；为划分本主体与其他主体及投资者的经济业务；法律主体必然是会计主体，会计主体未必是法律主体（分公司、车间 vs 子公司）</li>
@@ -309,26 +350,37 @@
 </ul></div><div class="ch-sechead">📍 第7节 会计法规</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>核心</strong>：以《会计法》为核心，以会计准则、财务规则和会计制度为主要内容</li>
 <li><strong>《会计法》</strong>：会计工作的基本法律；法规体系中最高层次；制定其他会计法规的基本依据；指导会计工作的最高准则</li>
-<li><strong>会计准则</strong>（会计标准）：制定会计核算制度和组织会计核算工作的基本规范；《企业会计准则》（财政部制定，基本准则＋具体准则）、《事业单位会计准则》（财政部，规范事业单位核算：目标、前提、会计要素、信息质量要求、财务会计报告）、《政府会计准则》（财政部，规范政府核算：信息质量要求、预算会计要素、财务会计要素、决算报告和财务报告）</li>
+<li><strong>会计准则</strong>（会计标准）：制定会计核算制度和组织会计核算工作的基本规范</li>
+<li><strong>《企业会计准则》</strong>：财政部制定，基本准则＋具体准则</li>
+<li><strong>《事业单位会计准则》</strong>：财政部，规范事业单位核算：目标、前提、会计要素、信息质量要求、财务会计报告</li>
+<li><strong>《政府会计准则》</strong>：财政部，规范政府核算：信息质量要求、预算会计要素、财务会计要素、决算报告和财务报告</li>
 <li><strong>财务规则</strong>：《行政单位财务规则》《事业单位财务规则》；<strong>会计制度</strong>：《企业会计制度》《政府会计制度》</li>
-</ul></div></article>
-<article class="ch-card" id="b18"><div class="ch-head"><span class="ch-rank">4</span><span class="ch-score">近年约 7 分</span><a class="ch-title" href="基础18_货币供求与货币均衡_第1节_货币需求.html">第十八章 货币供求与货币均衡</a></div><div class="ch-qing">考情：重点章节，知识点较多、重点突出；货币需求、货币供给和通货膨胀是重难点。近年考核 3–7 分，题量 1–3 道单选题、1–2 道多选题。（讲义正文与书签均为四节：货币需求、货币供给、货币均衡、通货膨胀。）</div><div class="ch-sechead">📍 第1节 货币需求</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b18"><summary><span class="ch-rank">4</span><span class="ch-score">近年约 7 分</span><span class="ch-name">第十八章 货币供求与货币均衡</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：重点章节，知识点较多、重点突出；货币需求、货币供给和通货膨胀是重难点。近年考核 3–7 分，题量 1–3 道单选题、1–2 道多选题。（讲义正文与书签均为四节：货币需求、货币供给、货币均衡、通货膨胀。）<a class="ch-link" href="基础18_货币供求与货币均衡_第1节_货币需求.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 货币需求</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>货币需求</strong>：既定收入财富范围内能够并愿意持有货币的行为；有效需求＝能力＋愿望；派生于商品需求（货币有流通、支付、贮藏手段职能）</li>
 <li><strong>货币需求量</strong>：特定时间空间范围内各部门需要持有的货币数量＝一定时期经济的客观需求量</li>
 <li><strong>费雪</strong>：MV＝PT（P＝MV/T）；货币量决定物价水平；物价与货币量成正比（V 常数、T 稳定）</li>
 <li><strong>剑桥（庇古）</strong>：M＝KπY；以手持现金表示（含贮藏货币，K 是关键、与 V 互为倒数）；货币价值与货币量成反比</li>
 <li><strong>两说共同结论</strong>：物价水平与货币量成正比、货币价值与货币量成反比（物价正、币值反）</li>
-<li><strong>凯恩斯</strong>：流动性偏好；三动机＝交易（收支时间不一致）＋预防（紧急情况）＋投机（利率不确定）；L＝L1(Y)＋L2(i)；交易性需求是收入增函数、投机需求是利率减函数；利率降到低点→流动性陷阱（无人愿持债券、偏好绝对性）；假定＝未来不确定＋收入是短期资产</li>
+<li><strong>凯恩斯</strong>：流动性偏好；三动机＝交易（收支时间不一致）＋预防（紧急情况）＋投机（利率不确定）；L＝L1(Y)＋L2(i)</li>
+<li><strong>凯恩斯需求函数</strong>：交易性需求是收入增函数、投机需求是利率减函数；利率降到低点→流动性陷阱（无人愿持债券、偏好绝对性）</li>
+<li><strong>凯恩斯假定</strong>：未来不确定＋收入是短期资产</li>
 <li><strong>弗里德曼</strong>：货币数量说是货币需求理论（非产出/收入/物价理论）；财富总额（恒久性收入）、人力财富比例→同向；其他资产收益率、物价上涨→反向；μ＝随机因素</li>
 </ul></div><div class="ch-sechead">📍 第2节 货币供给</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>货币供给</strong>：银行系统向经济主体供给货币以满足货币需求的行为；机制侧重创造过程、决定侧重供应量因素；货币供应量＝流通中的货币数量</li>
 <li><strong>层次划分</strong>：依据<strong>流动性</strong>（转化为通货或现实购买力的能力）；1994 年三季度起央行按季公布</li>
-<li><strong>M0</strong>＝流通中货币（企事业单位、个人、机关团体、非存款类金融机构持有的硬币和现钞总和）；<strong>M1</strong>＝M0＋单位活期＋个人活期＋非银行支付机构客户备付金（2025 年 1 月起新口径，狭义货币、央行重点调控对象）；<strong>M2</strong>＝M1＋单位定期＋个人定期＋其他存款（财政存款除外），后三者为准货币，M2 是研究宏观调控的主要变量</li>
-<li><strong>社会融资规模</strong>：实体经济（非金融企业和住户）从金融体系获得的全部资金总额，2011 年起央行发布；五构成＝表内（人民币/外币贷款）＋表外（委托贷款、信托贷款、未贴现银行承兑汇票）＋直接融资（非金融企业境内股票筹资、企业债券筹资）＋其他（保险公司赔偿、投资性房地产、小额贷款公司和贷款公司贷款）＋政府（国债、地方专项债、地方一般债）</li>
+<li><strong>M0</strong>＝流通中货币（企事业单位、个人、机关团体、非存款类金融机构持有的硬币和现钞总和）</li>
+<li><strong>M1</strong>＝M0＋单位活期＋个人活期＋非银行支付机构客户备付金（2025 年 1 月起新口径，狭义货币、央行重点调控对象）</li>
+<li><strong>M2</strong>＝M1＋单位定期＋个人定期＋其他存款（财政存款除外），后三者为准货币，M2 是研究宏观调控的主要变量</li>
+<li><strong>社会融资规模</strong>：实体经济（非金融企业和住户）从金融体系获得的全部资金总额，2011 年起央行发布</li>
+<li><strong>社融五构成·前三</strong>：表内（人民币/外币贷款）＋表外（委托贷款、信托贷款、未贴现银行承兑汇票）＋直接融资（非金融企业境内股票筹资、企业债券筹资）</li>
+<li><strong>社融五构成·后二</strong>：其他（保险公司赔偿、投资性房地产、小额贷款公司和贷款公司贷款）＋政府（国债、地方专项债、地方一般债）</li>
 <li><strong>两大机制</strong>：央行信用创造货币（货币发行权＋信贷管理权，不兑现信用货币制度）；商业银行扩张信用创造派生存款，三制约＝缴存准备金、提取现金、缴付税款</li>
 <li><strong>基础货币 B</strong>＝央行发行的货币＋商业银行在央行的存款；<strong>货币乘数 K</strong>＝1/(存款准备金率＋货币结构比率)；<strong>M＝B×K</strong></li>
 <li><strong>数字货币</strong>：法定（央行发行）vs 私人（私人部门）；特点＝匿名、安全、可编程、高效率</li>
-<li><strong>数字人民币</strong>：2014 专项研究、2016 数字货币研究所＋第一代原型、2017 年末商业机构研发试验、17 省试点、截至 2024 年 6 月末累计交易 7 万亿元；双层运营（央行—商业机构）；定位于 M0、不计付利息；支付即结算（与银行账户松耦合）；小额匿名、大额依法可溯</li>
+<li><strong>数字人民币历程</strong>：2014 专项研究、2016 数字货币研究所＋第一代原型、2017 年末商业机构研发试验、17 省试点、截至 2024 年 6 月末累计交易 7 万亿元</li>
+<li><strong>数字人民币运营</strong>：双层运营（央行—商业机构）；定位于 M0、不计付利息</li>
+<li><strong>数字人民币特点</strong>：支付即结算（与银行账户松耦合）；小额匿名、大额依法可溯</li>
 </ul></div><div class="ch-sechead">📍 第3节 货币均衡</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>货币均衡</strong>：货币需求与货币供给<strong>在动态上保持一致</strong>的状态；三特征＝大体一致（非完全相等）＋动态过程（短期可能不一致、长期大体一致）＋在一定程度上反映经济总体均衡状况</li>
 <li><strong>货币失衡两类</strong>：总量性（供给＞需求或供给＜需求；央行宏观调控更注意它）＋结构性（总量大体一致、结构不相适应；原因是社会经济结构不合理，须通过经济结构调整解决）</li>
@@ -336,12 +388,14 @@
 <li><strong>公式</strong>：货币供应量增长率＝国内生产总值增长率＋物价自然上涨率（考虑物价自然上涨，货币增长略高于 GDP 增长）</li>
 </ul></div><div class="ch-sechead">📍 第4节 通货膨胀</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>通胀定义</strong>：价值符号流通条件下，货币供给过度→货币贬值、物价上涨；<strong>物价上涨是基本标志</strong>；萨缪尔森＝商品和生产要素价格总水平持续上涨；马克思主义＝纸币流通条件下纸币过度发行引起</li>
-<li><strong>按成因</strong>：需求拉上（总需求过度增长；三特点＝自发性—支出独立于成本、诱发性—成本诱发消费、支持性—政府扩支出/扩张政策）、成本推进（工资推进型—工资物价螺旋上升；利润推进型—垄断抬价）、输入型（进口商品价格上升）、结构型（经济结构因素变动，总供求均衡也可能发生）</li>
+<li><strong>按成因·需求拉上</strong>：总需求过度增长；三特点＝自发性—支出独立于成本、诱发性—成本诱发消费、支持性—政府扩支出/扩张政策</li>
+<li><strong>按成因·成本推进</strong>：工资推进型—工资物价螺旋上升；利润推进型—垄断抬价</li>
+<li><strong>按成因·输入型与结构型</strong>：输入型（进口商品价格上升）、结构型（经济结构因素变动，总供求均衡也可能发生）</li>
 <li><strong>按表现形式</strong>：公开型（开放性，物价随货币数量自发波动）、抑制型（隐蔽性，物价管制＋普遍持币待购）</li>
 <li><strong>原因</strong>：直接＝过度的信贷供给；主要＝财政原因（财政赤字/赤字政策）＋信贷原因（信用膨胀）；其他＝投资规模过大、国民经济结构比例失衡、国际收支长期顺差</li>
 <li><strong>治理</strong>：紧缩的需求政策（紧财政：增税、减支出、发公债；紧货币：提准备金率、提再贴现率、卖出证券）＋积极的供给政策（供给学派：刺激生产、减税、削减社会福利开支）</li>
-</ul></div></article>
-<article class="ch-card" id="b35"><div class="ch-head"><span class="ch-rank">5</span><span class="ch-score">近年约 7 分</span><a class="ch-title" href="基础35_合同法律制度_第1节_合同概述.html">第三十五章 合同法律制度</a></div><div class="ch-qing">考情：本章为重点章节，知识点多、分值高，近年考核 5–7 分（2025 年平均 6 分）；合同的分类、效力存在瑕疵的合同、合同的订立、履行、担保、转让是高频考点。</div><div class="ch-sechead">📍 第1节 合同概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b35"><summary><span class="ch-rank">5</span><span class="ch-score">近年约 7 分</span><span class="ch-name">第三十五章 合同法律制度</span><span class="ch-meta">6 张速记卡</span></summary><div class="ch-qing">考情：本章为重点章节，知识点多、分值高，近年考核 5–7 分（2025 年平均 6 分）；合同的分类、效力存在瑕疵的合同、合同的订立、履行、担保、转让是高频考点。<a class="ch-link" href="基础35_合同法律制度_第1节_合同概述.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 合同概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>合同</strong>＝平等主体（自然人、法人、其他组织）之间设立、变更、终止<strong>民事权利义务关系</strong>的协议</li>
 <li>四特征：地位平等、自愿、双方或多方、民事权利义务协议；<strong>婚姻、收养、监护等身份协议＋行政关系不归合同编</strong></li>
 <li>五组分类：双务/单务（义务分担）、诺成/实践（是否交货成立）、有名/无名（法定名称）、要式/不要式（特定形式）、主/从（能否独立存在）</li>
@@ -382,8 +436,8 @@
 <li><strong>严格责任</strong>：有违约行为即<strong>推定过错</strong>；债权人对过错<strong>不承担举证责任</strong>；债务人自证无过错才可免责</li>
 <li><strong>承担方式三种（可单独可合并）</strong>：继续履行／违约金（<strong>低于损失可求增加、高于损失可求减少</strong>）／违约损害赔偿（实际损失＋可得利益，<strong>不超过订约时可预见的范围</strong>）</li>
 <li><strong>免责事由三种</strong>：不可抗力（不能预见、不能避免、不能克服，属事件）、受害人过错（未采取措施致损失扩大的，扩大部分不赔）、免责条款（<strong>造成人身伤害</strong>、<strong>故意或重大过失造成财产损失</strong>的免责条款无效）</li>
-</ul></div></article>
-<article class="ch-card" id="b34"><div class="ch-head"><span class="ch-rank">6</span><span class="ch-score">近年约 7 分</span><a class="ch-title" href="基础34_物权法律制度_第1节_物权概述.html">第三十四章 物权法律制度</a></div><div class="ch-qing">考情：本章为**重点章节**，知识点多、分值高，近年考核 5–7 分（2025 年平均 5.75 分）；物权的概念、特征、种类，所有权的取得、消灭、共有，几种具体的用益物权与担保物权是高频考点。</div><div class="ch-sechead">📍 第1节 物权概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b34"><summary><span class="ch-rank">6</span><span class="ch-score">近年约 7 分</span><span class="ch-name">第三十四章 物权法律制度</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：本章为**重点章节**，知识点多、分值高，近年考核 5–7 分（2025 年平均 5.75 分）；物权的概念、特征、种类，所有权的取得、消灭、共有，几种具体的用益物权与担保物权是高频考点。<a class="ch-link" href="基础34_物权法律制度_第1节_物权概述.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 物权概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>物权</strong>：对物的支配权＋排斥他人干涉；物权（静态归属）＋债权（动态流通）＝最基本的财产权</li>
 <li><strong>五特征</strong>：绝对权（对世）、支配权、法定+公示（动产看占有、不动产看登记）、客体为物（特定、独立、有体、独立于人身之外）、追及+优先（物权＞债权；成立在先＞在后；债权平等）</li>
 <li><strong>三原则</strong>：物权法定（种、内、效、变、保"五定"）；一物一权（一个所有权＋不冲突物权可并存）；公示（方法与效力均法定）</li>
@@ -407,12 +461,14 @@
 <li><strong>居住权</strong>：遗嘱/遗赠/合同设立；<strong>自登记时设立</strong>；不得转让继承；原则不得出租（另有约定除外）；届满或死亡消灭并注销登记</li>
 </ul></div><div class="ch-sechead">📍 第4节 担保物权</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>担保物权五特征</strong>："不分价值，物从法"——不可分性、价值权性、物上代位性、从属性、法定性</li>
-<li><strong>抵押权</strong>：不移转占有；房与地<strong>一并抵押</strong>（法定）；意定抵押要<strong>书面合同</strong>；可抵押 7 项、需登记 4 项（不动产<strong>登记才设立</strong>）、不得抵押 6 项（"土宅公争查"）；动产抵押<strong>合同生效即设立</strong>，不登记不得对抗善意第三人/正常买受人</li>
+<li><strong>抵押权</strong>：不移转占有；房与地<strong>一并抵押</strong>（法定）；意定抵押要<strong>书面合同</strong></li>
+<li><strong>抵押财产范围</strong>：可抵押 7 项、需登记 4 项（不动产<strong>登记才设立</strong>）、不得抵押 6 项（"土宅公争查"）</li>
+<li><strong>动产抵押</strong>：<strong>合同生效即设立</strong>，不登记不得对抗善意第三人/正常买受人</li>
 <li><strong>质权</strong>：<strong>必须移转占有</strong>（强制规定）；标的是<strong>动产＋权利，不含不动产</strong>；可出质权利 7 项"票＋单＋金融资产"（含现有及将有的应收账款）</li>
 <li><strong>留置权</strong>：<strong>法定担保物权</strong>，成立无须约定；限保管、加工承揽等特定合同；同一动产上<strong>留置权人优先受偿</strong></li>
 <li><strong>共同底色</strong>：均从属于债权（随债权成立、移转、消灭）；物上代位——毁损灭失的<strong>赔偿金</strong>是代替物，可优先受偿</li>
-</ul></div></article>
-<article class="ch-card" id="b24"><div class="ch-head"><span class="ch-rank">7</span><span class="ch-score">近年约 7 分</span><a class="ch-title" href="基础24_描述统计_第1节_集中趋势的测度.html">第二十四章 描述统计</a></div><div class="ch-qing">考情：重点章节，知识点较多、分值较高。中位数、离散系数、分布形态的测度（整小节）和变量间的相关分析（整小节）是高频考点。近年考核 5–7 分，2025 年平均考查 6.5 分（在统计模块中领先其他章节一倍以上）。</div><div class="ch-sechead">📍 第1节 集中趋势的测度</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b24"><summary><span class="ch-rank">7</span><span class="ch-score">近年约 7 分</span><span class="ch-name">第二十四章 描述统计</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：重点章节，知识点较多、分值较高。中位数、离散系数、分布形态的测度（整小节）和变量间的相关分析（整小节）是高频考点。近年考核 5–7 分，2025 年平均考查 6.5 分（在统计模块中领先其他章节一倍以上）。<a class="ch-link" href="基础24_描述统计_第1节_集中趋势的测度.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 集中趋势的测度</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>均值</strong>＝总和÷个数；最主要测度值、重心、平均水平；充分利用全部信息；怕极端值；只适用<strong>数值型</strong></li>
 <li><strong>中位数</strong>：排序后位置居中；奇取中间、偶取中间俩平均；位置代表值、不受极端值影响；适用<strong>数值型＋顺序型</strong>；偏斜分布（收入）首选</li>
 <li><strong>众数</strong>：出现次数最多的值；不受极端值影响；可能不唯一；适用<strong>顺序型＋分类型</strong>，不适用于定量数据</li>
@@ -437,8 +493,8 @@
 <li><strong>Pearson 相关系数</strong>：度量两变量相关关系；取值 <strong>[−1,1]</strong>；<strong>只适用线性相关</strong></li>
 <li>r 解读：r＞0 正、r＜0 负；r＝±1 完全相关（Y 完全依赖 X）；<strong>r＝0 只否线性，可能有非线性</strong></li>
 <li>程度分级（|r|）：＜0.3 极弱（可视为无线性）；0.3～0.5 低度；0.5～0.8 中度；≥0.8 高度</li>
-</ul></div></article>
-<article class="ch-card" id="b36"><div class="ch-head"><span class="ch-rank">8</span><span class="ch-score">近年约 6 分</span><a class="ch-title" href="基础36_公司法律制度_第1节_公司和公司法概述.html">第三十六章 公司法律制度</a></div><div class="ch-qing">考情：本章为重点章节，知识点多、分值较高，近年考核 4–6 分（2025 年平均 5.5 分）；公司的设立、股东会、董事会、监事会、股东权利是高频考点。</div><div class="ch-sechead">📍 第1节 公司和公司法概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b36"><summary><span class="ch-rank">8</span><span class="ch-score">近年约 6 分</span><span class="ch-name">第三十六章 公司法律制度</span><span class="ch-meta">8 张速记卡</span></summary><div class="ch-qing">考情：本章为重点章节，知识点多、分值较高，近年考核 4–6 分（2025 年平均 5.5 分）；公司的设立、股东会、董事会、监事会、股东权利是高频考点。<a class="ch-link" href="基础36_公司法律制度_第1节_公司和公司法概述.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 公司和公司法概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>公司</strong>：依法定条件程序设立 + 以营利为目的 + 股东有限责任的<strong>法人</strong>组织</li>
 <li><strong>三特征</strong>：法人人格（独立于股东、以其全部财产担责）/ 营利法人（取得利润分配给股东）/ 股东有限责任</li>
 <li><strong>有限责任两把尺</strong>：有限出"额"（认缴出资额），股份出"股"（认购股份）</li>
@@ -485,7 +541,8 @@
 <li><strong>代位诉讼</strong>：180 日＋1%；告董高请监事会、告监事请董事会；拒绝或 30 日不起诉或紧急 → 自己名义为公司起诉</li>
 </ul></div><div class="ch-sechead">📍 第6节 董事、监事和高级管理人员的任职资格和法定义务</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>高管</strong>＝经理、副经理、财务负责人＋上市公司董秘＋章程规定的其他人员</li>
-<li><strong>任职禁区</strong>：无/限制民事行为能力；贪污贿赂侵占挪用、破坏市场经济秩序刑罚或剥夺政治权利（执行期满未逾 5 年，缓刑考验期满未逾 2 年）；破产企业董/厂长/经理有个人责任（未逾 3 年）；吊照关闭的法定代表人有个人责任（未逾 3 年）；失信被执行人</li>
+<li><strong>任职禁区·行为与刑罚</strong>：无/限制民事行为能力；贪污贿赂侵占挪用、破坏市场经济秩序刑罚或剥夺政治权利（执行期满未逾 5 年，缓刑考验期满未逾 2 年）</li>
+<li><strong>任职禁区·责任与信用</strong>：破产企业董/厂长/经理有个人责任（未逾 3 年）；吊照关闭的法定代表人有个人责任（未逾 3 年）；失信被执行人</li>
 <li><strong>信义义务</strong>＝忠实＋勤勉；主体扩展到实际执行公司事务的控股股东、实际控制人</li>
 <li><strong>忠实 6 禁</strong>：侵占挪用、公款私存、受贿贿赂、佣金归己、擅自泄密、其他</li>
 <li><strong>三类特别行为</strong>：自我交易／谋取公司商业机会／竞业——均须"报告＋章程规定经董事会或股东会决议通过"；商业机会另有"公司不能利用"豁免</li>
@@ -510,8 +567,8 @@
 <li><strong>清算</strong>：董事＝清算义务人，解散事由出现 15 日内组清算组（董事组成，可另选）；10 日通知、60 日公告；清算方案报股东会或法院确认；清偿顺序＝清算费用→工资社保补偿金→税款→债务→剩余财产；清算期间不得经营与清算无关业务</li>
 <li><strong>简易注销</strong>：无债/清偿＋全体股东承诺＋公告 ≥20 日＋期满 20 日内申请；承诺不实连带担责</li>
 <li><strong>强制注销</strong>：吊照/关闭/撤销满 3 年未注销＋公告 ≥60 日；原股东、清算义务人责任不受影响</li>
-</ul></div></article>
-<article class="ch-card" id="b29"><div class="ch-head"><span class="ch-rank">9</span><span class="ch-score">近年约 6 分</span><a class="ch-title" href="基础29_会计循环_第1节_会计确认.html">第二十九章 会计循环</a></div><div class="ch-qing">考情：重点章节——知识点较少、分值较高、重点突出、性价比高，近年考核 3–6 分（2025 年平均考查 4.5 分）。会计确认的概念、会计计量的属性、会计记录的方法、财务会计报告的分类是高频考点。</div><div class="ch-sechead">📍 第1节 会计确认</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b29"><summary><span class="ch-rank">9</span><span class="ch-score">近年约 6 分</span><span class="ch-name">第二十九章 会计循环</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：重点章节——知识点较少、分值较高、重点突出、性价比高，近年考核 3–6 分（2025 年平均考查 4.5 分）。会计确认的概念、会计计量的属性、会计记录的方法、财务会计报告的分类是高频考点。<a class="ch-link" href="基础29_会计循环_第1节_会计确认.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 会计确认</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>会计循环</strong>＝确认→计量→记录→报告，不断重复、循环进行；多选排除"监督／分析／审计"</li>
 <li><strong>会计确认</strong>＝明确经济业务涉及哪个会计要素；三问题：要不要确认、何时确认、确认为哪个要素</li>
 <li><strong>三条一般标准</strong>：经济业务产生且性质符合要素要求／未来经济利益流动的不确定性可评估／有可计量属性且能可靠计量</li>
@@ -536,9 +593,12 @@
 <li><strong>财务会计报告</strong>＝对外提供、反映<strong>特定日期</strong>财务状况＋<strong>会计期间</strong>经营成果、现金流量的文件</li>
 <li>报告内容＝<strong>会计报表＋会计报表附注＋其他</strong>应披露的信息资料；对外报表<strong>至少</strong>包括资产负债表、利润表、现金流量表；<strong>小企业可以不包括现金流量表</strong></li>
 <li>会计报告是对<strong>账簿记录资料</strong>的<strong>再加工</strong>；编报告前<strong>必须进行财产清查</strong>（保证账证、账账、账实相符）</li>
-<li><strong>四分类</strong>：按经济内容（财务状况/经营成果/现金流量）、按报送对象（对外财政部统一规定/对内自行设计）、按编报主体（个别/合并——投资占被投资企业资本总额 <strong>50% 以上</strong>、视为一个整体、一般只编对外）、按编制时间（年度/季度/月度）</li>
-</ul></div></article>
-<article class="ch-card" id="b12"><div class="ch-head"><span class="ch-rank">10</span><span class="ch-score">近年约 6 分</span><a class="ch-title" href="基础12_财政支出_第1节_财政支出及其分类.html">第十二章 财政支出</a></div><div class="ch-qing">考情：重点章节，知识点较多、重点突出，近年考核 3–6 分，题量 1–2 道单选题、1–2 道多选题；财政支出规模增长的理论解释、转移性支出是重难点。</div><div class="ch-sechead">📍 第1节 财政支出及其分类</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+<li><strong>四分类·按经济内容</strong>：财务状况/经营成果/现金流量</li>
+<li><strong>四分类·按报送对象</strong>：对外财政部统一规定/对内自行设计</li>
+<li><strong>四分类·按编报主体</strong>：个别/合并——投资占被投资企业资本总额 <strong>50% 以上</strong>、视为一个整体、一般只编对外</li>
+<li><strong>四分类·按编制时间</strong>：年度/季度/月度</li>
+</ul></div></details>
+<details class="ch-card" id="b12"><summary><span class="ch-rank">10</span><span class="ch-score">近年约 6 分</span><span class="ch-name">第十二章 财政支出</span><span class="ch-meta">5 张速记卡</span></summary><div class="ch-qing">考情：重点章节，知识点较多、重点突出，近年考核 3–6 分，题量 1–2 道单选题、1–2 道多选题；财政支出规模增长的理论解释、转移性支出是重难点。<a class="ch-link" href="基础12_财政支出_第1节_财政支出及其分类.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 财政支出及其分类</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>财政支出</strong>＝政府为履行职能、取得所需商品和劳务而进行的资金支付，是政府行为活动的成本</li>
 <li><strong>三角度</strong>：规模（占 GDP 比重→参与社会经济生活程度、支配社会资源多少）→结构（各类占比→受益格局、比规模更重要）→经济性质（具体构成→每一笔钱怎么花）</li>
 <li><strong>编制预算两分类</strong>："经济功能要编制"——功能分类（产出性质→干什么）＋经济分类（成本投入→怎么花，更明细、可微观追踪去向）</li>
@@ -547,12 +607,16 @@
 </ul></div><div class="ch-sechead">📍 第2节 财政支出规模及其增长趋势</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>规模指标</strong>：绝对规模（预算年度支出总和；当年价/不变价皆可；总量不断增长，由经济总量增长决定）＋相对规模（占 GDP 比重→干预程度，不断上升；中央占全国比重→控制程度，相对稳定；人均支出也不断增长）</li>
 <li><strong>变化指标</strong>：增长率＝ΔG÷G(上年)；弹性系数＝增长率÷增长率（率比率，＞1 表示支出快于 GDP）；边际倾向＝增长额÷增长额（额对额）</li>
-<li><strong>五大理论</strong>：瓦格纳（工业化→政府活动扩张）；皮考克魏斯曼（阶梯渐进；内在＝税容忍、最高限度；外在＝社会动荡）；马斯格雷夫（三阶段：初期大→中期降→成熟又升）；鲍莫尔（进步部门靠技术、非进步靠劳动、政府部门支出只能增）；公共选择（财政幻觉、政治家拉票、官僚扩预算、公共利益难界定）</li>
+<li><strong>五大理论·瓦格纳与皮考克魏斯曼</strong>：瓦格纳（工业化→政府活动扩张）；皮考克魏斯曼（阶梯渐进；内在＝税容忍、最高限度；外在＝社会动荡）</li>
+<li><strong>五大理论·马斯格雷夫与鲍莫尔</strong>：马斯格雷夫（三阶段：初期大→中期降→成熟又升）；鲍莫尔（进步部门靠技术、非进步靠劳动、政府部门支出只能增）</li>
+<li><strong>五大理论·公共选择</strong>：财政幻觉、政治家拉票、官僚扩预算、公共利益难界定</li>
 <li><strong>四因素</strong>：经济发展、政治、经济体制和经济制度、社会（"经济政治社会＋体制制度"）</li>
 </ul></div><div class="ch-sechead">📍 第3节 财政支出效益分析</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>讲效益的根本原因</strong>：社会经济资源的有限性</li>
 <li><strong>与微观三区别</strong>："范围宽、标准并、择优社会"——范围（直接间接、有形无形都算）、标准（经济＋社会并重 vs 单纯经济效益）、择优（全社会最大 vs 自身最大）</li>
-<li><strong>四大方法</strong>："成本费用两公共"——成本-效益分析法（投资性项目、投入-产出、实际/金融、直接/间接、有形/无形三组成对）；最低费用选择法（军事行政文化卫生、不算无形、更简单）；公共劳务收费法（免费/低价/平价/高价）；公共定价法（平均成本/二部/负荷）</li>
+<li><strong>四大方法口诀</strong>："成本费用两公共"——成本-效益分析法（投资性项目、投入-产出、实际/金融、直接/间接、有形/无形三组成对）</li>
+<li><strong>四大方法·最低费用与公共劳务</strong>：最低费用选择法（军事行政文化卫生、不算无形、更简单）；公共劳务收费法（免费/低价/平价/高价）</li>
+<li><strong>四大方法·公共定价</strong>：公共定价法（平均成本/二部/负荷）</li>
 <li><strong>公共劳务四档</strong>："免费疫苗义务教、低价医疗防浪费、平价公园路邮电、高价停车繁华道"</li>
 </ul></div><div class="ch-sechead">📍 第4节 购买性支出</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>购买性支出</strong>＝政府消费性支出＋政府投资性支出（一手交钱一手交货）</li>
@@ -563,8 +627,8 @@
 <li><strong>社会保障四内容"保助福优"</strong>：社会保险（基本养老、基本医疗、工伤、失业、生育）；社会救助（财政拨款；贫困、灾害、特殊救助）；社会福利（福利事业设施服务、大部分源于预算拨款）；社会优抚（现役军人及家属、退役军人、烈士遗属）</li>
 <li><strong>财政补贴</strong>：主体国家、对象企业和居民、为实现特定目标、无偿再分配；五套分类＝项目和形式／环节／经济性质（生产生活）／内容（现金实物）／WTO（禁止、可诉、不可诉）</li>
 <li><strong>功能比较</strong>：购买性——直接影响、约束强、资源配置职能；转移性——间接影响、约束弱、收入分配职能</li>
-</ul></div></article>
-<article class="ch-card" id="b21"><div class="ch-head"><span class="ch-rank">11</span><span class="ch-score">近年约 5 分</span><a class="ch-title" href="基础21_金融风险和金融监管_第1节_金融风险.html">第二十一章 金融风险和金融监管</a></div><div class="ch-qing">考情：重点章节，知识点较多、重点突出；金融风险、金融危机的类型和巴塞尔协议是重难点。近年考核一般 3–5 分，题量约 2 道单选题＋1 道多选题。（讲义正文共五节：金融风险、金融危机、金融监管理论、金融监管体制、国际金融监管协…</div><div class="ch-sechead">📍 第1节 金融风险</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b21"><summary><span class="ch-rank">11</span><span class="ch-score">近年约 5 分</span><span class="ch-name">第二十一章 金融风险和金融监管</span><span class="ch-meta">5 张速记卡</span></summary><div class="ch-qing">考情：重点章节，知识点较多、重点突出；金融风险、金融危机的类型和巴塞尔协议是重难点。近年考核一般 3–5 分，题量约 2 道单选题＋1 道多选题。（讲义正文共五节：金融风险、金融危机、金融监管理论、金融监管体制、国际金融监管协…<a class="ch-link" href="基础21_金融风险和金融监管_第1节_金融风险.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 金融风险</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>金融风险</strong>：借贷经营中不确定性 → 预期收益与实际收益偏差 → 损失的可能性；客观存在、难以完全避免</li>
 <li><strong>四特征</strong>："不相高传"——不确定性、相关性、高杠杆性、传染性</li>
 <li><strong>四类型</strong>："牛市信曹操"——流动性（资产变现难）、市场（价格波动）、信用（对手违约）、操作（系统/管理/人为失误）</li>
@@ -572,7 +636,8 @@
 </ul></div><div class="ch-sechead">📍 第2节 金融危机</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>金融危机</strong>：全部或大部分金融指标（短期利率、金融资产、房地产、商业破产数、金融机构倒闭数）急剧、短暂、超周期恶化；特点＝频繁、广泛、传染、严重</li>
 <li><strong>债务危机</strong>（支付能力危机）三特征："出口瘸、条件亏、管理水"</li>
-<li><strong>货币危机</strong>：钉住汇率制国家，本币汇率高估；要么大幅贬值，要么动用储备干预、大幅提利率；共同特点＝盯住汇率制度；诱因三阶段：90 年代前（财政赤字货币化与钉住不相容）、1992 英镑（高失业、维持成本远大于收益）、1997 亚洲（基本面良好、市场信心变化导致危机自我实现）</li>
+<li><strong>货币危机</strong>：钉住汇率制国家，本币汇率高估；要么大幅贬值，要么动用储备干预、大幅提利率；共同特点＝盯住汇率制度</li>
+<li><strong>货币危机诱因三阶段</strong>：90 年代前（财政赤字货币化与钉住不相容）、1992 英镑（高失业、维持成本远大于收益）、1997 亚洲（基本面良好、市场信心变化导致危机自我实现）</li>
 <li><strong>流动性危机</strong>：国内＝借短放长、资产负债不匹配；国际＝短期外汇履约义务超过短期可得外汇资产</li>
 <li><strong>综合性金融危机</strong>：现实中都是综合性危机；外部＝三危互染；内部＝危机由银行传导至整个经济（金融体系脆弱）；极易升级为经济危机或政治危机</li>
 <li><strong>次贷危机</strong>：2007 春显现、2007 年 8 月席卷美欧日；三阶段＝债务危机→流动性危机→信用危机</li>
@@ -590,14 +655,23 @@
 <li><strong>2023 方案六条</strong>：金融监管总局（强化机行功穿持五监管）、地方金融监管中央派出为主、证监会国务院直属、央行分支机构改革、国有金融资本体制、工作人员统一规范管理</li>
 <li><strong>现代金融监管基本内涵</strong>：宏观审慎、微观审慎、保护消费权益、打击金融犯罪、维护市场稳定、处置问题机构</li>
 <li><strong>影子银行五特点</strong>："影套刚通贷"；<strong>地方金融组织</strong>七类＋授权兜底；<strong>金融控股公司</strong>日常监管划入金融监管总局</li>
-<li><strong>长效机制</strong>：中央金融委员会（顶统整督、决策议事协调）＋中央金融工作委员会（管党务、派出机关、合署办公）；金融稳定立法压实三方责任、早发现早干预、市场化法治化处置、守住系统性风险底线；强大的金融监管六条；宏观审慎＝跨时间管周期（热收冷放）＋跨空间管传染（大而不能倒）</li>
+<li><strong>长效机制</strong>：中央金融委员会（顶统整督、决策议事协调）＋中央金融工作委员会（管党务、派出机关、合署办公）</li>
+<li><strong>金融稳定立法</strong>：压实三方责任、早发现早干预、市场化法治化处置、守住系统性风险底线</li>
+<li><strong>强大的金融监管</strong>：六条</li>
+<li><strong>宏观审慎</strong>：跨时间管周期（热收冷放）＋跨空间管传染（大而不能倒）</li>
 </ul></div><div class="ch-sechead">📍 第5节 国际金融监管协调</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>巴塞尔委员会</strong>：1975 年 2 月，国际清算银行发起，西方十国集团＋瑞士和卢森堡等 12 国央行；三份里程碑＝1988 报告、2003 新协议、2010 协议Ⅲ</li>
-<li><strong>1988 报告</strong>：核心资本（一级）＝实收股本（普通股）＋公开储备，至少占全部资本 50%；附属资本（二级）＝未公开储备、资产重估储备、普通准备金和呆账准备金、混合资本工具、长期次级债券；风险权重 0/10/20/50/100（表外按信用换算系数）；资本/风险加权资产 ≥8%、核心 ≥4%（"84 消毒液"）；过渡期 1987 年底—1992 年底</li>
+<li><strong>1988 报告核心资本</strong>（一级）：实收股本（普通股）＋公开储备，至少占全部资本 50%</li>
+<li><strong>1988 报告附属资本</strong>（二级）：未公开储备、资产重估储备、普通准备金和呆账准备金、混合资本工具、长期次级债券</li>
+<li><strong>1988 报告风险权重</strong>：0/10/20/50/100（表外按信用换算系数）</li>
+<li><strong>1988 报告资本充足率</strong>：资本/风险加权资产 ≥8%、核心 ≥4%（"84 消毒液"）；过渡期 1987 年底—1992 年底</li>
 <li><strong>2003 新协议三大支柱</strong>（"最简约"）：最低资本要求（信用风险仍主要＋市场、操作风险；计量改进；内部模型；约束范围扩大）、监管当局的监督检查（全面监管资本充足、培育内部信用评估、加快制度化）、市场约束（1 年内至少披露一次）</li>
-<li><strong>2010 协议Ⅲ</strong>：微观＋宏观审慎有机结合；资本监管和流动性监管并重、数量和质量同步提高、充足率与杠杆率并行、长短期统筹；三个最低标准 4.5/6/8 → 新标准实施后 7/8.5/10.5（加 2.5 留存）；留存超额资本 2.5%（普通股）、反周期超额资本 0～2.5%；杠杆率 3%（一级资本/总资产，2011 监控、2013 过渡、2018 入支柱）；流动性覆盖率（短期、单个银行）＋净稳定融资比率（中长期、整个资产负债表）；过渡期 8 年（2011—2018）</li>
-</ul></div></article>
-<article class="ch-card" id="b2"><div class="ch-head"><span class="ch-rank">12</span><span class="ch-score">近年约 5 分</span><a class="ch-title" href="基础02_市场需求、供给与价格均衡_第1节_市场需求.html">第二章 市场需求、供给与价格均衡</a></div><div class="ch-qing">考情：次重点章节——知识点较多、分值中等，每节都有重点，理解难度不高。需求、均衡价格模型的运用、弹性是高频考点，近年考核 3–5 分，2025 年平均考查 3 分。</div><div class="ch-sechead">📍 第1节 市场需求</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+<li><strong>2010 协议Ⅲ总体思路</strong>：微观＋宏观审慎有机结合；资本监管和流动性监管并重、数量和质量同步提高、充足率与杠杆率并行、长短期统筹</li>
+<li><strong>2010 协议Ⅲ资本要求</strong>：三个最低标准 4.5/6/8 → 新标准实施后 7/8.5/10.5（加 2.5 留存）；留存超额资本 2.5%（普通股）、反周期超额资本 0～2.5%</li>
+<li><strong>2010 协议Ⅲ杠杆率</strong>：3%（一级资本/总资产，2011 监控、2013 过渡、2018 入支柱）</li>
+<li><strong>2010 协议Ⅲ流动性与过渡期</strong>：流动性覆盖率（短期、单个银行）＋净稳定融资比率（中长期、整个资产负债表）；过渡期 8 年（2011—2018）</li>
+</ul></div></details>
+<details class="ch-card" id="b2"><summary><span class="ch-rank">12</span><span class="ch-score">近年约 5 分</span><span class="ch-name">第二章 市场需求、供给与价格均衡</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：次重点章节——知识点较多、分值中等，每节都有重点，理解难度不高。需求、均衡价格模型的运用、弹性是高频考点，近年考核 3–5 分，2025 年平均考查 3 分。<a class="ch-link" href="基础02_市场需求、供给与价格均衡_第1节_市场需求.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 市场需求</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>需求</strong>＝一定时间、价格下愿意而且能够购买的数量；构成要素＝购买欲望＋支付能力，缺一不可</li>
 <li><strong>市场需求</strong>＝所有消费者需求的总和；市场需求曲线＝个别消费者需求曲线水平加总</li>
 <li>影响需求 7 因素：产品价格（最重要、反向"价高量低"）、偏好（＋）、收入（＋）、替代品价格（＋）、互补品价格（−）、预期（买涨不买跌）、其他（品种质量广告地理季节政策）</li>
@@ -628,28 +702,33 @@
 <li>两种计算公式：点弹性（变动小）、弧弹性（变动大，分母用前后平均数）</li>
 <li><strong>供给价格弹性 Es</strong> 天生为正；＞1 富有、＜1 缺乏（农产品）、＝1 单位、＝0 无弹性（土地）、＝∞ 完全有弹性</li>
 <li>影响供给价格弹性 3 因素：时间（首要）、生产周期和自然条件（短期几乎为零）、投入品替代性（越大弹性越大）</li>
-</ul></div></article>
-<article class="ch-card" id="b19"><div class="ch-head"><span class="ch-rank">13</span><span class="ch-score">近年约 5 分</span><a class="ch-title" href="基础19_中央银行和货币政策_第1节_中央银行.html">第十九章 中央银行和货币政策</a></div><div class="ch-qing">考情：重点章节，知识点较少、重点突出，中央银行的主要业务、中央银行资产负债表、货币政策工具是重难点；近年一般考核 4–5 分，2–3 道单选题、1–2 道多选题。</div><div class="ch-sechead">📍 第1节 中央银行</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b19"><summary><span class="ch-rank">13</span><span class="ch-score">近年约 5 分</span><span class="ch-name">第十九章 中央银行和货币政策</span><span class="ch-meta">2 张速记卡</span></summary><div class="ch-qing">考情：重点章节，知识点较少、重点突出，中央银行的主要业务、中央银行资产负债表、货币政策工具是重难点；近年一般考核 4–5 分，2–3 道单选题、1–2 道多选题。<a class="ch-link" href="基础19_中央银行和货币政策_第1节_中央银行.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 中央银行</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>中央银行</strong>＝货币当局，金融中介体系中心环节；发行的银行＋银行的银行＋政府的银行；行政管理机关＋银行双重性质</li>
 <li><strong>央行三大职能</strong>（人行）：制定和执行货币政策、维护金融稳定、提供金融服务</li>
 <li><strong>建制度四需要</strong>：币（集中发行权）、库（代理国库筹资）、业（管理金融业）、干（国家干预经济）</li>
 <li><strong>三特征</strong>：不营利（稳定币值促进发展）、不揽储（服务对象＝政府＋商业银行＋其他金融机构）、相对独立（不受行政干预牵制）</li>
 <li><strong>主要业务</strong>：货币发行（唯一发行机构）；对银行＝存、贷、清（集中准备金 / 最后贷款人＝再抵押放款·再贴现·再贷款 / 清算中心）；对政府＝一库二债三贷款，四储五法六国际（经理国库＝总会计总出纳）</li>
-<li><strong>资产负债表</strong>：资产是权利（国外资产[外汇·货币黄金]、对政府债权、对其他存款性公司债权[贴现及放款]……）；负债是义务（储备货币[货币发行·其他存款性公司存款·非金融机构存款]为主要项目、政府存款、自有资金……）；见"存款"→负债，见"债权"→资产</li>
+<li><strong>资产负债表·资产</strong>：资产是权利（国外资产[外汇·货币黄金]、对政府债权、对其他存款性公司债权[贴现及放款]……）</li>
+<li><strong>资产负债表·负债</strong>：负债是义务（储备货币[货币发行·其他存款性公司存款·非金融机构存款]为主要项目、政府存款、自有资金……）</li>
+<li><strong>资产负债表速判</strong>：见"存款"→负债，见"债权"→资产</li>
 <li><strong>现代中央银行制度</strong>＝现代货币政策框架＋金融基础设施服务体系＋系统性金融风险防控体系＋国际金融协调合作治理机制；五个坚持＝党、质、市、球、治</li>
 </ul></div><div class="ch-sechead">📍 第2节 货币政策</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>货币政策</strong>：只是金融政策的一部分；三内容＝政策目标→政策工具→预期政策效果（标—器—效）</li>
 <li><strong>四目标</strong>："物、长、就、收"（稳定物价、经济增长、充分就业、平衡国际收支）；法定表述＝保持货币币值稳定，并以此促进经济增长；决不以牺牲经济增长为前提</li>
 <li><strong>三大一般性工具</strong>：法定存款准备金率（猛、慢、可被超额准备金抵消，作自动稳定机制不作经常性工具）；再贴现（弹性大、力度缓和，主动权在商业银行）；公开市场操作（灵活、主动、微调、经常连续；缺点＝市场须全国性独立性＋需其他工具配合）</li>
 <li><strong>方向链</strong>：提高准备金率→货币乘数减少→信用扩张受限→货币供应量收缩；提高再贴现率→借入成本上升→基础货币收缩；正回购＝卖＝收＝紧，逆回购＝买＝放＝松</li>
-<li><strong>其他工具</strong>：选择性＝消费者信用控制（不动产以外耐用品）/不动产信用控制/优惠利率/预缴进口保证金；直接信用控制＝利率最高限（最常用，Q 条例）/信用配额/流动比率/直接干预；间接信用指导＝道义劝告、窗口指导（无法律约束力、影响力大）；非常规＝超低政策利率、大规模再融资操作、资产购买计划、前瞻性指引；结构性＝2013 年起总量工具附带结构调整要求</li>
+<li><strong>其他工具·选择性</strong>：消费者信用控制（不动产以外耐用品）/不动产信用控制/优惠利率/预缴进口保证金</li>
+<li><strong>其他工具·直接信用控制</strong>：利率最高限（最常用，Q 条例）/信用配额/流动比率/直接干预</li>
+<li><strong>其他工具·间接信用指导</strong>：道义劝告、窗口指导（无法律约束力、影响力大）</li>
+<li><strong>其他工具·非常规与结构性</strong>：非常规＝超低政策利率、大规模再融资操作、资产购买计划、前瞻性指引；结构性＝2013 年起总量工具附带结构调整要求</li>
 <li><strong>中介目标</strong>：三原则"可可香"（可控、可测、相关）；四指标"超（基）货利通"；超额准备金直接决定商业银行资产业务规模，基础货币是倍数伸缩基础、较理想</li>
 <li><strong>传导机制</strong>：政策工具→操作目标→中介目标→最终目标；体系＝央行→货币市场→金融机构→企业；效率三条件＝主体灵敏、市场发达、利率汇率市场化</li>
 <li><strong>实践</strong>："稳健—从紧—适度宽松—稳健—适度宽松"；2011—2024 稳健（灵活适度、精准有效）；2025 至今适度宽松（2024.12 中央经济工作会议，2011 年来首次转向）</li>
 <li><strong>利率市场化</strong>：先外后本、先贷后存、先大后小；2013.10 取消 0.7 倍下限＋推 LPR 报价机制；2019.8 全面改革；LPR＝MLF 操作利率＋加点；未来以 7 天期逆回购操作利率为主要政策利率</li>
 <li><strong>金融强国六强大</strong>：货币、中央银行、金融机构、国际金融中心、金融监管、金融人才队伍；强大货币＝稳定＋好用；五篇大文章＝"科绿普裂数"</li>
-</ul></div></article>
-<article class="ch-card" id="b23"><div class="ch-head"><span class="ch-rank">14</span><span class="ch-score">近年约 5 分</span><a class="ch-title" href="基础23_统计与数据科学_第1节_统计学.html">第二十三章 统计与数据科学</a></div><div class="ch-qing">考情：非重点章节——知识点多、分值不高，近年每场考核 4–5 分，2025 年平均仅考 3 分；变量和数据、数据的来源、统计调查的分类与方式、数据挖掘是高频考点。</div><div class="ch-sechead">📍 第1节 统计学</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b23"><summary><span class="ch-rank">14</span><span class="ch-score">近年约 5 分</span><span class="ch-name">第二十三章 统计与数据科学</span><span class="ch-meta">5 张速记卡</span></summary><div class="ch-qing">考情：非重点章节——知识点多、分值不高，近年每场考核 4–5 分，2025 年平均仅考 3 分；变量和数据、数据的来源、统计调查的分类与方式、数据挖掘是高频考点。<a class="ch-link" href="基础23_统计与数据科学_第1节_统计学.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 统计学</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>描述统计</strong>：研究数据收集、整理和描述——取数据、图表或数学方法展示、描述一般特征（"收整描"）</li>
 <li><strong>推断统计</strong>：利用样本数据推断总体特征——<strong>参数估计</strong>（样本信息推断总体特征）＋<strong>假设检验</strong>（样本信息判断总体假设是否成立）</li>
 <li>判题：图表 / 表格 / 均值 / 频数分布＝描述；"估计"＝参数估计；"验证结论 / 检验假设"＝假设检验</li>
@@ -665,9 +744,12 @@
 <li><strong>二手数据</strong>：来源于<strong>别人的调查或实验</strong>，对使用者是<strong>间接来源</strong>（年鉴、数据库）</li>
 </ul></div><div class="ch-sechead">📍 第4节 统计调查</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>统计调查</strong>：按预定目的和任务、运用科学方法、有计划有组织地收集数据信息资料；两特征＝活动有计划有方法有程序、结果表现为数据</li>
-<li><strong>分类</strong>：按对象范围分<strong>全面调查</strong>（全面统计报表＋普查，逐一无一遗漏）/ <strong>非全面调查</strong>（非全面统计报表、抽样、重点、典型——"非抽重典"）；按登记时间分<strong>连续调查</strong>（一段时期的总量，如产量、能耗）/ <strong>不连续调查</strong>（一定时点状态，如设备拥有量、耕地面积）</li>
+<li><strong>分类·按对象范围</strong>：分<strong>全面调查</strong>（全面统计报表＋普查，逐一无一遗漏）/ <strong>非全面调查</strong>（非全面统计报表、抽样、重点、典型——"非抽重典"）</li>
+<li><strong>分类·按登记时间</strong>：分<strong>连续调查</strong>（一段时期的总量，如产量、能耗）/ <strong>不连续调查</strong>（一定时点状态，如设备拥有量、耕地面积）</li>
 <li><strong>统计报表</strong>：自上而下统一布置、自下而上逐级提供；以原始数据为基础；统一表式、指标、报送时间、程序；大多数是全面报表</li>
-<li><strong>普查</strong>：特定目的、专门组织的一次性<strong>全面</strong>调查，了解某一时点状态的基本全貌；一次性或周期性、统一标准调查时间（防重复遗漏）、数据准确规范化高、<strong>使用范围较窄</strong>；频率"人口0 农6 经38"，人口标准时点 11 月 1 日 0 时、农经 1 月 1 日 0 时</li>
+<li><strong>普查</strong>：特定目的、专门组织的一次性<strong>全面</strong>调查，了解某一时点状态的基本全貌</li>
+<li><strong>普查特点</strong>：一次性或周期性、统一标准调查时间（防重复遗漏）、数据准确规范化高、<strong>使用范围较窄</strong></li>
+<li><strong>普查频率与时点</strong>：频率"人口0 农6 经38"，人口标准时点 11 月 1 日 0 时、农经 1 月 1 日 0 时</li>
 <li><strong>抽样调查</strong>：非全面调查，抽样本推断总体；特点"省快广准"（经济性是显著优点、时效性强、适应面广——质检 / 农试 / 临床、准确性高）</li>
 <li><strong>重点调查</strong>：选标志值占绝大比重的重点单位（35 城零售物价）；<strong>典型调查</strong>：有意识选有代表性单位深入调查（发现新情况新问题、验证全面调查数据真实性）</li>
 <li><strong>质量评价九标准</strong>：真准完及适，经比协可得；侧重——真实→基础数据质量、准确→生产科学性、完整→全面反映客观实际、及时→生产效率、适用→用户满意度、经济→成本效益、可比→标准化规范化、协调→逻辑关系、可获得→服务质量</li>
@@ -677,9 +759,11 @@
 <li><strong>5V</strong>："真的大多快低"——量大（起始单位 PB＝1024TB）、多样（结构化＋半结构化＋非结构化）、价值密度低（与总量成反比，需提纯）、速度快（1 秒定律）、真实性（2026 新增，靠数据清洗治理保真）</li>
 <li><strong>三类数据形态</strong>：数据库二维表＝结构化；不规则不完整无预定义（文档、文本、图片、音视频）＝非结构化；有一定结构性（员工简历）＝半结构化</li>
 <li><strong>数据挖掘</strong>：从大量、不完全、有噪声、模糊、随机的数据中提取潜在价值的信息和知识；真大噪、感兴趣、可运用、不求放之四海；出发点＝解决实际问题，核心任务＝探索数据关系和特征</li>
-<li><strong>三类学习方法</strong>：监督（有 x 有 y：分类＋回归——逻辑斯特回归、决策树、随机森林、支持向量机／线性、非线性、分位数回归）；无监督（只有 x：聚类＋降维——k 均值等基于划分 / 分层 / 密度 / 网格 / 模型／主成分分析、因子分析）；半监督（两者结合：半监督分类、回归、聚类）</li>
-</ul></div></article>
-<article class="ch-card" id="b25"><div class="ch-head"><span class="ch-rank">15</span><span class="ch-score">近年约 5 分</span><a class="ch-title" href="基础25_抽样调查_第1节_抽样调查的基本概念.html">第二十五章 抽样调查</a></div><div class="ch-qing">考情：次重点章节，知识点较少、分值适中、重点突出，近年考核 4–5 分（2025 年平均约 3.5 分，略低于预期）。抽样调查基本概念、概率抽样与非概率抽样、几种基本的概率抽样方法、估计量的性质是高频考点。</div><div class="ch-sechead">📍 第1节 抽样调查的基本概念</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+<li><strong>三类学习方法之监督</strong>：有 x 有 y：分类＋回归——逻辑斯特回归、决策树、随机森林、支持向量机／线性、非线性、分位数回归</li>
+<li><strong>三类学习方法之无监督</strong>：只有 x：聚类＋降维——k 均值等基于划分 / 分层 / 密度 / 网格 / 模型／主成分分析、因子分析</li>
+<li><strong>三类学习方法之半监督</strong>：两者结合：半监督分类、回归、聚类</li>
+</ul></div></details>
+<details class="ch-card" id="b25"><summary><span class="ch-rank">15</span><span class="ch-score">近年约 5 分</span><span class="ch-name">第二十五章 抽样调查</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：次重点章节，知识点较少、分值适中、重点突出，近年考核 4–5 分（2025 年平均约 3.5 分，略低于预期）。抽样调查基本概念、概率抽样与非概率抽样、几种基本的概率抽样方法、估计量的性质是高频考点。<a class="ch-link" href="基础25_抽样调查_第1节_抽样调查的基本概念.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 抽样调查的基本概念</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>总体</strong>＝全体；<strong>总体单元</strong>＝个体；<strong>总体参数</strong>＝全体算出的指标，未知的常数、不受样本影响（总量、均值、比例、方差）</li>
 <li><strong>样本</strong>＝抽出的部分个体集合；<strong>样本量</strong>＝入样单位个数；<strong>样本统计量（估计量）</strong>＝样本算出的数，随机变量（均值、比例、方差）</li>
 <li><strong>抽样框</strong>＝所有抽样单元的名单（名录、电话簿、地图），单位有序便于编号</li>
@@ -701,8 +785,8 @@
 <li><strong>估计量方差</strong>：V(ȳ)＝(1−n/N)×S²/n；三步：找方差→除以 n→乘修正系数；样本均值常是摆设；估计量方差描述抽样误差</li>
 <li><strong>抽样误差四因素</strong>：总体分布（差大误大）、样本量（样大误小）、抽样方式与估计量（分层＜简单随机）、有效辅助信息（减小误差）</li>
 <li><strong>影响样本量</strong>：精度高→大；离散程度大→大；小规模总体规模大→大（非同比例）、大规模几乎不影响；无回答率高→大；经费＝折中；时间与人力也是客观因素（高、大、小规模里的大）</li>
-</ul></div></article>
-<article class="ch-card" id="b1"><div class="ch-head"><span class="ch-rank">16</span><span class="ch-score">近年约 5 分</span><a class="ch-title" href="基础01_社会主义基本经济制度_第1节_社会主义基本经济制度的内涵.html">第一章 社会主义基本经济制度</a></div><div class="ch-qing">考情：本章为重点章节，近年考试考核 3–5 分，题量 3 道单选题、1 道多选题，社会主义所有制结构、社会主义收入分配制度是重难点。（讲义正文印作四节，本稿按讲义书签结构并为三节，收入分配制度内容并入本稿第二节。）</div><div class="ch-sechead">📍 第1节 社会主义基本经济制度的内涵</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b1"><summary><span class="ch-rank">16</span><span class="ch-score">近年约 5 分</span><span class="ch-name">第一章 社会主义基本经济制度</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：本章为重点章节，近年考试考核 3–5 分，题量 3 道单选题、1 道多选题，社会主义所有制结构、社会主义收入分配制度是重难点。（讲义正文印作四节，本稿按讲义书签结构并为三节，收入分配制度内容并入本稿第二节。）<a class="ch-link" href="基础01_社会主义基本经济制度_第1节_社会主义基本经济制度的内涵.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 社会主义基本经济制度的内涵</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li>经济制度三方面：所有制或产权制度、收入分配制度、资源配置方式（"分·所·资"），三者密不可分</li>
 <li>所有制或产权制度：决定经济决策主体＋收入分配方式；收入分配制度：决定社会生产成果归谁占有和支配；资源配置方式：通过什么机制配置资源或生产要素</li>
 <li>三大构成：公有制为主体多种所有制共同发展＋按劳分配为主体多种分配方式并存＋社会主义市场经济体制</li>
@@ -729,8 +813,8 @@
 <li>有效市场（决定性作用）＋有为政府（弥补市场失灵；调监社公生共六职能），推动两者更好结合</li>
 <li>高水平体制新要求：公平活力、最优最大、放得活管得住；基础制度四件：产权保护、市场准入、公平竞争、社会信用</li>
 <li>统一大市场三举措：基础制度建设、公平规范高效监管体系、市场准入"全国一张清单"；2026 政府工作报告：建设条例、整治"内卷式"竞争</li>
-</ul></div></article>
-<article class="ch-card" id="b20"><div class="ch-head"><span class="ch-rank">17</span><span class="ch-score">近年约 5 分</span><a class="ch-title" href="基础20_商业银行与金融市场_第1节_商业银行的运营与管理.html">第二十章 商业银行与金融市场</a></div><div class="ch-qing">考情：近年一般考 3–5 分，题量 1–2 道单选＋1 道多选。本章知识点较少、重点突出，商业银行的职能、商业银行的业务、存款保险制度是重难点。</div><div class="ch-sechead">📍 第1节 商业银行的运营与管理</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b20"><summary><span class="ch-rank">17</span><span class="ch-score">近年约 5 分</span><span class="ch-name">第二十章 商业银行与金融市场</span><span class="ch-meta">2 张速记卡</span></summary><div class="ch-qing">考情：近年一般考 3–5 分，题量 1–2 道单选＋1 道多选。本章知识点较少、重点突出，商业银行的职能、商业银行的业务、存款保险制度是重难点。<a class="ch-link" href="基础20_商业银行与金融市场_第1节_商业银行的运营与管理.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 商业银行的运营与管理</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>定义</strong>：存款货币银行；以营利为目的；吸收存款＋发放贷款＋办理结算的金融企业</li>
 <li><strong>性质三比</strong>：对工商企业＝金融企业（资金融通）；对央行/政策性银行＝营利、利润最大化；对非银行金融机构＝经营范围广、唯一吸收活期存款</li>
 <li><strong>三职能</strong>：信用中介（最基本，化货币为资本）；支付中介（汇兑、非现金结算；总会计总出纳总账房）；信用创造（发行信用工具，超出自有资本与吸收资本总额扩张信用）</li>
@@ -739,7 +823,10 @@
 <li><strong>资产</strong>＝票据贴现（买进未到期票据，实为信用业务）＋贷款（比重首位：期限短1/中1～5/长5＋；条件信用＋担保保证抵押质押；用途资本/商业/消费）＋投资（持有有价证券）</li>
 <li><strong>中间业务</strong>：不用自己的钱收手续费＝无风险业务＝支付中介服务；结信租代咨；代理发行兑付国债＝代理业务</li>
 <li><strong>三原则</strong>：盈利性、流动性（保有易变现资产＋取得现款能力）、安全性（按期收回本息、避免本金受损）；盈利性与流动性、安全性均<strong>负相关</strong>（盈高流安低）</li>
-<li><strong>存款保险</strong>：投保＝商行（含外商独资、中外合资）＋农村合作银行＋农信社；保人民币＋外币存款；不保同业存款、高管在本机构存款、外国银行在华分支、中资银行海外分支；限额 50 万（本息合计、同一人在同一家机构），超出从清算财产中受偿；限额可调（央行会同有关部门、报国务院批准）；基金来源 4 项；运用原则安全流动保值增值，形式＝存央行/投政府债券央票高等级金融债/国务院批准；偿付情形＝被接管、被撤销清算、法院受理破产申请</li>
+<li><strong>存款保险·投保与保额</strong>：投保＝商行（含外商独资、中外合资）＋农村合作银行＋农信社；保人民币＋外币存款</li>
+<li><strong>存款保险·不保</strong>：同业存款、高管在本机构存款、外国银行在华分支、中资银行海外分支</li>
+<li><strong>存款保险·限额与基金</strong>：限额 50 万（本息合计、同一人在同一家机构），超出从清算财产中受偿；限额可调（央行会同有关部门、报国务院批准）；基金来源 4 项</li>
+<li><strong>存款保险·运用与偿付</strong>：运用原则安全流动保值增值，形式＝存央行/投政府债券央票高等级金融债/国务院批准；偿付情形＝被接管、被撤销清算、法院受理破产申请</li>
 <li><strong>金融强国</strong>：强大金融机构是六大核心要素之一、金融体系的微观基础；四内涵＝效率高、抗风险强、门类齐、全球布局与国际竞争力</li>
 </ul></div><div class="ch-sechead">📍 第2节 金融市场</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>定义</strong>：金融市场＝以金融资产为交易对象的供求关系及机制总和；金融交易＝金融资产<strong>所有权</strong>变化、引起债权债务产生和清偿</li>
@@ -749,13 +836,15 @@
 <li><strong>总分类</strong>：一年为界——货币市场（同业拆借、票据、短期债券）vs 资本市场（股票、长期债券、投资基金）；外汇市场不能简单归入；2024 年中央经济工作会议→壮大耐心资本（专注长期投资、不以短期收益为首要目标）</li>
 <li><strong>同业拆借</strong>：金融机构之间货币借贷短期融通；弥补短期资金不足、票据清算差额、临时性需求；特点＝期限短、流动性高、利率敏感性强、交易方便；代表指标 LIBOR</li>
 <li><strong>票据</strong>：汇票本票支票（本支汇）；一级市场承兑＋签发、二级市场直贴转贴现再贴现；银行承兑汇票＝银行信用＋商业信用结合；上海票交所 2016-12-8 央行批准设立</li>
-<li><strong>债券</strong>：直接融资、不通过银行等信用中介；既具货币市场属性又具资本市场属性；短 1 年内、中 1–10 年、长 10 年以上；1 年内短期政府债券违约风险小、流动性强、面额小、收入免税，流动性货币市场最高；贴标债券（一带一路、科技创新、绿色、乡村振兴）</li>
+<li><strong>债券</strong>：直接融资、不通过银行等信用中介；既具货币市场属性又具资本市场属性</li>
+<li><strong>债券期限划分</strong>：短 1 年内、中 1–10 年、长 10 年以上</li>
+<li><strong>1 年内短期政府债券</strong>：违约风险小、流动性强、面额小、收入免税，流动性货币市场最高；贴标债券（一带一路、科技创新、绿色、乡村振兴）</li>
 <li><strong>股票</strong>：发行市场（一级）/流通市场（二级，活跃流通是发行存在的必要条件）；场内＝沪深北三家交易所（上市公司）；场外＝新三板、区域股权交易所（挂牌企业不属上市公司）</li>
 <li><strong>投资基金</strong>：利益共享、风险共担的集合投资；托管人托管＋管理人管理运用；证券投资基金主投债券和股票；优势＝专家理财</li>
 <li><strong>期货期权</strong>：未来的交易；功能＝锁定规避风险＋价格发现；证券、外汇、黄金多用期货；都属金融衍生产品市场</li>
 <li><strong>外汇市场</strong>：不同种货币计值的两种票据交换；也是短期金融资产交易市场；货币市场只交易同一种货币</li>
-</ul></div></article>
-<article class="ch-card" id="b7"><div class="ch-head"><span class="ch-rank">18</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础07_国民收入核算和简单的宏观经济模型_第1节_国民收入核算.html">第七章 国民收入核算和简单的宏观经济模型</a></div><div class="ch-qing">考情：重点章节，知识点较多、重点突出；近年考核 2–4 分，题量 1–2 道单选题、1 道多选题。国民收入核算、消费理论、总供给和总需求是重难点，恒等式与乘数、均衡收入的计算题是&quot;必须拿稳&quot;的分。</div><div class="ch-sechead">📍 第1节 国民收入核算</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b7"><summary><span class="ch-rank">18</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第七章 国民收入核算和简单的宏观经济模型</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：重点章节，知识点较多、重点突出；近年考核 2–4 分，题量 1–2 道单选题、1 道多选题。国民收入核算、消费理论、总供给和总需求是重难点，恒等式与乘数、均衡收入的计算题是&quot;必须拿稳&quot;的分。<a class="ch-link" href="基础07_国民收入核算和简单的宏观经济模型_第1节_国民收入核算.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 国民收入核算</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>GDP</strong>＝按市场价格计算的一国（地区）一定时期<strong>生产活动</strong>的最终成果 → <strong>属地＋生产概念</strong>；<strong>GNI</strong>（原 GNP）＝常住单位<strong>收入初次分配</strong>的最终结果 → <strong>属人＋收入概念</strong></li>
 <li><strong>GNI＝GDP＋来自国外的净要素收入</strong></li>
 <li><strong>三形态</strong>："增值、初分、终减进"（价值、收入、产品）；<strong>三方法</strong>：生产法、收入法、支出法</li>
@@ -782,8 +871,8 @@
 <li><strong>总供给</strong>：一定时期、一定价格水平上生产者<strong>愿意提供</strong>的产品总量；基本因素=<strong>价格和成本</strong>；技术/工资/能源借道成本；预期重要</li>
 <li><strong>总供给曲线</strong>：长期<strong>垂直横轴</strong>（只取决于劳动、资本、技术、经济体制）；短期<strong>向右上方倾斜</strong></li>
 <li><strong>总供求模型</strong>：长期影响价格总水平的是总需求；短期 AD 右移→价格上涨＝<strong>需求拉动型通胀</strong>的基本模型</li>
-</ul></div></article>
-<article class="ch-card" id="b30"><div class="ch-head"><span class="ch-rank">19</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础30_会计报表_第1节_会计报表的概念.html">第三十章 会计报表</a></div><div class="ch-qing">考情：本章为重点章节，知识点较多、分值较高，近年考核 3–4 分，2025 年平均考查 5 分（超过预期）；会计报表的概念、编制要求、资产负债表的格式和内容、利润表的格式和内容、现金流量表的概念和作用是高频考点。</div><div class="ch-sechead">📍 第1节 会计报表的概念</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b30"><summary><span class="ch-rank">19</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第三十章 会计报表</span><span class="ch-meta">5 张速记卡</span></summary><div class="ch-qing">考情：本章为重点章节，知识点较多、分值较高，近年考核 3–4 分，2025 年平均考查 5 分（超过预期）；会计报表的概念、编制要求、资产负债表的格式和内容、利润表的格式和内容、现金流量表的概念和作用是高频考点。<a class="ch-link" href="基础30_会计报表_第1节_会计报表的概念.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 会计报表的概念</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li>会计报表：日常账簿资料为主要编制依据，总括反映财务状况、经营成果、现金流量；会计核算最后一个环节、会计循环终点</li>
 <li>五件套："资利现金权益附"——资产负债表（特定日期·财务状况）、利润表（一定期间·经营成果）、现金流量表（一定期间·现金流入流出）、所有者权益变动表（当期增减变动）、附注（文字描述/明细资料＋未列示项目说明）</li>
 <li>目标：提供会计信息＋反映管理层受托责任＋帮助经济决策；评估受托责任的主体是企业投资者</li>
@@ -794,8 +883,13 @@
 <li>定义四关键词：特定日期＋财务状况＋资产＝负债＋所有者权益＋<strong>静态报表</strong></li>
 <li>作用四条："家底（资源分布）、来路（来源渠道）、还债力（偿债支付能力）、变化（资金结构变化）"</li>
 <li>格式：<strong>账户式</strong>（左右两方，左资产右负债和所有者权益，<strong>我国采用</strong>）／报告式（上下排列）</li>
-<li>排列："资产看变现，负债看还款，两边急在前；权益实资盈未"——流动资产"货币资金→应收票据及应收账款→预付款项→其他应收款→存货和待摊费用"；非流动资产"长期投资→固定资产→在建工程→无形资产→递延资产和其他资产"；流动负债"短期借款→应付票据及应付款项→预收款项→应付职工薪酬→应交税费→应付股利→其他应付款→持有待售负债和一年内到期的非流动负债"；非流动负债"长期借款→应付债券→长期应付款和专项应付款"；留存收益＝盈余公积＋未分配利润</li>
-<li>填列：直接填列（短期借款/应付职工薪酬/应交税费/实收资本/资本公积/盈余公积）；分析计算四类——总账合计（货币资金）、之和或之差（未分配利润，借大于贷填负数）、扣备抵（固定资产等）、翻明细（预收款项、其他应付款）、跨期搬家（一年内到期的非流动负债）、存货＝八科目借方余额和−存货跌价准备</li>
+<li><strong>排列口诀</strong>："资产看变现，负债看还款，两边急在前；权益实资盈未"</li>
+<li><strong>资产方排列</strong>：流动资产"货币资金→应收票据及应收账款→预付款项→其他应收款→存货和待摊费用"；非流动资产"长期投资→固定资产→在建工程→无形资产→递延资产和其他资产"</li>
+<li><strong>流动负债排列</strong>：短期借款→应付票据及应付款项→预收款项→应付职工薪酬→应交税费→应付股利→其他应付款→持有待售负债和一年内到期的非流动负债</li>
+<li><strong>非流动负债与留存收益排列</strong>：长期借款→应付债券→长期应付款和专项应付款；留存收益＝盈余公积＋未分配利润</li>
+<li><strong>直接填列</strong>：短期借款/应付职工薪酬/应交税费/实收资本/资本公积/盈余公积</li>
+<li><strong>分析计算四类</strong>：总账合计（货币资金）、之和或之差（未分配利润，借大于贷填负数）、扣备抵（固定资产等）、翻明细（预收款项、其他应付款）、跨期搬家（一年内到期的非流动负债）</li>
+<li><strong>存货填列</strong>：存货＝八科目借方余额和−存货跌价准备</li>
 </ul></div><div class="ch-sechead">📍 第3节 利润表</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li>利润表：一定会计期间＋经营成果；权责发生制＋配比原则；收入−费用＝利润；<strong>动态报表</strong></li>
 <li>作用：①了解利润形成、考核利润指标完成情况；②评价经济效益、盈利能力、经营业绩</li>
@@ -812,12 +906,18 @@
 <li>归类易错：支付各项税费＝经营；偿付利息＝筹资；取得投资收益＝投资</li>
 </ul></div><div class="ch-sechead">📍 第5节 会计报表附注</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li>附注定义：对报表<strong>列示项目</strong>的进一步文字描述或明细资料＋对<strong>未列示项目</strong>的说明；为便于使用者理解报表内容，对<strong>编制基础、编制依据、编制原则和方法及主要项目</strong>所做的解释</li>
-<li>内容四堆："我是谁按什么编"（基本情况/编制基础/遵循准则声明）、"怎么算"（重要会计政策/重要会计估计）、"变了什么"（政策估计变更及差错更正）、"特别交代"（重要项目进一步说明含终止经营税后利润、或有事项和承诺事项、日后非调整事项、关联方关系及其交易、报出日前提议或宣布的股利、管理资本的目标政策程序信息）</li>
-</ul></div></article>
-<article class="ch-card" id="b4"><div class="ch-head"><span class="ch-rank">20</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础04_市场结构理论_第1节_市场结构的类型.html">第四章 市场结构理论</a></div><div class="ch-qing">考情：次重点章节，知识点较多、分值适中，近年考核 3–4 分（2025 年平均考查 3 分）；各种市场结构的特征、完全竞争市场和完全垄断市场中的各类曲线是高频考点。</div><div class="ch-sechead">📍 第1节 市场结构的类型</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+<li><strong>内容四堆之"我是谁按什么编"</strong>：基本情况/编制基础/遵循准则声明</li>
+<li><strong>内容四堆之"怎么算"</strong>：重要会计政策/重要会计估计</li>
+<li><strong>内容四堆之"变了什么"</strong>：政策估计变更及差错更正</li>
+<li><strong>内容四堆之"特别交代"</strong>：重要项目进一步说明含终止经营税后利润、或有事项和承诺事项、日后非调整事项、关联方关系及其交易、报出日前提议或宣布的股利、管理资本的目标政策程序信息</li>
+</ul></div></details>
+<details class="ch-card" id="b4"><summary><span class="ch-rank">20</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第四章 市场结构理论</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：次重点章节，知识点较多、分值适中，近年考核 3–4 分（2025 年平均考查 3 分）；各种市场结构的特征、完全竞争市场和完全垄断市场中的各类曲线是高频考点。<a class="ch-link" href="基础04_市场结构理论_第1节_市场结构的类型.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 市场结构的类型</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>市场结构</strong>＝行业内买方和卖方数量及规模分布＋产品差别程度＋新企业进入难易程度的综合状态（某种产品或服务的竞争状态和竞争程度）</li>
 <li><strong>三标准</strong>："数、差、障"——企业数目（越多越竞争）、产品差别程度（垄断竞争 vs 完全竞争的主要区别）、进入障碍（越小越竞争）；竞争程度与垄断程度反向</li>
-<li><strong>四种市场</strong>：完全竞争（很多、同质无差别、自由进出无障碍、价格接受者，近似小麦玉米）／完全垄断（唯一生产者、价格决定者、无合适替代品的独特性产品、进入非常困难，近似电力、固定电话、邮政）／寡头垄断（少数几家控制供给、对价格有较大程度控制，产品可能无差别也可能有差别，如汽车、钢铁）／垄断竞争（很多、产品有差别、进出容易、有一定价格控制力）</li>
+<li><strong>四种市场之完全竞争</strong>：很多、同质无差别、自由进出无障碍、价格接受者，近似小麦玉米</li>
+<li><strong>四种市场之完全垄断</strong>：唯一生产者、价格决定者、无合适替代品的独特性产品、进入非常困难，近似电力、固定电话、邮政</li>
+<li><strong>四种市场之寡头垄断</strong>：少数几家控制供给、对价格有较大程度控制，产品可能无差别也可能有差别，如汽车、钢铁</li>
+<li><strong>四种市场之垄断竞争</strong>：很多、产品有差别、进出容易、有一定价格控制力</li>
 <li><strong>完全垄断四条件</strong>：政府垄断（邮政）、资源垄断（特殊原材料）、专利垄断、自然垄断（一家有效率生产／更低成本供给全市场；与规模经济——平均总成本随产量扩大而下降——密切相关）</li>
 </ul></div><div class="ch-sechead">📍 第2节 完全竞争市场上生产者的行为</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>行业</strong>：需求曲线右下倾斜＋供给曲线右上倾斜，交点定均衡价格；<strong>个别企业</strong>：价格接受者，需求曲线是平行横轴的水平线（与行业需求曲线不同）</li>
@@ -829,7 +929,10 @@
 <li><strong>收益线</strong>：AR＝单位产品价格，与需求曲线重合（两线重合）；MR＜AR（价格随销量增加而下降），MR 曲线在 AR 下方且更陡峭</li>
 <li><strong>决策原则</strong>：MR＝MC→均衡产量→均衡价格；成本曲线与完全竞争企业相同；不可随意提价（受市场需求状况约束）；不存在供给曲线（价格与产量非一一对应）</li>
 <li><strong>定价法则</strong>：（P−MC）/P＝−1/Ed，P＝MC/(1＋1/Ed)；Ed 绝对值小→定高价；绝对值大→价格接近 MC（薄利多销）</li>
-<li><strong>价格歧视</strong>＝为获取更大利润对同一产品规定不同价格（差别定价）；一级（每单位按愿付最高价、完全价格歧视、消费者剩余全被占有，例：服装讨价还价）、二级（按批量定价、相同批量同价，例：批发价低）、三级（按不同需求价格弹性分组定价，例：大学生火车硬座优惠票价）</li>
+<li><strong>价格歧视</strong>＝为获取更大利润对同一产品规定不同价格（差别定价）</li>
+<li><strong>一级价格歧视</strong>：每单位按愿付最高价、完全价格歧视、消费者剩余全被占有，例：服装讨价还价</li>
+<li><strong>二级价格歧视</strong>：按批量定价、相同批量同价，例：批发价低</li>
+<li><strong>三级价格歧视</strong>：按不同需求价格弹性分组定价，例：大学生火车硬座优惠票价</li>
 <li><strong>两条件</strong>：能按需求价格弹性分出两组以上购买者＋市场有效隔离（同一产品不能跨市场流动）；<strong>操作</strong>：缺弹市场高价少销厚利、富弹市场低价薄利多销；<strong>原则</strong>：不同市场 MR 相等且＝MC</li>
 </ul></div><div class="ch-sechead">📍 第4节 垄断竞争和寡头垄断市场上生产者的行为</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>垄断竞争</strong>：需求曲线向右下倾斜（比完全垄断的平坦、接近完全竞争的水平线）；主观（预期）需求曲线比实际（市场份额）需求曲线<strong>更平坦</strong>；MR＝MC 短期均衡，盈利/利润为零/亏损三种情形；不存在供给曲线</li>
@@ -838,8 +941,8 @@
 <li><strong>价格领袖制</strong>：占支配地位的领袖企业率先定价、其他企业参照跟随；领袖企业须考虑整个行业供求状况，否则遭报复</li>
 <li><strong>寡头垄断</strong>：需求曲线向右下方倾斜；均衡产量与均衡价格非一一对应→不存在有规律的供给曲线</li>
 <li><strong>总结</strong>："一平三斜，一有三无"——完全竞争企业需求水平线、有短期供给曲线；完全垄断/垄断竞争/寡头垄断需求右下倾斜、无供给曲线；企业需求曲线＝行业需求曲线的只有完全垄断</li>
-</ul></div></article>
-<article class="ch-card" id="b9"><div class="ch-head"><span class="ch-rank">21</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础09_价格总水平和就业、失业_第1节_价格总水平.html">第九章 价格总水平和就业、失业</a></div><div class="ch-qing">考情：非重点章节，知识点较少、重点突出，近年考核 1–4 分，题量 1–2 道单选题、1 道多选题；价格总水平的决定因素和效应、就业与失业的定义口径与类型、奥肯定律和菲利普斯曲线是重难点。（讲义正文与书签均为四节。）</div><div class="ch-sechead">📍 第1节 价格总水平</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b9"><summary><span class="ch-rank">21</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第九章 价格总水平和就业、失业</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：非重点章节，知识点较少、重点突出，近年考核 1–4 分，题量 1–2 道单选题、1 道多选题；价格总水平的决定因素和效应、就业与失业的定义口径与类型、奥肯定律和菲利普斯曲线是重难点。（讲义正文与书签均为四节。）<a class="ch-link" href="基础09_价格总水平和就业、失业_第1节_价格总水平.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 价格总水平</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>价格总水平</strong>：一定时期内全社会各类商品和服务价格变动状态的平均或综合；不含证券、期货、债券等生产要素市场价格</li>
 <li><strong>度量</strong>：价格指数（报告期 vs 基期的相对数）；我国采用 <strong>CPI</strong> 作为衡量价格总水平变动的基本指标</li>
 <li><strong>决定因素</strong>：费雪方程式 MV＝PT → π＝m＋v−y；货币供给量、货币流通速度<strong>同向</strong>，总产出<strong>反向</strong>；长期决定价格总水平的是总需求，短期由总需求和总供给共同决定（需求跑赢供给→可能上升）</li>
@@ -862,11 +965,13 @@
 </ul></div><div class="ch-sechead">📍 第4节 宏观经济治理的内涵与特征</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>内涵</strong>：国家发展规划（战略导向）＋财政政策和货币政策（主要手段）＋就业、产业、投资、消费、环保、区域等政策（紧密配合）；目标优化、分工合理、高效协同</li>
 <li><strong>二十大</strong>：扩大内需；消费对经济发展的<strong>基础性</strong>作用、投资对优化供给结构的<strong>关键性</strong>作用</li>
-<li><strong>三特征</strong>：规划战略导向（接续的中长期规划、中国特色社会主义制度独特优势、治国理政重要方式）／完善财政货币政策（积极财政：提升效能、精准可持续；稳健货币：灵活适度、流动性合理充裕）／多政策配合机制（就业优先、稳定和扩大就业是优先目标；投资补短板、锻长板）</li>
+<li><strong>三特征·规划战略导向</strong>：接续的中长期规划、中国特色社会主义制度独特优势、治国理政重要方式</li>
+<li><strong>三特征·完善财政货币政策</strong>：积极财政：提升效能、精准可持续；稳健货币：灵活适度、流动性合理充裕</li>
+<li><strong>三特征·多政策配合机制</strong>：就业优先、稳定和扩大就业是优先目标；投资补短板、锻长板</li>
 <li><strong>《"十五五"规划纲要》</strong>：强化国家发展规划战略导向作用，加强财政、货币政策协同，发挥好产业、价格、就业、消费、投资、贸易、区域、环保、监管等政策作用，增强宏观政策取向一致性和有效性</li>
 <li><strong>2024 年 12 月中央经济工作会议</strong>：实施<strong>适度宽松</strong>的货币政策</li>
-</ul></div></article>
-<article class="ch-card" id="b11"><div class="ch-head"><span class="ch-rank">22</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础11_公共物品与财政职能_第1节_公共物品的定义及其融资与生产.html">第十一章 公共物品与财政职能</a></div><div class="ch-qing">考情：非重点章节——知识点较少、重点突出，三节中财政的基本职能是重难点；近年一般考核 1–4 分，题量约 1–2 道单选＋1 道多选。属第二部分财政。</div><div class="ch-sechead">📍 第1节 公共物品的定义及其融资与生产</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b11"><summary><span class="ch-rank">22</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第十一章 公共物品与财政职能</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：非重点章节——知识点较少、重点突出，三节中财政的基本职能是重难点；近年一般考核 1–4 分，题量约 1–2 道单选＋1 道多选。属第二部分财政。<a class="ch-link" href="基础11_公共物品与财政职能_第1节_公共物品的定义及其融资与生产.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 公共物品的定义及其融资与生产</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>公共物品</strong>：增加一个人消费并不同时减少其他人消费；萨缪尔森首次提出</li>
 <li><strong>两大特征</strong>：非竞争性＝主要特征（边际供给成本为零→集体提供的潜在收益）；非排他性＝派生特征（技术不可行或成本过高→市场提供的潜在困难）；拦未付费者违反帕累托准则</li>
 <li><strong>需求显示</strong>：私人物品＝自愿的市场交易（出价显示）；公共物品＝强制性的政治交易（投票、少数服从多数）</li>
@@ -882,8 +987,8 @@
 <li><strong>资源配置</strong>：集中资源形成财政收入→财政支出提供公共物品→引导资金流向→弥补市场缺陷→最优状态；范围三条（政府执行职能／准公共物品／引导性支出）；手段五条（总量、结构、资金、引导、效率——总构资引效）</li>
 <li><strong>收入分配</strong>：调整初次分配结果求公平；手段四条（分工界限、税收调节、转移支付、公共福利——分税转福）；<strong>资源税调级差收入＝收入分配</strong></li>
 <li><strong>经济稳定和发展</strong>：四目标＝充分就业、物价稳定、经济增长、国际收支平衡（就价长衡）；手段四条（政策配合、调节投资需求、调节个人消费、加大重点投入——政经税投）</li>
-</ul></div></article>
-<article class="ch-card" id="b5"><div class="ch-head"><span class="ch-rank">23</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础05_生产要素市场理论_第1节_生产者使用生产要素的原则.html">第五章 生产要素市场理论</a></div><div class="ch-qing">考情：次重点章节——知识点少、分值高、重点突出、性价比高；近年考核 2–4 分，2025 年平均考查 3.25 分。生产者使用要素的原则和劳动、土地、资本的供给曲线是高频考点。</div><div class="ch-sechead">📍 第1节 生产者使用生产要素的原则</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b5"><summary><span class="ch-rank">23</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第五章 生产要素市场理论</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：次重点章节——知识点少、分值高、重点突出、性价比高；近年考核 2–4 分，2025 年平均考查 3.25 分。生产者使用要素的原则和劳动、土地、资本的供给曲线是高频考点。<a class="ch-link" href="基础05_生产要素市场理论_第1节_生产者使用生产要素的原则.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 生产者使用生产要素的原则</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>四要素</strong>：劳动（体力＋智力）、资本（实物＋货币）、土地（地上地下自然资源）、企业家才能（经营管理能力）</li>
 <li><strong>两市场</strong>：都由生产者＋消费者共同决定价格、配置资源；产品市场居民买、要素市场居民卖（角色互换）</li>
 <li><strong>引致需求（派生需求）</strong>：反映要素市场与产品市场的联系；需求量取决于消费者对产品的需求量</li>
@@ -903,8 +1008,8 @@
 <li>供给原则（效用最大化条件）：<strong>劳动的边际效用＝闲暇的边际效用</strong></li>
 <li>替代效应＝用劳动替代闲暇（供给＋）；收入效应＝富有追求闲暇（供给−）；低工资替代＞收入（供给增），高工资替代＜收入（供给减）→ 个人劳动供给曲线<strong>向后弯曲</strong>；<strong>市场的</strong>劳动供给曲线向右上方倾斜</li>
 <li><strong>土地</strong>供给曲线＝垂直线；<strong>资本</strong>＝短期垂直、长期后弯（短直长弯）</li>
-</ul></div></article>
-<article class="ch-card" id="b27"><div class="ch-head"><span class="ch-rank">24</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础27_时间序列分析_第1节_时间序列及其分类.html">第二十七章 时间序列分析</a></div><div class="ch-qing">考情：非重点章节——知识点较多、分值较低，近年考核 2–4 分（2025 年平均 3 分）；时间序列及其分类、增长量与平均增长量、平均发展速度与平均增长速度、平滑预测法是高频考点。</div><div class="ch-sechead">📍 第1节 时间序列及其分类</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b27"><summary><span class="ch-rank">24</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第二十七章 时间序列分析</span><span class="ch-meta">5 张速记卡</span></summary><div class="ch-qing">考情：非重点章节——知识点较多、分值较低，近年考核 2–4 分（2025 年平均 3 分）；时间序列及其分类、增长量与平均增长量、平均发展速度与平均增长速度、平滑预测法是高频考点。<a class="ch-link" href="基础27_时间序列分析_第1节_时间序列及其分类.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 时间序列及其分类</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li>时间序列（<strong>动态数列</strong>）＝同一统计指标在不同时间的数值按时间先后顺序排列；两要素＝<strong>所属时间＋指标值</strong></li>
 <li>按表现形式三类：<strong>绝对数、相对数、平均数</strong>时间序列</li>
 <li>绝对数序列再分：<strong>时期序列</strong>（过程总量、可加总、与时期长短有关）／<strong>时点序列</strong>（瞬间水平、不可加总）</li>
@@ -923,7 +1028,10 @@
 <li>速度应用两注意：指标值出现 <strong>0 或负数不宜计算速度</strong>；速度与<strong>基数</strong>关系密切，要结合水平指标</li>
 <li><strong>增长 1% 的绝对值</strong>＝逐期增长量÷环比增长速度＝<strong>前一期水平÷100</strong></li>
 </ul></div><div class="ch-sechead">📍 第4节 时间序列的分解和预测程序</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
-<li>四成分：<strong>长期趋势 T</strong>（持续升降、线性或非线性）／<strong>季节变动 S</strong>（<strong>一年内</strong>重复的周期波动，如旅游、销售、农业、交通）／<strong>循环波动 C</strong>（<strong>非固定长度</strong>周期，如经济周期）／<strong>不规则波动 I</strong>（随机偶然、难以预测控制、预测中通常不单独考虑）</li>
+<li><strong>四成分·长期趋势 T</strong>：持续升降、线性或非线性</li>
+<li><strong>四成分·季节变动 S</strong>：<strong>一年内</strong>重复的周期波动，如旅游、销售、农业、交通</li>
+<li><strong>四成分·循环波动 C</strong>：<strong>非固定长度</strong>周期，如经济周期</li>
+<li><strong>四成分·不规则波动 I</strong>：随机偶然、难以预测控制、预测中通常不单独考虑</li>
 <li>季节 vs 循环：季节<strong>固定</strong>（一年内）、循环<strong>不固定</strong></li>
 <li>序列可只含一种成分，也可混合几种</li>
 <li>预测四步：<strong>定成分→找方法→评估选最佳→进行预测</strong></li>
@@ -932,13 +1040,15 @@
 <li><strong>移动平均法</strong>：<strong>最近 K 期</strong>数据值的平均数＝下一期预测值；k＝3 取最近 3 期</li>
 <li><strong>指数平滑法</strong>：<strong>F(t+1)＝αYt＋(1−α)Ft</strong>；<strong>0＜α＜1</strong>；Yt＝第 t 期实际观察值配 α，Ft＝第 t 期预测值配 1−α</li>
 <li>权重特点：观测值<strong>越久远权重越小</strong>（指数下降）→ 近期权重大；起点：<strong>第 1 期预测值＝第 1 期实际观察值</strong></li>
-</ul></div></article>
-<article class="ch-card" id="b15"><div class="ch-head"><span class="ch-rank">25</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础15_政府预算_第1节_政府预算的职能与原则.html">第十五章 政府预算</a></div><div class="ch-qing">考情：非重点章节，知识点较多、重点突出，近年一般考核 3–4 分，题量 2–3 道单选题、1 道多选题；重难点在第三节——政府预算体系分出来的&quot;四本预算&quot;。</div><div class="ch-sechead">📍 第1节 政府预算的职能与原则</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b15"><summary><span class="ch-rank">25</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第十五章 政府预算</span><span class="ch-meta">5 张速记卡</span></summary><div class="ch-qing">考情：非重点章节，知识点较多、重点突出，近年一般考核 3–4 分，题量 2–3 道单选题、1 道多选题；重难点在第三节——政府预算体系分出来的&quot;四本预算&quot;。<a class="ch-link" href="基础15_政府预算_第1节_政府预算的职能与原则.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 政府预算的职能与原则</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>定义</strong>：具有法律规定和制度保证、经法定程序审核批准的政府年度财政收支计划；<strong>政府理财的主导环节</strong></li>
 <li><strong>两副面孔</strong>：政治＝做什么与不做的选择＋支出优先权＋国家和政府意志；技术＝资金来源和流向＋准备购买的公共物品</li>
 <li><strong>三职能"反监控"</strong>：反映（活动范围方向重点）／监督（人大审议文件、人民的窗口）／控制（法定授权；超授权支出即便必需也要以预算调整案报同级人大常委会批准）</li>
 <li><strong>六原则</strong>："完整统一又可靠，合法公开按年度"；可靠性＝谨慎性；合法性＝对纳税人负责；没有固定性、保密性、周期性、平衡性</li>
-<li><strong>六分类</strong>：形式（单式/复式，经常税收＋资本国债）／时间（年度/多年：三五年、滚一年、没效力作参照不批准）／内容方法（增量/零基：起点为零≠全重来）／平衡（平衡/差额：略有结余赤字也算平衡）／效益（投入/绩效/规划-项目）／层级（中央四本/地方）</li>
+<li><strong>预算六分类·形式时间</strong>：形式（单式/复式，经常税收＋资本国债）／时间（年度/多年：三五年、滚一年、没效力作参照不批准）</li>
+<li><strong>预算六分类·内容平衡</strong>：内容方法（增量/零基：起点为零≠全重来）／平衡（平衡/差额：略有结余赤字也算平衡）</li>
+<li><strong>预算六分类·效益层级</strong>：效益（投入/绩效/规划-项目）／层级（中央四本/地方）</li>
 </ul></div><div class="ch-sechead">📍 第2节 我国政府预算职权划分</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>职权定义</strong>：政策法规的制定权、解释权、修订权＋预算决算的编制权、审批权＋执行、调整、监督权</li>
 <li><strong>三法</strong>：宪法—全国人大及其常委会；监督法—人大常委会审批决算、听取执行报告；预算法—立法机关、各级政府、财政部门、执行部门单位</li>
@@ -946,7 +1056,9 @@
 <li><strong>政府 vs 财政</strong>：政府"组织、决定（预备费）"；财政"具体、提出（动用方案）、定期报告"</li>
 <li><strong>其他</strong>：主管部门制定办法、编制部门预决算；各单位编本单位预决算、上缴收入受监督；审计盯"真实、合法、效益"</li>
 </ul></div><div class="ch-sechead">📍 第3节 我国政府预算体系</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
-<li><strong>四本预算</strong>："公基资保"——一般公共（税收主体、体系基础、统计公报口径）／政府性基金（基金收费卖地彩票、以收定支专款专用结余结转）／国有资本经营（所有者身份、不列赤字、比例 20/15/10/5/免）／社会保险基金（五险、按险种编、人社编财政审联合报国务院）</li>
+<li><strong>四本预算口诀</strong>："公基资保"——一般公共（税收主体、体系基础、统计公报口径）／政府性基金（基金收费卖地彩票、以收定支专款专用结余结转）</li>
+<li><strong>四本预算·国有资本经营</strong>：所有者身份、不列赤字、比例 20/15/10/5/免</li>
+<li><strong>四本预算·社会保险基金</strong>：五险、按险种编、人社编财政审联合报国务院</li>
 <li><strong>基金审批</strong>：项目财政部批、重要报国务院；全国预决算草案国务院审定后报<strong>全国人民代表大会</strong>批准</li>
 <li><strong>国资预算</strong>：核心＝调整国家与国企的分配关系；编制原则＝统筹兼顾适度集中、相对独立相互衔接、分级编制逐步实施；支出按当年收入规模安排、不列赤字</li>
 <li><strong>社保预算</strong>：五原则"依法统编专款用，相对独立收支平"；不得随意调整，调整须编预算调整方案</li>
@@ -961,8 +1073,8 @@
 <li><strong>硬要求</strong>：清理压缩福利性、普惠性、基数化奖励；节约型财政保障机制；"三保"＝保基本民生、保工资、保运转优先；<strong>严禁</strong>非税收入与征收单位支出挂钩</li>
 <li><strong>地方债</strong>：限额管理；一般债务→一般公共预算，专项债务→政府性基金预算；防范化解隐性债务风险</li>
 <li><strong>财务报告</strong>：政府综合财务报告（财政部门编，反映各级政府整体财务状况、运行情况、财政中长期可持续性）＋政府部门财务报告</li>
-</ul></div></article>
-<article class="ch-card" id="b22"><div class="ch-head"><span class="ch-rank">26</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础22_对外金融关系与政策_第1节_汇率制度.html">第二十二章 对外金融关系与政策</a></div><div class="ch-qing">考情：非重点章节，知识点较少、重点突出，汇率制度与国际货币体系是重难点；近年一般考核 3–4 分，题量 1–2 道单选题＋1 道多选题，偏爱考&quot;归类对号入座&quot;（储备构成、体系特征、组织特点）。</div><div class="ch-sechead">📍 第1节 汇率制度</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b22"><summary><span class="ch-rank">26</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第二十二章 对外金融关系与政策</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：非重点章节，知识点较少、重点突出，汇率制度与国际货币体系是重难点；近年一般考核 3–4 分，题量 1–2 道单选题＋1 道多选题，偏爱考&quot;归类对号入座&quot;（储备构成、体系特征、组织特点）。<a class="ch-link" href="基础22_对外金融关系与政策_第1节_汇率制度.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 汇率制度</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>汇率制度</strong>＝对汇率变动基本方式的一系列安排或规定；固定＝有平价小幅波动，浮动＝无平价随供求</li>
 <li>固定两支：金本位（<strong>自发</strong>，铸币平价定基础、黄金输送点限上下）；布雷顿森林（<strong>人为、可调整</strong>、美元中心）</li>
 <li>浮动八档由僵到活：无单独法定货币→货币局→传统钉住→水平区间→爬行钉住→爬行区间→不公布目标的管理浮动→独立浮动；港元盯美元约 7.8</li>
@@ -970,45 +1082,69 @@
 <li>人民币制度：94 并轨 8.7 单一有管理浮动；05"主动性、可控性、渐进性"＋一篮子；10 回归；15"收盘价＋一篮子"；17"＋逆周期因子"；21 外汇存准率＋2 个百分点</li>
 </ul></div><div class="ch-sechead">📍 第2节 国际储备</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>国际储备</strong>＝货币当局为弥补国际收支逆差、稳定本币汇率、应付紧急支付所持有的国际普遍接受的资产</li>
-<li>四大构成：货币性黄金（<strong>潜在</strong>储备，不能实物支付）、外汇储备（<strong>最主要</strong>组成部分、非黄金储备中 95% 以上、银行存款＋国库券）、IMF 储备头寸（普通账户中<strong>自由提取</strong>＝份额 25% 储备档＋超储备档）、SDR（<strong>无偿</strong>分配、<strong>一篮子货币</strong>定值、<strong>账面</strong>资产）</li>
+<li><strong>四大构成·货币性黄金</strong>：<strong>潜在</strong>储备，不能实物支付</li>
+<li><strong>四大构成·外汇储备</strong>：<strong>最主要</strong>组成部分、非黄金储备中 95% 以上、银行存款＋国库券</li>
+<li><strong>四大构成·IMF 储备头寸</strong>：普通账户中<strong>自由提取</strong>＝份额 25% 储备档＋超储备档</li>
+<li><strong>四大构成·SDR</strong>：<strong>无偿</strong>分配、<strong>一篮子货币</strong>定值、<strong>账面</strong>资产</li>
 <li>三大作用：融通逆差（<strong>临时性</strong>）、干预外汇市场稳汇率、对外举债和偿债的根本保证；储备是一国经济地位的象征</li>
-<li>管理实质＝<strong>外汇储备</strong>的管理；总量（过低→支付危机，过多→机会成本＋流动性过剩）、结构（货币比例安排＋流动性结构，货币多样化）、积极管理（专门投资机构、延长期限、求收益）；IMF 2013 修订指南四领域：目标策略、透明问责、机构组织、风险管理</li>
+<li><strong>外汇储备总量管理</strong>：管理实质＝<strong>外汇储备</strong>的管理；总量（过低→支付危机，过多→机会成本＋流动性过剩）</li>
+<li><strong>外汇储备结构管理</strong>：结构（货币比例安排＋流动性结构，货币多样化）、积极管理（专门投资机构、延长期限、求收益）</li>
+<li><strong>外汇储备管理·IMF 指南</strong>：IMF 2013 修订指南四领域：目标策略、透明问责、机构组织、风险管理</li>
 </ul></div><div class="ch-sechead">📍 第3节 国际货币体系</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>国际货币体系</strong>＝通过国际惯例、协定和规章制度对国际货币关系所做的一系列安排；内容三条"<strong>备、汇、收</strong>"（确定国际储备资产、确定汇率制度、确定国际收支调节方式）</li>
 <li><strong>金本位</strong>：第一次出现的国际货币体系、英国最早、自发固定；铸币平价（两国本位币含金量之比）定中心汇率；黄金输送点（铸币平价±运费）限波动</li>
-<li><strong>布雷顿森林</strong>：美元中心；双挂钩（美元挂黄金、别国挂美元）；可兑换黄金的美元本位（金汇兑本位）、美元实际充当国际储备货币；人为可调固定汇率；短期失衡 IMF 信贷、长期失衡调汇率平价；<strong>特里芬难题</strong>（信心 vs 清偿力）→ 1973 年 3 月崩溃</li>
+<li><strong>布雷顿森林体系</strong>：美元中心；双挂钩（美元挂黄金、别国挂美元）；可兑换黄金的美元本位（金汇兑本位）、美元实际充当国际储备货币</li>
+<li><strong>布雷顿森林汇率制度</strong>：人为可调固定汇率；短期失衡 IMF 信贷、长期失衡调汇率平价</li>
+<li><strong>特里芬难题</strong>：信心 vs 清偿力 → 1973 年 3 月崩溃</li>
 <li><strong>牙买加</strong>：多元化国际储备体系＋多种汇率安排并存的浮动汇率体系；经常账户失衡靠汇率机制、利率机制、国际金融市场调节和 IMF 调节；IMF 向逆差国贷款＋指导监督双方对称承担义务</li>
-<li><strong>IMF</strong>：理事会最高权力、货币体系核心机构；资金来源＝份额为主（25% SDR/主要国际货币＋75% 本币）＋借款（一般借款总安排、新借款安排）；贷款＝备用安排（普通贷款，最基本最早）、中期贷款（结构缺陷）、减贫与增长贷款（低息、最贫困）、其他；特点＝解决国际收支＋有政策条件＋临时性</li>
-<li><strong>世行</strong>：最大多边开发机构；资金来源＝股份、借款（主）、转让债权、业务净收益（股债转赚）；贷款＝项目贷款为主、期限长、浮动利率、只补外汇部分、程序严密审批长、<strong>硬贷款</strong>；五机构 44 复兴／56 金融公司／60 开发协会／66 争端解决／88 多边担保</li>
+<li><strong>IMF 组织与资金</strong>：理事会最高权力、货币体系核心机构；资金来源＝份额为主（25% SDR/主要国际货币＋75% 本币）＋借款（一般借款总安排、新借款安排）</li>
+<li><strong>IMF 贷款</strong>：备用安排（普通贷款，最基本最早）、中期贷款（结构缺陷）、减贫与增长贷款（低息、最贫困）、其他</li>
+<li><strong>IMF 贷款特点</strong>：解决国际收支＋有政策条件＋临时性</li>
+<li><strong>世行</strong>：最大多边开发机构</li>
+<li><strong>世行资金来源</strong>：股份、借款（主）、转让债权、业务净收益（股债转赚）</li>
+<li><strong>世行贷款</strong>：项目贷款为主、期限长、浮动利率、只补外汇部分、程序严密审批长、<strong>硬贷款</strong></li>
+<li><strong>世行五机构</strong>：44 复兴／56 金融公司／60 开发协会／66 争端解决／88 多边担保</li>
 <li><strong>国际清算银行</strong>：促进央行合作、充当受托人或代理人；股份公司形式、最高权力机构＝<strong>股东大会</strong></li>
 </ul></div><div class="ch-sechead">📍 第4节 人民币跨境使用</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>跨境人民币业务</strong>＝居民（境内机构/个人）与非居民（境外机构/个人）之间以人民币开展或结算的各类跨境业务</li>
-<li>六大类型：贸易结算（货物、服务及其他经常项目均可）、境外直投（<strong>事后管理</strong>＋核准证书；义务＝真实性合规性审查、报送信息、反洗钱反恐融资）、外商直投（出资、并购、股权转让、增资、贷款，资金可汇出）、贸易融资（进口：信用证/海外代付/进口押汇；出口：打包/信用证押汇/托收押汇/福费廷/保理；真实贸易背景、以贸易合同金额为限）、证券投资（点心债＝境内机构赴港发；熊猫债＝境外机构境内发、国际开发机构、优先用于境内建设）、双边货币合作（货币互换三目标：临时应对如美联储、常设预防如清迈倡议、深化合作如人行双边；本币结算协议）</li>
+<li><strong>六大类型·贸易结算与境外直投</strong>：货物、服务及其他经常项目均可；<strong>事后管理</strong>＋核准证书；义务＝真实性合规性审查、报送信息、反洗钱反恐融资</li>
+<li><strong>六大类型·外商直投与贸易融资</strong>：出资、并购、股权转让、增资、贷款，资金可汇出；进口：信用证/海外代付/进口押汇；出口：打包/信用证押汇/托收押汇/福费廷/保理；真实贸易背景、以贸易合同金额为限</li>
+<li><strong>六大类型·证券投资</strong>：点心债＝境内机构赴港发；熊猫债＝境外机构境内发、国际开发机构、优先用于境内建设</li>
+<li><strong>六大类型·双边货币合作</strong>：货币互换三目标：临时应对如美联储、常设预防如清迈倡议、深化合作如人行双边；本币结算协议</li>
 <li><strong>自由贸易账户</strong>：2014 年起上海自贸区试点；特点＝分账核算、本外币合一可兑换、一线放开二线管住、跨二线只能划转人民币、适用离岸汇率；开户主体五类＝区内机构/境外机构/同业机构/区内个人/境外个人（<strong>无"区外机构"</strong>）</li>
-</ul></div></article>
-<article class="ch-card" id="b37"><div class="ch-head"><span class="ch-rank">27</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础37_其他法律制度_第1节_劳动合同法律制度.html">第三十七章 其他法律制度</a></div><div class="ch-qing">考情：本章为次重点章节，但知识点多、分值较高，近年考核 3–4 分（2025 年平均 4.5 分，略高于预期）；劳动合同的类型与解除、消费者的权利、不正当竞争行为的种类是高频考点。</div><div class="ch-sechead">📍 第1节 劳动合同法律制度</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b37"><summary><span class="ch-rank">27</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第三十七章 其他法律制度</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：本章为次重点章节，但知识点多、分值较高，近年考核 3–4 分（2025 年平均 4.5 分，略高于预期）；劳动合同的类型与解除、消费者的权利、不正当竞争行为的种类是高频考点。<a class="ch-link" href="基础37_其他法律制度_第1节_劳动合同法律制度.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 劳动合同法律制度</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>适用范围</strong>：企业／个体经济组织／民办非企业单位＝<strong>适用</strong>；机关／事业单位／社会团体（有劳动关系）＝<strong>依照执行</strong></li>
 <li><strong>三类型</strong>：固定期限、以完成一定工作任务为期限、无固定期限；<strong>应订无固定三情形＝"十年、双十、两次"</strong>（劳动者提出订固定期限的除外）；用工满 1 年不签书面＝<strong>视为无固定</strong></li>
 <li><strong>订立</strong>：书面合同用工之日起 <strong>1 个月内</strong>订；劳动关系自<strong>用工之日</strong>起建立；必备条款 9 项（"两家、一期、一地一活，作息、钱、保、护"）；试用期、培训、保密、补充保险、福利待遇属<strong>约定</strong>条款</li>
 <li><strong>试用期</strong>：<strong>1／2／6</strong> 三档；同单位同人<strong>只能 1 次</strong>；完成任务为期限、期限不满 3 个月<strong>不得约定</strong>；仅约试用→试用期不成立；工资 ≥ 相同岗位最低档或约定工资 <strong>80%</strong>，且 ≥ 当地最低工资</li>
 <li><strong>竞业限制</strong>：高管／高技／其他保密义务人，≤<strong>2 年</strong>，<strong>按月</strong>给经济补偿，违约付违约金</li>
 <li><strong>无效</strong>：欺诈胁迫乘人之危／免责排权／违反强制性规定；<strong>仲裁机构或法院</strong>确认；部分无效其余仍有效；已付出劳动照付报酬</li>
-<li><strong>解除</strong>：协商（<strong>单位提出→经济补偿</strong>）；劳动者预告 30 日书面／试用期 3 日，即时（暴力强迫、违章冒险）<strong>不需告知</strong>；单位单方<strong>先通知工会</strong>——过错 6 情形随时解除、无过错 3 情形提前 30 日或代通知金、裁员 <strong>20 人或 10%＋提前 30 日＋报告</strong>，优先留用"长期限、无固定、要养家"，6 个月内重招优先招用</li>
+<li><strong>解除·协商与预告</strong>：协商（<strong>单位提出→经济补偿</strong>）；劳动者预告 30 日书面／试用期 3 日，即时（暴力强迫、违章冒险）<strong>不需告知</strong></li>
+<li><strong>解除·单位单方</strong>：单位单方<strong>先通知工会</strong>；过错 6 情形随时解除、无过错 3 情形提前 30 日或代通知金、裁员 <strong>20 人或 10%＋提前 30 日＋报告</strong></li>
+<li><strong>解除·优先留用</strong>：优先留用"长期限、无固定、要养家"，6 个月内重招优先招用</li>
 <li><strong>不得解除</strong>：职业病检查观察、工伤残、医疗期、三期、"十五加五"（只挡无过错解除与裁员）</li>
 <li><strong>终止</strong>：期满、开始享受基本养老保险待遇、死亡（宣告死亡失踪）、破产、吊照关闭撤销提前解散</li>
 </ul></div><div class="ch-sechead">📍 第2节 消费者权益保护法律制度</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>消费者</strong>＝为生活消费需要购买使用商品或接受服务的<strong>自然人</strong>；农民买<strong>直接用于农业生产的生产资料参照</strong>消保法执行</li>
 <li><strong>十权</strong>："安、知、选、公、偿，结社、获知、尊，信息＋监督"；<strong>"无条件退货权"不是法定权利</strong></li>
-<li><strong>经营者 14 项义务</strong>；耐用商品（车／电脑／电视／冰箱／空调／洗衣机）＋装修服务 <strong>6 个月内</strong>发现瑕疵由<strong>经营者举证</strong>；网络、电视、电话、邮购 <strong>7 日无理由退货</strong>，例外"<strong>定作鲜腐数字报期</strong>"，运费消费者担，<strong>收到退货 7 日内</strong>返款；格式条款"限权、免责、加责"内容<strong>无效</strong>，不得借技术手段强制交易</li>
+<li><strong>经营者义务与举证</strong>：经营者 14 项义务；耐用商品（车／电脑／电视／冰箱／空调／洗衣机）＋装修服务 <strong>6 个月内</strong>发现瑕疵由<strong>经营者举证</strong></li>
+<li><strong>无理由退货</strong>：网络、电视、电话、邮购 <strong>7 日无理由退货</strong>，例外"<strong>定作鲜腐数字报期</strong>"，运费消费者担，<strong>收到退货 7 日内</strong>返款</li>
+<li><strong>格式条款</strong>："限权、免责、加责"内容<strong>无效</strong>，不得借技术手段强制交易</li>
 <li><strong>五途径</strong>：协商、调解、投诉（<strong>7 个工作日</strong>处理并告知）、仲裁（<strong>须有仲裁协议</strong>）、诉讼；<strong>公益诉讼</strong>＝中国消费者协会＋省、自治区、直辖市设立的消协</li>
-<li><strong>索赔</strong>：默认找<strong>销售者</strong>；<strong>缺陷</strong>可选销售者或生产者；分立合并找承继企业；借执照可找<strong>持照人</strong>；展销会／柜台期满可找<strong>举办者／出租者</strong>（追偿）；平台不提供真实信息可找平台，明知应知不管＝<strong>连带</strong>；涉生命健康虚假广告的广告经营者发布者、推荐者＝<strong>连带</strong></li>
+<li><strong>索赔·默认与选择</strong>：默认找<strong>销售者</strong>；<strong>缺陷</strong>可选销售者或生产者；分立合并找承继企业；借执照可找<strong>持照人</strong></li>
+<li><strong>索赔·展销会与平台</strong>：展销会／柜台期满可找<strong>举办者／出租者</strong>（追偿）；平台不提供真实信息可找平台，明知应知不管＝<strong>连带</strong></li>
+<li><strong>索赔·虚假广告</strong>：涉生命健康虚假广告的广告经营者发布者、推荐者＝<strong>连带</strong></li>
 </ul></div><div class="ch-sechead">📍 第3节 反不正当竞争法律制度</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>沿革</strong>：<strong>1993 通过、2017 修订、2019 修正</strong>；广义＝商标法／广告法／价格法／招标投标法等领域规范的总称</li>
 <li><strong>不正当竞争行为</strong>：扰乱市场竞争秩序、损害其他经营者或消费者合法权益；经营者＝自然人、法人和非法人组织；原则＝自愿、平等、公平、诚信＋法律和商业道德</li>
-<li><strong>六种行为</strong>："冒名、买路、吆喝、偷师、设局、砸牌"——混淆（误认他人商品／特定联系）、商业贿赂（三类对象；明示入账不算）、虚假宣传（含组织刷单帮人宣传；明显夸张不致误解的不属）、侵犯商业秘密（三要件：不为公众所知悉＋商业价值＋保密措施）、不当有奖销售（信息不明／谎称有奖内定／抽奖式超 <strong>5 万元</strong>）、诋毁商誉（编造传播虚假误导信息）</li>
+<li><strong>六种行为口诀</strong>："冒名、买路、吆喝、偷师、设局、砸牌"——混淆（误认他人商品／特定联系）、商业贿赂（三类对象；明示入账不算）</li>
+<li><strong>六种行为·虚假宣传与商业秘密</strong>：虚假宣传（含组织刷单帮人宣传；明显夸张不致误解的不属）、侵犯商业秘密（三要件：不为公众所知悉＋商业价值＋保密措施）</li>
+<li><strong>六种行为·不当有奖销售</strong>：信息不明／谎称有奖内定／抽奖式超 <strong>5 万元</strong></li>
+<li><strong>六种行为·诋毁商誉</strong>：编造传播虚假误导信息</li>
 <li><strong>执法</strong>：<strong>县级以上</strong>市场监督管理部门；措施①②③报<strong>主要负责人</strong>批准；<strong>④查封扣押、⑤查银行账户</strong>须<strong>设区的市级以上</strong>批准；查处结果向社会公开</li>
-</ul></div></article>
-<article class="ch-card" id="b31"><div class="ch-head"><span class="ch-rank">28</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础31_财务报表分析_第1节_财务报表分析的意义和内容.html">第三十一章 财务报表分析</a></div><div class="ch-qing">考情：本章为非重点章节，知识点较少、分值较少、重点突出；比率分析法、比较分析法和财务报表分析的基本指标（整小节）是高频考点；近年考试考核 3–4 分，2025 年平均考查 2.75 分（略低于预期）。</div><div class="ch-sechead">📍 第1节 财务报表分析的意义和内容</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b31"><summary><span class="ch-rank">28</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第三十一章 财务报表分析</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：本章为非重点章节，知识点较少、分值较少、重点突出；比率分析法、比较分析法和财务报表分析的基本指标（整小节）是高频考点；近年考试考核 3–4 分，2025 年平均考查 2.75 分（略低于预期）。<a class="ch-link" href="基础31_财务报表分析_第1节_财务报表分析的意义和内容.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 财务报表分析的意义和内容</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>定义</strong>：收集整理财务会计报告数据＋补充信息 → 综合比较<strong>财务状况、经营成果、现金流量</strong> → 按<strong>财务指标高低</strong>评<strong>偿债、盈利、营运、发展</strong>四大能力 → 为<strong>投资者、债权人</strong>等提供管理决策依据</li>
 <li><strong>意义两条</strong>：评价过去（揭示矛盾问题、改善经营管理）；预测未来（报酬和风险、预算完成情况、考核业绩、激励机制）</li>
 <li><strong>内容三条目</strong>：偿债能力（权益结构、归还债务）、营运能力（资产分布与周转）、盈利能力（利润目标完成＋盈利水平变动，含发展能力：方向与潜力）</li>
@@ -1023,10 +1159,13 @@
 <li><strong>短期偿债</strong>：流动比率（流动资产÷流动负债，最常用，公认 2:1）、速动比率（速动资产＝流动资产−存货，1:1 左右理想）、现金比率（现金及现金等价物÷流动负债，即刻变现）；大小：<strong>流动＞速动＞现金</strong></li>
 <li><strong>长期偿债</strong>：资产负债率（应小于 100%，50% 以下较好）、产权比率（越低越强）、已获利息倍数＝息税前利润÷利息费用＝（利润总额＋利息费用）÷利息费用（<strong>至少等于 1</strong>）</li>
 <li><strong>营运能力</strong>：应收账款周转率（分子＝营业收入净额＝营业收入−销售退回折让折扣，平均余额不扣坏账准备）、存货周转率（分子＝营业成本）、流动资产周转率、总资产周转率；<strong>次多天少＝周转快</strong></li>
-<li><strong>盈利能力</strong>：营业利润率、营业净利润率（净利润÷营业收入净额）、资本收益率（÷实收资本）、净资产收益率（÷所有者权益平均余额，披露＋配股再融资依据）、资产净利润率（÷平均资产总额）、每股收益（（净利润−优先股股利）÷发行在外普通股股数）、市盈率（市价÷每股收益）、资本保值增值率（期末÷期初所有者权益）</li>
+<li><strong>盈利能力·利润率</strong>：营业利润率、营业净利润率（净利润÷营业收入净额）</li>
+<li><strong>盈利能力·资本类</strong>：资本收益率（÷实收资本）、净资产收益率（÷所有者权益平均余额，披露＋配股再融资依据）、资产净利润率（÷平均资产总额）</li>
+<li><strong>盈利能力·每股收益</strong>：（净利润−优先股股利）÷发行在外普通股股数</li>
+<li><strong>盈利能力·市盈率与保值</strong>：市盈率（市价÷每股收益）、资本保值增值率（期末÷期初所有者权益）</li>
 <li><strong>市盈率</strong>：5～20 正常；超过 20 是股价下跌前兆、风险很大；5 以下前景黯淡；通胀/加息→降，利润看涨→升，债务比重大→低</li>
-</ul></div></article>
-<article class="ch-card" id="b33"><div class="ch-head"><span class="ch-rank">29</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础33_法律对经济关系的调整_第1节_调整经济的法和经济法.html">第三十三章 法律对经济关系的调整</a></div><div class="ch-qing">考情：本章为非重点章节，知识点较少、分值较少，近年考核 3–4 分，2025 年平均仅 0.75 分（整门考试最低分）；民商法、经济法是中频考点。</div><div class="ch-sechead">📍 第1节 &quot;调整经济的法&quot;和&quot;经济法&quot;</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b33"><summary><span class="ch-rank">29</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第三十三章 法律对经济关系的调整</span><span class="ch-meta">2 张速记卡</span></summary><div class="ch-qing">考情：本章为非重点章节，知识点较少、分值较少，近年考核 3–4 分，2025 年平均仅 0.75 分（整门考试最低分）；民商法、经济法是中频考点。<a class="ch-link" href="基础33_法律对经济关系的调整_第1节_调整经济的法和经济法.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 &quot;调整经济的法&quot;和&quot;经济法&quot;</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>经济（法学视角）</strong>：围绕社会物质财富<strong>生产、交换、分配、消费</strong>过程的社会关系总和（"生交分消"四环节）</li>
 <li><strong>三阶段</strong>："一合二分三整合"——奴隶制/封建社会诸法合一（刑民不分）→ 封建社会末期＋自由资本主义大分化、发展到十几个法律部门、<strong>民商法主导</strong> → 当代重新整合、<strong>民商法＋经济法共同调</strong>、社保法环保法作<strong>辅助</strong></li>
 <li><strong>经济法</strong>＝与民法、商法、行政法、刑法<strong>并列的一个法律部门</strong>，现代法律体系的重要组成部分</li>
@@ -1034,12 +1173,16 @@
 <li>两者是<strong>两个不同的概念</strong>，"简称/画等号"必错</li>
 </ul></div><div class="ch-sechead">📍 第2节 调整社会主义市场经济的法律体系</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>混合经济</strong>＝市场力量＋政府干预综合作用；法律调整＝多个法律部门<strong>综合运用、协调作用</strong>；体系三层次：<strong>民商法、经济法、其他法律部门</strong>（"一民二经三其他"）</li>
-<li><strong>民商法</strong>处于基本法地位（民法＝市场经济基本法；商法管市场经济力量发挥作用的领域）；支撑点：市场主体<strong>独立、能动</strong>进市场（首要条件）／<strong>物权＋知识产权</strong>管财产支配（无形智力成果也算）／<strong>合同＋票据证券海商保险</strong>管交易／<strong>违约＋侵权</strong>管民事责任</li>
+<li><strong>民商法地位</strong>：处于基本法地位（民法＝市场经济基本法；商法管市场经济力量发挥作用的领域）</li>
+<li><strong>民商法支撑点（一）</strong>：市场主体<strong>独立、能动</strong>进市场（首要条件）／<strong>物权＋知识产权</strong>管财产支配（无形智力成果也算）</li>
+<li><strong>民商法支撑点（二）</strong>：<strong>合同＋票据证券海商保险</strong>管交易／<strong>违约＋侵权</strong>管民事责任</li>
 <li><strong>经济法</strong>也是市场经济制度的基本法，与民商法<strong>协调互补</strong>＝现代市场经济社会调整经济关系的<strong>两大法律体系</strong></li>
-<li><strong>经济法三大调整对象</strong>：①经济管理关系（计划、财政政策、货币政策、产业政策关系；四特点"是经济、靠市场、宏观全局、手段综合"）②市场管理关系（<strong>公平竞争、产品质量、消费者权益</strong>三兄弟）③组织管理性的流转和协作关系（国家直接参与经济活动的合同关系：招标、定（购）货、发包、出让、信贷、担保＋平等国家机关或财政主体间经济协作）</li>
+<li><strong>经济法三大调整对象①经济管理关系</strong>：计划、财政政策、货币政策、产业政策关系；四特点"是经济、靠市场、宏观全局、手段综合"</li>
+<li><strong>经济法三大调整对象②市场管理关系</strong>：<strong>公平竞争、产品质量、消费者权益</strong>三兄弟</li>
+<li><strong>经济法三大调整对象③组织管理性的流转和协作关系</strong>：国家直接参与经济活动的合同关系：招标、定（购）货、发包、出让、信贷、担保＋平等国家机关或财政主体间经济协作</li>
 <li><strong>其他法律部门</strong>：劳动和社会保障法、自然资源与环境保护法；最广泛意义上还有宪法、刑法、行政法、诉讼法（中国特色社会主义法治体系）</li>
-</ul></div></article>
-<article class="ch-card" id="b3"><div class="ch-head"><span class="ch-rank">30</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础03_生产和成本理论_第1节_生产者的组织形式和企业理论.html">第三章 生产和成本理论</a></div><div class="ch-qing">考情：非重点章节，知识点少、分值低，近年考核 2–4 分，2025 年平均仅 1.5 分（经济模块中最少）；重难点集中在一种可变要素的生产函数及曲线（产量曲线）与短期成本曲线两处，其余考点以概念辨析为主。</div><div class="ch-sechead">📍 第1节 生产者的组织形式和企业理论</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b3"><summary><span class="ch-rank">30</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第三章 生产和成本理论</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：非重点章节，知识点少、分值低，近年考核 2–4 分，2025 年平均仅 1.5 分（经济模块中最少）；重难点集中在一种可变要素的生产函数及曲线（产量曲线）与短期成本曲线两处，其余考点以概念辨析为主。<a class="ch-link" href="基础03_生产和成本理论_第1节_生产者的组织形式和企业理论.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 生产者的组织形式和企业理论</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>生产者</strong>＝能够作出统一生产决策的单个经济单位（企业/厂商）；组织形式：个人独资、合伙制、公司制</li>
 <li><strong>目标假设</strong>：追求利润最大化；但并非唯一动机；长期生存的经验做法＝销售收入最大化或市场份额最大化</li>
 <li><strong>科斯</strong>（1937《企业的本质》）：企业为节约交易费用而产生；本质/显著特征＝市场机制或价格机制的替代物；根本原因＝交易成本的节约</li>
@@ -1063,8 +1206,8 @@
 <li><strong>三线起点</strong>：固平轴、变出原、总从固出发；TVC 与 TC 变动规律一致</li>
 <li><strong>MC／AVC／ATC</strong>：均先降后升；MC 最早触底→其次 AVC（M′）→最后 ATC（M）；MC 交 AVC 于 M′、交 ATC 于 M（均为各自最低点）；交前边小、交后边大；AFC 递减趋近横轴</li>
 <li><strong>决定短期成本变动</strong>：要素价格（涨→成本升）、生产率（升→成本降）</li>
-</ul></div></article>
-<article class="ch-card" id="b17"><div class="ch-head"><span class="ch-rank">31</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础17_财政政策_第1节_财政政策功能与目标.html">第十七章 财政政策</a></div><div class="ch-qing">考情：重点章节，知识点较少而重点突出，近年一般考核 3–4 分，题量 1–2 道单选题、1 道多选题；财政政策工具、财政政策类型、财政政策乘数是重难点。</div><div class="ch-sechead">📍 第1节 财政政策功能与目标</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b17"><summary><span class="ch-rank">31</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第十七章 财政政策</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：重点章节，知识点较少而重点突出，近年一般考核 3–4 分，题量 1–2 道单选题、1 道多选题；财政政策工具、财政政策类型、财政政策乘数是重难点。<a class="ch-link" href="基础17_财政政策_第1节_财政政策功能与目标.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 财政政策功能与目标</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>财政政策</strong>＝为实现经济社会发展目标，对财政收支关系进行调整的指导原则和措施；组成＝预算＋税收＋支出＋国债；利率/汇率/再贴现/准备金率都不是财政政策</li>
 <li><strong>四大功能</strong>：导向（调物质利益、引导行为）／协调（地区、行业、部门失衡）／控制（有效控制主体行为）／稳定（总供需总量平衡＋结构平衡；过热减支增税＝稳定）</li>
 <li><strong>四大目标</strong>：促进充分就业（失业率衡量）／物价基本稳定／国际收支平衡（经常＋资本差额之和为零）／经济稳定增长（源泉＝要素投入增长＋技术进步程度）</li>
@@ -1082,8 +1225,8 @@
 <li>乘数效应：支扩税减→加倍扩大（扩张）；支减税增→加倍收缩（紧缩）</li>
 <li><strong>五时滞</strong>：内在＝认识＋行政（只涉行政单位、研究过程）；外在＝决策＋执行＋效果（与决策单位直接相关、直接影响经济）</li>
 <li>时滞存在→政策效果可能与<strong>初衷相反</strong></li>
-</ul></div></article>
-<article class="ch-card" id="b10"><div class="ch-head"><span class="ch-rank">32</span><span class="ch-score">近年约 4 分</span><a class="ch-title" href="基础10_国际贸易理论_第1节_国际贸易理论.html">第十章 国际贸易理论</a></div><div class="ch-qing">考情：非重点章节，知识点较少、重点突出，近年考核 1–4 分，题量 1–2 道单选题、1–2 道多选题；国际贸易理论的演变与政府对国际贸易的干预（最重要）、影响国际贸易的因素、倾销与反倾销是重难点。讲义正文分三节，本稿按书签层…</div><div class="ch-sechead">📍 第1节 国际贸易理论</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b10"><summary><span class="ch-rank">32</span><span class="ch-score">近年约 4 分</span><span class="ch-name">第十章 国际贸易理论</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：非重点章节，知识点较少、重点突出，近年考核 1–4 分，题量 1–2 道单选题、1–2 道多选题；国际贸易理论的演变与政府对国际贸易的干预（最重要）、影响国际贸易的因素、倾销与反倾销是重难点。讲义正文分三节，本稿按书签层…<a class="ch-link" href="基础10_国际贸易理论_第1节_国际贸易理论.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 国际贸易理论</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>绝对优势</strong>（斯密，18 世纪）：技术绝对差异→成本绝对差异，是国际贸易和国际分工的基础；出口绝对优势产品</li>
 <li><strong>比较优势</strong>（李嘉图，19 世纪）：决定国际贸易的是<strong>相对生产成本</strong>；各国出口比较优势产品→两国都受益</li>
 <li><strong>要素禀赋</strong>（赫克歇尔-俄林，20 世纪初）：要素供给差异是贸易基础；充裕出口、稀缺进口；要素价格均等化</li>
@@ -1111,8 +1254,8 @@
 <li><strong>三联通</strong>：基础设施"硬联通"、规则标准"软联通"、人民"心联通"</li>
 <li><strong>实现路径题眼</strong>：重视国家经济安全，处理好利用外资和国家安全的关系</li>
 <li><strong>四项制度</strong>：两审查（外商投资国家安全审查、反垄断审查）＋两清单（国家技术安全清单管理、不可靠实体清单）</li>
-</ul></div></article>
-<article class="ch-card" id="b16"><div class="ch-head"><span class="ch-rank">33</span><span class="ch-score">近年约 3 分</span><a class="ch-title" href="基础16_财政管理体制_第1节_财政管理体制内容与类型.html">第十六章 财政管理体制</a></div><div class="ch-qing">考情：非重点章节，知识点较少、重点突出；近年考试一般考核 3 分，题量 1 道单选题＋1 道多选题，财政管理体制的内容、分税制财政管理体制、财政转移支付制度是重难点。</div><div class="ch-sechead">📍 第1节 财政管理体制内容与类型</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b16"><summary><span class="ch-rank">33</span><span class="ch-score">近年约 3 分</span><span class="ch-name">第十六章 财政管理体制</span><span class="ch-meta">5 张速记卡</span></summary><div class="ch-qing">考情：非重点章节，知识点较少、重点突出；近年考试一般考核 3 分，题量 1 道单选题＋1 道多选题，财政管理体制的内容、分税制财政管理体制、财政转移支付制度是重难点。<a class="ch-link" href="基础16_财政管理体制_第1节_财政管理体制内容与类型.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 财政管理体制内容与类型</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>定义</strong>：划分央地及地方各级政府间财政收支范围＋管理职责权限的<strong>根本制度</strong>；广义＝预算＋税收＋公共部门财务"三家"；狭义＝政府预算管理体制（<strong>中心环节</strong>）</li>
 <li><strong>四大内容</strong>：机构设置（五级"中省市县乡"）、事权及支出责任划分（<strong>基础性内容</strong>，"益效区技"）、财政收入划分（税种属性是主要标准，"集效恰对"）、转移支付制度</li>
 <li><strong>非对称性</strong>：收入结构以中央为主、支出结构以地方为主（"收中支地"）</li>
@@ -1141,11 +1284,13 @@
 <li><strong>支出责任</strong>：中央事中央担、地方事地方担、共同事区分情况（统一标准类/外溢类/各自机构类/监管执行类）</li>
 <li><strong>省以下</strong>："服务上移、管理下移"——省级保均衡，基层管身边（社会治安、城乡建设、公共设施等下移）</li>
 </ul></div><div class="ch-sechead">📍 第5节 建立现代财政制度</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
-<li><strong>十四五八项</strong>："三改预算、两分央地、三样配套"——①②③改预算（宏观指导审查监督／资源统筹支出标准化约束绩效／跨年度平衡＋中期规划）；④⑤分央地（权责清晰财力协调区域均衡＋知养环加强中央事权；省以下体制保基层）；⑥⑦⑧配套（转移支付、权责发生制政府综合财务报告、规范举债融资机制）</li>
+<li><strong>十四五八项口诀</strong>："三改预算、两分央地、三样配套"——①②③改预算（宏观指导审查监督／资源统筹支出标准化约束绩效／跨年度平衡＋中期规划）</li>
+<li><strong>十四五八项·分央地</strong>：④⑤分央地（权责清晰财力协调区域均衡＋知养环加强中央事权；省以下体制保基层）</li>
+<li><strong>十四五八项·配套</strong>：⑥⑦⑧配套（转移支付、权责发生制政府综合财务报告、规范举债融资机制）</li>
 <li><strong>知养环</strong>＝适当加强中央事权的点名领域（知识产权保护、养老保险、跨区域生态环境保护）</li>
 <li><strong>呼应</strong>："权责清晰、财力协调、区域均衡"与二十届三中全会要求同款；"适当加强中央事权、提高中央财政支出比例"方向一致</li>
-</ul></div></article>
-<article class="ch-card" id="b6"><div class="ch-head"><span class="ch-rank">34</span><span class="ch-score">近年约 3 分</span><a class="ch-title" href="基础06_市场失灵和政府的干预_第1节_市场失灵的含义.html">第六章 市场失灵和政府的干预</a></div><div class="ch-qing">考情：重点章节——知识点少、分值高、重点突出、性价比高；近年考核 2–3 分，2025 年平均考查 3.75 分（超预期）。帕累托最优状态、外部性、公共物品是高频考点。</div><div class="ch-sechead">📍 第1节 市场失灵的含义</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b6"><summary><span class="ch-rank">34</span><span class="ch-score">近年约 3 分</span><span class="ch-name">第六章 市场失灵和政府的干预</span><span class="ch-meta">2 张速记卡</span></summary><div class="ch-qing">考情：重点章节——知识点少、分值高、重点突出、性价比高；近年考核 2–3 分，2025 年平均考查 3.75 分（超预期）。帕累托最优状态、外部性、公共物品是高频考点。<a class="ch-link" href="基础06_市场失灵和政府的干预_第1节_市场失灵的含义.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 市场失灵的含义</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>一般均衡（瓦尔拉斯均衡）</strong>：居民效用最大化＋企业利润最大化＋所有商品供求都相等（不过剩、不短缺）→ 资源实现最优配置</li>
 <li><strong>最优配置标准</strong>：任何重新分配都<strong>不可能</strong>在不使一个人福利减少的情况下使任何一个人的福利增加</li>
 <li><strong>帕累托改进</strong>：有人变好、无人变坏（还能改）；<strong>帕累托最优</strong>：不存在帕累托改进的配置状态（改不动）</li>
@@ -1161,8 +1306,8 @@
 <li>需求曲线：<strong>私横公纵</strong>（私人加数量、公共加价格）；供给曲线＝边际成本曲线横向加总；边际利益＝边际成本时数量最优；公共物品最优数量<strong>没有实际意义</strong></li>
 <li><strong>信息不对称</strong>：逆向选择（劣币驱逐良币、市场萎缩甚至消失，如旧车、健康保险市场）＋道德风险（看不见的行动，如保险、劳动力市场）；政府管说明、质量标准、广告＋信息服务</li>
 <li><strong>垄断</strong>：完全竞争＝成本最低、产量最大、价格最低；垄断＝产量低于社会最优、价格高于均衡；干预＝法律（反垄断法）＋公共管制（限价／利润率）</li>
-</ul></div></article>
-<article class="ch-card" id="b32"><div class="ch-head"><span class="ch-rank">35</span><span class="ch-score">近年约 3 分</span><a class="ch-title" href="基础32_政府会计_第1节_政府会计的概念.html">第三十二章 政府会计</a></div><div class="ch-qing">考情：非重点章节，知识点较少、分值较少、重点突出，近年考核 2–3 分，2025 年平均考查 2.75 分；政府会计的概念、政府预算会计要素、政府会计报告是高频考点。</div><div class="ch-sechead">📍 第1节 政府会计的概念</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b32"><summary><span class="ch-rank">35</span><span class="ch-score">近年约 3 分</span><span class="ch-name">第三十二章 政府会计</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：非重点章节，知识点较少、分值较少、重点突出，近年考核 2–3 分，2025 年平均考查 2.75 分；政府会计的概念、政府预算会计要素、政府会计报告是高频考点。<a class="ch-link" href="基础32_政府会计_第1节_政府会计的概念.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 政府会计的概念</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>政府会计</strong>＝确认、计量、记录、报告政府会计主体<strong>财务收支活动</strong>及<strong>受托责任履行情况</strong>的会计体系</li>
 <li><strong>主体</strong>：各级政府＋与本级财政部门直接/间接有<strong>预算拨款关系</strong>的国家机关、军队、政党组织、社会团体、事业单位、其他单位（口诀"机军政党社团事"）；<strong>企业一律不算</strong></li>
 <li><strong>构成</strong>：预算会计（<strong>预算执行</strong>信息·<strong>收付实现制</strong>·国务院另有规定除外）＋财务会计（<strong>财务状况/运行情况含运行成本/现金流量</strong>·<strong>权责发生制</strong>）</li>
@@ -1170,18 +1315,21 @@
 </ul></div><div class="ch-sechead">📍 第2节 政府会计要素</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>预算会计三要素</strong>：预算收入（依法取得·纳入预算管理·现金流入·实际收到确认）/ 预算支出（依法发生·现金流出·实际支付确认）/ 预算结余（收入−支出＋历年滚存，含结余资金与结转资金）→ 列入<strong>决算报表</strong>（没有"预算报表"）</li>
 <li><strong>结余资金</strong>＝完成数−支出−<strong>结转资金</strong>（干完是结余）；<strong>结转资金</strong>＝没干完/未执行、下年按<strong>原用途</strong>接着用</li>
-<li><strong>资产</strong>：过去形成＋控制＋预期服务潜力或经济利益流入；流动（1 年内含：货币资金、短期投资、应收及预付款项、存货）/ 非流动（固定资产、在建工程、无形资产、长期投资＋政府特供五件：公共基础设施、政府储备资产、文物文化资产、保障性住房、自然资源资产）</li>
+<li><strong>资产</strong>：过去形成＋控制＋预期服务潜力或经济利益流入</li>
+<li><strong>流动资产</strong>：1 年内含——货币资金、短期投资、应收及预付款项、存货</li>
+<li><strong>非流动资产</strong>：固定资产、在建工程、无形资产、长期投资＋政府特供五件：公共基础设施、政府储备资产、文物文化资产、保障性住房、自然资源资产</li>
 <li><strong>负债</strong>：过去形成·预期资源流出的现时义务；流动（应付及预收款项、应付职工薪酬、应缴款项）/ 非流动（<strong>长期＋债券＋担保</strong>：长期应付款、应付政府债券、政府依法担保形成的债务）</li>
 <li><strong>净资产</strong>＝资产−负债（列入资产负债表）；增＝资产增<strong>或</strong>负债减；减＝资产减<strong>或</strong>负债增</li>
 <li><strong>收入</strong>：净资产增的资源流入 → 资产增或负债减；<strong>费用</strong>：净资产减的资源流出 → 资产减或负债增（均列入收入费用表）</li>
 </ul></div><div class="ch-sechead">📍 第3节 政府会计报告</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>两套报告</strong>：政府决算报告（年度<strong>预算收支执行结果</strong>·含决算报表）＋政府财务报告（<strong>特定日期财务状况</strong>＋<strong>会计期间运行情况</strong>）</li>
 <li><strong>决算报告目标</strong>：预算执行信息、监督和管理、为<strong>编制后续年度预算</strong>提供参考依据；使用者＝人大及其常委会、各级政府及有关部门、会计主体自身、<strong>社会公众</strong>及其他</li>
-<li><strong>财务报告两类</strong>：<strong>综合</strong>（<strong>财政部门</strong>编·各级政府<strong>整体</strong>·财政<strong>中长期可持续性</strong>）／<strong>部门</strong>（<strong>各部门各单位</strong>编·财务报表＋财务分析；会计报表至少四张：资产负债表、收入费用表、当期盈余与预算结余差异表、净资产差异表）</li>
+<li><strong>财务报告两类·综合</strong>：<strong>财政部门</strong>编·各级政府<strong>整体</strong>·财政<strong>中长期可持续性</strong></li>
+<li><strong>财务报告两类·部门</strong>：<strong>各部门各单位</strong>编·财务报表＋财务分析；会计报表至少四张：资产负债表、收入费用表、当期盈余与预算结余差异表、净资产差异表</li>
 <li><strong>财务报告目标</strong>：财务状况、运行情况（含运行成本）信息，反映<strong>公共受托责任</strong>履行情况，助其作出决策或监督管理；使用者＝人大及其常委会、<strong>债权人</strong>、各级政府及有关部门、会计主体自身及其他</li>
 <li>使用者差异口诀：<strong>"决算公众，财务债主"</strong>；会计报表四张口诀：<strong>"资、费、盈差、净差"</strong></li>
-</ul></div></article>
-<article class="ch-card" id="b26"><div class="ch-head"><span class="ch-rank">36</span><span class="ch-score">近年约 3 分</span><a class="ch-title" href="基础26_回归分析_第1节_回归分析.html">第二十六章 回归分析</a></div><div class="ch-qing">考情：本章为非重点章节，知识点较少、分值较少、重点突出，近年考试考核 2–3 分，2025 年平均考查 3.25 分。命题高度集中在：回归分析与相关分析的区分、一元线性回归模型各零件（β0、β1、ε）的含义、最小二乘法原理、决…</div><div class="ch-sechead">📍 第1节 回归分析</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b26"><summary><span class="ch-rank">36</span><span class="ch-score">近年约 3 分</span><span class="ch-name">第二十六章 回归分析</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：本章为非重点章节，知识点较少、分值较少、重点突出，近年考试考核 2–3 分，2025 年平均考查 3.25 分。命题高度集中在：回归分析与相关分析的区分、一元线性回归模型各零件（β0、β1、ε）的含义、最小二乘法原理、决…<a class="ch-link" href="基础26_回归分析_第1节_回归分析.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 回归分析</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>回归分析</strong>：根据相关关系的具体形态，选择合适的数学模型，近似表达变量间的依赖关系；能确定方程式、从已知量推未知量</li>
 <li><strong>联系</strong>：共同研究对象、互相补充；相关依赖回归表"形式"，回归依赖相关表"程度"；高度相关时做回归才有意义</li>
 <li><strong>区别</strong>：相关分析不能指出具体形式、不能推测、不分自变量因变量；回归分析研究具体形式、能推测、必须明确自变量因变量</li>
@@ -1198,8 +1346,8 @@
 <li><strong>决定系数 R²</strong>：测度回归直线对样本数据的拟合程度；取值 0~1；＝模型解释的因变量变化占因变量总变化的比例；越接近 1 越好；R²=1 解释所有变化；R²=0 无法解释（与自变量无关）；未解释比例＝1-R²</li>
 <li><strong>t 检验</strong>：大样本下最小二乘估计量渐进服从正态分布；验证自变量 X 对因变量 Y 是否有显著影响；原理是反证法；P 值小于 0.05 → 有显著影响，大于 0.05 → 不能认为显著</li>
 <li><strong>预测</strong>：把 X 代入估计的回归方程求 Y（先乘后加）；斜率 b 是绝对量、说"平均变动"、方向随增减变；"每增加 1% 增长 b%"必错</li>
-</ul></div></article>
-<article class="ch-card" id="b8"><div class="ch-head"><span class="ch-rank">37</span><span class="ch-score">近年约 3 分</span><a class="ch-title" href="b08s1.html">第八章 经济增长和经济发展理论</a></div><div class="ch-qing">考情：非重点章节，知识点少、重点突出，近年一般考 2–3 分、1 道单选＋1 道多选；其中经济周期和经济指标是本章重难点。</div><div class="ch-sechead">📍 第1节 经济增长</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="b8"><summary><span class="ch-rank">37</span><span class="ch-score">近年约 3 分</span><span class="ch-name">第八章 经济增长和经济发展理论</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：非重点章节，知识点少、重点突出，近年一般考 2–3 分、1 道单选＋1 道多选；其中经济周期和经济指标是本章重难点。<a class="ch-link" href="b08s1.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 经济增长</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>经济增长</strong>：一定时期总产出与前期相比的增长；总产出用 GDP 衡量</li>
 <li><strong>增长率 G＝本年增量÷上年总量</strong>（相对数，不是绝对增量）</li>
 <li><strong>现价 GDP</strong>看规模；<strong>不变价 GDP</strong>算速度</li>
@@ -1224,9 +1372,10 @@
 <li><strong>高质量发展</strong>：全面建设社会主义现代化国家的首要任务；质量第一效益优先、供给侧结构性改革为主线、三个变革、提高全要素生产率；内涵五条（人民、创新、绿色、协调、开放）</li>
 <li><strong>新质生产力</strong>：三高特征、三途径催生、三要素跃升内涵、TFP 核心标志；特点创新、关键质优、本质先进生产力；核心要素＝科技创新；本身就是绿色生产力</li>
 <li><strong>中国式现代化</strong>：五大特征"人口共富双文明，自然和平"；五原则"坚持"开头；两步走 2035 基本实现、中叶建成强国</li>
-</ul></div></article><h2 id="g-人力">📖 人力资源（19 章，按考情分值倒序）</h2><article class="ch-card" id="r11"><div class="ch-head"><span class="ch-rank top">1</span><span class="ch-score">近年约 17 分</span><a class="ch-title" href="人力11_劳动力市场理论_第1节_劳动力市场概论.html">第11章 劳动力市场理论</a></div><div class="ch-qing">考情：2023–2025 六场考试本章 6–17 分/场，单选每场 4–7 题、多选 1–2 题，2023-Ⅰ、2025-Ⅰ 两场各出过 4 道案例分析（8 分）。劳动力市场特征、收入/替代效应方向、两种弹性计算、曲线移动方向…</div><div class="ch-sechead">📍 第1节 劳动力市场概论</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details></div><div class="ch-group" id="g-人力"><h2>📖 人力资源（19 章，按考情分值倒序）</h2><details class="ch-card" id="r11"><summary><span class="ch-rank top">1</span><span class="ch-score">近年约 17 分</span><span class="ch-name">第11章 劳动力市场理论</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试本章 6–17 分/场，单选每场 4–7 题、多选 1–2 题，2023-Ⅰ、2025-Ⅰ 两场各出过 4 道案例分析（8 分）。劳动力市场特征、收入/替代效应方向、两种弹性计算、曲线移动方向…<a class="ch-link" href="人力11_劳动力市场理论_第1节_劳动力市场概论.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 劳动力市场概论</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li>劳动力市场＝要素市场；宏观＝总劳动力市场体系，微观＝达成使用权转让合约时的市场环境；三环节：机构牵线→交换质量价格信息→签雇用合同</li>
-<li>七特征"特多不难延复弱"：特殊（只转使用权）、多样（不可完全替代、价格不同）、不确定（无形市场、匹配非终身、动态属性）、难以衡量（客观指标＋面试笔试心理测验＋试用期）、延续（交易后继续参与生产过程）、复杂（工资与非工资条件可替代）、出售者不利（工会集体谈判＋政府管理总需求救助失业者）</li>
+<li><strong>七特征"特多不难"</strong>：特殊（只转使用权）、多样（不可完全替代、价格不同）、不确定（无形市场、匹配非终身、动态属性）、难以衡量（客观指标＋面试笔试心理测验＋试用期）</li>
+<li><strong>七特征"延复弱"</strong>：延续（交易后继续参与生产过程）、复杂（工资与非工资条件可替代）、出售者不利（工会集体谈判＋政府管理总需求救助失业者）</li>
 <li>议价能力看"行情＋成色"：同种劳动力供求状况＋个人技术能力经验</li>
 <li>结构三组：全国性（稀缺高技能）/地区性（技能不高竞争力不强）；外部（一般性）/内部（低进内升、成本高、竞争不足、离不开外部）；优等/次等（隔离三因：穷、歧视、没技）</li>
 <li>效率工资＝高于市场均衡水平的工资；"引人、降率、公平感"；前提＝期望长期雇佣；结构性内部劳动力市场存在时最可能出现；适合"怕人走""产出难衡量监督难"的企业</li>
@@ -1252,8 +1401,8 @@
 <li>非均衡摩擦力四条：企业"不按市价给钱（福利/效率工资/最低工资立法/工会）、裁人不自由（搜寻筛选培训＋解雇三代价）"；个人"流动要花钱（信息/舍弃/学习）、工资不敏感（还看福利交通位置家庭）"</li>
 <li>政策五件套：货币（准贴开）、财政（税率＋支出）、收入（劝→管→导）、人力（治结构性失业）、产业（就业弹性高＝劳动密集型）</li>
 <li>最低工资立法：压缩效应缩小差距、扩大效应拉大差距，两种效应可能同时产生</li>
-</ul></div></article>
-<article class="ch-card" id="r2"><div class="ch-head"><span class="ch-rank top">2</span><span class="ch-score">近年约 17 分</span><a class="ch-title" href="人力02_领导行为_第1节_领导理论.html">第2章 领导行为</a></div><div class="ch-qing">考情：2023–2025 六场考试分值 2–17 分、场均约 9 分，单选每场 2–5 题、多选 0–2 题；2023 年下半年与 2024 年上半年各出过 4 道案例分析（8 分）。领导理论（第一节）与决策风格是命题重镇。</div><div class="ch-sechead">📍 第1节 领导理论</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r2"><summary><span class="ch-rank top">2</span><span class="ch-score">近年约 17 分</span><span class="ch-name">第2章 领导行为</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试分值 2–17 分、场均约 9 分，单选每场 2–5 题、多选 0–2 题；2023 年下半年与 2024 年上半年各出过 4 道案例分析（8 分）。领导理论（第一节）与决策风格是命题重镇。<a class="ch-link" href="人力02_领导行为_第1节_领导理论.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 领导理论</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>领导两特点</strong>：有影响力（正式任命为主、专门技能也能获得）＋有指导和激励的能力</li>
 <li><strong>特质理论</strong>：传统＝特质与生俱来；发展＝特质只提高可能性、无万能特质；四不足"忽下属、无轻重、丢情境、混因果"（吉伯、斯道格迪尔列过特质清单）</li>
 <li><strong>交易型</strong>（伯恩斯）：位置权威合法性、任务明晰标准产出、关注完成与顺从、靠奖惩；四特征＝奖励＋差错管理（积极主动找背离/消极仅背离时干涉）＋放任</li>
@@ -1277,8 +1426,8 @@
 <li><strong>有限理性模型</strong>（西蒙）：满意原则、不必知道所有方案、简化模型、经验启发式；与理性模型是<strong>程度差异非质变</strong></li>
 <li><strong>社会模型</strong>：弗洛伊德无意识驱动；投入的增加＝坚持错误决策，四因"项心社组"</li>
 <li><strong>决策风格</strong>：价值取向（任务/人）×模糊耐受性（低/高）→指导、分析（均独裁）、概念、行为</li>
-</ul></div></article>
-<article class="ch-card" id="r13"><div class="ch-head"><span class="ch-rank top">3</span><span class="ch-score">近年约 15 分</span><a class="ch-title" href="人力13_人力资本投资理论_第1节_人力资本投资的一般原理.html">第13章 人力资本投资理论</a></div><div class="ch-qing">考情：2023–2025 六场考试分值 6–15 分，单选每场 3–5 题、多选 1–2 题，2024 年两场及 2025 年下半年卷各考 4 道案例分析（8 分）。人力资本投资的形式与决策方法（现值法、内部收益率法要会算）、…</div><div class="ch-sechead">📍 第1节 人力资本投资的一般原理</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r13"><summary><span class="ch-rank top">3</span><span class="ch-score">近年约 15 分</span><span class="ch-name">第13章 人力资本投资理论</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试分值 6–15 分，单选每场 3–5 题、多选 1–2 题，2024 年两场及 2025 年下半年卷各考 4 道案例分析（8 分）。人力资本投资的形式与决策方法（现值法、内部收益率法要会算）、…<a class="ch-link" href="人力13_人力资本投资理论_第1节_人力资本投资的一般原理.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 人力资本投资的一般原理</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>人力资本投资</strong>：提高生产能力→提高劳动力市场收益能力的初始性投资；否定"劳动者同质"假设；亚当·斯密"一个国家的资本在一定程度上包括社会全体成员的能力"</li>
 <li><strong>五类形式</strong>：各级正规教育、在职培训、增进健康（含学龄前儿童营养）、寻找工作、工作流动；炒股、纯消费不算</li>
 <li><strong>未来导向性</strong>：成本在目前，收益在未来且持续出现；与物质资本投资基本原理相似；并非支出越多越好</li>
@@ -1302,12 +1451,15 @@
 </ul></div><div class="ch-sechead">📍 第4节 劳动力流动</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>意义</strong>：纠地区就业不平衡、缓技术与结构变化的失业、助市场快速调整、促劳动力向发展迅速的职业行业地区流动</li>
 <li><strong>代价</strong>：员工失资历人情从低等级干起；企业失培训费、付重置成本、承受低生产率、新员工要适应</li>
-<li><strong>影响因素</strong>：企业（规模大流动率低／大城市流动率高／心理感受不佳是离职最主要因素）＋个人（年轻流动多、任职年限长离职少、女性离职率更高）＋市场周期（宽松削弱、紧张上升；失业率与临时解雇率和离职率负相关；与经济周期同步）＋社会（态度传统、制度）</li>
+<li><strong>流动影响因素·企业</strong>：规模大流动率低／大城市流动率高／心理感受不佳是离职最主要因素</li>
+<li><strong>流动影响因素·个人</strong>：年轻流动多、任职年限长离职少、女性离职率更高</li>
+<li><strong>流动影响因素·市场周期</strong>：宽松削弱、紧张上升；失业率与临时解雇率和离职率负相关；与经济周期同步</li>
+<li><strong>流动影响因素·社会</strong>：态度传统、制度</li>
 <li><strong>跨地区</strong>：人均收入差、工作机会、迁移距离、迁移成本（直接＋机会＋心理）、两地条件相似度越相似越利于流动；回归迁移＝迁出后又迁回</li>
 <li><strong>跨职业</strong>：高于中值净流入、低于中值净流出、服务业例外净流入；自愿→向上，非自愿→可能向下（经济萧条/技能相对下降）；两代同业比例大＝非竞争力量强＝配置不合理</li>
 <li><strong>跨产业</strong>：农→工＝排斥力＋吸引力；先进蓝领（体力同一性）、进白领要长期训练多为下一代；离土又离乡（永久）终将取代离土不离乡（暂时）；产业内：工资与流出反向与流入同向、高失业率部门流动率高、流动要有合理限度</li>
-</ul></div></article>
-<article class="ch-card" id="r7"><div class="ch-head"><span class="ch-rank">4</span><span class="ch-score">近年约 15 分</span><a class="ch-title" href="人力07_绩效管理_第1节_绩效管理概述.html">第7章 绩效管理</a></div><div class="ch-qing">考情：2023–2025 六场考试本章每场 5–15 分，单选每场 2–5 题、多选每场 1–2 题；2023-Ⅱ、2024-Ⅱ、2025-Ⅱ 三场均各考 4 道案例分析题（8 分），是**案例分析题主战场之一**。绩效考核与…</div><div class="ch-sechead">📍 第1节 绩效管理概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r7"><summary><span class="ch-rank">4</span><span class="ch-score">近年约 15 分</span><span class="ch-name">第7章 绩效管理</span><span class="ch-meta">5 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试本章每场 5–15 分，单选每场 2–5 题、多选每场 1–2 题；2023-Ⅱ、2024-Ⅱ、2025-Ⅱ 三场均各考 4 道案例分析题（8 分），是**案例分析题主战场之一**。绩效考核与…<a class="ch-link" href="人力07_绩效管理_第1节_绩效管理概述.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 绩效管理概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>绩效</strong>＝职位职责要求下的工作结果＋行为；<strong>考核</strong>＝正式结构化制度（衡量、评价、反馈、影响）；<strong>管理</strong>＝持续开放沟通达成共识的管理实践</li>
 <li><strong>考核 vs 管理</strong>：考核是一环节、重在识别判断评估；管理是全过程、重在沟通提高；考核是管理的重要组成部分</li>
 <li><strong>作用</strong>：组织五作用"通费展文战"；HR 两作用"供依据（薪酬/配置/甄选/培训开发）＋评效果"</li>
@@ -1324,7 +1476,9 @@
 <li><strong>绩效辅导</strong>：掌握绩效前提下提高绩效水平和<strong>自我效能感</strong>；贯穿绩效实施全过程；内容＝探讨现状＋找改进方法；步骤＝收定达探计信</li>
 <li>监控与辅导是连接绩效计划与绩效考核的<strong>桥梁</strong>；监控是辅导的<strong>基础</strong></li>
 </ul></div><div class="ch-sechead">📍 第3节 绩效评价与绩效管理工具</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
-<li><strong>量表法</strong>：图尺度（最简单常用、开发成本低；战略脱节、标准模糊、无具体指导）、行为锚定（计量准确、标准明确信度高、反馈好；开发成本高操作复杂）、行为观察量表（信度满意、便于使用、清晰反馈、可补职位说明书；效度待提高、单独考核工作量过大不可操作）</li>
+<li><strong>量表法·图尺度</strong>：最简单常用、开发成本低；战略脱节、标准模糊、无具体指导</li>
+<li><strong>量表法·行为锚定</strong>：计量准确、标准明确信度高、反馈好；开发成本高操作复杂</li>
+<li><strong>量表法·行为观察量表</strong>：信度满意、便于使用、清晰反馈、可补职位说明书；效度待提高、单独考核工作量过大不可操作</li>
 <li><strong>比较法</strong>：排序（简单省钱；压力大难具体）、配对（更科学、人数少好用；工作量成倍增、只排名不反映差距）、强制分布（防趋中；主观、都优秀时不公平）</li>
 <li><strong>描述法</strong>：关键事件（客观、培训有针对性、为面谈奠基；费时、无法跨职位比较）、不良事故评估（防重大损失；反馈信息不丰富、不能比较）</li>
 <li><strong>八误区</strong>：晕、中、宽、资、盲、刻、首、近——首因第一面，近因最后见</li>
@@ -1348,8 +1502,8 @@
 <li><strong>知识型团队</strong>：以<strong>结果为导向</strong>；效益型判产出、效率型比投入、递延型看长远（客户/投资者/成员）、风险型测危害</li>
 <li><strong>跨部门团队</strong>：矩阵形式组织结构适宜；关键是标准化（目标、程序、组织、方法手段），同性质部门同一评价方法</li>
 <li><strong>国际人力资源绩效考核</strong>：突出战略方向强调长远发展；薪酬晋升依据＋个人团队公司目标密切结合；倾向基于结果的考核；更注重管理者与员工沟通</li>
-</ul></div></article>
-<article class="ch-card" id="r14"><div class="ch-head"><span class="ch-rank">5</span><span class="ch-score">近年约 13 分</span><a class="ch-title" href="人力14_劳动合同管理与特殊用工_第1节_劳动合同履行与变更.html">第14章 劳动合同管理与特殊用工</a></div><div class="ch-qing">考情：2023–2025 六场考试单场 8–13 分，2025 年两场均达 12–13 分；单选、多选年年出现，案例分析题场场必出（每场 2–4 题 4–8 分，2023 年Ⅰ卷曾达 4 题 8 分），是全卷**案例分析题的第…</div><div class="ch-sechead">📍 第1节 劳动合同履行与变更</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r14"><summary><span class="ch-rank">5</span><span class="ch-score">近年约 13 分</span><span class="ch-name">第14章 劳动合同管理与特殊用工</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试单场 8–13 分，2025 年两场均达 12–13 分；单选、多选年年出现，案例分析题场场必出（每场 2–4 题 4–8 分，2023 年Ⅰ卷曾达 4 题 8 分），是全卷**案例分析题的第…<a class="ch-link" href="人力14_劳动合同管理与特殊用工_第1节_劳动合同履行与变更.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 劳动合同履行与变更</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>履行原则</strong>：全面履行＋合法履行</li>
 <li><strong>履行地≠注册地</strong>：最低工资、劳动保护、劳动条件、上年度社平工资 → 按<strong>履行地</strong>；注册地更高<strong>且约定</strong> → 从其约定</li>
 <li><strong>单位义务</strong>：及时足额付酬（拖欠/未足额 → 向<strong>法院</strong>申请<strong>支付令</strong>）；严格执行劳动定额、不强迫变相强迫加班；保护生命安全健康（拒绝违章指挥、强令冒险作业<strong>不视为违约</strong>）</li>
@@ -1372,12 +1526,14 @@
 <li><strong>经济补偿计算</strong>：每满 1 年 1 个月，6 个月以上不满 1 年按 1 年，不满 6 个月半个月；基数＝前 12 个月平均<strong>应得</strong>工资；3 倍封顶＋12 年帽（不足 3 倍不受限）；低于最低工资按最低；<strong>办结工作交接时</strong>支付</li>
 <li><strong>补偿纳税</strong>：当地上年社平 3 倍以内免税；公积金＋三险实缴可扣；破产一次性安置费全免</li>
 </ul></div><div class="ch-sechead">📍 第3节 用人单位劳动规章制度</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
-<li><strong>制定程序</strong>：直接涉及切身利益的规章制度/重大事项 → 职代会<strong>或</strong>全体职工<strong>讨论</strong>提方案意见 → 与工会<strong>或</strong>职工代表<strong>平等协商确定</strong>；实施中工会/职工可提出，<strong>协商修改完善</strong>；<strong>国企</strong>须职代会讨论<strong>通过</strong>，非国企无强制</li>
+<li><strong>制定程序两步</strong>：直接涉及切身利益的规章制度/重大事项 → 职代会<strong>或</strong>全体职工<strong>讨论</strong>提方案意见 → 与工会<strong>或</strong>职工代表<strong>平等协商确定</strong></li>
+<li><strong>制定程序实施与国企</strong>：实施中工会/职工可提出，<strong>协商修改完善</strong>；<strong>国企</strong>须职代会讨论<strong>通过</strong>，非国企无强制</li>
 <li><strong>效力三条件</strong>（缺一不可）：<strong>内容合法＋民主程序＋向劳动者公示</strong>；"经劳动者同意"不是条件</li>
 <li><strong>违法处理两方式</strong>：劳动者可<strong>随时解除＋经济补偿</strong>；劳动行政部门<strong>责令改正、警告</strong>，造成损害<strong>赔偿</strong></li>
 </ul></div><div class="ch-sechead">📍 第4节 特殊用工</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>派遣三角</strong>：派遣单位有劳动关系不指挥，用工单位指挥无劳动关系——"有关系没劳动，有劳动没关系"</li>
-<li><strong>经营条件</strong>：行政许可（证 <strong>3 年</strong>，届满 <strong>60 日前</strong>书面申请延续＋交 3 年经营情况，逾期按新申请）；注册资本 <strong>≥200 万</strong>＋固定场所设施＋派遣管理制度；<strong>禁止自设派遣</strong>（本单位/所属单位）；分立合并设新公司<strong>重新申请</strong></li>
+<li><strong>经营条件·行政许可</strong>：证 <strong>3 年</strong>，届满 <strong>60 日前</strong>书面申请延续＋交 3 年经营情况，逾期按新申请</li>
+<li><strong>经营条件·资质</strong>：注册资本 <strong>≥200 万</strong>＋固定场所设施＋派遣管理制度；<strong>禁止自设派遣</strong>（本单位/所属单位）；分立合并设新公司<strong>重新申请</strong></li>
 <li><strong>派遣劳动合同</strong>：<strong>2 年以上固定期限</strong>＋按月付酬；必载用工单位、派遣期限、工作岗位；无工作期间按<strong>当地最低工资</strong>按月付；<strong>同一劳动者只能约定一次</strong>试用期；<strong>不得分割连续用工期限</strong>订数个短期协议</li>
 <li><strong>义务分工</strong>：报酬、社保、证明、培训、跨地区按<strong>用工单位所在地</strong>标准、连带赔偿、不得克扣收费＝<strong>派遣单位</strong>；劳动条件保护、告知要求报酬、<strong>加班费绩效奖金岗位福利</strong>、岗位培训、工资调整机制、<strong>不得再派遣</strong>＝<strong>用工单位</strong></li>
 <li><strong>派遣劳动者权利</strong>：同工同酬；两边单位均可入工会；30 日书面（试用期 3 日）通知<strong>派遣单位</strong>解除，派遣单位及时告知用工单位</li>
@@ -1385,8 +1541,8 @@
 <li><strong>三性＋比例</strong>：临时性 <strong>≤6 个月</strong>、辅助性＝非主营、替代性＝脱产学习休假顶岗；被派遣劳动者<strong>≤用工总量 10%</strong>；劳动合同用工是<strong>基本</strong>用工形式</li>
 <li><strong>非全日制</strong>：小时计酬；<strong>日均 ≤4 小时、周累计 ≤24 小时</strong>；可多个单位、口头协议可；<strong>不得约定试用期</strong>；<strong>随时终止、无经济补偿</strong>；小时工资≥当地最低小时工资；结算周期 <strong>≤15 日</strong></li>
 <li><strong>非全日制工伤</strong>：多单位同时就业<strong>各自分别</strong>缴工伤保险；由<strong>受伤害时工作</strong>的单位担责；工伤保险＝<strong>唯一强制</strong>社保</li>
-</ul></div></article>
-<article class="ch-card" id="r3"><div class="ch-head"><span class="ch-rank">6</span><span class="ch-score">近年约 13 分</span><a class="ch-title" href="人力03_组织设计与组织文化_第1节_组织设计.html">第3章 组织设计与组织文化</a></div><div class="ch-qing">考情：2023–2025 六场考试单选每场 3–4 题、多选 1–2 题是固定配置，总分 5–13 分，其中 2025 年上半年冲到 13 分（含 4 道案例分析 8 分）。组织设计类型（行政层级式/职能制/矩阵/事业部制）与…</div><div class="ch-sechead">📍 第1节 组织设计</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r3"><summary><span class="ch-rank">6</span><span class="ch-score">近年约 13 分</span><span class="ch-name">第3章 组织设计与组织文化</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试单选每场 3–4 题、多选 1–2 题是固定配置，总分 5–13 分，其中 2025 年上半年冲到 13 分（含 4 道案例分析 8 分）。组织设计类型（行政层级式/职能制/矩阵/事业部制）与…<a class="ch-link" href="人力03_组织设计与组织文化_第1节_组织设计.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 组织设计</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>组织设计</strong>＝对组织结构及其运行方式的设计；静态（古典，只设计结构）/动态（现代，结构＋运行制度）</li>
 <li><strong>组织结构</strong>＝权责结构；本质分工协作、目的实现目标、内涵职权责；四大结构"职业务、层纵向、部横向、权权责"；三要素：复杂性、规范性、集权度</li>
 <li><strong>特征因素 10 个</strong>："两层五度一职能，地区分工加人员"；<strong>权变因素 6 个</strong>："环战技素规周"（环境、战略、技术、素质、规模、周期）</li>
@@ -1400,18 +1556,22 @@
 </ul></div><div class="ch-sechead">📍 第2节 组织文化</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>概念</strong>：控制组织内行为、工作态度、价值观及关系设定的规范；组织成员的共同价值观体系、使组织独具特色；<strong>取决于最高管理层的行为方式和管理风格</strong></li>
 <li><strong>六作用</strong>："导规聚激创辐射"（导向、规范、凝聚、激励、创新、辐射）；物质纽带＝薪酬福利，情感思想纽带＝组织文化；规范作用＝软规范</li>
-<li><strong>三层结构</strong>：物质层（表层，折射经营思想/工作作风/审美意识，外在表现、物质基础）/制度层（中间层里层，制约规范两层建设，无制度则文化建设无从谈起）/精神层（深层，思想基础、核心和灵魂）；<strong>有没有精神层是衡量是否形成组织文化的主要标志</strong></li>
+<li><strong>三层结构·物质层</strong>：表层，折射经营思想/工作作风/审美意识，外在表现、物质基础</li>
+<li><strong>三层结构·制度层</strong>：中间层里层，制约规范两层建设，无制度则文化建设无从谈起</li>
+<li><strong>三层结构·精神层</strong>：深层，思想基础、核心和灵魂；<strong>有没有精神层是衡量是否形成组织文化的主要标志</strong></li>
 <li><strong>四类型</strong>："专业学院，俱乐通才，棒球水平，堡垒不保"；堡垒型着眼"生存"、保障不足</li>
 <li><strong>组织设计→组织文化</strong>：制度化、规范化、管理层次、集权程度越高越严谨死板；招聘内稳外活；合作文化忌个人绩效评估；薪酬级差大配等级文化</li>
 </ul></div><div class="ch-sechead">📍 第3节 组织变革与发展</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>组织变革</strong>：适应内外环境变化的调整和修正；四个红灯"策沟效新"（决策失灵、沟通不畅、效率不彰、缺乏创新）</li>
-<li><strong>变革四方法</strong>："人技结构系统"——人员（知识技能、态度行为）、结构（分合部门、调层次幅度、任免负责人、明责权）、技术（流程再设计、改方法设备、建管理体系）、系统（顾其他因素＋外部平衡）；程序四步：定问题→组织诊断→实行变革→变革效果评估</li>
+<li><strong>变革四方法</strong>："人技结构系统"——人员（知识技能、态度行为）、结构（分合部门、调层次幅度、任免负责人、明责权）</li>
+<li><strong>变革四方法·技术与系统</strong>：技术（流程再设计、改方法设备、建管理体系）、系统（顾其他因素＋外部平衡）</li>
+<li><strong>变革程序四步</strong>：定问题→组织诊断→实行变革→变革效果评估</li>
 <li><strong>组织发展</strong>：有计划变革及干预措施的总和，增进组织的有效性和员工的幸福感；重人性民主、排斥控制冲突压力；观念目标"尊信平正参"</li>
 <li><strong>传统方法</strong>：结构技术（合并部门、减垂直分化度、简规章、扩自主性、工作再设计）/人文技术（敏感性训练、调查反馈、质量圈、团际发展）</li>
 <li><strong>敏感性训练</strong>：又名实验室训练、T 团体训练、交友团体训练；重过程不重结果；凝聚力更强、人际冲突减少</li>
 <li><strong>现代方法</strong>：全面质量管理（文化先行或同时、高度责任感员工、高层支持、规划从上向下实施从下向上）；团队建设（小、补、同、担，工作业余双管齐下）</li>
-</ul></div></article>
-<article class="ch-card" id="r5"><div class="ch-head"><span class="ch-rank">7</span><span class="ch-score">近年约 13 分</span><a class="ch-title" href="人力05_人力资源规划_第1节_人力资源规划及其供求预测.html">第5章 人力资源规划</a></div><div class="ch-qing">考情：2023–2024 年每场稳定 13 分（单选 3 题＋多选 1 题＋案例分析 4 题 8 分），2025 年两场降至 5–6 分、未考案例分析。供求预测的方法（德尔菲法、人员替换、马尔科夫）与供求平衡对策是历年命题主场…</div><div class="ch-sechead">📍 第1节 人力资源规划及其供求预测</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r5"><summary><span class="ch-rank">7</span><span class="ch-score">近年约 13 分</span><span class="ch-name">第5章 人力资源规划</span><span class="ch-meta">2 张速记卡</span></summary><div class="ch-qing">考情：2023–2024 年每场稳定 13 分（单选 3 题＋多选 1 题＋案例分析 4 题 8 分），2025 年两场降至 5–6 分、未考案例分析。供求预测的方法（德尔菲法、人员替换、马尔科夫）与供求平衡对策是历年命题主场…<a class="ch-link" href="人力05_人力资源规划_第1节_人力资源规划及其供求预测.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 人力资源规划及其供求预测</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>规划</strong>＝依战略＋科学预测需求与供给→制订获取、利用、保留、开发计划；广义＝人力资源管理的各种规划；狭义＝人员供求（雇用）规划</li>
 <li><strong>四步流程</strong>：需求预测→供给预测→供求平衡分析→实施供求平衡计划</li>
 <li><strong>意义三条</strong>：利战略实现；利系统稳定一致有效、组织健康可持续；控人工成本</li>
@@ -1427,11 +1587,16 @@
 <li><strong>短缺七法</strong>：快撤高（加班/临时工/外包）、慢撤高（再培训换岗）、慢撤中（降流动率）、慢撤低（外雇新人/技术创新）</li>
 <li><strong>裁员</strong>：省钱立竿见影、长期有效性受损；四后遗症＝人才流失坏网络、裁掉不可替代资产、留任者戒备想走、负面形象难招人</li>
 <li><strong>提前退休计划</strong>＝奖励补偿促自动离职；<strong>离岸经营</strong>＝特殊外包、岗位跨国转移，成功三法＝大牌外包商＋模块化非核心非涉密＋从小入手密切监督</li>
-</ul></div></article>
-<article class="ch-card" id="r19"><div class="ch-head"><span class="ch-rank">8</span><span class="ch-score">近年约 10 分</span><a class="ch-title" href="人力19_宏观人力资源开发_第1节_人才评价.html">第19章 宏观人力资源开发</a></div><div class="ch-qing">考情：2023–2025 六场考试场均 4–10 分，单选每场 2–6 题、多选 1–2 题，2025 年两场明显抬升到 8–10 分。这是政策法规密集章：职业资格与职称、奖励种类、公务员与事业单位人事管理、继续教育学时、人力…</div><div class="ch-sechead">📍 第1节 人才评价</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r19"><summary><span class="ch-rank">8</span><span class="ch-score">近年约 10 分</span><span class="ch-name">第19章 宏观人力资源开发</span><span class="ch-meta">5 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试场均 4–10 分，单选每场 2–6 题、多选 1–2 题，2025 年两场明显抬升到 8–10 分。这是政策法规密集章：职业资格与职称、奖励种类、公务员与事业单位人事管理、继续教育学时、人力…<a class="ch-link" href="人力19_宏观人力资源开发_第1节_人才评价.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 人才评价</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>评价改革四任务</strong>：定标准（品德首要、克服唯学历资历论文）、改方式（同行为基础＋市场社会评价、破户籍地域）、抓重点、强服务（用人单位自主权、下放权限）</li>
-<li><strong>职业资格</strong>：准入类（公共利益/国家安全，须法律法规或国务院决定依据）vs 水平评价类（专业性强、社会通用性高）；目录外一律不得许可认定、目录内除准入类外一律不得与就业创业挂钩；社会组织证书禁用"中华/中国/国家/全国/职业资格/人员资格"字样和国徽</li>
-<li><strong>职称</strong>：主要标志／基本制度；标准分国家、地区、单位三级，下级不得低于国家标准；评委会按系列或专业组建（禁跨系列综合），高级评委会系列≥25 人、专业≥11 人；逐级申报为原则，重大贡献可直接报高级；出席≥2/3、同意票≥出席专家 2/3、公示≥5 个工作日；27 个系列，除农推员外高级分两级</li>
+<li><strong>职业资格分类</strong>：准入类（公共利益/国家安全，须法律法规或国务院决定依据）vs 水平评价类（专业性强、社会通用性高）</li>
+<li><strong>职业资格目录</strong>：目录外一律不得许可认定、目录内除准入类外一律不得与就业创业挂钩</li>
+<li><strong>社会组织证书</strong>：禁用"中华/中国/国家/全国/职业资格/人员资格"字样和国徽</li>
+<li><strong>职称定位</strong>：主要标志／基本制度；标准分国家、地区、单位三级，下级不得低于国家标准</li>
+<li><strong>职称评委会</strong>：按系列或专业组建（禁跨系列综合），高级评委会系列≥25 人、专业≥11 人</li>
+<li><strong>职称申报评审</strong>：逐级申报为原则，重大贡献可直接报高级；出席≥2/3、同意票≥出席专家 2/3、公示≥5 个工作日</li>
+<li><strong>职称系列</strong>：27 个系列，除农推员外高级分两级</li>
 <li><strong>技能等级</strong>：旧五级→2022 年 3 月新八级（新增学徒工、特级技师、首席技师），最高首席技师；认定依据＝国家职业技能标准＋行业企业评价规范；认定主体＝用人单位（对内为主）＋社会培训评价组织（面向全体劳动者）</li>
 </ul></div><div class="ch-sechead">📍 第2节 激励保障</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>成果转化</strong>：处置自主（涉密除外免报批）、收入全部留归单位不上缴国库、奖励提取<strong>不低于 50%</strong>（净收入口径）、现金奖励计入绩效总量但不受限不占基数、离岗 <strong>3 年</strong>保留人事关系；正职只拿现金不拿股权</li>
@@ -1445,21 +1610,26 @@
 <li><strong>考核</strong>：德能勤绩廉，重点政治素质和工作实绩；平时/专项/定期三种，定期以平时＋专项为基础；非领导职务定期考核＝年度考核</li>
 <li><strong>任免升降</strong>：领导职务选任、委任、聘任，职级只委任、聘任；逐级晋升可破格；不称职降一个层次；晋升领导职务有公示＋试用期（职级晋升无试用期）</li>
 <li><strong>公务员处分</strong>：警 6／过 12／大 18／降撤 24／开除解除人事关系；解除后晋升不受影响，但解除降级撤职不视为恢复原级别原职务</li>
-<li><strong>事业单位</strong>：岗位三类＋特设岗位（高层次人才）；除政策性安置、上级任命、涉密岗位外公开招聘；合同 3 年起步、初次就业 3 年以上试用期 12 个月、10＋10 聘至退休、旷工 15 连续／30 累计、解约预告 30 日；处分警 6／过 12／降低岗位等级 24／开除</li>
+<li><strong>事业单位岗位</strong>：岗位三类＋特设岗位（高层次人才）；除政策性安置、上级任命、涉密岗位外公开招聘</li>
+<li><strong>事业单位聘用合同</strong>：合同 3 年起步、初次就业 3 年以上试用期 12 个月、10＋10 聘至退休、旷工 15 连续／30 累计、解约预告 30 日</li>
+<li><strong>事业单位处分</strong>：警 6／过 12／降低岗位等级 24／开除</li>
 <li><strong>干部管理</strong>：县处级 5 工龄＋2 基层，下一级 2 个职位，副转正 2 年、正转上副 3 年，专科起步厅局本科；企业兼职红线＝3 年禁入原辖区、不取酬、1 个、连任 2 届、70 周岁、每年一报</li>
 </ul></div><div class="ch-sechead">📍 第4节 教育培训</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>技能培训八群体</strong>：毕业生—就业行动；产能职工—特别计划；农民工—春潮行动；新农民—培育工程；初高中生—劳动预备制；退役军人—储备＋技能；困难群体—雨露计划等；服刑戒毒—回归社会；<strong>企业是培训主体</strong>，新型学徒制走校企合作</li>
 <li><strong>继续教育</strong>：统筹规划、分级负责、分类指导；公需（法规/政策/道德/信息）＋专业（四新）；每年 ≥90 学时、专业 ≥2/3；方式五种（培训班、实践、远程、学术活动、其他）</li>
-<li><strong>公务员培训</strong>：全体对象；县处级以上每 5 年 ≥3 个月，提任后 1 年内补训；其他公务员每年 ≥12 天或 90 学时；初任 12 天试用内、任职县处副以上 30 天乡科 15 天（任职前后一年内）、专门业务与在职按需；社会化培训自费</li>
+<li><strong>公务员培训要求</strong>：全体对象；县处级以上每 5 年 ≥3 个月，提任后 1 年内补训；其他公务员每年 ≥12 天或 90 学时</li>
+<li><strong>公务员培训类型</strong>：初任 12 天试用内、任职县处副以上 30 天乡科 15 天（任职前后一年内）、专门业务与在职按需；社会化培训自费</li>
 <li><strong>事业单位培训</strong>：年度 ≥90 学时或 12 天；岗前 6 个月内（最长 12 个月）40 学时或 5 天；在岗一个聘期一次 20 学时或 3 天公共科目脱产；转岗变化前或 3 个月内 40 学时或 5 天；专项按需</li>
 </ul></div><div class="ch-sechead">📍 第5节 流动配置</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>服务机构</strong>：公共＝县级以上政府设立＋免费＋经费进预算（八项服务含档案管理）；经营性＝职业中介须人力资源服务许可证、网络招聘再加电信业务经营许可证、可告知承诺制</li>
 <li><strong>市场规范</strong>：委托招聘审四材料（简章、执照/批文、经办人证件、委托证明）；三不得（欺诈暴力胁迫、招聘牟利、介绍违法）；外包不得改变劳动关系；四明示＝照项价话；台账 2 年以上；分支机构 15 日书面报告</li>
-<li><strong>工作许可</strong>：出境入境管理法第 41 条，工作许可＋工作类居留证件；R 字签证对高层次人才、Z 字签证附工作许可；A 类高精尖缺三不限无数量限制、B 类学士＋2 年经历＋≤60 周岁、C 类按政策；受理/决定在省级（兵团）及其授权地方机构</li>
+<li><strong>工作许可依据</strong>：出境入境管理法第 41 条，工作许可＋工作类居留证件；R 字签证对高层次人才、Z 字签证附工作许可</li>
+<li><strong>外国人才分类</strong>：A 类高精尖缺三不限无数量限制、B 类学士＋2 年经历＋≤60 周岁、C 类按政策</li>
+<li><strong>工作许可管辖</strong>：受理/决定在省级（兵团）及其授权地方机构</li>
 <li><strong>永久居留</strong>：居留期限不受限制、凭护照＋永居证出入境；境内工作免办工作许可但依法参保缴公积金；购房、驾照、子女入学等公民同等待遇</li>
 <li><strong>便利化两通道</strong>：普通＝4 年＋住 6 月＋6 倍工资＋20% 个税；外籍华人＝博士学历或重点区域 4 年＋住 6 月；配偶和未成年子女可随同</li>
-</ul></div></article>
-<article class="ch-card" id="r17"><div class="ch-head"><span class="ch-rank">9</span><span class="ch-score">近年约 9 分</span><a class="ch-title" href="人力17_劳动争议调解仲裁_第1节_劳动争议概述.html">第17章 劳动争议调解仲裁</a></div><div class="ch-qing">考情：2023–2025 六场考试场均 2–9 分，单选每场 1–3 题、多选 0–2 题、案例分析 0–2 题（2025 年Ⅱ卷合计 9 分）。仲裁时效、审理期限、终局裁决、管辖与举证责任等&quot;程序＋数字&quot;考点是命题主场，案例…</div><div class="ch-sechead">📍 第1节 劳动争议概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r17"><summary><span class="ch-rank">9</span><span class="ch-score">近年约 9 分</span><span class="ch-name">第17章 劳动争议调解仲裁</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试场均 2–9 分，单选每场 1–3 题、多选 0–2 题、案例分析 0–2 题（2025 年Ⅱ卷合计 9 分）。仲裁时效、审理期限、终局裁决、管辖与举证责任等&quot;程序＋数字&quot;考点是命题主场，案例…<a class="ch-link" href="人力17_劳动争议调解仲裁_第1节_劳动争议概述.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 劳动争议概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>劳动争议</strong>＝劳动关系当事人之间因劳动权利义务产生分歧；三特征"人对事对才算数"（当事人特定、存在劳动关系、内容与劳动权利义务有关）</li>
 <li><strong>适用 6 类</strong>：确认劳动关系／订立履行变更解除终止合同／除名辞退辞职离职／工休社保福利培训劳动保护／报酬工伤医疗费经济补偿赔偿金／法律法规规定的其他</li>
 <li><strong>不属 6 类</strong>：社保金（找社保机构）、公房转让（房改）、不服鉴定结论（专门渠道）、家政（雇主是家庭）、帮工学徒（个体工匠）、农承包受雇人——"社保金、公房转、不服鉴定；家政、帮工、农承包"</li>
@@ -1471,23 +1641,34 @@
 <li><strong>支付令</strong>：拖欠劳动报酬、工伤医疗费、经济补偿或赔偿金达成调解协议、到期不履行 → 持协议书向法院申请，法院应当发出</li>
 <li><strong>仲裁委</strong>：人社部门＋工会＋企业方面代表，单数，三方原则；不按行政区划层层设立、无隶属；庭制 3 名＋首席，简单案件 1 名独任</li>
 <li><strong>时效</strong>：1 年，自知或应知权利被侵害之日起算；中断（主张权利/请求救济/同意履行）重新算，中止（不可抗力、法定代理人未确定）继续算；在职讨薪不受 1 年限制，终止后 1 年内</li>
-<li><strong>程序数字</strong>：受理 5 日（不受理或逾期→起诉）、副本 5 日、答辩 10 日（不答辩不影响）、答辩书副本 5 日、反申请答辩期内＋5 日定夺、裁决 45 日＋15 日（主任批准）、先行调解签收生效、先行裁决、先予执行移送法院、逾期未裁可起诉、不同意见可不签名</li>
+<li><strong>程序数字·受理答辩</strong>：受理 5 日（不受理或逾期→起诉）、副本 5 日、答辩 10 日（不答辩不影响）、答辩书副本 5 日、反申请答辩期内＋5 日定夺</li>
+<li><strong>程序数字·裁决处理</strong>：裁决 45 日＋15 日（主任批准）、先行调解签收生效、先行裁决、先予执行移送法院、逾期未裁可起诉、不同意见可不签名</li>
 <li><strong>回避四情形</strong>：近亲属、利害关系、其他可能影响公正的关系、私自会见请客送礼</li>
-<li><strong>终局裁决</strong>：≤当地月最低工资 12 个月金额的追索劳动报酬/工伤医疗费/经济补偿/赔偿金 ＋ 执行国家劳动标准的工休社保争议；作出之日生效；劳动者 15 日起诉；用人单位 30 日向中院申请撤销（6 情形：法律用错/无管辖/程序违规/证据伪造/隐瞒证据/仲裁员枉法）；其他裁决 15 日不起诉则生效</li>
+<li><strong>终局裁决范围</strong>：≤当地月最低工资 12 个月金额的追索劳动报酬/工伤医疗费/经济补偿/赔偿金 ＋ 执行国家劳动标准的工休社保争议</li>
+<li><strong>终局裁决效力</strong>：作出之日生效；劳动者 15 日起诉；用人单位 30 日向中院申请撤销（6 情形：法律用错/无管辖/程序违规/证据伪造/隐瞒证据/仲裁员枉法）</li>
+<li><strong>非终局裁决</strong>：其他裁决 15 日不起诉则生效</li>
 <li><strong>公开不收费</strong>：协议不公开或涉密除外；不收费财政保障；案卷调解 5 年、裁决 10 年</li>
 <li><strong>管辖</strong>：地域管辖；履行地或单位所在地任选；都申请→履行地；受理后变化不改；移送应受理、协商不成报共同上级指定；先受理优先；异议答辩期满前书面提</li>
 </ul></div><div class="ch-sechead">📍 第3节 劳动争议当事人和举证责任</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
-<li><strong>当事人认定</strong>：派遣→派遣单位与用工单位共同当事人（起诉时派遣单位为被告，涉用工单位为共同被告）；合并→合并后单位；分立→分立后实际用人单位，承受不明则各单位均为当事人；吊销执照/关闭/撤销/解散/歇业不能担责→列出资人、开办单位或主管部门为共同当事人；个人承包经营→发包组织＋个人承包经营者共同当事人</li>
+<li><strong>派遣当事人</strong>：派遣→派遣单位与用工单位共同当事人（起诉时派遣单位为被告，涉用工单位为共同被告）</li>
+<li><strong>合并分立当事人</strong>：合并→合并后单位；分立→分立后实际用人单位，承受不明则各单位均为当事人</li>
+<li><strong>主体灭失当事人</strong>：吊销执照/关闭/撤销/解散/歇业不能担责→列出资人、开办单位或主管部门为共同当事人</li>
+<li><strong>个人承包当事人</strong>：个人承包经营→发包组织＋个人承包经营者共同当事人</li>
 <li><strong>权利十条</strong>记高频：可请工会或第三方共同协商；可选可拒调解；口头申请；要求回避；委托代理；不受理可要求说明；自行和解；调解书<strong>送达前</strong>可反悔；终局裁决 15 日起诉；申请强制执行</li>
 <li><strong>义务七条</strong>记高频：自觉履行协议；时效内申请；书面申请＋被申请人 10 日答辩；按时参加守纪律；调解书<strong>送达后</strong>不反悔；按期履行生效文书；交诉讼费</li>
-<li><strong>举证</strong>：谁主张谁举证＋谁作决定谁举证；档案/工资发放/社保缴纳/劳动保护由单位提供，不提供承担不利后果；开除、除名、辞退、解除合同、减薪、计算工作年限等决定由单位举证；劳动者拿不到→仲裁庭限期单位提供；法律未明确→仲裁庭按公平诚信、举证能力确定；客观无法收集→仲裁委依申请或依职权收集</li>
+<li><strong>举证原则</strong>：谁主张谁举证＋谁作决定谁举证；档案/工资发放/社保缴纳/劳动保护由单位提供，不提供承担不利后果</li>
+<li><strong>单位举证事项</strong>：开除、除名、辞退、解除合同、减薪、计算工作年限等决定由单位举证；劳动者拿不到→仲裁庭限期单位提供</li>
+<li><strong>举证补位规则</strong>：法律未明确→仲裁庭按公平诚信、举证能力确定；客观无法收集→仲裁委依申请或依职权收集</li>
 </ul></div><div class="ch-sechead">📍 第4节 劳动争议诉讼</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>诉讼程序</strong>：一般由仲裁委所在地法院受理；两审终审制</li>
 <li><strong>强制执行</strong>：法院依当事人请求、运用国家强制力，强制履行<strong>已生效</strong>的判决、裁定、调解书及刑事裁判中财产部分等</li>
 <li><strong>诉讼费</strong>：劳动争议案件每件案件受理费 <strong>10 元</strong>（仲裁不收费）</li>
-<li><strong>司法解释</strong>：工资欠条直接起诉→普通民事纠纷受理、不必先仲裁；个体工商户以登记字号为当事人＋注明业主情况；招用未解除合同劳动者→第三人/第三人/共同被告三情形；承包经营→承包方与发包方为当事人；无照/吊销/期满经营→单位或出资人；挂靠借照→用人单位＋出借方；仲裁委无管辖权不予受理→确无管辖权告知另申请／有管辖权告知申请并书面通知、仍不受理再诉应受理；退休返聘劳务 vs 停薪内退下岗放长假劳动；加班费劳动者就加班事实举证、单位掌握不提供担不利后果</li>
-</ul></div></article>
-<article class="ch-card" id="r4"><div class="ch-head"><span class="ch-rank">10</span><span class="ch-score">近年约 9 分</span><a class="ch-title" href="人力04_战略性人力资源管理_第1节_战略性人力资源管理及其实施过程.html">第4章 战略性人力资源管理</a></div><div class="ch-qing">考情：2023–2025 六场考试场均约 9 分，2025 年起分值明显跃升（Ⅰ卷 18 分、Ⅱ卷 9 分），且 2025 年Ⅰ卷首次出现 4 道案例分析（8 分）。战略三层次、四种联系、三大工具、人力资源战略与组织/竞争战略…</div><div class="ch-sechead">📍 第1节 战略性人力资源管理及其实施过程</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+<li><strong>司法解释·欠条与个体户</strong>：工资欠条直接起诉→普通民事纠纷受理、不必先仲裁；个体工商户以登记字号为当事人＋注明业主情况</li>
+<li><strong>司法解释·用工当事人</strong>：招用未解除合同劳动者→第三人/第三人/共同被告三情形；承包经营→承包方与发包方为当事人；无照/吊销/期满经营→单位或出资人；挂靠借照→用人单位＋出借方</li>
+<li><strong>司法解释·管辖处理</strong>：仲裁委无管辖权不予受理→确无管辖权告知另申请／有管辖权告知申请并书面通知、仍不受理再诉应受理</li>
+<li><strong>司法解释·劳务与加班认定</strong>：退休返聘劳务 vs 停薪内退下岗放长假劳动；加班费劳动者就加班事实举证、单位掌握不提供担不利后果</li>
+</ul></div></details>
+<details class="ch-card" id="r4"><summary><span class="ch-rank">10</span><span class="ch-score">近年约 9 分</span><span class="ch-name">第4章 战略性人力资源管理</span><span class="ch-meta">2 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试场均约 9 分，2025 年起分值明显跃升（Ⅰ卷 18 分、Ⅱ卷 9 分），且 2025 年Ⅰ卷首次出现 4 道案例分析（8 分）。战略三层次、四种联系、三大工具、人力资源战略与组织/竞争战略…<a class="ch-link" href="人力04_战略性人力资源管理_第1节_战略性人力资源管理及其实施过程.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 战略性人力资源管理及其实施过程</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>战略</strong>：平衡内外、维持竞争优势的长期规划</li>
 <li><strong>三层次</strong>：组织（到哪去：成长/稳定/收缩）、竞争（怎么竞：成本领先/差异化/市场集中）、职能（凭什么：营销/人力/财务）</li>
 <li><strong>战略性人力资源管理</strong>：活动同战略目标联系；核心理念＝帮组织实现战略、赢得竞争优势；现代定位＝利润中心</li>
@@ -1499,15 +1680,20 @@
 <li><strong>战略执行</strong>：主要责任＝任务设计、甄选培训开发、报酬系统；直接影响＝组织结构、信息系统</li>
 <li><strong>三大工具</strong>：战略地图（路径/分解）、人力资源计分卡（活动链指标）、数字仪表盘（监控进度）</li>
 </ul></div><div class="ch-sechead">📍 第2节 战略性人力资源管理的具体内容</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
-<li><strong>组织战略匹配</strong>：内部成长（招募压力大、培训全方位、内部晋升、绩效薪酬重结果）；外部成长（重配人、合文化、统标准，绩效薪酬规范化标准化）；稳定（缓慢晋升、培训为当前工作、重内部一致性、福利高）；收缩（裁员剥离清算、减固定增浮动、员工持股共担风险）</li>
-<li><strong>竞争战略匹配</strong>：差异化/创新（招募敢冒险者、绩效看创新行为与贡献、基薪看创新能力、风险共担成功分享）；成本领先（薪酬对标对手、提高浮动比重、奖励成本节约、重纪律出勤、职位描述详细具体）；市场集中/客户中心（重服务能力动机经验、培训客户知识技巧、按服务数量质量付酬）</li>
+<li><strong>组织战略匹配·内部成长</strong>：招募压力大、培训全方位、内部晋升、绩效薪酬重结果</li>
+<li><strong>组织战略匹配·外部成长</strong>：重配人、合文化、统标准，绩效薪酬规范化标准化</li>
+<li><strong>组织战略匹配·稳定</strong>：缓慢晋升、培训为当前工作、重内部一致性、福利高</li>
+<li><strong>组织战略匹配·收缩</strong>：裁员剥离清算、减固定增浮动、员工持股共担风险</li>
+<li><strong>竞争战略匹配·差异化/创新</strong>：招募敢冒险者、绩效看创新行为与贡献、基薪看创新能力、风险共担成功分享</li>
+<li><strong>竞争战略匹配·成本领先</strong>：薪酬对标对手、提高浮动比重、奖励成本节约、重纪律出勤、职位描述详细具体</li>
+<li><strong>竞争战略匹配·市场集中/客户中心</strong>：重服务能力动机经验、培训客户知识技巧、按服务数量质量付酬</li>
 <li><strong>高绩效工作系统</strong>：AOM＝能力＋参与机会＋动机；不是职能的简单组合</li>
 <li><strong>学习型组织五特征</strong>：持续学习、知识共享、批判系统思维、学习文化、重视员工</li>
 <li><strong>人才管理</strong>：吸引留用开发激励高技能人才；评价看绩效（过去＋现在）＋潜力（未来）；A 类尖子＋B 类骨干；四大内容（灵活获取/零库存/多元价值主张/能力建设）；领导从命令型转影响型；各级管理者承担留人责任</li>
 <li><strong>人才盘点</strong>：产出＝盘点清单＋"绩效–潜力"九宫格；作用＝辨识、练兵、统一、衔接</li>
 <li><strong>数字化转型三关键</strong>：战略指引、社会技术系统最优联合、循证内核（科学/组织/经验/利益相关者证据）</li>
-</ul></div></article>
-<article class="ch-card" id="r6"><div class="ch-head"><span class="ch-rank">11</span><span class="ch-score">近年约 9 分</span><a class="ch-title" href="人力06_甄选_第1节_甄选及其有效性.html">第6章 甄选</a></div><div class="ch-qing">考情：2023–2025 六场考试场均约 9 分——单选每场稳定 4–5 题，多选 0–4 题，2024-Ⅰ 与 2025-Ⅱ 各配 4 道案例分析；2025-Ⅱ 单选＋多选＋案例合计 20 分，为近年本章最高峰。信度效度、霍…</div><div class="ch-sechead">📍 第1节 甄选及其有效性</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r6"><summary><span class="ch-rank">11</span><span class="ch-score">近年约 9 分</span><span class="ch-name">第6章 甄选</span><span class="ch-meta">2 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试场均约 9 分——单选每场稳定 4–5 题，多选 0–4 题，2024-Ⅰ 与 2025-Ⅱ 各配 4 道案例分析；2025-Ⅱ 单选＋多选＋案例合计 20 分，为近年本章最高峰。信度效度、霍…<a class="ch-link" href="人力06_甄选_第1节_甄选及其有效性.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 甄选及其有效性</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>甄选三要点</strong>：有风险、求匹配（恰当水平，并非智力越高越好）、对标准（人与岗位标准比，非人与人比）</li>
 <li><strong>价值三条</strong>：保战略（优秀员工是战略达成的最根本保障）、代价高（弥补失误代价极高）、伤员工</li>
 <li><strong>信度</strong>＝内部一致性/稳定性程度，测试工具的<strong>最基本要求</strong>；信度系数 0～1，<strong>≥0.7</strong> 较好</li>
@@ -1517,15 +1703,20 @@
 <li><strong>信效度关系</strong>：信度是效度的<strong>必要非充分</strong>条件；信度只受非系统误差影响，效度受系统＋非系统误差影响；<strong>可信不一定有效，有效必定可信</strong></li>
 </ul></div><div class="ch-sechead">📍 第2节 甄选的主要方法</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>心理测试三块</strong>：能力（一般认知=智力人人要；特殊认知=倾向看行当；心理运动=精细动作如手表装配工；身体能力=强度爆发力协调平衡）＋人格＋职业兴趣</li>
-<li><strong>人格测量三法</strong>：自陈（自己说）/评价量表（他人评）/投射（模糊情境自由反应）；<strong>MBTI 四维</strong>：外倾-内倾=注意方向、感觉-直觉=获取信息、思考-情感=决策方式、判断-知觉=对待外界（4 维 8 风格）；<strong>大五="外愉尽神开"</strong>（外向、愉悦、尽责、神经质、开放）</li>
+<li><strong>人格测量三法</strong>：自陈（自己说）/评价量表（他人评）/投射（模糊情境自由反应）</li>
+<li><strong>MBTI 四维</strong>：外倾-内倾=注意方向、感觉-直觉=获取信息、思考-情感=决策方式、判断-知觉=对待外界（4 维 8 风格）</li>
+<li><strong>大五</strong>："外愉尽神开"（外向、愉悦、尽责、神经质、开放）</li>
 <li><strong>霍兰德六型</strong>：现实动手、研究动脑、社会教导、企业管人、艺术自由、常规办公；六角"<strong>现研艺社企常</strong>"首尾相接，相邻相似、不相邻不相似（企业型邻居=社会+常规）</li>
 <li><strong>成就测试</strong>：知识测试（考知识广度深度，注会/司法；<strong>笔试≠知识测试</strong>，行测是认知能力）＋工作样本测试（模拟环境实地完成任务；<strong>效标效度内容效度都高、效度最高</strong>；一岗一版、开发贵、通用性低）</li>
-<li><strong>评价中心</strong>：情景模拟考管理素质，综合多种手段非并列工具；<strong>公文筐</strong>（管理岗、三优三缺、单独完成考不了人际）/ <strong>无领导小组讨论</strong>（5-7 人、1 小时、不指定领导、墙后观察；题型"开两多操资"；缺点=题目难出、评分难、可能掩饰）/ <strong>角色扮演</strong>；技能表"<strong>公文筐缺人际，无领导五项全，角色扮演缺行政</strong>"</li>
+<li><strong>评价中心总述</strong>：情景模拟考管理素质，综合多种手段非并列工具</li>
+<li><strong>公文筐测验</strong>：管理岗、三优三缺、单独完成考不了人际</li>
+<li><strong>无领导小组讨论</strong>：5-7 人、1 小时、不指定领导、墙后观察；题型"开两多操资"；缺点=题目难出、评分难、可能掩饰</li>
+<li><strong>角色扮演与技能表</strong>：角色扮演；技能表"<strong>公文筐缺人际，无领导五项全，角色扮演缺行政</strong>"</li>
 <li><strong>面试结构</strong>：非结构化（自由、信效度低得多）/结构化（标准化、公平、信效度高、死板）/半结构化（折中）；组织形式"<strong>独系组集</strong>"（单独/系列/小组=多考官考一人/集体=多候选人）；<strong>压力面试</strong>=故意制造紧张看反应</li>
 <li><strong>改善面试</strong>：情境化结构面试（行为事件面试）<strong>STAR=境务行果</strong>；题目分过去导向（曾经…如何做）/未来导向（假设…将如何）；面试前准备＋系统培训考官（六错：话多、问杂、跑题、自信、看脸、对比）</li>
 <li><strong>履历分析</strong>：假设=<strong>行为一致性</strong>；要求=<strong>真、全、相关</strong>；最新发展=<strong>目标履历分析法</strong></li>
-</ul></div></article>
-<article class="ch-card" id="r8"><div class="ch-head"><span class="ch-rank">12</span><span class="ch-score">近年约 8 分</span><a class="ch-title" href="r08s1.html">第8章 薪酬管理</a></div><div class="ch-qing">考情：2023–2025 六场考试单选每场 3–5 题、多选每场 1–2 题，其中 2023-Ⅰ、2024-Ⅱ、2025-Ⅰ 三场均出 4 道案例分析题（8 分），单场合计最高 15 分——本章是案例分析题主战场之一，战略性薪…</div><div class="ch-sechead">📍 第1节 薪酬管理概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r8"><summary><span class="ch-rank">12</span><span class="ch-score">近年约 8 分</span><span class="ch-name">第8章 薪酬管理</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试单选每场 3–5 题、多选每场 1–2 题，其中 2023-Ⅰ、2024-Ⅱ、2025-Ⅰ 三场均出 4 道案例分析题（8 分），单场合计最高 15 分——本章是案例分析题主战场之一，战略性薪…<a class="ch-link" href="r08s1.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 薪酬管理概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>发展战略</strong>：成长＝短期低基本薪酬＋长期奖金／股票选择权；稳定集中＝决策集中、基本薪酬福利占比大、跟随或略高于市场；收缩精简＝基本薪酬占比低、员工股份所有权计划共担风险</li>
 <li><strong>竞争战略</strong>：差异化＝足额奖励＋基本薪酬略高于市场；成本领先＝薪酬水平较低＋奖金占比大；市场集中（客户中心）＝按服务数量质量／客户评价付酬</li>
 <li><strong>全面薪酬战略</strong>：摒弃科层体系、以客户满意度为中心、双赢；五性＝战激灵创沟</li>
@@ -1554,18 +1745,25 @@
 <li><strong>预算两方法</strong>：自上而下＝控总量、便于调控支付能力与绩效对称性，但欠灵活、受主观、欠准确、伤积极性；自下而上方向相反（基层先报逐级汇总）</li>
 <li><strong>控制五途径</strong>：雇佣量（人数×工时）／基本薪酬（加薪规模、时间、覆盖面）／奖金（规模时间覆盖面＋一次性奖金）／福利支出（挂钩福利刚性大、不挂钩弹性较小、管理费用弹性高）／薪酬技术手段（工作评价、薪酬调查、薪酬结构、薪酬宽带）</li>
 <li><strong>人工成本</strong>＝使用劳动力支付的直接＋间接费用总和；总量指标（人均＝平均收入＋劳动力市场价格信号）、结构指标（构成与合理性）、比率型指标（与效益挂钩的相对数：劳动生产率、人工费比率、劳动分配率、占总成本比重）</li>
-</ul></div></article>
-<article class="ch-card" id="r10"><div class="ch-head"><span class="ch-rank">13</span><span class="ch-score">近年约 8 分</span><a class="ch-title" href="人力10_劳动关系_第1节_劳动关系概述.html">第10章 劳动关系</a></div><div class="ch-qing">考情：2023–2025 六场考试场均 4–8 分，此前各场均考&quot;单选 2–6 题＋多选 1 题&quot;，2025 年下半年整卷改为 4 道案例分析题（8 分）——本章是案例分析题主战场之一。劳动关系五方主体、调整机制七大制度、员工…</div><div class="ch-sechead">📍 第1节 劳动关系概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r10"><summary><span class="ch-rank">13</span><span class="ch-score">近年约 8 分</span><span class="ch-name">第10章 劳动关系</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试场均 4–8 分，此前各场均考&quot;单选 2–6 题＋多选 1 题&quot;，2025 年下半年整卷改为 4 道案例分析题（8 分）——本章是案例分析题主战场之一。劳动关系五方主体、调整机制七大制度、员工…<a class="ch-link" href="人力10_劳动关系_第1节_劳动关系概述.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 劳动关系概述</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>劳动关系</strong>：劳动者与劳动力使用者及相关组织为实现劳动过程构成的社会关系；目的＝劳动者与生产资料结合完成劳动过程；本质＝经济利益关系（以经济关系为基本构成）</li>
 <li><strong>特征（★★）</strong>：最主要特点＝从属性（形式平等掩盖实际不平等）；运行在劳动过程中实现；内容＝劳动标准与劳动管理规则（权利义务）；目标＝合作、劳资两利</li>
-<li><strong>五方主体</strong>：劳动者（★★★，不含自雇用者）／工会（群众组织；结构分职业、产业、总；层级分企业、区域、全国；全总唯一合法）／用人单位（★★★六类：企个民机事社，家庭不在册）／雇主组织（行业协会、地区协会、国家级雇主联合会；作用"谈法服培"）／政府（规监裁控推）</li>
+<li><strong>五方主体·劳动者与工会</strong>：劳动者（★★★，不含自雇用者）／工会（群众组织；结构分职业、产业、总；层级分企业、区域、全国；全总唯一合法）</li>
+<li><strong>五方主体·用人单位</strong>：用人单位（★★★六类：企个民机事社，家庭不在册）</li>
+<li><strong>五方主体·雇主组织与政府</strong>：雇主组织（行业协会、地区协会、国家级雇主联合会；作用"谈法服培"）／政府（规监裁控推）</li>
 <li><strong>劳动关系系统（★）</strong>：子系统、要素个体或群体、运行能动、复合开放、要素协调；政治社会环境投入＝社会条件；三方主体直接参与；意识形态发挥重要作用；产出＝规则；运行内容＝机构关系＋规则程序；运行过程＝构成→定标准→处争议</li>
 </ul></div><div class="ch-sechead">📍 第2节 我国劳动关系调整机制</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>五原则（★★★）</strong>：权利义务统一；保护主体权益（全面＝双维护、平等＝各类各劳动者、优先＝矛盾时向劳动者、特殊＝女职工未成年工）；双方自主协调为基础；促进经济发展和社会进步；依法调整和三方协调</li>
-<li><strong>七制度</strong>：劳动合同（调个别劳动关系，已普遍实行）／集体合同（调集体劳动关系；书面协议；订立主体＝用人单位与本单位职工；《劳动合同法》专节规定）／劳动规章制度／职工民主管理（主要形式＝职代会；公有制企业法定必要形式）／劳动争议处理（协商调解仲裁诉讼，先裁后审，"一调一裁两审"）／三方机制（政府＋工会代表＋雇主代表；政府＝县级以上劳动行政管理部门）／劳动保障监察</li>
+<li><strong>七制度·劳动合同与集体合同</strong>：劳动合同（调个别劳动关系，已普遍实行）／集体合同（调集体劳动关系；书面协议；订立主体＝用人单位与本单位职工；《劳动合同法》专节规定）</li>
+<li><strong>七制度·规章与民主管理</strong>：劳动规章制度／职工民主管理（主要形式＝职代会；公有制企业法定必要形式）</li>
+<li><strong>七制度·劳动争议处理</strong>：协商调解仲裁诉讼，先裁后审，"一调一裁两审"</li>
+<li><strong>七制度·三方机制与监察</strong>：三方机制（政府＋工会代表＋雇主代表；政府＝县级以上劳动行政管理部门）／劳动保障监察</li>
 </ul></div><div class="ch-sechead">📍 第3节 构建和谐劳动关系</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>基本思路</strong>：目标＝促进企业发展、维护职工权益；总基调＝稳中求进；四共＝协商共事、机制共建、效益共创、利益共享；三个共同体＝利益、事业、命运</li>
-<li><strong>主要任务</strong>：①完善协商协调机制——首要特点＝坚持党的领导，重点＝经济问题（劳动报酬、休息休假、劳动时间、社会保障等切身利益）；②健全劳动法律法规、保障新就业形态劳动者权益——补齐法律短板，制定职工民主管理法和集体合同法；③多方施策——政府（以人民为中心，完善人社领域管理服务）、工会和行业协会发挥作用、集体协商／集体合同／行业标准解决特质性问题、职代会和平等协商引导民主参与</li>
+<li><strong>主要任务①</strong>：完善协商协调机制——首要特点＝坚持党的领导，重点＝经济问题（劳动报酬、休息休假、劳动时间、社会保障等切身利益）</li>
+<li><strong>主要任务②</strong>：健全劳动法律法规、保障新就业形态劳动者权益——补齐法律短板，制定职工民主管理法和集体合同法</li>
+<li><strong>主要任务③多方施策</strong>：政府（以人民为中心，完善人社领域管理服务）、工会和行业协会发挥作用、集体协商／集体合同／行业标准解决特质性问题、职代会和平等协商引导民主参与</li>
 </ul></div><div class="ch-sechead">📍 第4节 企业解决劳动争议的制度和方法</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>员工申诉（★）</strong>：组织成员以口头或书面等正式方式表达对组织有关事项的不满；起因＝企业违反集体协议／劳动法律／违背惯例制度／不担责</li>
 <li><strong>范围（★）</strong>：限于与工作有关的问题，家庭私人问题排除；六类＝"制奖薪、合侵调"</li>
@@ -1573,16 +1771,21 @@
 <li><strong>程序（★★★）</strong>：非正式＝第三方调解（在前）；正式四步"表受查解"（主观臆断不受理）；方法＝查原因、明真相、表同情、做辅导、消顾虑</li>
 <li><strong>调解委员会设立（★）</strong>："大中应当设，分支按需设（总部指导），车间设小组，小微可推举"</li>
 <li><strong>调解前准备（★★★）</strong>：审查申请（书面或口头）→通知被申请人（答辩书＋证据；单位被申请人指定专人或委托他人）→告知与征询（名单＋回避）→弄清情况掌握法律→调查事实收集证据→分析证据→思想工作</li>
-</ul></div></article>
-<article class="ch-card" id="r16"><div class="ch-head"><span class="ch-rank">14</span><span class="ch-score">近年约 7 分</span><a class="ch-title" href="人力16_社会保险体系_第1节_基本养老保险.html">第16章 社会保险体系</a></div><div class="ch-qing">考情：2023–2025 六场考试合计 44 分、场均约 7 分，单选每场 1–5 题、多选每场 1–3 题，尚未考过案例分析题。本章是全书的&quot;数字窝&quot;——缴费比例、缴费年限、待遇月数、时限天数全是命题点，工伤保险是传统重点节…</div><div class="ch-sechead">📍 第1节 基本养老保险</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r16"><summary><span class="ch-rank">14</span><span class="ch-score">近年约 7 分</span><span class="ch-name">第16章 社会保险体系</span><span class="ch-meta">6 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试合计 44 分、场均约 7 分，单选每场 1–5 题、多选每场 1–3 题，尚未考过案例分析题。本章是全书的&quot;数字窝&quot;——缴费比例、缴费年限、待遇月数、时限天数全是命题点，工伤保险是传统重点节…<a class="ch-link" href="人力16_社会保险体系_第1节_基本养老保险.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 基本养老保险</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>模式</strong>：社会统筹＋个人账户相结合；基金＝单位缴费＋个人缴费＋政府补贴等</li>
 <li><strong>缴费</strong>：单位 16%→统筹基金；个人 8%→个人账户；个体工商户和灵活就业人员在 60%–300% 自选基数、分别计入两账</li>
 <li><strong>领取条件</strong>：达到法定退休年龄＋累计缴满 15 年</li>
-<li><strong>延迟退休（2025.1.1 起）</strong>：男 60→63（每 4 个月延 1 月）、女职工 55→58（每 4 个月延 1 月）、女工人 50→55（每 2 个月延 1 月）；最低缴费年限 2030.1.1 起每年提高 6 个月、逐步提到 20 年</li>
+<li><strong>延迟退休（2025.1.1 起）</strong>：男 60→63（每 4 个月延 1 月）、女职工 55→58（每 4 个月延 1 月）、女工人 50→55（每 2 个月延 1 月）</li>
+<li><strong>最低缴费年限</strong>：2030.1.1 起每年提高 6 个月、逐步提到 20 年</li>
 <li><strong>养老金</strong>：基础养老金＝（当地上年度在岗职工月平均工资＋本人指数化月平均缴费工资）÷2×缴费年限×1%；个人账户养老金＝储存额÷计发月数；个账不得提前支取、记账利率不低于银行定期存款利率、免征利息税、余额可继承</li>
-<li><strong>遗属待遇（因病或非因工死亡，一次性，统筹基金列支）</strong>：丧葬补助金＝本省上年度城镇居民月人均可支配收入×2；抚恤金在职＜5 年 3 个月、5–10 年 6 个月、10–15 年（含）9 个月、15 年以上每多 1 年＋1 个月最高 24；退休人员领 1 年减 1 个月、最低 9 个月；缴费不足 5 年待遇≤个人缴费之和</li>
+<li><strong>遗属待遇·丧葬补助金（因病或非因工死亡，一次性，统筹基金列支）</strong>：丧葬补助金＝本省上年度城镇居民月人均可支配收入×2</li>
+<li><strong>遗属抚恤金·在职</strong>：在职＜5 年 3 个月、5–10 年 6 个月、10–15 年（含）9 个月、15 年以上每多 1 年＋1 个月最高 24</li>
+<li><strong>遗属抚恤金·退休与不足</strong>：退休人员领 1 年减 1 个月、最低 9 个月；缴费不足 5 年待遇≤个人缴费之和</li>
 <li><strong>病残津贴</strong>：未达退休年龄因病或非因工完全丧失劳动能力；满线且距退休≤5 年跟地方调、＞5 年只有基础养老金跟全国调；缴费＜5 年给 12 个月、满 5 年每多 1 年＋3 个月；领取期间不再缴费</li>
-<li><strong>城乡居民养老</strong>：年满 16 周岁（非学生）＋非机关事业单位工作人员＋非职工覆盖范围，户籍地参保；个人缴（最高档≤灵活就业年缴费额）＋集体补助＋政府补贴；60 岁＋缴 15 年＋未领国家规定待遇；基础养老金中央定最低标准＋个账全部储存额÷139；死亡次月停发、余额可依法继承</li>
+<li><strong>城乡居民养老·参保</strong>：年满 16 周岁（非学生）＋非机关事业单位工作人员＋非职工覆盖范围，户籍地参保</li>
+<li><strong>城乡居民养老·筹资与领取</strong>：个人缴（最高档≤灵活就业年缴费额）＋集体补助＋政府补贴；60 岁＋缴 15 年＋未领国家规定待遇</li>
+<li><strong>城乡居民养老·待遇</strong>：基础养老金中央定最低标准＋个账全部储存额÷139；死亡次月停发、余额可依法继承</li>
 </ul></div><div class="ch-sechead">📍 第2节 基本医疗保险</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>职工医保缴费</strong>：单位＋职工按月共同缴，单位比例各地不同、个人一般为本人工资收入的 2%；个体工商户、非全日制从业人员、灵活就业人员可参加、个人缴费</li>
 <li><strong>医保退休</strong>：到龄＋缴费达国家规定年限→退休后不再缴费、照常享受；不够年限可缴费至规定年限</li>
@@ -1605,7 +1808,9 @@
 <li><strong>基金支付</strong>：治疗费药费住院费、伙食补助＋统筹地区以外交通食宿费、康复费</li>
 <li><strong>停工留薪</strong>：原工资福利单位按月付；12＋12 个月；评残后停原待遇转伤残待遇；期满仍需治疗继续工伤医疗待遇；期内护理单位负责</li>
 <li><strong>生活护理费</strong>：完全 50%、大部分 40%、部分 30%（统筹地区上年度职工月平均工资，按月、基金付）</li>
-<li><strong>伤残待遇</strong>：1–4 级补助金 27/25/23/21 个月＋津贴 90/85/80/75%（基金付、保留劳动关系退出岗位）；5–6 级 18/16 个月＋津贴 70%/60%（单位付、安排工作）；7–10 级 13/11/9/7 个月；离职均＝基金一次性工伤医疗补助金＋单位一次性伤残就业补助金</li>
+<li><strong>伤残待遇 1–4 级</strong>：补助金 27/25/23/21 个月＋津贴 90/85/80/75%（基金付、保留劳动关系退出岗位）</li>
+<li><strong>伤残待遇 5–10 级</strong>：5–6 级 18/16 个月＋津贴 70%/60%（单位付、安排工作）；7–10 级 13/11/9/7 个月</li>
+<li><strong>伤残离职补助</strong>：离职均＝基金一次性工伤医疗补助金＋单位一次性伤残就业补助金</li>
 <li><strong>遗属</strong>：丧葬 6 个月职工月平均工资；供养亲属抚恤金配偶 40%、其他 30%、孤寡孤儿＋10%；工亡补助金＝上年度全国城镇居民人均可支配收入×20；停工留薪期内因工伤死亡享三项、一至四级期满后死亡只享前两项</li>
 <li><strong>停止待遇</strong>：丧失享受待遇条件、拒不接受劳动能力鉴定、拒绝治疗</li>
 </ul></div><div class="ch-sechead">📍 第4节 失业保险</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
@@ -1632,11 +1837,13 @@
 <li><strong>大额医疗费用补助</strong>：解决封顶线以上大额医疗费用；随基本医保建立、强制执行；社保经办机构经办；每个职工一年缴纳一定额度；与基本医保基金<strong>分开管理、分别核算</strong></li>
 <li><strong>企业补充医疗保险</strong>：三条件（参加基本医保、足额发工资缴社保、有能力）；三形式（商业机构举办、社保机构经办、大集团大企业自办）；4% 以内列成本、超出部分税后利润负担</li>
 <li><strong>商业医疗保险</strong>：商业保险公司经办、多以营利为目的、自愿参加</li>
-</ul></div></article>
-<article class="ch-card" id="r15"><div class="ch-head"><span class="ch-rank">15</span><span class="ch-score">近年约 7 分</span><a class="ch-title" href="人力15_社会保险法律_第1节_社会保险法律关系.html">第15章 社会保险法律</a></div><div class="ch-qing">考情：2023–2025 六场考试共考 7 题 7 分，全部为单选题（场均 0–2 题），2024 年-Ⅰ未命题、2024 年-Ⅱ最多（2 题），无多选无案例分析。主体&quot;两分法&quot;、法律适用基本规则和五险覆盖范围是本章三大命题点…</div><div class="ch-sechead">📍 第1节 社会保险法律关系</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r15"><summary><span class="ch-rank">15</span><span class="ch-score">近年约 7 分</span><span class="ch-name">第15章 社会保险法律</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试共考 7 题 7 分，全部为单选题（场均 0–2 题），2024 年-Ⅰ未命题、2024 年-Ⅱ最多（2 题），无多选无案例分析。主体&quot;两分法&quot;、法律适用基本规则和五险覆盖范围是本章三大命题点…<a class="ch-link" href="人力15_社会保险法律_第1节_社会保险法律关系.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 社会保险法律关系</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>社会保险法律关系</strong>＝各主体之间就社会保险<strong>权利义务</strong>产生的法律关系（国家与劳动者、经办机构与劳动者、经办机构之间、经办机构与用人单位、用人单位与劳动者）</li>
 <li><strong>按责任分四主体</strong>：国家（法律＋财政支持，<strong>特殊主体</strong>）／社会保险的管理和经办机构（征缴法定机构＝<strong>税务机关</strong>）／用人单位（基金<strong>主要缴纳者</strong>）／劳动者及其家庭（<strong>受益人＋缴费义务</strong>）</li>
-<li><strong>按业务分六主体</strong>：保险人（＝<strong>社会保险经办机构</strong>，收钱发待遇）／投保人（＝<strong>用人单位</strong>；四权利：查记录、要咨询、督工作、请解决）／被保险人（在业劳动者＋自谋职业缴费者）／受益人（基于被保险人关系享有利益）／管理人（<strong>社会保险行政部门</strong>）／监督人（专门监督机构＋负有监督职责的社保行政主管部门）</li>
+<li><strong>按业务分六主体·保险人与投保人</strong>：保险人（＝<strong>社会保险经办机构</strong>，收钱发待遇）／投保人（＝<strong>用人单位</strong>；四权利：查记录、要咨询、督工作、请解决）</li>
+<li><strong>按业务分六主体·被保险人与受益人</strong>：被保险人（在业劳动者＋自谋职业缴费者）／受益人（基于被保险人关系享有利益）</li>
+<li><strong>按业务分六主体·管理人与监督人</strong>：管理人（<strong>社会保险行政部门</strong>）／监督人（专门监督机构＋负有监督职责的社保行政主管部门）</li>
 <li><strong>客体</strong>＝资金、物、服务行为（养老保险费和待遇、失业保险金、就业服务项目、医疗津贴和医疗服务等）</li>
 </ul></div><div class="ch-sechead">📍 第2节 社会保险法律适用</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>概念</strong>：社会保险行政部门和法律授权的组织，根据法定职权和法定程序，解决具体问题的<strong>专门活动</strong></li>
@@ -1650,8 +1857,8 @@
 <li><strong>工伤、失业、生育</strong>：覆盖<strong>所有</strong>用人单位及其职工；<strong>被征地农民</strong>：就业→<strong>应当参加全部五项</strong>；未就业→可以参加城乡两险</li>
 <li><strong>港澳台</strong>：单位持有效证件＋劳动合同、聘用合同办登记；个体经营和灵活就业按注册地（居住地）登记；流程与内地居民<strong>一致</strong>；已在当地参保并保留关系→可<strong>不参加养老、失业两险</strong></li>
 <li><strong>外国人</strong>：境内就业也应参保；双边/多边协议国人<strong>3 个月内</strong>提供协议国参保证明→免缴；3 个月后不能提供→征费＋<strong>滞纳金</strong>；协议外险种及超期险种照缴</li>
-</ul></div></article>
-<article class="ch-card" id="r1"><div class="ch-head"><span class="ch-rank">16</span><span class="ch-score">近年约 7 分</span><a class="ch-title" href="人力01_组织激励_第1节_需要、动机与激励.html">第1章 组织激励</a></div><div class="ch-qing">考情：2023–2025 六场考试场均 3–7 分，单选每场 1–4 题、多选 0–1 题，2023 上半年曾出 4 道案例分析（8 分）。三大理论群（内容型/过程型/强化）与三个应用工具（目标管理/参与管理/绩效薪金制）是命…</div><div class="ch-sechead">📍 第1节 需要、动机与激励</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r1"><summary><span class="ch-rank">16</span><span class="ch-score">近年约 7 分</span><span class="ch-name">第1章 组织激励</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试场均 3–7 分，单选每场 1–4 题、多选 0–1 题，2023 上半年曾出 4 道案例分析（8 分）。三大理论群（内容型/过程型/强化）与三个应用工具（目标管理/参与管理/绩效薪金制）是命…<a class="ch-link" href="人力01_组织激励_第1节_需要、动机与激励.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 需要、动机与激励</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>需要</strong>：缺乏物质或期待结果的心理状态；未满足 → 压力 → 行动</li>
 <li><strong>动机</strong>＝方向 + 努力水平 + 坚持水平（选方向、使多大劲、扛多久）</li>
 <li><strong>内源</strong>看事本身（成就、潜能、意义）；<strong>外源</strong>看报酬（工资、奖金、表扬、地位、晋升）</li>
@@ -1670,8 +1877,8 @@
 <li><strong>参与管理</strong>：下属分享上级决策权；六条件"时间、利益、能力、不威胁、文化、参与需要"；质量监督小组 8–10 员工+1 督导、每周集会、管理层最后决定权；低位者更接受（低受高不受）</li>
 <li><strong>绩效薪金制</strong>：绩效+报酬；与期望理论关系密切；基础＝公平量化绩效评估；方式＝计件/奖金/利润分成/按利分红；优点＝减少管理者工作量</li>
 <li><strong>斯坎伦计划</strong>：参与管理+绩效薪金制融合；委员会 + 75/25 分享；成败关键＝劳资互信</li>
-</ul></div></article>
-<article class="ch-card" id="r12"><div class="ch-head"><span class="ch-rank">17</span><span class="ch-score">近年约 5 分</span><a class="ch-title" href="人力12_工资与就业理论_第1节_工资水平与工资差别.html">第12章 工资与就业理论</a></div><div class="ch-qing">考情：2023–2025 六场考试场均约 7.5 分（最低 5 分、最高 14 分），单选每场 3–6 题、多选每场 1 题，2023 下半年（Ⅱ 卷）曾出 4 道案例分析（8 分）。工资差别类型、歧视的判定、失业类型与失业率…</div><div class="ch-sechead">📍 第1节 工资水平与工资差别</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r12"><summary><span class="ch-rank">17</span><span class="ch-score">近年约 5 分</span><span class="ch-name">第12章 工资与就业理论</span><span class="ch-meta">2 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试场均约 7.5 分（最低 5 分、最高 14 分），单选每场 3–6 题、多选每场 1 题，2023 下半年（Ⅱ 卷）曾出 4 道案例分析（8 分）。工资差别类型、歧视的判定、失业类型与失业率…<a class="ch-link" href="人力12_工资与就业理论_第1节_工资水平与工资差别.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 工资水平与工资差别</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>货币工资</strong>（名义工资）＝以货币支付的劳动报酬；<strong>实际工资</strong>＝货币工资÷物价指数（购买能力）；差别取决于物价水平；现实货币工资总是高于实际工资；劳动者供给决策、企业定薪、政府宏调都看实际工资</li>
 <li>工资谈判三要素：雇主迫切程度（需求）、劳动者迫切程度（供给）、力量对比（供求关系）→ 工资存在上下限</li>
 <li>确定工资水平三现实因素：生活费用、<strong>同工同酬</strong>（同值同酬、跨行业部门职业；单位内部好贯彻；障碍＝利润/支付能力差异＋流动壁垒）、<strong>支付能力</strong>（产品需求稳定时最主要看生产率）</li>
@@ -1684,16 +1891,21 @@
 <li>歧视三来源：<strong>个人歧视</strong>（雇主/客户/员工的偏见）、<strong>统计性歧视</strong>（群体特征预测个人，招募甄选环节）、<strong>非竞争性歧视</strong>（垄断状态、人脉因素，同时产生两种歧视）</li>
 </ul></div><div class="ch-sechead">📍 第2节 就业与失业</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>就业</strong>＝有劳动能力＋参加能获得报酬的社会劳动（"我想我能，我有工作"）；三层含义＝能力＋意愿＋社会劳动有报酬；ILO 就业三种人＝正在工作／暂时脱离工作（工伤休假等）／雇主与自雇及家庭帮工</li>
-<li>我国就业统计：<strong>1995</strong> 不充分就业三标准（不到 20 小时＋非个人原因＋愿意多干，同时具备）；<strong>2003</strong> 报酬≥当地最低工资＝充分就业，低于最低工资高于低保且愿多干＝不充分就业；<strong>2005</strong> 调查周 1 小时（含）以上有酬劳动，或有工作单位场所的暂时未工作者＝就业（16 周岁及以上城镇人口）</li>
+<li><strong>我国就业统计 1995</strong>：不充分就业三标准（不到 20 小时＋非个人原因＋愿意多干，同时具备）</li>
+<li><strong>我国就业统计 2003</strong>：报酬≥当地最低工资＝充分就业，低于最低工资高于低保且愿多干＝不充分就业</li>
+<li><strong>我国就业统计 2005</strong>：调查周 1 小时（含）以上有酬劳动，或有工作单位场所的暂时未工作者＝就业（16 周岁及以上城镇人口）</li>
 <li><strong>失业</strong>（2005）＝调查周无有酬劳动且非暂时未工作＋特定期间找过工作＋可随时应聘；具体标准＝"周内不到 1 小时＋近 3 个月找工作＋调查周内可应聘"；2003 报酬低于低保视同失业</li>
-<li><strong>失业率</strong>＝失业人口/（失业人口＋就业人口）＝失业人口/劳动力人口（经济活动人口）；<strong>长期失业率</strong>＝失业满 1 年及以上者占比（反映严重程度）；<strong>城镇登记失业率</strong>＝登记失业人数/（从业人数＋登记失业人数）；登记失业人员四条件＝劳动年龄内＋有劳动能力＋有就业要求＋无业已登记；登记地＝无就业经历城镇户籍在户籍地，进城务工常住地稳定就业满 6 个月可在常住地登记</li>
+<li><strong>失业率</strong>：失业人口/（失业人口＋就业人口）＝失业人口/劳动力人口（经济活动人口）</li>
+<li><strong>长期失业率</strong>：失业满 1 年及以上者占比（反映严重程度）</li>
+<li><strong>城镇登记失业率</strong>：登记失业人数/（从业人数＋登记失业人数）</li>
+<li><strong>登记失业人员与登记地</strong>：四条件＝劳动年龄内＋有劳动能力＋有就业要求＋无业已登记；登记地＝无就业经历城镇户籍在户籍地，进城务工常住地稳定就业满 6 个月可在常住地登记</li>
 <li><strong>正常性失业</strong>＝摩擦＋结构＋季节＝自然失业率（4%～6%），与充分就业不矛盾；<strong>周期性失业</strong>＝总量需求不足，非正常性</li>
 <li><strong>摩擦性</strong>：市场动态属性＋信息不完善；对策＝情报工作、加快信息传递、疏通渠道</li>
 <li><strong>结构性</strong>：技术性失业最主要＋技能不匹配＋地区失调＋国际竞争/消费习惯/原材料；对策＝信息、安置费、培训计划、职业指导与供求预测</li>
 <li><strong>季节性</strong>：农旅建航运需求波动＋服装制鞋汽车购买高峰低谷；对策＝预测＋合理失业补助期间</li>
 <li><strong>周期性</strong>：经济周期波动、总需求不足；产品需求收入弹性越大受冲击越大（投资品最重、耐用＞非耐用）；波动不克服则失业难免</li>
-</ul></div></article>
-<article class="ch-card" id="r18"><div class="ch-head"><span class="ch-rank">18</span><span class="ch-score">近年约 3 分</span><a class="ch-title" href="人力18_法律责任与行政执法_第1节_劳动法律责任.html">第18章 法律责任与行政执法</a></div><div class="ch-qing">考情：2023–2024 年每场 1–3 分（2023 年Ⅰ卷 1 单选＋1 多选共 3 分为近年最高），2025 年两场均未命题。全章是&quot;数字记忆章&quot;——罚款幅度、倍数、期限、时效背准就能拿分。</div><div class="ch-sechead">📍 第1节 劳动法律责任</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r18"><summary><span class="ch-rank">18</span><span class="ch-score">近年约 3 分</span><span class="ch-name">第18章 法律责任与行政执法</span><span class="ch-meta">4 张速记卡</span></summary><div class="ch-qing">考情：2023–2024 年每场 1–3 分（2023 年Ⅰ卷 1 单选＋1 多选共 3 分为近年最高），2025 年两场均未命题。全章是&quot;数字记忆章&quot;——罚款幅度、倍数、期限、时效背准就能拿分。<a class="ch-link" href="人力18_法律责任与行政执法_第1节_劳动法律责任.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 劳动法律责任</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li><strong>三种责任形式</strong>：行政（行政处罚：警告／责令改正／查封／吊销执照／行政拘留；行政处分）、民事（违反劳动合同的责任＋损害赔偿责任）、刑事（最严厉、只能由司法机关追究）</li>
 <li><strong>侵害女职工／未成年工</strong>：责令改正＋每人 <strong>1000～5000 元</strong>罚款＋赔偿责任；女职工 6 情形、未成年工 2 情形；口诀"正常禁四级，特殊禁三级"</li>
 <li><strong>违法约定试用期</strong>：责令改正；已履行的按<strong>试用期满月工资</strong>赔偿超过法定试用期期间</li>
@@ -1728,8 +1940,8 @@
 <li><strong>复议期限</strong>：知道或应当知道之日起 <strong>60 日</strong>（法律规定超过 60 日的除外）</li>
 <li><strong>被告确定</strong>：未复议→原机关；维持→原机关＋复议机关<strong>共同被告</strong>；改变→复议机关；逾期不决定→告原行为告原机关、告不作为告复议机关</li>
 <li><strong>律师权利</strong>：查阅复制材料、调查收集证据；涉国家秘密、商业秘密、个人隐私的依法保密</li>
-</ul></div></article>
-<article class="ch-card" id="r9"><div class="ch-head"><span class="ch-rank">19</span><span class="ch-score">近年约 2 分</span><a class="ch-title" href="人力09_培训与开发_第1节_培训与开发决策分析.html">第9章 培训与开发</a></div><div class="ch-qing">考情：2023–2025 六场考试共 12 分、场均约 2 分（单选 6 题、多选 3 题，无案例分析，2024 年Ⅰ卷未出题），单场 0–4 分。命题集中在效果评估五层次与职业生涯锚、职业生涯发展阶段两大块。</div><div class="ch-sechead">📍 第1节 培训与开发决策分析</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
+</ul></div></details>
+<details class="ch-card" id="r9"><summary><span class="ch-rank">19</span><span class="ch-score">近年约 2 分</span><span class="ch-name">第9章 培训与开发</span><span class="ch-meta">3 张速记卡</span></summary><div class="ch-qing">考情：2023–2025 六场考试共 12 分、场均约 2 分（单选 6 题、多选 3 题，无案例分析，2024 年Ⅰ卷未出题），单场 0–4 分。命题集中在效果评估五层次与职业生涯锚、职业生涯发展阶段两大块。<a class="ch-link" href="人力09_培训与开发_第1节_培训与开发决策分析.html">细学本章 →</a></div><div class="ch-sechead">📍 第1节 培训与开发决策分析</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li>成本–收益分析三因素：支出 <strong>C</strong>、组织收益 <strong>B</strong>、加薪 <strong>S</strong>；判断式 <strong>B＞C＋S，即 B－S＞C</strong> → 组织收益会提高</li>
 <li>定位：培训与开发是<strong>对人力资源的投资</strong>，并不是无回报</li>
 <li>三大决策误区：<strong>回报难量化</strong>（管理层易反对）、<strong>效果评估滞后</strong>（不愿做难衡量/反馈周期长的投资）、<strong>视为开支或福利而非投资</strong>（预算常落后于经营战略计划）</li>
@@ -1744,12 +1956,15 @@
 </ul></div><div class="ch-sechead">📍 第3节 职业生涯管理</div><div class="recite"><div class="recite-title">📌 速记卡</div><ul>
 <li>三概念：狭义生涯＝工作生涯总行为过程；广义生涯＝一生系列活动（有薪+无薪）；规划焦点＝<strong>个人目标与现实可行机会的匹配</strong>；生涯管理＝组织＋个人共同"设计、规划、执行、评估、反馈"</li>
 <li>目的：个人三条（认识自己/增竞争力/满足高层次需要）；组织四条（共同发展/后备人才/内培适应性强/增强承诺）</li>
-<li>组织层次方法：提供信息（职位空缺、通道、信息中心）、潜能评价中心（评价中心/心理测验/替换继任规划）、培训与发展项目（轮换用于专业人员与高管培养）；个人层次：自我评估工具（讨论会/指导手册/退休前讨论会）、指导与咨询（HR/直接主管/外部咨询师）</li>
+<li><strong>组织层次方法</strong>：提供信息（职位空缺、通道、信息中心）、潜能评价中心（评价中心/心理测验/替换继任规划）、培训与发展项目（轮换用于专业人员与高管培养）</li>
+<li><strong>个人层次方法</strong>：自我评估工具（讨论会/指导手册/退休前讨论会）、指导与咨询（HR/直接主管/外部咨询师）</li>
 <li>通道：横向同层换岗、纵向上下动级、双通道"双肩挑"（技术人员设计＋培养高管方式）</li>
 <li>效果评估四标准：<strong>目标、活动、绩效指数（离职率/旷工率降低）、态度心理</strong>；四注意事项：统筹配合、高层支持、直线经理参与、个体差异（技能/兴趣/阶段/职业锚）</li>
 <li>阶段表：探索（学徒，&lt;30 岁，2 年以下，协助学习）／建立（同事，30～45 岁，2～10 年，独自贡献）／维持（导师，45～60 岁，&gt;10 年，训练帮助定政策）／衰退（顾问，&gt;60 岁，&gt;10 年，退出工作）</li>
-<li>职业生涯锚：不得不选择时<strong>绝不放弃</strong>的至关重要的东西或价值观；早期相互作用产物、若干年体验后才发现；四特点＝早期经验、能力动机价值观整合、<strong>不可预测</strong>、<strong>不完全固定</strong>；五型＝技术/职能（拒总管肯管本行）、管理（升迁+依赖组织）、安全稳定（职业安全/情感安全）、自主独立（自由第一+职业承诺强）、创造（发明+冒险）</li>
-</ul></div></article>
+<li><strong>职业生涯锚定义</strong>：不得不选择时<strong>绝不放弃</strong>的至关重要的东西或价值观；早期相互作用产物、若干年体验后才发现</li>
+<li><strong>职业生涯锚四特点</strong>：早期经验、能力动机价值观整合、<strong>不可预测</strong>、<strong>不完全固定</strong></li>
+<li><strong>职业生涯锚五型</strong>：技术/职能（拒总管肯管本行）、管理（升迁+依赖组织）、安全稳定（职业安全/情感安全）、自主独立（自由第一+职业承诺强）、创造（发明+冒险）</li>
+</ul></div></details></div>
 <script>
 (function(){
   var KEY='rljpk_v1';
@@ -2044,6 +2259,22 @@
     if (t.closest && t.closest('.sb-mask')) { document.body.classList.remove('sb-open'); return; }
     if (t.closest && t.closest('.sidebar a')) { document.body.classList.remove('sb-open'); }
   });
+})();
+
+
+(function(){
+  function show(k){
+    [].slice.call(document.querySelectorAll('.ch-group')).forEach(function(g){g.style.display=(g.id==='g-'+k)?'':'none';});
+    [].slice.call(document.querySelectorAll('.tab-btn')).forEach(function(b){b.classList.toggle('on',b.getAttribute('data-k')===k);});
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target.closest&&e.target.closest('.tab-btn');
+    if(t){show(t.getAttribute('data-k'));}
+  });
+  // 深链支持：#g-人力 直接打开人力 tab（只在加载时读一次 hash，不回写 URL——
+  // file:// 下 history.replaceState 改 hash 会触发锚点跳转滚过页头）
+  var h=(location.hash||'').replace('#g-','');
+  show((h==='人力'||h==='基础')?h:'基础');
 })();
 </script>
 </body>
